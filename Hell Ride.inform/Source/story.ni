@@ -257,10 +257,14 @@ Check hitting when the second noun is not mallet:
 Check hitting when the player is not carrying the mallet:
 	say "You['] not holding the mallet." instead.
 	
-Carry out hitting:
+Carry out hitting the first time:
 	say "You lift the mallet high and bring it down on the base with all your might! The striker rises towards the bell stopping at '[a random strength pattern]'.";
 	increase the score by 5;
-	say "Well done".
+	say "Well done";
+	stop the action.
+	
+Carry out hitting:
+	say "Nothing happens."
 	
 A strength pattern is a kind of value. The strength patterns are Weakling, FooBar, Average, Almost There, Muscle Man.
 
