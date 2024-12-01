@@ -1,0 +1,502 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Skein rootNode="node-1">
+  <generator>Windows Inform 10.1.2</generator>
+  <item nodeId="node-1">
+    <command xml:space="preserve">Hell Ride</command>
+    <result xml:space="preserve">The carnival is in town and you had a date with your sweetie to visit it. After dinner and just as you arrive at the carnival, you and your date have a terrible fight. They storm off leaving you alone at the carnival. You decide to stay at the carnival anyway.&#x000A;&#x000A;Hell Ride&#x000A;The ride of a lifetime... by No Shoes&#x000A;Release 1 / Serial number 241201 / Inform 7 v10.1.2 / D&#x000A;&#x000A;Parking Lot&#x000A;You are in a parking lot full of cars. The midway is to the south. There is a blueberry bush here. There are blueberries on the bush&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve">The carnival is in town and you had a date with your sweetie to visit it. After dinner and just as you arrive at the carnival, you and your date have a terrible fight. They storm off leaving you alone at the carnival. You decide to stay at the carnival anyway.&#x000A;&#x000A;Hell Ride&#x000A;The ride of a lifetime... by No Shoes&#x000A;Release 1 / Serial number 241130 / Inform 7 v10.1.2 / D&#x000A;&#x000A;Parking Lot&#x000A;You are in a parking lot full of cars. The midway is to the south. There is a blueberry bush here. There are blueberries on the bush&#x000A;&#x000A;&gt;</commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-370"/>
+      <child nodeId="node-327"/>
+      <child nodeId="node-316"/>
+      <child nodeId="node-384"/>
+    </children>
+  </item>
+  <item nodeId="node-370">
+    <command xml:space="preserve">s</command>
+    <result xml:space="preserve">The Booth&#x000A;You are standing in line at a ticket booth at the carnival. The booth sells tickets to the Hell Ride attraction. The line for the ride forms to the south and the midway continues east and west from here. There is a concession stand to the south west. The ticket booth is garishly painted in purple and green sparkles. There is a Ticket Seller here. The Ticket Seller has a ticket.&#x000A;&#x000A;You can see a Seller here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-379"/>
+      <child nodeId="node-371"/>
+    </children>
+  </item>
+  <item nodeId="node-379">
+    <command xml:space="preserve">e</command>
+    <result xml:space="preserve">Strongman Booth&#x000A;The Strongman Booth is a popular carnival game in which you swing a mallet against a base and cause a striker to hit a bell. Along the length of the pole are markings indicating how strong you are. You can see an over-sized mallet here.&#x000A;&#x000A;You can see a base and a mallet here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-380"/>
+      <child nodeId="node-388"/>
+      <child nodeId="node-391"/>
+      <child nodeId="node-406"/>
+      <child nodeId="node-408"/>
+    </children>
+  </item>
+  <item nodeId="node-380">
+    <command xml:space="preserve">hit base</command>
+    <result xml:space="preserve">Violence isn't the answer to this one.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-381"/>
+      <child nodeId="node-395"/>
+    </children>
+  </item>
+  <item nodeId="node-381">
+    <command xml:space="preserve">buy mallet</command>
+    <result xml:space="preserve">You fork over $2.00 for the mallet, leaving yourself with $8.00.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-382"/>
+    </children>
+  </item>
+  <item nodeId="node-382">
+    <command xml:space="preserve">drop mallet</command>
+    <result xml:space="preserve">Dropped.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-383"/>
+    </children>
+  </item>
+  <item nodeId="node-383">
+    <command xml:space="preserve">hit base with mallet</command>
+    <result xml:space="preserve">&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+  </item>
+  <item nodeId="node-395">
+    <command xml:space="preserve">hit dime</command>
+    <result xml:space="preserve">Violence isn't the answer to this one.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-396"/>
+    </children>
+  </item>
+  <item nodeId="node-396">
+    <command xml:space="preserve">hit dime with money</command>
+    <result xml:space="preserve">Nothing happens.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-398"/>
+      <child nodeId="node-397"/>
+    </children>
+  </item>
+  <item nodeId="node-398">
+    <command xml:space="preserve">hit base with dime</command>
+    <result xml:space="preserve">You can't hit base with that!&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-399"/>
+    </children>
+  </item>
+  <item nodeId="node-399">
+    <command xml:space="preserve">hit dime with mallet</command>
+    <result xml:space="preserve">Nothing happens.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-400"/>
+    </children>
+  </item>
+  <item nodeId="node-400">
+    <command xml:space="preserve">hit base with mallet</command>
+    <result xml:space="preserve">You' not holding the mallet.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-401"/>
+    </children>
+  </item>
+  <item nodeId="node-401">
+    <command xml:space="preserve">buy mallet</command>
+    <result xml:space="preserve">You fork over $2.00 for the mallet, leaving yourself with $8.00.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-402"/>
+    </children>
+  </item>
+  <item nodeId="node-402">
+    <command xml:space="preserve">hit base with mallet</command>
+    <result xml:space="preserve">You lift the mallet high and bring it down on the base with all your might! The striker rises towards the bell.&#x000A;Well done&#x000A;[Your score has just gone up by five points.]&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-403"/>
+    </children>
+  </item>
+  <item nodeId="node-403">
+    <command xml:space="preserve">restart</command>
+    <result xml:space="preserve">Are you sure you want to restart?</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-404"/>
+    </children>
+  </item>
+  <item nodeId="node-404">
+    <command xml:space="preserve">y</command>
+    <result xml:space="preserve">The carnival is in town and you had a date with your sweetie to visit it. After dinner and just as you arrive at the carnival, you and your date have a terrible fight. They storm off leaving you alone at the carnival. You decide to stay at the carnival anyway.&#x000A;&#x000A;Hell Ride&#x000A;The ride of a lifetime... by No Shoes&#x000A;Release 1 / Serial number 241201 / Inform 7 v10.1.2 / D&#x000A;&#x000A;Parking Lot&#x000A;You are in a parking lot full of cars. The midway is to the south. There is a blueberry bush here. There are blueberries on the bush&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-405"/>
+    </children>
+  </item>
+  <item nodeId="node-405">
+    <command xml:space="preserve">test me</command>
+    <result xml:space="preserve">(Testing.)&#x000A;&#x000A;&gt;[1] s&#x000A;&#x000A;The Booth&#x000A;You are standing in line at a ticket booth at the carnival. The booth sells tickets to the Hell Ride attraction. The line for the ride forms to the south and the midway continues east and west from here. There is a concession stand to the south west. The ticket booth is garishly painted in purple and green sparkles. There is a Ticket Seller here. The Ticket Seller has a ticket.&#x000A;&#x000A;You can see a Seller here.&#x000A;&#x000A;&gt;[2] e&#x000A;&#x000A;Strongman Booth&#x000A;The Strongman Booth is a popular carnival game in which you swing a mallet against a base and cause a striker to hit a bell. Along the length of the pole are markings indicating how strong you are. You can see an over-sized mallet here.&#x000A;&#x000A;You can see a base and a mallet here.&#x000A;&#x000A;&gt;[3] buy mallet&#x000A;You fork over $2.00 for the mallet, leaving yourself with $8.00.&#x000A;&#x000A;&gt;[4] hit base with mallet&#x000A;You lift the mallet high and bring it down on the base with all your might! The striker rises towards the bell.&#x000A;Well done&#x000A;[Your score has just gone up by five points.]&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+  </item>
+  <item nodeId="node-397">
+    <command xml:space="preserve">hit base with money</command>
+    <result xml:space="preserve">You can't hit base with that!&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+  </item>
+  <item nodeId="node-388">
+    <command xml:space="preserve">hit base with mallet</command>
+    <result xml:space="preserve">&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-389"/>
+    </children>
+  </item>
+  <item nodeId="node-389">
+    <command xml:space="preserve">hit dime</command>
+    <result xml:space="preserve">Violence isn't the answer to this one.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-390"/>
+    </children>
+  </item>
+  <item nodeId="node-390">
+    <command xml:space="preserve">hit dime with money</command>
+    <result xml:space="preserve">Nothing happens.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+  </item>
+  <item nodeId="node-391">
+    <command xml:space="preserve">hit dime</command>
+    <result xml:space="preserve">Violence isn't the answer to this one.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-392"/>
+    </children>
+  </item>
+  <item nodeId="node-392">
+    <command xml:space="preserve">hit dime with money</command>
+    <result xml:space="preserve">Nothing happens. 1&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-393"/>
+    </children>
+  </item>
+  <item nodeId="node-393">
+    <command xml:space="preserve">hist base with money</command>
+    <result xml:space="preserve">That's not a verb I recognize.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-394"/>
+    </children>
+  </item>
+  <item nodeId="node-394">
+    <command xml:space="preserve">hit base with money</command>
+    <result xml:space="preserve">You can't hit base with that!&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+  </item>
+  <item nodeId="node-406">
+    <command xml:space="preserve">l at booth</command>
+    <result xml:space="preserve">You can't see any such thing.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-407"/>
+    </children>
+  </item>
+  <item nodeId="node-407">
+    <command xml:space="preserve">l at markings</command>
+    <result xml:space="preserve">There are five levels marked on the pole: Weakling, Below Average, Average, Above Average, and Strong Man.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+  </item>
+  <item nodeId="node-408">
+    <command xml:space="preserve">w</command>
+    <result xml:space="preserve">The Booth&#x000A;You are standing in line at a ticket booth at the carnival. The booth sells tickets to the Hell Ride attraction. The line for the ride forms to the south and the midway continues east and west from here. There is a concession stand to the south west. The ticket booth is garishly painted in purple and green sparkles. There is a Ticket Seller here. The Ticket Seller has a ticket.&#x000A;&#x000A;You can see a Seller here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-409"/>
+    </children>
+  </item>
+  <item nodeId="node-409">
+    <command xml:space="preserve">n</command>
+    <result xml:space="preserve">Parking Lot&#x000A;You are in a parking lot full of cars. The midway is to the south. There is a blueberry bush here. There are blueberries on the bush&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-410"/>
+    </children>
+  </item>
+  <item nodeId="node-410">
+    <command xml:space="preserve">test me</command>
+    <result xml:space="preserve">(Testing.)&#x000A;&#x000A;&gt;[1] s&#x000A;&#x000A;The Booth&#x000A;You are standing in line at a ticket booth at the carnival. The booth sells tickets to the Hell Ride attraction. The line for the ride forms to the south and the midway continues east and west from here. There is a concession stand to the south west. The ticket booth is garishly painted in purple and green sparkles. There is a Ticket Seller here. The Ticket Seller has a ticket.&#x000A;&#x000A;You can see a Seller here.&#x000A;&#x000A;&gt;[2] e&#x000A;&#x000A;Strongman Booth&#x000A;The Strongman Booth is a popular carnival game in which you swing a mallet against a base and cause a striker to hit a bell. Along the length of the pole are markings indicating how strong you are. You can see an over-sized mallet here.&#x000A;&#x000A;You can see a base and a mallet here.&#x000A;&#x000A;&gt;[3] buy mallet&#x000A;You fork over $2.00 for the mallet, leaving yourself with $8.00.&#x000A;&#x000A;&gt;[4] hit base with mallet&#x000A;You lift the mallet high and bring it down on the base with all your might! The striker rises towards the bell stopping at Almost There.&#x000A;Well done&#x000A;[Your score has just gone up by five points.]&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+  </item>
+  <item nodeId="node-371">
+    <command xml:space="preserve">s</command>
+    <result xml:space="preserve">Head of the Line&#x000A;You are standing in front of a ticket taker with his hand open waiting for your ticket. The entrance to the ride is south of here.&#x000A;&#x000A;You can see an Attendant here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-372"/>
+    </children>
+  </item>
+  <item nodeId="node-372">
+    <command xml:space="preserve">s</command>
+    <result xml:space="preserve">Ride Entrance&#x000A;The cars that will take you into the fearsome Hell Ride stop here for you to board.  To the west is the track that will take you into the ride. The safety bar is raised allowing you to entering the car.&#x000A;&#x000A;You can see a car (empty) here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-373"/>
+      <child nodeId="node-378"/>
+    </children>
+  </item>
+  <item nodeId="node-373">
+    <command xml:space="preserve">get in car</command>
+    <result xml:space="preserve">You get into the car.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-374"/>
+    </children>
+  </item>
+  <item nodeId="node-374">
+    <command xml:space="preserve">z</command>
+    <result xml:space="preserve">Time passes.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-375"/>
+    </children>
+  </item>
+  <item nodeId="node-375">
+    <command xml:space="preserve">z</command>
+    <result xml:space="preserve">Time passes.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-376"/>
+    </children>
+  </item>
+  <item nodeId="node-376">
+    <command xml:space="preserve">z</command>
+    <result xml:space="preserve">Time passes.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-377"/>
+    </children>
+  </item>
+  <item nodeId="node-377">
+    <command xml:space="preserve">s</command>
+    <result xml:space="preserve">Stocks (in the car)&#x000A;You see stocks here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+  </item>
+  <item nodeId="node-378">
+    <command xml:space="preserve">s</command>
+    <result xml:space="preserve">You can't go that way.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+  </item>
+  <item nodeId="node-327">
+    <command xml:space="preserve">test malle</command>
+    <result xml:space="preserve">&gt;--&gt; The following tests are available:&#x000A;'test mallet'&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-328"/>
+    </children>
+  </item>
+  <item nodeId="node-328">
+    <command xml:space="preserve">test mallet</command>
+    <result xml:space="preserve">(Testing.)&#x000A;&#x000A;&gt;[1] s&#x000A;&#x000A;The Booth&#x000A;You are standing in line at a ticket booth at the carnival. The booth sells tickets to the Hell Ride attraction. The line for the ride forms to the south and the midway continues east and west from here. There is a concession stand to the south west. The ticket booth is garishly painted in purple and green sparkles. There is a Ticket Seller here. The Ticket Seller has a ticket.&#x000A;&#x000A;You can see a Seller here.&#x000A;&#x000A;&gt;[2] e&#x000A;&#x000A;Strongman Booth&#x000A;The Strongman Booth is a popular carnival game in which you swing a mallet against a base and cause a striker to hit a bell. Along the length of the pole are markings indicating how strong you are. You can see an over-sized mallet here.&#x000A;&#x000A;You can see a base and a mallet here.&#x000A;&#x000A;&gt;[3] buy mallet&#x000A;You fork over $2.00 for the mallet, leaving yourself with $8.00.&#x000A;&#x000A;&gt;[4] hit base with mallet&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-329"/>
+    </children>
+  </item>
+  <item nodeId="node-329">
+    <command xml:space="preserve">hit dime</command>
+    <result xml:space="preserve">Violence isn't the answer to this one.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-330"/>
+    </children>
+  </item>
+  <item nodeId="node-330">
+    <command xml:space="preserve">hit dime with money</command>
+    <result xml:space="preserve">Nothing happens.&#x000A;Nothing happens.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+  </item>
+  <item nodeId="node-316">
+    <command xml:space="preserve">test mallet</command>
+    <result xml:space="preserve">(Testing.)&#x000A;&#x000A;&gt;[1] s&#x000A;&#x000A;The Booth&#x000A;You are standing in line at a ticket booth at the carnival. The booth sells tickets to the Hell Ride attraction. The line for the ride forms to the south and the midway continues east and west from here. There is a concession stand to the south west. The ticket booth is garishly painted in purple and green sparkles. There is a Ticket Seller here. The Ticket Seller has a ticket.&#x000A;&#x000A;You can see a Seller here.&#x000A;&#x000A;&gt;[2] e&#x000A;&#x000A;Strongman Booth&#x000A;The Strongman Booth is a popular carnival game in which you swing a mallet against a base and cause a striker to hit a bell. Along the length of the pole are markings indicating how strong you are. You can see an over-sized mallet here.&#x000A;&#x000A;You can see a base and a mallet here.&#x000A;&#x000A;&gt;[3] buy mallet&#x000A;You fork over $2.00 for the mallet, leaving yourself with $8.00.&#x000A;&#x000A;&gt;[4] hit base with mallet&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-320"/>
+      <child nodeId="node-321"/>
+      <child nodeId="node-317"/>
+    </children>
+  </item>
+  <item nodeId="node-320">
+    <command xml:space="preserve">hit base with mallet</command>
+    <result xml:space="preserve">&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+  </item>
+  <item nodeId="node-321">
+    <command xml:space="preserve">hit dime</command>
+    <result xml:space="preserve">Violence isn't the answer to this one.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-322"/>
+      <child nodeId="node-331"/>
+    </children>
+  </item>
+  <item nodeId="node-322">
+    <command xml:space="preserve">hit dime with mallet</command>
+    <result xml:space="preserve">Nothing happens.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-323"/>
+    </children>
+  </item>
+  <item nodeId="node-323">
+    <command xml:space="preserve">hit wallet with mallet</command>
+    <result xml:space="preserve">Nothing happens.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-324"/>
+    </children>
+  </item>
+  <item nodeId="node-324">
+    <command xml:space="preserve">hit base with dime</command>
+    <result xml:space="preserve">&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-325"/>
+    </children>
+  </item>
+  <item nodeId="node-325">
+    <command xml:space="preserve">hit dime with money</command>
+    <result xml:space="preserve">Nothing happens.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-326"/>
+    </children>
+  </item>
+  <item nodeId="node-326">
+    <command xml:space="preserve"></command>
+    <result xml:space="preserve">I beg your pardon?&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+  </item>
+  <item nodeId="node-331">
+    <command xml:space="preserve">hit dime with money</command>
+    <result xml:space="preserve">Nothing happens.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-332"/>
+    </children>
+  </item>
+  <item nodeId="node-332">
+    <command xml:space="preserve">hit base with dime</command>
+    <result xml:space="preserve">&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+  </item>
+  <item nodeId="node-317">
+    <command xml:space="preserve">hit dime with mallet</command>
+    <result xml:space="preserve">Nothing happens.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-318"/>
+    </children>
+  </item>
+  <item nodeId="node-318">
+    <command xml:space="preserve">hit base with dime</command>
+    <result xml:space="preserve">&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-319"/>
+    </children>
+  </item>
+  <item nodeId="node-319">
+    <command xml:space="preserve">hit base with mallet</command>
+    <result xml:space="preserve">&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+  </item>
+  <item nodeId="node-384">
+    <command xml:space="preserve">test me</command>
+    <result xml:space="preserve">(Testing.)&#x000A;&#x000A;&gt;[1] s&#x000A;&#x000A;The Booth&#x000A;You are standing in line at a ticket booth at the carnival. The booth sells tickets to the Hell Ride attraction. The line for the ride forms to the south and the midway continues east and west from here. There is a concession stand to the south west. The ticket booth is garishly painted in purple and green sparkles. There is a Ticket Seller here. The Ticket Seller has a ticket.&#x000A;&#x000A;You can see a Seller here.&#x000A;&#x000A;&gt;[2] e&#x000A;&#x000A;Strongman Booth&#x000A;The Strongman Booth is a popular carnival game in which you swing a mallet against a base and cause a striker to hit a bell. Along the length of the pole are markings indicating how strong you are. You can see an over-sized mallet here.&#x000A;&#x000A;You can see a base and a mallet here.&#x000A;&#x000A;&gt;[3] buy mallet&#x000A;You fork over $2.00 for the mallet, leaving yourself with $8.00.&#x000A;&#x000A;&gt;[4] hit base with mallet&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-385"/>
+      <child nodeId="node-387"/>
+    </children>
+  </item>
+  <item nodeId="node-385">
+    <command xml:space="preserve">drop mallet</command>
+    <result xml:space="preserve">Dropped.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-386"/>
+    </children>
+  </item>
+  <item nodeId="node-386">
+    <command xml:space="preserve">hit base with mallet</command>
+    <result xml:space="preserve">&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+  </item>
+  <item nodeId="node-387">
+    <command xml:space="preserve">hit dime with mallet</command>
+    <result xml:space="preserve">Nothing happens.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+  </item>
+</Skein>

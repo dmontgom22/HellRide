@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <dict>
+        <key>Graphics</key>
+        <dict>
+            <key>1</key>
+            <string>C:\Users\danamont\Documents\Inform\Projects\Hell Ride.materials\Cover.png</string>
+            <key>3</key>
+            <string>Figures\HellRide.png</string>
+            <key>4</key>
+            <string>Figures\Midway.png</string>
+        </dict>
+    </dict>
+</plist>
