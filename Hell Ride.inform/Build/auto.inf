@@ -544,7 +544,7 @@ Constant I_milk_U1 = 3;
 Constant I_lemonade_U1 = 4;
 Constant I_iced_tea_U1 = 5;
 Constant I_weakling_U1 = 1;
-Constant I_foobar_U1 = 2;
+Constant I_getting_stronger_U1 = 2;
 Constant I_average_U1 = 3;
 Constant I_almost_there_U1 = 4;
 Constant I_muscle_man_U1 = 5;
@@ -626,7 +626,7 @@ Constant relation_id_U20 = 138;
 Constant relation_id_U21 = 139;
 Constant kind_ref_U1 = 561;
 Constant OBJECT_TY = 32;
-Constant ICOUNT_OBJECT = 57;
+Constant ICOUNT_OBJECT = 53;
 Constant kind_ref_U2 = 561;
 Constant SCENE_TY = 33;
 Constant ICOUNT_SCENE = 2;
@@ -1019,7 +1019,6 @@ Constant rulebook_id_U15 = 14;
 Constant rulebook_id_U16 = 15;
 Constant call_U368 = EMPTY_RULEBOOK;
 Constant rulebook_id_U17 = 16;
-Constant call_U369 = EMPTY_RULEBOOK;
 Constant rulebook_id_U18 = 17;
 Constant rulebook_id_U19 = 18;
 Constant rulebook_id_U20 = 19;
@@ -2509,7 +2508,7 @@ Constant anchor_U348 = 1105;
 Constant anchor_U349 = 1105;
 Constant kind_ref_U51 = 561;
 Constant WEAK_ID_52 = 3;
-Constant ICOUNT_ROOM = 18;
+Constant ICOUNT_ROOM = 14;
 Constant K1_room_First = I_parking_lot_U1;
 Constant kind_ref_U52 = 561;
 Constant WEAK_ID_53 = 4;
@@ -2789,6 +2788,10 @@ Constant anchor_U432 = 1105;
 Constant anchor_U433 = 1105;
 Constant anchor_U434 = 1105;
 Constant anchor_U435 = 1105;
+Constant anchor_U436 = 1105;
+Constant anchor_U437 = 1105;
+Constant anchor_U438 = 1105;
+Constant anchor_U439 = 1105;
 Constant property_id_U106 = 42;
 Constant property_id_U107 = 43;
 Constant property_id_U108 = 44;
@@ -4084,12 +4087,12 @@ Constant alphabetised_text_7 = "Concession Stand";
 Constant alphabetised_text_8 = "Cotton candy";
 Constant alphabetised_text_9 = "Dungeon";
 Constant alphabetised_text_10 = "Folding Chair";
-Constant alphabetised_text_11 = "Gallows";
-Constant alphabetised_text_12 = "Gallows Room";
-Constant alphabetised_text_13 = "Guillotine";
-Constant alphabetised_text_14 = "Head of the Line";
-Constant alphabetised_text_15 = "Hell Ride";
-Constant alphabetised_text_16 = "HellRide";
+Constant alphabetised_text_11 = "Gallows Room";
+Constant alphabetised_text_12 = "Guillotine Room";
+Constant alphabetised_text_13 = "Head of the Line";
+Constant alphabetised_text_14 = "Hell Ride";
+Constant alphabetised_text_15 = "HellRide";
+Constant alphabetised_text_16 = "Here is a man dressed in black pants, a white shirt, and a striped vest. ";
 Constant alphabetised_text_17 = "Horror";
 Constant alphabetised_text_18 = "Little Egypt Facade";
 Constant alphabetised_text_19 = "Little Egypt Show";
@@ -4103,66 +4106,62 @@ Constant alphabetised_text_26 = "RESTORE a saved game";
 Constant alphabetised_text_27 = "Ride Entrance";
 Constant alphabetised_text_28 = "Ride Exit";
 Constant alphabetised_text_29 = "Seller";
-Constant alphabetised_text_30 = "Stake";
-Constant alphabetised_text_31 = "Stake Room";
-Constant alphabetised_text_32 = "Stocks";
-Constant alphabetised_text_33 = "Stocks Room";
-Constant alphabetised_text_34 = "Strongman Booth";
-Constant alphabetised_text_35 = "The Booth";
-Constant alphabetised_text_36 = "The blueberries are ripe, juicy, and a deep blue color.";
-Constant alphabetised_text_37 = "The bucket of popcorn looks enormous!";
-Constant alphabetised_text_38 = "The candy apple is your typical carmel covered apple. It looks like it would get stuck in your teeth.";
-Constant alphabetised_text_39 = "The cars that will take you into the fearsome Hell Ride stop here for you to board.  To the south is the track that will take you into the ride. The safety bar is raised allowing you to entering the car.";
-Constant alphabetised_text_40 = "The cotton candy is a mixture of pink and blue floss.";
-Constant alphabetised_text_41 = "The mallet is over sized, perhaps to give you an advantage in the Strong Man game.";
-Constant alphabetised_text_42 = "The ride of a lifetime...";
-Constant alphabetised_text_43 = "The soda is ice cold.";
-Constant alphabetised_text_44 = "The soft pretzel is sprinkled generously with salt.";
-Constant alphabetised_text_45 = "There are a variety of things to eat here.";
-Constant alphabetised_text_46 = "There are all kinds of vehicles in the parking lot.";
-Constant alphabetised_text_47 = "There are five levels marked on the pole: Weakling, FooBar, Average, Almost Theere, and Muscle Man.";
-Constant alphabetised_text_48 = "There are folding chairs set up in rows in front of a low stage. There is a spotlight shining on the stage. There is an empty chair in the front row. Perhaps you could sit there.";
-Constant alphabetised_text_49 = "This is a bored teenager hired to sell ride tickets all week at this carnival. He's thinking about having a brewski with his bros after work.";
-Constant alphabetised_text_50 = "This is another bored teenager. His thoughts are entirely focused on a cheeseburger for lunch.";
-Constant alphabetised_text_51 = "This is one of many folding chairs in the tent tonight.";
-Constant alphabetised_text_52 = "Treats";
-Constant alphabetised_text_53 = "UNDO the last command";
-Constant alphabetised_text_54 = "Wardrobe";
-Constant alphabetised_text_55 = "You are despondent given that you and your date just had a huge fight and they stormed off. Maybe visiting the attractions at the carnival will make you feel better.";
-Constant alphabetised_text_56 = "You are standing in front of a brightly lit Concession Stand. There is a menu to the right of the window. You can see the treats inside the stand.";
-Constant alphabetised_text_57 = "You are standing in front of a ticket taker with his hand open waiting for your ticket. The entrance to the ride is south of here.";
-Constant alphabetised_text_58 = "You are standing in front of a trailer. There is a stage in front of the trailer. The Barker is encouraging you to step up, pay for, and enjoy the Little Egypt Show.";
-Constant alphabetised_text_59 = "You made it out alive!";
-Constant alphabetised_text_60 = "You see a dungeon here.";
-Constant alphabetised_text_61 = "You see gallows here.";
-Constant alphabetised_text_62 = "You see stocks here.";
-Constant alphabetised_text_63 = "You've decided to stay and enjoy the carnival anyway.";
-Constant alphabetised_text_64 = "Yourself";
+Constant alphabetised_text_30 = "Stake Room";
+Constant alphabetised_text_31 = "Stocks Room";
+Constant alphabetised_text_32 = "Strongman Booth";
+Constant alphabetised_text_33 = "The Booth";
+Constant alphabetised_text_34 = "The blueberries are ripe, juicy, and a deep blue color.";
+Constant alphabetised_text_35 = "The bucket of popcorn looks enormous!";
+Constant alphabetised_text_36 = "The candy apple is your typical carmel covered apple. It looks like it would get stuck in your teeth.";
+Constant alphabetised_text_37 = "The cars that will take you into the fearsome Hell Ride stop here for you to board.  To the south is the track that will take you into the ride. The safety bar is raised allowing you to entering the car.";
+Constant alphabetised_text_38 = "The cotton candy is a mixture of pink and blue floss.";
+Constant alphabetised_text_39 = "The mallet is over sized, perhaps to give you an advantage in the Strong Man game.";
+Constant alphabetised_text_40 = "The ride of a lifetime...";
+Constant alphabetised_text_41 = "The soda is ice cold.";
+Constant alphabetised_text_42 = "The soft pretzel is sprinkled generously with salt.";
+Constant alphabetised_text_43 = "There are a variety of things to eat here.";
+Constant alphabetised_text_44 = "There are all kinds of vehicles in the parking lot.";
+Constant alphabetised_text_45 = "There are five levels marked on the pole: Weakling, Getting There, Average, Almost Theere, and Muscle Man.";
+Constant alphabetised_text_46 = "This is a bored teenager hired to sell ride tickets all week at this carnival. He's thinking about having a brewski with his bros after work.";
+Constant alphabetised_text_47 = "This is another bored teenager. His thoughts are entirely focused on a cheeseburger for lunch.";
+Constant alphabetised_text_48 = "This is one of many folding chairs in the tent tonight.";
+Constant alphabetised_text_49 = "Treats";
+Constant alphabetised_text_50 = "UNDO the last command";
+Constant alphabetised_text_51 = "Wardrobe";
+Constant alphabetised_text_52 = "You are despondent given that you and your date just had a huge fight and they stormed off. Maybe visiting the attractions at the carnival will make you feel better.";
+Constant alphabetised_text_53 = "You are standing in front of a brightly lit Concession Stand. There is a menu to the right of the window. You can see the treats inside the stand.";
+Constant alphabetised_text_54 = "You are standing in front of a ticket taker with his hand open waiting for your ticket. The entrance to the ride is south of here.";
+Constant alphabetised_text_55 = "You are standing in front of a trailer. There is a stage in front of the trailer. The Barker is encouraging you to step up, pay for, and enjoy the Little Egypt Show.";
+Constant alphabetised_text_56 = "You made it out alive!";
+Constant alphabetised_text_57 = "You see a dungeon here.";
+Constant alphabetised_text_58 = "You see gallows here.";
+Constant alphabetised_text_59 = "You see stocks here.";
+Constant alphabetised_text_60 = "You've decided to stay and enjoy the carnival anyway.";
+Constant alphabetised_text_61 = "Yourself";
 Constant outcome_allow_access_U1 = "allow access";
 Constant outcome_allow_startup_U1 = "allow startup";
-Constant alphabetised_text_65 = "animals";
-Constant alphabetised_text_66 = "backdrops";
-Constant alphabetised_text_67 = "base";
-Constant alphabetised_text_68 = "blueberries";
-Constant alphabetised_text_69 = "blueberry bush";
-Constant alphabetised_text_70 = "bucket of popcorn";
-Constant alphabetised_text_71 = "can";
-Constant alphabetised_text_72 = "candy apple";
-Constant alphabetised_text_73 = "car";
-Constant alphabetised_text_74 = "cars";
-Constant alphabetised_text_75 = "containers";
-Constant alphabetised_text_76 = "cotton candy";
+Constant alphabetised_text_62 = "animals";
+Constant alphabetised_text_63 = "backdrops";
+Constant alphabetised_text_64 = "base";
+Constant alphabetised_text_65 = "blueberries";
+Constant alphabetised_text_66 = "blueberry bush";
+Constant alphabetised_text_67 = "bucket of popcorn";
+Constant alphabetised_text_68 = "can";
+Constant alphabetised_text_69 = "candy apple";
+Constant alphabetised_text_70 = "car";
+Constant alphabetised_text_71 = "cars";
+Constant alphabetised_text_72 = "containers";
+Constant alphabetised_text_73 = "cotton candy";
 Constant outcome_deny_access_U1 = "deny access";
 Constant outcome_deny_startup_U1 = "deny startup";
-Constant alphabetised_text_77 = "devices";
-Constant alphabetised_text_78 = "dime";
-Constant alphabetised_text_79 = "directions";
-Constant alphabetised_text_80 = "doors";
-Constant alphabetised_text_81 = "down";
-Constant alphabetised_text_82 = "east";
-Constant alphabetised_text_83 = "fluid containers";
-Constant alphabetised_text_84 = "guillotine room";
-Constant alphabetised_text_85 = "inside";
+Constant alphabetised_text_74 = "devices";
+Constant alphabetised_text_75 = "dime";
+Constant alphabetised_text_76 = "directions";
+Constant alphabetised_text_77 = "doors";
+Constant alphabetised_text_78 = "down";
+Constant alphabetised_text_79 = "east";
+Constant alphabetised_text_80 = "fluid containers";
+Constant alphabetised_text_81 = "inside";
 Constant outcome_it_does_U1 = "it does";
 Constant outcome_it_does_not_U1 = "it does not";
 Constant outcome_it_is_likely_U1 = "it is likely";
@@ -4170,84 +4169,84 @@ Constant outcome_it_is_possible_U1 = "it is possible";
 Constant outcome_it_is_unlikely_U1 = "it is unlikely";
 Constant outcome_it_is_very_likely_U1 = "it is very likely";
 Constant outcome_it_is_very_unlikely_U1 = "it is very unlikely";
-Constant alphabetised_text_86 = "keychains";
-Constant alphabetised_text_87 = "mallet";
-Constant alphabetised_text_88 = "markings";
-Constant alphabetised_text_89 = "men";
-Constant alphabetised_text_90 = "menu";
-Constant alphabetised_text_91 = "north";
-Constant alphabetised_text_92 = "northeast";
-Constant alphabetised_text_93 = "northwest";
-Constant alphabetised_text_94 = "outside";
-Constant alphabetised_text_95 = "passkeys";
-Constant alphabetised_text_96 = "people";
+Constant alphabetised_text_82 = "keychains";
+Constant alphabetised_text_83 = "mallet";
+Constant alphabetised_text_84 = "markings";
+Constant alphabetised_text_85 = "men";
+Constant alphabetised_text_86 = "menu";
+Constant alphabetised_text_87 = "north";
+Constant alphabetised_text_88 = "northeast";
+Constant alphabetised_text_89 = "northwest";
+Constant alphabetised_text_90 = "outside";
+Constant alphabetised_text_91 = "passkeys";
+Constant alphabetised_text_92 = "people";
 Constant outcome_persuasion_fails_U1 = "persuasion fails";
 Constant outcome_persuasion_succeeds_U1 = "persuasion succeeds";
-Constant alphabetised_text_97 = "player's holdalls";
-Constant alphabetised_text_98 = "regions";
-Constant alphabetised_text_99 = "rideable animals";
-Constant alphabetised_text_100 = "rideable vehicles";
-Constant alphabetised_text_101 = "see some suggestions for AMUSING things to do";
-Constant alphabetised_text_102 = "soft pretzel";
-Constant alphabetised_text_103 = "south";
-Constant alphabetised_text_104 = "southeast";
-Constant alphabetised_text_105 = "southwest";
-Constant alphabetised_text_106 = "supporters";
-Constant alphabetised_text_107 = "the";
+Constant alphabetised_text_93 = "player's holdalls";
+Constant alphabetised_text_94 = "regions";
+Constant alphabetised_text_95 = "rideable animals";
+Constant alphabetised_text_96 = "rideable vehicles";
+Constant alphabetised_text_97 = "see some suggestions for AMUSING things to do";
+Constant alphabetised_text_98 = "soft pretzel";
+Constant alphabetised_text_99 = "south";
+Constant alphabetised_text_100 = "southeast";
+Constant alphabetised_text_101 = "southwest";
+Constant alphabetised_text_102 = "supporters";
+Constant alphabetised_text_103 = "the";
 Constant outcome_there_is_insufficien_U1 = "there is insufficient light";
 Constant outcome_there_is_sufficient__U1 = "there is sufficient light";
-Constant alphabetised_text_108 = "ticket";
-Constant alphabetised_text_109 = "treats";
-Constant alphabetised_text_110 = "up";
-Constant alphabetised_text_111 = "vehicles";
-Constant alphabetised_text_112 = "wallet";
-Constant alphabetised_text_113 = "west";
-Constant alphabetised_text_114 = "women";
-Constant alphabetised_text_115 = "yourself";
+Constant alphabetised_text_104 = "ticket";
+Constant alphabetised_text_105 = "treats";
+Constant alphabetised_text_106 = "up";
+Constant alphabetised_text_107 = "vehicles";
+Constant alphabetised_text_108 = "wallet";
+Constant alphabetised_text_109 = "west";
+Constant alphabetised_text_110 = "women";
+Constant alphabetised_text_111 = "yourself";
 Constant V1_starting_the_virtual_mach = activity_id_U1;
 Constant V2_printing_the_name = activity_id_U2;
 Constant V3_printing_the_plural_name = activity_id_U3;
-Constant text_U1 = alphabetised_text_91;
-Constant text_U2 = alphabetised_text_107;
-Constant text_U3 = alphabetised_text_79;
-Constant text_U4 = alphabetised_text_92;
-Constant text_U5 = alphabetised_text_107;
-Constant text_U6 = alphabetised_text_79;
-Constant text_U7 = alphabetised_text_93;
-Constant text_U8 = alphabetised_text_107;
-Constant text_U9 = alphabetised_text_79;
-Constant text_U10 = alphabetised_text_103;
-Constant text_U11 = alphabetised_text_107;
-Constant text_U12 = alphabetised_text_79;
-Constant text_U13 = alphabetised_text_104;
-Constant text_U14 = alphabetised_text_107;
-Constant text_U15 = alphabetised_text_79;
-Constant text_U16 = alphabetised_text_105;
-Constant text_U17 = alphabetised_text_107;
-Constant text_U18 = alphabetised_text_79;
-Constant text_U19 = alphabetised_text_82;
-Constant text_U20 = alphabetised_text_107;
-Constant text_U21 = alphabetised_text_79;
-Constant text_U22 = alphabetised_text_113;
-Constant text_U23 = alphabetised_text_107;
-Constant text_U24 = alphabetised_text_79;
-Constant text_U25 = alphabetised_text_110;
-Constant text_U26 = alphabetised_text_107;
-Constant text_U27 = alphabetised_text_79;
-Constant text_U28 = alphabetised_text_81;
-Constant text_U29 = alphabetised_text_107;
-Constant text_U30 = alphabetised_text_79;
-Constant text_U31 = alphabetised_text_85;
-Constant text_U32 = alphabetised_text_107;
-Constant text_U33 = alphabetised_text_79;
-Constant text_U34 = alphabetised_text_94;
-Constant text_U35 = alphabetised_text_107;
-Constant text_U36 = alphabetised_text_79;
-Constant text_U37 = alphabetised_text_115;
-Constant text_U38 = alphabetised_text_55;
-Constant text_U39 = alphabetised_text_64;
-Constant text_U40 = alphabetised_text_115;
-Constant text_U41 = alphabetised_text_96;
+Constant text_U1 = alphabetised_text_87;
+Constant text_U2 = alphabetised_text_103;
+Constant text_U3 = alphabetised_text_76;
+Constant text_U4 = alphabetised_text_88;
+Constant text_U5 = alphabetised_text_103;
+Constant text_U6 = alphabetised_text_76;
+Constant text_U7 = alphabetised_text_89;
+Constant text_U8 = alphabetised_text_103;
+Constant text_U9 = alphabetised_text_76;
+Constant text_U10 = alphabetised_text_99;
+Constant text_U11 = alphabetised_text_103;
+Constant text_U12 = alphabetised_text_76;
+Constant text_U13 = alphabetised_text_100;
+Constant text_U14 = alphabetised_text_103;
+Constant text_U15 = alphabetised_text_76;
+Constant text_U16 = alphabetised_text_101;
+Constant text_U17 = alphabetised_text_103;
+Constant text_U18 = alphabetised_text_76;
+Constant text_U19 = alphabetised_text_79;
+Constant text_U20 = alphabetised_text_103;
+Constant text_U21 = alphabetised_text_76;
+Constant text_U22 = alphabetised_text_109;
+Constant text_U23 = alphabetised_text_103;
+Constant text_U24 = alphabetised_text_76;
+Constant text_U25 = alphabetised_text_106;
+Constant text_U26 = alphabetised_text_103;
+Constant text_U27 = alphabetised_text_76;
+Constant text_U28 = alphabetised_text_78;
+Constant text_U29 = alphabetised_text_103;
+Constant text_U30 = alphabetised_text_76;
+Constant text_U31 = alphabetised_text_81;
+Constant text_U32 = alphabetised_text_103;
+Constant text_U33 = alphabetised_text_76;
+Constant text_U34 = alphabetised_text_90;
+Constant text_U35 = alphabetised_text_103;
+Constant text_U36 = alphabetised_text_76;
+Constant text_U37 = alphabetised_text_111;
+Constant text_U38 = alphabetised_text_52;
+Constant text_U39 = alphabetised_text_61;
+Constant text_U40 = alphabetised_text_111;
+Constant text_U41 = alphabetised_text_92;
 Constant RBNO0_OUTCOME_U1 = outcome_it_is_very_unlikely_U1;
 Constant RBNO4_OUTCOME_U1 = outcome_it_is_very_likely_U1;
 Constant RBNO3_OUTCOME_U1 = outcome_it_is_likely_U1;
@@ -4284,36 +4283,36 @@ Constant V31_handling_the_final_questi = activity_id_U31;
 Constant V32_printing_the_locale_descr = activity_id_U32;
 Constant V33_choosing_notable_locale_o = activity_id_U33;
 Constant V34_printing_a_locale_paragra = activity_id_U34;
-Constant text_U42 = alphabetised_text_79;
+Constant text_U42 = alphabetised_text_76;
 Constant K4_door_First = nothing;
-Constant text_U43 = alphabetised_text_80;
-Constant text_U44 = alphabetised_text_75;
-Constant text_U45 = alphabetised_text_106;
+Constant text_U43 = alphabetised_text_77;
+Constant text_U44 = alphabetised_text_72;
+Constant text_U45 = alphabetised_text_102;
 Constant K7_backdrop_First = nothing;
-Constant text_U46 = alphabetised_text_66;
-Constant text_U47 = alphabetised_text_96;
-Constant text_U48 = alphabetised_text_98;
-Constant text_U49 = alphabetised_text_89;
+Constant text_U46 = alphabetised_text_63;
+Constant text_U47 = alphabetised_text_92;
+Constant text_U48 = alphabetised_text_94;
+Constant text_U49 = alphabetised_text_85;
 Constant K11_woman_First = nothing;
-Constant text_U50 = alphabetised_text_114;
+Constant text_U50 = alphabetised_text_110;
 Constant K12_animal_First = nothing;
-Constant text_U51 = alphabetised_text_65;
+Constant text_U51 = alphabetised_text_62;
 Constant K13_device_First = nothing;
-Constant text_U52 = alphabetised_text_77;
-Constant text_U53 = alphabetised_text_111;
+Constant text_U52 = alphabetised_text_74;
+Constant text_U53 = alphabetised_text_107;
 Constant K15_player_s_holdall_First = nothing;
-Constant text_U54 = alphabetised_text_97;
+Constant text_U54 = alphabetised_text_93;
 Constant text_U55 = alphabetised_text_0;
 Constant text_U56 = alphabetised_text_22;
-Constant text_U57 = alphabetised_text_42;
+Constant text_U57 = alphabetised_text_40;
 Constant text_U58 = alphabetised_text_17;
-Constant text_U59 = alphabetised_text_63;
+Constant text_U59 = alphabetised_text_60;
 Constant column_identity_U1 = table_column_id_U1;
 Constant text_U60 = alphabetised_text_25;
 Constant text_U61 = alphabetised_text_26;
-Constant text_U62 = alphabetised_text_101;
+Constant text_U62 = alphabetised_text_97;
 Constant text_U63 = alphabetised_text_24;
-Constant text_U64 = alphabetised_text_53;
+Constant text_U64 = alphabetised_text_50;
 Constant column_identity_U2 = table_column_id_U2;
 Constant column_identity_U3 = table_column_id_U3;
 Constant column_identity_U4 = table_column_id_U4;
@@ -4322,105 +4321,101 @@ Constant column_identity_U6 = table_column_id_U6;
 Constant column_identity_U7 = table_column_id_U7;
 Constant V35_refusing_keys = activity_id_U35;
 Constant K16_passkey_First = nothing;
-Constant text_U65 = alphabetised_text_95;
+Constant text_U65 = alphabetised_text_91;
 Constant K17_keychain_First = nothing;
-Constant text_U66 = alphabetised_text_86;
+Constant text_U66 = alphabetised_text_82;
 Constant K18_rideable_animal_First = nothing;
-Constant text_U67 = alphabetised_text_99;
+Constant text_U67 = alphabetised_text_95;
 Constant K19_rideable_vehicle_First = nothing;
-Constant text_U68 = alphabetised_text_100;
-Constant text_U69 = alphabetised_text_78;
-Constant text_U70 = alphabetised_text_112;
-Constant text_U71 = alphabetised_text_75;
+Constant text_U68 = alphabetised_text_96;
+Constant text_U69 = alphabetised_text_75;
+Constant text_U70 = alphabetised_text_108;
+Constant text_U71 = alphabetised_text_72;
 Constant text_U72 = alphabetised_text_21;
-Constant text_U73 = alphabetised_text_98;
+Constant text_U73 = alphabetised_text_94;
 Constant text_U74 = alphabetised_text_23;
-Constant text_U75 = alphabetised_text_35;
+Constant text_U75 = alphabetised_text_33;
 Constant text_U76 = alphabetised_text_7;
-Constant text_U77 = alphabetised_text_56;
-Constant text_U78 = alphabetised_text_34;
+Constant text_U77 = alphabetised_text_53;
+Constant text_U78 = alphabetised_text_32;
 Constant text_U79 = alphabetised_text_18;
-Constant text_U80 = alphabetised_text_58;
+Constant text_U80 = alphabetised_text_55;
 Constant text_U81 = alphabetised_text_19;
-Constant text_U82 = alphabetised_text_48;
-Constant text_U83 = alphabetised_text_14;
-Constant text_U84 = alphabetised_text_57;
-Constant text_U85 = alphabetised_text_74;
-Constant text_U86 = alphabetised_text_46;
-Constant text_U87 = alphabetised_text_6;
-Constant text_U88 = alphabetised_text_69;
-Constant text_U89 = alphabetised_text_75;
-Constant text_U90 = alphabetised_text_68;
-Constant text_U91 = alphabetised_text_36;
-Constant text_U92 = alphabetised_text_5;
-Constant text_U93 = alphabetised_text_29;
-Constant text_U94 = alphabetised_text_49;
-Constant text_U95 = alphabetised_text_89;
-Constant text_U96 = alphabetised_text_108;
-Constant text_U97 = alphabetised_text_109;
-Constant text_U98 = alphabetised_text_45;
-Constant text_U99 = alphabetised_text_52;
-Constant text_U100 = alphabetised_text_90;
-Constant text_U101 = alphabetised_text_71;
-Constant text_U102 = alphabetised_text_43;
-Constant text_U103 = alphabetised_text_83;
-Constant text_U104 = alphabetised_text_70;
-Constant text_U105 = alphabetised_text_37;
-Constant text_U106 = alphabetised_text_72;
-Constant text_U107 = alphabetised_text_38;
-Constant text_U108 = alphabetised_text_76;
-Constant text_U109 = alphabetised_text_40;
-Constant text_U110 = alphabetised_text_8;
-Constant text_U111 = alphabetised_text_102;
-Constant text_U112 = alphabetised_text_44;
-Constant text_U113 = alphabetised_text_88;
-Constant text_U114 = alphabetised_text_47;
-Constant text_U115 = alphabetised_text_67;
-Constant text_U116 = alphabetised_text_87;
-Constant text_U117 = alphabetised_text_41;
-Constant text_U118 = alphabetised_text_4;
-Constant text_U119 = alphabetised_text_96;
+Constant text_U82 = alphabetised_text_13;
+Constant text_U83 = alphabetised_text_54;
+Constant text_U84 = alphabetised_text_71;
+Constant text_U85 = alphabetised_text_44;
+Constant text_U86 = alphabetised_text_6;
+Constant text_U87 = alphabetised_text_66;
+Constant text_U88 = alphabetised_text_72;
+Constant text_U89 = alphabetised_text_65;
+Constant text_U90 = alphabetised_text_34;
+Constant text_U91 = alphabetised_text_5;
+Constant text_U92 = alphabetised_text_29;
+Constant text_U93 = alphabetised_text_46;
+Constant text_U94 = alphabetised_text_85;
+Constant text_U95 = alphabetised_text_104;
+Constant text_U96 = alphabetised_text_105;
+Constant text_U97 = alphabetised_text_43;
+Constant text_U98 = alphabetised_text_49;
+Constant text_U99 = alphabetised_text_86;
+Constant text_U100 = alphabetised_text_68;
+Constant text_U101 = alphabetised_text_41;
+Constant text_U102 = alphabetised_text_80;
+Constant text_U103 = alphabetised_text_67;
+Constant text_U104 = alphabetised_text_35;
+Constant text_U105 = alphabetised_text_69;
+Constant text_U106 = alphabetised_text_36;
+Constant text_U107 = alphabetised_text_73;
+Constant text_U108 = alphabetised_text_38;
+Constant text_U109 = alphabetised_text_8;
+Constant text_U110 = alphabetised_text_98;
+Constant text_U111 = alphabetised_text_42;
+Constant text_U112 = alphabetised_text_84;
+Constant text_U113 = alphabetised_text_45;
+Constant text_U114 = alphabetised_text_64;
+Constant text_U115 = alphabetised_text_83;
+Constant text_U116 = alphabetised_text_39;
+Constant text_U117 = alphabetised_text_4;
+Constant text_U118 = alphabetised_text_16;
+Constant text_U119 = alphabetised_text_92;
 Constant text_U120 = alphabetised_text_10;
-Constant text_U121 = alphabetised_text_51;
-Constant text_U122 = alphabetised_text_106;
+Constant text_U121 = alphabetised_text_48;
+Constant text_U122 = alphabetised_text_102;
 Constant text_U123 = alphabetised_text_27;
-Constant text_U124 = alphabetised_text_39;
+Constant text_U124 = alphabetised_text_37;
 Constant text_U125 = alphabetised_text_3;
-Constant text_U126 = alphabetised_text_50;
-Constant text_U127 = alphabetised_text_89;
-Constant text_U128 = alphabetised_text_16;
-Constant text_U129 = alphabetised_text_98;
-Constant text_U130 = alphabetised_text_32;
-Constant text_U131 = alphabetised_text_11;
-Constant text_U132 = alphabetised_text_30;
-Constant text_U133 = alphabetised_text_9;
-Constant text_U134 = alphabetised_text_60;
-Constant text_U135 = alphabetised_text_13;
-Constant text_U136 = alphabetised_text_28;
-Constant text_U137 = alphabetised_text_59;
-Constant text_U138 = alphabetised_text_20;
-Constant text_U139 = alphabetised_text_75;
-Constant text_U140 = alphabetised_text_54;
-Constant text_U141 = alphabetised_text_75;
-Constant text_U142 = alphabetised_text_73;
-Constant text_U143 = alphabetised_text_1;
-Constant text_U144 = alphabetised_text_111;
-Constant text_U145 = alphabetised_text_33;
-Constant text_U146 = alphabetised_text_62;
-Constant text_U147 = alphabetised_text_12;
-Constant text_U148 = alphabetised_text_61;
-Constant text_U149 = alphabetised_text_31;
-Constant text_U150 = alphabetised_text_61;
-Constant text_U151 = alphabetised_text_84;
-Constant text_U152 = alphabetised_text_2;
-Constant text_U153 = alphabetised_text_83;
+Constant text_U126 = alphabetised_text_47;
+Constant text_U127 = alphabetised_text_85;
+Constant text_U128 = alphabetised_text_15;
+Constant text_U129 = alphabetised_text_94;
+Constant text_U130 = alphabetised_text_31;
+Constant text_U131 = alphabetised_text_59;
+Constant text_U132 = alphabetised_text_11;
+Constant text_U133 = alphabetised_text_58;
+Constant text_U134 = alphabetised_text_30;
+Constant text_U135 = alphabetised_text_58;
+Constant text_U136 = alphabetised_text_9;
+Constant text_U137 = alphabetised_text_57;
+Constant text_U138 = alphabetised_text_12;
+Constant text_U139 = alphabetised_text_2;
+Constant text_U140 = alphabetised_text_28;
+Constant text_U141 = alphabetised_text_56;
+Constant text_U142 = alphabetised_text_20;
+Constant text_U143 = alphabetised_text_72;
+Constant text_U144 = alphabetised_text_51;
+Constant text_U145 = alphabetised_text_72;
+Constant text_U146 = alphabetised_text_70;
+Constant text_U147 = alphabetised_text_1;
+Constant text_U148 = alphabetised_text_107;
+Constant text_U149 = alphabetised_text_80;
 Constant abilities_U4 = (RELS_TEST);
 Constant abilities_U5 = (RELS_TEST);
 Constant abilities_U7 = (RELS_TEST);
 Constant abilities_U8 = (RELS_TEST);
-Constant text_U154 = alphabetised_text_15;
-Constant text_U155 = alphabetised_text_42;
-Constant text_U156 = alphabetised_text_22;
+Constant text_U150 = alphabetised_text_14;
+Constant text_U151 = alphabetised_text_40;
+Constant text_U152 = alphabetised_text_22;
 Constant GPR_REPARSE = REPARSE_CODE;
 Constant TABLE_NOVALUE = IMPROBABLE_VALUE;
 Constant RC_INFINITY = MAX_POSITIVE_NUMBER;
@@ -4531,9 +4526,9 @@ Constant Computed_Constant_Value_23_U1 = (BLK_DATA_OFFSET + Computed_Constant_Va
 Constant VALENCY_MASK = Computed_Constant_Value_60_U1;
 Constant Computed_Constant_Value_39_U1 = (Computed_Constant_Value_38_U1 * TEXT_TY_NoBuffers);
 Constant BLK_DATA_MULTI_OFFSET = Computed_Constant_Value_23_U1;
-Constant Story = bc_U432;
-Constant Headline = bc_U433;
-Constant Story_Author = bc_U434;
+Constant Story = bc_U412;
+Constant Headline = bc_U413;
+Constant Story_Author = bc_U414;
 Constant Computed_Constant_Value_24_U1 = (MEMORY_HEAP_SIZE + BLK_DATA_MULTI_OFFSET);
 Constant abilities_U6 = (RELS_TEST + RELS_LOOKUP_ANY + RELS_LOOKUP_ALL_X + RELS_LOOKUP_ALL_X + RELS_LIST + RELS_ASSERT_TRUE + RELS_ASSERT_FALSE + RELS_LOOKUP_ANY);
 Constant abilities_U9 = (RELS_TEST + RELS_LOOKUP_ANY + RELS_LOOKUP_ALL_X + RELS_LOOKUP_ALL_X + RELS_LIST + RELS_ASSERT_TRUE + RELS_ASSERT_FALSE + RELS_LOOKUP_ANY);
@@ -4690,7 +4685,7 @@ Array activity_var_creators --> [ 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0
 Array TimedEventsTable table [ 0; 0; ];
 Array TimedEventTimesTable table [ 0; 0; ];
 Array PastActionsI6Routines --> [ PAPR1; 0; 0; ];
-Array TableOfVerbs --> [ call_U134; call_U135; call_U136; call_U137; call_U138; call_U139; call_U140; call_U141; call_U142; call_U143; call_U144; call_U145; call_U146; call_U147; call_U148; call_U149; call_U150; call_U151; call_U152; call_U1852; call_U1853; call_U1854; call_U1855; call_U1856; call_U1857; call_U1858; call_U1859; call_U1860; call_U1861; call_U1862; call_U1863; call_U1864; call_U1865; call_U1866; call_U1867; call_U1868; call_U1869; call_U1870; call_U1871; call_U1872; call_U1873; call_U1874; call_U1875; call_U1876; call_U1877; call_U1878; call_U1879; call_U1880; call_U1881; call_U1882; call_U1883; call_U1884; call_U1885; call_U1886; call_U1887; call_U1888; call_U1889; call_U1890; call_U1891; call_U1892; call_U1893; call_U1894; call_U1895; call_U1896; call_U1897; call_U1898; call_U1899; call_U1900; call_U1901; call_U1902; call_U1903; call_U1904; call_U1905; call_U1906; call_U1907; call_U1908; call_U1909; call_U1910; call_U1911; call_U1912; call_U1913; call_U1914; call_U1915; call_U1916; call_U1917; call_U1918; call_U1919; call_U1920; call_U1921; call_U1922; call_U205; call_U206; call_U207; call_U208; call_U209; call_U210; call_U2002; call_U2003; call_U2060; call_U2061; call_U2187; call_U2188; call_U2189; call_U2190; call_U2191; call_U2192; 0; ];
+Array TableOfVerbs --> [ call_U134; call_U135; call_U136; call_U137; call_U138; call_U139; call_U140; call_U141; call_U142; call_U143; call_U144; call_U145; call_U146; call_U147; call_U148; call_U149; call_U150; call_U151; call_U152; call_U1852; call_U1853; call_U1854; call_U1855; call_U1856; call_U1857; call_U1858; call_U1859; call_U1860; call_U1861; call_U1862; call_U1863; call_U1864; call_U1865; call_U1866; call_U1867; call_U1868; call_U1869; call_U1870; call_U1871; call_U1872; call_U1873; call_U1874; call_U1875; call_U1876; call_U1877; call_U1878; call_U1879; call_U1880; call_U1881; call_U1882; call_U1883; call_U1884; call_U1885; call_U1886; call_U1887; call_U1888; call_U1889; call_U1890; call_U1891; call_U1892; call_U1893; call_U1894; call_U1895; call_U1896; call_U1897; call_U1898; call_U1899; call_U1900; call_U1901; call_U1902; call_U1903; call_U1904; call_U1905; call_U1906; call_U1907; call_U1908; call_U1909; call_U1910; call_U1911; call_U1912; call_U1913; call_U1914; call_U1915; call_U1916; call_U1917; call_U1918; call_U1919; call_U1920; call_U1921; call_U1922; call_U205; call_U206; call_U207; call_U208; call_U209; call_U210; call_U2002; call_U2003; call_U2060; call_U2061; call_U2191; call_U2192; call_U2193; call_U2194; call_U2195; call_U2196; 0; ];
 Array KindHierarchy --> [ K0_kind; 0; K1_room; 0; K2_thing; 0; K3_direction; 0; K4_door; 2; K5_container; 2; K6_supporter; 2; K7_backdrop; 2; K8_person; 2; K9_region; 0; K10_man; 8; K11_woman; 8; K12_animal; 8; K13_device; 2; K14_vehicle; 5; K15_player_s_holdall; 5; K16_passkey; 2; K17_keychain; 6; K18_rideable_animal; 12; K19_rideable_vehicle; 6; K20_fluid_container; 5; ];
 Array ResourceIDsOfFigures --> [ 0; 1; 3; 4; 0; ];
 Array ResourceIDsOfSounds --> [ 0; 0; ];
@@ -5820,127 +5815,127 @@ Array bc_U226 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
 Array bc_U227 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
 Array bc_U228 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
 Array bc_U229 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U81; ];
-Array bc_U230 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U82; ];
+Array ts_array_U423 --> [ CONSTANT_PACKED_TEXT_STORAGE; call_U2114; ];
+Array bc_U230 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
 Array bc_U231 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
 Array bc_U232 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
-Array bc_U233 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
+Array bc_U233 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U82; ];
 Array bc_U234 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U83; ];
-Array bc_U235 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U84; ];
+Array bc_U235 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
 Array bc_U236 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
 Array bc_U237 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
-Array bc_U238 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
 Array inline_U19 --> [ 0; 0; 0; 0; 0; 0; ];
+Array bc_U238 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U84; ];
 Array bc_U239 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U85; ];
 Array bc_U240 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U86; ];
-Array bc_U241 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U87; ];
+Array bc_U241 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
 Array bc_U242 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
 Array bc_U243 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
 Array bc_U244 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
-Array bc_U245 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
 Array inline_U20 --> [ 0; 0; 0; 0; 0; 0; ];
-Array bc_U246 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U88; ];
+Array bc_U245 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U87; ];
+Array bc_U246 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
 Array bc_U247 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
-Array bc_U248 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
-Array bc_U249 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U89; ];
+Array bc_U248 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U88; ];
+Array bc_U249 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
 Array bc_U250 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
-Array bc_U251 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
 Array inline_U21 --> [ 0; 0; 0; 0; 0; 0; ];
+Array bc_U251 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U89; ];
 Array bc_U252 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U90; ];
 Array bc_U253 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U91; ];
-Array bc_U254 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U92; ];
+Array bc_U254 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
 Array bc_U255 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
 Array bc_U256 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
 Array bc_U257 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
-Array bc_U258 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
 Array inline_U22 --> [ 0; 0; 0; 0; 0; 0; ];
+Array bc_U258 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U92; ];
 Array bc_U259 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U93; ];
-Array bc_U260 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U94; ];
-Array bc_U261 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
-Array bc_U262 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U95; ];
+Array bc_U260 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
+Array bc_U261 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U94; ];
+Array bc_U262 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
 Array bc_U263 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
-Array bc_U264 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
 Array inline_U23 --> [ 0; 0; 0; 0; 0; 0; ];
-Array bc_U265 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U96; ];
-Array ts_array_U423 --> [ CONSTANT_PACKED_TEXT_STORAGE; call_U2114; ];
+Array bc_U264 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U95; ];
+Array ts_array_U424 --> [ CONSTANT_PACKED_TEXT_STORAGE; call_U2115; ];
+Array bc_U265 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
 Array bc_U266 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
 Array bc_U267 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
 Array bc_U268 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
-Array bc_U269 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
 Array inline_U24 --> [ 0; 0; 0; 0; 0; 0; ];
+Array bc_U269 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U96; ];
 Array bc_U270 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U97; ];
 Array bc_U271 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U98; ];
-Array bc_U272 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U99; ];
+Array bc_U272 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
 Array bc_U273 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
 Array bc_U274 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
 Array bc_U275 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
-Array bc_U276 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
 Array inline_U25 --> [ 0; 0; 0; 0; 0; 0; ];
-Array bc_U277 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U100; ];
-Array ts_array_U424 --> [ CONSTANT_PACKED_TEXT_STORAGE; call_U2115; ];
+Array bc_U276 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U99; ];
+Array ts_array_U425 --> [ CONSTANT_PACKED_TEXT_STORAGE; call_U2116; ];
+Array bc_U277 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
 Array bc_U278 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
 Array bc_U279 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
 Array bc_U280 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
-Array bc_U281 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
 Array inline_U26 --> [ 0; 0; 0; 0; 0; 0; ];
+Array bc_U281 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U100; ];
 Array bc_U282 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U101; ];
-Array bc_U283 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U102; ];
-Array bc_U284 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
-Array bc_U285 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U103; ];
+Array bc_U283 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
+Array bc_U284 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U102; ];
+Array bc_U285 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
 Array bc_U286 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
-Array bc_U287 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
 Array inline_U27 --> [ 0; 0; 0; 0; 0; 0; ];
+Array bc_U287 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U103; ];
 Array bc_U288 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U104; ];
-Array bc_U289 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U105; ];
+Array bc_U289 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
 Array bc_U290 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
 Array bc_U291 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
 Array bc_U292 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
-Array bc_U293 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
 Array inline_U28 --> [ 0; 0; 0; 0; 0; 0; ];
+Array bc_U293 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U105; ];
 Array bc_U294 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U106; ];
-Array bc_U295 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U107; ];
+Array bc_U295 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
 Array bc_U296 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
 Array bc_U297 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
 Array bc_U298 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
-Array bc_U299 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
 Array inline_U29 --> [ 0; 0; 0; 0; 0; 0; ];
+Array bc_U299 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U107; ];
 Array bc_U300 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U108; ];
 Array bc_U301 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U109; ];
-Array bc_U302 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U110; ];
+Array bc_U302 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
 Array bc_U303 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
 Array bc_U304 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
 Array bc_U305 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
-Array bc_U306 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
 Array inline_U30 --> [ 0; 0; 0; 0; 0; 0; ];
+Array bc_U306 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U110; ];
 Array bc_U307 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U111; ];
-Array bc_U308 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U112; ];
+Array bc_U308 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
 Array bc_U309 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
 Array bc_U310 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
 Array bc_U311 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
-Array bc_U312 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
 Array inline_U31 --> [ 0; 0; 0; 0; 0; 0; ];
+Array bc_U312 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U112; ];
 Array bc_U313 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U113; ];
-Array bc_U314 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U114; ];
+Array bc_U314 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
 Array bc_U315 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
 Array bc_U316 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
 Array bc_U317 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
-Array bc_U318 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
 Array inline_U32 --> [ 0; 0; 0; 0; 0; 0; ];
-Array bc_U319 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U115; ];
+Array bc_U318 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U114; ];
+Array bc_U319 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
 Array bc_U320 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
 Array bc_U321 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
 Array bc_U322 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
 Array bc_U323 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
-Array bc_U324 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
 Array inline_U33 --> [ 0; 0; 0; 0; 0; 0; ];
+Array bc_U324 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U115; ];
 Array bc_U325 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U116; ];
-Array bc_U326 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U117; ];
+Array bc_U326 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
 Array bc_U327 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
 Array bc_U328 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
 Array bc_U329 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
-Array bc_U330 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
 Array inline_U34 --> [ 0; 0; 0; 0; 0; 0; ];
+Array bc_U330 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U117; ];
 Array bc_U331 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U118; ];
-Array ts_array_U425 --> [ CONSTANT_PACKED_TEXT_STORAGE; call_U2116; ];
 Array bc_U332 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
 Array bc_U333 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U119; ];
 Array bc_U334 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
@@ -5970,83 +5965,63 @@ Array bc_U354 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U129; ];
 Array bc_U355 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
 Array bc_U356 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
 Array bc_U357 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U130; ];
-Array bc_U358 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
+Array bc_U358 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U131; ];
 Array bc_U359 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
 Array bc_U360 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
 Array bc_U361 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
-Array bc_U362 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U131; ];
-Array bc_U363 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
+Array bc_U362 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U132; ];
+Array bc_U363 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U133; ];
 Array bc_U364 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
 Array bc_U365 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
 Array bc_U366 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
-Array bc_U367 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U132; ];
-Array bc_U368 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
+Array bc_U367 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U134; ];
+Array bc_U368 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U135; ];
 Array bc_U369 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
 Array bc_U370 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
 Array bc_U371 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
-Array bc_U372 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U133; ];
-Array bc_U373 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U134; ];
+Array bc_U372 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U136; ];
+Array bc_U373 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U137; ];
 Array bc_U374 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
 Array bc_U375 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
 Array bc_U376 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
-Array bc_U377 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U135; ];
-Array bc_U378 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
+Array bc_U377 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U138; ];
+Array bc_U378 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U139; ];
 Array bc_U379 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
 Array bc_U380 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
 Array bc_U381 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
-Array bc_U382 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U136; ];
-Array bc_U383 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U137; ];
+Array bc_U382 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U140; ];
+Array bc_U383 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U141; ];
 Array bc_U384 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
 Array bc_U385 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
 Array bc_U386 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
 Array bc_U387 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
 Array inline_U38 --> [ 0; 0; 0; 0; 0; 0; ];
-Array bc_U388 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U138; ];
+Array bc_U388 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U142; ];
 Array bc_U389 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
 Array bc_U390 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
-Array bc_U391 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U139; ];
+Array bc_U391 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U143; ];
 Array bc_U392 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
 Array bc_U393 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
 Array inline_U39 --> [ 0; 0; 0; 0; 0; 0; ];
-Array bc_U394 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U140; ];
+Array bc_U394 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U144; ];
 Array bc_U395 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
 Array bc_U396 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
-Array bc_U397 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U141; ];
+Array bc_U397 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U145; ];
 Array bc_U398 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
 Array bc_U399 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
 Array inline_U40 --> [ 0; 0; 0; 0; 0; 0; ];
-Array bc_U400 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U142; ];
-Array bc_U401 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U143; ];
+Array bc_U400 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U146; ];
+Array bc_U401 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U147; ];
 Array bc_U402 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
-Array bc_U403 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U144; ];
+Array bc_U403 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U148; ];
 Array bc_U404 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
 Array bc_U405 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
-Array bc_U406 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U145; ];
-Array bc_U407 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U146; ];
+Array bc_U406 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U149; ];
+Array bc_U407 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
 Array bc_U408 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
 Array bc_U409 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
 Array bc_U410 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
-Array bc_U411 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U147; ];
-Array bc_U412 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U148; ];
-Array bc_U413 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
-Array bc_U414 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
-Array bc_U415 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
-Array bc_U416 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U149; ];
-Array bc_U417 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U150; ];
-Array bc_U418 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
-Array bc_U419 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
-Array bc_U420 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
-Array bc_U421 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U151; ];
-Array bc_U422 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U152; ];
-Array bc_U423 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
-Array bc_U424 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
-Array bc_U425 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
-Array bc_U426 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U153; ];
-Array bc_U427 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
-Array bc_U428 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
-Array bc_U429 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
-Array bc_U430 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
-Array bc_U431 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
+Array bc_U411 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
 Array DK3_phrase_real_number____re --> [ PHRASE_TY; 2; REAL_NUMBER_TY; ];
 Array DK4_phrase_real_number____nu --> [ PHRASE_TY; 2; NUMBER_TY; ];
 Array DK5_relation_of_values --> [ RELATION_TY; 2; VALUE_TY; VALUE_TY; ];
@@ -6054,28 +6029,28 @@ Array DK6_relation_of_objects --> [ RELATION_TY; 2; OBJECT_TY; OBJECT_TY; ];
 Array DK7_relation_of_supporters_t --> [ RELATION_TY; 2; OBJECT_TY; OBJECT_TY; ];
 Array DK8_relation_of_things --> [ RELATION_TY; 2; OBJECT_TY; OBJECT_TY; ];
 Array DK9_relation_of_people_to_th --> [ RELATION_TY; 2; OBJECT_TY; OBJECT_TY; ];
-Array Rel_Record4 --> [ 0; 101515264; RELATION_TY; MAX_POSITIVE_NUMBER; NULL; NULL; "equality relation"; abilities_U4; 0; DK5_relation_of_values; call_U2193; "is"; ];
-Array Rel_Record5 --> [ 0; 101515264; RELATION_TY; MAX_POSITIVE_NUMBER; NULL; NULL; "meaning relation"; abilities_U5; 0; DK6_relation_of_objects; call_U2194; "means"; ];
-Array Rel_Record6 --> [ 0; 101515264; RELATION_TY; MAX_POSITIVE_NUMBER; NULL; NULL; "possession relation"; abilities_U6; 0; DK6_relation_of_objects; call_U2195; "has"; ];
-Array Rel_Record7 --> [ 0; 101515264; RELATION_TY; MAX_POSITIVE_NUMBER; NULL; NULL; "universal relation"; abilities_U7; 0; DK6_relation_of_objects; call_U2196; "relates"; ];
-Array Rel_Record8 --> [ 0; 101515264; RELATION_TY; MAX_POSITIVE_NUMBER; NULL; NULL; "provision relation"; abilities_U8; 0; DK6_relation_of_objects; call_U2197; "provides"; ];
-Array Rel_Record9 --> [ 0; 101515264; RELATION_TY; MAX_POSITIVE_NUMBER; NULL; NULL; "containment relation"; abilities_U9; 0; DK6_relation_of_objects; call_U2198; "contains"; ];
-Array Rel_Record10 --> [ 0; 101515264; RELATION_TY; MAX_POSITIVE_NUMBER; NULL; NULL; "support relation"; abilities_U10; 0; DK7_relation_of_supporters_t; call_U2199; "supports"; ];
-Array Rel_Record11 --> [ 0; 101515264; RELATION_TY; MAX_POSITIVE_NUMBER; NULL; NULL; "incorporation relation"; abilities_U11; 0; DK8_relation_of_things; call_U2200; "incorporates"; ];
-Array Rel_Record12 --> [ 0; 101515264; RELATION_TY; MAX_POSITIVE_NUMBER; NULL; NULL; "enclosure relation"; abilities_U12; 0; DK6_relation_of_objects; call_U2201; "encloses"; ];
-Array Rel_Record13 --> [ 0; 101515264; RELATION_TY; MAX_POSITIVE_NUMBER; NULL; NULL; "carrying relation"; abilities_U13; 0; DK9_relation_of_people_to_th; call_U2202; "carries"; ];
-Array Rel_Record14 --> [ 0; 101515264; RELATION_TY; MAX_POSITIVE_NUMBER; NULL; NULL; "holding relation"; abilities_U14; 0; DK9_relation_of_people_to_th; call_U2203; "holds"; ];
-Array Rel_Record15 --> [ 0; 101515264; RELATION_TY; MAX_POSITIVE_NUMBER; NULL; NULL; "wearing relation"; abilities_U15; 0; DK9_relation_of_people_to_th; call_U2204; "wears"; ];
-Array Rel_Record16 --> [ 0; 101515264; RELATION_TY; MAX_POSITIVE_NUMBER; NULL; NULL; "visibility relation"; abilities_U16; 0; DK8_relation_of_things; call_U2205; "can-see"; ];
-Array Rel_Record17 --> [ 0; 101515264; RELATION_TY; MAX_POSITIVE_NUMBER; NULL; NULL; "touchability relation"; abilities_U17; 0; DK8_relation_of_things; call_U2206; "can-touch"; ];
-Array Rel_Record18 --> [ 0; 101515264; RELATION_TY; MAX_POSITIVE_NUMBER; NULL; NULL; "concealment relation"; abilities_U18; 0; DK8_relation_of_things; call_U2207; "conceals"; ];
-Array Rel_Record19 --> [ 0; 101515264; RELATION_TY; MAX_POSITIVE_NUMBER; NULL; NULL; "never-holding relation"; abilities_U19; 0; DK5_relation_of_values; call_U2208; "is"; ];
-Array bc_U432 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U154; ];
-Array bc_U433 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U155; ];
-Array bc_U434 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U156; ];
+Array Rel_Record4 --> [ 0; 101515264; RELATION_TY; MAX_POSITIVE_NUMBER; NULL; NULL; "equality relation"; abilities_U4; 0; DK5_relation_of_values; call_U2197; "is"; ];
+Array Rel_Record5 --> [ 0; 101515264; RELATION_TY; MAX_POSITIVE_NUMBER; NULL; NULL; "meaning relation"; abilities_U5; 0; DK6_relation_of_objects; call_U2198; "means"; ];
+Array Rel_Record6 --> [ 0; 101515264; RELATION_TY; MAX_POSITIVE_NUMBER; NULL; NULL; "possession relation"; abilities_U6; 0; DK6_relation_of_objects; call_U2199; "has"; ];
+Array Rel_Record7 --> [ 0; 101515264; RELATION_TY; MAX_POSITIVE_NUMBER; NULL; NULL; "universal relation"; abilities_U7; 0; DK6_relation_of_objects; call_U2200; "relates"; ];
+Array Rel_Record8 --> [ 0; 101515264; RELATION_TY; MAX_POSITIVE_NUMBER; NULL; NULL; "provision relation"; abilities_U8; 0; DK6_relation_of_objects; call_U2201; "provides"; ];
+Array Rel_Record9 --> [ 0; 101515264; RELATION_TY; MAX_POSITIVE_NUMBER; NULL; NULL; "containment relation"; abilities_U9; 0; DK6_relation_of_objects; call_U2202; "contains"; ];
+Array Rel_Record10 --> [ 0; 101515264; RELATION_TY; MAX_POSITIVE_NUMBER; NULL; NULL; "support relation"; abilities_U10; 0; DK7_relation_of_supporters_t; call_U2203; "supports"; ];
+Array Rel_Record11 --> [ 0; 101515264; RELATION_TY; MAX_POSITIVE_NUMBER; NULL; NULL; "incorporation relation"; abilities_U11; 0; DK8_relation_of_things; call_U2204; "incorporates"; ];
+Array Rel_Record12 --> [ 0; 101515264; RELATION_TY; MAX_POSITIVE_NUMBER; NULL; NULL; "enclosure relation"; abilities_U12; 0; DK6_relation_of_objects; call_U2205; "encloses"; ];
+Array Rel_Record13 --> [ 0; 101515264; RELATION_TY; MAX_POSITIVE_NUMBER; NULL; NULL; "carrying relation"; abilities_U13; 0; DK9_relation_of_people_to_th; call_U2206; "carries"; ];
+Array Rel_Record14 --> [ 0; 101515264; RELATION_TY; MAX_POSITIVE_NUMBER; NULL; NULL; "holding relation"; abilities_U14; 0; DK9_relation_of_people_to_th; call_U2207; "holds"; ];
+Array Rel_Record15 --> [ 0; 101515264; RELATION_TY; MAX_POSITIVE_NUMBER; NULL; NULL; "wearing relation"; abilities_U15; 0; DK9_relation_of_people_to_th; call_U2208; "wears"; ];
+Array Rel_Record16 --> [ 0; 101515264; RELATION_TY; MAX_POSITIVE_NUMBER; NULL; NULL; "visibility relation"; abilities_U16; 0; DK8_relation_of_things; call_U2209; "can-see"; ];
+Array Rel_Record17 --> [ 0; 101515264; RELATION_TY; MAX_POSITIVE_NUMBER; NULL; NULL; "touchability relation"; abilities_U17; 0; DK8_relation_of_things; call_U2210; "can-touch"; ];
+Array Rel_Record18 --> [ 0; 101515264; RELATION_TY; MAX_POSITIVE_NUMBER; NULL; NULL; "concealment relation"; abilities_U18; 0; DK8_relation_of_things; call_U2211; "conceals"; ];
+Array Rel_Record19 --> [ 0; 101515264; RELATION_TY; MAX_POSITIVE_NUMBER; NULL; NULL; "never-holding relation"; abilities_U19; 0; DK5_relation_of_values; call_U2212; "is"; ];
+Array bc_U412 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U150; ];
+Array bc_U413 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U151; ];
+Array bc_U414 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U152; ];
 Array UUID_ARRAY -> [ 45; 'U'; 'U'; 'I'; 'D'; ':'; '/'; '/'; 'E'; '0'; 'A'; '5'; 'A'; 'F'; 'B'; '9'; '-'; '1'; '8'; 'B'; 'F'; '-'; '4'; '4'; '8'; '5'; '-'; 'B'; '0'; '8'; '3'; '-'; '4'; '2'; '6'; 'C'; 'A'; '5'; '1'; 'C'; 'C'; 'E'; '7'; '0'; '/'; '/'; ];
 Array InitialSituation --> [ selfobj; 0; I_parking_lot_U1; 540; 0; ];
-Array Map_Storage --> [ 0; 0; 0; I_the_booth_U1; 0; 0; 0; 0; 0; 0; 0; 0; I_parking_lot_U1; 0; 0; I_head_of_the_line_U1; 0; I_concession_stand_U1; I_strongman_booth_U1; I_little_egypt_facade_U1; 0; 0; 0; 0; 0; I_the_booth_U1; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; I_the_booth_U1; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; I_the_booth_U1; I_little_egypt_show_U1; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; I_little_egypt_facade_U1; 0; 0; 0; 0; 0; I_the_booth_U1; 0; 0; I_ride_entrance_U1; 0; 0; 0; 0; 0; 0; 0; 0; I_head_of_the_line_U1; 0; 0; I_stocks_room_U1; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; I_stake_room_U1; 0; 0; I_guillotine_room_U1; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; I_ride_exit_U1; 0; 0; 0; 0; 0; 0; 0; 0; I_guillotine_U1; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; I_ride_entrance_U1; 0; 0; I_gallows_room_U1; 0; 0; 0; 0; 0; 0; 0; 0; I_stocks_room_U1; 0; 0; I_stake_room_U1; 0; 0; 0; 0; 0; 0; 0; 0; I_gallows_room_U1; 0; 0; I_dungeon_U1; 0; 0; 0; 0; 0; 0; 0; 0; I_dungeon_U1; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; ];
+Array Map_Storage --> [ 0; 0; 0; I_the_booth_U1; 0; 0; 0; 0; 0; 0; 0; 0; I_parking_lot_U1; 0; 0; I_head_of_the_line_U1; 0; I_concession_stand_U1; I_strongman_booth_U1; I_little_egypt_facade_U1; 0; 0; 0; 0; 0; I_the_booth_U1; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; I_the_booth_U1; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; I_the_booth_U1; I_little_egypt_show_U1; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; I_little_egypt_facade_U1; 0; 0; 0; 0; 0; I_the_booth_U1; 0; 0; I_ride_entrance_U1; 0; 0; 0; 0; 0; 0; 0; 0; I_head_of_the_line_U1; 0; 0; I_stocks_room_U1; 0; 0; 0; 0; 0; 0; 0; 0; I_ride_entrance_U1; 0; 0; I_gallows_room_U1; 0; 0; 0; 0; 0; 0; 0; 0; I_stocks_room_U1; 0; 0; I_stake_room_U1; 0; 0; 0; 0; 0; 0; 0; 0; I_gallows_room_U1; 0; 0; I_dungeon_U1; 0; 0; 0; 0; 0; 0; 0; 0; I_stake_room_U1; 0; 0; I_guillotine_room_U1; 0; 0; 0; 0; 0; 0; 0; 0; I_dungeon_U1; 0; 0; I_ride_exit_U1; 0; 0; 0; 0; 0; 0; 0; 0; I_guillotine_room_U1; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; ];
 Array name_array1 --> [ 'north'; 'directions//p'; 'n//'; ];
 Array name_array2 --> [ 'northeast'; 'directions//p'; 'ne'; ];
 Array name_array3 --> [ 'northwest'; 'directions//p'; 'nw'; ];
@@ -6119,19 +6094,15 @@ Array name_array40 --> [ 'folding'; 'chair'; 'supporters//p'; ];
 Array name_array41 --> [ 'ride'; 'entrance'; 'rooms//p'; ];
 Array name_array42 --> [ 'attendant'; 'men//p'; ];
 Array name_array43 --> [ 'hellride'; 'regions//p'; ];
-Array name_array44 --> [ 'stocks'; 'rooms//p'; ];
-Array name_array45 --> [ 'gallows'; 'rooms//p'; ];
-Array name_array46 --> [ 'stake'; 'rooms//p'; ];
+Array name_array44 --> [ 'stocks'; 'room'; 'rooms//p'; ];
+Array name_array45 --> [ 'gallows'; 'room'; 'rooms//p'; ];
+Array name_array46 --> [ 'stake'; 'room'; 'rooms//p'; ];
 Array name_array47 --> [ 'dungeon'; 'rooms//p'; ];
-Array name_array48 --> [ 'guillotine'; 'rooms//p'; ];
+Array name_array48 --> [ 'guillotine'; 'room'; 'rooms//p'; ];
 Array name_array49 --> [ 'ride'; 'exit'; 'rooms//p'; ];
 Array name_array50 --> [ 'locker'; 'containers//p'; ];
 Array name_array51 --> [ 'wardrobe'; 'containers//p'; ];
 Array name_array52 --> [ 'car'; 'vehicles//p'; ];
-Array name_array53 --> [ 'stocks'; 'room'; 'rooms//p'; ];
-Array name_array54 --> [ 'gallows'; 'room'; 'rooms//p'; ];
-Array name_array55 --> [ 'stake'; 'room'; 'rooms//p'; ];
-Array name_array56 --> [ 'guillotine'; 'room'; 'rooms//p'; ];
 Array LocalParking --> [ 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; ];
 Array PowersOfTwo_TB --> [ 2048; 1024; 512; 256; 128; 64; 32; 16; 8; 4; 2; 1; ];
 Array IncreasingPowersOfTwo_TB --> [ 1; 2; 4; 8; 16; 32; 64; 128; 256; 512; 1024; 2048; 4096; 8192; 16384; 32768; ];
@@ -6175,7 +6146,7 @@ Array scene_endings --> 4; ! blank with extent 4
 Array scene_latest_ending --> 4; ! blank with extent 4
 Array multiple_object --> 100; ! blank with extent 100
 Array parser_results --> 16; ! blank with extent 16
-Array requisition_stack --> 171; ! blank with extent 171
+Array requisition_stack --> 159; ! blank with extent 159
 Array LWI_Storage --> [ 1; -1; Computed_Constant_Value_4_U2; ];
 Array Details_of_Specific_Action --> 5; ! blank with extent 5
 Array activities_stack --> 20; ! blank with extent 20
@@ -6185,7 +6156,7 @@ Array T_SL_Score_Moves --> [ CONSTANT_PACKED_TEXT_STORAGE; SL_Score_Moves; ];
 Array T_SL_Location --> [ CONSTANT_PACKED_TEXT_STORAGE; SL_Location; ];
 Array StorageForShortName buffer 250; ! blank with extent 250
 Array DoorRoutingViable -> 1; ! blank with extent 1
-Array FWMatrix --> 324; ! blank with extent 324
+Array FWMatrix --> 196; ! blank with extent 196
 Array TimesActionHasHappened --> 2; ! blank with extent 2
 Array TurnsActionHasBeenHappening --> 2; ! blank with extent 2
 Array LastTurnActionHappenedOn --> 2; ! blank with extent 2
@@ -6408,16 +6379,16 @@ Class K15_player_s_holdall
 ;
 Class K20_fluid_container
   class K5_container
-    with plural bc_U426
+    with plural bc_U406
     with P_fluid_capacity 120
     with P_current_volume 0
-    with parse_name parse_name77
+    with parse_name parse_name73
     with P_liquid I_water_U1
-    with description bc_U427
-    with initial bc_U428
-    with short_name bc_U429
-    with article bc_U430
-    with list_together bc_U431
+    with description bc_U407
+    with initial bc_U408
+    with short_name bc_U409
+    with article bc_U410
+    with list_together bc_U411
 ;
 Class K7_backdrop
   class K2_thing
@@ -6737,13 +6708,13 @@ K1_room I_parking_lot_U1    with short_name bc_U207
     with article bc_U209
     with list_together bc_U210
 ;
-K2_thing -> I_cars_U1    with short_name bc_U239
-    with description bc_U240
+K2_thing -> I_cars_U1    with short_name bc_U238
+    with description bc_U239
     has proper
     has static
     has scenery
     with vector 0
-    with cap_short_name bc_U241
+    with cap_short_name bc_U240
     has mark_as_thing
     with KD_Count 2
     with IK2_Count 4
@@ -6751,12 +6722,12 @@ K2_thing -> I_cars_U1    with short_name bc_U239
     with action_bitmap 0 0 0 0 0 0
     with parse_name parse_name25
     with name 'cars' 'things//p' 'car'
-    with initial bc_U242
-    with plural bc_U243
-    with article bc_U244
-    with list_together bc_U245
+    with initial bc_U241
+    with plural bc_U242
+    with article bc_U243
+    with list_together bc_U244
 ;
-K5_container -> I_blueberry_bush_U1    with short_name bc_U246
+K5_container -> I_blueberry_bush_U1    with short_name bc_U245
     has static
     has scenery
     with vector 0
@@ -6769,27 +6740,27 @@ K5_container -> I_blueberry_bush_U1    with short_name bc_U246
     with K5_container_Next I_can_U1
     with action_bitmap 0 0 0 0 0 0
     with name 'blueberry' 'bush' 'containers//p'
-    with description bc_U247
-    with initial bc_U248
-    with plural bc_U249
-    with article bc_U250
-    with list_together bc_U251
+    with description bc_U246
+    with initial bc_U247
+    with plural bc_U248
+    with article bc_U249
+    with list_together bc_U250
 ;
-K2_thing -> -> I_blueberries_U1    with short_name bc_U252
-    with description bc_U253
+K2_thing -> -> I_blueberries_U1    with short_name bc_U251
+    with description bc_U252
     has proper
     with vector 0
-    with cap_short_name bc_U254
+    with cap_short_name bc_U253
     has mark_as_thing
     with KD_Count 2
     with IK2_Count 6
     with K2_thing_Next I_seller_U1
     with action_bitmap 0 0 0 0 0 0
     with name 'blueberries' 'things//p'
-    with initial bc_U255
-    with plural bc_U256
-    with article bc_U257
-    with list_together bc_U258
+    with initial bc_U254
+    with plural bc_U255
+    with article bc_U256
+    with list_together bc_U257
 ;
 K1_room I_the_booth_U1    with short_name bc_U211
     with description ts_array_U421
@@ -6806,8 +6777,8 @@ K1_room I_the_booth_U1    with short_name bc_U211
     with article bc_U213
     with list_together bc_U214
 ;
-K10_man -> I_seller_U1    with short_name bc_U259
-    with description bc_U260
+K10_man -> I_seller_U1    with short_name bc_U258
+    with description bc_U259
     with vector 0
     has mark_as_thing
     has animate
@@ -6821,13 +6792,13 @@ K10_man -> I_seller_U1    with short_name bc_U259
     with K10_man_Next I_attendant_U1
     with action_bitmap 0 0 0 0 0 0
     with name 'seller' 'men//p'
-    with initial bc_U261
-    with plural bc_U262
-    with article bc_U263
-    with list_together bc_U264
+    with initial bc_U260
+    with plural bc_U261
+    with article bc_U262
+    with list_together bc_U263
 ;
-K2_thing -> -> I_ticket_U1    with short_name bc_U265
-    with description ts_array_U423
+K2_thing -> -> I_ticket_U1    with short_name bc_U264
+    with description ts_array_U424
     has ~static
     with P_price 250
     with vector 0
@@ -6837,10 +6808,10 @@ K2_thing -> -> I_ticket_U1    with short_name bc_U265
     with K2_thing_Next I_treats_U1
     with action_bitmap 0 0 0 0 0 0
     with name 'ticket' 'things//p'
-    with initial bc_U266
-    with plural bc_U267
-    with article bc_U268
-    with list_together bc_U269
+    with initial bc_U265
+    with plural bc_U266
+    with article bc_U267
+    with list_together bc_U268
 ;
 K1_room I_concession_stand_U1    with short_name bc_U215
     with description bc_U216
@@ -6857,13 +6828,13 @@ K1_room I_concession_stand_U1    with short_name bc_U215
     with article bc_U218
     with list_together bc_U219
 ;
-K2_thing -> I_treats_U1    with short_name bc_U270
-    with description bc_U271
+K2_thing -> I_treats_U1    with short_name bc_U269
+    with description bc_U270
     has proper
     has static
     has scenery
     with vector 0
-    with cap_short_name bc_U272
+    with cap_short_name bc_U271
     has mark_as_thing
     with KD_Count 2
     with IK2_Count 9
@@ -6871,13 +6842,13 @@ K2_thing -> I_treats_U1    with short_name bc_U270
     with action_bitmap 0 0 0 0 0 0
     with parse_name parse_name30
     with name 'treats' 'things//p' 'treat'
-    with initial bc_U273
-    with plural bc_U274
-    with article bc_U275
-    with list_together bc_U276
+    with initial bc_U272
+    with plural bc_U273
+    with article bc_U274
+    with list_together bc_U275
 ;
-K2_thing -> I_menu_U1    with short_name bc_U277
-    with description ts_array_U424
+K2_thing -> I_menu_U1    with short_name bc_U276
+    with description ts_array_U425
     has static
     with vector 0
     has mark_as_thing
@@ -6886,13 +6857,13 @@ K2_thing -> I_menu_U1    with short_name bc_U277
     with K2_thing_Next I_can_U1
     with action_bitmap 0 0 0 0 0 0
     with name 'menu' 'things//p'
-    with initial bc_U278
-    with plural bc_U279
-    with article bc_U280
-    with list_together bc_U281
+    with initial bc_U277
+    with plural bc_U278
+    with article bc_U279
+    with list_together bc_U280
 ;
-K20_fluid_container -> I_can_U1    with short_name bc_U282
-    with description bc_U283
+K20_fluid_container -> I_can_U1    with short_name bc_U281
+    with description bc_U282
     with P_current_volume 120
     with P_price 100
     with P_liquid I_cola_U1
@@ -6909,13 +6880,13 @@ K20_fluid_container -> I_can_U1    with short_name bc_U282
     with action_bitmap 0 0 0 0 0 0
     with parse_name parse_name32
     with name 'can' 'fluid//p' 'containers//p' 'coke' 'of'
-    with initial bc_U284
-    with plural bc_U285
-    with article bc_U286
-    with list_together bc_U287
+    with initial bc_U283
+    with plural bc_U284
+    with article bc_U285
+    with list_together bc_U286
 ;
-K2_thing -> I_bucket_of_popcorn_U1    with short_name bc_U288
-    with description bc_U289
+K2_thing -> I_bucket_of_popcorn_U1    with short_name bc_U287
+    with description bc_U288
     has edible
     with P_price 250
     with vector 0
@@ -6925,13 +6896,13 @@ K2_thing -> I_bucket_of_popcorn_U1    with short_name bc_U288
     with K2_thing_Next I_candy_apple_U1
     with action_bitmap 0 0 0 0 0 0
     with name 'bucket' 'of' 'popcorn' 'things//p'
-    with initial bc_U290
-    with plural bc_U291
-    with article bc_U292
-    with list_together bc_U293
+    with initial bc_U289
+    with plural bc_U290
+    with article bc_U291
+    with list_together bc_U292
 ;
-K2_thing -> I_candy_apple_U1    with short_name bc_U294
-    with description bc_U295
+K2_thing -> I_candy_apple_U1    with short_name bc_U293
+    with description bc_U294
     has edible
     with P_price 150
     with vector 0
@@ -6941,31 +6912,31 @@ K2_thing -> I_candy_apple_U1    with short_name bc_U294
     with K2_thing_Next I_cotton_candy_U1
     with action_bitmap 0 0 0 0 0 0
     with name 'candy' 'apple' 'things//p'
-    with initial bc_U296
-    with plural bc_U297
-    with article bc_U298
-    with list_together bc_U299
+    with initial bc_U295
+    with plural bc_U296
+    with article bc_U297
+    with list_together bc_U298
 ;
-K2_thing -> I_cotton_candy_U1    with short_name bc_U300
-    with description bc_U301
+K2_thing -> I_cotton_candy_U1    with short_name bc_U299
+    with description bc_U300
     has proper
     has edible
     with P_price 150
     with vector 0
-    with cap_short_name bc_U302
+    with cap_short_name bc_U301
     has mark_as_thing
     with KD_Count 2
     with IK2_Count 14
     with K2_thing_Next I_soft_pretzel_U1
     with action_bitmap 0 0 0 0 0 0
     with name 'cotton' 'candy' 'things//p'
-    with initial bc_U303
-    with plural bc_U304
-    with article bc_U305
-    with list_together bc_U306
+    with initial bc_U302
+    with plural bc_U303
+    with article bc_U304
+    with list_together bc_U305
 ;
-K2_thing -> I_soft_pretzel_U1    with short_name bc_U307
-    with description bc_U308
+K2_thing -> I_soft_pretzel_U1    with short_name bc_U306
+    with description bc_U307
     has edible
     with P_price 150
     with vector 0
@@ -6975,10 +6946,10 @@ K2_thing -> I_soft_pretzel_U1    with short_name bc_U307
     with K2_thing_Next I_markings_U1
     with action_bitmap 0 0 0 0 0 0
     with name 'soft' 'pretzel' 'things//p'
-    with initial bc_U309
-    with plural bc_U310
-    with article bc_U311
-    with list_together bc_U312
+    with initial bc_U308
+    with plural bc_U309
+    with article bc_U310
+    with list_together bc_U311
 ;
 K1_room I_strongman_booth_U1    with short_name bc_U220
     with description ts_array_U422
@@ -6995,8 +6966,8 @@ K1_room I_strongman_booth_U1    with short_name bc_U220
     with article bc_U222
     with list_together bc_U223
 ;
-K2_thing -> I_markings_U1    with short_name bc_U313
-    with description bc_U314
+K2_thing -> I_markings_U1    with short_name bc_U312
+    with description bc_U313
     has static
     has scenery
     with vector 0
@@ -7007,12 +6978,12 @@ K2_thing -> I_markings_U1    with short_name bc_U313
     with action_bitmap 0 0 0 0 0 0
     with parse_name parse_name37
     with name 'markings' 'things//p' 'marking' 'sign' 'signs'
-    with initial bc_U315
-    with plural bc_U316
-    with article bc_U317
-    with list_together bc_U318
+    with initial bc_U314
+    with plural bc_U315
+    with article bc_U316
+    with list_together bc_U317
 ;
-K2_thing -> I_base_U1    with short_name bc_U319
+K2_thing -> I_base_U1    with short_name bc_U318
     has static
     with vector 0
     has mark_as_thing
@@ -7021,14 +6992,14 @@ K2_thing -> I_base_U1    with short_name bc_U319
     with K2_thing_Next I_mallet_U1
     with action_bitmap 0 0 0 0 0 0
     with name 'base' 'things//p'
-    with description bc_U320
-    with initial bc_U321
-    with plural bc_U322
-    with article bc_U323
-    with list_together bc_U324
+    with description bc_U319
+    with initial bc_U320
+    with plural bc_U321
+    with article bc_U322
+    with list_together bc_U323
 ;
-K2_thing -> I_mallet_U1    with short_name bc_U325
-    with description bc_U326
+K2_thing -> I_mallet_U1    with short_name bc_U324
+    with description bc_U325
     with P_price 200
     with vector 0
     has mark_as_thing
@@ -7037,10 +7008,10 @@ K2_thing -> I_mallet_U1    with short_name bc_U325
     with K2_thing_Next I_barker_U1
     with action_bitmap 0 0 0 0 0 0
     with name 'mallet' 'things//p'
-    with initial bc_U327
-    with plural bc_U328
-    with article bc_U329
-    with list_together bc_U330
+    with initial bc_U326
+    with plural bc_U327
+    with article bc_U328
+    with list_together bc_U329
 ;
 K1_room I_little_egypt_facade_U1    with short_name bc_U224
     with description bc_U225
@@ -7057,8 +7028,8 @@ K1_room I_little_egypt_facade_U1    with short_name bc_U224
     with article bc_U227
     with list_together bc_U228
 ;
-K8_person -> I_barker_U1    with short_name bc_U331
-    with description ts_array_U425
+K8_person -> I_barker_U1    with short_name bc_U330
+    with description bc_U331
     with vector 0
     has mark_as_thing
     has animate
@@ -7076,7 +7047,7 @@ K8_person -> I_barker_U1    with short_name bc_U331
     with list_together bc_U335
 ;
 K1_room I_little_egypt_show_U1    with short_name bc_U229
-    with description bc_U230
+    with description ts_array_U423
     with map_region I_midway_U1
     has proper
     with vector 0
@@ -7086,9 +7057,9 @@ K1_room I_little_egypt_show_U1    with short_name bc_U229
     with IK1_Count 5
     with K1_room_Next I_head_of_the_line_U1
     with name 'little' 'egypt' 'show' 'rooms//p'
-    with plural bc_U231
-    with article bc_U232
-    with list_together bc_U233
+    with plural bc_U230
+    with article bc_U231
+    with list_together bc_U232
 ;
 K6_supporter -> I_folding_chair_U1    with short_name bc_U336
     with description bc_U337
@@ -7110,8 +7081,8 @@ K6_supporter -> I_folding_chair_U1    with short_name bc_U336
     with article bc_U340
     with list_together bc_U341
 ;
-K1_room I_head_of_the_line_U1    with short_name bc_U234
-    with description bc_U235
+K1_room I_head_of_the_line_U1    with short_name bc_U233
+    with description bc_U234
     with map_region I_midway_U1
     has proper
     with vector 0
@@ -7121,9 +7092,9 @@ K1_room I_head_of_the_line_U1    with short_name bc_U234
     with IK1_Count 6
     with K1_room_Next I_ride_entrance_U1
     with name 'head' 'of' 'the' 'line' 'rooms//p'
-    with plural bc_U236
-    with article bc_U237
-    with list_together bc_U238
+    with plural bc_U235
+    with article bc_U236
+    with list_together bc_U237
 ;
 K10_man -> I_attendant_U1    with short_name bc_U347
     with description bc_U348
@@ -7154,7 +7125,7 @@ K1_room I_ride_entrance_U1    with short_name bc_U342
     has mark_as_room
     with KD_Count 1
     with IK1_Count 7
-    with K1_room_Next I_stocks_U1
+    with K1_room_Next I_stocks_room_U1
     with name 'ride' 'entrance' 'rooms//p'
     with plural bc_U344
     with article bc_U345
@@ -7192,7 +7163,8 @@ K9_region I_hellride_U1    with short_name bc_U353
     with article bc_U355
     with list_together bc_U356
 ;
-K1_room I_stocks_U1    with short_name bc_U357
+K1_room I_stocks_room_U1    with short_name bc_U357
+    with description bc_U358
     with map_region I_hellride_U1
     has proper
     with vector 0
@@ -7200,14 +7172,14 @@ K1_room I_stocks_U1    with short_name bc_U357
     has mark_as_room
     with KD_Count 1
     with IK1_Count 8
-    with K1_room_Next I_gallows_U1
-    with name 'stocks' 'rooms//p'
-    with description bc_U358
+    with K1_room_Next I_gallows_room_U1
+    with name 'stocks' 'room' 'rooms//p'
     with plural bc_U359
     with article bc_U360
     with list_together bc_U361
 ;
-K1_room I_gallows_U1    with short_name bc_U362
+K1_room I_gallows_room_U1    with short_name bc_U362
+    with description bc_U363
     with map_region I_hellride_U1
     has proper
     with vector 0
@@ -7215,14 +7187,14 @@ K1_room I_gallows_U1    with short_name bc_U362
     has mark_as_room
     with KD_Count 1
     with IK1_Count 9
-    with K1_room_Next I_stake_U1
-    with name 'gallows' 'rooms//p'
-    with description bc_U363
+    with K1_room_Next I_stake_room_U1
+    with name 'gallows' 'room' 'rooms//p'
     with plural bc_U364
     with article bc_U365
     with list_together bc_U366
 ;
-K1_room I_stake_U1    with short_name bc_U367
+K1_room I_stake_room_U1    with short_name bc_U367
+    with description bc_U368
     with map_region I_hellride_U1
     has proper
     with vector 0
@@ -7231,8 +7203,7 @@ K1_room I_stake_U1    with short_name bc_U367
     with KD_Count 1
     with IK1_Count 10
     with K1_room_Next I_dungeon_U1
-    with name 'stake' 'rooms//p'
-    with description bc_U368
+    with name 'stake' 'room' 'rooms//p'
     with plural bc_U369
     with article bc_U370
     with list_together bc_U371
@@ -7246,13 +7217,14 @@ K1_room I_dungeon_U1    with short_name bc_U372
     has mark_as_room
     with KD_Count 1
     with IK1_Count 11
-    with K1_room_Next I_guillotine_U1
+    with K1_room_Next I_guillotine_room_U1
     with name 'dungeon' 'rooms//p'
     with plural bc_U374
     with article bc_U375
     with list_together bc_U376
 ;
-K1_room I_guillotine_U1    with short_name bc_U377
+K1_room I_guillotine_room_U1    with short_name bc_U377
+    with description bc_U378
     with map_region I_hellride_U1
     has proper
     with vector 0
@@ -7261,8 +7233,7 @@ K1_room I_guillotine_U1    with short_name bc_U377
     with KD_Count 1
     with IK1_Count 12
     with K1_room_Next I_ride_exit_U1
-    with name 'guillotine' 'rooms//p'
-    with description bc_U378
+    with name 'guillotine' 'room' 'rooms//p'
     with plural bc_U379
     with article bc_U380
     with list_together bc_U381
@@ -7276,7 +7247,7 @@ K1_room I_ride_exit_U1    with short_name bc_U382
     has mark_as_room
     with KD_Count 1
     with IK1_Count 13
-    with K1_room_Next I_stocks_room_U1
+    with K1_room_Next 0
     with name 'ride' 'exit' 'rooms//p'
     with plural bc_U384
     with article bc_U385
@@ -7317,58 +7288,6 @@ K5_container I_wardrobe_U1    with short_name bc_U394
     with plural bc_U397
     with article bc_U398
     with list_together bc_U399
-;
-K1_room I_stocks_room_U1    with short_name bc_U406
-    with description bc_U407
-    with vector 0
-    with room_index -1
-    has mark_as_room
-    with KD_Count 1
-    with IK1_Count 14
-    with K1_room_Next I_gallows_room_U1
-    with name 'stocks' 'room' 'rooms//p'
-    with plural bc_U408
-    with article bc_U409
-    with list_together bc_U410
-;
-K1_room I_gallows_room_U1    with short_name bc_U411
-    with description bc_U412
-    with vector 0
-    with room_index -1
-    has mark_as_room
-    with KD_Count 1
-    with IK1_Count 15
-    with K1_room_Next I_stake_room_U1
-    with name 'gallows' 'room' 'rooms//p'
-    with plural bc_U413
-    with article bc_U414
-    with list_together bc_U415
-;
-K1_room I_stake_room_U1    with short_name bc_U416
-    with description bc_U417
-    with vector 0
-    with room_index -1
-    has mark_as_room
-    with KD_Count 1
-    with IK1_Count 16
-    with K1_room_Next I_guillotine_room_U1
-    with name 'stake' 'room' 'rooms//p'
-    with plural bc_U418
-    with article bc_U419
-    with list_together bc_U420
-;
-K1_room I_guillotine_room_U1    with short_name bc_U421
-    with description bc_U422
-    with vector 0
-    with room_index -1
-    has mark_as_room
-    with KD_Count 1
-    with IK1_Count 17
-    with K1_room_Next 0
-    with name 'guillotine' 'room' 'rooms//p'
-    with plural bc_U423
-    with article bc_U424
-    with list_together bc_U425
 ;
 #ifndef cap_short_name; Constant cap_short_name = 0; #endif;
 #ifndef before; Constant before = 0; #endif;
@@ -10519,15 +10438,31 @@ Global max_z_object;
             rtrue;
         }
         if ((R == call_U2172)) {
-            print "When HellRideAuto begins";
+            print "Every turn when the player is in the Little Egypt Facade";
             rtrue;
         }
         if ((R == call_U2173)) {
-            print "When HellRideAuto ends";
+            print "Check going west when the player is in the Little Egypt Facade and the barker is not carrying the dime";
             rtrue;
         }
         if ((R == call_U2174)) {
-            print "before going south when the player is in the Ride Entrance";
+            print "Check going west when the player is in the Little Egypt Facade and the barker is carrying the dime";
+            rtrue;
+        }
+        if ((R == call_U2175)) {
+            print "After giving when the noun is dime and the second noun is barker";
+            rtrue;
+        }
+        if ((R == call_U2176)) {
+            print "When HellRideAuto begins";
+            rtrue;
+        }
+        if ((R == call_U2177)) {
+            print "When HellRideAuto ends";
+            rtrue;
+        }
+        if ((R == call_U2178)) {
+            print "Before going south when the player is in the Ride Entrance";
             rtrue;
         }
         print "(nameless rule at address ";
@@ -28035,6 +27970,17 @@ Global max_z_object;
     ((latest_rule_result-->(0)) = 0);
     rfalse;
 ];
+[ call_U369 forbid_breaks rv;
+    (rv = (call_U2172)());
+    if (rv) {
+        if ((rv == 2)) {
+            return reason_the_action_failed;
+        }
+        return call_U2172;
+    }
+    ((latest_rule_result-->(0)) = 0);
+    rfalse;
+];
 [ call_U370 forbid_breaks rv original_deadflag;
     (original_deadflag = deadflag);
     (rv = (call_U1002)());
@@ -28611,12 +28557,12 @@ Global max_z_object;
         if (say__p) {
             RulebookParBreak(forbid_breaks);
         }
-        (rv = (call_U2174)());
+        (rv = (call_U2178)());
         if (rv) {
             if ((rv == 2)) {
                 return reason_the_action_failed;
             }
-            return call_U2174;
+            return call_U2178;
         }
         ((latest_rule_result-->(0)) = 0);
     } else {
@@ -29197,6 +29143,26 @@ Global max_z_object;
                 return reason_the_action_failed;
             }
             return call_U2145;
+        }
+        ((latest_rule_result-->(0)) = 0);
+    } else {
+        if (say__p) {
+            RulebookParBreak(forbid_breaks);
+        }
+    }
+    if ((action == ##Give)) {
+        if ((original_deadflag ~= deadflag)) {
+            rfalse;
+        }
+        if (say__p) {
+            RulebookParBreak(forbid_breaks);
+        }
+        (rv = (call_U2175)());
+        if (rv) {
+            if ((rv == 2)) {
+                return reason_the_action_failed;
+            }
+            return call_U2175;
         }
         ((latest_rule_result-->(0)) = 0);
     } else {
@@ -30601,6 +30567,34 @@ Global max_z_object;
 ];
 [ call_U506 forbid_breaks rv original_deadflag;
     (original_deadflag = deadflag);
+    (rv = (call_U2173)());
+    if (rv) {
+        if ((rv == 2)) {
+            return reason_the_action_failed;
+        }
+        return call_U2173;
+    }
+    ((latest_rule_result-->(0)) = 0);
+    if ((original_deadflag ~= deadflag)) {
+        rfalse;
+    }
+    if (say__p) {
+        RulebookParBreak(forbid_breaks);
+    }
+    (rv = (call_U2174)());
+    if (rv) {
+        if ((rv == 2)) {
+            return reason_the_action_failed;
+        }
+        return call_U2174;
+    }
+    ((latest_rule_result-->(0)) = 0);
+    if ((original_deadflag ~= deadflag)) {
+        rfalse;
+    }
+    if (say__p) {
+        RulebookParBreak(forbid_breaks);
+    }
     (rv = (call_U1251)());
     if (rv) {
         if ((rv == 2)) {
@@ -32139,20 +32133,6 @@ Global max_z_object;
             return reason_the_action_failed;
         }
         return call_U1589;
-    }
-    ((latest_rule_result-->(0)) = 0);
-    if ((original_deadflag ~= deadflag)) {
-        rfalse;
-    }
-    if (say__p) {
-        RulebookParBreak(forbid_breaks);
-    }
-    (rv = (call_U1592)());
-    if (rv) {
-        if ((rv == 2)) {
-            return reason_the_action_failed;
-        }
-        return call_U1592;
     }
     ((latest_rule_result-->(0)) = 0);
     if ((original_deadflag ~= deadflag)) {
@@ -35116,7 +35096,7 @@ Global max_z_object;
     ParaContent();
     print " ";
     ParaContent();
-    (call_U2187)(CV_POS,I_third_person_plural_U1,story_tense);
+    (call_U2191)(CV_POS,I_third_person_plural_U1,story_tense);
     ParaContent();
     print " none at all available!";
     rtrue;
@@ -59862,6 +59842,45 @@ Global max_z_object;
 ];
 [ call_U2114;
     (say__p = 1);
+    if ((~~(call_U245(self)))) {
+        jump L_Say0;
+    }
+    ParaContent();
+    print "As you enter the tent, you see that The stage is decorated to resemble an exotic Middle Eastern market or palace, featuring rich, colorful fabrics, brass ornaments, and lanterns casting a warm, flickering glow. Scents of incense waft through the air, enhancing the atmosphere of mystique. The backdrop displays painted scenes of pyramids, desert landscapes, or domed structures to evoking a sense of being transported to the ~Middle East~. ";
+    ParaContent();
+    DivideParagraphPoint();
+    print "^";
+    ParaContent();
+    print "Little Egypt emerges draped in a flowing silk veils which she skillfully uses as part of the dance. Her attire consists of a sparkling, sequined bodice and harem pants, adorned with jingling coin belts and jewelry that accentuate her movements.";
+    ParaContent();
+    DivideParagraphPoint();
+    print "^";
+    ParaContent();
+    print "The performance begins with slow, undulating movements, drawing the you into the rhythm of exotic live music played on traditional instruments like the oud, darbuka, or zurna. As the tempo builds, her hips, torso, and hands move in intricate, mesmerizing patterns, demonstrating remarkable control and fluidity. She incorporates dramatic spins, drops, and shimmies, often accentuating the beat of the music with a quick jingle of her coin belt.";
+    ParaContent();
+    DivideParagraphPoint();
+    print "^";
+    ParaContent();
+    print "Little Egypt makes eye contact with you and smiles enigmatically. During her performance she balances a sword on her head and accents her dance with finger cymbals.";
+    ParaContent();
+    DivideParagraphPoint();
+    print "^";
+    ParaContent();
+    print "The music alternates between hauntingly slow melodies and rapid, energetic drum beats, creating an emotional arc that keeps the you entranced. Little Egypt relies on the music's dynamic changes to tell a story with movements reflecting joy, sorrow, seduction, and celebration.";
+    ParaContent();
+    DivideParagraphPoint();
+    print "^";
+    ParaContent();
+    print "The performance concludes with a dramatic flourish of a fast-paced shimmy, a bold spin, and Little Egypt dramatically casts off her veils. The dancer takes a bow to enthusiastic applause, leaving you spellbound by the sensual yet artful display.";
+    jump L_SayX0;
+    .L_Say0;
+    ParaContent();
+    print "There are folding chairs set up in rows in front of a low stage. There is an empty chair in the front row. Perhaps you could sit there.";
+    .L_SayX0;
+    rtrue;
+];
+[ call_U2115;
+    (say__p = 1);
     ParaContent();
     print "This ticket will ~Admit One~ to the Hell Ride.";
     ParaContent();
@@ -59874,7 +59893,7 @@ Global max_z_object;
     print "s a real ~E~ ticket, baby!";
     rtrue;
 ];
-[ call_U2115;
+[ call_U2116;
     (say__p = 1);
     ParaContent();
     print "^";
@@ -59896,30 +59915,6 @@ Global max_z_object;
     print "^";
     ParaContent();
     print "$1.50 Soft Pretzel";
-    rtrue;
-];
-[ call_U2116;
-    (say__p = 1);
-    ParaContent();
-    print "Here is a man dressed in black pants, a white shirt, and a striped vest.  He calls out: ";
-    ParaContent();
-    print "^";
-    ParaContent();
-    print "^";
-    ParaContent();
-    print " Step right up, folks and see Little Egypt";
-    ParaContent();
-    print "^";
-    ParaContent();
-    print " Do her famous dance of the Pyramids!";
-    ParaContent();
-    print "^";
-    ParaContent();
-    print " She walks, she talks, she crawls on her belly like a reptile";
-    ParaContent();
-    print "^";
-    ParaContent();
-    print " Just one thin dime, one tenth of a dollar!";
     rtrue;
 ];
 [ RFI_for_I2;
@@ -60107,37 +60102,37 @@ Global max_z_object;
     }
 ];
 [ call_U2125 forbid_breaks rv;
-    (rv = (call_U2172)());
+    (rv = (call_U2176)());
     if (rv) {
         if ((rv == 2)) {
             return reason_the_action_failed;
         }
-        return call_U2172;
+        return call_U2176;
     }
     ((latest_rule_result-->(0)) = 0);
     rfalse;
 ];
 [ call_U2126 forbid_breaks rv;
-    (rv = (call_U2173)());
+    (rv = (call_U2177)());
     if (rv) {
         if ((rv == 2)) {
             return reason_the_action_failed;
         }
-        return call_U2173;
+        return call_U2177;
     }
     ((latest_rule_result-->(0)) = 0);
     rfalse;
 ];
 [ E6 value which;
     if ((value == 0)) {
-        call_U2175(value);
+        call_U2179(value);
         rtrue;
     }
     if ((NUMBER_TY_Abs(value) >= 1)) {
-        call_U2175(value);
+        call_U2179(value);
         rtrue;
     }
-    call_U2175(value);
+    call_U2179(value);
     rtrue;
     rtrue;
 ];
@@ -60161,14 +60156,14 @@ Global max_z_object;
 ];
 [ E8 value which;
     if ((value == 0)) {
-        call_U2177(value);
+        call_U2181(value);
         rtrue;
     }
     if ((NUMBER_TY_Abs(value) >= 1)) {
-        call_U2177(value);
+        call_U2181(value);
         rtrue;
     }
-    call_U2177(value);
+    call_U2181(value);
     rtrue;
     rtrue;
 ];
@@ -60355,8 +60350,8 @@ Global max_z_object;
         I_weakling_U1:
             print "Weakling";
             ;
-        I_foobar_U1:
-            print "FooBar";
+        I_getting_stronger_U1:
+            print "Getting Stronger";
             ;
         I_average_U1:
             print "Average";
@@ -60643,7 +60638,7 @@ Global max_z_object;
             print " contains ";
             ParaContent();
             @push self;
-            call_U2179(GProperty(OBJECT_TY, (self = noun), A_P_current_volume));
+            call_U2183(GProperty(OBJECT_TY, (self = noun), A_P_current_volume));
             @pull self;
             ParaContent();
             print " of ";
@@ -60923,7 +60918,7 @@ Global max_z_object;
         print " now contains ";
         ParaContent();
         @push self;
-        call_U2179(GProperty(OBJECT_TY, (self = noun), A_P_current_volume));
+        call_U2183(GProperty(OBJECT_TY, (self = noun), A_P_current_volume));
         @pull self;
         ParaContent();
         print " of ";
@@ -60941,7 +60936,7 @@ Global max_z_object;
         print " contains ";
         ParaContent();
         @push self;
-        call_U2179(GProperty(OBJECT_TY, (self = second), A_P_current_volume));
+        call_U2183(GProperty(OBJECT_TY, (self = second), A_P_current_volume));
         @pull self;
         ParaContent();
         print " of ";
@@ -61193,8 +61188,97 @@ Global max_z_object;
     rfalse;
 ];
 [ call_U2172;
+    if ((I_little_egypt_facade_U1 == ContainerOf(player))) {
+        if (debug_rules) {
+            DB_Rule(call_U2172, 892, 0);
+        }
+        (say__p = 1);
+        ParaContent();
+        print "The barker cries: ";
+        ParaContent();
+        print "^";
+        ParaContent();
+        print "^";
+        ParaContent();
+        print "Ladies and gentlemen, boys and girls, gather ~round! ";
+        ParaContent();
+        print "^";
+        ParaContent();
+        print "Step right up and witness the spectacle that's taken the world by storm! ";
+        ParaContent();
+        print "^";
+        ParaContent();
+        print "She walks, she talks, she crawls on her belly like a reptile. ";
+        ParaContent();
+        print "^";
+        ParaContent();
+        print "Behold the one, the only Little Egypt, performing her legendary Dance of the Pyramids-a dazzling display of mystery, grace, and exotic allure! ";
+        ParaContent();
+        print "^";
+        ParaContent();
+        print "For just a dime, one tenth of a dollar, prepare to be transported to the sands of Cairo, where enchantment and wonder await!";
+        print "^";
+    } else {
+        if ((debug_rules > 1)) {
+            DB_Rule(call_U2172, 892, 4);
+        }
+    }
+    rfalse;
+];
+[ call_U2173;
+    if ((((actor == player)) && ((((noun == I_west_U1)) && (((((self = actor),1)) && ((((I_little_egypt_facade_U1 == ContainerOf(player))) && ((~~((I_barker_U1 == CarrierOf(I_dime_U1))))))))))))) {
+        (self = noun);
+        if (debug_rules) {
+            DB_Rule(call_U2173, 893, 0);
+        }
+        (say__p = 1);
+        ParaContent();
+        print "It'll cost you a dime to go that way.";
+        print "^";
+        rtrue;
+    } else {
+        if ((debug_rules > 1)) {
+            DB_Rule(call_U2173, 893, 2);
+        }
+    }
+    rfalse;
+];
+[ call_U2174;
+    if ((((actor == player)) && ((((noun == I_west_U1)) && (((((self = actor),1)) && ((((I_little_egypt_facade_U1 == ContainerOf(player))) && ((I_barker_U1 == CarrierOf(I_dime_U1))))))))))) {
+        (self = noun);
+        if (debug_rules) {
+            DB_Rule(call_U2174, 894, 0);
+        }
+        rfalse;
+    } else {
+        if ((debug_rules > 1)) {
+            DB_Rule(call_U2174, 894, 2);
+        }
+    }
+    rfalse;
+];
+[ call_U2175;
+    if ((((action == ##Give)) && ((((actor == player)) && (((((self = actor),1)) && ((((noun == I_dime_U1)) && ((second == I_barker_U1)))))))))) {
+        (self = noun);
+        if (debug_rules) {
+            DB_Rule(call_U2175, 895, 0);
+        }
+        (say__p = 1);
+        ParaContent();
+        print "You can now head west into the show.";
+        print "^";
+        RulebookSucceeds(0, 0);
+        rtrue;
+    } else {
+        if ((debug_rules > 1)) {
+            DB_Rule(call_U2175, 895, 2);
+        }
+    }
+    rfalse;
+];
+[ call_U2176;
     if (debug_rules) {
-        DB_Rule(call_U2172, 892, 0);
+        DB_Rule(call_U2176, 896, 0);
     }
     (say__p = 1);
     ParaContent();
@@ -61202,9 +61286,9 @@ Global max_z_object;
     print "^";
     rfalse;
 ];
-[ call_U2173;
+[ call_U2177;
     if (debug_rules) {
-        DB_Rule(call_U2173, 893, 0);
+        DB_Rule(call_U2177, 897, 0);
     }
     (say__p = 1);
     ParaContent();
@@ -61212,11 +61296,11 @@ Global max_z_object;
     print "^";
     rfalse;
 ];
-[ call_U2174;
+[ call_U2178;
     if ((((action == ##Go)) && ((((actor == player)) && ((((noun == I_south_U1)) && (((((self = actor),1)) && ((I_ride_entrance_U1 == ContainerOf(player))))))))))) {
         (self = noun);
         if (debug_rules) {
-            DB_Rule(call_U2174, 896, 0);
+            DB_Rule(call_U2178, 900, 0);
         }
         (say__p = 1);
         ParaContent();
@@ -61226,12 +61310,12 @@ Global max_z_object;
         rfalse;
     } else {
         if ((debug_rules > 1)) {
-            DB_Rule(call_U2174, 896, 2);
+            DB_Rule(call_U2178, 900, 2);
         }
     }
     rfalse;
 ];
-[ call_U2175 value rem S;
+[ call_U2179 value rem S;
     print "$";
     print (value/100);
     print ".";
@@ -61241,7 +61325,7 @@ Global max_z_object;
     print (value%100);
     rtrue;
 ];
-[ call_U2176 original_wn group_wn v w rv wpos mid_word matched_number cur_word cur_len cur_addr sgn tot f x;
+[ call_U2180 original_wn group_wn v w rv wpos mid_word matched_number cur_word cur_len cur_addr sgn tot f x;
     (wpos = 0);
     (mid_word = 0);
     (matched_number = 0);
@@ -61401,7 +61485,7 @@ Global max_z_object;
     .Failed;
     return GPR_FAIL;
 ];
-[ call_U2177 value rem S;
+[ call_U2181 value rem S;
     print (value/10);
     if (((value%10) == 0)) {
         rtrue;
@@ -61414,7 +61498,7 @@ Global max_z_object;
     print "oz";
     rtrue;
 ];
-[ call_U2178 original_wn group_wn v w rv wpos mid_word matched_number cur_word cur_len cur_addr sgn tot f x;
+[ call_U2182 original_wn group_wn v w rv wpos mid_word matched_number cur_word cur_len cur_addr sgn tot f x;
     (wpos = 0);
     (mid_word = 0);
     (matched_number = 0);
@@ -61583,7 +61667,7 @@ Global max_z_object;
     .Failed;
     return GPR_FAIL;
 ];
-[ call_U2179 t_0 tmp_0;
+[ call_U2183 t_0 tmp_0;
     if ((t_0 < 5)) {
         (say__p = 1);
         ParaContent();
@@ -61617,16 +61701,16 @@ Global max_z_object;
     }
     rfalse;
 ];
-[ call_U2180;
-    call_U2181();
-    call_U2182();
+[ call_U2184;
+    call_U2185();
+    call_U2186();
     ((Global_Vars-->49) = real_location);
     if ((~~(((Global_Vars-->49) ofclass K1_room)))) {
         RunTimeProblem(RTP_WRONGASSIGNEDKIND, (Global_Vars-->49), "*?", "room");
     }
     rfalse;
 ];
-[ call_U2181 x x_ix qcy_0 qcn_0;
+[ call_U2185 x x_ix qcy_0 qcn_0;
     (qcy_0 = 0);
     (qcn_0 = 0);
     for ((x = K2_thing_First):x:(x = (x.K2_thing_Next))) {
@@ -61639,7 +61723,7 @@ Global max_z_object;
     if ((qcy_0 == qcn_0)) {
     }
 ];
-[ call_U2182 x x_ix qcy_0 qcn_0;
+[ call_U2186 x x_ix qcy_0 qcn_0;
     (qcy_0 = 0);
     (qcn_0 = 0);
     for ((x = K2_thing_First):x:(x = (x.K2_thing_Next))) {
@@ -61652,14 +61736,14 @@ Global max_z_object;
     if ((qcy_0 == qcn_0)) {
     }
 ];
-[ call_U2183;
-    call_U2184();
-    call_U2185();
-    call_U2186();
+[ call_U2187;
+    call_U2188();
+    call_U2189();
+    call_U2190();
     MoveObject(player, (Global_Vars-->49), 0, 0);
     rfalse;
 ];
-[ call_U2184 x x_ix qcy_0 qcn_0;
+[ call_U2188 x x_ix qcy_0 qcn_0;
     (qcy_0 = 0);
     (qcn_0 = 0);
     for ((x = K2_thing_First):x:(x = (x.K2_thing_Next))) {
@@ -61672,7 +61756,7 @@ Global max_z_object;
     if ((qcy_0 == qcn_0)) {
     }
 ];
-[ call_U2185 x x_ix qcy_0 qcn_0;
+[ call_U2189 x x_ix qcy_0 qcn_0;
     (qcy_0 = 0);
     (qcn_0 = 0);
     for ((x = K2_thing_First):x:(x = (x.K2_thing_Next))) {
@@ -61685,7 +61769,7 @@ Global max_z_object;
     if ((qcy_0 == qcn_0)) {
     }
 ];
-[ call_U2186 x x_ix qcy_0 qcn_0;
+[ call_U2190 x x_ix qcy_0 qcn_0;
     (qcy_0 = 0);
     (qcn_0 = 0);
     for ((x = K2_thing_First):x:(x = (x.K2_thing_Next))) {
@@ -61839,7 +61923,7 @@ Global max_z_object;
             ;
     }
 ];
-[ call_U2187 fn vp t modal_to;
+[ call_U2191 fn vp t modal_to;
     (t = ConjugateVerb1(fn, vp, t, modal_to));
     if ((fn == CV_MODAL)) {
         return t;
@@ -61968,7 +62052,7 @@ Global max_z_object;
             ;
     }
 ];
-[ call_U2188 fn vp t modal_to;
+[ call_U2192 fn vp t modal_to;
     (t = ConjugateVerb62(fn, vp, t, modal_to));
     if ((fn == CV_MODAL)) {
         return t;
@@ -62050,7 +62134,7 @@ Global max_z_object;
             ;
     }
 ];
-[ call_U2189 fn vp t modal_to;
+[ call_U2193 fn vp t modal_to;
     (t = ConjugateVerb63(fn, vp, t, modal_to));
     if ((fn == CV_MODAL)) {
         return t;
@@ -62059,7 +62143,7 @@ Global max_z_object;
         return MEANINGLESS_RR;
     }
 ];
-[ call_U2190 fn vp t modal_to;
+[ call_U2194 fn vp t modal_to;
     (t = ConjugateVerb63(fn, vp, t, modal_to));
     if ((fn == CV_MODAL)) {
         return t;
@@ -62068,7 +62152,7 @@ Global max_z_object;
         return MEANINGLESS_RR;
     }
 ];
-[ call_U2191 fn vp t modal_to;
+[ call_U2195 fn vp t modal_to;
     (t = ConjugateVerb63(fn, vp, t, modal_to));
     if ((fn == CV_MODAL)) {
         return t;
@@ -62077,7 +62161,7 @@ Global max_z_object;
         return MEANINGLESS_RR;
     }
 ];
-[ call_U2192 fn vp t modal_to;
+[ call_U2196 fn vp t modal_to;
     (t = ConjugateVerb63(fn, vp, t, modal_to));
     if ((fn == CV_MODAL)) {
         return t;
@@ -62095,7 +62179,7 @@ Global max_z_object;
     }
     rfalse;
 ];
-[ call_U2193 rr task X Y Z1 Z2 Z3 Z4;
+[ call_U2197 rr task X Y Z1 Z2 Z3 Z4;
     switch (task) {
         RELS_TEST:
             if ((X == Y)) {
@@ -62109,7 +62193,7 @@ Global max_z_object;
     }
     rfalse;
 ];
-[ call_U2194 rr task X Y Z1 Z2 Z3 Z4;
+[ call_U2198 rr task X Y Z1 Z2 Z3 Z4;
     switch (task) {
         RELS_TEST:
             if ((BlkValueCompare((X)(CV_MEANING), Y) == 0)) {
@@ -62123,7 +62207,7 @@ Global max_z_object;
     }
     rfalse;
 ];
-[ call_U2195 rr task X Y Z1 Z2 Z3 Z4;
+[ call_U2199 rr task X Y Z1 Z2 Z3 Z4;
     switch (task) {
         RELS_TEST:
             if ((X == OwnerOf(Y))) {
@@ -62177,7 +62261,7 @@ Global max_z_object;
     }
     rfalse;
 ];
-[ call_U2196 rr task X Y Z1 Z2 Z3 Z4;
+[ call_U2200 rr task X Y Z1 Z2 Z3 Z4;
     switch (task) {
         RELS_TEST:
             if ((RlnGetF(X, RR_HANDLER))(X,RELS_TEST,Y,0)) {
@@ -62191,7 +62275,7 @@ Global max_z_object;
     }
     rfalse;
 ];
-[ call_U2197 rr task X Y Z1 Z2 Z3 Z4;
+[ call_U2201 rr task X Y Z1 Z2 Z3 Z4;
     switch (task) {
         RELS_TEST:
             if (0) {
@@ -62205,7 +62289,7 @@ Global max_z_object;
     }
     rfalse;
 ];
-[ call_U2198 rr task X Y Z1 Z2 Z3 Z4;
+[ call_U2202 rr task X Y Z1 Z2 Z3 Z4;
     switch (task) {
         RELS_TEST:
             if ((X == ContainerOf(Y))) {
@@ -62216,399 +62300,6 @@ Global max_z_object;
         RELS_LOOKUP_ANY:
             if ((((Y == RLANY_GET_X)) || ((Y == RLANY_CAN_GET_X)))) {
                 objectloop (Z1 ofclass Object && (Z1 ofclass Object)) {
-                    if ((call_U2198)(rr,RELS_TEST,Z1,X)) {
-                        if ((Y == RLANY_CAN_GET_X)) {
-                            rtrue;
-                        }
-                        if ((Y == RLANY_CAN_GET_Y)) {
-                            rtrue;
-                        }
-                        return Z1;
-                    }
-                }
-                if ((Y == RLANY_CAN_GET_X)) {
-                    rfalse;
-                }
-                if ((Y == RLANY_CAN_GET_Y)) {
-                    rfalse;
-                }
-                return DefaultValueOfKOV(OBJECT_TY);
-            } else {
-                objectloop (Z1 ofclass Object && (Z1 ofclass Object)) {
-                    if ((call_U2198)(rr,RELS_TEST,X,Z1)) {
-                        if ((Y == RLANY_CAN_GET_X)) {
-                            rtrue;
-                        }
-                        if ((Y == RLANY_CAN_GET_Y)) {
-                            rtrue;
-                        }
-                        return Z1;
-                    }
-                }
-                if ((Y == RLANY_CAN_GET_X)) {
-                    rfalse;
-                }
-                if ((Y == RLANY_CAN_GET_Y)) {
-                    rfalse;
-                }
-                return DefaultValueOfKOV(OBJECT_TY);
-            }
-            ;
-        RELS_LOOKUP_ALL_X:
-            LIST_OF_TY_SetLength(Y, 0);
-            objectloop (Z1 ofclass Object && (Z1 ofclass Object)) {
-                if ((call_U2198)(rr,RELS_TEST,Z1,X)) {
-                    LIST_OF_TY_InsertItem(Y, Z1);
-                }
-            }
-            return Y;
-            ;
-        RELS_LOOKUP_ALL_Y:
-            LIST_OF_TY_SetLength(Y, 0);
-            objectloop (Z1 ofclass Object && (Z1 ofclass Object)) {
-                if ((call_U2198)(rr,RELS_TEST,X,Z1)) {
-                    LIST_OF_TY_InsertItem(Y, Z1);
-                }
-            }
-            return Y;
-            ;
-        RELS_LIST:
-            LIST_OF_TY_SetLength(X, 0);
-            if ((Y == RLIST_ALL_X)) {
-                objectloop (Z1 ofclass Object && (Z1 ofclass Object)) {
-                    objectloop (Z3 ofclass Object && (Z3 ofclass Object)) {
-                        if ((call_U2198)(rr,RELS_TEST,Z1,Z3)) {
-                            LIST_OF_TY_InsertItem(X, Z1, 0, 0, 1);
-                        }
-                    }
-                }
-            } else {
-                if ((Y == RLIST_ALL_Y)) {
-                    objectloop (Z1 ofclass Object && (Z1 ofclass Object)) {
-                        objectloop (Z3 ofclass Object && (Z3 ofclass Object)) {
-                            if ((call_U2198)(rr,RELS_TEST,Z1,Z3)) {
-                                LIST_OF_TY_InsertItem(X, Z3, 0, 0, 1);
-                            }
-                        }
-                    }
-                }
-            }
-            return X;
-            ;
-        RELS_ASSERT_TRUE:
-            MoveObject(Y, X);
-            rtrue;
-            ;
-        RELS_ASSERT_FALSE:
-            rfalse;
-            ;
-    }
-    rfalse;
-];
-[ call_U2199 rr task X Y Z1 Z2 Z3 Z4;
-    switch (task) {
-        RELS_TEST:
-            if ((X == SupporterOf(Y))) {
-                rtrue;
-            }
-            rfalse;
-            ;
-        RELS_LOOKUP_ANY:
-            if ((((Y == RLANY_GET_X)) || ((Y == RLANY_CAN_GET_X)))) {
-                for ((Z1 = K6_supporter_First):Z1:(Z1 = (Z1.K6_supporter_Next))) {
-                    if ((call_U2199)(rr,RELS_TEST,Z1,X)) {
-                        if ((Y == RLANY_CAN_GET_X)) {
-                            rtrue;
-                        }
-                        if ((Y == RLANY_CAN_GET_Y)) {
-                            rtrue;
-                        }
-                        return Z1;
-                    }
-                }
-                if ((Y == RLANY_CAN_GET_X)) {
-                    rfalse;
-                }
-                if ((Y == RLANY_CAN_GET_Y)) {
-                    rfalse;
-                }
-                return DefaultValueOfKOV(OBJECT_TY);
-            } else {
-                for ((Z1 = K2_thing_First):Z1:(Z1 = (Z1.K2_thing_Next))) {
-                    if ((call_U2199)(rr,RELS_TEST,X,Z1)) {
-                        if ((Y == RLANY_CAN_GET_X)) {
-                            rtrue;
-                        }
-                        if ((Y == RLANY_CAN_GET_Y)) {
-                            rtrue;
-                        }
-                        return Z1;
-                    }
-                }
-                if ((Y == RLANY_CAN_GET_X)) {
-                    rfalse;
-                }
-                if ((Y == RLANY_CAN_GET_Y)) {
-                    rfalse;
-                }
-                return DefaultValueOfKOV(OBJECT_TY);
-            }
-            ;
-        RELS_LOOKUP_ALL_X:
-            LIST_OF_TY_SetLength(Y, 0);
-            for ((Z1 = K6_supporter_First):Z1:(Z1 = (Z1.K6_supporter_Next))) {
-                if ((call_U2199)(rr,RELS_TEST,Z1,X)) {
-                    LIST_OF_TY_InsertItem(Y, Z1);
-                }
-            }
-            return Y;
-            ;
-        RELS_LOOKUP_ALL_Y:
-            LIST_OF_TY_SetLength(Y, 0);
-            for ((Z1 = K2_thing_First):Z1:(Z1 = (Z1.K2_thing_Next))) {
-                if ((call_U2199)(rr,RELS_TEST,X,Z1)) {
-                    LIST_OF_TY_InsertItem(Y, Z1);
-                }
-            }
-            return Y;
-            ;
-        RELS_LIST:
-            LIST_OF_TY_SetLength(X, 0);
-            if ((Y == RLIST_ALL_X)) {
-                for ((Z1 = K6_supporter_First):Z1:(Z1 = (Z1.K6_supporter_Next))) {
-                    for ((Z3 = K2_thing_First):Z3:(Z3 = (Z3.K2_thing_Next))) {
-                        if ((call_U2199)(rr,RELS_TEST,Z1,Z3)) {
-                            LIST_OF_TY_InsertItem(X, Z1, 0, 0, 1);
-                        }
-                    }
-                }
-            } else {
-                if ((Y == RLIST_ALL_Y)) {
-                    for ((Z1 = K6_supporter_First):Z1:(Z1 = (Z1.K6_supporter_Next))) {
-                        for ((Z3 = K2_thing_First):Z3:(Z3 = (Z3.K2_thing_Next))) {
-                            if ((call_U2199)(rr,RELS_TEST,Z1,Z3)) {
-                                LIST_OF_TY_InsertItem(X, Z3, 0, 0, 1);
-                            }
-                        }
-                    }
-                }
-            }
-            return X;
-            ;
-        RELS_ASSERT_TRUE:
-            MoveObject(Y, X);
-            rtrue;
-            ;
-        RELS_ASSERT_FALSE:
-            rfalse;
-            ;
-    }
-    rfalse;
-];
-[ call_U2200 rr task X Y Z1 Z2 Z3 Z4;
-    switch (task) {
-        RELS_TEST:
-            if ((X == PartOf(Y))) {
-                rtrue;
-            }
-            rfalse;
-            ;
-        RELS_LOOKUP_ANY:
-            if ((((Y == RLANY_GET_X)) || ((Y == RLANY_CAN_GET_X)))) {
-                for ((Z1 = K2_thing_First):Z1:(Z1 = (Z1.K2_thing_Next))) {
-                    if ((call_U2200)(rr,RELS_TEST,Z1,X)) {
-                        if ((Y == RLANY_CAN_GET_X)) {
-                            rtrue;
-                        }
-                        if ((Y == RLANY_CAN_GET_Y)) {
-                            rtrue;
-                        }
-                        return Z1;
-                    }
-                }
-                if ((Y == RLANY_CAN_GET_X)) {
-                    rfalse;
-                }
-                if ((Y == RLANY_CAN_GET_Y)) {
-                    rfalse;
-                }
-                return DefaultValueOfKOV(OBJECT_TY);
-            } else {
-                for ((Z1 = K2_thing_First):Z1:(Z1 = (Z1.K2_thing_Next))) {
-                    if ((call_U2200)(rr,RELS_TEST,X,Z1)) {
-                        if ((Y == RLANY_CAN_GET_X)) {
-                            rtrue;
-                        }
-                        if ((Y == RLANY_CAN_GET_Y)) {
-                            rtrue;
-                        }
-                        return Z1;
-                    }
-                }
-                if ((Y == RLANY_CAN_GET_X)) {
-                    rfalse;
-                }
-                if ((Y == RLANY_CAN_GET_Y)) {
-                    rfalse;
-                }
-                return DefaultValueOfKOV(OBJECT_TY);
-            }
-            ;
-        RELS_LOOKUP_ALL_X:
-            LIST_OF_TY_SetLength(Y, 0);
-            for ((Z1 = K2_thing_First):Z1:(Z1 = (Z1.K2_thing_Next))) {
-                if ((call_U2200)(rr,RELS_TEST,Z1,X)) {
-                    LIST_OF_TY_InsertItem(Y, Z1);
-                }
-            }
-            return Y;
-            ;
-        RELS_LOOKUP_ALL_Y:
-            LIST_OF_TY_SetLength(Y, 0);
-            for ((Z1 = K2_thing_First):Z1:(Z1 = (Z1.K2_thing_Next))) {
-                if ((call_U2200)(rr,RELS_TEST,X,Z1)) {
-                    LIST_OF_TY_InsertItem(Y, Z1);
-                }
-            }
-            return Y;
-            ;
-        RELS_LIST:
-            LIST_OF_TY_SetLength(X, 0);
-            if ((Y == RLIST_ALL_X)) {
-                for ((Z1 = K2_thing_First):Z1:(Z1 = (Z1.K2_thing_Next))) {
-                    for ((Z3 = K2_thing_First):Z3:(Z3 = (Z3.K2_thing_Next))) {
-                        if ((call_U2200)(rr,RELS_TEST,Z1,Z3)) {
-                            LIST_OF_TY_InsertItem(X, Z1, 0, 0, 1);
-                        }
-                    }
-                }
-            } else {
-                if ((Y == RLIST_ALL_Y)) {
-                    for ((Z1 = K2_thing_First):Z1:(Z1 = (Z1.K2_thing_Next))) {
-                        for ((Z3 = K2_thing_First):Z3:(Z3 = (Z3.K2_thing_Next))) {
-                            if ((call_U2200)(rr,RELS_TEST,Z1,Z3)) {
-                                LIST_OF_TY_InsertItem(X, Z3, 0, 0, 1);
-                            }
-                        }
-                    }
-                }
-            }
-            return X;
-            ;
-        RELS_ASSERT_TRUE:
-            MakePart(Y, X);
-            rtrue;
-            ;
-        RELS_ASSERT_FALSE:
-            rfalse;
-            ;
-    }
-    rfalse;
-];
-[ call_U2201 rr task X Y Z1 Z2 Z3 Z4;
-    switch (task) {
-        RELS_TEST:
-            if (IndirectlyContains(X, Y)) {
-                rtrue;
-            }
-            rfalse;
-            ;
-        RELS_LOOKUP_ANY:
-            if ((((Y == RLANY_GET_X)) || ((Y == RLANY_CAN_GET_X)))) {
-                objectloop (Z1 ofclass Object && (Z1 ofclass Object)) {
-                    if ((call_U2201)(rr,RELS_TEST,Z1,X)) {
-                        if ((Y == RLANY_CAN_GET_X)) {
-                            rtrue;
-                        }
-                        if ((Y == RLANY_CAN_GET_Y)) {
-                            rtrue;
-                        }
-                        return Z1;
-                    }
-                }
-                if ((Y == RLANY_CAN_GET_X)) {
-                    rfalse;
-                }
-                if ((Y == RLANY_CAN_GET_Y)) {
-                    rfalse;
-                }
-                return DefaultValueOfKOV(OBJECT_TY);
-            } else {
-                objectloop (Z1 ofclass Object && (Z1 ofclass Object)) {
-                    if ((call_U2201)(rr,RELS_TEST,X,Z1)) {
-                        if ((Y == RLANY_CAN_GET_X)) {
-                            rtrue;
-                        }
-                        if ((Y == RLANY_CAN_GET_Y)) {
-                            rtrue;
-                        }
-                        return Z1;
-                    }
-                }
-                if ((Y == RLANY_CAN_GET_X)) {
-                    rfalse;
-                }
-                if ((Y == RLANY_CAN_GET_Y)) {
-                    rfalse;
-                }
-                return DefaultValueOfKOV(OBJECT_TY);
-            }
-            ;
-        RELS_LOOKUP_ALL_X:
-            LIST_OF_TY_SetLength(Y, 0);
-            objectloop (Z1 ofclass Object && (Z1 ofclass Object)) {
-                if ((call_U2201)(rr,RELS_TEST,Z1,X)) {
-                    LIST_OF_TY_InsertItem(Y, Z1);
-                }
-            }
-            return Y;
-            ;
-        RELS_LOOKUP_ALL_Y:
-            LIST_OF_TY_SetLength(Y, 0);
-            objectloop (Z1 ofclass Object && (Z1 ofclass Object)) {
-                if ((call_U2201)(rr,RELS_TEST,X,Z1)) {
-                    LIST_OF_TY_InsertItem(Y, Z1);
-                }
-            }
-            return Y;
-            ;
-        RELS_LIST:
-            LIST_OF_TY_SetLength(X, 0);
-            if ((Y == RLIST_ALL_X)) {
-                objectloop (Z1 ofclass Object && (Z1 ofclass Object)) {
-                    objectloop (Z3 ofclass Object && (Z3 ofclass Object)) {
-                        if ((call_U2201)(rr,RELS_TEST,Z1,Z3)) {
-                            LIST_OF_TY_InsertItem(X, Z1, 0, 0, 1);
-                        }
-                    }
-                }
-            } else {
-                if ((Y == RLIST_ALL_Y)) {
-                    objectloop (Z1 ofclass Object && (Z1 ofclass Object)) {
-                        objectloop (Z3 ofclass Object && (Z3 ofclass Object)) {
-                            if ((call_U2201)(rr,RELS_TEST,Z1,Z3)) {
-                                LIST_OF_TY_InsertItem(X, Z3, 0, 0, 1);
-                            }
-                        }
-                    }
-                }
-            }
-            return X;
-            ;
-    }
-    rfalse;
-];
-[ call_U2202 rr task X Y Z1 Z2 Z3 Z4;
-    switch (task) {
-        RELS_TEST:
-            if ((X == CarrierOf(Y))) {
-                rtrue;
-            }
-            rfalse;
-            ;
-        RELS_LOOKUP_ANY:
-            if ((((Y == RLANY_GET_X)) || ((Y == RLANY_CAN_GET_X)))) {
-                for ((Z1 = K8_person_First):Z1:(Z1 = (Z1.K8_person_Next))) {
                     if ((call_U2202)(rr,RELS_TEST,Z1,X)) {
                         if ((Y == RLANY_CAN_GET_X)) {
                             rtrue;
@@ -62627,7 +62318,7 @@ Global max_z_object;
                 }
                 return DefaultValueOfKOV(OBJECT_TY);
             } else {
-                for ((Z1 = K2_thing_First):Z1:(Z1 = (Z1.K2_thing_Next))) {
+                objectloop (Z1 ofclass Object && (Z1 ofclass Object)) {
                     if ((call_U2202)(rr,RELS_TEST,X,Z1)) {
                         if ((Y == RLANY_CAN_GET_X)) {
                             rtrue;
@@ -62649,7 +62340,7 @@ Global max_z_object;
             ;
         RELS_LOOKUP_ALL_X:
             LIST_OF_TY_SetLength(Y, 0);
-            for ((Z1 = K8_person_First):Z1:(Z1 = (Z1.K8_person_Next))) {
+            objectloop (Z1 ofclass Object && (Z1 ofclass Object)) {
                 if ((call_U2202)(rr,RELS_TEST,Z1,X)) {
                     LIST_OF_TY_InsertItem(Y, Z1);
                 }
@@ -62658,7 +62349,7 @@ Global max_z_object;
             ;
         RELS_LOOKUP_ALL_Y:
             LIST_OF_TY_SetLength(Y, 0);
-            for ((Z1 = K2_thing_First):Z1:(Z1 = (Z1.K2_thing_Next))) {
+            objectloop (Z1 ofclass Object && (Z1 ofclass Object)) {
                 if ((call_U2202)(rr,RELS_TEST,X,Z1)) {
                     LIST_OF_TY_InsertItem(Y, Z1);
                 }
@@ -62668,8 +62359,8 @@ Global max_z_object;
         RELS_LIST:
             LIST_OF_TY_SetLength(X, 0);
             if ((Y == RLIST_ALL_X)) {
-                for ((Z1 = K8_person_First):Z1:(Z1 = (Z1.K8_person_Next))) {
-                    for ((Z3 = K2_thing_First):Z3:(Z3 = (Z3.K2_thing_Next))) {
+                objectloop (Z1 ofclass Object && (Z1 ofclass Object)) {
+                    objectloop (Z3 ofclass Object && (Z3 ofclass Object)) {
                         if ((call_U2202)(rr,RELS_TEST,Z1,Z3)) {
                             LIST_OF_TY_InsertItem(X, Z1, 0, 0, 1);
                         }
@@ -62677,8 +62368,8 @@ Global max_z_object;
                 }
             } else {
                 if ((Y == RLIST_ALL_Y)) {
-                    for ((Z1 = K8_person_First):Z1:(Z1 = (Z1.K8_person_Next))) {
-                        for ((Z3 = K2_thing_First):Z3:(Z3 = (Z3.K2_thing_Next))) {
+                    objectloop (Z1 ofclass Object && (Z1 ofclass Object)) {
+                        objectloop (Z3 ofclass Object && (Z3 ofclass Object)) {
                             if ((call_U2202)(rr,RELS_TEST,Z1,Z3)) {
                                 LIST_OF_TY_InsertItem(X, Z3, 0, 0, 1);
                             }
@@ -62701,14 +62392,14 @@ Global max_z_object;
 [ call_U2203 rr task X Y Z1 Z2 Z3 Z4;
     switch (task) {
         RELS_TEST:
-            if ((X == HolderOf(Y))) {
+            if ((X == SupporterOf(Y))) {
                 rtrue;
             }
             rfalse;
             ;
         RELS_LOOKUP_ANY:
             if ((((Y == RLANY_GET_X)) || ((Y == RLANY_CAN_GET_X)))) {
-                for ((Z1 = K8_person_First):Z1:(Z1 = (Z1.K8_person_Next))) {
+                for ((Z1 = K6_supporter_First):Z1:(Z1 = (Z1.K6_supporter_Next))) {
                     if ((call_U2203)(rr,RELS_TEST,Z1,X)) {
                         if ((Y == RLANY_CAN_GET_X)) {
                             rtrue;
@@ -62749,7 +62440,7 @@ Global max_z_object;
             ;
         RELS_LOOKUP_ALL_X:
             LIST_OF_TY_SetLength(Y, 0);
-            for ((Z1 = K8_person_First):Z1:(Z1 = (Z1.K8_person_Next))) {
+            for ((Z1 = K6_supporter_First):Z1:(Z1 = (Z1.K6_supporter_Next))) {
                 if ((call_U2203)(rr,RELS_TEST,Z1,X)) {
                     LIST_OF_TY_InsertItem(Y, Z1);
                 }
@@ -62768,7 +62459,7 @@ Global max_z_object;
         RELS_LIST:
             LIST_OF_TY_SetLength(X, 0);
             if ((Y == RLIST_ALL_X)) {
-                for ((Z1 = K8_person_First):Z1:(Z1 = (Z1.K8_person_Next))) {
+                for ((Z1 = K6_supporter_First):Z1:(Z1 = (Z1.K6_supporter_Next))) {
                     for ((Z3 = K2_thing_First):Z3:(Z3 = (Z3.K2_thing_Next))) {
                         if ((call_U2203)(rr,RELS_TEST,Z1,Z3)) {
                             LIST_OF_TY_InsertItem(X, Z1, 0, 0, 1);
@@ -62777,7 +62468,7 @@ Global max_z_object;
                 }
             } else {
                 if ((Y == RLIST_ALL_Y)) {
-                    for ((Z1 = K8_person_First):Z1:(Z1 = (Z1.K8_person_Next))) {
+                    for ((Z1 = K6_supporter_First):Z1:(Z1 = (Z1.K6_supporter_Next))) {
                         for ((Z3 = K2_thing_First):Z3:(Z3 = (Z3.K2_thing_Next))) {
                             if ((call_U2203)(rr,RELS_TEST,Z1,Z3)) {
                                 LIST_OF_TY_InsertItem(X, Z3, 0, 0, 1);
@@ -62801,14 +62492,14 @@ Global max_z_object;
 [ call_U2204 rr task X Y Z1 Z2 Z3 Z4;
     switch (task) {
         RELS_TEST:
-            if ((X == WearerOf(Y))) {
+            if ((X == PartOf(Y))) {
                 rtrue;
             }
             rfalse;
             ;
         RELS_LOOKUP_ANY:
             if ((((Y == RLANY_GET_X)) || ((Y == RLANY_CAN_GET_X)))) {
-                for ((Z1 = K8_person_First):Z1:(Z1 = (Z1.K8_person_Next))) {
+                for ((Z1 = K2_thing_First):Z1:(Z1 = (Z1.K2_thing_Next))) {
                     if ((call_U2204)(rr,RELS_TEST,Z1,X)) {
                         if ((Y == RLANY_CAN_GET_X)) {
                             rtrue;
@@ -62849,7 +62540,7 @@ Global max_z_object;
             ;
         RELS_LOOKUP_ALL_X:
             LIST_OF_TY_SetLength(Y, 0);
-            for ((Z1 = K8_person_First):Z1:(Z1 = (Z1.K8_person_Next))) {
+            for ((Z1 = K2_thing_First):Z1:(Z1 = (Z1.K2_thing_Next))) {
                 if ((call_U2204)(rr,RELS_TEST,Z1,X)) {
                     LIST_OF_TY_InsertItem(Y, Z1);
                 }
@@ -62868,7 +62559,7 @@ Global max_z_object;
         RELS_LIST:
             LIST_OF_TY_SetLength(X, 0);
             if ((Y == RLIST_ALL_X)) {
-                for ((Z1 = K8_person_First):Z1:(Z1 = (Z1.K8_person_Next))) {
+                for ((Z1 = K2_thing_First):Z1:(Z1 = (Z1.K2_thing_Next))) {
                     for ((Z3 = K2_thing_First):Z3:(Z3 = (Z3.K2_thing_Next))) {
                         if ((call_U2204)(rr,RELS_TEST,Z1,Z3)) {
                             LIST_OF_TY_InsertItem(X, Z1, 0, 0, 1);
@@ -62877,7 +62568,7 @@ Global max_z_object;
                 }
             } else {
                 if ((Y == RLIST_ALL_Y)) {
-                    for ((Z1 = K8_person_First):Z1:(Z1 = (Z1.K8_person_Next))) {
+                    for ((Z1 = K2_thing_First):Z1:(Z1 = (Z1.K2_thing_Next))) {
                         for ((Z3 = K2_thing_First):Z3:(Z3 = (Z3.K2_thing_Next))) {
                             if ((call_U2204)(rr,RELS_TEST,Z1,Z3)) {
                                 LIST_OF_TY_InsertItem(X, Z3, 0, 0, 1);
@@ -62889,7 +62580,7 @@ Global max_z_object;
             return X;
             ;
         RELS_ASSERT_TRUE:
-            WearObject(Y, X);
+            MakePart(Y, X);
             rtrue;
             ;
         RELS_ASSERT_FALSE:
@@ -62901,14 +62592,14 @@ Global max_z_object;
 [ call_U2205 rr task X Y Z1 Z2 Z3 Z4;
     switch (task) {
         RELS_TEST:
-            if (TestVisibility(X, Y)) {
+            if (IndirectlyContains(X, Y)) {
                 rtrue;
             }
             rfalse;
             ;
         RELS_LOOKUP_ANY:
             if ((((Y == RLANY_GET_X)) || ((Y == RLANY_CAN_GET_X)))) {
-                for ((Z1 = K2_thing_First):Z1:(Z1 = (Z1.K2_thing_Next))) {
+                objectloop (Z1 ofclass Object && (Z1 ofclass Object)) {
                     if ((call_U2205)(rr,RELS_TEST,Z1,X)) {
                         if ((Y == RLANY_CAN_GET_X)) {
                             rtrue;
@@ -62927,7 +62618,7 @@ Global max_z_object;
                 }
                 return DefaultValueOfKOV(OBJECT_TY);
             } else {
-                for ((Z1 = K2_thing_First):Z1:(Z1 = (Z1.K2_thing_Next))) {
+                objectloop (Z1 ofclass Object && (Z1 ofclass Object)) {
                     if ((call_U2205)(rr,RELS_TEST,X,Z1)) {
                         if ((Y == RLANY_CAN_GET_X)) {
                             rtrue;
@@ -62949,7 +62640,7 @@ Global max_z_object;
             ;
         RELS_LOOKUP_ALL_X:
             LIST_OF_TY_SetLength(Y, 0);
-            for ((Z1 = K2_thing_First):Z1:(Z1 = (Z1.K2_thing_Next))) {
+            objectloop (Z1 ofclass Object && (Z1 ofclass Object)) {
                 if ((call_U2205)(rr,RELS_TEST,Z1,X)) {
                     LIST_OF_TY_InsertItem(Y, Z1);
                 }
@@ -62958,7 +62649,7 @@ Global max_z_object;
             ;
         RELS_LOOKUP_ALL_Y:
             LIST_OF_TY_SetLength(Y, 0);
-            for ((Z1 = K2_thing_First):Z1:(Z1 = (Z1.K2_thing_Next))) {
+            objectloop (Z1 ofclass Object && (Z1 ofclass Object)) {
                 if ((call_U2205)(rr,RELS_TEST,X,Z1)) {
                     LIST_OF_TY_InsertItem(Y, Z1);
                 }
@@ -62968,8 +62659,8 @@ Global max_z_object;
         RELS_LIST:
             LIST_OF_TY_SetLength(X, 0);
             if ((Y == RLIST_ALL_X)) {
-                for ((Z1 = K2_thing_First):Z1:(Z1 = (Z1.K2_thing_Next))) {
-                    for ((Z3 = K2_thing_First):Z3:(Z3 = (Z3.K2_thing_Next))) {
+                objectloop (Z1 ofclass Object && (Z1 ofclass Object)) {
+                    objectloop (Z3 ofclass Object && (Z3 ofclass Object)) {
                         if ((call_U2205)(rr,RELS_TEST,Z1,Z3)) {
                             LIST_OF_TY_InsertItem(X, Z1, 0, 0, 1);
                         }
@@ -62977,8 +62668,8 @@ Global max_z_object;
                 }
             } else {
                 if ((Y == RLIST_ALL_Y)) {
-                    for ((Z1 = K2_thing_First):Z1:(Z1 = (Z1.K2_thing_Next))) {
-                        for ((Z3 = K2_thing_First):Z3:(Z3 = (Z3.K2_thing_Next))) {
+                    objectloop (Z1 ofclass Object && (Z1 ofclass Object)) {
+                        objectloop (Z3 ofclass Object && (Z3 ofclass Object)) {
                             if ((call_U2205)(rr,RELS_TEST,Z1,Z3)) {
                                 LIST_OF_TY_InsertItem(X, Z3, 0, 0, 1);
                             }
@@ -62994,14 +62685,14 @@ Global max_z_object;
 [ call_U2206 rr task X Y Z1 Z2 Z3 Z4;
     switch (task) {
         RELS_TEST:
-            if (TestTouchability(X, Y)) {
+            if ((X == CarrierOf(Y))) {
                 rtrue;
             }
             rfalse;
             ;
         RELS_LOOKUP_ANY:
             if ((((Y == RLANY_GET_X)) || ((Y == RLANY_CAN_GET_X)))) {
-                for ((Z1 = K2_thing_First):Z1:(Z1 = (Z1.K2_thing_Next))) {
+                for ((Z1 = K8_person_First):Z1:(Z1 = (Z1.K8_person_Next))) {
                     if ((call_U2206)(rr,RELS_TEST,Z1,X)) {
                         if ((Y == RLANY_CAN_GET_X)) {
                             rtrue;
@@ -63042,7 +62733,7 @@ Global max_z_object;
             ;
         RELS_LOOKUP_ALL_X:
             LIST_OF_TY_SetLength(Y, 0);
-            for ((Z1 = K2_thing_First):Z1:(Z1 = (Z1.K2_thing_Next))) {
+            for ((Z1 = K8_person_First):Z1:(Z1 = (Z1.K8_person_Next))) {
                 if ((call_U2206)(rr,RELS_TEST,Z1,X)) {
                     LIST_OF_TY_InsertItem(Y, Z1);
                 }
@@ -63061,7 +62752,7 @@ Global max_z_object;
         RELS_LIST:
             LIST_OF_TY_SetLength(X, 0);
             if ((Y == RLIST_ALL_X)) {
-                for ((Z1 = K2_thing_First):Z1:(Z1 = (Z1.K2_thing_Next))) {
+                for ((Z1 = K8_person_First):Z1:(Z1 = (Z1.K8_person_Next))) {
                     for ((Z3 = K2_thing_First):Z3:(Z3 = (Z3.K2_thing_Next))) {
                         if ((call_U2206)(rr,RELS_TEST,Z1,Z3)) {
                             LIST_OF_TY_InsertItem(X, Z1, 0, 0, 1);
@@ -63070,7 +62761,7 @@ Global max_z_object;
                 }
             } else {
                 if ((Y == RLIST_ALL_Y)) {
-                    for ((Z1 = K2_thing_First):Z1:(Z1 = (Z1.K2_thing_Next))) {
+                    for ((Z1 = K8_person_First):Z1:(Z1 = (Z1.K8_person_Next))) {
                         for ((Z3 = K2_thing_First):Z3:(Z3 = (Z3.K2_thing_Next))) {
                             if ((call_U2206)(rr,RELS_TEST,Z1,Z3)) {
                                 LIST_OF_TY_InsertItem(X, Z3, 0, 0, 1);
@@ -63081,20 +62772,27 @@ Global max_z_object;
             }
             return X;
             ;
+        RELS_ASSERT_TRUE:
+            MoveObject(Y, X);
+            rtrue;
+            ;
+        RELS_ASSERT_FALSE:
+            rfalse;
+            ;
     }
     rfalse;
 ];
 [ call_U2207 rr task X Y Z1 Z2 Z3 Z4;
     switch (task) {
         RELS_TEST:
-            if (TestConcealment(X, Y)) {
+            if ((X == HolderOf(Y))) {
                 rtrue;
             }
             rfalse;
             ;
         RELS_LOOKUP_ANY:
             if ((((Y == RLANY_GET_X)) || ((Y == RLANY_CAN_GET_X)))) {
-                for ((Z1 = K2_thing_First):Z1:(Z1 = (Z1.K2_thing_Next))) {
+                for ((Z1 = K8_person_First):Z1:(Z1 = (Z1.K8_person_Next))) {
                     if ((call_U2207)(rr,RELS_TEST,Z1,X)) {
                         if ((Y == RLANY_CAN_GET_X)) {
                             rtrue;
@@ -63135,7 +62833,7 @@ Global max_z_object;
             ;
         RELS_LOOKUP_ALL_X:
             LIST_OF_TY_SetLength(Y, 0);
-            for ((Z1 = K2_thing_First):Z1:(Z1 = (Z1.K2_thing_Next))) {
+            for ((Z1 = K8_person_First):Z1:(Z1 = (Z1.K8_person_Next))) {
                 if ((call_U2207)(rr,RELS_TEST,Z1,X)) {
                     LIST_OF_TY_InsertItem(Y, Z1);
                 }
@@ -63154,7 +62852,7 @@ Global max_z_object;
         RELS_LIST:
             LIST_OF_TY_SetLength(X, 0);
             if ((Y == RLIST_ALL_X)) {
-                for ((Z1 = K2_thing_First):Z1:(Z1 = (Z1.K2_thing_Next))) {
+                for ((Z1 = K8_person_First):Z1:(Z1 = (Z1.K8_person_Next))) {
                     for ((Z3 = K2_thing_First):Z3:(Z3 = (Z3.K2_thing_Next))) {
                         if ((call_U2207)(rr,RELS_TEST,Z1,Z3)) {
                             LIST_OF_TY_InsertItem(X, Z1, 0, 0, 1);
@@ -63163,9 +62861,209 @@ Global max_z_object;
                 }
             } else {
                 if ((Y == RLIST_ALL_Y)) {
-                    for ((Z1 = K2_thing_First):Z1:(Z1 = (Z1.K2_thing_Next))) {
+                    for ((Z1 = K8_person_First):Z1:(Z1 = (Z1.K8_person_Next))) {
                         for ((Z3 = K2_thing_First):Z3:(Z3 = (Z3.K2_thing_Next))) {
                             if ((call_U2207)(rr,RELS_TEST,Z1,Z3)) {
+                                LIST_OF_TY_InsertItem(X, Z3, 0, 0, 1);
+                            }
+                        }
+                    }
+                }
+            }
+            return X;
+            ;
+        RELS_ASSERT_TRUE:
+            MoveObject(Y, X);
+            rtrue;
+            ;
+        RELS_ASSERT_FALSE:
+            rfalse;
+            ;
+    }
+    rfalse;
+];
+[ call_U2208 rr task X Y Z1 Z2 Z3 Z4;
+    switch (task) {
+        RELS_TEST:
+            if ((X == WearerOf(Y))) {
+                rtrue;
+            }
+            rfalse;
+            ;
+        RELS_LOOKUP_ANY:
+            if ((((Y == RLANY_GET_X)) || ((Y == RLANY_CAN_GET_X)))) {
+                for ((Z1 = K8_person_First):Z1:(Z1 = (Z1.K8_person_Next))) {
+                    if ((call_U2208)(rr,RELS_TEST,Z1,X)) {
+                        if ((Y == RLANY_CAN_GET_X)) {
+                            rtrue;
+                        }
+                        if ((Y == RLANY_CAN_GET_Y)) {
+                            rtrue;
+                        }
+                        return Z1;
+                    }
+                }
+                if ((Y == RLANY_CAN_GET_X)) {
+                    rfalse;
+                }
+                if ((Y == RLANY_CAN_GET_Y)) {
+                    rfalse;
+                }
+                return DefaultValueOfKOV(OBJECT_TY);
+            } else {
+                for ((Z1 = K2_thing_First):Z1:(Z1 = (Z1.K2_thing_Next))) {
+                    if ((call_U2208)(rr,RELS_TEST,X,Z1)) {
+                        if ((Y == RLANY_CAN_GET_X)) {
+                            rtrue;
+                        }
+                        if ((Y == RLANY_CAN_GET_Y)) {
+                            rtrue;
+                        }
+                        return Z1;
+                    }
+                }
+                if ((Y == RLANY_CAN_GET_X)) {
+                    rfalse;
+                }
+                if ((Y == RLANY_CAN_GET_Y)) {
+                    rfalse;
+                }
+                return DefaultValueOfKOV(OBJECT_TY);
+            }
+            ;
+        RELS_LOOKUP_ALL_X:
+            LIST_OF_TY_SetLength(Y, 0);
+            for ((Z1 = K8_person_First):Z1:(Z1 = (Z1.K8_person_Next))) {
+                if ((call_U2208)(rr,RELS_TEST,Z1,X)) {
+                    LIST_OF_TY_InsertItem(Y, Z1);
+                }
+            }
+            return Y;
+            ;
+        RELS_LOOKUP_ALL_Y:
+            LIST_OF_TY_SetLength(Y, 0);
+            for ((Z1 = K2_thing_First):Z1:(Z1 = (Z1.K2_thing_Next))) {
+                if ((call_U2208)(rr,RELS_TEST,X,Z1)) {
+                    LIST_OF_TY_InsertItem(Y, Z1);
+                }
+            }
+            return Y;
+            ;
+        RELS_LIST:
+            LIST_OF_TY_SetLength(X, 0);
+            if ((Y == RLIST_ALL_X)) {
+                for ((Z1 = K8_person_First):Z1:(Z1 = (Z1.K8_person_Next))) {
+                    for ((Z3 = K2_thing_First):Z3:(Z3 = (Z3.K2_thing_Next))) {
+                        if ((call_U2208)(rr,RELS_TEST,Z1,Z3)) {
+                            LIST_OF_TY_InsertItem(X, Z1, 0, 0, 1);
+                        }
+                    }
+                }
+            } else {
+                if ((Y == RLIST_ALL_Y)) {
+                    for ((Z1 = K8_person_First):Z1:(Z1 = (Z1.K8_person_Next))) {
+                        for ((Z3 = K2_thing_First):Z3:(Z3 = (Z3.K2_thing_Next))) {
+                            if ((call_U2208)(rr,RELS_TEST,Z1,Z3)) {
+                                LIST_OF_TY_InsertItem(X, Z3, 0, 0, 1);
+                            }
+                        }
+                    }
+                }
+            }
+            return X;
+            ;
+        RELS_ASSERT_TRUE:
+            WearObject(Y, X);
+            rtrue;
+            ;
+        RELS_ASSERT_FALSE:
+            rfalse;
+            ;
+    }
+    rfalse;
+];
+[ call_U2209 rr task X Y Z1 Z2 Z3 Z4;
+    switch (task) {
+        RELS_TEST:
+            if (TestVisibility(X, Y)) {
+                rtrue;
+            }
+            rfalse;
+            ;
+        RELS_LOOKUP_ANY:
+            if ((((Y == RLANY_GET_X)) || ((Y == RLANY_CAN_GET_X)))) {
+                for ((Z1 = K2_thing_First):Z1:(Z1 = (Z1.K2_thing_Next))) {
+                    if ((call_U2209)(rr,RELS_TEST,Z1,X)) {
+                        if ((Y == RLANY_CAN_GET_X)) {
+                            rtrue;
+                        }
+                        if ((Y == RLANY_CAN_GET_Y)) {
+                            rtrue;
+                        }
+                        return Z1;
+                    }
+                }
+                if ((Y == RLANY_CAN_GET_X)) {
+                    rfalse;
+                }
+                if ((Y == RLANY_CAN_GET_Y)) {
+                    rfalse;
+                }
+                return DefaultValueOfKOV(OBJECT_TY);
+            } else {
+                for ((Z1 = K2_thing_First):Z1:(Z1 = (Z1.K2_thing_Next))) {
+                    if ((call_U2209)(rr,RELS_TEST,X,Z1)) {
+                        if ((Y == RLANY_CAN_GET_X)) {
+                            rtrue;
+                        }
+                        if ((Y == RLANY_CAN_GET_Y)) {
+                            rtrue;
+                        }
+                        return Z1;
+                    }
+                }
+                if ((Y == RLANY_CAN_GET_X)) {
+                    rfalse;
+                }
+                if ((Y == RLANY_CAN_GET_Y)) {
+                    rfalse;
+                }
+                return DefaultValueOfKOV(OBJECT_TY);
+            }
+            ;
+        RELS_LOOKUP_ALL_X:
+            LIST_OF_TY_SetLength(Y, 0);
+            for ((Z1 = K2_thing_First):Z1:(Z1 = (Z1.K2_thing_Next))) {
+                if ((call_U2209)(rr,RELS_TEST,Z1,X)) {
+                    LIST_OF_TY_InsertItem(Y, Z1);
+                }
+            }
+            return Y;
+            ;
+        RELS_LOOKUP_ALL_Y:
+            LIST_OF_TY_SetLength(Y, 0);
+            for ((Z1 = K2_thing_First):Z1:(Z1 = (Z1.K2_thing_Next))) {
+                if ((call_U2209)(rr,RELS_TEST,X,Z1)) {
+                    LIST_OF_TY_InsertItem(Y, Z1);
+                }
+            }
+            return Y;
+            ;
+        RELS_LIST:
+            LIST_OF_TY_SetLength(X, 0);
+            if ((Y == RLIST_ALL_X)) {
+                for ((Z1 = K2_thing_First):Z1:(Z1 = (Z1.K2_thing_Next))) {
+                    for ((Z3 = K2_thing_First):Z3:(Z3 = (Z3.K2_thing_Next))) {
+                        if ((call_U2209)(rr,RELS_TEST,Z1,Z3)) {
+                            LIST_OF_TY_InsertItem(X, Z1, 0, 0, 1);
+                        }
+                    }
+                }
+            } else {
+                if ((Y == RLIST_ALL_Y)) {
+                    for ((Z1 = K2_thing_First):Z1:(Z1 = (Z1.K2_thing_Next))) {
+                        for ((Z3 = K2_thing_First):Z3:(Z3 = (Z3.K2_thing_Next))) {
+                            if ((call_U2209)(rr,RELS_TEST,Z1,Z3)) {
                                 LIST_OF_TY_InsertItem(X, Z3, 0, 0, 1);
                             }
                         }
@@ -63177,7 +63075,193 @@ Global max_z_object;
     }
     rfalse;
 ];
-[ call_U2208 rr task X Y Z1 Z2 Z3 Z4;
+[ call_U2210 rr task X Y Z1 Z2 Z3 Z4;
+    switch (task) {
+        RELS_TEST:
+            if (TestTouchability(X, Y)) {
+                rtrue;
+            }
+            rfalse;
+            ;
+        RELS_LOOKUP_ANY:
+            if ((((Y == RLANY_GET_X)) || ((Y == RLANY_CAN_GET_X)))) {
+                for ((Z1 = K2_thing_First):Z1:(Z1 = (Z1.K2_thing_Next))) {
+                    if ((call_U2210)(rr,RELS_TEST,Z1,X)) {
+                        if ((Y == RLANY_CAN_GET_X)) {
+                            rtrue;
+                        }
+                        if ((Y == RLANY_CAN_GET_Y)) {
+                            rtrue;
+                        }
+                        return Z1;
+                    }
+                }
+                if ((Y == RLANY_CAN_GET_X)) {
+                    rfalse;
+                }
+                if ((Y == RLANY_CAN_GET_Y)) {
+                    rfalse;
+                }
+                return DefaultValueOfKOV(OBJECT_TY);
+            } else {
+                for ((Z1 = K2_thing_First):Z1:(Z1 = (Z1.K2_thing_Next))) {
+                    if ((call_U2210)(rr,RELS_TEST,X,Z1)) {
+                        if ((Y == RLANY_CAN_GET_X)) {
+                            rtrue;
+                        }
+                        if ((Y == RLANY_CAN_GET_Y)) {
+                            rtrue;
+                        }
+                        return Z1;
+                    }
+                }
+                if ((Y == RLANY_CAN_GET_X)) {
+                    rfalse;
+                }
+                if ((Y == RLANY_CAN_GET_Y)) {
+                    rfalse;
+                }
+                return DefaultValueOfKOV(OBJECT_TY);
+            }
+            ;
+        RELS_LOOKUP_ALL_X:
+            LIST_OF_TY_SetLength(Y, 0);
+            for ((Z1 = K2_thing_First):Z1:(Z1 = (Z1.K2_thing_Next))) {
+                if ((call_U2210)(rr,RELS_TEST,Z1,X)) {
+                    LIST_OF_TY_InsertItem(Y, Z1);
+                }
+            }
+            return Y;
+            ;
+        RELS_LOOKUP_ALL_Y:
+            LIST_OF_TY_SetLength(Y, 0);
+            for ((Z1 = K2_thing_First):Z1:(Z1 = (Z1.K2_thing_Next))) {
+                if ((call_U2210)(rr,RELS_TEST,X,Z1)) {
+                    LIST_OF_TY_InsertItem(Y, Z1);
+                }
+            }
+            return Y;
+            ;
+        RELS_LIST:
+            LIST_OF_TY_SetLength(X, 0);
+            if ((Y == RLIST_ALL_X)) {
+                for ((Z1 = K2_thing_First):Z1:(Z1 = (Z1.K2_thing_Next))) {
+                    for ((Z3 = K2_thing_First):Z3:(Z3 = (Z3.K2_thing_Next))) {
+                        if ((call_U2210)(rr,RELS_TEST,Z1,Z3)) {
+                            LIST_OF_TY_InsertItem(X, Z1, 0, 0, 1);
+                        }
+                    }
+                }
+            } else {
+                if ((Y == RLIST_ALL_Y)) {
+                    for ((Z1 = K2_thing_First):Z1:(Z1 = (Z1.K2_thing_Next))) {
+                        for ((Z3 = K2_thing_First):Z3:(Z3 = (Z3.K2_thing_Next))) {
+                            if ((call_U2210)(rr,RELS_TEST,Z1,Z3)) {
+                                LIST_OF_TY_InsertItem(X, Z3, 0, 0, 1);
+                            }
+                        }
+                    }
+                }
+            }
+            return X;
+            ;
+    }
+    rfalse;
+];
+[ call_U2211 rr task X Y Z1 Z2 Z3 Z4;
+    switch (task) {
+        RELS_TEST:
+            if (TestConcealment(X, Y)) {
+                rtrue;
+            }
+            rfalse;
+            ;
+        RELS_LOOKUP_ANY:
+            if ((((Y == RLANY_GET_X)) || ((Y == RLANY_CAN_GET_X)))) {
+                for ((Z1 = K2_thing_First):Z1:(Z1 = (Z1.K2_thing_Next))) {
+                    if ((call_U2211)(rr,RELS_TEST,Z1,X)) {
+                        if ((Y == RLANY_CAN_GET_X)) {
+                            rtrue;
+                        }
+                        if ((Y == RLANY_CAN_GET_Y)) {
+                            rtrue;
+                        }
+                        return Z1;
+                    }
+                }
+                if ((Y == RLANY_CAN_GET_X)) {
+                    rfalse;
+                }
+                if ((Y == RLANY_CAN_GET_Y)) {
+                    rfalse;
+                }
+                return DefaultValueOfKOV(OBJECT_TY);
+            } else {
+                for ((Z1 = K2_thing_First):Z1:(Z1 = (Z1.K2_thing_Next))) {
+                    if ((call_U2211)(rr,RELS_TEST,X,Z1)) {
+                        if ((Y == RLANY_CAN_GET_X)) {
+                            rtrue;
+                        }
+                        if ((Y == RLANY_CAN_GET_Y)) {
+                            rtrue;
+                        }
+                        return Z1;
+                    }
+                }
+                if ((Y == RLANY_CAN_GET_X)) {
+                    rfalse;
+                }
+                if ((Y == RLANY_CAN_GET_Y)) {
+                    rfalse;
+                }
+                return DefaultValueOfKOV(OBJECT_TY);
+            }
+            ;
+        RELS_LOOKUP_ALL_X:
+            LIST_OF_TY_SetLength(Y, 0);
+            for ((Z1 = K2_thing_First):Z1:(Z1 = (Z1.K2_thing_Next))) {
+                if ((call_U2211)(rr,RELS_TEST,Z1,X)) {
+                    LIST_OF_TY_InsertItem(Y, Z1);
+                }
+            }
+            return Y;
+            ;
+        RELS_LOOKUP_ALL_Y:
+            LIST_OF_TY_SetLength(Y, 0);
+            for ((Z1 = K2_thing_First):Z1:(Z1 = (Z1.K2_thing_Next))) {
+                if ((call_U2211)(rr,RELS_TEST,X,Z1)) {
+                    LIST_OF_TY_InsertItem(Y, Z1);
+                }
+            }
+            return Y;
+            ;
+        RELS_LIST:
+            LIST_OF_TY_SetLength(X, 0);
+            if ((Y == RLIST_ALL_X)) {
+                for ((Z1 = K2_thing_First):Z1:(Z1 = (Z1.K2_thing_Next))) {
+                    for ((Z3 = K2_thing_First):Z3:(Z3 = (Z3.K2_thing_Next))) {
+                        if ((call_U2211)(rr,RELS_TEST,Z1,Z3)) {
+                            LIST_OF_TY_InsertItem(X, Z1, 0, 0, 1);
+                        }
+                    }
+                }
+            } else {
+                if ((Y == RLIST_ALL_Y)) {
+                    for ((Z1 = K2_thing_First):Z1:(Z1 = (Z1.K2_thing_Next))) {
+                        for ((Z3 = K2_thing_First):Z3:(Z3 = (Z3.K2_thing_Next))) {
+                            if ((call_U2211)(rr,RELS_TEST,Z1,Z3)) {
+                                LIST_OF_TY_InsertItem(X, Z3, 0, 0, 1);
+                            }
+                        }
+                    }
+                }
+            }
+            return X;
+            ;
+    }
+    rfalse;
+];
+[ call_U2212 rr task X Y Z1 Z2 Z3 Z4;
     switch (task) {
         RELS_TEST:
             if (0) {
@@ -64638,7 +64722,7 @@ Global max_z_object;
     DetectPluralWord(original_wn, n);
     return n;
 ];
-[ parse_name77 original_wn group_wn try_from_wn n f w rv g ss spn pass pass1_n pass2_n;
+[ parse_name73 original_wn group_wn try_from_wn n f w rv g ss spn pass pass1_n pass2_n;
     #ifdef DEBUG;
         if ((parser_trace >= 3)) {
             print "Parse_name called^";

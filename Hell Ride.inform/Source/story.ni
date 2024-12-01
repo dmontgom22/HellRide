@@ -266,11 +266,11 @@ Carry out hitting the first time:
 Carry out hitting:
 	say "Nothing happens."
 	
-A strength pattern is a kind of value. The strength patterns are Weakling, FooBar, Average, Almost There, Muscle Man.
+A strength pattern is a kind of value. The strength patterns are Weakling, Getting Stronger, Average, Almost There, Muscle Man.
 
 The Strongman Booth is a room. "The Strongman Booth is a popular carnival game in which you swing a mallet against a base and cause a striker to hit a bell. Along the length of the pole are markings indicating how strong you are. [if the room contains the mallet]You can see an over-sized mallet here.[end if]"
 
-The markings are here. The markings are scenery. Understand "marking" and "sign" and "signs" as markings. The description of markings is "There are five levels marked on the pole: Weakling, FooBar, Average, Almost Theere, and Muscle Man."
+The markings are here. The markings are scenery. Understand "marking" and "sign" and "signs" as markings. The description of markings is "There are five levels marked on the pole: Weakling, Getting There, Average, Almost Theere, and Muscle Man."
 
 The base is here. The base is fixed in place. 
 
@@ -280,15 +280,26 @@ Section 5 - Little Egypt Facade
 
 Little Egypt Facade is a room. Little Egypt Facade is east of Little Egypt Show. "You are standing in front of a trailer. There is a stage in front of the trailer. The Barker is encouraging you to step up, pay for, and enjoy the Little Egypt Show."											
 
-The Barker is a person in Little Egypt Facade. The description of the barker is "Here is a man dressed in black pants, a white shirt, and a striped vest.  He calls out: [line break][line break]
-               Step right up, folks and see Little Egypt[line break]
-               Do her famous dance of the Pyramids![line break]
-               She walks, she talks, she crawls on her belly like a reptile[Line Break]
-               Just one thin dime, one tenth of a dollar!".
+The Barker is a person in Little Egypt Facade. The description of the barker is "Here is a man dressed in black pants, a white shirt, and a striped vest. "
+
+Every turn when the player is in the Little Egypt Facade:
+	say "The barker cries: [line break][line break]Ladies and gentlemen, boys and girls, gather 'round! [line break]Step right up and witness the spectacle that’s taken the world by storm! [line break]She walks, she talks, she crawls on her belly like a reptile. [line break]Behold the one, the only Little Egypt, performing her legendary Dance of the Pyramids—a dazzling display of mystery, grace, and exotic allure! [line break]For just a dime, one tenth of a dollar, prepare to be transported to the sands of Cairo, where enchantment and wonder await!"
 		
+Check going west when the player is in the Little Egypt Facade and the barker is not carrying the dime:
+	say "It'll cost you a dime to go that way.";
+	stop the action.
+	
+Check going west when the player is in the Little Egypt Facade and the barker is carrying the dime:
+	Continue the action.
+
+The block giving rule is not listed in the check giving it to rules.
+After  giving when the noun is dime and the second noun is barker:
+	say "You can now head west into the show."
+
 Section 6 - Little Egypt Show				
 
-Little Egypt Show is a room. LIttle Egypt Show is west of Little Egypt Facade. "There are folding chairs set up in rows in front of a low stage. There is a spotlight shining on the stage. There is an empty chair in the front row. Perhaps you could sit there."
+Little Egypt Show is a room. Little Egypt Show is west of Little Egypt Facade. 
+"[if unvisited]As you enter the tent, you see that The stage is decorated to resemble an exotic Middle Eastern market or palace, featuring rich, colorful fabrics, brass ornaments, and lanterns casting a warm, flickering glow. Scents of incense waft through the air, enhancing the atmosphere of mystique. The backdrop displays painted scenes of pyramids, desert landscapes, or domed structures to evoking a sense of being transported to the 'Middle East'. [paragraph break]Little Egypt emerges draped in a flowing silk veils which she skillfully uses as part of the dance. Her attire consists of a sparkling, sequined bodice and harem pants, adorned with jingling coin belts and jewelry that accentuate her movements.[paragraph break]The performance begins with slow, undulating movements, drawing the you into the rhythm of exotic live music played on traditional instruments like the oud, darbuka, or zurna. As the tempo builds, her hips, torso, and hands move in intricate, mesmerizing patterns, demonstrating remarkable control and fluidity. She incorporates dramatic spins, drops, and shimmies, often accentuating the beat of the music with a quick jingle of her coin belt.[paragraph break]Little Egypt makes eye contact with you and smiles enigmatically. During her performance she balances a sword on her head and accents her dance with finger cymbals.[paragraph break]The music alternates between hauntingly slow melodies and rapid, energetic drum beats, creating an emotional arc that keeps the you entranced. Little Egypt relies on the music's dynamic changes to tell a story with movements reflecting joy, sorrow, seduction, and celebration.[paragraph break]The performance concludes with a dramatic flourish of a fast-paced shimmy, a bold spin, and Little Egypt dramatically casts off her veils. The dancer takes a bow to enthusiastic applause, leaving you spellbound by the sensual yet artful display.[otherwise]There are folding chairs set up in rows in front of a low stage. There is an empty chair in the front row. Perhaps you could sit there.[end if]"
 
 The Folding Chair is in Little Egypt Show. The Folding Chair is a enterable scenery supporter. The description of the Folding Chair is "This is one of many folding chairs in the tent tonight."
 
@@ -308,7 +319,7 @@ carry out going south		:
 
 Chapter 2 - The Ride
 
-HellRide is a region. Ride Entrance, Stocks, Gallows, Stake, Dungeon, Guillotine, and Ride Exit are in HellRide.
+HellRide is a region. Ride Entrance, Stocks Room, Gallows Room, Stake Room, Dungeon, Guillotine Room, and Ride Exit are in HellRide.
 
 Section 1 - Ride Entrance
 
@@ -337,7 +348,7 @@ Ride Entrance is a room. Ride Entrance is south of Head of the Line. "The cars t
 
 the car is a vehicle in the Ride Entrance. The description of the car is "A car waits to take you through the horror that is Hell Ride."
 
-before going south when the player is in the Ride Entrance:
+Before going south when the player is in the Ride Entrance:
 	say "You can't go that way." instead;
 	continue the action.
 	
@@ -362,7 +373,7 @@ The Dungeon is south of The Stake Room. "You see a dungeon here."
 
 Section 6 - Guillotine Room
 
-The guillotine room is south of The Dungeon. "A guillotine is about to chop your head off."
+The Guillotine Room is south of The Dungeon. "A guillotine is about to chop your head off."
 
 Section 7 - Ride Exit
 
