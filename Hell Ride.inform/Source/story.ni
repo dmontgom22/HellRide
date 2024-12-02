@@ -180,9 +180,7 @@ The Midway is a region. Parking Lot, The Booth, Concession Stand, Strongman Boot
 Section 1 - Parking Lot
 
 When play begins:
-	display the figure of Hell Ride.
-
-when play begins:
+	display the figure of Hell Ride;
 	say "The carnival is in town and you had a date with your sweetie to visit it. After dinner and just as you arrive at the carnival, you and your date
 		have a terrible fight. They storm off leaving you alone at the carnival. You decide to stay at the carnival anyway."
 
@@ -198,11 +196,7 @@ After taking blueberries:
 
 Section 2 - Ticket Booth
 
-[After going south when the location is the the Booth:
-	display Figure of Midway;
-	look.]
-
-Before going south when the location is the Parking Lot:
+Before going south when the location is the Parking Lot and the Booth is unvisited:
 	display Figure of Midway.
 
 The booth is a room. The booth is north of Head of the Line. The booth is east of the Little Egypt Facade. The booth is west of Strongman Booth. The booth is northeast of the Concession Stand. The  booth is south of the Parking Lot. "You are standing in line at a ticket booth at the carnival. The booth sells tickets to the Hell Ride attraction. The line for the ride forms to the south and the midway continues east and west from here. There is a concession stand to the south west. The ticket booth is garishly painted in purple and green sparkles. There is a Ticket Seller here. [if Seller is carrying hell ride ticket]The Ticket Seller has a ticket.[end if]"
@@ -279,12 +273,12 @@ Check hitting when the player is not carrying the mallet:
 	continue the action.]
 	
 Carry out hitting when the player is carrying the mallet:
-	say "You lift the mallet high and bring it down on the base with all your might! The striker rises towards the bell stopping at '[a random strength pattern between weakling and almost there]'.";
+	say "You lift the mallet high and bring it down on the base with all your might! The striker rises towards the bell stopping at '[a random strength pattern between weakling and almost there]'.  C[']mon! You can do better than that!";
 	
 [Carry out hitting:
 	say "Nothing happens."]
 	
-After hitting the base when second noun is the mallet 4 times :
+After hitting the base when second noun is the mallet 5 times :
 	play the sound of Strongman Bell;
 	say "You swing the mallet one more time. The bell rings as the striker reaches the top of the pole. The attendant says, 'You[']re a Muscle Man. Here's a prize for you.'";
 	increase score by 5;
@@ -313,7 +307,7 @@ After  giving when the noun is dime and the second noun is barker:
 Section 6 - Little Egypt Show				
 
 Little Egypt Show is a room. Little Egypt Show is west of Little Egypt Facade. 
-"[if unvisited]As you enter the tent, you see that The stage is decorated to resemble an exotic Middle Eastern market or palace, featuring rich, colorful fabrics, brass ornaments, and lanterns casting a warm, flickering glow. Scents of incense waft through the air, enhancing the atmosphere of mystique. The backdrop displays painted scenes of pyramids, desert landscapes, or domed structures to evoking a sense of being transported to the 'Middle East'. [paragraph break]Little Egypt emerges draped in a flowing silk veils which she skillfully uses as part of the dance. Her attire consists of a sparkling, sequined bodice and harem pants, adorned with jingling coin belts and jewelry that accentuate her movements.[paragraph break]The performance begins with slow, undulating movements, drawing the you into the rhythm of exotic live music played on traditional instruments like the oud, darbuka, or zurna. As the tempo builds, her hips, torso, and hands move in intricate, mesmerizing patterns, demonstrating remarkable control and fluidity. She incorporates dramatic spins, drops, and shimmies, often accentuating the beat of the music with a quick jingle of her coin belt.[paragraph break]Little Egypt makes eye contact with you and smiles enigmatically. During her performance she balances a sword on her head and accents her dance with finger cymbals.[paragraph break]The music alternates between hauntingly slow melodies and rapid, energetic drum beats, creating an emotional arc that keeps the you entranced. Little Egypt relies on the music's dynamic changes to tell a story with movements reflecting joy, sorrow, seduction, and celebration.[paragraph break]The performance concludes with a dramatic flourish of a fast-paced shimmy, a bold spin, and Little Egypt dramatically casts off her veils. The dancer takes a bow to enthusiastic applause, leaving you spellbound by the sensual yet artful display.[otherwise]There are folding chairs set up in rows in front of a low stage. There is an empty chair in the front row. Perhaps you could sit there.[end if]"
+"[if unvisited]As you enter the dimly lit tent, you see that the stage is decorated to resemble an exotic Middle Eastern market or palace, featuring rich, colorful fabrics, brass ornaments, and lanterns casting a warm, flickering glow. Scents of incense waft through the air, enhancing the atmosphere of mystique. The backdrop displays painted scenes of pyramids, desert landscapes, or domed structures to evoking a sense of being transported to the 'Middle East'. [paragraph break]Little Egypt emerges draped in a flowing silk veils which she skillfully uses as part of the dance. Her attire consists of a sparkling, sequined bodice and harem pants, adorned with jingling coin belts and jewelry that accentuate her movements.[paragraph break]The performance begins with slow, undulating movements, drawing the you into the rhythm of exotic live music played on traditional instruments like the oud, darbuka, or zurna. As the tempo builds, her hips, torso, and hands move in intricate, mesmerizing patterns, demonstrating remarkable control and fluidity. She incorporates dramatic spins, drops, and shimmies, often accentuating the beat of the music with a quick jingle of her coin belt.[paragraph break]Little Egypt makes eye contact with you and smiles enigmatically. During her performance she balances a sword on her head and accents her dance with finger cymbals.[paragraph break]The music alternates between hauntingly slow melodies and rapid, energetic drum beats, creating an emotional arc that keeps the you entranced. Little Egypt relies on the music's dynamic changes to tell a story with movements reflecting joy, sorrow, seduction, and celebration.[paragraph break]The performance concludes with a dramatic flourish of a fast-paced shimmy, a bold spin, and Little Egypt dramatically casts off her veils. The dancer takes a bow to enthusiastic applause, leaving you spellbound by the sensual yet artful display.[otherwise]There are folding chairs set up in rows in front of a low stage. There is an empty chair in the front row. Perhaps you could sit there.[end if]"
 
 The Folding Chair is in Little Egypt Show. The Folding Chair is a enterable scenery supporter. The description of the Folding Chair is "This is one of many folding chairs in the tent tonight."
 
@@ -322,6 +316,11 @@ Section 7 - Head of the Line
 Head of the Line is a room. Head of the Line is south of Booth. Head of the Line is north of Ride Entrance. "You are standing in front of a ticket taker with his hand open waiting for your ticket. The entrance to the ride is south of here."
 
 The Ride Attendant is a man in Head of the Line. The description of the Ride Attendant is "This is another bored teenager. His thoughts are entirely focused on a cheeseburger for lunch.";
+
+Check going south when the location is Head of the Line and the Ride Attendant does not have the ticket:
+	say "You[']ll need a ticket to go that way.";
+	stop the action.
+	
 
 [check going south:
 	if the room is not Head of the Line:
@@ -337,27 +336,35 @@ HellRide is a region. Ride Entrance, Stocks Room, Gallows Room, Stake Room, Dung
 
 Section 1 - Ride Entrance
 
-HellRideAuto is a scene. HellRideAuto begins when the player is in the car for the second turn. HellRideAuto ends when the player is in the Guillotine Room.
+HellRideAuto is a scene. HellRideAuto begins when the player is in the car for the second turn.
 
 When HellRideAuto begins:
 	say "The car moves forward and the safety bar begins to lower."
 	
-When HellRideAuto ends:
-	say "You have died."
+Every turn during HellRideAuto:
+	repeat through Table of HellRide Events:
+		say "[event entry][paragraph break]";
+		blank out the whole row;
+		rule succeeds.
+		
+Table of HellRide Events
+event
+" The car has begun to move toward the entrance of the ride and the safety bar has been lowered halfway."
+"The doors open and your car passes through into the darkness. The safety bar has been lowered."
+"You are in the Stocks Room."
+"You are in the Gallows Room."
+"You are in the Stake Room."
+"You are in the Dungeon."
+"You are in the Guillotine Room."
+
+HellRideAuto ends when the number of filled rows in the Table of HellRide Events is 0.
+
+Instead of doing something other than waiting, looking, listening or examining during HellRideAuto:
+	say "You are enjoying the ride."
 	
-Saved location is a room that varies. Locker is a container. Wardrobe is a container.
-
-To strip the player:
-	now every thing carried by the player is in the locker;
-	now every thing worn by the player is in the wardrobe;
-	now saved location is location.
-
-To restore the player:
-	now every thing carried by the player is in the Ride Entrance;
-	now every thing in the locker is carried by the player;
-	now every thing in the wardrobe is worn by the player;
-	move the player to saved location.
-
+When HellRideAuto ends:
+	end the story saying "You have died[line break]Too bad...".
+	
 Ride Entrance is a room. Ride Entrance is south of Head of the Line. "The cars that will take you into the fearsome Hell Ride stop here for you to board.  To the south is the track that will take you into the ride. The safety bar is raised allowing you to entering the car.". 
 
 the car is a vehicle in the Ride Entrance. The description of the car is "A car waits to take you through the horror that is Hell Ride."
@@ -366,34 +373,12 @@ Before going south when the player is in the Ride Entrance:
 	say "You can't go that way." instead;
 	continue the action.
 	
-[if the car contains the player
-	say "The safety bar begins to lower."]
-
-Section 2 - Stocks Room
-
-The Stocks Room is south of the Ride Entrance. "You see stocks here."
-
-Section 3 - Gallows Room
-
-The Gallows Room is south of The Stocks Room. "You see gallows here."
-
-Section 4 - Stake Room
-
-The Stake Room is south of The Gallows Room. "You see gallows here."
-
-Section 5 - Dungeon
-
-The Dungeon is south of The Stake Room. "You see a dungeon here."
-
-Section 6 - Guillotine Room
-
-The Guillotine Room is south of The Dungeon. "A guillotine is about to chop your head off."
-
-Section 7 - Ride Exit
-
-Ride Exit is south of The Guillotine. "You made it out alive!"
+Test me with "s / buy ticket / s / give ticket to attendant / s".
 
 Chapter 3 - Backstage
+
+
+
 
 
 
