@@ -1,3 +1,7 @@
+Part 1 - World Model
+
+Chapter 1 - Inform Settings, Card, Includes
+
 Use dynamic memory allocation of at least 32768.
 Use maximum text length of at least 2048.
 
@@ -25,16 +29,14 @@ Use serial comma.
 The maximum score is 100.
 When play begins, seed the random-number generator with 0.
 
-Part 1 - World Model
-
-Chapter 1 - The Player
+Chapter 2- The Player
 
 The description of the player is "You are despondent given that you and your date just had a huge fight and they stormed off. Maybe visiting the attractions at the carnival will make you feel better." The player carries a dime.
 
 Instead of examining the player:
 	say "Oh, stop fussing. You look fine."
 
-Chapter 2 - Figures & Sounds
+Chapter 3- Figures & Sounds
 
 Figure of Hell Ride is the file "HellRide.png".
 
@@ -42,7 +44,7 @@ Figure of Midway is the file "Midway.png".
 
 Sound of Strongman Bell is the file "StrongmanBell.ogg".
 
-Chapter 3 - Money Mechanics
+Chapter 4- Money Mechanics
 
 Price is a kind of value. $10.99 specifies a price. A thing has a price. The price of a thing is usually $0.00. After examining something for sale, say "It can be yours for [the price of the noun]."
 
@@ -80,7 +82,7 @@ Instead of buying something free:
 Instead of buying the money:
 	say "The money belongs to you; you buy things with it."
 	
-Chapter 4 - Drink Mechanics
+Chapter 5- Drink Mechanics
 
 A volume is a kind of value. 15.9 fl oz specifies a volume with parts ounces and tenths (optional, preamble optional).
 
@@ -162,7 +164,7 @@ Report pouring it into:
 	
 Understand the liquid property as describing a fluid container. Understand "of" as a fluid container.
 
-Chapter 5 - Miscellaneous Goodies
+Chapter 6- Miscellaneous Goodies
 
 A thing can be seen or unseen.
 
@@ -178,7 +180,7 @@ The Midway is a region. Parking Lot, The Booth, Concession Stand, Strongman Boot
 Section 1 - Parking Lot
 
 When play begins:
-	display the Figure of Hell Ride.
+	display the figure of Hell Ride.
 
 when play begins:
 	say "The carnival is in town and you had a date with your sweetie to visit it. After dinner and just as you arrive at the carnival, you and your date
@@ -196,18 +198,22 @@ After taking blueberries:
 
 Section 2 - Ticket Booth
 
-The booth is a room. The booth is north of Head of the Line. The booth is east of the Little Egypt Facade. The booth is west of Strongman Booth. The booth is northeast of the Concession Stand. The  booth is south of the Parking Lot. "You are standing in line at a ticket booth at the carnival. The booth sells tickets to the Hell Ride attraction. The line for the ride forms to the south and the midway continues east and west from here. There is a concession stand to the south west. The ticket booth is garishly painted in purple and green sparkles. There is a Ticket Seller here. [if Seller is carrying ticket]The Ticket Seller has a ticket.[end if]"
+[After going south when the location is the the Booth:
+	display Figure of Midway;
+	look.]
+
+Before going south when the location is the Parking Lot:
+	display Figure of Midway.
+
+The booth is a room. The booth is north of Head of the Line. The booth is east of the Little Egypt Facade. The booth is west of Strongman Booth. The booth is northeast of the Concession Stand. The  booth is south of the Parking Lot. "You are standing in line at a ticket booth at the carnival. The booth sells tickets to the Hell Ride attraction. The line for the ride forms to the south and the midway continues east and west from here. There is a concession stand to the south west. The ticket booth is garishly painted in purple and green sparkles. There is a Ticket Seller here. [if Seller is carrying hell ride ticket]The Ticket Seller has a ticket.[end if]"
 
 The Seller is a man in the booth. The description of seller is "This is a bored teenager hired to sell ride tickets all week at this carnival. He's thinking about having a brewski with his bros after work.". 
 
-the ticket is a thing. The seller carries the ticket. The price of the ticket is $2.50. The description of the ticket is "This ticket will 'Admit One' to the Hell Ride.[line break]It[']s a real 'E' ticket, baby!". 
+The Hell Ride ticket is a thing. The seller carries the Hell Ride ticket. The price of the Hell Ride ticket is $2.50. The description of the Hell Ride ticket is "This ticket will 'Admit One' to the Hell Ride.[line break]It[']s a real 'E' ticket, baby!". 
 
 After buying the ticket:
 	increase score by 5;
 	say "Well done!";
-
-Before looking when the location is the Booth:
-	display Figure of Midway
 
 Section 3 - Concession Stand
 
@@ -267,10 +273,10 @@ Check hitting when the second noun is not mallet:
 Check hitting when the player is not carrying the mallet:
 	say "You['] not holding the mallet." instead.
 	
-After hitting the first time:
+[After hitting the first time:
 	say "Yay! You got some points!";
 	increase the score by 5;
-	continue the action.
+	continue the action.]
 	
 Carry out hitting when the player is carrying the mallet:
 	say "You lift the mallet high and bring it down on the base with all your might! The striker rises towards the bell stopping at '[a random strength pattern between weakling and almost there]'.";
@@ -278,9 +284,9 @@ Carry out hitting when the player is carrying the mallet:
 [Carry out hitting:
 	say "Nothing happens."]
 	
-After hitting the base 4 times:
+After hitting the base when second noun is the mallet 4 times :
 	play the sound of Strongman Bell;
-	say "The bell rings as the striker reaches the top of the pole. The attendant says, 'You[']re a Muscle Man. Here's a prize for you.'";
+	say "You swing the mallet one more time. The bell rings as the striker reaches the top of the pole. The attendant says, 'You[']re a Muscle Man. Here's a prize for you.'";
 	increase score by 5;
 	now the player carries the stuffed teddy bear.
 	
@@ -291,7 +297,7 @@ Little Egypt Facade is a room. Little Egypt Facade is east of Little Egypt Show.
 The Barker is a person in Little Egypt Facade. The description of the barker is "Here is a man dressed in black pants, a white shirt, and a striped vest. "
 
 Every turn when the player is in the Little Egypt Facade:
-	say "The barker cries: [line break][line break]Ladies and gentlemen, boys and girls, gather 'round! [line break]Step right up and witness the spectacle that’s taken the world by storm! [line break]She walks, she talks, she crawls on her belly like a reptile. [line break]Behold the one, the only Little Egypt, performing her legendary Dance of the Pyramids—a dazzling display of mystery, grace, and exotic allure! [line break]For just a dime, one tenth of a dollar, prepare to be transported to the sands of Cairo, where enchantment and wonder await!"
+	say "The barker cries: [line break][line break]Ladies and gentlemen, boys and girls, gather 'round! [line break]Step right up and witness the spectacle that’s taken the world by storm! [line break]She walks, she talks, she crawls on her belly like a reptile. [line break]Behold the one, the only Little Egypt, performing her legendary Dance of the Pyramids—a dazzling display of mystery, grace, and exotic allure! [line break]For just a dime, a mere one tenth of a dollar, prepare to be transported to the sands of Cairo, where enchantment and wonder await!"
 		
 Check going west when the player is in the Little Egypt Facade and the barker is not carrying the dime:
 	say "It'll cost you a dime to go that way.";
