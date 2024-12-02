@@ -1158,6 +1158,7 @@
 
         <p class="tightin1"><img border=0 src=inform:/scene_icons/WPB.png>&nbsp;&nbsp;Entire Game&nbsp;<a href=#A0><img border=0 src=inform:/doc_images/Below.png></a>&nbsp;&nbsp;<img border=0 src=inform:/scene_icons/Recurring.png></p>
         <p class="tightin1"><img border=0 src=inform:/scene_icons/WhenC.png>&nbsp;&nbsp;HellRideAuto&nbsp;<a href=#A1><img border=0 src=inform:/doc_images/Below.png></a></p>
+        <p class="tightin1"><img border=0 src=inform:/scene_icons/WhenC.png>&nbsp;&nbsp;LittleEgyptAuto&nbsp;<a href=#A2><img border=0 src=inform:/doc_images/Below.png></a></p>
         <p><i>Legend</i>: <img border=0 src=inform:/scene_icons/WPB.png>&nbsp;<i>Begins when play begins</i>; <img border=0 src=inform:/scene_icons/WhenC.png>&nbsp;<i>can begin whenever some condition holds</i>; <img border=0 src=inform:/scene_icons/Segue.png>&nbsp;<i>follows when a previous scene ends</i>; <img border=0 src=inform:/scene_icons/Simul.png>&nbsp;<i>begins simultaneously</i>; <img border=0 src=inform:/scene_icons/WNever.png>&nbsp;<i>never begins</i>; <img border=0 src=inform:/scene_icons/ENever.png>&nbsp;<i>never ends</i>; <img border=0 src=inform:/scene_icons/Recurring.png>&nbsp;<i>recurring (can happen more than once)</i>. <i>Scene names are italicised when and if they appear for a second
         	or subsequent time because the scene can begin in more than one way.</i></p>
         <a name=SDETAILS></a><hr>
@@ -1168,19 +1169,30 @@
         <p class="hangingin1"><i>Begins when:</i> the story has not ended</p>
         <p class="hangingin1"><i>Ends when:</i> the story has ended</p>
         <hr>
-        <p class="hangingin1"><a name=A1></a><b>The <i>HellRideAuto</i> scene</b>&nbsp;<a href="source:story.ni#line339"><img border=0 src=inform:/doc_images/Reveal.png></a></p>
-        <p class="hangingin1"><i>Begins when:</i> the player is in the car&nbsp;<a href="source:story.ni#line339"><img border=0 src=inform:/doc_images/Reveal.png></a></p>
+        <p class="hangingin1"><a name=A1></a><b>The <i>HellRideAuto</i> scene</b>&nbsp;<a href="source:story.ni#line344"><img border=0 src=inform:/doc_images/Reveal.png></a></p>
+        <p class="hangingin1"><i>Begins when:</i> the player is in the car&nbsp;<a href="source:story.ni#line344"><img border=0 src=inform:/doc_images/Reveal.png></a></p>
         <p class="hangingin1"><i>What happens</i>:</p>
-        <p class="indentin2">&nbsp;&nbsp;&nbsp;&nbsp;(say "The car moves forward and the safety bar begins to lower.")&nbsp;<a href="source:story.ni#line341"><img border=0 src=inform:/doc_images/Reveal.png></a></p>
+        <p class="indentin2">&nbsp;&nbsp;&nbsp;&nbsp;(say "The car moves forward and the safety bar begins to lower.")&nbsp;<a href="source:story.ni#line346"><img border=0 src=inform:/doc_images/Reveal.png></a></p>
         <p class="hangingin1"><i>During this scene:</i></p>
         <p class="hangingin2"><i>Every turn rulebook</i></p>
-        <p class="indentin2">&nbsp;&nbsp;&nbsp;&nbsp;<i>during HellRideAuto</i>&nbsp;&nbsp;&nbsp;<a href="source:story.ni#line344"><img border=0 src=inform:/doc_images/Reveal.png></a></p>
+        <p class="indentin2">&nbsp;&nbsp;&nbsp;&nbsp;<i>during HellRideAuto</i>&nbsp;&nbsp;&nbsp;<a href="source:story.ni#line349"><img border=0 src=inform:/doc_images/Reveal.png></a></p>
         <p class="hangingin2"><i>Instead rulebook</i></p>
-        <p class="indentin2">&nbsp;&nbsp;&nbsp;&nbsp;<i>doing something other than waiting, looking, listening or examining</i>&nbsp;&nbsp;<i>during HellRideAuto</i>&nbsp;&nbsp;&nbsp;<a href="source:story.ni#line362"><img border=0 src=inform:/doc_images/Reveal.png></a><p class="hangingin2"><i>default outcome is failure</i></p>
+        <p class="indentin2">&nbsp;&nbsp;&nbsp;&nbsp;<i>doing something other than waiting, looking, listening or examining</i>&nbsp;&nbsp;<i>during HellRideAuto</i>&nbsp;&nbsp;&nbsp;<a href="source:story.ni#line367"><img border=0 src=inform:/doc_images/Reveal.png></a><p class="hangingin2"><i>default outcome is failure</i></p>
         </p>
-        <p class="hangingin1"><i>Ends when:</i> the number of filled rows in the Table of HellRide Events is 0&nbsp;<a href="source:story.ni#line360"><img border=0 src=inform:/doc_images/Reveal.png></a></p>
+        <p class="hangingin1"><i>Ends when:</i> the number of filled rows in the Table of HellRide Events is 0&nbsp;<a href="source:story.ni#line365"><img border=0 src=inform:/doc_images/Reveal.png></a></p>
         <p class="hangingin1"><i>What happens</i>:</p>
-        <p class="indentin2">&nbsp;&nbsp;&nbsp;&nbsp;(end the story saying "You have died[line break]Too bad...")&nbsp;<a href="source:story.ni#line365"><img border=0 src=inform:/doc_images/Reveal.png></a></p>
+        <p class="indentin2">&nbsp;&nbsp;&nbsp;&nbsp;(end the story finally saying "You have died.")&nbsp;<a href="source:story.ni#line370"><img border=0 src=inform:/doc_images/Reveal.png></a></p>
+        <hr>
+        <p class="hangingin1"><a name=A2></a><b>The <i>LittleEgyptAuto</i> scene</b>&nbsp;<a href="source:story.ni#line302"><img border=0 src=inform:/doc_images/Reveal.png></a></p>
+        <p class="hangingin1"><i>Begins when:</i> the player is in the Little Egypt Show&nbsp;<a href="source:story.ni#line302"><img border=0 src=inform:/doc_images/Reveal.png></a></p>
+        <p class="hangingin1"><i>What happens</i>:</p>
+        <p class="indentin2">&nbsp;&nbsp;&nbsp;&nbsp;(say "You enter the tent and sit in one of the folding chairs in the front row."; ...)&nbsp;<a href="source:story.ni#line304"><img border=0 src=inform:/doc_images/Reveal.png></a></p>
+        <p class="hangingin1"><i>During this scene:</i></p>
+        <p class="hangingin2"><i>Every turn rulebook</i></p>
+        <p class="indentin2">&nbsp;&nbsp;&nbsp;&nbsp;<i>during LittleEgyptAuto</i>&nbsp;&nbsp;&nbsp;<a href="source:story.ni#line311"><img border=0 src=inform:/doc_images/Reveal.png></a></p>
+        <p class="hangingin1"><i>Ends when:</i> the number of filled rows in the Table of LittleEgypt Events is 0&nbsp;<a href="source:story.ni#line326"><img border=0 src=inform:/doc_images/Reveal.png></a></p>
+        <p class="hangingin1"><i>What happens</i>:</p>
+        <p class="indentin2">&nbsp;&nbsp;&nbsp;&nbsp;(say "You stand and applaud until your hands are sore. Did she wink at me?")&nbsp;<a href="source:story.ni#line308"><img border=0 src=inform:/doc_images/Reveal.png></a></p>
     </div>
     <div id="segment2">
         <hr>

@@ -267,16 +267,8 @@ Check hitting when the second noun is not mallet:
 Check hitting when the player is not carrying the mallet:
 	say "You['] not holding the mallet." instead.
 	
-[After hitting the first time:
-	say "Yay! You got some points!";
-	increase the score by 5;
-	continue the action.]
-	
 Carry out hitting when the player is carrying the mallet:
 	say "You lift the mallet high and bring it down on the base with all your might! The striker rises towards the bell stopping at '[a random strength pattern between weakling and almost there]'.  C[']mon! You can do better than that!";
-	
-[Carry out hitting:
-	say "Nothing happens."]
 	
 After hitting the base when second noun is the mallet 5 times :
 	play the sound of Strongman Bell;
@@ -286,13 +278,10 @@ After hitting the base when second noun is the mallet 5 times :
 	
 Section 5 - Little Egypt Facade
 
-Little Egypt Facade is a room. Little Egypt Facade is east of Little Egypt Show. "You are standing in front of a trailer. There is a stage in front of the trailer. The Barker is encouraging you to step up, pay for, and enjoy the Little Egypt Show."											
+Little Egypt Facade is a room. Little Egypt Facade is east of Little Egypt Show. "You are standing in front of a trailer. There is a stage in front of the trailer. The Barker is encouraging you to step up, pay for, and enjoy the Little Egypt Show.[if location is unvisited]The barker cries: [line break][line break]Ladies and gentlemen, boys and girls, gather 'round! [line break]Step right up and witness the spectacle that’s taken the world by storm! [line break]She walks, she talks, she crawls on her belly like a reptile. [line break]Behold the one, the only Little Egypt, performing her legendary Dance of the Pyramids—a dazzling display of mystery, grace, and exotic allure! [line break]For just a dime, a mere one tenth of a dollar, prepare to be transported to the sands of Cairo, where enchantment and wonder await![end if]"
 
-The Barker is a person in Little Egypt Facade. The description of the barker is "Here is a man dressed in black pants, a white shirt, and a striped vest. "
+The Barker is a person in Little Egypt Facade. The description of the barker is "Here is a man dressed in black pants, a white shirt, and a striped vest. The barker cries: [line break][line break]Ladies and gentlemen, boys and girls, gather 'round! [line break]Step right up and witness the spectacle that’s taken the world by storm! [line break]She walks, she talks, she crawls on her belly like a reptile. [line break]Behold the one, the only Little Egypt, performing her legendary Dance of the Pyramids—a dazzling display of mystery, grace, and exotic allure! [line break]For just a dime, a mere one tenth of a dollar, prepare to be transported to the sands of Cairo, where enchantment and wonder await!"
 
-Every turn when the player is in the Little Egypt Facade:
-	say "The barker cries: [line break][line break]Ladies and gentlemen, boys and girls, gather 'round! [line break]Step right up and witness the spectacle that’s taken the world by storm! [line break]She walks, she talks, she crawls on her belly like a reptile. [line break]Behold the one, the only Little Egypt, performing her legendary Dance of the Pyramids—a dazzling display of mystery, grace, and exotic allure! [line break]For just a dime, a mere one tenth of a dollar, prepare to be transported to the sands of Cairo, where enchantment and wonder await!"
-		
 Check going west when the player is in the Little Egypt Facade and the barker is not carrying the dime:
 	say "It'll cost you a dime to go that way.";
 	stop the action.
@@ -306,10 +295,35 @@ After  giving when the noun is dime and the second noun is barker:
 
 Section 6 - Little Egypt Show				
 
-Little Egypt Show is a room. Little Egypt Show is west of Little Egypt Facade. 
-"[if unvisited]As you enter the dimly lit tent, you see that the stage is decorated to resemble an exotic Middle Eastern market or palace, featuring rich, colorful fabrics, brass ornaments, and lanterns casting a warm, flickering glow. Scents of incense waft through the air, enhancing the atmosphere of mystique. The backdrop displays painted scenes of pyramids, desert landscapes, or domed structures to evoking a sense of being transported to the 'Middle East'. [paragraph break]Little Egypt emerges draped in a flowing silk veils which she skillfully uses as part of the dance. Her attire consists of a sparkling, sequined bodice and harem pants, adorned with jingling coin belts and jewelry that accentuate her movements.[paragraph break]The performance begins with slow, undulating movements, drawing the you into the rhythm of exotic live music played on traditional instruments like the oud, darbuka, or zurna. As the tempo builds, her hips, torso, and hands move in intricate, mesmerizing patterns, demonstrating remarkable control and fluidity. She incorporates dramatic spins, drops, and shimmies, often accentuating the beat of the music with a quick jingle of her coin belt.[paragraph break]Little Egypt makes eye contact with you and smiles enigmatically. During her performance she balances a sword on her head and accents her dance with finger cymbals.[paragraph break]The music alternates between hauntingly slow melodies and rapid, energetic drum beats, creating an emotional arc that keeps the you entranced. Little Egypt relies on the music's dynamic changes to tell a story with movements reflecting joy, sorrow, seduction, and celebration.[paragraph break]The performance concludes with a dramatic flourish of a fast-paced shimmy, a bold spin, and Little Egypt dramatically casts off her veils. The dancer takes a bow to enthusiastic applause, leaving you spellbound by the sensual yet artful display.[otherwise]There are folding chairs set up in rows in front of a low stage. There is an empty chair in the front row. Perhaps you could sit there.[end if]"
+Little Egypt Show is a room. Little Egypt Show is west of Little Egypt Facade. "You are inside the Little Egypt Show. The attraction facade is to the east."
 
 The Folding Chair is in Little Egypt Show. The Folding Chair is a enterable scenery supporter. The description of the Folding Chair is "This is one of many folding chairs in the tent tonight."
+
+LittleEgyptAuto is a scene. LittleEgyptAuto begins when the player is in the Little Egypt Show for the second turn.
+
+When LittleEgyptAuto begins:
+	say "You enter the tent and sit in one of the folding chairs in the front row.";
+	now the player is in the folding chair.
+
+When LittleEgyptAuto ends:
+	say "You stand and applaud until your hands are sore. Did she wink at me?"
+	
+Every turn during LittleEgyptAuto:
+	repeat through Table of LittleEgypt Events:
+		say "[event entry][paragraph break]";
+		blank out the whole row;
+		rule succeeds.
+		
+Table of LittleEgypt Events
+event
+"As you enter the dimly lit tent, you see that the stage is decorated to resemble an exotic Middle Eastern market or palace, featuring rich, colorful fabrics, brass ornaments, and lanterns casting a warm, flickering glow. Scents of incense waft through the air, enhancing the atmosphere of mystique. The backdrop displays painted scenes of pyramids, desert landscapes, or domed structures to evoking a sense of being transported to the 'Middle East'. "
+"Little Egypt emerges draped in a flowing silk veils which she skillfully uses as part of the dance. Her attire consists of a sparkling, sequined bodice and harem pants, adorned with jingling coin belts and jewelry that accentuate her movements."
+"The performance begins with slow, undulating movements, drawing the you into the rhythm of exotic live music played on traditional instruments like the oud, darbuka, or zurna. As the tempo builds, her hips, torso, and hands move in intricate, mesmerizing patterns, demonstrating remarkable control and fluidity. She incorporates dramatic spins, drops, and shimmies, often accentuating the beat of the music with a quick jingle of her coin belt."
+"Little Egypt makes eye contact with you and smiles enigmatically. During her performance she balances a sword on her head and accents her dance with finger cymbals."
+"The music alternates between hauntingly slow melodies and rapid, energetic drum beats, creating an emotional arc that keeps the you entranced. Little Egypt relies on the music's dynamic changes to tell a story with movements reflecting joy, sorrow, seduction, and celebration."
+"The performance concludes with a dramatic flourish of a fast-paced shimmy, a bold spin, and Little Egypt dramatically casts off her veils. The dancer takes a bow to enthusiastic applause, leaving you spellbound by the sensual yet artful display."
+
+LittleEgyptAuto ends when the number of filled rows in the Table of LittleEgypt Events is 0.
 
 Section 7 - Head of the Line
 
@@ -320,15 +334,6 @@ The Ride Attendant is a man in Head of the Line. The description of the Ride Att
 Check going south when the location is Head of the Line and the Ride Attendant does not have the ticket:
 	say "You[']ll need a ticket to go that way.";
 	stop the action.
-	
-
-[check going south:
-	if the room is not Head of the Line:
-		continue the action
-
-carry out going south		:
-	if the player is not carrying the ticket:
-		say "You[']ll need a ticket to go that way."]
 
 Chapter 2 - The Ride
 
@@ -349,13 +354,13 @@ Every turn during HellRideAuto:
 		
 Table of HellRide Events
 event
-" The car has begun to move toward the entrance of the ride and the safety bar has been lowered halfway."
+"The car has begun to move toward the entrance of the ride and the safety bar has been lowered halfway."
 "The doors open and your car passes through into the darkness. The safety bar has been lowered."
-"You are in the Stocks Room."
-"You are in the Gallows Room."
-"You are in the Stake Room."
-"You are in the Dungeon."
-"You are in the Guillotine Room."
+"You pass into a room which displays mannequins in stocks in a public square. The wax figures are especially life like."
+"The next room shows a man hanging from a gallows. The gallows are made of wood."
+"Here you can see a witch being burned at the stake as townsfolk jeer at the sight."
+"This a dungeon with all the usual devices: the rack, an iron maiden, a Saint Andrew's Cross."
+"There is a guillotine in this room. The guillotine is being raised and lowered. It appears that the timing of the guillotine is off and it is being lowered onto the cars. If a person would be in a car as it passed under the guillotine, they would be decapitated. Looks like your jig is up. Say 'Goodnight, Gracie!'".
 
 HellRideAuto ends when the number of filled rows in the Table of HellRide Events is 0.
 
@@ -363,7 +368,7 @@ Instead of doing something other than waiting, looking, listening or examining d
 	say "You are enjoying the ride."
 	
 When HellRideAuto ends:
-	end the story saying "You have died[line break]Too bad...".
+	end the story finally saying "You have died.";
 	
 Ride Entrance is a room. Ride Entrance is south of Head of the Line. "The cars that will take you into the fearsome Hell Ride stop here for you to board.  To the south is the track that will take you into the ride. The safety bar is raised allowing you to entering the car.". 
 
