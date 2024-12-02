@@ -3,1276 +3,825 @@
   <generator>Windows Inform 10.1.2</generator>
   <item nodeId="node-39">
     <command xml:space="preserve">Hell Ride</command>
-    <result xml:space="preserve">The carnival is in town and you had a date with your sweetie to visit it. After dinner and just as you arrive at the carnival, you and your date have a terrible fight. They storm off leaving you alone at the carnival. You decide to stay at the carnival anyway.&#x000A;&#x000A;Hell Ride&#x000A;The ride of a lifetime... by No Shoes&#x000A;Release 1 / Serial number 241201 / Inform 7 v10.1.2 / D&#x000A;&#x000A;Parking Lot&#x000A;You are in a parking lot full of cars. The midway is to the south. There is a blueberry bush here. There are blueberries on the bush&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve">The carnival is in town and you had a date with your sweetie to visit it. After dinner and just as you arrive at the carnival, you and your date have a terrible fight. They storm off leaving you alone at the carnival. You decide to stay at the carnival anyway.&#x000A;&#x000A;Hell Ride&#x000A;The ride of a lifetime... by No Shoes&#x000A;Release 1 / Serial number 241201 / Inform 7 v10.1.2 / D&#x000A;&#x000A;Parking Lot&#x000A;You are in a parking lot full of cars. The midway is to the south. There is a blueberry bush here. There are blueberries on the bush&#x000A;&#x000A;&gt;</commentary>
+    <result xml:space="preserve">The carnival is in town and you had a date with your sweetie to visit it. After dinner and just as you arrive at the carnival, you and your date have a terrible fight. They storm off leaving you alone at the carnival. You decide to stay at the carnival anyway.&#x000A;&#x000A;Hell Ride&#x000A;The ride of a lifetime... by No Shoes&#x000A;Release 1 / Serial number 241202 / Inform 7 v10.1.2 / D&#x000A;&#x000A;Parking Lot&#x000A;You are in a parking lot full of cars. The midway is to the south. There is a blueberry bush here. There are blueberries on the bush&#x000A;&#x000A;You can see a dime here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve">The carnival is in town and you had a date with your sweetie to visit it. After dinner and just as you arrive at the carnival, you and your date have a terrible fight. They storm off leaving you alone at the carnival. You decide to stay at the carnival anyway.&#x000A;&#x000A;Hell Ride&#x000A;The ride of a lifetime... by No Shoes&#x000A;Release 1 / Serial number 241201 / Inform 7 v10.1.2 / D&#x000A;&#x000A;Parking Lot&#x000A;You are in a parking lot full of cars. The midway is to the south. There is a blueberry bush here. There are blueberries on the bush&#x000A;&#x000A;You can see a dime here.&#x000A;&#x000A;&gt;</commentary>
     <changed>NO</changed>
     <children>
-      <child nodeId="node-686"/>
-      <child nodeId="node-689"/>
-      <child nodeId="node-630"/>
+      <child nodeId="node-851"/>
+      <child nodeId="node-906"/>
     </children>
   </item>
-  <item nodeId="node-686">
-    <command xml:space="preserve"></command>
-    <result xml:space="preserve">I beg your pardon?&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-687"/>
-    </children>
-  </item>
-  <item nodeId="node-687">
-    <command xml:space="preserve">s</command>
-    <result xml:space="preserve">The Booth&#x000A;You are standing in line at a ticket booth at the carnival. The booth sells tickets to the Hell Ride attraction. The line for the ride forms to the south and the midway continues east and west from here. There is a concession stand to the south west. The ticket booth is garishly painted in purple and green sparkles. There is a Ticket Seller here. The Ticket Seller has a ticket.&#x000A;&#x000A;You can see a Seller here.&#x000A;&#x000A;&gt;</result>
+  <item nodeId="node-851">
+    <command xml:space="preserve">get all</command>
+    <result xml:space="preserve">dime: Taken.&#x000A;blueberries: Good Job!&#x000A;&#x000A;[Your score has just gone up by five points.]&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
     <children>
-      <child nodeId="node-688"/>
+      <child nodeId="node-893"/>
+      <child nodeId="node-921"/>
     </children>
   </item>
-  <item nodeId="node-688">
-    <command xml:space="preserve">l</command>
-    <result xml:space="preserve">The Booth&#x000A;You are standing in line at a ticket booth at the carnival. The booth sells tickets to the Hell Ride attraction. The line for the ride forms to the south and the midway continues east and west from here. There is a concession stand to the south west. The ticket booth is garishly painted in purple and green sparkles. There is a Ticket Seller here. The Ticket Seller has a ticket.&#x000A;&#x000A;You can see a Seller here.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-  </item>
-  <item nodeId="node-689">
-    <command xml:space="preserve">get blueberrie</command>
-    <result xml:space="preserve">Good Job!&#x000A;&#x000A;[Your score has just gone up by five points.]&#x000A;&#x000A;&gt;</result>
+  <item nodeId="node-893">
+    <command xml:space="preserve">e</command>
+    <result xml:space="preserve">You can't go that way.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
     <children>
-      <child nodeId="node-690"/>
+      <child nodeId="node-894"/>
     </children>
   </item>
-  <item nodeId="node-690">
-    <command xml:space="preserve">s</command>
-    <result xml:space="preserve">ticket booth&#x000A;You are standing in line at a ticket booth at the carnival. The booth sells tickets to the Hell Ride attraction. The line for the ride forms to the south and the midway continues east and west from here. There is a concession stand to the south west. The ticket booth is garishly painted in purple and green sparkles. There is a Ticket Seller here. The Ticket Seller has a ticket.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-  </item>
-  <item nodeId="node-630">
+  <item nodeId="node-894">
     <command xml:space="preserve">s</command>
     <result xml:space="preserve">The Ticket Booth&#x000A;You are standing in line at a ticket booth at the carnival. The booth sells tickets to the Hell Ride attraction. The line for the ride forms to the south and the midway continues east and west from here. There is a concession stand to the south west. The ticket booth is garishly painted in purple and green sparkles. There is a Ticket Seller here. The Ticket Seller has a Hell Ride ticket.&#x000A;&#x000A;You can see a Ticket Seller here.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
     <children>
-      <child nodeId="node-691"/>
-      <child nodeId="node-631"/>
+      <child nodeId="node-895"/>
     </children>
   </item>
-  <item nodeId="node-691">
-    <command xml:space="preserve">s</command>
-    <result xml:space="preserve">Head of the Line&#x000A;You are standing in front of a ticket taker with his hand open waiting for your ticket. The entrance to the ride is south of here.&#x000A;&#x000A;You can see a Ride Attendant here.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-692"/>
-    </children>
-  </item>
-  <item nodeId="node-692">
-    <command xml:space="preserve">n</command>
-    <result xml:space="preserve">Ticket Booth&#x000A;You are standing in line at a ticket booth at the carnival. The booth sells tickets to the Hell Ride attraction. The line for the ride forms to the south and the midway continues east and west from here. There is a concession stand to the south west. The ticket booth is garishly painted in purple and green sparkles. There is a Ticket Seller here. The Ticket Seller has a ticket.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-693"/>
-    </children>
-  </item>
-  <item nodeId="node-693">
-    <command xml:space="preserve">l</command>
-    <result xml:space="preserve">Ticket Booth&#x000A;You are standing in line at a ticket booth at the carnival. The booth sells tickets to the Hell Ride attraction. The line for the ride forms to the south and the midway continues east and west from here. There is a concession stand to the south west. The ticket booth is garishly painted in purple and green sparkles. There is a Ticket Seller here. The Ticket Seller has a ticket.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-694"/>
-      <child nodeId="node-695"/>
-    </children>
-  </item>
-  <item nodeId="node-694">
-    <command xml:space="preserve">look</command>
-    <result xml:space="preserve">Ticket Booth&#x000A;You are standing in line at a ticket booth at the carnival. The booth sells tickets to the Hell Ride attraction. The line for the ride forms to the south and the midway continues east and west from here. There is a concession stand to the south west. The ticket booth is garishly painted in purple and green sparkles. There is a Ticket Seller here. The Ticket Seller has a ticket.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-  </item>
-  <item nodeId="node-695">
-    <command xml:space="preserve">w</command>
-    <result xml:space="preserve">Little Egypt Facade&#x000A;You are standing in front of a trailer. There is a stage in front of the trailer. The Barker is encouraging you to step up, pay for, and enjoy the Little Egypt Show.The barker cries: &#x000A;&#x000A;Ladies and gentlemen, boys and girls, gather "round! &#x000A;Step right up and witness the spectacle that's taken the world by storm! &#x000A;She walks, she talks, she crawls on her belly like a reptile. &#x000A;Behold the one, the only Little Egypt, performing her legendary Dance of the Pyramids-a dazzling display of mystery, grace, and exotic allure! &#x000A;For just a dime, a mere one tenth of a dollar, prepare to be transported to the sands of Cairo, where enchantment and wonder await!&#x000A;&#x000A;You can see a Barker here.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-696"/>
-    </children>
-  </item>
-  <item nodeId="node-696">
-    <command xml:space="preserve">w</command>
-    <result xml:space="preserve">It'll cost you a dime to go that way.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-697"/>
-    </children>
-  </item>
-  <item nodeId="node-697">
+  <item nodeId="node-895">
     <command xml:space="preserve">e</command>
-    <result xml:space="preserve">Ticket Booth&#x000A;You are standing in line at a ticket booth at the carnival. The booth sells tickets to the Hell Ride attraction. The line for the ride forms to the south and the midway continues east and west from here. There is a concession stand to the south west. The ticket booth is garishly painted in purple and green sparkles. There is a Ticket Seller here. The Ticket Seller has a ticket.&#x000A;&#x000A;&gt;</result>
+    <result xml:space="preserve">Strongman Booth&#x000A;The Strongman Booth is a popular carnival game in which you swing a mallet against a base and cause a striker to hit a bell. Along the length of the pole are markings indicating how strong you are.  A nearby sign says, "Buy a mallet, strike the bell, win a prize."&#x000A;&#x000A;You can see a Strongman Attendant and a base here.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
     <children>
-      <child nodeId="node-698"/>
+      <child nodeId="node-896"/>
     </children>
   </item>
-  <item nodeId="node-698">
-    <command xml:space="preserve">l</command>
-    <result xml:space="preserve">Ticket Booth&#x000A;You are standing in line at a ticket booth at the carnival. The booth sells tickets to the Hell Ride attraction. The line for the ride forms to the south and the midway continues east and west from here. There is a concession stand to the south west. The ticket booth is garishly painted in purple and green sparkles. There is a Ticket Seller here. The Ticket Seller has a ticket.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-699"/>
-    </children>
-  </item>
-  <item nodeId="node-699">
-    <command xml:space="preserve">w</command>
-    <result xml:space="preserve">Little Egypt Facade&#x000A;You are standing in front of a trailer. There is a stage in front of the trailer. The Barker is encouraging you to step up, pay for, and enjoy the Little Egypt Show.&#x000A;&#x000A;You can see a Barker here.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-700"/>
-    </children>
-  </item>
-  <item nodeId="node-700">
-    <command xml:space="preserve">l</command>
-    <result xml:space="preserve">Little Egypt Facade&#x000A;You are standing in front of a trailer. There is a stage in front of the trailer. The Barker is encouraging you to step up, pay for, and enjoy the Little Egypt Show.&#x000A;&#x000A;You can see a Barker here.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-  </item>
-  <item nodeId="node-631">
-    <command xml:space="preserve">w</command>
-    <result xml:space="preserve">Little Egypt Facade&#x000A;You are standing in front of a trailer. There is a stage in front of the trailer. The Barker is encouraging you to step up, pay for, and enjoy the Little Egypt Show.The barker cries: &#x000A;&#x000A;Ladies and gentlemen, boys and girls, gather "round! &#x000A;Step right up and witness the spectacle that's taken the world by storm! &#x000A;She walks, she talks, she crawls on her belly like a reptile. &#x000A;Behold the one, the only Little Egypt, performing her legendary Dance of the Pyramids-a dazzling display of mystery, grace, and exotic allure! &#x000A;For just a dime, a mere one tenth of a dollar, prepare to be transported to the sands of Cairo, where enchantment and wonder await!&#x000A;&#x000A;You can see a Barker here.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-757"/>
-      <child nodeId="node-701"/>
-      <child nodeId="node-632"/>
-    </children>
-  </item>
-  <item nodeId="node-757">
-    <command xml:space="preserve">give dime to barker</command>
-    <result xml:space="preserve">You can now head west into the show.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-758"/>
-    </children>
-  </item>
-  <item nodeId="node-758">
-    <command xml:space="preserve">w</command>
-    <result xml:space="preserve">Little Egypt Show&#x000A;You are inside the Little Egypt Show. The attraction facade is to the east.&#x000A;&#x000A;You enter the tent and sit in one of the folding chairs in the front row.&#x000A;&#x000A;&#x000A;&#x000A;Little Egypt Show (on the Folding Chair)&#x000A;You are inside the Little Egypt Show. The attraction facade is to the east.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-759"/>
-    </children>
-  </item>
-  <item nodeId="node-759">
-    <command xml:space="preserve">l</command>
-    <result xml:space="preserve">Little Egypt Show (on the Folding Chair)&#x000A;You are inside the Little Egypt Show. The attraction facade is to the east.&#x000A;&#x000A;As you enter the dimly lit tent, you see that the stage is decorated to resemble an exotic Middle Eastern market or palace, featuring rich, colorful fabrics, brass ornaments, and lanterns casting a warm, flickering glow. Scents of incense waft through the air, enhancing the atmosphere of mystique. The backdrop displays painted scenes of pyramids, desert landscapes, or domed structures to evoking a sense of being transported to the "Middle East". &#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-760"/>
-    </children>
-  </item>
-  <item nodeId="node-760">
-    <command xml:space="preserve">l</command>
-    <result xml:space="preserve">Little Egypt Show (on the Folding Chair)&#x000A;You are inside the Little Egypt Show. The attraction facade is to the east.&#x000A;&#x000A;Little Egypt emerges draped in a flowing silk veils which she skillfully uses as part of the dance. Her attire consists of a sparkling, sequined bodice and harem pants, adorned with jingling coin belts and jewelry that accentuate her movements.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-761"/>
-    </children>
-  </item>
-  <item nodeId="node-761">
-    <command xml:space="preserve">l</command>
-    <result xml:space="preserve">Little Egypt Show (on the Folding Chair)&#x000A;You are inside the Little Egypt Show. The attraction facade is to the east.&#x000A;&#x000A;The performance begins with slow, undulating movements, drawing the you into the rhythm of exotic live music played on traditional instruments like the oud, darbuka, or zurna. As the tempo builds, her hips, torso, and hands move in intricate, mesmerizing patterns, demonstrating remarkable control and fluidity. She incorporates dramatic spins, drops, and shimmies, often accentuating the beat of the music with a quick jingle of her coin belt.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-762"/>
-    </children>
-  </item>
-  <item nodeId="node-762">
-    <command xml:space="preserve">l</command>
-    <result xml:space="preserve">Little Egypt Show (on the Folding Chair)&#x000A;You are inside the Little Egypt Show. The attraction facade is to the east.&#x000A;&#x000A;Little Egypt makes eye contact with you and smiles enigmatically. During her performance she balances a sword on her head and accents her dance with finger cymbals.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-763"/>
-    </children>
-  </item>
-  <item nodeId="node-763">
-    <command xml:space="preserve">l</command>
-    <result xml:space="preserve">Little Egypt Show (on the Folding Chair)&#x000A;You are inside the Little Egypt Show. The attraction facade is to the east.&#x000A;&#x000A;The music alternates between hauntingly slow melodies and rapid, energetic drum beats, creating an emotional arc that keeps the you entranced. Little Egypt relies on the music's dynamic changes to tell a story with movements reflecting joy, sorrow, seduction, and celebration.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-764"/>
-    </children>
-  </item>
-  <item nodeId="node-764">
-    <command xml:space="preserve">l</command>
-    <result xml:space="preserve">Little Egypt Show (on the Folding Chair)&#x000A;You are inside the Little Egypt Show. The attraction facade is to the east.&#x000A;&#x000A;The performance concludes with a dramatic flourish of a fast-paced shimmy, a bold spin, and Little Egypt dramatically casts off her veils. The dancer takes a bow to enthusiastic applause, leaving you spellbound by the sensual yet artful display.&#x000A;&#x000A;You applaud until your hands are sore. Did she wink at me?&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-765"/>
-    </children>
-  </item>
-  <item nodeId="node-765">
-    <command xml:space="preserve">l</command>
-    <result xml:space="preserve">Little Egypt Show (on the Folding Chair)&#x000A;You are inside the Little Egypt Show. The attraction facade is to the east.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-766"/>
-    </children>
-  </item>
-  <item nodeId="node-766">
-    <command xml:space="preserve">exit</command>
-    <result xml:space="preserve">You get off the Folding Chair.&#x000A;&#x000A;Little Egypt Show&#x000A;You are inside the Little Egypt Show. The attraction facade is to the east.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-767"/>
-    </children>
-  </item>
-  <item nodeId="node-767">
-    <command xml:space="preserve">e</command>
-    <result xml:space="preserve">Little Egypt Facade&#x000A;You are standing in front of a trailer. There is a stage in front of the trailer. The Barker is encouraging you to step up, pay for, and enjoy the Little Egypt Show.&#x000A;&#x000A;You can see a Barker here.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-768"/>
-    </children>
-  </item>
-  <item nodeId="node-768">
-    <command xml:space="preserve">l</command>
-    <result xml:space="preserve">Little Egypt Facade&#x000A;You are standing in front of a trailer. There is a stage in front of the trailer. The Barker is encouraging you to step up, pay for, and enjoy the Little Egypt Show.&#x000A;&#x000A;You can see a Barker here.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-769"/>
-    </children>
-  </item>
-  <item nodeId="node-769">
-    <command xml:space="preserve">e</command>
-    <result xml:space="preserve">The Ticket Booth&#x000A;You are standing in line at a ticket booth at the carnival. The booth sells tickets to the Hell Ride attraction. The line for the ride forms to the south and the midway continues east and west from here. There is a concession stand to the south west. The ticket booth is garishly painted in purple and green sparkles. There is a Ticket Seller here. The Ticket Seller has a Hell Ride ticket.&#x000A;&#x000A;You can see a Ticket Seller here.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-770"/>
-    </children>
-  </item>
-  <item nodeId="node-770">
-    <command xml:space="preserve">l</command>
-    <result xml:space="preserve">The Ticket Booth&#x000A;You are standing in line at a ticket booth at the carnival. The booth sells tickets to the Hell Ride attraction. The line for the ride forms to the south and the midway continues east and west from here. There is a concession stand to the south west. The ticket booth is garishly painted in purple and green sparkles. There is a Ticket Seller here. The Ticket Seller has a Hell Ride ticket.&#x000A;&#x000A;You can see a Ticket Seller here.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-771"/>
-    </children>
-  </item>
-  <item nodeId="node-771">
-    <command xml:space="preserve">n</command>
-    <result xml:space="preserve">Parking Lot&#x000A;You are in a parking lot full of cars. The midway is to the south. There is a blueberry bush here. There are blueberries on the bush&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-772"/>
-    </children>
-  </item>
-  <item nodeId="node-772">
-    <command xml:space="preserve">l</command>
-    <result xml:space="preserve">Parking Lot&#x000A;You are in a parking lot full of cars. The midway is to the south. There is a blueberry bush here. There are blueberries on the bush&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-  </item>
-  <item nodeId="node-701">
-    <command xml:space="preserve">give dime to broker</command>
-    <result xml:space="preserve">You can't see any such thing.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-702"/>
-    </children>
-  </item>
-  <item nodeId="node-702">
-    <command xml:space="preserve">w</command>
-    <result xml:space="preserve">It'll cost you a dime to go that way.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-703"/>
-    </children>
-  </item>
-  <item nodeId="node-703">
-    <command xml:space="preserve">e</command>
-    <result xml:space="preserve">Ticket Booth&#x000A;You are standing in line at a ticket booth at the carnival. The booth sells tickets to the Hell Ride attraction. The line for the ride forms to the south and the midway continues east and west from here. There is a concession stand to the south west. The ticket booth is garishly painted in purple and green sparkles. There is a Ticket Seller here. The Ticket Seller has a ticket.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-704"/>
-    </children>
-  </item>
-  <item nodeId="node-704">
-    <command xml:space="preserve">w</command>
-    <result xml:space="preserve">Little Egypt Facade&#x000A;You are standing in front of a trailer. There is a stage in front of the trailer. The Barker is encouraging you to step up, pay for, and enjoy the Little Egypt Show.&#x000A;&#x000A;You can see a Barker here.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-705"/>
-    </children>
-  </item>
-  <item nodeId="node-705">
-    <command xml:space="preserve">e</command>
-    <result xml:space="preserve">Ticket Booth&#x000A;You are standing in line at a ticket booth at the carnival. The booth sells tickets to the Hell Ride attraction. The line for the ride forms to the south and the midway continues east and west from here. There is a concession stand to the south west. The ticket booth is garishly painted in purple and green sparkles. There is a Ticket Seller here. The Ticket Seller has a ticket.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-706"/>
-    </children>
-  </item>
-  <item nodeId="node-706">
-    <command xml:space="preserve">i</command>
-    <result xml:space="preserve">You are carrying:&#x000A;  a wallet&#x000A;    $10.00 in cash&#x000A;  a dime&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-707"/>
-    </children>
-  </item>
-  <item nodeId="node-707">
-    <command xml:space="preserve">l at barker</command>
-    <result xml:space="preserve">You can't see any such thing.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-708"/>
-    </children>
-  </item>
-  <item nodeId="node-708">
-    <command xml:space="preserve">l</command>
-    <result xml:space="preserve">Ticket Booth&#x000A;You are standing in line at a ticket booth at the carnival. The booth sells tickets to the Hell Ride attraction. The line for the ride forms to the south and the midway continues east and west from here. There is a concession stand to the south west. The ticket booth is garishly painted in purple and green sparkles. There is a Ticket Seller here. The Ticket Seller has a ticket.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-709"/>
-    </children>
-  </item>
-  <item nodeId="node-709">
-    <command xml:space="preserve">w</command>
-    <result xml:space="preserve">Little Egypt Facade&#x000A;You are standing in front of a trailer. There is a stage in front of the trailer. The Barker is encouraging you to step up, pay for, and enjoy the Little Egypt Show.&#x000A;&#x000A;You can see a Barker here.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-710"/>
-    </children>
-  </item>
-  <item nodeId="node-710">
-    <command xml:space="preserve">l</command>
-    <result xml:space="preserve">Little Egypt Facade&#x000A;You are standing in front of a trailer. There is a stage in front of the trailer. The Barker is encouraging you to step up, pay for, and enjoy the Little Egypt Show.&#x000A;&#x000A;You can see a Barker here.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-711"/>
-    </children>
-  </item>
-  <item nodeId="node-711">
-    <command xml:space="preserve">w</command>
-    <result xml:space="preserve">It'll cost you a dime to go that way.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-  </item>
-  <item nodeId="node-632">
-    <command xml:space="preserve">w</command>
-    <result xml:space="preserve">It'll cost you a dime to go that way.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-633"/>
-      <child nodeId="node-643"/>
-    </children>
-  </item>
-  <item nodeId="node-633">
-    <command xml:space="preserve">give dime to barker</command>
-    <result xml:space="preserve">You can now head west into the show.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-634"/>
-    </children>
-  </item>
-  <item nodeId="node-634">
-    <command xml:space="preserve">w</command>
-    <result xml:space="preserve">Little Egypt Show&#x000A;You are inside the Little Egypt Show. The attraction facade is to the east.&#x000A;&#x000A;You enter the tent and sit in one of the folding chairs in the front row.&#x000A;&#x000A;&#x000A;&#x000A;Little Egypt Show (on the Folding Chair)&#x000A;You are inside the Little Egypt Show. The attraction facade is to the east.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-712"/>
-      <child nodeId="node-635"/>
-    </children>
-  </item>
-  <item nodeId="node-712">
-    <command xml:space="preserve">l</command>
-    <result xml:space="preserve">Little Egypt Show (on the Folding Chair)&#x000A;You are inside the Little Egypt Show. The attraction facade is to the east.&#x000A;&#x000A;As you enter the dimly lit tent, you see that the stage is decorated to resemble an exotic Middle Eastern market or palace, featuring rich, colorful fabrics, brass ornaments, and lanterns casting a warm, flickering glow. Scents of incense waft through the air, enhancing the atmosphere of mystique. The backdrop displays painted scenes of pyramids, desert landscapes, or domed structures to evoking a sense of being transported to the "Middle East". &#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-713"/>
-    </children>
-  </item>
-  <item nodeId="node-713">
-    <command xml:space="preserve">l</command>
-    <result xml:space="preserve">Little Egypt Show (on the Folding Chair)&#x000A;You are inside the Little Egypt Show. The attraction facade is to the east.&#x000A;&#x000A;Little Egypt emerges draped in a flowing silk veils which she skillfully uses as part of the dance. Her attire consists of a sparkling, sequined bodice and harem pants, adorned with jingling coin belts and jewelry that accentuate her movements.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-714"/>
-    </children>
-  </item>
-  <item nodeId="node-714">
-    <command xml:space="preserve">l</command>
-    <result xml:space="preserve">Little Egypt Show (on the Folding Chair)&#x000A;You are inside the Little Egypt Show. The attraction facade is to the east.&#x000A;&#x000A;The performance begins with slow, undulating movements, drawing the you into the rhythm of exotic live music played on traditional instruments like the oud, darbuka, or zurna. As the tempo builds, her hips, torso, and hands move in intricate, mesmerizing patterns, demonstrating remarkable control and fluidity. She incorporates dramatic spins, drops, and shimmies, often accentuating the beat of the music with a quick jingle of her coin belt.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-715"/>
-    </children>
-  </item>
-  <item nodeId="node-715">
-    <command xml:space="preserve">l</command>
-    <result xml:space="preserve">Little Egypt Show (on the Folding Chair)&#x000A;You are inside the Little Egypt Show. The attraction facade is to the east.&#x000A;&#x000A;Little Egypt makes eye contact with you and smiles enigmatically. During her performance she balances a sword on her head and accents her dance with finger cymbals.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-716"/>
-    </children>
-  </item>
-  <item nodeId="node-716">
-    <command xml:space="preserve">l</command>
-    <result xml:space="preserve">Little Egypt Show (on the Folding Chair)&#x000A;You are inside the Little Egypt Show. The attraction facade is to the east.&#x000A;&#x000A;The music alternates between hauntingly slow melodies and rapid, energetic drum beats, creating an emotional arc that keeps the you entranced. Little Egypt relies on the music's dynamic changes to tell a story with movements reflecting joy, sorrow, seduction, and celebration.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-717"/>
-    </children>
-  </item>
-  <item nodeId="node-717">
-    <command xml:space="preserve">l</command>
-    <result xml:space="preserve">Little Egypt Show (on the Folding Chair)&#x000A;You are inside the Little Egypt Show. The attraction facade is to the east.&#x000A;&#x000A;The performance concludes with a dramatic flourish of a fast-paced shimmy, a bold spin, and Little Egypt dramatically casts off her veils. The dancer takes a bow to enthusiastic applause, leaving you spellbound by the sensual yet artful display.&#x000A;&#x000A;You applaud until your hands are sore. Did she wink at me?&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-718"/>
-    </children>
-  </item>
-  <item nodeId="node-718">
-    <command xml:space="preserve">l</command>
-    <result xml:space="preserve">Little Egypt Show (on the Folding Chair)&#x000A;You are inside the Little Egypt Show. The attraction facade is to the east.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-719"/>
-    </children>
-  </item>
-  <item nodeId="node-719">
-    <command xml:space="preserve">e</command>
-    <result xml:space="preserve">You would have to get off the Folding Chair first.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-720"/>
-    </children>
-  </item>
-  <item nodeId="node-720">
-    <command xml:space="preserve">staznd</command>
+  <item nodeId="node-896">
+    <command xml:space="preserve">nbuy mallet</command>
     <result xml:space="preserve">That's not a verb I recognize.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
     <children>
-      <child nodeId="node-721"/>
+      <child nodeId="node-897"/>
     </children>
   </item>
-  <item nodeId="node-721">
+  <item nodeId="node-897">
+    <command xml:space="preserve">buy mallet</command>
+    <result xml:space="preserve">You fork over $2.00 for the mallet, leaving yourself with $8.00.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-898"/>
+    </children>
+  </item>
+  <item nodeId="node-898">
+    <command xml:space="preserve">hit base with mallet</command>
+    <result xml:space="preserve">You lift the mallet high and bring it down on the base with all your might! The striker rises towards the bell stopping at "Getting Stronger".  C'mon! You can do better than that!&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-899"/>
+    </children>
+  </item>
+  <item nodeId="node-899">
+    <command xml:space="preserve">g</command>
+    <result xml:space="preserve">You lift the mallet high and bring it down on the base with all your might! The striker rises towards the bell stopping at "Average".  C'mon! You can do better than that!&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-900"/>
+    </children>
+  </item>
+  <item nodeId="node-900">
+    <command xml:space="preserve">g</command>
+    <result xml:space="preserve">You lift the mallet high and bring it down on the base with all your might! The striker rises towards the bell stopping at "Getting Stronger".  C'mon! You can do better than that!&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-901"/>
+    </children>
+  </item>
+  <item nodeId="node-901">
+    <command xml:space="preserve">g</command>
+    <result xml:space="preserve">You lift the mallet high and bring it down on the base with all your might! The striker rises towards the bell stopping at "Getting Stronger".  C'mon! You can do better than that!&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-902"/>
+    </children>
+  </item>
+  <item nodeId="node-902">
+    <command xml:space="preserve">g</command>
+    <result xml:space="preserve">You lift the mallet high and bring it down on the base with all your might! The striker rises towards the bell stopping at "Average".  C'mon! You can do better than that!&#x000A;&#x000A;You swing the mallet one more time. The bell rings as the striker reaches the top of the pole. The attendant says, "You're a Muscle Man. Here's a prize for you."&#x000A;You now carry the stuffed teddy bear.&#x000A;&#x000A;[Your score has just gone up by five points.]&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-903"/>
+    </children>
+  </item>
+  <item nodeId="node-903">
+    <command xml:space="preserve">w</command>
+    <result xml:space="preserve">The Ticket Booth&#x000A;You are standing in line at a ticket booth at the carnival. The booth sells tickets to the Hell Ride attraction. The line for the ride forms to the south and the midway continues east and west from here. There is a concession stand to the south west. The ticket booth is garishly painted in purple and green sparkles. There is a Ticket Seller here. The Ticket Seller has a Hell Ride ticket.&#x000A;&#x000A;You can see a Ticket Seller here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-904"/>
+    </children>
+  </item>
+  <item nodeId="node-904">
+    <command xml:space="preserve">i</command>
+    <result xml:space="preserve">You are carrying:&#x000A;  a stuffed teddy bear&#x000A;  a mallet&#x000A;  blueberries&#x000A;  a dime&#x000A;  a wallet&#x000A;    $8.00 in cash&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-905"/>
+    </children>
+  </item>
+  <item nodeId="node-905">
+    <command xml:space="preserve">w</command>
+    <result xml:space="preserve">Little Egypt Facade&#x000A;You are standing in front of a trailer. There is a stage in front of the trailer. The Barker is encouraging you to step up, pay for, and enjoy the Little Egypt Show.The barker cries: &#x000A;&#x000A;Ladies and gentlemen, boys and girls, gather "round! &#x000A;Step right up and witness the spectacle that's taken the world by storm! &#x000A;She walks, she talks, she crawls on her belly like a reptile. &#x000A;Behold the one, the only Little Egypt, performing her legendary Dance of the Pyramids-a dazzling display of mystery, grace, and exotic allure! &#x000A;For just a dime, a mere one tenth of a dollar, prepare to be transported to the sands of Cairo, where enchantment and wonder await!&#x000A;&#x000A;You can see a Barker here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+  </item>
+  <item nodeId="node-921">
+    <command xml:space="preserve">s</command>
+    <result xml:space="preserve">The Ticket Booth&#x000A;You are standing in line at a ticket booth at the carnival. The booth sells tickets to the Hell Ride attraction. The line for the ride forms to the south and the midway continues east and west from here. There is a concession stand to the south west. The ticket booth is garishly painted in purple and green sparkles. There is a Ticket Seller here. The Ticket Seller has a Hell Ride ticket.&#x000A;&#x000A;You can see a Ticket Seller here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-922"/>
+    </children>
+  </item>
+  <item nodeId="node-922">
     <command xml:space="preserve">e</command>
-    <result xml:space="preserve">You would have to get off the Folding Chair first.&#x000A;&#x000A;&gt;</result>
+    <result xml:space="preserve">Strongman Booth&#x000A;The Strongman Booth is a popular carnival game in which you swing a mallet against a base and cause a striker to hit a bell. Along the length of the pole are markings indicating how strong you are.  A nearby sign says, "Buy a mallet, strike the bell, win a prize."&#x000A;&#x000A;You can see a Strongman Attendant and a base here.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
     <children>
-      <child nodeId="node-722"/>
+      <child nodeId="node-923"/>
     </children>
   </item>
-  <item nodeId="node-722">
-    <command xml:space="preserve">stand</command>
-    <result xml:space="preserve">You get off the Folding Chair.&#x000A;&#x000A;Little Egypt Show&#x000A;You are inside the Little Egypt Show. The attraction facade is to the east.&#x000A;&#x000A;&gt;</result>
+  <item nodeId="node-923">
+    <command xml:space="preserve">get all</command>
+    <result xml:space="preserve">stuffed teddy bear: That seems to belong to the Strongman Attendant.&#x000A;mallet: You'll have to pay for that.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
     <children>
-      <child nodeId="node-723"/>
+      <child nodeId="node-924"/>
     </children>
   </item>
-  <item nodeId="node-723">
+  <item nodeId="node-924">
+    <command xml:space="preserve">buy mallet</command>
+    <result xml:space="preserve">You fork over $2.00 for the mallet, leaving yourself with $8.00.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-925"/>
+    </children>
+  </item>
+  <item nodeId="node-925">
+    <command xml:space="preserve">hit dime</command>
+    <result xml:space="preserve">Violence isn't the answer to this one.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-926"/>
+    </children>
+  </item>
+  <item nodeId="node-926">
+    <command xml:space="preserve">hit dime with mallet</command>
+    <result xml:space="preserve">Nothing happens.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-927"/>
+    </children>
+  </item>
+  <item nodeId="node-927">
+    <command xml:space="preserve">hit base with dime</command>
+    <result xml:space="preserve">You can't hit base with that!&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-928"/>
+    </children>
+  </item>
+  <item nodeId="node-928">
+    <command xml:space="preserve">drop mallet</command>
+    <result xml:space="preserve">Dropped.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-929"/>
+    </children>
+  </item>
+  <item nodeId="node-929">
+    <command xml:space="preserve">hit dime with mallet</command>
+    <result xml:space="preserve">Nothing happens.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-930"/>
+    </children>
+  </item>
+  <item nodeId="node-930">
+    <command xml:space="preserve">hit base with mallet</command>
+    <result xml:space="preserve">You're not holding the mallet.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-931"/>
+    </children>
+  </item>
+  <item nodeId="node-931">
+    <command xml:space="preserve">get mallet</command>
+    <result xml:space="preserve">Taken.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-932"/>
+    </children>
+  </item>
+  <item nodeId="node-932">
+    <command xml:space="preserve">hit base with mallet</command>
+    <result xml:space="preserve">You lift the mallet high and bring it down on the base with all your might! The striker rises towards the bell stopping at "Weakling".  C'mon! You can do better than that!&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-933"/>
+    </children>
+  </item>
+  <item nodeId="node-933">
+    <command xml:space="preserve">hit base with mallet</command>
+    <result xml:space="preserve">You lift the mallet high and bring it down on the base with all your might! The striker rises towards the bell stopping at "Getting Stronger".  C'mon! You can do better than that!&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-934"/>
+    </children>
+  </item>
+  <item nodeId="node-934">
+    <command xml:space="preserve">hit base with mallet</command>
+    <result xml:space="preserve">You lift the mallet high and bring it down on the base with all your might! The striker rises towards the bell stopping at "Average".  C'mon! You can do better than that!&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-935"/>
+    </children>
+  </item>
+  <item nodeId="node-935">
+    <command xml:space="preserve">hit base with mallet</command>
+    <result xml:space="preserve">You lift the mallet high and bring it down on the base with all your might! The striker rises towards the bell stopping at "Average".  C'mon! You can do better than that!&#x000A;&#x000A;You swing the mallet one more time. The bell rings as the striker reaches the top of the pole. The attendant says, "You're a Muscle Man. Here's a prize for you."&#x000A;You now carry the stuffed teddy bear.&#x000A;&#x000A;[Your score has just gone up by five points.]&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-936"/>
+    </children>
+  </item>
+  <item nodeId="node-936">
+    <command xml:space="preserve">l</command>
+    <result xml:space="preserve">Strongman Booth&#x000A;The Strongman Booth is a popular carnival game in which you swing a mallet against a base and cause a striker to hit a bell. Along the length of the pole are markings indicating how strong you are.  A nearby sign says, "Buy a mallet, strike the bell, win a prize."&#x000A;&#x000A;You can see a Strongman Attendant and a base here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-937"/>
+    </children>
+  </item>
+  <item nodeId="node-937">
     <command xml:space="preserve">e</command>
-    <result xml:space="preserve">Little Egypt Facade&#x000A;You are standing in front of a trailer. There is a stage in front of the trailer. The Barker is encouraging you to step up, pay for, and enjoy the Little Egypt Show.&#x000A;&#x000A;You can see a Barker here.&#x000A;&#x000A;&gt;</result>
+    <result xml:space="preserve">You can't go that way.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
     <children>
-      <child nodeId="node-724"/>
+      <child nodeId="node-938"/>
     </children>
   </item>
-  <item nodeId="node-724">
+  <item nodeId="node-938">
+    <command xml:space="preserve">w</command>
+    <result xml:space="preserve">The Ticket Booth&#x000A;You are standing in line at a ticket booth at the carnival. The booth sells tickets to the Hell Ride attraction. The line for the ride forms to the south and the midway continues east and west from here. There is a concession stand to the south west. The ticket booth is garishly painted in purple and green sparkles. There is a Ticket Seller here. The Ticket Seller has a Hell Ride ticket.&#x000A;&#x000A;You can see a Ticket Seller here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-939"/>
+    </children>
+  </item>
+  <item nodeId="node-939">
+    <command xml:space="preserve">w</command>
+    <result xml:space="preserve">Little Egypt Facade&#x000A;You are standing in front of a trailer. There is a stage in front of the trailer. The Barker is encouraging you to step up, pay for, and enjoy the Little Egypt Show.The barker cries: &#x000A;&#x000A;Ladies and gentlemen, boys and girls, gather "round! &#x000A;Step right up and witness the spectacle that's taken the world by storm! &#x000A;She walks, she talks, she crawls on her belly like a reptile. &#x000A;Behold the one, the only Little Egypt, performing her legendary Dance of the Pyramids-a dazzling display of mystery, grace, and exotic allure! &#x000A;For just a dime, a mere one tenth of a dollar, prepare to be transported to the sands of Cairo, where enchantment and wonder await!&#x000A;&#x000A;You can see a Barker here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-940"/>
+    </children>
+  </item>
+  <item nodeId="node-940">
+    <command xml:space="preserve">give dime to barker</command>
+    <result xml:space="preserve">You can now head west into the show.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+  </item>
+  <item nodeId="node-906">
+    <command xml:space="preserve">s</command>
+    <result xml:space="preserve">The Ticket Booth&#x000A;You are standing in line at a ticket booth at the carnival. The booth sells tickets to the Hell Ride attraction. The line for the ride forms to the south and the midway continues east and west from here. There is a concession stand to the south west. The ticket booth is garishly painted in purple and green sparkles. There is a Ticket Seller here. The Ticket Seller has a Hell Ride ticket.&#x000A;&#x000A;You can see a Ticket Seller here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-907"/>
+      <child nodeId="node-946"/>
+      <child nodeId="node-941"/>
+    </children>
+  </item>
+  <item nodeId="node-907">
+    <command xml:space="preserve">e</command>
+    <result xml:space="preserve">Strongman Booth&#x000A;The Strongman Booth is a popular carnival game in which you swing a mallet against a base and cause a striker to hit a bell. Along the length of the pole are markings indicating how strong you are.  A nearby sign says, "Buy a mallet, strike the bell, win a prize."&#x000A;&#x000A;You can see a Strongman Attendant and a base here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-908"/>
+    </children>
+  </item>
+  <item nodeId="node-908">
+    <command xml:space="preserve">hit money</command>
+    <result xml:space="preserve">Violence isn't the answer to this one.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-909"/>
+    </children>
+  </item>
+  <item nodeId="node-909">
+    <command xml:space="preserve">hit money with dime</command>
+    <result xml:space="preserve">You can't see any such thing.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-910"/>
+    </children>
+  </item>
+  <item nodeId="node-910">
+    <command xml:space="preserve">n</command>
+    <result xml:space="preserve">You can't go that way.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-911"/>
+    </children>
+  </item>
+  <item nodeId="node-911">
+    <command xml:space="preserve">w</command>
+    <result xml:space="preserve">The Ticket Booth&#x000A;You are standing in line at a ticket booth at the carnival. The booth sells tickets to the Hell Ride attraction. The line for the ride forms to the south and the midway continues east and west from here. There is a concession stand to the south west. The ticket booth is garishly painted in purple and green sparkles. There is a Ticket Seller here. The Ticket Seller has a Hell Ride ticket.&#x000A;&#x000A;You can see a Ticket Seller here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-912"/>
+    </children>
+  </item>
+  <item nodeId="node-912">
+    <command xml:space="preserve">nb</command>
+    <result xml:space="preserve">That's not a verb I recognize.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-913"/>
+    </children>
+  </item>
+  <item nodeId="node-913">
+    <command xml:space="preserve">n</command>
+    <result xml:space="preserve">Parking Lot&#x000A;You are in a parking lot full of cars. The midway is to the south. There is a blueberry bush here. There are blueberries on the bush&#x000A;&#x000A;You can see a dime here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-914"/>
+    </children>
+  </item>
+  <item nodeId="node-914">
+    <command xml:space="preserve">get all</command>
+    <result xml:space="preserve">dime: Taken.&#x000A;blueberries: Good Job!&#x000A;&#x000A;[Your score has just gone up by five points.]&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-915"/>
+    </children>
+  </item>
+  <item nodeId="node-915">
+    <command xml:space="preserve">s</command>
+    <result xml:space="preserve">The Ticket Booth&#x000A;You are standing in line at a ticket booth at the carnival. The booth sells tickets to the Hell Ride attraction. The line for the ride forms to the south and the midway continues east and west from here. There is a concession stand to the south west. The ticket booth is garishly painted in purple and green sparkles. There is a Ticket Seller here. The Ticket Seller has a Hell Ride ticket.&#x000A;&#x000A;You can see a Ticket Seller here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-916"/>
+    </children>
+  </item>
+  <item nodeId="node-916">
+    <command xml:space="preserve">e</command>
+    <result xml:space="preserve">Strongman Booth&#x000A;The Strongman Booth is a popular carnival game in which you swing a mallet against a base and cause a striker to hit a bell. Along the length of the pole are markings indicating how strong you are.  A nearby sign says, "Buy a mallet, strike the bell, win a prize."&#x000A;&#x000A;You can see a Strongman Attendant and a base here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-917"/>
+    </children>
+  </item>
+  <item nodeId="node-917">
+    <command xml:space="preserve">hit base with dime</command>
+    <result xml:space="preserve">You can't hit base with that!&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-918"/>
+    </children>
+  </item>
+  <item nodeId="node-918">
+    <command xml:space="preserve">hit dime with money</command>
+    <result xml:space="preserve">Nothing happens.&#x000A;You can't hit dime with that!&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-919"/>
+    </children>
+  </item>
+  <item nodeId="node-919">
+    <command xml:space="preserve">hit dime</command>
+    <result xml:space="preserve">Violence isn't the answer to this one.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-920"/>
+    </children>
+  </item>
+  <item nodeId="node-920">
+    <command xml:space="preserve">hit dime with money</command>
+    <result xml:space="preserve">Nothing happens.&#x000A;You can't hit dime with that!&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+  </item>
+  <item nodeId="node-946">
+    <command xml:space="preserve">n</command>
+    <result xml:space="preserve">Parking Lot&#x000A;You are in a parking lot full of cars. The midway is to the south. There is a blueberry bush here. There are blueberries on the bush&#x000A;&#x000A;You can see a dime here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-947"/>
+    </children>
+  </item>
+  <item nodeId="node-947">
+    <command xml:space="preserve">get dime</command>
+    <result xml:space="preserve">Taken.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-948"/>
+    </children>
+  </item>
+  <item nodeId="node-948">
+    <command xml:space="preserve">w</command>
+    <result xml:space="preserve">You can't go that way.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-949"/>
+    </children>
+  </item>
+  <item nodeId="node-949">
+    <command xml:space="preserve">s</command>
+    <result xml:space="preserve">The Ticket Booth&#x000A;You are standing in line at a ticket booth at the carnival. The booth sells tickets to the Hell Ride attraction. The line for the ride forms to the south and the midway continues east and west from here. There is a concession stand to the south west. The ticket booth is garishly painted in purple and green sparkles. There is a Ticket Seller here. The Ticket Seller has a Hell Ride ticket.&#x000A;&#x000A;You can see a Ticket Seller here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-950"/>
+    </children>
+  </item>
+  <item nodeId="node-950">
+    <command xml:space="preserve">w</command>
+    <result xml:space="preserve">Little Egypt Facade&#x000A;You are standing in front of a trailer. There is a stage in front of the trailer. The Barker is encouraging you to step up, pay for, and enjoy the Little Egypt Show.The barker cries: &#x000A;&#x000A;Ladies and gentlemen, boys and girls, gather "round! &#x000A;Step right up and witness the spectacle that's taken the world by storm! &#x000A;She walks, she talks, she crawls on her belly like a reptile. &#x000A;Behold the one, the only Little Egypt, performing her legendary Dance of the Pyramids-a dazzling display of mystery, grace, and exotic allure! &#x000A;For just a dime, a mere one tenth of a dollar, prepare to be transported to the sands of Cairo, where enchantment and wonder await!&#x000A;&#x000A;You can see a Barker here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-951"/>
+    </children>
+  </item>
+  <item nodeId="node-951">
     <command xml:space="preserve">l</command>
     <result xml:space="preserve">Little Egypt Facade&#x000A;You are standing in front of a trailer. There is a stage in front of the trailer. The Barker is encouraging you to step up, pay for, and enjoy the Little Egypt Show.&#x000A;&#x000A;You can see a Barker here.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
     <children>
-      <child nodeId="node-725"/>
+      <child nodeId="node-952"/>
     </children>
   </item>
-  <item nodeId="node-725">
-    <command xml:space="preserve">e</command>
-    <result xml:space="preserve">Ticket Booth&#x000A;You are standing in line at a ticket booth at the carnival. The booth sells tickets to the Hell Ride attraction. The line for the ride forms to the south and the midway continues east and west from here. There is a concession stand to the south west. The ticket booth is garishly painted in purple and green sparkles. There is a Ticket Seller here. The Ticket Seller has a ticket.&#x000A;&#x000A;&gt;</result>
+  <item nodeId="node-952">
+    <command xml:space="preserve">w</command>
+    <result xml:space="preserve">You head west through the midway, the bright lights of the carnival fading behind you as you approach a wooden booth. A sign above the entrance reads "Little Egypt Show - A Journey Into the Mysterious and Exotic!" A rotund attendant, wearing a fez and a dazzling smile, gestures to a small sign beside him that says "Dime Admission."&#x000A;&#x000A;It'll cost you a dime to go that way.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+  </item>
+  <item nodeId="node-941">
+    <command xml:space="preserve">w</command>
+    <result xml:space="preserve">You head west through the midway, the bright lights of the carnival fading behind you as you approach a wooden booth. A sign above the entrance reads "Little Egypt Show - A Journey Into the Mysterious and Exotic!" A rotund attendant, wearing a fez and a dazzling smile, gestures to a small sign beside him that says "Dime Admission."&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
     <children>
-      <child nodeId="node-726"/>
+      <child nodeId="node-942"/>
     </children>
   </item>
-  <item nodeId="node-726">
-    <command xml:space="preserve">e</command>
-    <result xml:space="preserve">Strongman Booth&#x000A;The Strongman Booth is a popular carnival game in which you swing a mallet against a base and cause a striker to hit a bell. Along the length of the pole are markings indicating how strong you are.  A nearby sign says, "Buy a mallet, strike the bell, win a prize."&#x000A;&#x000A;You can see a Strongman Atendant and a base here.&#x000A;&#x000A;&gt;</result>
+  <item nodeId="node-942">
+    <command xml:space="preserve">w</command>
+    <result xml:space="preserve">It'll cost you a dime to go that way.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
+    <children>
+      <child nodeId="node-953"/>
+      <child nodeId="node-943"/>
+    </children>
   </item>
-  <item nodeId="node-635">
+  <item nodeId="node-953">
+    <command xml:space="preserve">give dime to barker</command>
+    <result xml:space="preserve">You can't see any such thing.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-954"/>
+    </children>
+  </item>
+  <item nodeId="node-954">
+    <command xml:space="preserve">e</command>
+    <result xml:space="preserve">The Ticket Booth&#x000A;You are standing in line at a ticket booth at the carnival. The booth sells tickets to the Hell Ride attraction. The line for the ride forms to the south and the midway continues east and west from here. There is a concession stand to the south west. The ticket booth is garishly painted in purple and green sparkles. There is a Ticket Seller here. The Ticket Seller has a Hell Ride ticket.&#x000A;&#x000A;You can see a Ticket Seller here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-955"/>
+    </children>
+  </item>
+  <item nodeId="node-955">
+    <command xml:space="preserve">n</command>
+    <result xml:space="preserve">Parking Lot&#x000A;You are in a parking lot full of cars. The midway is to the south. There is a blueberry bush here. There are blueberries on the bush&#x000A;&#x000A;You can see a dime here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-956"/>
+    </children>
+  </item>
+  <item nodeId="node-956">
+    <command xml:space="preserve">get all</command>
+    <result xml:space="preserve">dime: Taken.&#x000A;blueberries: Good Job!&#x000A;&#x000A;[Your score has just gone up by five points.]&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-957"/>
+    </children>
+  </item>
+  <item nodeId="node-957">
+    <command xml:space="preserve">s</command>
+    <result xml:space="preserve">The Ticket Booth&#x000A;You are standing in line at a ticket booth at the carnival. The booth sells tickets to the Hell Ride attraction. The line for the ride forms to the south and the midway continues east and west from here. There is a concession stand to the south west. The ticket booth is garishly painted in purple and green sparkles. There is a Ticket Seller here. The Ticket Seller has a Hell Ride ticket.&#x000A;&#x000A;You can see a Ticket Seller here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-958"/>
+    </children>
+  </item>
+  <item nodeId="node-958">
+    <command xml:space="preserve">w</command>
+    <result xml:space="preserve">You head west through the midway, the bright lights of the carnival fading behind you as you approach a wooden booth. A sign above the entrance reads "Little Egypt Show - A Journey Into the Mysterious and Exotic!" A rotund attendant, wearing a fez and a dazzling smile, gestures to a small sign beside him that says "Dime Admission."&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-959"/>
+    </children>
+  </item>
+  <item nodeId="node-959">
+    <command xml:space="preserve">give dime to barker</command>
+    <result xml:space="preserve">You hand over a dime, and the attendant nods, waving you through. As you step past the entrance, the air feels thicker, almost humid, and the sounds of the carnival fade away. You've entered an entirely different world now-one filled with the scents of incense and exotic spices, and the low, hypnotic music of a faraway land. Before you, a series of dimly lit tents stretch out, their flaps slightly swaying in the breeze. Intrigued, you take your first step into the Little Egypt Show. You can now head west into the show.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-960"/>
+    </children>
+  </item>
+  <item nodeId="node-960">
+    <command xml:space="preserve">w</command>
+    <result xml:space="preserve">Little Egypt Show&#x000A;You are inside the Little Egypt Show. The attraction facade is to the east.&#x000A;&#x000A;You enter the tent and sit in one of the folding chairs in the front row.&#x000A;&#x000A;&#x000A;&#x000A;Little Egypt Show (on the Folding Chair)&#x000A;You are inside the Little Egypt Show. The attraction facade is to the east.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-961"/>
+    </children>
+  </item>
+  <item nodeId="node-961">
     <command xml:space="preserve">z</command>
     <result xml:space="preserve">Time passes.&#x000A;&#x000A;As you enter the dimly lit tent, you see that the stage is decorated to resemble an exotic Middle Eastern market or palace, featuring rich, colorful fabrics, brass ornaments, and lanterns casting a warm, flickering glow. Scents of incense waft through the air, enhancing the atmosphere of mystique. The backdrop displays painted scenes of pyramids, desert landscapes, or domed structures to evoking a sense of being transported to the "Middle East". &#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
     <children>
-      <child nodeId="node-636"/>
+      <child nodeId="node-962"/>
     </children>
   </item>
-  <item nodeId="node-636">
+  <item nodeId="node-962">
     <command xml:space="preserve">z</command>
-    <result xml:space="preserve">Time passes.&#x000A;&#x000A;Little Egypt emerges draped in a flowing silk veils which she skillfully uses as part of the dance. Her attire consists of a sparkling, sequined bodice and harem pants, adorned with jingling coin belts and jewelry that accentuate her movements.&#x000A;&#x000A;&gt;</result>
+    <result xml:space="preserve">Time passes.&#x000A;&#x000A;Little Egypt emerges draped in a flowing silk veils which she skillfully uses as part of the dance. Her attire consists of a sparkling, sequined bodice and a flowing skirt, adorned with jingling coin belts and jewelry that accentuate her movements.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
     <children>
-      <child nodeId="node-637"/>
+      <child nodeId="node-963"/>
     </children>
   </item>
-  <item nodeId="node-637">
-    <command xml:space="preserve">z</command>
-    <result xml:space="preserve">Time passes.&#x000A;&#x000A;The performance begins with slow, undulating movements, drawing the you into the rhythm of exotic live music played on traditional instruments like the oud, darbuka, or zurna. As the tempo builds, her hips, torso, and hands move in intricate, mesmerizing patterns, demonstrating remarkable control and fluidity. She incorporates dramatic spins, drops, and shimmies, often accentuating the beat of the music with a quick jingle of her coin belt.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-638"/>
-    </children>
-  </item>
-  <item nodeId="node-638">
-    <command xml:space="preserve">z</command>
-    <result xml:space="preserve">Time passes.&#x000A;&#x000A;Little Egypt makes eye contact with you and smiles enigmatically. During her performance she balances a sword on her head and accents her dance with finger cymbals.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-639"/>
-    </children>
-  </item>
-  <item nodeId="node-639">
-    <command xml:space="preserve">z</command>
-    <result xml:space="preserve">Time passes.&#x000A;&#x000A;The music alternates between hauntingly slow melodies and rapid, energetic drum beats, creating an emotional arc that keeps the you entranced. Little Egypt relies on the music's dynamic changes to tell a story with movements reflecting joy, sorrow, seduction, and celebration.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-640"/>
-    </children>
-  </item>
-  <item nodeId="node-640">
-    <command xml:space="preserve">z</command>
-    <result xml:space="preserve">Time passes.&#x000A;&#x000A;The performance concludes with a dramatic flourish of a fast-paced shimmy, a bold spin, and Little Egypt dramatically casts off her veils. The dancer takes a bow to enthusiastic applause, leaving you spellbound by the sensual yet artful display.&#x000A;&#x000A;You stand and applaud until your hands are sore. Did she wink at me?&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-641"/>
-    </children>
-  </item>
-  <item nodeId="node-641">
-    <command xml:space="preserve">z</command>
-    <result xml:space="preserve">Time passes.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-642"/>
-    </children>
-  </item>
-  <item nodeId="node-642">
-    <command xml:space="preserve">stand</command>
-    <result xml:space="preserve">You get off the Folding Chair.&#x000A;&#x000A;Little Egypt Show&#x000A;You are inside the Little Egypt Show. The attraction facade is to the east.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-  </item>
-  <item nodeId="node-643">
-    <command xml:space="preserve">w</command>
-    <result xml:space="preserve">It'll cost you a dime to go that way.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-644"/>
-    </children>
-  </item>
-  <item nodeId="node-644">
-    <command xml:space="preserve">w</command>
-    <result xml:space="preserve">It'll cost you a dime to go that way.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-645"/>
-    </children>
-  </item>
-  <item nodeId="node-645">
-    <command xml:space="preserve">w</command>
-    <result xml:space="preserve">It'll cost you a dime to go that way.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-646"/>
-      <child nodeId="node-727"/>
-    </children>
-  </item>
-  <item nodeId="node-646">
-    <command xml:space="preserve">give dime to barker</command>
-    <result xml:space="preserve">You can now head west into the show.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-647"/>
-    </children>
-  </item>
-  <item nodeId="node-647">
-    <command xml:space="preserve">ww</command>
-    <result xml:space="preserve">That's not a verb I recognize.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-648"/>
-    </children>
-  </item>
-  <item nodeId="node-648">
-    <command xml:space="preserve">w</command>
-    <result xml:space="preserve">Little Egypt Show&#x000A;You are inside the Little Egypt Show. The attraction facade is to the east.&#x000A;&#x000A;You enter the tent and sit in one of the folding chairs in the front row.&#x000A;&#x000A;Little Egypt Show (on the Folding Chair)&#x000A;You are inside the Little Egypt Show. The attraction facade is to the east.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-649"/>
-    </children>
-  </item>
-  <item nodeId="node-649">
-    <command xml:space="preserve">e</command>
-    <result xml:space="preserve">You would have to get off the Folding Chair first.&#x000A;&#x000A;As you enter the dimly lit tent, you see that the stage is decorated to resemble an exotic Middle Eastern market or palace, featuring rich, colorful fabrics, brass ornaments, and lanterns casting a warm, flickering glow. Scents of incense waft through the air, enhancing the atmosphere of mystique. The backdrop displays painted scenes of pyramids, desert landscapes, or domed structures to evoking a sense of being transported to the "Middle East". &#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-650"/>
-    </children>
-  </item>
-  <item nodeId="node-650">
-    <command xml:space="preserve">z</command>
-    <result xml:space="preserve">Time passes.&#x000A;&#x000A;Little Egypt emerges draped in a flowing silk veils which she skillfully uses as part of the dance. Her attire consists of a sparkling, sequined bodice and harem pants, adorned with jingling coin belts and jewelry that accentuate her movements.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-651"/>
-    </children>
-  </item>
-  <item nodeId="node-651">
+  <item nodeId="node-963">
     <command xml:space="preserve">z</command>
     <result xml:space="preserve">Time passes.&#x000A;&#x000A;The performance begins with slow, undulating movements, drawing the you into the rhythm of exotic live music played on traditional instruments like the oud, darbuka, or zurna. As the tempo builds, her hips, torso, and hands move in intricate, mesmerizing patterns, demonstrating remarkable control and fluidity. She incorporates dramatic spins, drops, and shimmies, often accentuating the beat of the music with a quick jingle of her coin belt.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
     <children>
-      <child nodeId="node-652"/>
+      <child nodeId="node-964"/>
     </children>
   </item>
-  <item nodeId="node-652">
+  <item nodeId="node-964">
     <command xml:space="preserve">z</command>
     <result xml:space="preserve">Time passes.&#x000A;&#x000A;Little Egypt makes eye contact with you and smiles enigmatically. During her performance she balances a sword on her head and accents her dance with finger cymbals.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
     <children>
-      <child nodeId="node-653"/>
+      <child nodeId="node-965"/>
     </children>
   </item>
-  <item nodeId="node-653">
+  <item nodeId="node-965">
     <command xml:space="preserve">z</command>
     <result xml:space="preserve">Time passes.&#x000A;&#x000A;The music alternates between hauntingly slow melodies and rapid, energetic drum beats, creating an emotional arc that keeps the you entranced. Little Egypt relies on the music's dynamic changes to tell a story with movements reflecting joy, sorrow, seduction, and celebration.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
     <children>
-      <child nodeId="node-654"/>
+      <child nodeId="node-966"/>
     </children>
   </item>
-  <item nodeId="node-654">
+  <item nodeId="node-966">
     <command xml:space="preserve">z</command>
     <result xml:space="preserve">Time passes.&#x000A;&#x000A;The performance concludes with a dramatic flourish of a fast-paced shimmy, a bold spin, and Little Egypt dramatically casts off her veils. The dancer takes a bow to enthusiastic applause, leaving you spellbound by the sensual yet artful display.&#x000A;&#x000A;You applaud until your hands are sore. Did she wink at me?&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
     <children>
-      <child nodeId="node-655"/>
+      <child nodeId="node-967"/>
     </children>
   </item>
-  <item nodeId="node-655">
+  <item nodeId="node-967">
     <command xml:space="preserve">z</command>
     <result xml:space="preserve">Time passes.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
     <children>
-      <child nodeId="node-656"/>
+      <child nodeId="node-968"/>
     </children>
   </item>
-  <item nodeId="node-656">
-    <command xml:space="preserve">z</command>
-    <result xml:space="preserve">Time passes.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-657"/>
-    </children>
-  </item>
-  <item nodeId="node-657">
-    <command xml:space="preserve">z</command>
-    <result xml:space="preserve">Time passes.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-658"/>
-    </children>
-  </item>
-  <item nodeId="node-658">
-    <command xml:space="preserve">e</command>
-    <result xml:space="preserve">You would have to get off the Folding Chair first.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-659"/>
-    </children>
-  </item>
-  <item nodeId="node-659">
+  <item nodeId="node-968">
     <command xml:space="preserve">stand</command>
     <result xml:space="preserve">You get off the Folding Chair.&#x000A;&#x000A;Little Egypt Show&#x000A;You are inside the Little Egypt Show. The attraction facade is to the east.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
     <children>
-      <child nodeId="node-660"/>
+      <child nodeId="node-969"/>
     </children>
   </item>
-  <item nodeId="node-660">
+  <item nodeId="node-969">
     <command xml:space="preserve">e</command>
-    <result xml:space="preserve">Little Egypt Facade&#x000A;You are standing in front of a trailer. There is a stage in front of the trailer. The Barker is encouraging you to step up, pay for, and enjoy the Little Egypt Show.&#x000A;&#x000A;You can see a Barker here.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-661"/>
-    </children>
-  </item>
-  <item nodeId="node-661">
-    <command xml:space="preserve">e</command>
-    <result xml:space="preserve">The Booth&#x000A;You are standing in line at a ticket booth at the carnival. The booth sells tickets to the Hell Ride attraction. The line for the ride forms to the south and the midway continues east and west from here. There is a concession stand to the south west. The ticket booth is garishly painted in purple and green sparkles. There is a Ticket Seller here. The Ticket Seller has a ticket.&#x000A;&#x000A;You can see a Seller here.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-662"/>
-    </children>
-  </item>
-  <item nodeId="node-662">
-    <command xml:space="preserve">restart</command>
-    <result xml:space="preserve">Are you sure you want to restart?</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-663"/>
-    </children>
-  </item>
-  <item nodeId="node-663">
-    <command xml:space="preserve">y</command>
-    <result xml:space="preserve">The carnival is in town and you had a date with your sweetie to visit it. After dinner and just as you arrive at the carnival, you and your date have a terrible fight. They storm off leaving you alone at the carnival. You decide to stay at the carnival anyway.&#x000A;&#x000A;Hell Ride&#x000A;The ride of a lifetime... by No Shoes&#x000A;Release 1 / Serial number 241201 / Inform 7 v10.1.2 / D&#x000A;&#x000A;Parking Lot&#x000A;You are in a parking lot full of cars. The midway is to the south. There is a blueberry bush here. There are blueberries on the bush&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-664"/>
-    </children>
-  </item>
-  <item nodeId="node-664">
-    <command xml:space="preserve">s</command>
-    <result xml:space="preserve">The Booth&#x000A;You are standing in line at a ticket booth at the carnival. The booth sells tickets to the Hell Ride attraction. The line for the ride forms to the south and the midway continues east and west from here. There is a concession stand to the south west. The ticket booth is garishly painted in purple and green sparkles. There is a Ticket Seller here. The Ticket Seller has a ticket.&#x000A;&#x000A;You can see a Seller here.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-665"/>
-    </children>
-  </item>
-  <item nodeId="node-665">
-    <command xml:space="preserve">s</command>
-    <result xml:space="preserve">Head of the Line&#x000A;You are standing in front of a ticket taker with his hand open waiting for your ticket. The entrance to the ride is south of here.&#x000A;&#x000A;You can see a Ride Attendant here.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-666"/>
-    </children>
-  </item>
-  <item nodeId="node-666">
-    <command xml:space="preserve">s</command>
-    <result xml:space="preserve">You'll need a ticket to go that way.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-667"/>
-    </children>
-  </item>
-  <item nodeId="node-667">
-    <command xml:space="preserve">s</command>
-    <result xml:space="preserve">You'll need a ticket to go that way.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-668"/>
-    </children>
-  </item>
-  <item nodeId="node-668">
-    <command xml:space="preserve">give ticket to attendant</command>
-    <result xml:space="preserve">You can't see any such thing.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-669"/>
-    </children>
-  </item>
-  <item nodeId="node-669">
-    <command xml:space="preserve">n</command>
-    <result xml:space="preserve">The Booth&#x000A;You are standing in line at a ticket booth at the carnival. The booth sells tickets to the Hell Ride attraction. The line for the ride forms to the south and the midway continues east and west from here. There is a concession stand to the south west. The ticket booth is garishly painted in purple and green sparkles. There is a Ticket Seller here. The Ticket Seller has a ticket.&#x000A;&#x000A;You can see a Seller here.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-670"/>
-    </children>
-  </item>
-  <item nodeId="node-670">
-    <command xml:space="preserve">buy ticket</command>
-    <result xml:space="preserve">You fork over $2.50 for the Hell Ride ticket, leaving yourself with $7.50.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-671"/>
-    </children>
-  </item>
-  <item nodeId="node-671">
-    <command xml:space="preserve">s</command>
-    <result xml:space="preserve">Head of the Line&#x000A;You are standing in front of a ticket taker with his hand open waiting for your ticket. The entrance to the ride is south of here.&#x000A;&#x000A;You can see a Ride Attendant here.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-672"/>
-    </children>
-  </item>
-  <item nodeId="node-672">
-    <command xml:space="preserve">s</command>
-    <result xml:space="preserve">You'll need a ticket to go that way.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-673"/>
-    </children>
-  </item>
-  <item nodeId="node-673">
-    <command xml:space="preserve">give ticket to attendant</command>
-    <result xml:space="preserve">You give the Hell Ride ticket to the Ride Attendant.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-674"/>
-    </children>
-  </item>
-  <item nodeId="node-674">
-    <command xml:space="preserve">s</command>
-    <result xml:space="preserve">Ride Entrance&#x000A;The cars that will take you into the fearsome Hell Ride stop here for you to board.  To the south is the track that will take you into the ride. The safety bar is raised allowing you to entering the car. East of here is a gate with a sign that reads "Employees Only".&#x000A;&#x000A;You can see a car (empty) here.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-675"/>
-    </children>
-  </item>
-  <item nodeId="node-675">
-    <command xml:space="preserve">get in car</command>
-    <result xml:space="preserve">You get into the car.&#x000A;&#x000A;The car moves forward and the safety bar begins to lower.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-676"/>
-    </children>
-  </item>
-  <item nodeId="node-676">
-    <command xml:space="preserve">s</command>
-    <result xml:space="preserve">You are enjoying the ride.&#x000A;&#x000A;The car has begun to move toward the entrance of the ride and the safety bar has been lowered halfway.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-677"/>
-    </children>
-  </item>
-  <item nodeId="node-677">
-    <command xml:space="preserve">s</command>
-    <result xml:space="preserve">You are enjoying the ride.&#x000A;&#x000A;The doors open and your car passes through into the darkness. The safety bar has been lowered.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-678"/>
-    </children>
-  </item>
-  <item nodeId="node-678">
-    <command xml:space="preserve">s</command>
-    <result xml:space="preserve">You are enjoying the ride.&#x000A;&#x000A;You pass into a room which displays mannequins in stocks in a public square. The wax figures are especially life like.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-679"/>
-    </children>
-  </item>
-  <item nodeId="node-679">
-    <command xml:space="preserve">w</command>
-    <result xml:space="preserve">You are enjoying the ride.&#x000A;&#x000A;The next room shows a man hanging from a gallows. The gallows are made of wood.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-680"/>
-    </children>
-  </item>
-  <item nodeId="node-680">
-    <command xml:space="preserve">s</command>
-    <result xml:space="preserve">You are enjoying the ride.&#x000A;&#x000A;Here you can see a witch being burned at the stake as townsfolk jeer at the sight.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-681"/>
-    </children>
-  </item>
-  <item nodeId="node-681">
-    <command xml:space="preserve">e</command>
-    <result xml:space="preserve">You are enjoying the ride.&#x000A;&#x000A;This a dungeon with all the usual devices: the rack, an iron maiden, a Saint Andrew's Cross.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-682"/>
-    </children>
-  </item>
-  <item nodeId="node-682">
-    <command xml:space="preserve">d</command>
-    <result xml:space="preserve">You are enjoying the ride.&#x000A;&#x000A;There is a guillotine in this room. The guillotine is being raised and lowered. It appears that the timing of the guillotine is off and it is being lowered onto the cars. If a person would be in a car as it passed under the guillotine, they would be decapitated. Looks like your jig is up. Say "Goodnight, Gracie!"&#x000A;&#x000A;&#x000A;&#x000A;    *** You have died. ***&#x000A;&#x000A;&#x000A;In that game you scored 0 out of a possible 100, in 19 turns.&#x000A;&#x000A;&#x000A;Would you like to RESTART, RESTORE a saved game, QUIT, or UNDO the last command?&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-683"/>
-    </children>
-  </item>
-  <item nodeId="node-683">
-    <command xml:space="preserve">restart</command>
-    <result xml:space="preserve">The carnival is in town and you had a date with your sweetie to visit it. After dinner and just as you arrive at the carnival, you and your date have a terrible fight. They storm off leaving you alone at the carnival. You decide to stay at the carnival anyway.&#x000A;&#x000A;Hell Ride&#x000A;The ride of a lifetime... by No Shoes&#x000A;Release 1 / Serial number 241201 / Inform 7 v10.1.2 / D&#x000A;&#x000A;Parking Lot&#x000A;You are in a parking lot full of cars. The midway is to the south. There is a blueberry bush here. There are blueberries on the bush&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-684"/>
-    </children>
-  </item>
-  <item nodeId="node-684">
-    <command xml:space="preserve">s</command>
-    <result xml:space="preserve">The Booth&#x000A;You are standing in line at a ticket booth at the carnival. The booth sells tickets to the Hell Ride attraction. The line for the ride forms to the south and the midway continues east and west from here. There is a concession stand to the south west. The ticket booth is garishly painted in purple and green sparkles. There is a Ticket Seller here. The Ticket Seller has a ticket.&#x000A;&#x000A;You can see a Seller here.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-685"/>
-    </children>
-  </item>
-  <item nodeId="node-685">
-    <command xml:space="preserve">w</command>
     <result xml:space="preserve">Little Egypt Facade&#x000A;You are standing in front of a trailer. There is a stage in front of the trailer. The Barker is encouraging you to step up, pay for, and enjoy the Little Egypt Show.The barker cries: &#x000A;&#x000A;Ladies and gentlemen, boys and girls, gather "round! &#x000A;Step right up and witness the spectacle that's taken the world by storm! &#x000A;She walks, she talks, she crawls on her belly like a reptile. &#x000A;Behold the one, the only Little Egypt, performing her legendary Dance of the Pyramids-a dazzling display of mystery, grace, and exotic allure! &#x000A;For just a dime, a mere one tenth of a dollar, prepare to be transported to the sands of Cairo, where enchantment and wonder await!&#x000A;&#x000A;You can see a Barker here.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
+    <children>
+      <child nodeId="node-970"/>
+    </children>
   </item>
-  <item nodeId="node-727">
+  <item nodeId="node-970">
     <command xml:space="preserve">w</command>
-    <result xml:space="preserve">It'll cost you a dime to go that way.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-728"/>
-    </children>
-  </item>
-  <item nodeId="node-728">
-    <command xml:space="preserve">w</command>
-    <result xml:space="preserve">It'll cost you a dime to go that way.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-729"/>
-    </children>
-  </item>
-  <item nodeId="node-729">
-    <command xml:space="preserve">w</command>
-    <result xml:space="preserve">It'll cost you a dime to go that way.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-730"/>
-    </children>
-  </item>
-  <item nodeId="node-730">
-    <command xml:space="preserve">w</command>
-    <result xml:space="preserve">It'll cost you a dime to go that way.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-731"/>
-    </children>
-  </item>
-  <item nodeId="node-731">
-    <command xml:space="preserve">give dime to barker</command>
-    <result xml:space="preserve">You can now head west into the show.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-732"/>
-    </children>
-  </item>
-  <item nodeId="node-732">
-    <command xml:space="preserve">w</command>
-    <result xml:space="preserve">Little Egypt Show&#x000A;You are inside the Little Egypt Show. The attraction facade is to the east.&#x000A;&#x000A;You enter the tent and sit in one of the folding chairs in the front row.&#x000A;&#x000A;&#x000A;&#x000A;Little Egypt Show (on the Folding Chair)&#x000A;You are inside the Little Egypt Show. The attraction facade is to the east.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-733"/>
-    </children>
-  </item>
-  <item nodeId="node-733">
-    <command xml:space="preserve">e</command>
-    <result xml:space="preserve">You would have to get off the Folding Chair first.&#x000A;&#x000A;As you enter the dimly lit tent, you see that the stage is decorated to resemble an exotic Middle Eastern market or palace, featuring rich, colorful fabrics, brass ornaments, and lanterns casting a warm, flickering glow. Scents of incense waft through the air, enhancing the atmosphere of mystique. The backdrop displays painted scenes of pyramids, desert landscapes, or domed structures to evoking a sense of being transported to the "Middle East". &#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-734"/>
-    </children>
-  </item>
-  <item nodeId="node-734">
-    <command xml:space="preserve">s</command>
-    <result xml:space="preserve">You would have to get off the Folding Chair first.&#x000A;&#x000A;Little Egypt emerges draped in a flowing silk veils which she skillfully uses as part of the dance. Her attire consists of a sparkling, sequined bodice and harem pants, adorned with jingling coin belts and jewelry that accentuate her movements.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-735"/>
-    </children>
-  </item>
-  <item nodeId="node-735">
-    <command xml:space="preserve">w</command>
-    <result xml:space="preserve">You would have to get off the Folding Chair first.&#x000A;&#x000A;The performance begins with slow, undulating movements, drawing the you into the rhythm of exotic live music played on traditional instruments like the oud, darbuka, or zurna. As the tempo builds, her hips, torso, and hands move in intricate, mesmerizing patterns, demonstrating remarkable control and fluidity. She incorporates dramatic spins, drops, and shimmies, often accentuating the beat of the music with a quick jingle of her coin belt.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-736"/>
-    </children>
-  </item>
-  <item nodeId="node-736">
-    <command xml:space="preserve">e</command>
-    <result xml:space="preserve">You would have to get off the Folding Chair first.&#x000A;&#x000A;Little Egypt makes eye contact with you and smiles enigmatically. During her performance she balances a sword on her head and accents her dance with finger cymbals.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-737"/>
-    </children>
-  </item>
-  <item nodeId="node-737">
-    <command xml:space="preserve">s</command>
-    <result xml:space="preserve">You would have to get off the Folding Chair first.&#x000A;&#x000A;The music alternates between hauntingly slow melodies and rapid, energetic drum beats, creating an emotional arc that keeps the you entranced. Little Egypt relies on the music's dynamic changes to tell a story with movements reflecting joy, sorrow, seduction, and celebration.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-738"/>
-    </children>
-  </item>
-  <item nodeId="node-738">
-    <command xml:space="preserve">stand</command>
-    <result xml:space="preserve">You get off the Folding Chair.&#x000A;&#x000A;Little Egypt Show&#x000A;You are inside the Little Egypt Show. The attraction facade is to the east.&#x000A;&#x000A;The performance concludes with a dramatic flourish of a fast-paced shimmy, a bold spin, and Little Egypt dramatically casts off her veils. The dancer takes a bow to enthusiastic applause, leaving you spellbound by the sensual yet artful display.&#x000A;&#x000A;You applaud until your hands are sore. Did she wink at me?&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-739"/>
-    </children>
-  </item>
-  <item nodeId="node-739">
-    <command xml:space="preserve">l</command>
     <result xml:space="preserve">Little Egypt Show&#x000A;You are inside the Little Egypt Show. The attraction facade is to the east.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
     <children>
-      <child nodeId="node-740"/>
+      <child nodeId="node-971"/>
     </children>
   </item>
-  <item nodeId="node-740">
+  <item nodeId="node-971">
     <command xml:space="preserve">e</command>
     <result xml:space="preserve">Little Egypt Facade&#x000A;You are standing in front of a trailer. There is a stage in front of the trailer. The Barker is encouraging you to step up, pay for, and enjoy the Little Egypt Show.&#x000A;&#x000A;You can see a Barker here.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
     <children>
-      <child nodeId="node-741"/>
+      <child nodeId="node-972"/>
     </children>
   </item>
-  <item nodeId="node-741">
-    <command xml:space="preserve">l</command>
-    <result xml:space="preserve">Little Egypt Facade&#x000A;You are standing in front of a trailer. There is a stage in front of the trailer. The Barker is encouraging you to step up, pay for, and enjoy the Little Egypt Show.&#x000A;&#x000A;You can see a Barker here.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-742"/>
-    </children>
-  </item>
-  <item nodeId="node-742">
-    <command xml:space="preserve">e</command>
-    <result xml:space="preserve">The Ticket Booth&#x000A;You are standing in line at a ticket booth at the carnival. The booth sells tickets to the Hell Ride attraction. The line for the ride forms to the south and the midway continues east and west from here. There is a concession stand to the south west. The ticket booth is garishly painted in purple and green sparkles. There is a Ticket Seller here. The Ticket Seller has a ticket.&#x000A;&#x000A;You can see a Ticket Seller here.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-743"/>
-    </children>
-  </item>
-  <item nodeId="node-743">
-    <command xml:space="preserve">l</command>
-    <result xml:space="preserve">The Ticket Booth&#x000A;You are standing in line at a ticket booth at the carnival. The booth sells tickets to the Hell Ride attraction. The line for the ride forms to the south and the midway continues east and west from here. There is a concession stand to the south west. The ticket booth is garishly painted in purple and green sparkles. There is a Ticket Seller here. The Ticket Seller has a ticket.&#x000A;&#x000A;You can see a Ticket Seller here.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-744"/>
-    </children>
-  </item>
-  <item nodeId="node-744">
-    <command xml:space="preserve">e</command>
-    <result xml:space="preserve">Strongman Booth&#x000A;The Strongman Booth is a popular carnival game in which you swing a mallet against a base and cause a striker to hit a bell. Along the length of the pole are markings indicating how strong you are.  A nearby sign says, "Buy a mallet, strike the bell, win a prize."&#x000A;&#x000A;You can see a Strongman Atendant and a base here.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-745"/>
-    </children>
-  </item>
-  <item nodeId="node-745">
-    <command xml:space="preserve">l</command>
-    <result xml:space="preserve">Strongman Booth&#x000A;The Strongman Booth is a popular carnival game in which you swing a mallet against a base and cause a striker to hit a bell. Along the length of the pole are markings indicating how strong you are.  A nearby sign says, "Buy a mallet, strike the bell, win a prize."&#x000A;&#x000A;You can see a Strongman Atendant and a base here.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-746"/>
-    </children>
-  </item>
-  <item nodeId="node-746">
-    <command xml:space="preserve">n</command>
-    <result xml:space="preserve">You can't go that way.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-747"/>
-    </children>
-  </item>
-  <item nodeId="node-747">
-    <command xml:space="preserve">s</command>
-    <result xml:space="preserve">You can't go that way.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-748"/>
-    </children>
-  </item>
-  <item nodeId="node-748">
+  <item nodeId="node-972">
     <command xml:space="preserve">w</command>
-    <result xml:space="preserve">The Ticket Booth&#x000A;You are standing in line at a ticket booth at the carnival. The booth sells tickets to the Hell Ride attraction. The line for the ride forms to the south and the midway continues east and west from here. There is a concession stand to the south west. The ticket booth is garishly painted in purple and green sparkles. There is a Ticket Seller here. The Ticket Seller has a ticket.&#x000A;&#x000A;You can see a Ticket Seller here.&#x000A;&#x000A;&gt;</result>
+    <result xml:space="preserve">Little Egypt Show&#x000A;You are inside the Little Egypt Show. The attraction facade is to the east.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
     <children>
-      <child nodeId="node-749"/>
+      <child nodeId="node-973"/>
     </children>
   </item>
-  <item nodeId="node-749">
-    <command xml:space="preserve">n</command>
-    <result xml:space="preserve">Parking Lot&#x000A;You are in a parking lot full of cars. The midway is to the south. There is a blueberry bush here. There are blueberries on the bush&#x000A;&#x000A;&gt;</result>
+  <item nodeId="node-973">
+    <command xml:space="preserve">e</command>
+    <result xml:space="preserve">Little Egypt Facade&#x000A;You are standing in front of a trailer. There is a stage in front of the trailer. The Barker is encouraging you to step up, pay for, and enjoy the Little Egypt Show.&#x000A;&#x000A;You can see a Barker here.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
     <children>
-      <child nodeId="node-750"/>
+      <child nodeId="node-974"/>
     </children>
   </item>
-  <item nodeId="node-750">
-    <command xml:space="preserve">n</command>
-    <result xml:space="preserve">You can't go that way.&#x000A;&#x000A;&gt;</result>
+  <item nodeId="node-974">
+    <command xml:space="preserve">e</command>
+    <result xml:space="preserve">The Ticket Booth&#x000A;You are standing in line at a ticket booth at the carnival. The booth sells tickets to the Hell Ride attraction. The line for the ride forms to the south and the midway continues east and west from here. There is a concession stand to the south west. The ticket booth is garishly painted in purple and green sparkles. There is a Ticket Seller here. The Ticket Seller has a Hell Ride ticket.&#x000A;&#x000A;You can see a Ticket Seller here.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
     <children>
-      <child nodeId="node-751"/>
+      <child nodeId="node-975"/>
     </children>
   </item>
-  <item nodeId="node-751">
-    <command xml:space="preserve">E</command>
-    <result xml:space="preserve">You can't go that way.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-752"/>
-    </children>
-  </item>
-  <item nodeId="node-752">
-    <command xml:space="preserve">s</command>
-    <result xml:space="preserve">The Ticket Booth&#x000A;You are standing in line at a ticket booth at the carnival. The booth sells tickets to the Hell Ride attraction. The line for the ride forms to the south and the midway continues east and west from here. There is a concession stand to the south west. The ticket booth is garishly painted in purple and green sparkles. There is a Ticket Seller here. The Ticket Seller has a ticket.&#x000A;&#x000A;You can see a Ticket Seller here.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-753"/>
-    </children>
-  </item>
-  <item nodeId="node-753">
+  <item nodeId="node-975">
     <command xml:space="preserve">buy ticket</command>
     <result xml:space="preserve">(the Ticket Seller)&#x000A;The Ticket Seller is yours already.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
     <children>
-      <child nodeId="node-754"/>
+      <child nodeId="node-976"/>
     </children>
   </item>
-  <item nodeId="node-754">
-    <command xml:space="preserve">buyt the hellride ticket</command>
-    <result xml:space="preserve">That's not a verb I recognize.&#x000A;&#x000A;&gt;</result>
+  <item nodeId="node-976">
+    <command xml:space="preserve">buy ride ticket</command>
+    <result xml:space="preserve">You fork over $2.50 for the Hell Ride ticket, leaving yourself with $7.50.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
     <children>
-      <child nodeId="node-755"/>
+      <child nodeId="node-977"/>
     </children>
   </item>
-  <item nodeId="node-755">
-    <command xml:space="preserve">buy the hellride ticket</command>
-    <result xml:space="preserve">You can't see any such thing.&#x000A;&#x000A;&gt;</result>
+  <item nodeId="node-977">
+    <command xml:space="preserve">s</command>
+    <result xml:space="preserve">Head of the Line&#x000A;You are standing in front of a ticket taker with his hand open waiting for your ticket. The entrance to the ride is south of here.&#x000A;&#x000A;You can see a Ride Attendant here.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
     <children>
-      <child nodeId="node-756"/>
+      <child nodeId="node-978"/>
     </children>
   </item>
-  <item nodeId="node-756">
-    <command xml:space="preserve">i</command>
-    <result xml:space="preserve">You are carrying:&#x000A;  a wallet&#x000A;    $10.00 in cash&#x000A;&#x000A;&gt;</result>
+  <item nodeId="node-978">
+    <command xml:space="preserve">s</command>
+    <result xml:space="preserve">You'll need a ticket to go that way.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-979"/>
+    </children>
+  </item>
+  <item nodeId="node-979">
+    <command xml:space="preserve">give ticket to attendant</command>
+    <result xml:space="preserve">You give the Hell Ride ticket to the Ride Attendant.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-980"/>
+    </children>
+  </item>
+  <item nodeId="node-980">
+    <command xml:space="preserve">s</command>
+    <result xml:space="preserve">Ride Entrance&#x000A;The cars that will take you into the fearsome Hell Ride stop here for you to board.  To the south is the track that will take you into the ride. The safety bar is raised allowing you to entering the car. East of here is a gate with a sign that reads "Employees Only".&#x000A;&#x000A;You can see a car (empty) here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-981"/>
+    </children>
+  </item>
+  <item nodeId="node-981">
+    <command xml:space="preserve">enter car</command>
+    <result xml:space="preserve">You get into the car.&#x000A;&#x000A;The car moves forward and the safety bar begins to lower.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-982"/>
+    </children>
+  </item>
+  <item nodeId="node-982">
+    <command xml:space="preserve">z</command>
+    <result xml:space="preserve">Time passes.&#x000A;&#x000A;The car has begun to move toward the entrance of the ride and the safety bar has been lowered halfwa. Surrounded by skulls, chains, and ominous creatures, the doors to the ride read "Hell Ride" in fiery, glowing letters.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-983"/>
+    </children>
+  </item>
+  <item nodeId="node-983">
+    <command xml:space="preserve">z</command>
+    <result xml:space="preserve">Time passes.&#x000A;&#x000A;The doors open and your car passes through into the darkness. The safety bar has been lowered.&#x000A;&#x000A;Mist fills the area as you move to the next room.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+  </item>
+  <item nodeId="node-943">
+    <command xml:space="preserve">w</command>
+    <result xml:space="preserve">It'll cost you a dime to go that way.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-944"/>
+    </children>
+  </item>
+  <item nodeId="node-944">
+    <command xml:space="preserve">w</command>
+    <result xml:space="preserve">It'll cost you a dime to go that way.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-945"/>
+    </children>
+  </item>
+  <item nodeId="node-945">
+    <command xml:space="preserve">l</command>
+    <result xml:space="preserve">You head west through the midway, the bright lights of the carnival fading behind you as you approach a wooden booth. A sign above the entrance reads "Little Egypt Show - A Journey Into the Mysterious and Exotic!" A rotund attendant, wearing a fez and a dazzling smile, gestures to a small sign beside him that says "Dime Admission."&#x000A;&#x000A;&#x000A;&#x000A;Little Egypt Facade&#x000A;You are standing in front of a trailer. There is a stage in front of the trailer. The Barker is encouraging you to step up, pay for, and enjoy the Little Egypt Show.&#x000A;&#x000A;You can see a Barker here.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
   </item>
