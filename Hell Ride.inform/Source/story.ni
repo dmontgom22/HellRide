@@ -169,6 +169,10 @@ Figure of LittleEgyptFacade is the file "LittleEgyptFacade.png".
 
 Figure of LittleEgyptShow is the file "LittleEgyptShow.png".
 
+Figure of HighStriker is the file "HighStriker.png".
+
+Figure of HellRideEntrance is the file "RideEntrance.png".
+
 Sound of Strongman Bell is the file "StrongmanBell.ogg".
 
 Chapter 6- Miscellaneous Goodies
@@ -189,7 +193,7 @@ Section 1 - Parking Lot
 When play begins:
 	display the figure of Hell Ride;
 	say "The carnival is in town and you had a date with your sweetie to visit it. After dinner and just as you arrive at the carnival, you and your date
-		have a terrible fight. They storm off leaving you alone at the carnival. You decide to stay at the carnival anyway."
+		have a terrible fight. They storm off leaving you alone at the carnival. You decide to stay at the carnival anyway.[paragraph break]The midway is bustling with activity—lights flashing, the sounds of carnival music, and the laughter of children mix with the occasional shrill scream of a roller coaster. Various attractions line the street, promising thrills, challenges, and wonders."
 
 The Parking Lot is a room. The parking lot is north of the Booth. "You are in a parking lot full of cars. The midway is to the south. There is a blueberry bush here. [if blueberry bush contains blueberries]There are blueberries on the bush[otherwise]The bush has been picked clean.[end if]"
 
@@ -257,13 +261,19 @@ A soft pretzel is here. The soft pretzel is edible. The price of the soft pretze
 
 Section 4 - Strongman Booth
 
-The Strongman Booth is a room. "The Strongman Booth is a popular carnival game in which you swing a mallet against a base and cause a striker to hit a bell. Along the length of the pole are markings indicating how strong you are.  A nearby sign says, 'Buy a mallet, strike the bell, win a prize.'[if the strongman attendant contains the mallet] You can see an over-sized mallet here.[end if]"
+Before going east when the location is the Ticket Booth and the Strongman Booth is unvisited:
+	display Figure of HighStriker.
+	
+Before looking when the location is the Strongman  Booth:
+	display Figure of HighStriker.
 
-The markings are here. The markings are scenery. Understand "marking" and "sign" and "signs" as markings. The description of markings is "There are five levels marked on the pole: Weakling, Getting There, Average, Almost Theere, and Muscle Man."
+The Strongman Booth is a room. "This area features a tall, eye-catching machine adorned with bright, colorful lights, typically red, yellow, and blue. A large sign at the top reads 'Test Your Strength!' in bold, playful lettering. The machine’s base is made of polished wood, with a polished, vintage appearance. At the center is a sturdy metal pole, with a large bell hanging at the top, signaling when a successful attempt has been made. Along the length of the pole are markings indicating how strong you are.  A nearby sign says, 'Buy a mallet, strike the bell, win a prize.'[if the strongman attendant contains the mallet] You can see an over-sized mallet here.[end if][paragraph break]Spectators gather around, cheering on participants and offering lighthearted jabs and encouragement, creating a lively, competitive atmosphere. The sound of the mallet hitting the target is followed by the resonant clang of the bell (if struck), alongside the buzz of carnival music in the background."
+
+The markings are here. The markings are scenery. Understand "marking" and "sign" and "signs" as markings. The description of markings is "There are five levels marked on the pole: Weakling, Getting There, Average, Almost Theee, and Muscle Man."
 
 The Strongman Attendant is here. The description of the Strongman Attendant is "An attendant is standing here [if strongman attendant is carrying the mallet]holding a mallet[end if]." The Strongman Attendant carries the stuffed teddy bear and the mallet. The description of the teddy bear is "This is a teddy bear like you had when you were a kid. Right down to the red bow around its neck."
 
-The base is here. The base is fixed in place. Understand "bullseye" as base. The description of the base is "There is a bullseye on the base. I guess this is where you have to aim the mallet."
+The lever is here. The lever is fixed in place. Understand "bullseye" and "target" as lever. The description of the lever is "There is a bullseye on the base. I guess this is where you have to aim the mallet."
 
 The mallet is carried by the Strongman Attendant.  The Price of the mallet is $2.00. Understand "hammer" as mallet. The description of the mallet is "The mallet is over sized, perhaps to give you an advantage in the Strong Man game."
 
@@ -272,14 +282,14 @@ A strength pattern is a kind of value. The strength patterns are Weakling, Getti
 Hitting is an action applying to two visible things. Understand "hit [something]" as hitting. Understand "hit [something] with [something preferably held]" as hitting.
 
 Check hitting:
-	if noun is not base, say "Nothing happens." instead;
+	if noun is not lever, say "Nothing happens." instead;
 	if the second noun is not mallet, say "You can[']t hit [noun] with that!" instead;
 	if the player is not carrying the mallet, say "You[']re not holding the mallet." instead.
 
 Carry out hitting when the player is carrying the mallet:
-	say "You lift the mallet high and bring it down on the base with all your might! The striker rises towards the bell stopping at '[a random strength pattern between weakling and almost there]'.  C[']mon! You can do better than that!";
+	say "You lift the mallet high and bring it down on the lever with all your might! The striker rises towards the bell stopping at '[a random strength pattern between weakling and almost there]'.  C[']mon! You can do better than that!";
 	
-After hitting the base when second noun is the mallet 5 times :
+After hitting the lever when second noun is the mallet 5 times :
 	play the sound of Strongman Bell;
 	say "You swing the mallet one more time. The bell rings as the striker reaches the top of the pole. The attendant says, 'You[']re a Muscle Man. Here's a prize for you.'";
 	increase score by 5;
@@ -296,9 +306,9 @@ Before looking when the location is the Little Egypt Facade:
 	
 After going west when the location is Little Egypt Facade, say "You head west through the midway, the bright lights of the carnival fading behind you as you approach a wooden booth. A sign above the entrance reads 'Little Egypt Show – A Journey Into the Mysterious and Exotic!' A rotund attendant, wearing a fez and a dazzling smile, gestures to a small sign beside him that says 'Dime Admission.'"
 
-Little Egypt Facade is a room. Little Egypt Facade is east of Little Egypt Show. "You are standing in front of a trailer. There is a stage in front of the trailer. The Barker is encouraging you to step up, pay for, and enjoy the Little Egypt Show.[if location is unvisited]The barker cries: [line break][line break]Ladies and gentlemen, boys and girls, gather 'round! [line break]Step right up and witness the spectacle that’s taken the world by storm! [line break]She walks, she talks, she crawls on her belly like a reptile. [line break]Behold the one, the only Little Egypt, performing her legendary Dance of the Pyramids—a dazzling display of mystery, grace, and exotic allure! [line break]For just a dime, a mere one tenth of a dollar, prepare to be transported to the sands of Cairo, where enchantment and wonder await![end if]"
+Little Egypt Facade is a room. Little Egypt Facade is east of Little Egypt Show. "You are standing in front of a dark and mysterious tent filled with illusions and exotic performers. Perhaps there’s a fortune teller inside, offering cryptic clues about the player's journey or a hidden artifact that can be collected. There is a stage in front of the tent. The Barker is encouraging you to step up, pay for, and enjoy the Little Egypt Show.[if location is unvisited]The barker cries: [paragraph break]Ladies and gentlemen, boys and girls, gather 'round! [line break]Step right up and witness the spectacle that’s taken the world by storm! [line break]She walks, she talks, she crawls on her belly like a reptile. [line break]Behold the one, the only Little Egypt, performing her legendary Dance of the Pyramids—a dazzling display of mystery, grace, and exotic allure! [line break]For just a dime, a mere one tenth of a dollar, prepare to be transported to the sands of Cairo, where enchantment and wonder await![end if]"
 
-The Barker is a person in Little Egypt Facade. The description of the barker is "Here is a man dressed in black pants, a white shirt,a striped vest, a fex, and a dazzling smile. The barker cries: [line break][line break]Ladies and gentlemen, boys and girls, gather 'round! [line break]Step right up and witness the spectacle that’s taken the world by storm! [line break]She walks, she talks, she crawls on her belly like a reptile. [line break]Behold the one, the only Little Egypt, performing her legendary Dance of the Pyramids—a dazzling display of mystery, grace, and exotic allure! [line break]For just a dime, a mere one tenth of a dollar, prepare to be transported to the sands of Cairo, where enchantment and wonder await!"
+The Barker is a person in Little Egypt Facade. The description of the barker is "Here is a man dressed in black pants, a white shirt,a striped vest, a fex, and a dazzling smile. The barker cries: [paragraph break]Ladies and gentlemen, boys and girls, gather 'round! [line break]Step right up and witness the spectacle that’s taken the world by storm! [line break]She walks, she talks, she crawls on her belly like a reptile. [line break]Behold the one, the only Little Egypt, performing her legendary Dance of the Pyramids—a dazzling display of mystery, grace, and exotic allure! [line break]For just a dime, a mere one tenth of a dollar, prepare to be transported to the sands of Cairo, where enchantment and wonder await!"
 
 Check going west when the player is in the Little Egypt Facade and the barker is not carrying the dime:
 	say "It'll cost you a dime to go that way.";
@@ -350,6 +360,12 @@ LittleEgyptAuto ends when the number of filled rows in the Table of LittleEgypt 
 
 Section 7 - Head of the Line
 
+Before going south when the location is the Ticket Booth and the Head of the Line is unvisited:
+	display Figure of HellRideEntrance.
+	
+Before looking when the location is the Head of the Line:
+	display Figure of HellRideEntrance.
+
 Head of the Line is a room. Head of the Line is south of Booth. Head of the Line is north of Ride Entrance. "You are standing in front of a ticket taker with his hand open waiting for your ticket. The entrance to the ride is south of here."
 
 The Ride Attendant is a man in Head of the Line. The description of the Ride Attendant is "This is another bored teenager. His thoughts are entirely focused on a cheeseburger for lunch.";
@@ -378,11 +394,11 @@ Every turn during HellRideAuto:
 Table of HellRide Events
 event
 "The car has begun to move toward the entrance of the ride and the safety bar has been lowered halfway. Surrounded by skulls, chains, and ominous creatures, the doors to the ride read 'Hell Ride' in fiery, glowing letters."
-"The doors open and your car passes through into the darkness. The safety bar has been lowered.[line break][line break]Mist fills the area as you move to the next room."
-"You pass into a room which displays mannequins in stocks in a public square. The stocks are made of heavy wood. The townsfolk are there solely to harrass and ridicule the individuals on display. The punishees'['] eyes are downcast as the shame and humiliation of their punishments are realized. The wax figures are especially life like.[line break][line break]Mist fills the area as you move to the next room."
-"The next room is dominated by a gallows made of strong hardwood. Standing on the gallows is an executioner wearing a hood protecting his identity. Next to him is a man with a noose around his neck standing on a hatch ready to open.[line break][line break]Mist fills the area as you move to the next room."
-"Here you see a bonfire in full conflagration. The flames leap higher and higher consuming the woman tied to the stake. The townsfolk are here holding torches and  jeering at the sight of the poor soul being burnt alive.[line break][line break]Mist fills the area as you move to the next room."
-"This a dungeon with all the usual devices. There is a man stretched on the rack. His screams pierce the room. An iron maiden is occupied and you notice the blood seeping from the eyes, ears, and mouth. Another is strapped to a Saint Andrew's Cross and is being flogged harshly.[line break][line break]Mist fills the area as you move to the next room."
+"The doors open and your car passes through into the darkness. The safety bar has been lowered.[paragraph break]Mist fills the area as you move to the next room."
+"You pass into a room which displays mannequins in stocks in a public square. The stocks are made of heavy wood. The townsfolk are there solely to harrass and ridicule the individuals on display. The punishees['] eyes are downcast as the shame and humiliation of their predicaments are realized. The wax figures are especially life like.[paragraph break]Mist fills the area as you move to the next room."
+"The next room is dominated by a gallows made of strong hardwood. Standing on the gallows is an executioner wearing a hood protecting his identity. Next to him is a man with a noose around his neck standing on a hatch ready to open.[paragraph break]Mist fills the area as you move to the next room."
+"Here you see a bonfire in full conflagration. The flames leap higher and higher consuming the woman tied to the stake. The townsfolk are here holding torches and  jeering at the sight of the poor soul being burnt alive.[paragraph break]Mist fills the area as you move to the next room."
+"This a dungeon with all the usual devices. There is a man stretched on the rack. His screams pierce the room. An iron maiden is occupied and you notice the blood seeping from the eyes, ears, and mouth. Another is strapped to a Saint Andrew's Cross and is being flogged harshly.[paragraph break]Mist fills the area as you move to the next room."
 "There is a guillotine in this room. The guillotine is being raised and lowered by some mechanism. It appears that the timing of the guillotine is off and it is being lowered onto the cars instead of between them. If a person were to be in a car as it passed under the guillotine, they would be decapitated. Looks like your goose is cooked. Say 'Goodnight, Gracie!'".
 
 HellRideAuto ends when the number of filled rows in the Table of HellRide Events is 0.

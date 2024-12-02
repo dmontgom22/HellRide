@@ -16,10 +16,14 @@
             <string>Figures\LittleEgyptFacade.png</string>
             <key>7</key>
             <string>Figures\LittleEgyptShow.png</string>
+            <key>8</key>
+            <string>Figures\HighStriker.png</string>
+            <key>9</key>
+            <string>Figures\RideEntrance.png</string>
         </dict>
         <key>Sounds</key>
         <dict>
-            <key>8</key>
+            <key>10</key>
             <string>Sounds\StrongmanBell.ogg</string>
         </dict>
     </dict>

@@ -3,13 +3,30 @@
   <generator>Windows Inform 10.1.2</generator>
   <item nodeId="node-39">
     <command xml:space="preserve">Hell Ride</command>
-    <result xml:space="preserve">The carnival is in town and you had a date with your sweetie to visit it. After dinner and just as you arrive at the carnival, you and your date have a terrible fight. They storm off leaving you alone at the carnival. You decide to stay at the carnival anyway.&#x000A;&#x000A;Hell Ride&#x000A;The ride of a lifetime... by No Shoes&#x000A;Release 1 / Serial number 241202 / Inform 7 v10.1.2 / D&#x000A;&#x000A;Parking Lot&#x000A;You are in a parking lot full of cars. The midway is to the south. There is a blueberry bush here. There are blueberries on the bush&#x000A;&#x000A;You can see a dime here.&#x000A;&#x000A;&gt;</result>
+    <result xml:space="preserve">The carnival is in town and you had a date with your sweetie to visit it. After dinner and just as you arrive at the carnival, you and your date have a terrible fight. They storm off leaving you alone at the carnival. You decide to stay at the carnival anyway.&#x000A;&#x000A;The midway is bustling with activity-lights flashing, the sounds of carnival music, and the laughter of children mix with the occasional shrill scream of a roller coaster. Various attractions line the street, promising thrills, challenges, and wonders.&#x000A;&#x000A;Hell Ride&#x000A;The ride of a lifetime... by No Shoes&#x000A;Release 1 / Serial number 241202 / Inform 7 v10.1.2 / D&#x000A;&#x000A;Parking Lot&#x000A;You are in a parking lot full of cars. The midway is to the south. There is a blueberry bush here. There are blueberries on the bush&#x000A;&#x000A;You can see a dime here.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve">The carnival is in town and you had a date with your sweetie to visit it. After dinner and just as you arrive at the carnival, you and your date have a terrible fight. They storm off leaving you alone at the carnival. You decide to stay at the carnival anyway.&#x000A;&#x000A;Hell Ride&#x000A;The ride of a lifetime... by No Shoes&#x000A;Release 1 / Serial number 241201 / Inform 7 v10.1.2 / D&#x000A;&#x000A;Parking Lot&#x000A;You are in a parking lot full of cars. The midway is to the south. There is a blueberry bush here. There are blueberries on the bush&#x000A;&#x000A;You can see a dime here.&#x000A;&#x000A;&gt;</commentary>
     <changed>NO</changed>
     <children>
+      <child nodeId="node-1010"/>
       <child nodeId="node-851"/>
+      <child nodeId="node-990"/>
       <child nodeId="node-906"/>
     </children>
+  </item>
+  <item nodeId="node-1010">
+    <command xml:space="preserve">damn</command>
+    <result xml:space="preserve">Real adventurers do not use such language.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1011"/>
+    </children>
+  </item>
+  <item nodeId="node-1011">
+    <command xml:space="preserve">darn</command>
+    <result xml:space="preserve">Quite.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
   </item>
   <item nodeId="node-851">
     <command xml:space="preserve">get all</command>
@@ -312,6 +329,183 @@
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
   </item>
+  <item nodeId="node-990">
+    <command xml:space="preserve">get dime</command>
+    <result xml:space="preserve">Taken.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-991"/>
+    </children>
+  </item>
+  <item nodeId="node-991">
+    <command xml:space="preserve">s</command>
+    <result xml:space="preserve">The Ticket Booth&#x000A;You are standing in line at a ticket booth at the carnival. The booth sells tickets to the Hell Ride attraction. The line for the ride forms to the south and the midway continues east and west from here. There is a concession stand to the south west. The ticket booth is garishly painted in purple and green sparkles. There is a Ticket Seller here. The Ticket Seller has a Hell Ride ticket.&#x000A;&#x000A;You can see a Ticket Seller here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-992"/>
+    </children>
+  </item>
+  <item nodeId="node-992">
+    <command xml:space="preserve">e</command>
+    <result xml:space="preserve">Strongman Booth&#x000A;The Strongman Booth is a popular carnival game in which you swing a mallet against a base and cause a striker to hit a bell. Along the length of the pole are markings indicating how strong you are.  A nearby sign says, "Buy a mallet, strike the bell, win a prize."&#x000A;&#x000A;You can see a Strongman Attendant and a base here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-993"/>
+    </children>
+  </item>
+  <item nodeId="node-993">
+    <command xml:space="preserve">w</command>
+    <result xml:space="preserve">The Ticket Booth&#x000A;You are standing in line at a ticket booth at the carnival. The booth sells tickets to the Hell Ride attraction. The line for the ride forms to the south and the midway continues east and west from here. There is a concession stand to the south west. The ticket booth is garishly painted in purple and green sparkles. There is a Ticket Seller here. The Ticket Seller has a Hell Ride ticket.&#x000A;&#x000A;You can see a Ticket Seller here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-994"/>
+    </children>
+  </item>
+  <item nodeId="node-994">
+    <command xml:space="preserve">w</command>
+    <result xml:space="preserve">You head west through the midway, the bright lights of the carnival fading behind you as you approach a wooden booth. A sign above the entrance reads "Little Egypt Show - A Journey Into the Mysterious and Exotic!" A rotund attendant, wearing a fez and a dazzling smile, gestures to a small sign beside him that says "Dime Admission."&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-995"/>
+    </children>
+  </item>
+  <item nodeId="node-995">
+    <command xml:space="preserve">w</command>
+    <result xml:space="preserve">It'll cost you a dime to go that way.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-996"/>
+    </children>
+  </item>
+  <item nodeId="node-996">
+    <command xml:space="preserve">give dime to barker</command>
+    <result xml:space="preserve">You hand over a dime, and the attendant nods, waving you through. As you step past the entrance, the air feels thicker, almost humid, and the sounds of the carnival fade away. You've entered an entirely different world now-one filled with the scents of incense and exotic spices, and the low, hypnotic music of a faraway land. Before you, a series of dimly lit tents stretch out, their flaps slightly swaying in the breeze. Intrigued, you take your first step into the Little Egypt Show. You can now head west into the show.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-997"/>
+    </children>
+  </item>
+  <item nodeId="node-997">
+    <command xml:space="preserve">w</command>
+    <result xml:space="preserve">Little Egypt Show&#x000A;You are inside the Little Egypt Show. The attraction facade is to the east.&#x000A;&#x000A;You enter the tent and sit in one of the folding chairs in the front row.&#x000A;&#x000A;&#x000A;&#x000A;Little Egypt Show (on the Folding Chair)&#x000A;You are inside the Little Egypt Show. The attraction facade is to the east.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-998"/>
+    </children>
+  </item>
+  <item nodeId="node-998">
+    <command xml:space="preserve"></command>
+    <result xml:space="preserve">I beg your pardon?&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-999"/>
+    </children>
+  </item>
+  <item nodeId="node-999">
+    <command xml:space="preserve">z</command>
+    <result xml:space="preserve">Time passes.&#x000A;&#x000A;As you enter the dimly lit tent, you see that the stage is decorated to resemble an exotic Middle Eastern market or palace, featuring rich, colorful fabrics, brass ornaments, and lanterns casting a warm, flickering glow. Scents of incense waft through the air, enhancing the atmosphere of mystique. The backdrop displays painted scenes of pyramids, desert landscapes, or domed structures to evoking a sense of being transported to the "Middle East". &#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1000"/>
+    </children>
+  </item>
+  <item nodeId="node-1000">
+    <command xml:space="preserve">z</command>
+    <result xml:space="preserve">Time passes.&#x000A;&#x000A;Little Egypt emerges draped in a flowing silk veils which she skillfully uses as part of the dance. Her attire consists of a sparkling, sequined bodice and a flowing skirt, adorned with jingling coin belts and jewelry that accentuate her movements.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1001"/>
+    </children>
+  </item>
+  <item nodeId="node-1001">
+    <command xml:space="preserve">z</command>
+    <result xml:space="preserve">Time passes.&#x000A;&#x000A;The performance begins with slow, undulating movements, drawing the you into the rhythm of exotic live music played on traditional instruments like the oud, darbuka, or zurna. As the tempo builds, her hips, torso, and hands move in intricate, mesmerizing patterns, demonstrating remarkable control and fluidity. She incorporates dramatic spins, drops, and shimmies, often accentuating the beat of the music with a quick jingle of her coin belt.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1002"/>
+    </children>
+  </item>
+  <item nodeId="node-1002">
+    <command xml:space="preserve">z</command>
+    <result xml:space="preserve">Time passes.&#x000A;&#x000A;Little Egypt makes eye contact with you and smiles enigmatically. During her performance she balances a sword on her head and accents her dance with finger cymbals.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1003"/>
+    </children>
+  </item>
+  <item nodeId="node-1003">
+    <command xml:space="preserve">z</command>
+    <result xml:space="preserve">Time passes.&#x000A;&#x000A;The music alternates between hauntingly slow melodies and rapid, energetic drum beats, creating an emotional arc that keeps the you entranced. Little Egypt relies on the music's dynamic changes to tell a story with movements reflecting joy, sorrow, seduction, and celebration.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1004"/>
+    </children>
+  </item>
+  <item nodeId="node-1004">
+    <command xml:space="preserve">z</command>
+    <result xml:space="preserve">Time passes.&#x000A;&#x000A;The performance concludes with a dramatic flourish of a fast-paced shimmy, a bold spin, and Little Egypt dramatically casts off her veils. The dancer takes a bow to enthusiastic applause, leaving you spellbound by the sensual yet artful display.&#x000A;&#x000A;You applaud until your hands are sore. Did she wink at me?&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1005"/>
+    </children>
+  </item>
+  <item nodeId="node-1005">
+    <command xml:space="preserve">z</command>
+    <result xml:space="preserve">Time passes.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1006"/>
+    </children>
+  </item>
+  <item nodeId="node-1006">
+    <command xml:space="preserve">z</command>
+    <result xml:space="preserve">Time passes.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1007"/>
+    </children>
+  </item>
+  <item nodeId="node-1007">
+    <command xml:space="preserve">e</command>
+    <result xml:space="preserve">You would have to get off the Folding Chair first.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1008"/>
+    </children>
+  </item>
+  <item nodeId="node-1008">
+    <command xml:space="preserve">stand</command>
+    <result xml:space="preserve">You get off the Folding Chair.&#x000A;&#x000A;Little Egypt Show&#x000A;You are inside the Little Egypt Show. The attraction facade is to the east.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1009"/>
+    </children>
+  </item>
+  <item nodeId="node-1009">
+    <command xml:space="preserve">e</command>
+    <result xml:space="preserve">Little Egypt Facade&#x000A;You are standing in front of a dark and mysterious tent filled with illusions and exotic performers. Perhaps there's a fortune teller inside, offering cryptic clues about the player's journey or a hidden artifact that can be collected. There is a stage in front of the tent. The Barker is encouraging you to step up, pay for, and enjoy the Little Egypt Show.The barker cries: &#x000A;&#x000A;Ladies and gentlemen, boys and girls, gather "round! &#x000A;Step right up and witness the spectacle that's taken the world by storm! &#x000A;She walks, she talks, she crawls on her belly like a reptile. &#x000A;Behold the one, the only Little Egypt, performing her legendary Dance of the Pyramids-a dazzling display of mystery, grace, and exotic allure! &#x000A;For just a dime, a mere one tenth of a dollar, prepare to be transported to the sands of Cairo, where enchantment and wonder await!&#x000A;&#x000A;You can see a Barker here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+  </item>
   <item nodeId="node-906">
     <command xml:space="preserve">s</command>
     <result xml:space="preserve">The Ticket Booth&#x000A;You are standing in line at a ticket booth at the carnival. The booth sells tickets to the Hell Ride attraction. The line for the ride forms to the south and the midway continues east and west from here. There is a concession stand to the south west. The ticket booth is garishly painted in purple and green sparkles. There is a Ticket Seller here. The Ticket Seller has a Hell Ride ticket.&#x000A;&#x000A;You can see a Ticket Seller here.&#x000A;&#x000A;&gt;</result>
@@ -325,11 +519,12 @@
   </item>
   <item nodeId="node-907">
     <command xml:space="preserve">e</command>
-    <result xml:space="preserve">Strongman Booth&#x000A;The Strongman Booth is a popular carnival game in which you swing a mallet against a base and cause a striker to hit a bell. Along the length of the pole are markings indicating how strong you are.  A nearby sign says, "Buy a mallet, strike the bell, win a prize."&#x000A;&#x000A;You can see a Strongman Attendant and a base here.&#x000A;&#x000A;&gt;</result>
+    <result xml:space="preserve">Strongman Booth&#x000A;This area features a tall, eye-catching machine adorned with bright, colorful lights, typically red, yellow, and blue. A large sign at the top reads "Test Your Strength!" in bold, playful lettering. The machine's base is made of polished wood, with a polished, vintage appearance. At the center is a sturdy metal pole, with a large bell hanging at the top, signaling when a successful attempt has been made. Along the length of the pole are markings indicating how strong you are.  A nearby sign says, "Buy a mallet, strike the bell, win a prize."&#x000A;&#x000A;Spectators gather around, cheering on participants and offering lighthearted jabs and encouragement, creating a lively, competitive atmosphere. The sound of the mallet hitting the target is followed by the resonant clang of the bell (if struck), alongside the buzz of carnival music in the background.&#x000A;&#x000A;You can see a Strongman Attendant and a lever here.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
     <children>
       <child nodeId="node-908"/>
+      <child nodeId="node-1012"/>
     </children>
   </item>
   <item nodeId="node-908">
@@ -443,6 +638,93 @@
   <item nodeId="node-920">
     <command xml:space="preserve">hit dime with money</command>
     <result xml:space="preserve">Nothing happens.&#x000A;You can't hit dime with that!&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+  </item>
+  <item nodeId="node-1012">
+    <command xml:space="preserve">w</command>
+    <result xml:space="preserve">The Ticket Booth&#x000A;You are standing in line at a ticket booth at the carnival. The booth sells tickets to the Hell Ride attraction. The line for the ride forms to the south and the midway continues east and west from here. There is a concession stand to the south west. The ticket booth is garishly painted in purple and green sparkles. There is a Ticket Seller here. The Ticket Seller has a Hell Ride ticket.&#x000A;&#x000A;You can see a Ticket Seller here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1013"/>
+    </children>
+  </item>
+  <item nodeId="node-1013">
+    <command xml:space="preserve">w</command>
+    <result xml:space="preserve">You head west through the midway, the bright lights of the carnival fading behind you as you approach a wooden booth. A sign above the entrance reads "Little Egypt Show - A Journey Into the Mysterious and Exotic!" A rotund attendant, wearing a fez and a dazzling smile, gestures to a small sign beside him that says "Dime Admission."&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1014"/>
+    </children>
+  </item>
+  <item nodeId="node-1014">
+    <command xml:space="preserve">w</command>
+    <result xml:space="preserve">It'll cost you a dime to go that way.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1015"/>
+    </children>
+  </item>
+  <item nodeId="node-1015">
+    <command xml:space="preserve">e</command>
+    <result xml:space="preserve">The Ticket Booth&#x000A;You are standing in line at a ticket booth at the carnival. The booth sells tickets to the Hell Ride attraction. The line for the ride forms to the south and the midway continues east and west from here. There is a concession stand to the south west. The ticket booth is garishly painted in purple and green sparkles. There is a Ticket Seller here. The Ticket Seller has a Hell Ride ticket.&#x000A;&#x000A;You can see a Ticket Seller here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1016"/>
+    </children>
+  </item>
+  <item nodeId="node-1016">
+    <command xml:space="preserve">e</command>
+    <result xml:space="preserve">Strongman Booth&#x000A;This area features a tall, eye-catching machine adorned with bright, colorful lights, typically red, yellow, and blue. A large sign at the top reads "Test Your Strength!" in bold, playful lettering. The machine's base is made of polished wood, with a polished, vintage appearance. At the center is a sturdy metal pole, with a large bell hanging at the top, signaling when a successful attempt has been made. Along the length of the pole are markings indicating how strong you are.  A nearby sign says, "Buy a mallet, strike the bell, win a prize."&#x000A;&#x000A;Spectators gather around, cheering on participants and offering lighthearted jabs and encouragement, creating a lively, competitive atmosphere. The sound of the mallet hitting the target is followed by the resonant clang of the bell (if struck), alongside the buzz of carnival music in the background.&#x000A;&#x000A;You can see a Strongman Attendant and a lever here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1017"/>
+    </children>
+  </item>
+  <item nodeId="node-1017">
+    <command xml:space="preserve">l</command>
+    <result xml:space="preserve">Strongman Booth&#x000A;This area features a tall, eye-catching machine adorned with bright, colorful lights, typically red, yellow, and blue. A large sign at the top reads "Test Your Strength!" in bold, playful lettering. The machine's base is made of polished wood, with a polished, vintage appearance. At the center is a sturdy metal pole, with a large bell hanging at the top, signaling when a successful attempt has been made. Along the length of the pole are markings indicating how strong you are.  A nearby sign says, "Buy a mallet, strike the bell, win a prize."&#x000A;&#x000A;Spectators gather around, cheering on participants and offering lighthearted jabs and encouragement, creating a lively, competitive atmosphere. The sound of the mallet hitting the target is followed by the resonant clang of the bell (if struck), alongside the buzz of carnival music in the background.&#x000A;&#x000A;You can see a Strongman Attendant and a lever here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1018"/>
+    </children>
+  </item>
+  <item nodeId="node-1018">
+    <command xml:space="preserve">w</command>
+    <result xml:space="preserve">The Ticket Booth&#x000A;You are standing in line at a ticket booth at the carnival. The booth sells tickets to the Hell Ride attraction. The line for the ride forms to the south and the midway continues east and west from here. There is a concession stand to the south west. The ticket booth is garishly painted in purple and green sparkles. There is a Ticket Seller here. The Ticket Seller has a Hell Ride ticket.&#x000A;&#x000A;You can see a Ticket Seller here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1019"/>
+    </children>
+  </item>
+  <item nodeId="node-1019">
+    <command xml:space="preserve">l</command>
+    <result xml:space="preserve">The Ticket Booth&#x000A;You are standing in line at a ticket booth at the carnival. The booth sells tickets to the Hell Ride attraction. The line for the ride forms to the south and the midway continues east and west from here. There is a concession stand to the south west. The ticket booth is garishly painted in purple and green sparkles. There is a Ticket Seller here. The Ticket Seller has a Hell Ride ticket.&#x000A;&#x000A;You can see a Ticket Seller here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1020"/>
+    </children>
+  </item>
+  <item nodeId="node-1020">
+    <command xml:space="preserve">s</command>
+    <result xml:space="preserve">Head of the Line&#x000A;You are standing in front of a ticket taker with his hand open waiting for your ticket. The entrance to the ride is south of here.&#x000A;&#x000A;You can see a Ride Attendant here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1021"/>
+    </children>
+  </item>
+  <item nodeId="node-1021">
+    <command xml:space="preserve">l</command>
+    <result xml:space="preserve">Head of the Line&#x000A;You are standing in front of a ticket taker with his hand open waiting for your ticket. The entrance to the ride is south of here.&#x000A;&#x000A;You can see a Ride Attendant here.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
   </item>
@@ -798,6 +1080,60 @@
   <item nodeId="node-983">
     <command xml:space="preserve">z</command>
     <result xml:space="preserve">Time passes.&#x000A;&#x000A;The doors open and your car passes through into the darkness. The safety bar has been lowered.&#x000A;&#x000A;Mist fills the area as you move to the next room.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-984"/>
+    </children>
+  </item>
+  <item nodeId="node-984">
+    <command xml:space="preserve">z</command>
+    <result xml:space="preserve">Time passes.&#x000A;&#x000A;You pass into a room which displays mannequins in stocks in a public square. The stocks are made of heavy wood. The townsfolk are there solely to harrass and ridicule the individuals on display. The punishees"' eyes are downcast as the shame and humiliation of their punishments are realized. The wax figures are especially life like.&#x000A;&#x000A;Mist fills the area as you move to the next room.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-985"/>
+    </children>
+  </item>
+  <item nodeId="node-985">
+    <command xml:space="preserve">e</command>
+    <result xml:space="preserve">You are enjoying the ride too much to do anything but wait and enjoy the show.&#x000A;&#x000A;The next room is dominated by a gallows made of strong hardwood. Standing on the gallows is an executioner wearing a hood protecting his identity. Next to him is a man with a noose around his neck standing on a hatch ready to open.&#x000A;&#x000A;Mist fills the area as you move to the next room.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-986"/>
+    </children>
+  </item>
+  <item nodeId="node-986">
+    <command xml:space="preserve">z</command>
+    <result xml:space="preserve">Time passes.&#x000A;&#x000A;Here you see a bonfire in full conflagration. The flames leap higher and higher consuming the woman tied to the stake. The townsfolk are here holding torches and  jeering at the sight of the poor soul being burnt alive.&#x000A;&#x000A;Mist fills the area as you move to the next room.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-987"/>
+    </children>
+  </item>
+  <item nodeId="node-987">
+    <command xml:space="preserve">z</command>
+    <result xml:space="preserve">Time passes.&#x000A;&#x000A;This a dungeon with all the usual devices. There is a man stretched on the rack. His screams pierce the room. An iron maiden is occupied and you notice the blood seeping from the eyes, ears, and mouth. Another is strapped to a Saint Andrew's Cross and is being flogged harshly.&#x000A;&#x000A;Mist fills the area as you move to the next room.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-988"/>
+    </children>
+  </item>
+  <item nodeId="node-988">
+    <command xml:space="preserve">z</command>
+    <result xml:space="preserve">Time passes.&#x000A;&#x000A;There is a guillotine in this room. The guillotine is being raised and lowered by some mechanism. It appears that the timing of the guillotine is off and it is being lowered onto the cars instead of between them. If a person were to be in a car as it passed under the guillotine, they would be decapitated. Looks like your goose is cooked. Say "Goodnight, Gracie!"&#x000A;&#x000A;&#x000A;&#x000A;    *** You have died. ***&#x000A;&#x000A;&#x000A;In that game you scored 5 out of a possible 100, in 39 turns.&#x000A;&#x000A;&#x000A;Would you like to RESTART, RESTORE a saved game, QUIT, or UNDO the last command?&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-989"/>
+    </children>
+  </item>
+  <item nodeId="node-989">
+    <command xml:space="preserve">quit</command>
+    <result xml:space="preserve"></result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
   </item>
