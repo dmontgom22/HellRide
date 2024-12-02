@@ -34,11 +34,13 @@ The description of the player is "You are despondent given that you and your dat
 Instead of examining the player:
 	say "Oh, stop fussing. You look fine."
 
-Chapter 2 - Figures
+Chapter 2 - Figures & Sounds
 
-Figure of HellRide is the file "HellRide.png".
+Figure of Hell Ride is the file "HellRide.png".
 
 Figure of Midway is the file "Midway.png".
+
+Sound of Strongman Bell is the file "StrongmanBell.ogg".
 
 Chapter 3 - Money Mechanics
 
@@ -160,13 +162,7 @@ Report pouring it into:
 	
 Understand the liquid property as describing a fluid container. Understand "of" as a fluid container.
 
-Chapter 5 - New Actions
-
-
-
-Test me with "s / e / buy mallet / hit base with mallet".
-
-Chapter 6 - Miscellaneous Goodies
+Chapter 5 - Miscellaneous Goodies
 
 A thing can be seen or unseen.
 
@@ -181,7 +177,8 @@ The Midway is a region. Parking Lot, The Booth, Concession Stand, Strongman Boot
 
 Section 1 - Parking Lot
 
-[Display the Figure of HellRide;]
+When play begins:
+	display the Figure of Hell Ride.
 
 when play begins:
 	say "The carnival is in town and you had a date with your sweetie to visit it. After dinner and just as you arrive at the carnival, you and your date
@@ -209,7 +206,8 @@ After buying the ticket:
 	increase score by 5;
 	say "Well done!";
 
-[display Figure of Midway]
+Before looking when the location is the Booth:
+	display Figure of Midway
 
 Section 3 - Concession Stand
 
@@ -246,6 +244,18 @@ a soft pretzel is here. The soft pretzel is edible. The price of the soft pretze
 
 Section 4 - Strongman Booth
 
+The Strongman Booth is a room. "The Strongman Booth is a popular carnival game in which you swing a mallet against a base and cause a striker to hit a bell. Along the length of the pole are markings indicating how strong you are.  A nearby sign says, 'Buy a mallet, strike the bell, win a prize.'[if the strongman attendant contains the mallet] You can see an over-sized mallet here.[end if]"
+
+The markings are here. The markings are scenery. Understand "marking" and "sign" and "signs" as markings. The description of markings is "There are five levels marked on the pole: Weakling, Getting There, Average, Almost Theere, and Muscle Man."
+
+The Strongman Attendant is here. The description of the Strongman Attendant is "An attendant is standing here [if strongman attendant is carrying the mallet]holding a mallet[end if]." The Strongman Attendant carries the stuffed teddy bear and the mallet. The description of the teddy bear is "This is a teddy bear like you had when you were a kid. Right down to the red bow around its neck."
+
+The base is here. The base is fixed in place. Understand "bullseye" as base. The description of the base is "There is a bullseye on the base. I guess this is where you have to aim the mallet."
+
+The mallet is carried by the Strongman Attendant.  The Price of the mallet is $2.00. The description of the mallet is "The mallet is over sized, perhaps to give you an advantage in the Strong Man game."
+
+A strength pattern is a kind of value. The strength patterns are Weakling, Getting Stronger, Average, Almost There, Muscle Man.
+
 Hitting is an action applying to two visible things. Understand "hit [something]" as hitting. Understand "hit [something] with [something preferably held]" as hitting.
 
 Check hitting when the noun is not base:
@@ -257,25 +267,23 @@ Check hitting when the second noun is not mallet:
 Check hitting when the player is not carrying the mallet:
 	say "You['] not holding the mallet." instead.
 	
-Carry out hitting the first time:
-	say "You lift the mallet high and bring it down on the base with all your might! The striker rises towards the bell stopping at '[a random strength pattern]'.";
+After hitting the first time:
+	say "Yay! You got some points!";
 	increase the score by 5;
-	say "Well done";
-	stop the action.
+	continue the action.
 	
-Carry out hitting:
-	say "Nothing happens."
+Carry out hitting when the player is carrying the mallet:
+	say "You lift the mallet high and bring it down on the base with all your might! The striker rises towards the bell stopping at '[a random strength pattern between weakling and almost there]'.";
 	
-A strength pattern is a kind of value. The strength patterns are Weakling, Getting Stronger, Average, Almost There, Muscle Man.
-
-The Strongman Booth is a room. "The Strongman Booth is a popular carnival game in which you swing a mallet against a base and cause a striker to hit a bell. Along the length of the pole are markings indicating how strong you are. [if the room contains the mallet]You can see an over-sized mallet here.[end if]"
-
-The markings are here. The markings are scenery. Understand "marking" and "sign" and "signs" as markings. The description of markings is "There are five levels marked on the pole: Weakling, Getting There, Average, Almost Theere, and Muscle Man."
-
-The base is here. The base is fixed in place. 
-
-The mallet is here.  The Price of the mallet is $2.00. The description of the mallet is "The mallet is over sized, perhaps to give you an advantage in the Strong Man game."
-
+[Carry out hitting:
+	say "Nothing happens."]
+	
+After hitting the base 4 times:
+	play the sound of Strongman Bell;
+	say "The bell rings as the striker reaches the top of the pole. The attendant says, 'You[']re a Muscle Man. Here's a prize for you.'";
+	increase score by 5;
+	now the player carries the stuffed teddy bear.
+	
 Section 5 - Little Egypt Facade
 
 Little Egypt Facade is a room. Little Egypt Facade is east of Little Egypt Show. "You are standing in front of a trailer. There is a stage in front of the trailer. The Barker is encouraging you to step up, pay for, and enjoy the Little Egypt Show."											
@@ -307,7 +315,7 @@ Section 7 - Head of the Line
 
 Head of the Line is a room. Head of the Line is south of Booth. Head of the Line is north of Ride Entrance. "You are standing in front of a ticket taker with his hand open waiting for your ticket. The entrance to the ride is south of here."
 
-The Attendant is a man in Head of the Line. The description of the Attendant is "This is another bored teenager. His thoughts are entirely focused on a cheeseburger for lunch.";
+The Ride Attendant is a man in Head of the Line. The description of the Ride Attendant is "This is another bored teenager. His thoughts are entirely focused on a cheeseburger for lunch.";
 
 [check going south:
 	if the room is not Head of the Line:

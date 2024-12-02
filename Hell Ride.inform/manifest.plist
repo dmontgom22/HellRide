@@ -11,5 +11,10 @@
             <key>4</key>
             <string>Figures\Midway.png</string>
         </dict>
+        <key>Sounds</key>
+        <dict>
+            <key>5</key>
+            <string>Sounds\StrongmanBell.ogg</string>
+        </dict>
     </dict>
 </plist>
