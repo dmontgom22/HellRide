@@ -17,7 +17,10 @@ cover "C:\HellRide\Hell Ride.materials\Cover.png"
 picture 1 "C:\HellRide\Hell Ride.materials\Cover.png"
 picture 3 "C:\HellRide\Hell Ride.materials\Figures\HellRide.png"
 picture 4 "C:\HellRide\Hell Ride.materials\Figures\Midway.png"
-sound 5 "C:\HellRide\Hell Ride.materials\Sounds\StrongmanBell.ogg"
+picture 5 "C:\HellRide\Hell Ride.materials\Figures\TicketBooth.png"
+picture 6 "C:\HellRide\Hell Ride.materials\Figures\LittleEgyptFacade.png"
+picture 7 "C:\HellRide\Hell Ride.materials\Figures\LittleEgyptShow.png"
+sound 8 "C:\HellRide\Hell Ride.materials\Sounds\StrongmanBell.ogg"
 
 ! Placeholder variables
 

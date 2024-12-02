@@ -10,10 +10,16 @@
             <string>Figures\HellRide.png</string>
             <key>4</key>
             <string>Figures\Midway.png</string>
+            <key>5</key>
+            <string>Figures\TicketBooth.png</string>
+            <key>6</key>
+            <string>Figures\LittleEgyptFacade.png</string>
+            <key>7</key>
+            <string>Figures\LittleEgyptShow.png</string>
         </dict>
         <key>Sounds</key>
         <dict>
-            <key>5</key>
+            <key>8</key>
             <string>Sounds\StrongmanBell.ogg</string>
         </dict>
     </dict>

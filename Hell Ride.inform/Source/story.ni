@@ -28,23 +28,9 @@ Use American Dialect.
 Use serial comma.
 The maximum score is 100.
 When play begins, seed the random-number generator with 0.
+The block giving rule is not listed in the check giving it to rules.
 
-Chapter 2- The Player
-
-The description of the player is "You are despondent given that you and your date just had a huge fight and they stormed off. Maybe visiting the attractions at the carnival will make you feel better." The player carries a dime.
-
-Instead of examining the player:
-	say "Oh, stop fussing. You look fine."
-
-Chapter 3- Figures & Sounds
-
-Figure of Hell Ride is the file "HellRide.png".
-
-Figure of Midway is the file "Midway.png".
-
-Sound of Strongman Bell is the file "StrongmanBell.ogg".
-
-Chapter 4- Money Mechanics
+Chapter 2- Money Mechanics
 
 Price is a kind of value. $10.99 specifies a price. A thing has a price. The price of a thing is usually $0.00. After examining something for sale, say "It can be yours for [the price of the noun]."
 
@@ -82,7 +68,7 @@ Instead of buying something free:
 Instead of buying the money:
 	say "The money belongs to you; you buy things with it."
 	
-Chapter 5- Drink Mechanics
+Chapter 3- Drink Mechanics
 
 A volume is a kind of value. 15.9 fl oz specifies a volume with parts ounces and tenths (optional, preamble optional).
 
@@ -164,6 +150,27 @@ Report pouring it into:
 	
 Understand the liquid property as describing a fluid container. Understand "of" as a fluid container.
 
+Chapter 4- The Player
+
+The description of the player is "You are despondent given that you and your date just had a huge fight and they stormed off. Maybe visiting the attractions at the carnival will make you feel better." The player carries a dime.
+
+Instead of examining the player:
+	say "Oh, stop fussing. You look fine."
+
+Chapter 5- Figures & Sounds
+
+Figure of Hell Ride is the file "HellRide.png".
+
+Figure of Midway is the file "Midway.png".
+
+Figure of TicketBooth is the file "TicketBooth.png".
+
+Figure of LittleEgyptFacade is the file "LittleEgyptFacade.png".
+
+Figure of LittleEgyptShow is the file "LittleEgyptShow.png".
+
+Sound of Strongman Bell is the file "StrongmanBell.ogg".
+
 Chapter 6- Miscellaneous Goodies
 
 A thing can be seen or unseen.
@@ -175,7 +182,7 @@ Part 2 - The Game
 
 Chapter 1 - The Midway
 
-The Midway is a region. Parking Lot, The Booth, Concession Stand, Strongman Booth, Little Egypt Facade, Little Egypt Show, and Head of the Line are in the Midway;
+The Midway is a region. Parking Lot, The Ticket Booth, Concession Stand, Strongman Booth, Little Egypt Facade, Little Egypt Show, and Head of the Line are in the Midway;
 
 Section 1 - Parking Lot
 
@@ -197,17 +204,21 @@ After taking blueberries:
 Section 2 - Ticket Booth
 
 Before going south when the location is the Parking Lot and the Booth is unvisited:
-	display Figure of Midway.
+	display Figure of TicketBooth.
+	
+Before looking when the location is the Ticket Booth:
+	display Figure of TicketBooth.
 
-The booth is a room. The booth is north of Head of the Line. The booth is east of the Little Egypt Facade. The booth is west of Strongman Booth. The booth is northeast of the Concession Stand. The  booth is south of the Parking Lot. "You are standing in line at a ticket booth at the carnival. The booth sells tickets to the Hell Ride attraction. The line for the ride forms to the south and the midway continues east and west from here. There is a concession stand to the south west. The ticket booth is garishly painted in purple and green sparkles. There is a Ticket Seller here. [if Seller is carrying hell ride ticket]The Ticket Seller has a ticket.[end if]"
+The Ticket Booth is a room. The ticket booth is north of Head of the Line. The ticket booth is east of the Little Egypt Facade. The ticket booth is west of Strongman Booth. The ticket booth is northeast of the Concession Stand. The ticket booth is south of the Parking Lot. "You are standing in line at a ticket booth at the carnival. The booth sells tickets to the Hell Ride attraction. The line for the ride forms to the south and the midway continues east and west from here. There is a concession stand to the south west. The ticket booth is garishly painted in purple and green sparkles. There is a Ticket Seller here. [if ticket seller is carrying hell ride ticket]The Ticket Seller has a Hell Ride ticket.[end if]"
 
-The Seller is a man in the booth. The description of seller is "This is a bored teenager hired to sell ride tickets all week at this carnival. He's thinking about having a brewski with his bros after work.". 
+The Ticket Seller is a man in the booth. The description of ticket seller is "This is a bored teenager hired to sell ride tickets all week at this carnival. He's thinking about having a brewski with his bros after work.". 
 
-The Hell Ride ticket is a thing. The seller carries the Hell Ride ticket. The price of the Hell Ride ticket is $2.50. The description of the Hell Ride ticket is "This ticket will 'Admit One' to the Hell Ride.[line break]It[']s a real 'E' ticket, baby!". 
+The Hell Ride ticket is a thing. The seller carries the Hell Ride ticket. The price of the Hell Ride ticket is $2.50. The description of the Hell Ride ticket is "This Hell Ride ticket will 'Admit One' to the Hell Ride.[line break]It[']s a real 'E' ticket, baby!". 
 
-After buying the ticket:
+After buying the hell ride ticket:
 	increase score by 5;
 	say "Well done!";
+	
 
 Section 3 - Concession Stand
 
@@ -234,13 +245,13 @@ Instead of player drinking a fluid container:
 		if the current volume of the noun is less than 0.0 fl oz, now the current volume of the noun is 0.0 fl oz;
 		say "[The person asked] gulp down some [liquid of the noun]."
 
-a bucket of popcorn is here. The bucket of popcorn is edible. The price of popcorn is $2.50. The description of the popcorn is "The bucket of popcorn looks enormous!"
+A bucket of popcorn is here. The bucket of popcorn is edible. The price of popcorn is $2.50. The description of the popcorn is "The bucket of popcorn looks enormous!"
 
-a candy apple is here. The candy apple is edible. The price of a candy apple is $1.50. The description of the candy apple is "The candy apple is your typical carmel covered apple. It looks like it would get stuck in your teeth."
+A candy apple is here. The candy apple is edible. The price of a candy apple is $1.50. The description of the candy apple is "The candy apple is your typical carmel covered apple. It looks like it would get stuck in your teeth."
 
-cotton candy is here. Cotton candy is edible. The price of cotton candy is $1.50. The description of cotton candy is "The cotton candy is a mixture of pink and blue floss."
+Cotton candy is here. Cotton candy is edible. The price of cotton candy is $1.50. The description of cotton candy is "The cotton candy is a mixture of pink and blue floss."
 
-a soft pretzel is here. The soft pretzel is edible. The price of the soft pretzel is $1.50. The description of the soft pretzel is "The soft pretzel is sprinkled generously with salt."
+A soft pretzel is here. The soft pretzel is edible. The price of the soft pretzel is $1.50. The description of the soft pretzel is "The soft pretzel is sprinkled generously with salt."
 
 Section 4 - Strongman Booth
 
@@ -248,7 +259,7 @@ The Strongman Booth is a room. "The Strongman Booth is a popular carnival game i
 
 The markings are here. The markings are scenery. Understand "marking" and "sign" and "signs" as markings. The description of markings is "There are five levels marked on the pole: Weakling, Getting There, Average, Almost Theere, and Muscle Man."
 
-The Strongman Attendant is here. The description of the Strongman Attendant is "An attendant is standing here [if strongman attendant is carrying the mallet]holding a mallet[end if]." The Strongman Attendant carries the stuffed teddy bear and the mallet. The description of the teddy bear is "This is a teddy bear like you had when you were a kid. Right down to the red bow around its neck."
+The Strongman Atendant is here. The description of the Strongman Attendant is "An attendant is standing here [if strongman attendant is carrying the mallet]holding a mallet[end if]." The Strongman Attendant carries the stuffed teddy bear and the mallet. The description of the teddy bear is "This is a teddy bear like you had when you were a kid. Right down to the red bow around its neck."
 
 The base is here. The base is fixed in place. Understand "bullseye" as base. The description of the base is "There is a bullseye on the base. I guess this is where you have to aim the mallet."
 
@@ -274,9 +285,16 @@ After hitting the base when second noun is the mallet 5 times :
 	play the sound of Strongman Bell;
 	say "You swing the mallet one more time. The bell rings as the striker reaches the top of the pole. The attendant says, 'You[']re a Muscle Man. Here's a prize for you.'";
 	increase score by 5;
+	say "You now carry the stuffed teddy bear.";
 	now the player carries the stuffed teddy bear.
 	
 Section 5 - Little Egypt Facade
+
+Before going west when the location is the Ticket Booth and the Little Egypt Facade is unvisited:
+	display Figure of LittleEgyptFacade.
+	
+Before looking when the location is the Little Egypt Facade:
+	display Figure of LittleEgyptFacade.
 
 Little Egypt Facade is a room. Little Egypt Facade is east of Little Egypt Show. "You are standing in front of a trailer. There is a stage in front of the trailer. The Barker is encouraging you to step up, pay for, and enjoy the Little Egypt Show.[if location is unvisited]The barker cries: [line break][line break]Ladies and gentlemen, boys and girls, gather 'round! [line break]Step right up and witness the spectacle that’s taken the world by storm! [line break]She walks, she talks, she crawls on her belly like a reptile. [line break]Behold the one, the only Little Egypt, performing her legendary Dance of the Pyramids—a dazzling display of mystery, grace, and exotic allure! [line break]For just a dime, a mere one tenth of a dollar, prepare to be transported to the sands of Cairo, where enchantment and wonder await![end if]"
 
@@ -289,11 +307,16 @@ Check going west when the player is in the Little Egypt Facade and the barker is
 Check going west when the player is in the Little Egypt Facade and the barker is carrying the dime:
 	Continue the action.
 
-The block giving rule is not listed in the check giving it to rules.
-After  giving when the noun is dime and the second noun is barker:
+After giving when the noun is dime and the second noun is barker:
 	say "You can now head west into the show."
 
-Section 6 - Little Egypt Show				
+Section 6 - Little Egypt Show	
+
+Before going west when the location is the Little Egypt Facade and the Little Egypt Show is unvisited and barker is carrying the dime:
+	display Figure of LittleEgyptShow.	
+	
+Before looking when the location is the Little Egypt Show:
+	display Figure of LittleEgyptShow.		
 
 Little Egypt Show is a room. Little Egypt Show is west of Little Egypt Facade. "You are inside the Little Egypt Show. The attraction facade is to the east."
 
@@ -306,7 +329,7 @@ When LittleEgyptAuto begins:
 	now the player is in the folding chair.
 
 When LittleEgyptAuto ends:
-	say "You stand and applaud until your hands are sore. Did she wink at me?"
+	say "You applaud until your hands are sore. Did she wink at me?".
 	
 Every turn during LittleEgyptAuto:
 	repeat through Table of LittleEgypt Events:
@@ -337,7 +360,7 @@ Check going south when the location is Head of the Line and the Ride Attendant d
 
 Chapter 2 - The Ride
 
-HellRide is a region. Ride Entrance, Stocks Room, Gallows Room, Stake Room, Dungeon, Guillotine Room, and Ride Exit are in HellRide.
+HellRide is a region. Ride Entrance is in HellRide.
 
 Section 1 - Ride Entrance
 
@@ -370,9 +393,9 @@ Instead of doing something other than waiting, looking, listening or examining d
 When HellRideAuto ends:
 	end the story finally saying "You have died.";
 	
-Ride Entrance is a room. Ride Entrance is south of Head of the Line. "The cars that will take you into the fearsome Hell Ride stop here for you to board.  To the south is the track that will take you into the ride. The safety bar is raised allowing you to entering the car.". 
+Ride Entrance is a room. Ride Entrance is south of Head of the Line. "The cars that will take you into the fearsome Hell Ride stop here for you to board.  To the south is the track that will take you into the ride. The safety bar is raised allowing you to entering the car. East of here is a gate with a sign that reads 'Employees Only'.". 
 
-the car is a vehicle in the Ride Entrance. The description of the car is "A car waits to take you through the horror that is Hell Ride."
+The car is a vehicle in the Ride Entrance. The description of the car is "A car waits to take you through the horror that is Hell Ride."
 
 Before going south when the player is in the Ride Entrance:
 	say "You can't go that way." instead;
@@ -381,6 +404,14 @@ Before going south when the player is in the Ride Entrance:
 Test me with "s / buy ticket / s / give ticket to attendant / s".
 
 Chapter 3 - Backstage
+
+Backstage is a region. Backstage Entrance is in Backstage.
+
+Section 1 - Backstage Entrance
+
+Backstage Entrance is a room. Backstage Entrance is east of the Ride Entrance. "This room is backstage at the Hell Ride attraction. There an exit to the south."
+
+
 
 
 
