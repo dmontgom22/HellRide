@@ -637,7 +637,7 @@ Constant relation_id_U20 = 141;
 Constant relation_id_U21 = 142;
 Constant kind_ref_U1 = 561;
 Constant OBJECT_TY = 33;
-Constant ICOUNT_OBJECT = 83;
+Constant ICOUNT_OBJECT = 84;
 Constant kind_ref_U2 = 561;
 Constant SCENE_TY = 34;
 Constant ICOUNT_SCENE = 3;
@@ -2524,7 +2524,7 @@ Constant anchor_U348 = 1105;
 Constant anchor_U349 = 1105;
 Constant kind_ref_U51 = 561;
 Constant WEAK_ID_52 = 3;
-Constant ICOUNT_ROOM = 27;
+Constant ICOUNT_ROOM = 28;
 Constant K1_room_First = I_parking_lot_U1;
 Constant kind_ref_U52 = 561;
 Constant WEAK_ID_53 = 4;
@@ -3392,6 +3392,8 @@ Constant id_U224 = 561;
 Constant id_U225 = 561;
 Constant id_U226 = 561;
 Constant id_U227 = 561;
+Constant id_U228 = 561;
+Constant id_U229 = 561;
 Constant MEMORY_HEAP_SIZE = 131072;
 Constant BASICINFORMKIT = 1;
 Constant HDR_MAGICNUMBER = 0;
@@ -4239,94 +4241,94 @@ Constant alphabetised_text_9 = "Concession Stand";
 Constant alphabetised_text_10 = "Cotton candy";
 Constant alphabetised_text_11 = "Crawl Space";
 Constant alphabetised_text_12 = "Dungeon";
-Constant alphabetised_text_13 = "E Quadrant";
-Constant alphabetised_text_14 = "Electrical Panel";
-Constant alphabetised_text_15 = "Folding Chair";
-Constant alphabetised_text_16 = "Gallows Room";
-Constant alphabetised_text_17 = "Guillotine Room";
-Constant alphabetised_text_18 = "Head of the Line";
-Constant alphabetised_text_19 = "Hell Ride";
-Constant alphabetised_text_20 = "Hell Ride ticket";
-Constant alphabetised_text_21 = "HellRide";
-Constant alphabetised_text_22 = "Here you see a bonfire in full conflagration. The flames leap higher and higher consuming the woman tied to the stake. The townsfolk are here holding torches and  jeering at the sight of the poor soul being burnt alive.";
-Constant alphabetised_text_23 = "High Striker";
-Constant alphabetised_text_24 = "Horror";
-Constant alphabetised_text_25 = "In the corner is a pile of junk.";
-Constant alphabetised_text_26 = "It's a dime. Ten cents. One tenth of a dollar.";
-Constant alphabetised_text_27 = "Kiosk";
-Constant alphabetised_text_28 = "Little Egypt";
-Constant alphabetised_text_29 = "Little Egypt emerges draped in flowing silk veils which she skillfully uses as part of the dance. Her attire consists of a sparkling, sequined bodice and a flowing skirt, adorned with jingling coin belts and jewelry that accentuate her movements.";
-Constant alphabetised_text_30 = "Little Egypt is an exotic looking, beautiful woman who is draped in flowing silk veils which she skillfully uses as part of the dance. Her attire consists of a sparkling, sequined bodice and a flowing skirt, adorned with jingling coin belts and jewelry that accentuate her movements.";
-Constant alphabetised_text_31 = "Little Egypt makes eye contact with you and smiles enigmatically. During her performance she balances a sword on her head and accents her dance with finger cymbals.";
-Constant alphabetised_text_32 = "Little Eygpt";
-Constant alphabetised_text_33 = "Maintenance Office";
-Constant alphabetised_text_34 = "Mechanical Room";
-Constant alphabetised_text_35 = "Midway";
-Constant alphabetised_text_36 = "NE Quadrant";
-Constant alphabetised_text_37 = "NW Quadrant";
-Constant alphabetised_text_38 = "No Shoes";
-Constant alphabetised_text_39 = "Parking Lot";
-Constant alphabetised_text_40 = "QUIT";
-Constant alphabetised_text_41 = "RESTART";
-Constant alphabetised_text_42 = "RESTORE a saved game";
-Constant alphabetised_text_43 = "Ride Attendent";
-Constant alphabetised_text_44 = "Ride Entrance";
-Constant alphabetised_text_45 = "Ride Exit";
-Constant alphabetised_text_46 = "S Quadrant";
-Constant alphabetised_text_47 = "SE Quadrant";
-Constant alphabetised_text_48 = "SW Quadrant";
-Constant alphabetised_text_49 = "Sailor";
-Constant alphabetised_text_50 = "Show Facade";
-Constant alphabetised_text_51 = "Show Tent";
-Constant alphabetised_text_52 = "Spinner";
-Constant alphabetised_text_53 = "Stage";
-Constant alphabetised_text_54 = "Stake Room";
-Constant alphabetised_text_55 = "Stocks Room";
-Constant alphabetised_text_56 = "Strongman Attendent";
-Constant alphabetised_text_57 = "The blueberries are ripe, juicy, and a deep blue color.";
-Constant alphabetised_text_58 = "The bucket of popcorn looks enormous!";
-Constant alphabetised_text_59 = "The candy apple is your typical carmel covered apple. It looks like it would get stuck in your teeth.";
-Constant alphabetised_text_60 = "The cars that will take you into the fearsome Hell Ride stop here for you to board.  To the south is the track that will take you into the ride. The safety bar is raised allowing you to enter the car. East of here the darkness looks just a little bit darker.";
-Constant alphabetised_text_61 = "The cotton candy is a mixture of pink and blue floss.";
-Constant alphabetised_text_62 = "The mallet is over sized, perhaps to give you an advantage in the Strong Man game.";
-Constant alphabetised_text_63 = "The music alternates between hauntingly slow melodies and rapid, energetic drum beats, creating an emotional arc that keeps the you entranced. Little Egypt relies on the music's dynamic changes to tell a story with movements reflecting joy, sorrow, seduction, and celebration.";
-Constant alphabetised_text_64 = "The next room is dominated by a gallows made of strong hardwood. Standing on the gallows is an executioner wearing a hood protecting his identity. Next to him is a man with a noose around his neck standing on a hatch ready to open.";
-Constant alphabetised_text_65 = "The performance begins with slow, undulating movements, drawing the you into the rhythm of exotic live music played on traditional instruments like the oud, darbuka, or zurna. As the tempo builds, her hips, torso, and hands move in intricate, mesmerizing patterns, demonstrating remarkable control and fluidity. She incorporates dramatic spins, drops, and shimmies, often accentuating the beat of the music with a quick jingle of her coin belt.";
-Constant alphabetised_text_66 = "The performance concludes with a dramatic flourish of a fast-paced shimmy, a bold spin, and Little Egypt dramatically casts off her veils. The dancer takes a bow to enthusiastic applause, leaving you spellbound by the sensual yet artful display.";
-Constant alphabetised_text_67 = "The ride of a lifetime...";
-Constant alphabetised_text_68 = "The soda is ice cold.";
-Constant alphabetised_text_69 = "The soft pretzel is sprinkled generously with salt.";
-Constant alphabetised_text_70 = "The stage is decorated to resemble an exotic Middle Eastern market or palace, featuring rich, colorful fabrics, brass ornaments, and lanterns casting a warm, flickering glow. Scents of incense waft through the air, enhancing the atmosphere of mystique. The backdrop displays painted scenes of pyramids, desert landscapes, and domed structures to evoking a sense of being transported to the ~Middle East~.";
-Constant alphabetised_text_71 = "There are a variety of things to eat here.";
-Constant alphabetised_text_72 = "There are all kinds of vehicles in the parking lot.";
-Constant alphabetised_text_73 = "There are five levels marked on the pole: Weakling, Getting There, Average, Almost Theee, and Muscle Man.";
-Constant alphabetised_text_74 = "There is a bullseye on the base. I guess this is where you have to aim the mallet.";
-Constant alphabetised_text_75 = "There is a guillotine in this room. The guillotine is being raised and lowered by some mechanism. It appears that the timing of the guillotine is off and it is being lowered onto the cars instead of between them. If a person were to be in a car as it passed under the guillotine, they would be decapitated.";
-Constant alphabetised_text_76 = "There is machinery filling the room.";
-Constant alphabetised_text_77 = "This a dungeon with all the usual devices. There is a man stretched on the rack. His screams pierce the room. An iron maiden is occupied and you notice the blood seeping from the eyes, ears, and mouth. Another is strapped to a Saint Andrew's Cross and is being flogged harshly.";
-Constant alphabetised_text_78 = "This appears to be the maintenance office, There is a desk here.";
-Constant alphabetised_text_79 = "This crawl space is extremely small. You begin to feel claustrophobic in here.";
-Constant alphabetised_text_80 = "This is a bored teenager hired to sell ride tickets all week at this carnival. He's thinking about having a brewski with his bros after work.";
-Constant alphabetised_text_81 = "This is a flashlight. A nice one.";
-Constant alphabetised_text_82 = "This is a pad of lined paper.";
-Constant alphabetised_text_83 = "This is a poster of America's swwetheart, Taylor Swift.";
-Constant alphabetised_text_84 = "This is a red stapler.";
-Constant alphabetised_text_85 = "This is a sharp pair of office scissors.";
-Constant alphabetised_text_86 = "This is a skeleton key. Invariably, the lock this key fits will likely be cursed. Adventurer beware!";
-Constant alphabetised_text_87 = "This is a teddy bear like you had when you were a kid. Right down to the red bow around its neck.";
-Constant alphabetised_text_88 = "This is another bored teenager. His thoughts are entirely focused on a cheeseburger for lunch.";
-Constant alphabetised_text_89 = "This is one of many folding chairs in the tent tonight.";
-Constant alphabetised_text_90 = "This is the standard issue Swss Army knife with all the expected gadgets.";
-Constant alphabetised_text_91 = "This room is backstage at the Hell Ride attraction. West is back the way you came from. There an exit to the south. There is a pile of junk in the corner.";
-Constant alphabetised_text_92 = "This room is oozing with electromagnetic energy. You can feel your hair stand on end and all your nerves twitching. This feels dangerous!";
-Constant alphabetised_text_93 = "Treats";
-Constant alphabetised_text_94 = "UNDO the last command";
-Constant alphabetised_text_95 = "W Quadrant";
-Constant alphabetised_text_96 = "You are despondent given that you and your date just had a huge fight and they stormed off. Maybe visiting the attractions at the carnival will make you feel better.";
-Constant alphabetised_text_97 = "You are in a section of the electrical room. There is an exit to the east.";
-Constant alphabetised_text_98 = "You are in a section of the electrical room. There is an exit to the north east.";
-Constant alphabetised_text_99 = "You are in a section of the electrical room. There is an exit to the north west.";
-Constant alphabetised_text_100 = "You are in a section of the electrical room. There is an exit to the north.";
+Constant alphabetised_text_13 = "Electrical Closet Eleven";
+Constant alphabetised_text_14 = "Electrical Closet Five";
+Constant alphabetised_text_15 = "Electrical Closet Nine";
+Constant alphabetised_text_16 = "Electrical Closet One";
+Constant alphabetised_text_17 = "Electrical Closet Seven";
+Constant alphabetised_text_18 = "Electrical Closet Three";
+Constant alphabetised_text_19 = "Electrical Room North";
+Constant alphabetised_text_20 = "Electrical Room South";
+Constant alphabetised_text_21 = "Folding Chair";
+Constant alphabetised_text_22 = "Gallows Room";
+Constant alphabetised_text_23 = "Guillotine Room";
+Constant alphabetised_text_24 = "Head of the Line";
+Constant alphabetised_text_25 = "Hell Ride";
+Constant alphabetised_text_26 = "Hell Ride ticket";
+Constant alphabetised_text_27 = "HellRide";
+Constant alphabetised_text_28 = "Here you see a bonfire in full conflagration. The flames leap higher and higher consuming the woman tied to the stake. The townsfolk are here holding torches and  jeering at the sight of the poor soul being burnt alive.";
+Constant alphabetised_text_29 = "High Striker";
+Constant alphabetised_text_30 = "Horror";
+Constant alphabetised_text_31 = "In the corner is a pile of junk.";
+Constant alphabetised_text_32 = "It's a dime. Ten cents. One tenth of a dollar.";
+Constant alphabetised_text_33 = "Kiosk";
+Constant alphabetised_text_34 = "Little Egypt";
+Constant alphabetised_text_35 = "Little Egypt emerges draped in flowing silk veils which she skillfully uses as part of the dance. Her attire consists of a sparkling, sequined bodice and a flowing skirt, adorned with jingling coin belts and jewelry that accentuate her movements.";
+Constant alphabetised_text_36 = "Little Egypt is an exotic looking, beautiful woman who is draped in flowing silk veils which she skillfully uses as part of the dance. Her attire consists of a sparkling, sequined bodice and a flowing skirt, adorned with jingling coin belts and jewelry that accentuate her movements.";
+Constant alphabetised_text_37 = "Little Egypt makes eye contact with you and smiles enigmatically. During her performance she balances a sword on her head and accents her dance with finger cymbals.";
+Constant alphabetised_text_38 = "Little Eygpt";
+Constant alphabetised_text_39 = "Maintenance Office";
+Constant alphabetised_text_40 = "Mechanical Room North";
+Constant alphabetised_text_41 = "Mechanical Room South";
+Constant alphabetised_text_42 = "Midway";
+Constant alphabetised_text_43 = "No Shoes";
+Constant alphabetised_text_44 = "Parking Lot";
+Constant alphabetised_text_45 = "QUIT";
+Constant alphabetised_text_46 = "RESTART";
+Constant alphabetised_text_47 = "RESTORE a saved game";
+Constant alphabetised_text_48 = "Ride Attendent";
+Constant alphabetised_text_49 = "Ride Entrance";
+Constant alphabetised_text_50 = "Ride Exit";
+Constant alphabetised_text_51 = "Sailor";
+Constant alphabetised_text_52 = "Show Facade";
+Constant alphabetised_text_53 = "Show Tent";
+Constant alphabetised_text_54 = "Stage";
+Constant alphabetised_text_55 = "Stake Room";
+Constant alphabetised_text_56 = "Stocks Room";
+Constant alphabetised_text_57 = "Storage Room";
+Constant alphabetised_text_58 = "Strongman Attendent";
+Constant alphabetised_text_59 = "The blueberries are ripe, juicy, and a deep blue color.";
+Constant alphabetised_text_60 = "The bucket of popcorn looks enormous!";
+Constant alphabetised_text_61 = "The candy apple is your typical carmel covered apple. It looks like it would get stuck in your teeth.";
+Constant alphabetised_text_62 = "The cars that will take you into the fearsome Hell Ride stop here for you to board.  To the south is the track that will take you into the ride. The safety bar is raised allowing you to enter the car. East of here the darkness looks just a little bit darker.";
+Constant alphabetised_text_63 = "The cotton candy is a mixture of pink and blue floss.";
+Constant alphabetised_text_64 = "The mallet is over sized, perhaps to give you an advantage in the Strong Man game.";
+Constant alphabetised_text_65 = "The music alternates between hauntingly slow melodies and rapid, energetic drum beats, creating an emotional arc that keeps the you entranced. Little Egypt relies on the music's dynamic changes to tell a story with movements reflecting joy, sorrow, seduction, and celebration.";
+Constant alphabetised_text_66 = "The next room is dominated by a gallows made of strong hardwood. Standing on the gallows is an executioner wearing a hood protecting his identity. Next to him is a man with a noose around his neck standing on a hatch ready to open.";
+Constant alphabetised_text_67 = "The performance begins with slow, undulating movements, drawing the you into the rhythm of exotic live music played on traditional instruments like the oud, darbuka, or zurna. As the tempo builds, her hips, torso, and hands move in intricate, mesmerizing patterns, demonstrating remarkable control and fluidity. She incorporates dramatic spins, drops, and shimmies, often accentuating the beat of the music with a quick jingle of her coin belt.";
+Constant alphabetised_text_68 = "The performance concludes with a dramatic flourish of a fast-paced shimmy, a bold spin, and Little Egypt dramatically casts off her veils. The dancer takes a bow to enthusiastic applause, leaving you spellbound by the sensual yet artful display.";
+Constant alphabetised_text_69 = "The ride of a lifetime...";
+Constant alphabetised_text_70 = "The soda is ice cold.";
+Constant alphabetised_text_71 = "The soft pretzel is sprinkled generously with salt.";
+Constant alphabetised_text_72 = "The stage is decorated to resemble an exotic Middle Eastern market or palace, featuring rich, colorful fabrics, brass ornaments, and lanterns casting a warm, flickering glow. Scents of incense waft through the air, enhancing the atmosphere of mystique. The backdrop displays painted scenes of pyramids, desert landscapes, and domed structures to evoking a sense of being transported to the ~Middle East~.";
+Constant alphabetised_text_73 = "There are a variety of things to eat here.";
+Constant alphabetised_text_74 = "There are all kinds of vehicles in the parking lot.";
+Constant alphabetised_text_75 = "There are five levels marked on the pole: Weakling, Getting There, Average, Almost Theee, and Muscle Man.";
+Constant alphabetised_text_76 = "There is a bullseye on the base. I guess this is where you have to aim the mallet.";
+Constant alphabetised_text_77 = "There is a guillotine in this room. The guillotine is being raised and lowered by some mechanism. It appears that the timing of the guillotine is off and it is being lowered onto the cars instead of between them. If a person were to be in a car as it passed under the guillotine, they would be decapitated.";
+Constant alphabetised_text_78 = "There is machinery filling the room.";
+Constant alphabetised_text_79 = "This a dungeon with all the usual devices. There is a man stretched on the rack. His screams pierce the room. An iron maiden is occupied and you notice the blood seeping from the eyes, ears, and mouth. Another is strapped to a Saint Andrew's Cross and is being flogged harshly.";
+Constant alphabetised_text_80 = "This appears to be the maintenance office, There is a desk here.";
+Constant alphabetised_text_81 = "This crawl space is extremely small. You begin to feel claustrophobic in here.";
+Constant alphabetised_text_82 = "This is a bored teenager hired to sell ride tickets all week at this carnival. He's thinking about having a brewski with his bros after work.";
+Constant alphabetised_text_83 = "This is a flashlight. A nice one.";
+Constant alphabetised_text_84 = "This is a pad of lined paper.";
+Constant alphabetised_text_85 = "This is a poster of America's swwetheart, Taylor Swift.";
+Constant alphabetised_text_86 = "This is a red stapler.";
+Constant alphabetised_text_87 = "This is a sharp pair of office scissors.";
+Constant alphabetised_text_88 = "This is a small silver key. I wonder what it unlocks.";
+Constant alphabetised_text_89 = "This is a teddy bear like you had when you were a kid. Right down to the red bow around its neck.";
+Constant alphabetised_text_90 = "This is another bored teenager. His thoughts are entirely focused on a cheeseburger for lunch.";
+Constant alphabetised_text_91 = "This is one of many folding chairs in the tent tonight.";
+Constant alphabetised_text_92 = "This is the standard issue Swss Army knife with all the expected gadgets.";
+Constant alphabetised_text_93 = "This room is backstage at the Hell Ride attraction. West is back the way you came from. There an exit to the south. There is a pile of junk in the corner.";
+Constant alphabetised_text_94 = "This room is oozing with electromagnetic energy. You can feel your hair stand on end and all your nerves twitching. This feels dangerous!";
+Constant alphabetised_text_95 = "Treats";
+Constant alphabetised_text_96 = "UNDO the last command";
+Constant alphabetised_text_97 = "You are despondent given that you and your date just had a huge fight and they stormed off. Maybe visiting the attractions at the carnival will make you feel better.";
+Constant alphabetised_text_98 = "You are in a section of the electrical room. There is an exit to the east.";
+Constant alphabetised_text_99 = "You are in a section of the electrical room. There is an exit to the north east.";
+Constant alphabetised_text_100 = "You are in a section of the electrical room. There is an exit to the north west.";
 Constant alphabetised_text_101 = "You are in a section of the electrical room. There is an exit to the south east.";
 Constant alphabetised_text_102 = "You are in a section of the electrical room. There is an exit to the south west.";
 Constant alphabetised_text_103 = "You are in a section of the electrical room. There is an exit to the west.";
@@ -4453,7 +4455,7 @@ Constant text_U34 = alphabetised_text_143;
 Constant text_U35 = alphabetised_text_164;
 Constant text_U36 = alphabetised_text_124;
 Constant text_U37 = alphabetised_text_171;
-Constant text_U38 = alphabetised_text_96;
+Constant text_U38 = alphabetised_text_97;
 Constant text_U39 = alphabetised_text_110;
 Constant text_U40 = alphabetised_text_171;
 Constant text_U41 = alphabetised_text_146;
@@ -4511,16 +4513,16 @@ Constant text_U53 = alphabetised_text_167;
 Constant K15_player_s_holdall_First = nothing;
 Constant text_U54 = alphabetised_text_148;
 Constant text_U55 = alphabetised_text_0;
-Constant text_U56 = alphabetised_text_38;
-Constant text_U57 = alphabetised_text_67;
-Constant text_U58 = alphabetised_text_24;
+Constant text_U56 = alphabetised_text_43;
+Constant text_U57 = alphabetised_text_69;
+Constant text_U58 = alphabetised_text_30;
 Constant text_U59 = alphabetised_text_108;
 Constant column_identity_U1 = table_column_id_U1;
-Constant text_U60 = alphabetised_text_41;
-Constant text_U61 = alphabetised_text_42;
+Constant text_U60 = alphabetised_text_46;
+Constant text_U61 = alphabetised_text_47;
 Constant text_U62 = alphabetised_text_155;
-Constant text_U63 = alphabetised_text_40;
-Constant text_U64 = alphabetised_text_94;
+Constant text_U63 = alphabetised_text_45;
+Constant text_U64 = alphabetised_text_96;
 Constant column_identity_U2 = table_column_id_U2;
 Constant column_identity_U3 = table_column_id_U3;
 Constant column_identity_U4 = table_column_id_U4;
@@ -4538,160 +4540,162 @@ Constant K19_rideable_vehicle_First = nothing;
 Constant text_U68 = alphabetised_text_152;
 Constant text_U69 = alphabetised_text_168;
 Constant text_U70 = alphabetised_text_120;
-Constant text_U71 = alphabetised_text_49;
+Constant text_U71 = alphabetised_text_51;
 Constant text_U72 = alphabetised_text_138;
-Constant text_U73 = alphabetised_text_39;
-Constant text_U74 = alphabetised_text_35;
+Constant text_U73 = alphabetised_text_44;
+Constant text_U74 = alphabetised_text_42;
 Constant text_U75 = alphabetised_text_150;
-Constant text_U76 = alphabetised_text_27;
+Constant text_U76 = alphabetised_text_33;
 Constant text_U77 = alphabetised_text_9;
 Constant text_U78 = alphabetised_text_105;
-Constant text_U79 = alphabetised_text_23;
-Constant text_U80 = alphabetised_text_50;
-Constant text_U81 = alphabetised_text_51;
+Constant text_U79 = alphabetised_text_29;
+Constant text_U80 = alphabetised_text_52;
+Constant text_U81 = alphabetised_text_53;
 Constant text_U82 = alphabetised_text_104;
-Constant text_U83 = alphabetised_text_18;
+Constant text_U83 = alphabetised_text_24;
 Constant text_U84 = alphabetised_text_106;
 Constant text_U85 = alphabetised_text_7;
-Constant text_U86 = alphabetised_text_72;
+Constant text_U86 = alphabetised_text_74;
 Constant text_U87 = alphabetised_text_115;
 Constant text_U88 = alphabetised_text_120;
 Constant text_U89 = alphabetised_text_114;
-Constant text_U90 = alphabetised_text_57;
+Constant text_U90 = alphabetised_text_59;
 Constant text_U91 = alphabetised_text_6;
 Constant text_U92 = alphabetised_text_123;
-Constant text_U93 = alphabetised_text_26;
-Constant text_U94 = alphabetised_text_20;
+Constant text_U93 = alphabetised_text_32;
+Constant text_U94 = alphabetised_text_26;
 Constant text_U95 = alphabetised_text_8;
-Constant text_U96 = alphabetised_text_80;
+Constant text_U96 = alphabetised_text_82;
 Constant text_U97 = alphabetised_text_138;
 Constant text_U98 = alphabetised_text_165;
-Constant text_U99 = alphabetised_text_71;
-Constant text_U100 = alphabetised_text_93;
+Constant text_U99 = alphabetised_text_73;
+Constant text_U100 = alphabetised_text_95;
 Constant text_U101 = alphabetised_text_139;
 Constant text_U102 = alphabetised_text_117;
-Constant text_U103 = alphabetised_text_68;
+Constant text_U103 = alphabetised_text_70;
 Constant text_U104 = alphabetised_text_131;
 Constant text_U105 = alphabetised_text_116;
-Constant text_U106 = alphabetised_text_58;
+Constant text_U106 = alphabetised_text_60;
 Constant text_U107 = alphabetised_text_118;
-Constant text_U108 = alphabetised_text_59;
+Constant text_U108 = alphabetised_text_61;
 Constant text_U109 = alphabetised_text_10;
-Constant text_U110 = alphabetised_text_61;
+Constant text_U110 = alphabetised_text_63;
 Constant text_U111 = alphabetised_text_156;
-Constant text_U112 = alphabetised_text_69;
+Constant text_U112 = alphabetised_text_71;
 Constant text_U113 = alphabetised_text_137;
-Constant text_U114 = alphabetised_text_73;
-Constant text_U115 = alphabetised_text_56;
+Constant text_U114 = alphabetised_text_75;
+Constant text_U115 = alphabetised_text_58;
 Constant text_U116 = alphabetised_text_146;
 Constant text_U117 = alphabetised_text_163;
-Constant text_U118 = alphabetised_text_87;
+Constant text_U118 = alphabetised_text_89;
 Constant text_U119 = alphabetised_text_162;
-Constant text_U120 = alphabetised_text_90;
+Constant text_U120 = alphabetised_text_92;
 Constant text_U121 = alphabetised_text_120;
 Constant text_U122 = alphabetised_text_149;
-Constant text_U123 = alphabetised_text_83;
+Constant text_U123 = alphabetised_text_85;
 Constant text_U124 = alphabetised_text_136;
-Constant text_U125 = alphabetised_text_62;
+Constant text_U125 = alphabetised_text_64;
 Constant text_U126 = alphabetised_text_154;
 Constant text_U127 = alphabetised_text_135;
-Constant text_U128 = alphabetised_text_74;
+Constant text_U128 = alphabetised_text_76;
 Constant text_U129 = alphabetised_text_5;
 Constant text_U130 = alphabetised_text_146;
-Constant text_U131 = alphabetised_text_32;
+Constant text_U131 = alphabetised_text_38;
 Constant text_U132 = alphabetised_text_170;
-Constant text_U133 = alphabetised_text_28;
-Constant text_U134 = alphabetised_text_30;
-Constant text_U135 = alphabetised_text_53;
-Constant text_U136 = alphabetised_text_70;
-Constant text_U137 = alphabetised_text_15;
-Constant text_U138 = alphabetised_text_89;
+Constant text_U133 = alphabetised_text_34;
+Constant text_U134 = alphabetised_text_36;
+Constant text_U135 = alphabetised_text_54;
+Constant text_U136 = alphabetised_text_72;
+Constant text_U137 = alphabetised_text_21;
+Constant text_U138 = alphabetised_text_91;
 Constant text_U139 = alphabetised_text_161;
-Constant text_U140 = alphabetised_text_44;
-Constant text_U141 = alphabetised_text_60;
-Constant text_U142 = alphabetised_text_43;
-Constant text_U143 = alphabetised_text_88;
+Constant text_U140 = alphabetised_text_49;
+Constant text_U141 = alphabetised_text_62;
+Constant text_U142 = alphabetised_text_48;
+Constant text_U143 = alphabetised_text_90;
 Constant text_U144 = alphabetised_text_138;
-Constant text_U145 = alphabetised_text_21;
+Constant text_U145 = alphabetised_text_27;
 Constant text_U146 = alphabetised_text_150;
-Constant text_U147 = alphabetised_text_55;
-Constant text_U148 = alphabetised_text_16;
-Constant text_U149 = alphabetised_text_64;
-Constant text_U150 = alphabetised_text_54;
-Constant text_U151 = alphabetised_text_22;
+Constant text_U147 = alphabetised_text_56;
+Constant text_U148 = alphabetised_text_22;
+Constant text_U149 = alphabetised_text_66;
+Constant text_U150 = alphabetised_text_55;
+Constant text_U151 = alphabetised_text_28;
 Constant text_U152 = alphabetised_text_12;
-Constant text_U153 = alphabetised_text_77;
-Constant text_U154 = alphabetised_text_17;
-Constant text_U155 = alphabetised_text_75;
-Constant text_U156 = alphabetised_text_45;
+Constant text_U153 = alphabetised_text_79;
+Constant text_U154 = alphabetised_text_23;
+Constant text_U155 = alphabetised_text_77;
+Constant text_U156 = alphabetised_text_50;
 Constant text_U157 = alphabetised_text_119;
 Constant text_U158 = alphabetised_text_1;
 Constant text_U159 = alphabetised_text_167;
-Constant text_U160 = alphabetised_text_33;
-Constant text_U161 = alphabetised_text_78;
+Constant text_U160 = alphabetised_text_39;
+Constant text_U161 = alphabetised_text_80;
 Constant text_U162 = alphabetised_text_11;
-Constant text_U163 = alphabetised_text_79;
-Constant text_U164 = alphabetised_text_34;
-Constant text_U165 = alphabetised_text_76;
-Constant text_U166 = alphabetised_text_37;
-Constant text_U167 = alphabetised_text_101;
-Constant text_U168 = alphabetised_text_48;
-Constant text_U169 = alphabetised_text_98;
-Constant text_U170 = alphabetised_text_14;
+Constant text_U163 = alphabetised_text_81;
+Constant text_U164 = alphabetised_text_40;
+Constant text_U165 = alphabetised_text_78;
+Constant text_U166 = alphabetised_text_41;
+Constant text_U167 = alphabetised_text_78;
+Constant text_U168 = alphabetised_text_19;
+Constant text_U169 = alphabetised_text_78;
+Constant text_U170 = alphabetised_text_57;
 Constant text_U171 = alphabetised_text_3;
 Constant text_U172 = alphabetised_text_150;
 Constant text_U173 = alphabetised_text_4;
-Constant text_U174 = alphabetised_text_91;
-Constant text_U175 = alphabetised_text_52;
-Constant text_U176 = alphabetised_text_92;
-Constant text_U177 = alphabetised_text_36;
+Constant text_U174 = alphabetised_text_93;
+Constant text_U175 = alphabetised_text_20;
+Constant text_U176 = alphabetised_text_94;
+Constant text_U177 = alphabetised_text_16;
 Constant text_U178 = alphabetised_text_102;
-Constant text_U179 = alphabetised_text_95;
-Constant text_U180 = alphabetised_text_97;
-Constant text_U181 = alphabetised_text_46;
+Constant text_U179 = alphabetised_text_18;
+Constant text_U180 = alphabetised_text_103;
+Constant text_U181 = alphabetised_text_14;
 Constant text_U182 = alphabetised_text_100;
-Constant text_U183 = alphabetised_text_47;
+Constant text_U183 = alphabetised_text_17;
 Constant text_U184 = alphabetised_text_99;
-Constant text_U185 = alphabetised_text_13;
-Constant text_U186 = alphabetised_text_103;
-Constant text_U187 = alphabetised_text_130;
-Constant text_U188 = alphabetised_text_81;
-Constant text_U189 = alphabetised_text_129;
-Constant text_U190 = alphabetised_text_147;
-Constant text_U191 = alphabetised_text_25;
-Constant text_U192 = alphabetised_text_120;
-Constant text_U193 = alphabetised_text_121;
-Constant text_U194 = alphabetised_text_127;
-Constant text_U195 = alphabetised_text_120;
-Constant text_U196 = alphabetised_text_153;
-Constant text_U197 = alphabetised_text_85;
-Constant text_U198 = alphabetised_text_160;
-Constant text_U199 = alphabetised_text_84;
-Constant text_U200 = alphabetised_text_113;
-Constant text_U201 = alphabetised_text_109;
-Constant text_U202 = alphabetised_text_144;
-Constant text_U203 = alphabetised_text_82;
-Constant text_U204 = alphabetised_text_133;
-Constant text_U205 = alphabetised_text_86;
+Constant text_U185 = alphabetised_text_15;
+Constant text_U186 = alphabetised_text_98;
+Constant text_U187 = alphabetised_text_13;
+Constant text_U188 = alphabetised_text_101;
+Constant text_U189 = alphabetised_text_130;
+Constant text_U190 = alphabetised_text_83;
+Constant text_U191 = alphabetised_text_129;
+Constant text_U192 = alphabetised_text_147;
+Constant text_U193 = alphabetised_text_31;
+Constant text_U194 = alphabetised_text_120;
+Constant text_U195 = alphabetised_text_121;
+Constant text_U196 = alphabetised_text_127;
+Constant text_U197 = alphabetised_text_120;
+Constant text_U198 = alphabetised_text_153;
+Constant text_U199 = alphabetised_text_87;
+Constant text_U200 = alphabetised_text_160;
+Constant text_U201 = alphabetised_text_86;
+Constant text_U202 = alphabetised_text_113;
+Constant text_U203 = alphabetised_text_109;
+Constant text_U204 = alphabetised_text_144;
+Constant text_U205 = alphabetised_text_84;
+Constant text_U206 = alphabetised_text_133;
+Constant text_U207 = alphabetised_text_88;
 Constant V36_showing_action = activity_id_U36;
-Constant text_U206 = alphabetised_text_131;
-Constant text_U207 = alphabetised_text_129;
-Constant text_U208 = alphabetised_text_107;
+Constant text_U208 = alphabetised_text_131;
+Constant text_U209 = alphabetised_text_129;
+Constant text_U210 = alphabetised_text_107;
 Constant column_identity_U8 = table_column_id_U8;
-Constant text_U209 = alphabetised_text_2;
-Constant text_U210 = alphabetised_text_29;
-Constant text_U211 = alphabetised_text_65;
-Constant text_U212 = alphabetised_text_31;
-Constant text_U213 = alphabetised_text_63;
-Constant text_U214 = alphabetised_text_66;
+Constant text_U211 = alphabetised_text_2;
+Constant text_U212 = alphabetised_text_35;
+Constant text_U213 = alphabetised_text_67;
+Constant text_U214 = alphabetised_text_37;
+Constant text_U215 = alphabetised_text_65;
+Constant text_U216 = alphabetised_text_68;
 Constant column_identity_U9 = table_column_id_U8;
 Constant abilities_U4 = (RELS_TEST);
 Constant abilities_U5 = (RELS_TEST);
 Constant abilities_U7 = (RELS_TEST);
 Constant abilities_U8 = (RELS_TEST);
-Constant text_U215 = alphabetised_text_19;
-Constant text_U216 = alphabetised_text_67;
-Constant text_U217 = alphabetised_text_38;
+Constant text_U217 = alphabetised_text_25;
+Constant text_U218 = alphabetised_text_69;
+Constant text_U219 = alphabetised_text_43;
 Constant GPR_REPARSE = REPARSE_CODE;
 Constant TABLE_NOVALUE = IMPROBABLE_VALUE;
 Constant RC_INFINITY = MAX_POSITIVE_NUMBER;
@@ -4802,9 +4806,9 @@ Constant Computed_Constant_Value_23_U1 = (BLK_DATA_OFFSET + Computed_Constant_Va
 Constant VALENCY_MASK = Computed_Constant_Value_60_U1;
 Constant Computed_Constant_Value_39_U1 = (Computed_Constant_Value_38_U1 * TEXT_TY_NoBuffers);
 Constant BLK_DATA_MULTI_OFFSET = Computed_Constant_Value_23_U1;
-Constant Story = bc_U586;
-Constant Headline = bc_U587;
-Constant Story_Author = bc_U588;
+Constant Story = bc_U591;
+Constant Headline = bc_U592;
+Constant Story_Author = bc_U593;
 Constant Computed_Constant_Value_24_U1 = (MEMORY_HEAP_SIZE + BLK_DATA_MULTI_OFFSET);
 Constant abilities_U6 = (RELS_TEST + RELS_LOOKUP_ANY + RELS_LOOKUP_ALL_X + RELS_LOOKUP_ALL_X + RELS_LIST + RELS_ASSERT_TRUE + RELS_ASSERT_FALSE + RELS_LOOKUP_ANY);
 Constant abilities_U9 = (RELS_TEST + RELS_LOOKUP_ANY + RELS_LOOKUP_ALL_X + RELS_LOOKUP_ALL_X + RELS_LIST + RELS_ASSERT_TRUE + RELS_ASSERT_FALSE + RELS_LOOKUP_ANY);
@@ -6414,81 +6418,86 @@ Array bc_U509 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U186; ];
 Array bc_U510 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
 Array bc_U511 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
 Array bc_U512 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
-Array inline_U49 --> [ 0; 0; 0; 0; 0; 0; ];
 Array bc_U513 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U187; ];
 Array bc_U514 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U188; ];
 Array bc_U515 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
-Array bc_U516 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U189; ];
+Array bc_U516 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
 Array bc_U517 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
-Array bc_U518 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
-Array inline_U50 --> [ 0; 0; 0; 0; 0; 0; ];
+Array inline_U49 --> [ 0; 0; 0; 0; 0; 0; ];
+Array bc_U518 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U189; ];
 Array bc_U519 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U190; ];
-Array bc_U520 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U191; ];
-Array bc_U521 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
-Array bc_U522 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U192; ];
+Array bc_U520 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
+Array bc_U521 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U191; ];
+Array bc_U522 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
 Array bc_U523 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
-Array bc_U524 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
-Array inline_U51 --> [ 0; 0; 0; 0; 0; 0; ];
+Array inline_U50 --> [ 0; 0; 0; 0; 0; 0; ];
+Array bc_U524 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U192; ];
 Array bc_U525 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U193; ];
-Array ts_array_U431 --> [ CONSTANT_PACKED_TEXT_STORAGE; call_U2134; ];
 Array bc_U526 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
-Array bc_U527 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
+Array bc_U527 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U194; ];
 Array bc_U528 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
 Array bc_U529 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
-Array inline_U52 --> [ 0; 0; 0; 0; 0; 0; ];
-Array bc_U530 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U194; ];
+Array inline_U51 --> [ 0; 0; 0; 0; 0; 0; ];
+Array bc_U530 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U195; ];
+Array ts_array_U431 --> [ CONSTANT_PACKED_TEXT_STORAGE; call_U2134; ];
 Array bc_U531 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
 Array bc_U532 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
-Array bc_U533 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U195; ];
+Array bc_U533 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
 Array bc_U534 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
-Array bc_U535 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
-Array inline_U53 --> [ 0; 0; 0; 0; 0; 0; ];
-Array bc_U536 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U196; ];
-Array bc_U537 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U197; ];
-Array bc_U538 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
+Array inline_U52 --> [ 0; 0; 0; 0; 0; 0; ];
+Array bc_U535 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U196; ];
+Array bc_U536 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
+Array bc_U537 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
+Array bc_U538 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U197; ];
 Array bc_U539 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
 Array bc_U540 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
-Array bc_U541 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
-Array inline_U54 --> [ 0; 0; 0; 0; 0; 0; ];
-Array bc_U542 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U198; ];
-Array bc_U543 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U199; ];
+Array inline_U53 --> [ 0; 0; 0; 0; 0; 0; ];
+Array bc_U541 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U198; ];
+Array bc_U542 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U199; ];
+Array bc_U543 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
 Array bc_U544 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
 Array bc_U545 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
 Array bc_U546 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
-Array bc_U547 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
-Array inline_U55 --> [ 0; 0; 0; 0; 0; 0; ];
-Array bc_U548 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U200; ];
-Array bc_U549 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U201; ];
+Array inline_U54 --> [ 0; 0; 0; 0; 0; 0; ];
+Array bc_U547 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U200; ];
+Array bc_U548 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U201; ];
+Array bc_U549 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
 Array bc_U550 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
 Array bc_U551 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
 Array bc_U552 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
-Array bc_U553 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
-Array inline_U56 --> [ 0; 0; 0; 0; 0; 0; ];
-Array bc_U554 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U202; ];
-Array bc_U555 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U203; ];
+Array inline_U55 --> [ 0; 0; 0; 0; 0; 0; ];
+Array bc_U553 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U202; ];
+Array bc_U554 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U203; ];
+Array bc_U555 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
 Array bc_U556 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
 Array bc_U557 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
 Array bc_U558 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
-Array bc_U559 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
-Array inline_U57 --> [ 0; 0; 0; 0; 0; 0; ];
-Array bc_U560 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U204; ];
-Array bc_U561 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U205; ];
+Array inline_U56 --> [ 0; 0; 0; 0; 0; 0; ];
+Array bc_U559 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U204; ];
+Array bc_U560 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U205; ];
+Array bc_U561 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
 Array bc_U562 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
 Array bc_U563 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
 Array bc_U564 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
-Array bc_U565 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
-Array bc_U566 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U206; ];
+Array inline_U57 --> [ 0; 0; 0; 0; 0; 0; ];
+Array bc_U565 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U206; ];
+Array bc_U566 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U207; ];
 Array bc_U567 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
 Array bc_U568 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
 Array bc_U569 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
 Array bc_U570 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
-Array bc_U571 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
-Array bc_U572 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U207; ];
+Array bc_U571 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U208; ];
+Array bc_U572 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
 Array bc_U573 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
 Array bc_U574 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
 Array bc_U575 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
 Array bc_U576 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
-Array bc_U577 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
+Array bc_U577 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U209; ];
+Array bc_U578 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
+Array bc_U579 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
+Array bc_U580 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
+Array bc_U581 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
+Array bc_U582 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
 Array DK1_rule --> [ RULE_TY; 2; ACTION_NAME_TY; VOID_TY; ];
 Array DK2_activity_on_objects --> [ ACTIVITY_TY; 1; OBJECT_TY; ];
 Array DK3_phrase_real_number____re --> [ PHRASE_TY; 2; REAL_NUMBER_TY; ];
@@ -6498,15 +6507,15 @@ Array DK6_relation_of_objects --> [ RELATION_TY; 2; OBJECT_TY; OBJECT_TY; ];
 Array DK7_relation_of_supporters_t --> [ RELATION_TY; 2; OBJECT_TY; OBJECT_TY; ];
 Array DK8_relation_of_things --> [ RELATION_TY; 2; OBJECT_TY; OBJECT_TY; ];
 Array DK9_relation_of_people_to_th --> [ RELATION_TY; 2; OBJECT_TY; OBJECT_TY; ];
-Array bc_U578 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
-Array bc_U579 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U208; ];
-Array column_data_U8 table [ column_bits_U8; column_blanks_U7; bc_U580; bc_U581; bc_U582; bc_U583; bc_U584; bc_U585; ];
-Array bc_U580 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U209; ];
-Array bc_U581 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U210; ];
-Array bc_U582 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U211; ];
-Array bc_U583 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U212; ];
-Array bc_U584 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U213; ];
-Array bc_U585 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U214; ];
+Array bc_U583 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
+Array bc_U584 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U210; ];
+Array column_data_U8 table [ column_bits_U8; column_blanks_U7; bc_U585; bc_U586; bc_U587; bc_U588; bc_U589; bc_U590; ];
+Array bc_U585 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U211; ];
+Array bc_U586 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U212; ];
+Array bc_U587 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U213; ];
+Array bc_U588 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U214; ];
+Array bc_U589 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U215; ];
+Array bc_U590 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U216; ];
 Array table_data_U3 table [ column_data_U8; ];
 Array column_data_U9 table [ column_bits_U9; column_blanks_U8; ts_array_U432; ts_array_U433; ts_array_U434; ts_array_U435; ts_array_U436; ts_array_U437; ts_array_U438; ];
 Array ts_array_U432 --> [ CONSTANT_PACKED_TEXT_STORAGE; call_U2257; ];
@@ -6549,12 +6558,12 @@ Array script_U7 -> [ 115; 47; 98; 117; 121; 32; 116; 105; 99; 107; 101; 116; 47;
 Array requirements_U7 --> [ 0; 0; ];
 Array script_U8 -> [ 115; 47; 98; 117; 121; 32; 116; 105; 99; 107; 101; 116; 47; 115; 47; 103; 105; 118; 101; 32; 116; 105; 99; 107; 101; 116; 32; 116; 111; 32; 97; 116; 116; 101; 110; 100; 101; 110; 116; 47; 115; 47; 101; 47; 115; 124; 124; 124; 124; ];
 Array requirements_U8 --> [ 0; 0; ];
-Array bc_U586 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U215; ];
-Array bc_U587 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U216; ];
-Array bc_U588 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U217; ];
+Array bc_U591 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U217; ];
+Array bc_U592 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U218; ];
+Array bc_U593 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U219; ];
 Array UUID_ARRAY -> [ 45; 'U'; 'U'; 'I'; 'D'; ':'; '/'; '/'; 'E'; '0'; 'A'; '5'; 'A'; 'F'; 'B'; '9'; '-'; '1'; '8'; 'B'; 'F'; '-'; '4'; '4'; '8'; '5'; '-'; 'B'; '0'; '8'; '3'; '-'; '4'; '2'; '6'; 'C'; 'A'; '5'; '1'; 'C'; 'C'; 'E'; '7'; '0'; '/'; '/'; ];
 Array InitialSituation --> [ selfobj; 0; I_parking_lot_U1; 540; 0; ];
-Array Map_Storage --> [ 0; 0; 0; I_kiosk_U1; 0; 0; 0; 0; 0; 0; 0; 0; I_parking_lot_U1; 0; 0; I_head_of_the_line_U1; 0; I_concession_stand_U1; I_high_striker_U1; I_show_facade_U1; 0; 0; 0; 0; 0; I_kiosk_U1; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; I_kiosk_U1; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; I_kiosk_U1; I_show_tent_U1; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; I_show_facade_U1; 0; 0; 0; 0; 0; I_kiosk_U1; 0; 0; I_ride_entrance_U1; 0; 0; 0; 0; 0; 0; 0; 0; I_head_of_the_line_U1; 0; 0; I_stocks_room_U1; 0; 0; I_backstage_entrance_U1; 0; 0; 0; 0; 0; I_ride_entrance_U1; 0; 0; I_gallows_room_U1; 0; 0; I_maintenance_office_U1; 0; 0; 0; 0; 0; I_stocks_room_U1; 0; 0; I_stake_room_U1; 0; 0; I_crawl_space_U1; 0; 0; 0; 0; 0; I_gallows_room_U1; 0; 0; I_dungeon_U1; 0; 0; I_mechanical_room_U1; 0; 0; 0; 0; 0; I_stake_room_U1; 0; 0; I_guillotine_room_U1; 0; 0; I_nw_quadrant_U1; 0; 0; 0; 0; 0; I_dungeon_U1; 0; 0; I_ride_exit_U1; 0; 0; I_sw_quadrant_U1; 0; 0; 0; 0; 0; I_guillotine_room_U1; 0; 0; 0; 0; 0; I_electrical_panel_U1; 0; 0; 0; 0; 0; I_backstage_entrance_U1; 0; 0; I_crawl_space_U1; 0; 0; 0; I_stocks_room_U1; 0; 0; 0; 0; I_maintenance_office_U1; 0; 0; I_mechanical_room_U1; 0; 0; 0; I_gallows_room_U1; 0; 0; 0; 0; I_crawl_space_U1; 0; 0; I_spinner_U1; 0; 0; 0; I_stake_room_U1; 0; 0; 0; 0; 0; 0; 0; 0; I_spinner_U1; 0; 0; I_dungeon_U1; 0; 0; 0; 0; 0; I_spinner_U1; 0; 0; 0; 0; 0; I_guillotine_room_U1; 0; 0; 0; 0; I_s_quadrant_U1; 0; 0; 0; 0; 0; 0; I_ride_exit_U1; 0; 0; 0; 0; 0; 0; 0; I_maintenance_office_U1; 0; 0; 0; I_ride_entrance_U1; 0; 0; 0; 0; I_maintenance_office_U1; I_ne_quadrant_U1; I_nw_quadrant_U1; I_s_quadrant_U1; I_se_quadrant_U1; I_sw_quadrant_U1; I_e_quadrant_U1; I_w_quadrant_U1; 0; 0; 0; 0; 0; 0; 0; 0; 0; I_spinner_U1; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; I_spinner_U1; 0; 0; 0; 0; 0; I_spinner_U1; 0; 0; I_electrical_panel_U1; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; I_spinner_U1; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; I_spinner_U1; 0; 0; 0; 0; ];
+Array Map_Storage --> [ 0; 0; 0; I_kiosk_U1; 0; 0; 0; 0; 0; 0; 0; 0; I_parking_lot_U1; 0; 0; I_head_of_the_line_U1; 0; I_concession_stand_U1; I_high_striker_U1; I_show_facade_U1; 0; 0; 0; 0; 0; I_kiosk_U1; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; I_kiosk_U1; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; I_kiosk_U1; I_show_tent_U1; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; I_show_facade_U1; 0; 0; 0; 0; 0; I_kiosk_U1; 0; 0; I_ride_entrance_U1; 0; 0; 0; 0; 0; 0; 0; 0; I_head_of_the_line_U1; 0; 0; I_stocks_room_U1; 0; 0; I_backstage_entrance_U1; 0; 0; 0; 0; 0; I_ride_entrance_U1; 0; 0; I_gallows_room_U1; 0; 0; I_maintenance_office_U1; 0; 0; 0; 0; 0; I_stocks_room_U1; 0; 0; I_stake_room_U1; 0; 0; I_crawl_space_U1; 0; 0; 0; 0; 0; I_gallows_room_U1; 0; 0; I_dungeon_U1; 0; 0; I_mechanical_room_north_U1; 0; 0; 0; 0; 0; I_stake_room_U1; 0; 0; I_guillotine_room_U1; 0; 0; I_mechanical_room_south_U1; 0; 0; 0; 0; 0; I_dungeon_U1; 0; 0; I_ride_exit_U1; 0; 0; I_electrical_room_north_U1; 0; 0; 0; 0; 0; I_guillotine_room_U1; 0; 0; 0; 0; 0; I_storage_room_U1; 0; 0; 0; 0; 0; I_backstage_entrance_U1; 0; 0; I_crawl_space_U1; 0; 0; 0; I_stocks_room_U1; 0; 0; 0; 0; I_maintenance_office_U1; 0; 0; I_mechanical_room_north_U1; 0; 0; 0; I_gallows_room_U1; 0; 0; 0; 0; I_crawl_space_U1; 0; 0; I_mechanical_room_south_U1; 0; 0; 0; I_stake_room_U1; 0; 0; 0; 0; I_mechanical_room_north_U1; 0; 0; I_electrical_room_north_U1; 0; 0; 0; I_dungeon_U1; 0; 0; 0; 0; I_mechanical_room_south_U1; 0; 0; I_electrical_room_south_U1; 0; 0; 0; I_guillotine_room_U1; 0; 0; 0; 0; I_electrical_room_south_U1; 0; 0; 0; 0; 0; 0; I_ride_exit_U1; 0; 0; 0; 0; 0; 0; 0; I_maintenance_office_U1; 0; 0; 0; I_ride_entrance_U1; 0; 0; 0; 0; I_maintenance_office_U1; I_electrical_closet_one_U1; I_electrical_closet_eleven_U1; I_storage_room_U1; I_electrical_closet_five_U1; I_electrical_closet_seven_U1; I_electrical_closet_three_U1; I_electrical_closet_nine_U1; 0; 0; 0; 0; 0; 0; 0; 0; 0; I_electrical_room_south_U1; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; I_electrical_room_south_U1; 0; 0; 0; 0; 0; 0; I_electrical_room_south_U1; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; I_electrical_room_south_U1; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; I_electrical_room_south_U1; 0; 0; 0; 0; 0; 0; 0; 0; 0; I_electrical_room_south_U1; 0; 0; 0; 0; 0; 0; 0; ];
 Array name_array1 --> [ 'north'; 'directions//p'; 'n//'; ];
 Array name_array2 --> [ 'northeast'; 'directions//p'; 'ne'; ];
 Array name_array3 --> [ 'northwest'; 'directions//p'; 'nw'; ];
@@ -6616,27 +6625,28 @@ Array name_array58 --> [ 'ride'; 'exit'; 'rooms//p'; ];
 Array name_array59 --> [ 'car'; 'vehicles//p'; ];
 Array name_array60 --> [ 'maintenance'; 'office'; 'rooms//p'; ];
 Array name_array61 --> [ 'crawl'; 'space'; 'rooms//p'; ];
-Array name_array62 --> [ 'mechanical'; 'room'; 'rooms//p'; ];
-Array name_array63 --> [ 'nw'; 'quadrant'; 'rooms//p'; ];
-Array name_array64 --> [ 'sw'; 'quadrant'; 'rooms//p'; ];
-Array name_array65 --> [ 'electrical'; 'panel'; 'rooms//p'; ];
+Array name_array62 --> [ 'mechanical'; 'room'; 'north'; 'rooms//p'; ];
+Array name_array63 --> [ 'mechanical'; 'room'; 'south'; 'rooms//p'; ];
+Array name_array64 --> [ 'electrical'; 'room'; 'north'; 'rooms//p'; ];
+Array name_array65 --> [ 'storage'; 'room'; 'rooms//p'; ];
 Array name_array66 --> [ 'backstage'; 'regions//p'; ];
 Array name_array67 --> [ 'backstage'; 'entrance'; 'rooms//p'; ];
-Array name_array68 --> [ 'spinner'; 'rooms//p'; ];
-Array name_array69 --> [ 'ne'; 'quadrant'; 'rooms//p'; ];
-Array name_array70 --> [ 'w//'; 'quadrant'; 'rooms//p'; ];
-Array name_array71 --> [ 's//'; 'quadrant'; 'rooms//p'; ];
-Array name_array72 --> [ 'se'; 'quadrant'; 'rooms//p'; ];
-Array name_array73 --> [ 'e//'; 'quadrant'; 'rooms//p'; ];
-Array name_array74 --> [ 'flashlight'; 'electric//p'; 'lamps//p'; 'light'; ];
-Array name_array75 --> [ 'pile'; 'of'; 'junk'; 'containers//p'; ];
-Array name_array76 --> [ 'desk'; 'things//p'; ];
-Array name_array77 --> [ 'drawer'; 'containers//p'; ];
-Array name_array78 --> [ 'scissors'; 'things//p'; ];
-Array name_array79 --> [ 'stapler'; 'things//p'; ];
-Array name_array80 --> [ 'ballpoint'; 'pen'; 'things//p'; ];
-Array name_array81 --> [ 'pad'; 'of'; 'paper'; 'things//p'; ];
-Array name_array82 --> [ 'key'; 'things//p'; ];
+Array name_array68 --> [ 'electrical'; 'room'; 'south'; 'rooms//p'; ];
+Array name_array69 --> [ 'electrical'; 'closet'; 'one'; 'rooms//p'; ];
+Array name_array70 --> [ 'electrical'; 'closet'; 'three'; 'rooms//p'; ];
+Array name_array71 --> [ 'electrical'; 'closet'; 'five'; 'rooms//p'; ];
+Array name_array72 --> [ 'electrical'; 'closet'; 'seven'; 'rooms//p'; ];
+Array name_array73 --> [ 'electrical'; 'closet'; 'nine'; 'rooms//p'; ];
+Array name_array74 --> [ 'electrical'; 'closet'; 'eleven'; 'rooms//p'; ];
+Array name_array75 --> [ 'flashlight'; 'electric//p'; 'lamps//p'; 'light'; ];
+Array name_array76 --> [ 'pile'; 'of'; 'junk'; 'containers//p'; ];
+Array name_array77 --> [ 'desk'; 'things//p'; ];
+Array name_array78 --> [ 'drawer'; 'containers//p'; ];
+Array name_array79 --> [ 'scissors'; 'things//p'; ];
+Array name_array80 --> [ 'stapler'; 'things//p'; ];
+Array name_array81 --> [ 'ballpoint'; 'pen'; 'things//p'; ];
+Array name_array82 --> [ 'pad'; 'of'; 'paper'; 'things//p'; ];
+Array name_array83 --> [ 'key'; 'things//p'; ];
 Array LocalParking --> [ 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; ];
 Array PowersOfTwo_TB --> [ 2048; 1024; 512; 256; 128; 64; 32; 16; 8; 4; 2; 1; ];
 Array IncreasingPowersOfTwo_TB --> [ 1; 2; 4; 8; 16; 32; 64; 128; 256; 512; 1024; 2048; 4096; 8192; 16384; 32768; ];
@@ -6680,7 +6690,7 @@ Array scene_endings --> 5; ! blank with extent 5
 Array scene_latest_ending --> 5; ! blank with extent 5
 Array multiple_object --> 100; ! blank with extent 100
 Array parser_results --> 16; ! blank with extent 16
-Array requisition_stack --> 249; ! blank with extent 249
+Array requisition_stack --> 252; ! blank with extent 252
 Array LWI_Storage --> [ 1; -1; Computed_Constant_Value_4_U2; ];
 Array Details_of_Specific_Action --> 5; ! blank with extent 5
 Array activities_stack --> 20; ! blank with extent 20
@@ -6690,7 +6700,7 @@ Array T_SL_Score_Moves --> [ CONSTANT_PACKED_TEXT_STORAGE; SL_Score_Moves; ];
 Array T_SL_Location --> [ CONSTANT_PACKED_TEXT_STORAGE; SL_Location; ];
 Array StorageForShortName buffer 250; ! blank with extent 250
 Array DoorRoutingViable -> 1; ! blank with extent 1
-Array FWMatrix --> 729; ! blank with extent 729
+Array FWMatrix --> 784; ! blank with extent 784
 Array test_stack --> 128; ! blank with extent 128
 Array TimesActionHasHappened --> 2; ! blank with extent 2
 Array TurnsActionHasBeenHappening --> 2; ! blank with extent 2
@@ -6914,16 +6924,16 @@ Class K15_player_s_holdall
 ;
 Class K20_fluid_container
   class K5_container
-    with plural bc_U566
+    with plural bc_U571
     with P_fluid_capacity 120
     with P_current_volume 0
-    with parse_name parse_name103
+    with parse_name parse_name104
     with P_liquid I_water_U1
-    with description bc_U567
-    with initial bc_U568
-    with short_name bc_U569
-    with article bc_U570
-    with list_together bc_U571
+    with description bc_U572
+    with initial bc_U573
+    with short_name bc_U574
+    with article bc_U575
+    with list_together bc_U576
 ;
 Class K7_backdrop
   class K2_thing
@@ -6949,12 +6959,12 @@ Class K13_device
 ;
 Class K21_electric_lamp
   class K13_device
-    with plural bc_U572
-    with description bc_U573
-    with initial bc_U574
-    with short_name bc_U575
-    with article bc_U576
-    with list_together bc_U577
+    with plural bc_U577
+    with description bc_U578
+    with initial bc_U579
+    with short_name bc_U580
+    with article bc_U581
+    with list_together bc_U582
 ;
 Class K16_passkey
   class K2_thing
@@ -7968,7 +7978,7 @@ K1_room I_maintenance_office_U1    with short_name bc_U444
     with article bc_U447
     with list_together bc_U448
 ;
-K2_thing -> I_desk_U1    with short_name bc_U525
+K2_thing -> I_desk_U1    with short_name bc_U530
     with description ts_array_U431
     has static
     with vector 0
@@ -7979,10 +7989,10 @@ K2_thing -> I_desk_U1    with short_name bc_U525
     with K2_thing_Next I_pile_of_junk_U1
     with action_bitmap 0 0 0 0 0 0
     with name 'desk' 'things//p'
-    with initial bc_U526
-    with plural bc_U527
-    with article bc_U528
-    with list_together bc_U529
+    with initial bc_U531
+    with plural bc_U532
+    with article bc_U533
+    with list_together bc_U534
 ;
 K1_room I_crawl_space_U1    with short_name bc_U449
     with description bc_U450
@@ -7993,13 +8003,13 @@ K1_room I_crawl_space_U1    with short_name bc_U449
     has mark_as_room
     with KD_Count 1
     with IK1_Count 15
-    with K1_room_Next I_mechanical_room_U1
+    with K1_room_Next I_mechanical_room_north_U1
     with name 'crawl' 'space' 'rooms//p'
     with plural bc_U451
     with article bc_U452
     with list_together bc_U453
 ;
-K1_room I_mechanical_room_U1    with short_name bc_U454
+K1_room I_mechanical_room_north_U1    with short_name bc_U454
     with description bc_U455
     with map_region I_backstage_U1
     has ~light
@@ -8008,13 +8018,13 @@ K1_room I_mechanical_room_U1    with short_name bc_U454
     has mark_as_room
     with KD_Count 1
     with IK1_Count 16
-    with K1_room_Next I_nw_quadrant_U1
-    with name 'mechanical' 'room' 'rooms//p'
+    with K1_room_Next I_mechanical_room_south_U1
+    with name 'mechanical' 'room' 'north' 'rooms//p'
     with plural bc_U456
     with article bc_U457
     with list_together bc_U458
 ;
-K1_room I_nw_quadrant_U1    with short_name bc_U459
+K1_room I_mechanical_room_south_U1    with short_name bc_U459
     with description bc_U460
     with map_region I_backstage_U1
     has proper
@@ -8024,13 +8034,13 @@ K1_room I_nw_quadrant_U1    with short_name bc_U459
     has mark_as_room
     with KD_Count 1
     with IK1_Count 17
-    with K1_room_Next I_sw_quadrant_U1
-    with name 'nw' 'quadrant' 'rooms//p'
+    with K1_room_Next I_electrical_room_north_U1
+    with name 'mechanical' 'room' 'south' 'rooms//p'
     with plural bc_U461
     with article bc_U462
     with list_together bc_U463
 ;
-K1_room I_sw_quadrant_U1    with short_name bc_U464
+K1_room I_electrical_room_north_U1    with short_name bc_U464
     with description bc_U465
     with map_region I_backstage_U1
     has ~light
@@ -8039,13 +8049,13 @@ K1_room I_sw_quadrant_U1    with short_name bc_U464
     has mark_as_room
     with KD_Count 1
     with IK1_Count 18
-    with K1_room_Next I_electrical_panel_U1
-    with name 'sw' 'quadrant' 'rooms//p'
+    with K1_room_Next I_storage_room_U1
+    with name 'electrical' 'room' 'north' 'rooms//p'
     with plural bc_U466
     with article bc_U467
     with list_together bc_U468
 ;
-K1_room I_electrical_panel_U1    with short_name bc_U469
+K1_room I_storage_room_U1    with short_name bc_U469
     with map_region I_backstage_U1
     has ~light
     with vector 0
@@ -8054,7 +8064,7 @@ K1_room I_electrical_panel_U1    with short_name bc_U469
     with KD_Count 1
     with IK1_Count 19
     with K1_room_Next I_backstage_entrance_U1
-    with name 'electrical' 'panel' 'rooms//p'
+    with name 'storage' 'room' 'rooms//p'
     with description bc_U470
     with plural bc_U471
     with article bc_U472
@@ -8082,14 +8092,14 @@ K1_room I_backstage_entrance_U1    with short_name bc_U478
     has mark_as_room
     with KD_Count 1
     with IK1_Count 20
-    with K1_room_Next I_spinner_U1
+    with K1_room_Next I_electrical_room_south_U1
     with name 'backstage' 'entrance' 'rooms//p'
     with plural bc_U480
     with article bc_U481
     with list_together bc_U482
 ;
-K5_container -> I_pile_of_junk_U1    with short_name bc_U519
-    with description bc_U520
+K5_container -> I_pile_of_junk_U1    with short_name bc_U524
+    with description bc_U525
     has static
     has scenery
     with vector 0
@@ -8102,13 +8112,13 @@ K5_container -> I_pile_of_junk_U1    with short_name bc_U519
     with K5_container_Next I_drawer_U1
     with action_bitmap 0 0 0 0 0 0
     with name 'pile' 'of' 'junk' 'containers//p'
-    with initial bc_U521
-    with plural bc_U522
-    with article bc_U523
-    with list_together bc_U524
+    with initial bc_U526
+    with plural bc_U527
+    with article bc_U528
+    with list_together bc_U529
 ;
-K21_electric_lamp -> -> I_flashlight_U1    with short_name bc_U513
-    with description bc_U514
+K21_electric_lamp -> -> I_flashlight_U1    with short_name bc_U518
+    with description bc_U519
     with vector 0
     has mark_as_thing
     has switchable
@@ -8120,14 +8130,14 @@ K21_electric_lamp -> -> I_flashlight_U1    with short_name bc_U513
     with K21_electric_lamp_Count 0
     with K21_electric_lamp_Next 0
     with action_bitmap 0 0 0 0 0 0
-    with parse_name parse_name75
+    with parse_name parse_name76
     with name 'flashlight' 'electric//p' 'lamps//p' 'light'
-    with initial bc_U515
-    with plural bc_U516
-    with article bc_U517
-    with list_together bc_U518
+    with initial bc_U520
+    with plural bc_U521
+    with article bc_U522
+    with list_together bc_U523
 ;
-K1_room I_spinner_U1    with short_name bc_U483
+K1_room I_electrical_room_south_U1    with short_name bc_U483
     with description bc_U484
     with map_region I_backstage_U1
     has proper
@@ -8137,13 +8147,13 @@ K1_room I_spinner_U1    with short_name bc_U483
     has mark_as_room
     with KD_Count 1
     with IK1_Count 21
-    with K1_room_Next I_ne_quadrant_U1
-    with name 'spinner' 'rooms//p'
+    with K1_room_Next I_electrical_closet_one_U1
+    with name 'electrical' 'room' 'south' 'rooms//p'
     with plural bc_U485
     with article bc_U486
     with list_together bc_U487
 ;
-K1_room I_ne_quadrant_U1    with short_name bc_U488
+K1_room I_electrical_closet_one_U1    with short_name bc_U488
     with description bc_U489
     with map_region I_backstage_U1
     has proper
@@ -8153,14 +8163,14 @@ K1_room I_ne_quadrant_U1    with short_name bc_U488
     has mark_as_room
     with KD_Count 1
     with IK1_Count 22
-    with K1_room_Next I_w_quadrant_U1
-    with name 'ne' 'quadrant' 'rooms//p'
+    with K1_room_Next I_electrical_closet_three_U1
+    with name 'electrical' 'closet' 'one' 'rooms//p'
     with plural bc_U490
     with article bc_U491
     with list_together bc_U492
 ;
-K2_thing -> I_key_U1    with short_name bc_U560
-    with description bc_U561
+K2_thing -> I_key_U1    with short_name bc_U565
+    with description bc_U566
     with vector 0
     has mark_as_thing
     with KD_Count 2
@@ -8168,12 +8178,12 @@ K2_thing -> I_key_U1    with short_name bc_U560
     with K2_thing_Next I_drawer_U1
     with action_bitmap 0 0 0 0 0 0
     with name 'key' 'things//p'
-    with initial bc_U562
-    with plural bc_U563
-    with article bc_U564
-    with list_together bc_U565
+    with initial bc_U567
+    with plural bc_U568
+    with article bc_U569
+    with list_together bc_U570
 ;
-K1_room I_w_quadrant_U1    with short_name bc_U493
+K1_room I_electrical_closet_three_U1    with short_name bc_U493
     with description bc_U494
     with map_region I_backstage_U1
     has proper
@@ -8183,13 +8193,13 @@ K1_room I_w_quadrant_U1    with short_name bc_U493
     has mark_as_room
     with KD_Count 1
     with IK1_Count 23
-    with K1_room_Next I_s_quadrant_U1
-    with name 'w//' 'quadrant' 'rooms//p'
+    with K1_room_Next I_electrical_closet_five_U1
+    with name 'electrical' 'closet' 'three' 'rooms//p'
     with plural bc_U495
     with article bc_U496
     with list_together bc_U497
 ;
-K1_room I_s_quadrant_U1    with short_name bc_U498
+K1_room I_electrical_closet_five_U1    with short_name bc_U498
     with description bc_U499
     with map_region I_backstage_U1
     has proper
@@ -8199,13 +8209,13 @@ K1_room I_s_quadrant_U1    with short_name bc_U498
     has mark_as_room
     with KD_Count 1
     with IK1_Count 24
-    with K1_room_Next I_se_quadrant_U1
-    with name 's//' 'quadrant' 'rooms//p'
+    with K1_room_Next I_electrical_closet_seven_U1
+    with name 'electrical' 'closet' 'five' 'rooms//p'
     with plural bc_U500
     with article bc_U501
     with list_together bc_U502
 ;
-K1_room I_se_quadrant_U1    with short_name bc_U503
+K1_room I_electrical_closet_seven_U1    with short_name bc_U503
     with description bc_U504
     with map_region I_backstage_U1
     has proper
@@ -8215,13 +8225,13 @@ K1_room I_se_quadrant_U1    with short_name bc_U503
     has mark_as_room
     with KD_Count 1
     with IK1_Count 25
-    with K1_room_Next I_e_quadrant_U1
-    with name 'se' 'quadrant' 'rooms//p'
+    with K1_room_Next I_electrical_closet_nine_U1
+    with name 'electrical' 'closet' 'seven' 'rooms//p'
     with plural bc_U505
     with article bc_U506
     with list_together bc_U507
 ;
-K1_room I_e_quadrant_U1    with short_name bc_U508
+K1_room I_electrical_closet_nine_U1    with short_name bc_U508
     with description bc_U509
     with map_region I_backstage_U1
     has proper
@@ -8231,13 +8241,29 @@ K1_room I_e_quadrant_U1    with short_name bc_U508
     has mark_as_room
     with KD_Count 1
     with IK1_Count 26
-    with K1_room_Next 0
-    with name 'e//' 'quadrant' 'rooms//p'
+    with K1_room_Next I_electrical_closet_eleven_U1
+    with name 'electrical' 'closet' 'nine' 'rooms//p'
     with plural bc_U510
     with article bc_U511
     with list_together bc_U512
 ;
-K5_container I_drawer_U1    with short_name bc_U530
+K1_room I_electrical_closet_eleven_U1    with short_name bc_U513
+    with description bc_U514
+    with map_region I_backstage_U1
+    has proper
+    has ~light
+    with vector 0
+    with room_index -1
+    has mark_as_room
+    with KD_Count 1
+    with IK1_Count 27
+    with K1_room_Next 0
+    with name 'electrical' 'closet' 'eleven' 'rooms//p'
+    with plural bc_U515
+    with article bc_U516
+    with list_together bc_U517
+;
+K5_container I_drawer_U1    with short_name bc_U535
     has static
     has scenery
     has ~open
@@ -8253,14 +8279,14 @@ K5_container I_drawer_U1    with short_name bc_U530
     with K5_container_Next 0
     with action_bitmap 0 0 0 0 0 0
     with name 'drawer' 'containers//p'
-    with description bc_U531
-    with initial bc_U532
-    with plural bc_U533
-    with article bc_U534
-    with list_together bc_U535
+    with description bc_U536
+    with initial bc_U537
+    with plural bc_U538
+    with article bc_U539
+    with list_together bc_U540
 ;
-K2_thing -> I_scissors_U1    with short_name bc_U536
-    with description bc_U537
+K2_thing -> I_scissors_U1    with short_name bc_U541
+    with description bc_U542
     with vector 0
     has mark_as_thing
     with KD_Count 2
@@ -8268,13 +8294,13 @@ K2_thing -> I_scissors_U1    with short_name bc_U536
     with K2_thing_Next I_stapler_U1
     with action_bitmap 0 0 0 0 0 0
     with name 'scissors' 'things//p'
-    with initial bc_U538
-    with plural bc_U539
-    with article bc_U540
-    with list_together bc_U541
+    with initial bc_U543
+    with plural bc_U544
+    with article bc_U545
+    with list_together bc_U546
 ;
-K2_thing -> I_stapler_U1    with short_name bc_U542
-    with description bc_U543
+K2_thing -> I_stapler_U1    with short_name bc_U547
+    with description bc_U548
     with vector 0
     has mark_as_thing
     with KD_Count 2
@@ -8282,13 +8308,13 @@ K2_thing -> I_stapler_U1    with short_name bc_U542
     with K2_thing_Next I_ballpoint_pen_U1
     with action_bitmap 0 0 0 0 0 0
     with name 'stapler' 'things//p'
-    with initial bc_U544
-    with plural bc_U545
-    with article bc_U546
-    with list_together bc_U547
+    with initial bc_U549
+    with plural bc_U550
+    with article bc_U551
+    with list_together bc_U552
 ;
-K2_thing -> I_ballpoint_pen_U1    with short_name bc_U548
-    with description bc_U549
+K2_thing -> I_ballpoint_pen_U1    with short_name bc_U553
+    with description bc_U554
     with vector 0
     has mark_as_thing
     with KD_Count 2
@@ -8296,13 +8322,13 @@ K2_thing -> I_ballpoint_pen_U1    with short_name bc_U548
     with K2_thing_Next I_pad_of_paper_U1
     with action_bitmap 0 0 0 0 0 0
     with name 'ballpoint' 'pen' 'things//p'
-    with initial bc_U550
-    with plural bc_U551
-    with article bc_U552
-    with list_together bc_U553
+    with initial bc_U555
+    with plural bc_U556
+    with article bc_U557
+    with list_together bc_U558
 ;
-K2_thing -> I_pad_of_paper_U1    with short_name bc_U554
-    with description bc_U555
+K2_thing -> I_pad_of_paper_U1    with short_name bc_U559
+    with description bc_U560
     with vector 0
     has mark_as_thing
     with KD_Count 2
@@ -8310,10 +8336,10 @@ K2_thing -> I_pad_of_paper_U1    with short_name bc_U554
     with K2_thing_Next 0
     with action_bitmap 0 0 0 0 0 0
     with name 'pad' 'of' 'paper' 'things//p'
-    with initial bc_U556
-    with plural bc_U557
-    with article bc_U558
-    with list_together bc_U559
+    with initial bc_U561
+    with plural bc_U562
+    with article bc_U563
+    with list_together bc_U564
 ;
 #ifndef cap_short_name; Constant cap_short_name = 0; #endif;
 #ifndef before; Constant before = 0; #endif;
@@ -65723,7 +65749,7 @@ Global max_z_object;
         DB_Rule(call_U2196, 890, 0);
     }
     for (((tmp_0 = (call_U2197)(0)),(tmp_1 = (call_U2197)(tmp_0))):tmp_0:((tmp_0 = tmp_1),(tmp_1 = (call_U2197)(tmp_1)))) {
-        if (((BlkValueCompare)(GProperty(OBJECT_TY, tmp_0, A_description),bc_U578) == 0)) {
+        if (((BlkValueCompare)(GProperty(OBJECT_TY, tmp_0, A_description),bc_U583) == 0)) {
             (say__p = 1);
             ParaContent();
             PrintShortName(tmp_0);
@@ -65949,7 +65975,7 @@ Global max_z_object;
             ParaContent();
             print "t hit ";
             ParaContent();
-            PrintShortName(noun);
+            DefArt(noun);
             ParaContent();
             print " with that!";
             print "^";
@@ -66367,7 +66393,7 @@ Global max_z_object;
     if (debug_rules) {
         DB_Rule(call_U2230, 923, 0);
     }
-    (deadflag = bc_U579);
+    (deadflag = bc_U584);
     BlkValueIncRefCountPrimitive(deadflag);
     (story_complete = 1);
     rfalse;
@@ -70300,7 +70326,7 @@ Global max_z_object;
     DetectPluralWord(original_wn, n);
     return n;
 ];
-[ parse_name75 original_wn group_wn try_from_wn n f w rv g ss spn pass pass1_n pass2_n;
+[ parse_name76 original_wn group_wn try_from_wn n f w rv g ss spn pass pass1_n pass2_n;
     #ifdef DEBUG;
         if ((parser_trace >= 3)) {
             print "Parse_name called^";
@@ -70373,7 +70399,7 @@ Global max_z_object;
     DetectPluralWord(original_wn, n);
     return n;
 ];
-[ parse_name103 original_wn group_wn try_from_wn n f w rv g ss spn pass pass1_n pass2_n;
+[ parse_name104 original_wn group_wn try_from_wn n f w rv g ss spn pass pass1_n pass2_n;
     #ifdef DEBUG;
         if ((parser_trace >= 3)) {
             print "Parse_name called^";

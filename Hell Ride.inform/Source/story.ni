@@ -336,7 +336,7 @@ Hitting is an action applying to two visible things. Understand "hit [something]
 
 Check hitting:
 	if noun is not lever, say "Nothing happens." instead;
-	if the second noun is not mallet, say "You can[']t hit [noun] with that!" instead;
+	if the second noun is not mallet, say "You can[']t hit [the noun] with that!" instead;
 	if the player is not carrying the mallet, say "You[']re not holding the mallet." instead.
 
 Carry out hitting when the player is carrying the mallet:
@@ -506,23 +506,23 @@ The Gallows Room is south of the Stocks Room. The Gallows Room is west of the Cr
 
 Section 4 - Stake Room
 
-The Stake Room is south of the Gallows Room. The Stake Room is west of the Mechanical Room. "Here you see a bonfire in full conflagration. The flames leap higher and higher consuming the woman tied to the stake. The townsfolk are here holding torches and  jeering at the sight of the poor soul being burnt alive."
+The Stake Room is south of the Gallows Room. The Stake Room is west of the Mechanical Room North. "Here you see a bonfire in full conflagration. The flames leap higher and higher consuming the woman tied to the stake. The townsfolk are here holding torches and  jeering at the sight of the poor soul being burnt alive."
 
 Section 5 - Dungeon
 
-The Dungeon is south of the Stake Room. The Dungeon is west of NW Quadrant. "This a dungeon with all the usual devices. There is a man stretched on the rack. His screams pierce the room. An iron maiden is occupied and you notice the blood seeping from the eyes, ears, and mouth. Another is strapped to a Saint Andrew's Cross and is being flogged harshly."
+The Dungeon is south of the Stake Room. The Dungeon is west of Mechanical Room South. "This a dungeon with all the usual devices. There is a man stretched on the rack. His screams pierce the room. An iron maiden is occupied and you notice the blood seeping from the eyes, ears, and mouth. Another is strapped to a Saint Andrew's Cross and is being flogged harshly."
 
 Section 6 - Guillotine Room
 
-The Guillotine Room is south of the Dungeon. The Guillotine Room is west of the SW Quadrant. "There is a guillotine in this room. The guillotine is being raised and lowered by some mechanism. It appears that the timing of the guillotine is off and it is being lowered onto the cars instead of between them. If a person were to be in a car as it passed under the guillotine, they would be decapitated."
+The Guillotine Room is south of the Dungeon. The Guillotine Room is west of the Electrical Room North. "There is a guillotine in this room. The guillotine is being raised and lowered by some mechanism. It appears that the timing of the guillotine is off and it is being lowered onto the cars instead of between them. If a person were to be in a car as it passed under the guillotine, they would be decapitated."
 
 Section 7 - Ride Exit
 
-The Ride Exit is south of the Guillotine Room. The Ride Exit is west of the Electrical Panel.
+The Ride Exit is south of the Guillotine Room. The Ride Exit is west of the Storage Room
 
 Chapter 3 - Backstage
 
-Backstage is a region. Backstage Entrance, Maintenance Office, Spinner, NW Quadrant, NE Quadrant, W Quadrant, SW Quadrant, S Quadrant, SE Quadrant, E Quadrant, Crawl Space, Mechanical Room, Electrical Panel is in Backstage.
+Backstage is a region. Backstage Entrance, Maintenance Office, Crawl Space, Mechanical Room North, Mechanical Room South, Electrical Room North, Electrical Room South, Electrical Closet One, Electrical Closet Three, Electrical Closet Five, Electrical Closet Seven, Electrical Closet Nine, Electrical Closet Eleven, and Storage Room is in Backstage.
 
 Section 1 - Backstage Entrance
 
@@ -588,26 +588,34 @@ Section 3 - Crawl Space
 
 The Crawl Space is a dark room. The Crawl Space is south of Maintenance Office. "This crawl space is extremely small. You begin to feel claustrophobic in here."
 
-Section 4 - Mechanical Room
+Section 4 - Mechanical Room North
 
-The Mechanical Room is a dark room. The Mechanical Room is south of the Crawl Space. "There is machinery filling the room." 
+The Mechanical Room North is a dark room. The Mechanical Room North is south of the Crawl Space. "There is machinery filling the room." 
 
-Section 5 - Spinner
+Section 5 - Mechanical Room South
 
-The Spinner is a dark room. The spinner is south of the Mechanical Room. "This room is oozing with electromagnetic energy. You can feel your hair stand on end and all your nerves twitching. This feels dangerous!"
+The Mechanical Room South is a dark room. The Mechanical Room South is south of the Mechanical Room North. "There is machinery filling the room." 
 
-[Instead of going from the Spinner:
+Section 6 -Electrical Room North
+
+The Electrical Room North is a dark room. The Electrical Room North is south of the Mechanical Room South. "There is machinery filling the room." 
+
+Section 7 - Electrical Room South
+
+The Electrical Room South is a dark room. The Electrical Room South is south of the Electrical Room North. "This room is oozing with electromagnetic energy. You can feel your hair stand on end and all your nerves twitching. This feels dangerous!"
+
+[Instead of going from the Electrical Room South:
 	move the player to a random adjacent room.]
 	
-The Maintenance Office is north of the Spinner. . 
-The NW Quadrant is northwest of the Spinner. The NW Quadrant is a dark room. "You are in a section of the electrical room. There is an exit to the south east."
-The NE Quadrant is a dark room. The NE Quadrant is northeast of the Spinner.  "You are in a section of the electrical room. There is an exit to the south west." The key is in the NE Quadrant. The description of the key is "This is a skeleton key. Invariably, the lock this key fits will likely be cursed. Adventurer beware!"
-The W Quadrant is a dark room. W Quadrant is west of the Spinner. "You are in a section of the electrical room. There is an exit to the east."
-The SW Quadrant is a dark room. SW Quadrant is southwest of the Spinner. "You are in a section of the electrical room. There is an exit to the north east."
-The S Quadrant is a dark room. S Quadrant is south of the Spinner. "You are in a section of the electrical room. There is an exit to the north."
-The SE Quadrant is a dark room.  SE Quadrant is southeast of the Spinner."You are in a section of the electrical room. There is an exit to the north west."
-The E Quadrant is a dark room. E Quadrant is east of the Spinner. "You are in a section of the electrical room. There is an exit to the west."
+The Maintenance Office is north of the Electrical Room South. . 
+The Electrical Closet Eleven is a dark room. The Electrical Closet Eleven is northwest of the Electrical Room South. "You are in a section of the electrical room. There is an exit to the south east."
+The Electrical Closet Nine is a dark room. Electrical Closet Nine is west of the Electrical Room South. "You are in a section of the electrical room. There is an exit to the east."
+The Electrical Closet Seven is a dark room. Electrical Closet Seven is southwest of the Electrical Room South. "You are in a section of the electrical room. There is an exit to the north east."
+The Electrical Closet Five is a dark room. Electrical Closet Five is southeast of the Electrical Room South."You are in a section of the electrical room. There is an exit to the north west."
+The Electrical Closet Three is a dark room. Electrical Closet Three is east of the Electrical Room South. "You are in a section of the electrical room. There is an exit to the west."
+The Electrical Closet One is a dark room. The Electrical Closet One is northeast of the Electrical Room South.  "You are in a section of the electrical room. There is an exit to the south west." The key is in the Electrical Closet One. The description of the key is "This is a small silver key. I wonder what it unlocks."
 
-Section 6 - Electrical Panel
 
-The Electrical Panel is a dark room. The Electrical Panel is south of the S Quadrant.
+Section 8 - Storage Room
+
+The Storage Room is a dark room. The Storage Room is south of the Electrical Room South.
