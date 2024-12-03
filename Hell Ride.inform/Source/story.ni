@@ -345,24 +345,26 @@ Carry out hitting when the player is carrying the mallet:
 After hitting the lever when second noun is the mallet 5 times :
 	play the sound of Strongman Bell;
 	say "You swing the mallet one more time. The bell rings as the striker reaches the top of the pole. The attendent says, 'You[']re a Muscle Man. Here's a prize for you.'";
-	increase score by 5;
 	say "Which prize would you like? 1) The stuffed teddy bear, 2) the Swiss Army knife, or 3) the poster of Taylor Swift?".
 	
 after Reading a command :
 	if the player's command matches "1" and the location is the high striker:
 		say "You are now holding a cute little teddy bear.";
+		increase score by 5;
 		now the player carries the teddy bear;
 		reject the player's command.
 		
 after Reading a command:
 	if the player's command matches "2" and the location is the high striker:
 		say "You are now holding a Swiss Army knife.";
+		increase score by 5;
 		now the player carries the swiss army knife;
 		reject the player's command.
 		
 after Reading a command:
 	if the player's command matches "3" and the location is the high striker:
 		say "You are now holding a poster of Taylor Swift.";
+		increase score by 5;
 		now the player carries the poster of taylor swift;
 		reject the player's command.
 
@@ -514,7 +516,7 @@ The Dungeon is south of the Stake Room. The Dungeon is west of Mechanical Room S
 
 Section 6 - Guillotine Room
 
-The Guillotine Room is south of the Dungeon. The Guillotine Room is west of the Electrical Room North. "There is a guillotine in this room. The guillotine is being raised and lowered by some mechanism. It appears that the timing of the guillotine is off and it is being lowered onto the cars instead of between them. If a person were to be in a car as it passed under the guillotine, they would be decapitated."
+The Guillotine Room is south of the Dungeon. The Guillotine Room is west of the Generator Room. "There is a guillotine in this room. The guillotine is being raised and lowered by some mechanism. It appears that the timing of the guillotine is off and it is being lowered onto the cars instead of between them. If a person were to be in a car as it passed under the guillotine, they would be decapitated."
 
 Section 7 - Ride Exit
 
@@ -522,13 +524,13 @@ The Ride Exit is south of the Guillotine Room. The Ride Exit is west of the Stor
 
 Chapter 3 - Backstage
 
-Backstage is a region. Backstage Entrance, Maintenance Office, Crawl Space, Mechanical Room North, Mechanical Room South, Electrical Room North, Electrical Room South, Electrical Closet One, Electrical Closet Three, Electrical Closet Five, Electrical Closet Seven, Electrical Closet Nine, Electrical Closet Eleven, and Storage Room is in Backstage.
+Backstage is a region. Backstage Entrance, Maintenance Office, Crawl Space, Mechanical Room North, Mechanical Room South, Generator Room, Electrical Room, Electrical Closet One, Electrical Closet Three, Electrical Closet Five, Electrical Closet Seven, Electrical Closet Nine, Electrical Closet Eleven, and Storage Room is in Backstage.
 
 Section 1 - Backstage Entrance
 
-Test b with "s / buy ticket / s / give ticket to attendent / s / e / get all / turn on flashlight / s".
+Test b with "s / buy ticket / s / give ticket to attendent / s / e / get all / turn on flashlight / s / s / s / s / s / s".
 
-Test Backstage with "s / buy ticket / s / give ticket to attendent / s / e / s".
+Test Backstage with "s / buy ticket / s / give ticket to attendent / s / e / s / s / s".
 
 [flashlight mechanics]
 Showing action of something is an activity.
@@ -562,9 +564,9 @@ Rule for showing action of the flashlight:
 	if the flashlight is switched on, say "A strong, narrow beam of light shines from the flashlight.";
 	otherwise say "It is currently switched off."
 
-Backstage Entrance is a room. Backstage Entrance is east of the Ride Entrance. "This room is backstage at the Hell Ride attraction. West is back the way you came from. There an exit to the south. There is a pile of junk in the corner."
+Backstage Entrance is a room. Backstage Entrance is east of the Ride Entrance. "This room is backstage at the Hell Ride attraction. The room is littered with bags of trash, piles of junk, and dust bunnies so large they should be paying rent. West is back the way you came from. There an exit to the south."
 
-The pile of junk is a scenery container. The pile of junk is in the backstage entrance. The pile of junk contains the flashlight. The description of the pile of junk is "In the corner is a pile of junk."
+The pile of junk is a scenery container. The pile of junk is in the backstage entrance. The pile of junk contains the flashlight. Understand "piles" as pile of junk. The description of the pile of junk is "In the corner is a pile of junk."
 
 after examining when the noun is pile of junk:
 	say "You find a flashlight here.";
@@ -574,10 +576,15 @@ Before printing the name of an unlit lit electric lamp, say "extinguished ".
 
 After waiting when the location is dark:
 	say "It's pitch black. You might be eaten by a grue!"
+	
+After going east when the location is Backstage Entrance and Backstage Entrance is unvisited:
+	say "Walking in the darkness with your arms extended you nearly fall through an open doorway.";
+	increase score by 5;
+	continue the action.
 
 Section 2 - Maintenance Office
 
-The Maintenance Office is a dark room. The maintenance office is south of the backstage entrance. "This appears to be the maintenance office, There is a desk here.". 
+The Maintenance Office is a dark room. The maintenance office is south of the backstage entrance and east of the Stocks Room. "This appears to be the maintenance office, There is a desk here.". 
 
 [ This is the code that breaks the opening]
 The desk is in the maintenance office. The desk is fixed in place. A drawer is part of the desk. The drawer is a closed openable container. The drawer is scenery. The description of the desk is "It's a desk. There are coffee stains and cigarette burns from years of abuse. The single drawer is [if the drawer is open]open[otherwise]shut[end if]."
@@ -590,32 +597,36 @@ The Crawl Space is a dark room. The Crawl Space is south of Maintenance Office. 
 
 Section 4 - Mechanical Room North
 
-The Mechanical Room North is a dark room. The Mechanical Room North is south of the Crawl Space. "There is machinery filling the room." 
+The Mechanical Room North is a dark room. The Mechanical Room North is south of the Crawl Space. "There is machinery filling the room." The toolbox is a closed openable container in the Mechanical Room North. The toolbox contains the monkey wrench, channel locks, pliers, and a hammer.
 
 Section 5 - Mechanical Room South
 
 The Mechanical Room South is a dark room. The Mechanical Room South is south of the Mechanical Room North. "There is machinery filling the room." 
 
-Section 6 -Electrical Room North
+Section 6 - Generator Room
 
-The Electrical Room North is a dark room. The Electrical Room North is south of the Mechanical Room South. "There is machinery filling the room." 
+The Generator Room is a dark room. The Generator Room is south of the Mechanical Room South. "There are two massive generators here powering the ride." 
 
-Section 7 - Electrical Room South
+Section 7 - Electrical Room
 
-The Electrical Room South is a dark room. The Electrical Room South is south of the Electrical Room North. "This room is oozing with electromagnetic energy. You can feel your hair stand on end and all your nerves twitching. This feels dangerous!"
+The Electrical Room is a dark room. The Electrical Room is south of the Generator Room. "This room is oozing with electromagnetic energy. You can feel your hair stand on end and all your nerves twitching. This feels dangerous! There are exits in all directions."
 
-[Instead of going from the Electrical Room South:
+[Instead of going from the Electrical Room:
 	move the player to a random adjacent room.]
 	
-The Maintenance Office is north of the Electrical Room South. . 
-The Electrical Closet Eleven is a dark room. The Electrical Closet Eleven is northwest of the Electrical Room South. "You are in a section of the electrical room. There is an exit to the south east."
-The Electrical Closet Nine is a dark room. Electrical Closet Nine is west of the Electrical Room South. "You are in a section of the electrical room. There is an exit to the east."
-The Electrical Closet Seven is a dark room. Electrical Closet Seven is southwest of the Electrical Room South. "You are in a section of the electrical room. There is an exit to the north east."
-The Electrical Closet Five is a dark room. Electrical Closet Five is southeast of the Electrical Room South."You are in a section of the electrical room. There is an exit to the north west."
-The Electrical Closet Three is a dark room. Electrical Closet Three is east of the Electrical Room South. "You are in a section of the electrical room. There is an exit to the west."
-The Electrical Closet One is a dark room. The Electrical Closet One is northeast of the Electrical Room South.  "You are in a section of the electrical room. There is an exit to the south west." The key is in the Electrical Closet One. The description of the key is "This is a small silver key. I wonder what it unlocks."
+The Maintenance Office is north of the Electrical Room. 
+The Electrical Closet Eleven is a dark room. The Electrical Closet Eleven is northwest of the Electrical Room. "You are in a section of the electrical room. There is an electrical panel here. There is an exit to the south east." Electrical Panel Eleven is closed openable container in Electrical Closet Eleven. Electrical Panel Eleven is scenery. The printed name of Electrical Panel Eleven is "the electrical panel". Understand "panels" as panel. The description is "This is a standard issue 200 amp electrical panel supplying 220 power throughout the ride. The electrical panel is [if Electrical Panel Eleven is open]open[otherwise]closed[end if]."
 
+The Electrical Closet Nine is a dark room. Electrical Closet Nine is west of the Electrical Room. "You are in a section of the electrical room. There is an electrical panel here. There is an exit to the east." Electrical Panel Nine is closed openable container in Electrical Closet Nine. Electrical Panel Nine is scenery. The printed name of Electrical Panel Nine is "the electrical panel". Understand "panels" as panel. The description is "This is a standard issue 200 amp electrical panel supplying 220 power throughout the ride. The electrical panel is [if Electrical Panel Nine is open]open[otherwise]closed[end if]."
+
+The Electrical Closet Seven is a dark room. Electrical Closet Seven is southwest of the Electrical Room. "You are in a section of the electrical room. There is an electrical panel here. There is an exit to the north east." Electrical Panel Seven is closed openable container in Electrical Closet Seven. Electrical Panel Seven is scenery. The printed name of Electrical Panel Seven is "the electrical panel". Understand "panels" as panel. The description is "This is a standard issue 200 amp electrical panel supplying 220 power throughout the ride. The electrical panel is [if Electrical Panel Seven is open]open[otherwise]closed[end if]."
+
+The Electrical Closet Five is a dark room. Electrical Closet Five is southeast of the Electrical Room."You are in a section of the electrical room. There is an electrical panel here. There is an exit to the north west." Electrical Panel Five is closed openable container in Electrical Closet Five. Electrical Panel Five is scenery. The printed name of Electrical Panel Five is "the electrical panel". Understand "panels" as panel. The description is "This is a standard issue 200 amp electrical panel supplying 220 power throughout the ride. The electrical panel is [if Electrical Panel Five is open]open[otherwise]closed[end if]."
+
+The Electrical Closet Three is a dark room. Electrical Closet Three is east of the Electrical Room. "You are in a section of the electrical room. There is an electrical panel here. There is an exit to the west." Electrical Panel Three is closed openable container in Electrical Closet Three. Electrical Panel Three is scenery. The printed name of Electrical Panel Three is "the electrical panel". Understand "panels" as panel. The description is "This is a standard issue 200 amp electrical panel supplying 220 power throughout the ride. The electrical panel is [if Electrical Panel Three is open]open[otherwise]closed[end if]."
+
+The Electrical Closet One is a dark room. The Electrical Closet One is northeast of the Electrical Room.  "You are in a section of the electrical room. There is an electrical panel here. There is an exit to the south west." Electrical Panel One is closed openable container in Electrical Closet One. Electrical Panel One is scenery. The printed name of Electrical Panel One is "the electrical panel". Understand "panels" as panel. The description is "This is a standard issue 200 amp electrical panel supplying 220 power throughout the ride. The electrical panel is [if Electrical Panel One is open]open[otherwise]closed[end if]." The key is in the Electrical Closet One. The description of the key is "This is a small silver key. I wonder what it unlocks."
 
 Section 8 - Storage Room
 
-The Storage Room is a dark room. The Storage Room is south of the Electrical Room South.
+The Storage Room is a dark room. The Storage Room is south of the Electrical Room.
