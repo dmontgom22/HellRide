@@ -179,6 +179,8 @@ Sound of Strongman Bell is the file "StrongmanBell.ogg".
 
 Chapter 6- Miscellaneous Goodies
 
+Test Misc with "get blueberries / xyzzy / hello sailor / please get the dime".
+
 A thing can be seen or unseen.
 
 Carry out examining a thing:
@@ -188,29 +190,58 @@ After reading a command:
 	if the player's command includes "please":
 		say "Please do not say please.";
 		reject the player's command.
+		
+[After reading a command:
+	if the player's command matches "hello sailor":
+		say "Nothing happens here.";
+		reject the player's command.]
 
+[hello sailor]
 Asking someone about something is speech. Telling someone about something is speech. Answering someone that something is speech. Asking someone for something is speech.
 
-[Instead of saying "hello" to the sailor:
-	say "Nothing happens here."]
+The Sailor is a man. The sailor is in the Parking Lot. The sailor is scenery.
+
+Helloing is an action applying to one thing. Understand "hello [someone]" as helloing. understand "[someone] hello" as helloing.
+
+Instead of helloing the sailor:
+	say "Nothing happens here."
+	
+Instead of speech when the noun is Sailor:
+	say "Nothing happens here."
+	
+every turn:
+	now the sailor is in the location.
 	
 [xyzzy]
+Understand "xyzzy" or "say xyzzy" or "cast xyzzy" as casting xyzzy.
+
+Casting xyzzy is an action applying to nothing.
+
+Carry out casting xyzzy:
+	say "A voice nearby says 'Plugh'."
+	
+Section 7 - Testing descriptions - Not for release
+
+When play begins (this is the run property checks at the start of play rule):
+	repeat with item running through things:
+		if description of the item is "":
+			say "[item] has no description."
 
 Part 2 - The Game
 
 Chapter 1 - The Midway
 
-The Midway is a region. Parking Lot, The Ticket Booth, Concession Stand, Strongman Booth, Show Facade, Show Tent, and Head of the Line are in the Midway;
+The Midway is a region. Parking Lot, Kiosk, Concession Stand, High Striker, Show Facade, Show Tent, and Head of the Line are in the Midway;
 
 Section 1 - Parking Lot
 
-Test Me with "Test Egypt /  Test Concession / Test Striker / Test Ride".
+Test Me with "Test Egypt /  Test Concession / Test Striker / Test Misc / Test Ride".
 
 When play begins:
 	display the figure of Hell Ride;
 	say "The carnival is in town and you had a date with your sweetie to visit it. After dinner and just as you arrive at the carnival, you and your date have a terrible fight. They storm off leaving you alone at the carnival. You decide to stay at the carnival anyway.[paragraph break]The midway is bustling with activity—lights flashing, the sounds of carnival music, and the laughter of children mix with the occasional shrill scream of a roller coaster. Various attractions line the street, promising thrills, challenges, and wonders."
 
-The Parking Lot is a room. The parking lot is north of the Booth. "You are in a parking lot full of cars. The midway is to the south. There is a blueberry bush here. [if blueberry bush contains blueberries]There are blueberries on the bush[otherwise]The bush has been picked clean.[end if]"
+The Parking Lot is a room. The parking lot is north of the Kiosk. "You are in a parking lot full of cars. The midway is to the south. There is a blueberry bush here. [if blueberry bush contains blueberries]There are blueberries on the bush[otherwise]The bush has been picked clean.[end if]"
 
 Cars is here. cars is scenery. Understand "car" as cars. The description of cars is "There are all kinds of vehicles in the parking lot."
 
@@ -222,19 +253,19 @@ After taking blueberries:
 	increase score by 5;
 	say "Good Job!".
 
-Section 2 - Ticket Booth
+Section 2 - Kiosk
 
-Before going south when the location is the Parking Lot and the Booth is unvisited:
+Before going south when the location is the Parking Lot and the Kiosk is unvisited:
 	display Figure of TicketBooth.
 	
-Before looking when the location is the Ticket Booth:
+Before looking when the location is the Kiosk:
 	display Figure of TicketBooth.
 
-The Ticket Booth is a room. The ticket booth is north of Head of the Line. The ticket booth is east of the Show Facade. The ticket booth is west of Strongman Booth. The ticket booth is northeast of the Concession Stand. The ticket booth is south of the Parking Lot. "You are standing in line at a ticket booth at the carnival. The booth sells tickets to the Hell Ride attraction. The line for the ride forms to the south and the midway continues east and west from here. There is a concession stand to the south west. The ticket booth is garishly painted in purple and green sparkles. There is a Ticket Seller here. [if ticket seller is carrying hell ride ticket]The Ticket Seller has a Hell Ride ticket.[end if]"
+The kiosk is a room. The kiosk is north of Head of the Line. The kiosk is east of the Show Facade. The kiosk is west of High Striker. The kiosk is northeast of the Concession Stand. The kiosk is south of the Parking Lot. "You are standing in line at a kiosk at the carnival. The kiosk sells tickets to the Hell Ride attraction. The line for the ride forms to the south and the midway continues east and west from here. There is a concession stand to the south west. The kiosk is garishly painted in purple and green sparkles. There is a cashier here. [if cashier is carrying hell ride ticket]The Cashier has a Hell Ride ticket.[end if]"
 
 The Hell Ride ticket is a thing. The price of the Hell Ride ticket is $2.50. The description of the Hell Ride ticket is "This Hell Ride ticket will 'Admit One' to the Hell Ride.[line break]It[']s a real 'E' ticket, baby!"
 
-The Ticket Seller is a man in the booth. The seller carries the Hell Ride ticket. The description of ticket seller is "This is a bored teenager hired to sell ride tickets all week at this carnival. He's thinking about having a brewski with his bros after work.". 
+The Cashier is a man in the kiosk. The cashier carries the Hell Ride ticket. The description of cashier is "This is a bored teenager hired to sell ride tickets all week at this carnival. He's thinking about having a brewski with his bros after work.". 
 
 After buying the hell ride ticket:
 	increase score by 5;
@@ -243,9 +274,9 @@ After buying the hell ride ticket:
 
 Section 3 - Concession Stand
 
-Test Concession with "s / sw / l at treats / read menu / buy cola / buy popcorn / buy candy apple / buy cotton candy / buy pretzel / inventory / drink soda / g / g / g / g / i / ne / n".
+Test Concession with "get blueberries / s / sw / l at treats / read menu / buy cola / buy popcorn / buy candy apple / buy cotton candy / buy pretzel / inventory / drink soda / g / g / g / g / i / ne / n".
 
-Before going southwest when the location is the Ticket Booth and the Concession Stand is unvisited:
+Before going southwest when the location is the kiosk and the Concession Stand is unvisited:
 	display Figure of ConcessionStand.
 	
 Before looking when the location is the Concession Stand:
@@ -282,21 +313,25 @@ Cotton candy is here. Cotton candy is edible. The price of cotton candy is $1.50
 
 A soft pretzel is here. The soft pretzel is edible. The price of the soft pretzel is $1.50. The description of the soft pretzel is "The soft pretzel is sprinkled generously with salt."
 
-Section 4 - Strongman Booth
+Section 4 - High Striker
 
-Test Striker with "s / e / buy mallet / hit lever with mallet / g / g / g / g / w / n".
+test s with "s / e / buy mallet / hit target with mallet / g / g / g / g"
 
-Before going east when the location is the Ticket Booth and the Strongman Booth is unvisited:
+Test Striker with "get blueberries / s / e / buy mallet / hit lever with mallet / g / g / g / g / w / n".
+
+Before going east when the location is the kiosk and the High Striker is unvisited:
 	display Figure of HighStriker.
 	
-Before looking when the location is the Strongman  Booth:
+Before looking when the location is the High Striker:
 	display Figure of HighStriker.
 
-The Strongman Booth is a room. "This area features a tall, eye-catching machine adorned with bright, colorful lights, typically red, yellow, and blue. A large sign at the top reads 'Test Your Strength!' in bold, playful lettering. The machine’s base is made of polished wood, with a polished, vintage appearance. At the center is a sturdy metal pole, with a large bell hanging at the top, signaling when a successful attempt has been made. Along the length of the pole are markings indicating how strong you are.  A nearby sign says, 'Buy a mallet, strike the bell, win a prize.'[if the strongman attendant contains the mallet] You can see an over-sized mallet here.[end if][paragraph break]Spectators gather around, cheering on participants and offering lighthearted jabs and encouragement, creating a lively, competitive atmosphere. The sound of the mallet hitting the target is followed by the resonant clang of the bell (if struck), alongside the buzz of carnival music in the background."
+The High Striker is a room. "This area features a tall, eye-catching machine adorned with bright, colorful lights, typically red, yellow, and blue. A large sign at the top reads 'Test Your Strength!' in bold, playful lettering. The machine’s base is made of polished wood, with a polished, vintage appearance. At the center is a sturdy metal pole, with a large bell hanging at the top, signaling when a successful attempt has been made. Along the length of the pole are markings indicating how strong you are.  A nearby sign says, 'Buy a mallet, strike the bell, win a prize.'[if the strongman attendant contains the mallet] You can see an over-sized mallet here.[end if][paragraph break]Spectators gather around, cheering on participants and offering lighthearted jabs and encouragement, creating a lively, competitive atmosphere. The sound of the mallet hitting the target is followed by the resonant clang of the bell (if struck), alongside the buzz of carnival music in the background."
 
 The markings are here. The markings are scenery. Understand "marking" and "sign" and "signs" as markings. The description of markings is "There are five levels marked on the pole: Weakling, Getting There, Average, Almost Theee, and Muscle Man."
 
-The Strongman Attendant is here. The description of the Strongman Attendant is "An attendant is standing here [if strongman attendant is carrying the mallet]holding a mallet[end if]." The Strongman Attendant carries the stuffed teddy bear and the mallet. The description of the teddy bear is "This is a teddy bear like you had when you were a kid. Right down to the red bow around its neck."
+The Strongman Attendant is here. The description of the Strongman Attendant is "An attendant is standing here [if strongman attendant is carrying the mallet]holding a mallet[end if]." 
+
+The Strongman Attendant carries the teddy bear, a swiss army knife, and a poster of Taylor Swift, and the mallet. The description of the teddy bear is "This is a teddy bear like you had when you were a kid. Right down to the red bow around its neck." The description of the swiss army knife is "This is the standard issue Swss Army knife with all the expected gadgets." The description of the poster of Taylor Swift is "This is a poster of America's swwetheart, Taylor Swift."
 
 The lever is here. The lever is fixed in place. Understand "bullseye" and "target" as lever. The description of the lever is "There is a bullseye on the base. I guess this is where you have to aim the mallet."
 
@@ -318,12 +353,29 @@ After hitting the lever when second noun is the mallet 5 times :
 	play the sound of Strongman Bell;
 	say "You swing the mallet one more time. The bell rings as the striker reaches the top of the pole. The attendant says, 'You[']re a Muscle Man. Here's a prize for you.'";
 	increase score by 5;
-	say "You now carry the stuffed teddy bear.";
-	now the player carries the stuffed teddy bear.
+	say "Which prize would you like? 1) The stuffed teddy bear, 2) the Swiss Army knife, or 3) the poster of Taylor Swift?".
 	
+after Reading a command :
+	if the player's command matches "1" and the location is the high striker:
+		say "You are now holding a cute little teddy bear.";
+		now the player carries the teddy bear;
+		reject the player's command.
+		
+after Reading a command:
+	if the player's command matches "2" and the location is the high striker:
+		say "You are now holding a Swiss Army knife.";
+		now the player carries the swiss army knife;
+		reject the player's command.
+		
+after Reading a command:
+	if the player's command matches "3" and the location is the high striker:
+		say "You are now holding a poster of Taylor Swift.";
+		now the player carries the poster of taylor swift;
+		reject the player's command.
+
 Section 5 - Show Facade
 
-Before going west when the location is the Ticket Booth and the Show Facade is unvisited:
+Before going west when the location is the kiosk and the Show Facade is unvisited:
 	display Figure of LittleEgyptFacade.
 	
 Before looking when the location is the Show Facade:
@@ -331,7 +383,7 @@ Before looking when the location is the Show Facade:
 
 Show Facade is a room. Show Facade is east of Show Tent. "[if location is unvisited]You head west through the midway, the bright lights of the carnival fading behind you as you approach a wooden booth. A sign above the entrance reads 'Little Egypt Show – A Journey Into the Mysterious and Exotic!' A rotund attendant, wearing a fez and a dazzling smile, gestures to a small sign beside him that says 'Dime Admission.'[paragraph break][end if] You are standing in front of a dark and mysterious tent filled with illusions and exotic performers. Perhaps there’s a fortune teller inside, offering cryptic clues about the player's journey or a hidden artifact that can be collected. There is a stage in front of the tent. The Barker is encouraging you to step up, pay for, and enjoy the Little Egypt Show.[if location is unvisited]The barker cries: [paragraph break]Ladies and gentlemen, boys and girls, gather 'round! [line break]Step right up and witness the spectacle that’s taken the world by storm! [line break]She walks, she talks, she crawls on her belly like a reptile. [line break]Behold the one, the only Little Egypt, performing her legendary Dance of the Pyramids—a dazzling display of mystery, grace, and exotic allure! [line break]For just a dime, a mere one tenth of a dollar, prepare to be transported to the sands of Cairo, where enchantment and wonder await![end if]"
 
-The Barker is a person in Show Facade. The description of the barker is "Here is a man dressed in black pants, a white shirt,a striped vest, a fex, and a dazzling smile. The barker cries: [paragraph break]Ladies and gentlemen, boys and girls, gather 'round! [line break]Step right up and witness the spectacle that’s taken the world by storm! [line break]She walks, she talks, she crawls on her belly like a reptile. [line break]Behold the one, the only Little Egypt, performing her legendary Dance of the Pyramids—a dazzling display of mystery, grace, and exotic allure! [line break]For just a dime, a mere one tenth of a dollar, prepare to be transported to the sands of Cairo, where enchantment and wonder await!"
+The Barker is a person in Show Facade. The description of the barker is "Here is a man dressed in black pants, a white shirt,a striped vest, a fez, and a dazzling smile. The barker cries: [paragraph break]Ladies and gentlemen, boys and girls, gather 'round! [line break]Step right up and witness the spectacle that’s taken the world by storm! [line break]She walks, she talks, she crawls on her belly like a reptile. [line break]Behold the one, the only Little Egypt, performing her legendary Dance of the Pyramids—a dazzling display of mystery, grace, and exotic allure! [line break]For just a dime, a mere one tenth of a dollar, prepare to be transported to the sands of Cairo, where enchantment and wonder await!"
 
 Check going west when the location is the Show Facade and the barker is not carrying the dime:
 	say "It'll cost you a dime to go that way.";
@@ -345,7 +397,7 @@ After giving when the noun is dime and the second noun is barker:
 
 Section 6 - Show Tent	
 
-Test Egypt with "get dime / s / w / l at barker / give dime to barker / w / sit in chair / z / z / z / z / z / e / e / n".
+Test Egypt with "get blueberries / get dime / s / w / l at barker / give dime to barker / w / sit in chair / z / z / z / z / z / e / e / n".
 
 Before going west when the location is the Show Facade and the Show Tent is unvisited and barker is carrying the dime:
 	display Figure of LittleEgyptShow.	
@@ -364,7 +416,8 @@ The Folding Chair is in Show Tent. The Folding Chair is a enterable scenery supp
 LittleEgyptAuto is a scene. LittleEgyptAuto begins when the player is in the Show Tent for the second turn.
 
 When LittleEgyptAuto ends:
-	say "You applaud until your hands are sore. Did she wink at me?".
+	say "You applaud until your hands are sore. Did she wink at me?";
+	increase score by 5.
 	
 Every turn during LittleEgyptAuto:
 	repeat through Table of LittleEgypt Events:
@@ -388,13 +441,13 @@ LittleEgyptAuto ends when the number of filled rows in the Table of LittleEgypt 
 
 Section 7 - Head of the Line
 
-Before going south when the location is the Ticket Booth and the Head of the Line is unvisited:
+Before going south when the location is the kiosk and the Head of the Line is unvisited:
 	display Figure of HellRideEntrance.
 	
 Before looking when the location is the Head of the Line:
 	display Figure of HellRideEntrance.
 
-Head of the Line is a room. Head of the Line is south of Booth. Head of the Line is north of Ride Entrance. "You are standing in front of a ticket taker with his hand open waiting for your ticket. The entrance to the ride is south of here."
+Head of the Line is a room. Head of the Line is south of Kiosk. Head of the Line is north of Ride Entrance. "You are standing in front of a ticket taker with his hand open waiting for your ticket. The entrance to the ride is south of here."
 
 The Ride Attendant is a man in Head of the Line. The description of the Ride Attendant is "This is another bored teenager. His thoughts are entirely focused on a cheeseburger for lunch.";
 
@@ -408,9 +461,9 @@ HellRide is a region. Ride Entrance is in HellRide.
 
 Section 1 - Ride Entrance
 
-Test Ride with "s / buy hell ride ticket / s / give ticket to attendant / s / enter car / wait / z / z / z / z / z / z".
+Test Ride with "get blueberries / s / buy hell ride ticket / s / give ticket to attendant / s / enter car / wait / z / z / z / z / z / z".
 
-HellRideAuto is a scene. HellRideAuto begins when the player is in the car for the second turn.
+HellRideAuto is a scene. HellRideAuto begins when the player is in the car for 3 turns.
 
 When HellRideAuto begins:
 	say "The car moves forward and the safety bar begins to lower."
@@ -423,8 +476,8 @@ Every turn during HellRideAuto:
 		
 Table of HellRide Events
 event
-"[bold type]Entrance[roman type][line break]The car has begun to move toward the entrance of the ride and the safety bar has been lowered halfway. Surrounded by skulls, chains, and ominous creatures, the doors to the ride read 'Hell Ride' in fiery, glowing letters."
-"[bold type]Hallway[roman type][line break]The doors open and your car passes through into the darkness. The safety bar has been lowered.[paragraph break]Mist fills the area as you move to the next room."
+"[bold type]Entrance[roman type][line break]The car has begun to move toward the entrance of the ride and the safety bar has been lowered. Surrounded by skulls, chains, and ominous creatures, the doors to the ride read 'Hell Ride' in fiery, glowing letters."
+"[bold type]Hallway[roman type][line break]The doors open and your car passes through into the darkness.[paragraph break]Mist fills the area as you move to the next room."
 "[bold type]The Stocks[roman type][line break]You pass into a room which displays mannequins in stocks in a public square. The stocks are made of heavy wood. The townsfolk are there solely to harrass and ridicule the individuals on display. The punishees['] eyes are downcast as the shame and humiliation of their predicaments are realized. The wax figures are especially life like.[paragraph break]Mist fills the area as you move to the next room."
 "[bold type]The Gallows[roman type][line break]The next room is dominated by a gallows made of strong hardwood. Standing on the gallows is an executioner wearing a hood protecting his identity. Next to him is a man with a noose around his neck standing on a hatch ready to open.[paragraph break]Mist fills the area as you move to the next room."
 "[bold type]The Stake[roman type][line break]Here you see a bonfire in full conflagration. The flames leap higher and higher consuming the woman tied to the stake. The townsfolk are here holding torches and  jeering at the sight of the poor soul being burnt alive.[paragraph break]Mist fills the area as you move to the next room."
@@ -442,7 +495,7 @@ When HellRideAuto ends:
 When play ends:
 	Say "You sit in dread as you watch the guillotine rising and falling, dropping like a stone on the cars in front of you. Thank goodness they are empty. As your turn comes, you raise your hands in a feeble attempt to stop the inevitable."
 	
-Ride Entrance is a room. Ride Entrance is south of Head of the Line. "The cars that will take you into the fearsome Hell Ride stop here for you to board.  To the south is the track that will take you into the ride. The safety bar is raised allowing you to entering the car. East of here is a gate with a sign that reads 'Employees Only'.". 
+Ride Entrance is a room. Ride Entrance is south of Head of the Line. "The cars that will take you into the fearsome Hell Ride stop here for you to board.  To the south is the track that will take you into the ride. The safety bar is raised allowing you to enter the car. East of here is a gate with a sign that reads 'Employees Only'.". 
 
 The car is a vehicle in the Ride Entrance. The description of the car is "A car waits to take you through the horror that is Hell Ride."
 
@@ -454,11 +507,18 @@ Before going south when the player is in the Ride Entrance:
 	
 Chapter 3 - Backstage
 
-Backstage is a region. Backstage Entrance is in Backstage.
+Backstage is a region. Backstage Entrance, Maintenance Office is in Backstage.
 
 Section 1 - Backstage Entrance
 
-Backstage Entrance is a room. Backstage Entrance is east of the Ride Entrance. "This room is backstage at the Hell Ride attraction. There an exit to the south."
+Test b with "s / buy ticket / s / give ticket to attendant / s".
+
+Test Backstage with "".
+
+Backstage Entrance is a dark room. Backstage Entrance is east of the Ride Entrance. "This room is backstage at the Hell Ride attraction. There an exit to the south."
+
+Section 2 - Maintenance Office
+
 
 
 
