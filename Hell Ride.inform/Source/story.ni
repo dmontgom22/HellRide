@@ -26,8 +26,8 @@ Include Singing Reloaded by Shin
 Use scoring.
 Use American Dialect.
 Use serial comma.
-The maximum score is 100.
-When play begins, seed the random-number generator with 0.
+The maximum score is 15.
+When play begins, seed the random-number generator with 1234.
 The block giving rule is not listed in the check giving it to rules.
 
 Chapter 2- Money Mechanics
@@ -190,11 +190,6 @@ After reading a command:
 	if the player's command includes "please":
 		say "Please do not say please.";
 		reject the player's command.
-		
-[After reading a command:
-	if the player's command matches "hello sailor":
-		say "Nothing happens here.";
-		reject the player's command.]
 
 [hello sailor]
 Asking someone about something is speech. Telling someone about something is speech. Answering someone that something is speech. Asking someone for something is speech.
@@ -315,9 +310,7 @@ A soft pretzel is here. The soft pretzel is edible. The price of the soft pretze
 
 Section 4 - High Striker
 
-test s with "s / e / buy mallet / hit target with mallet / g / g / g / g"
-
-Test Striker with "get blueberries / s / e / buy mallet / hit lever with mallet / g / g / g / g / w / n".
+Test Striker with "get blueberries / s / e / buy mallet / hit lever with mallet / g / g / g / g / 2 / w / n".
 
 Before going east when the location is the kiosk and the High Striker is unvisited:
 	display Figure of HighStriker.
@@ -331,7 +324,7 @@ The markings are here. The markings are scenery. Understand "marking" and "sign"
 
 The Strongman Attendent is here. The description of the Strongman Attendent is "An Attendent is standing here [if strongman attendent is carrying the mallet]holding a mallet[end if]." 
 
-The Strongman Attendent carries the teddy bear, a swiss army knife, and a poster of Taylor Swift, and the mallet. The description of the teddy bear is "This is a teddy bear like you had when you were a kid. Right down to the red bow around its neck." The description of the swiss army knife is "This is the standard issue Swss Army knife with all the expected gadgets." The description of the poster of Taylor Swift is "This is a poster of America's swwetheart, Taylor Swift."
+The Strongman Attendent carries the teddy bear, a swiss army knife, and a poster of Taylor Swift, and the mallet. The description of the teddy bear is "This is a teddy bear like you had when you were a kid. Right down to the red bow around its neck." The Swiss Army knife is a container. The Swiss Army knife contains a screwdriver. The description of the swiss army knife is "This is the standard issue Swss Army knife with all the expected gadgets." The description of the poster of Taylor Swift is "This is a poster of America's swwetheart, Taylor Swift."
 
 The lever is here. The lever is fixed in place. Understand "bullseye" and "target" as lever. The description of the lever is "There is a bullseye on the base. I guess this is where you have to aim the mallet."
 
@@ -457,11 +450,11 @@ Check going south when the location is Head of the Line and the Ride Attendent d
 
 Chapter 2 - The Ride
 
-HellRide is a region. Ride Entrance is in HellRide.
+HellRide is a region. Ride Entrance, Stocks Room, Gallows Room, Stake Room, Dungeon, Guillotine Room, Ride Exit is in HellRide.
 
 Section 1 - Ride Entrance
 
-Test Ride with "get blueberries / s / buy hell ride ticket / s / give ticket to attendent / s / enter car / wait / z / z / z / z / z / z".
+Test Ride with "get blueberries / s / buy hell ride ticket / s / give ticket to attendent / s / enter car / wait / z / z / z / z / z / z / z".
 
 HellRideAuto is a scene. HellRideAuto begins when the player is in the car for 3 turns.
 
@@ -502,10 +495,34 @@ The car is a vehicle in the Ride Entrance. The description of the car is "A car 
 Before going south when the player is in the Ride Entrance:
 	say "You can't go that way." instead;
 	continue the action.
-	
+
+Section 2 - Stocks Room
+
+The Stocks Room is south of the Ride Entrance. The Stocks Room is west of the Maintenance Office. "You pass into a room which displays mannequins in stocks in a public square. The stocks are made of heavy wood. The townsfolk are there solely to harrass and ridicule the individuals on display. The punishee[']s eyes are downcast as the shame and humiliation of their predicaments are realized. The wax figures are especially life like."
+
+Section 3 - Gallows Room
+
+The Gallows Room is south of the Stocks Room. The Gallows Room is west of the Crawl Space. "The next room is dominated by a gallows made of strong hardwood. Standing on the gallows is an executioner wearing a hood protecting his identity. Next to him is a man with a noose around his neck standing on a hatch ready to open."
+
+Section 4 - Stake Room
+
+The Stake Room is south of the Gallows Room. The Stake Room is west of the Mechanical Room. "Here you see a bonfire in full conflagration. The flames leap higher and higher consuming the woman tied to the stake. The townsfolk are here holding torches and  jeering at the sight of the poor soul being burnt alive."
+
+Section 5 - Dungeon
+
+The Dungeon is south of the Stake Room. The Dungeon is west of NW Quadrant. "This a dungeon with all the usual devices. There is a man stretched on the rack. His screams pierce the room. An iron maiden is occupied and you notice the blood seeping from the eyes, ears, and mouth. Another is strapped to a Saint Andrew's Cross and is being flogged harshly."
+
+Section 6 - Guillotine Room
+
+The Guillotine Room is south of the Dungeon. The Guillotine Room is west of the SW Quadrant. "There is a guillotine in this room. The guillotine is being raised and lowered by some mechanism. It appears that the timing of the guillotine is off and it is being lowered onto the cars instead of between them. If a person were to be in a car as it passed under the guillotine, they would be decapitated."
+
+Section 7 - Ride Exit
+
+The Ride Exit is south of the Guillotine Room. The Ride Exit is west of the Electrical Panel.
+
 Chapter 3 - Backstage
 
-Backstage is a region. Backstage Entrance, Maintenance Office is in Backstage.
+Backstage is a region. Backstage Entrance, Maintenance Office, Spinner, NW Quadrant, NE Quadrant, W Quadrant, SW Quadrant, S Quadrant, SE Quadrant, E Quadrant, Crawl Space, Mechanical Room, Electrical Panel is in Backstage.
 
 Section 1 - Backstage Entrance
 
@@ -560,6 +577,37 @@ After waiting when the location is dark:
 
 Section 2 - Maintenance Office
 
-The Maintenance Office is a dark room. The maintenance office is south of the backstage entrance. "This appears to be the maintenance office, There is a desk here,". The desk is in the office. The desk is a container. "The desk appears to have a drawer."
+The Maintenance Office is a dark room. The maintenance office is south of the backstage entrance. "This appears to be the maintenance office, There is a desk here.". 
 
-The drawer is part of the desk. The drawer is a container. It is closed and openable. The desk is in the maintenance office. The description of the desk is "The single drawer is [if the drawer is open]open[otherwise]shut[end if]."
+[ This is the code that breaks the opening]
+The desk is in the maintenance office. The desk is fixed in place. A drawer is part of the desk. The drawer is a closed openable container. The drawer is scenery. The description of the desk is "It's a desk. There are coffee stains and cigarette burns from years of abuse. The single drawer is [if the drawer is open]open[otherwise]shut[end if]."
+
+The scissors are in the drawer. The description is "This is a sharp pair of office scissors." The stapler is in the drawer. The description is "This is a red stapler." The ballpoint pen is in the drawer. The description is "Your standard ballpoint pen. It says Bic on the side." The pad of paper is in the drawer. The description is "This is a pad of lined paper."
+
+Section 3 - Crawl Space
+
+The Crawl Space is a dark room. The Crawl Space is south of Maintenance Office. "This crawl space is extremely small. You begin to feel claustrophobic in here."
+
+Section 4 - Mechanical Room
+
+The Mechanical Room is a dark room. The Mechanical Room is south of the Crawl Space. "There is machinery filling the room." 
+
+Section 5 - Spinner
+
+The Spinner is a dark room. The spinner is south of the Mechanical Room. "This room is oozing with electromagnetic energy. You can feel your hair stand on end and all your nerves twitching. This feels dangerous!"
+
+[Instead of going from the Spinner:
+	move the player to a random adjacent room.]
+	
+The Maintenance Office is north of the Spinner. . 
+The NW Quadrant is northwest of the Spinner. The NW Quadrant is a dark room. "You are in a section of the electrical room. There is an exit to the south east."
+The NE Quadrant is a dark room. The NE Quadrant is northeast of the Spinner.  "You are in a section of the electrical room. There is an exit to the south west." The key is in the NE Quadrant. The description of the key is "This is a skeleton key. Invariably, the lock this key fits will likely be cursed. Adventurer beware!"
+The W Quadrant is a dark room. W Quadrant is west of the Spinner. "You are in a section of the electrical room. There is an exit to the east."
+The SW Quadrant is a dark room. SW Quadrant is southwest of the Spinner. "You are in a section of the electrical room. There is an exit to the north east."
+The S Quadrant is a dark room. S Quadrant is south of the Spinner. "You are in a section of the electrical room. There is an exit to the north."
+The SE Quadrant is a dark room.  SE Quadrant is southeast of the Spinner."You are in a section of the electrical room. There is an exit to the north west."
+The E Quadrant is a dark room. E Quadrant is east of the Spinner. "You are in a section of the electrical room. There is an exit to the west."
+
+Section 6 - Electrical Panel
+
+The Electrical Panel is a dark room. The Electrical Panel is south of the S Quadrant.
