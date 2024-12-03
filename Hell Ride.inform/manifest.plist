@@ -13,17 +13,19 @@
             <key>5</key>
             <string>Figures\TicketBooth.png</string>
             <key>6</key>
-            <string>Figures\LittleEgyptFacade.png</string>
+            <string>Figures\ConcessionStand.png</string>
             <key>7</key>
-            <string>Figures\LittleEgyptShow.png</string>
+            <string>Figures\LittleEgyptFacade.png</string>
             <key>8</key>
-            <string>Figures\HighStriker.png</string>
+            <string>Figures\LittleEgyptShow.png</string>
             <key>9</key>
+            <string>Figures\HighStriker.png</string>
+            <key>10</key>
             <string>Figures\RideEntrance.png</string>
         </dict>
         <key>Sounds</key>
         <dict>
-            <key>10</key>
+            <key>11</key>
             <string>Sounds\StrongmanBell.ogg</string>
         </dict>
     </dict>
