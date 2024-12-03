@@ -3,7 +3,7 @@
   <generator>Windows Inform 10.1.2</generator>
   <item nodeId="node-39">
     <command xml:space="preserve">Hell Ride</command>
-    <result xml:space="preserve">wallet has no description.&#x000A;$15.00 in cash has no description.&#x000A;Sailor has no description.&#x000A;blueberry bush has no description.&#x000A;Little Eygpt has no description.&#x000A;&#x000A;&#x000A;&#x000A;The carnival is in town and you had a date with your sweetie to visit it. After dinner and just as you arrive at the carnival, you and your date have a terrible fight. They storm off leaving you alone at the carnival. You decide to stay at the carnival anyway.&#x000A;&#x000A;The midway is bustling with activity-lights flashing, the sounds of carnival music, and the laughter of children mix with the occasional shrill scream of a roller coaster. Various attractions line the street, promising thrills, challenges, and wonders.&#x000A;&#x000A;Hell Ride&#x000A;The ride of a lifetime... by No Shoes&#x000A;Release 1 / Serial number 241202 / Inform 7 v10.1.2 / D&#x000A;&#x000A;Parking Lot&#x000A;You are in a parking lot full of cars. The midway is to the south. There is a blueberry bush here. There are blueberries on the bush&#x000A;&#x000A;You can see a dime here.&#x000A;&#x000A;&gt;</result>
+    <result xml:space="preserve">wallet has no description.&#x000A;$15.00 in cash has no description.&#x000A;Sailor has no description.&#x000A;blueberry bush has no description.&#x000A;Little Eygpt has no description.&#x000A;drawer has no description.&#x000A;&#x000A;&#x000A;&#x000A;The carnival is in town and you had a date with your sweetie to visit it. After dinner and just as you arrive at the carnival, you and your date have a terrible fight. They storm off leaving you alone at the carnival. You decide to stay at the carnival anyway.&#x000A;&#x000A;The midway is bustling with activity-lights flashing, the sounds of carnival music, and the laughter of children mix with the occasional shrill scream of a roller coaster. Various attractions line the street, promising thrills, challenges, and wonders.&#x000A;&#x000A;Hell Ride&#x000A;The ride of a lifetime... by No Shoes&#x000A;Release 1 / Serial number 241202 / Inform 7 v10.1.2 / D&#x000A;&#x000A;Parking Lot&#x000A;You are in a parking lot full of cars. The midway is to the south. There is a blueberry bush here. There are blueberries on the bush&#x000A;&#x000A;You can see a dime here.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve">wallet has no description.&#x000A;$15.00 in cash has no description.&#x000A;Sailor has no description.&#x000A;blueberry bush has no description.&#x000A;Little Eygpt has no description.&#x000A;&#x000A;&#x000A;&#x000A;The carnival is in town and you had a date with your sweetie to visit it. After dinner and just as you arrive at the carnival, you and your date have a terrible fight. They storm off leaving you alone at the carnival. You decide to stay at the carnival anyway.&#x000A;&#x000A;The midway is bustling with activity-lights flashing, the sounds of carnival music, and the laughter of children mix with the occasional shrill scream of a roller coaster. Various attractions line the street, promising thrills, challenges, and wonders.&#x000A;&#x000A;Hell Ride&#x000A;The ride of a lifetime... by No Shoes&#x000A;Release 1 / Serial number 241202 / Inform 7 v10.1.2 / D&#x000A;&#x000A;Parking Lot&#x000A;You are in a parking lot full of cars. The midway is to the south. There is a blueberry bush here. There are blueberries on the bush&#x000A;&#x000A;You can see a dime here.&#x000A;&#x000A;&gt;</commentary>
     <changed>NO</changed>
     <children>
@@ -130,11 +130,17 @@
   </item>
   <item nodeId="node-1582">
     <command xml:space="preserve">test b</command>
-    <result xml:space="preserve">(Testing.)&#x000A;&#x000A;&gt;[1] s&#x000A;&#x000A;&#x000A;&#x000A;Kiosk&#x000A;You are standing in line at a kiosk at the carnival. The kiosk sells tickets to the Hell Ride attraction. The line for the ride forms to the south and the midway continues east and west from here. There is a concession stand to the south west. The kiosk is garishly painted in purple and green sparkles. There is a cashier here. The Cashier has a Hell Ride ticket.&#x000A;&#x000A;You can see a Cashier here.&#x000A;&#x000A;&gt;[2] buy ticket&#x000A;You fork over $2.50 for the Hell Ride ticket, leaving yourself with $12.50.&#x000A;&#x000A;&gt;[3] s&#x000A;&#x000A;&#x000A;&#x000A;Head of the Line&#x000A;You are standing in front of a ticket taker with his hand open waiting for your ticket. The entrance to the ride is south of here.&#x000A;&#x000A;You can see a Ride Attendant here.&#x000A;&#x000A;&gt;[4] give ticket to attendant&#x000A;You give the Hell Ride ticket to the Ride Attendant.&#x000A;&#x000A;&gt;[5] s&#x000A;&#x000A;Ride Entrance&#x000A;The cars that will take you into the fearsome Hell Ride stop here for you to board.  To the south is the track that will take you into the ride. The safety bar is raised allowing you to enter the car. East of here is a gate with a sign that reads "Employees Only".&#x000A;&#x000A;You can see a car (empty) here.&#x000A;&#x000A;&gt;</result>
+    <result xml:space="preserve">(Testing.)&#x000A;&#x000A;&gt;[1] s&#x000A;&#x000A;&#x000A;&#x000A;Kiosk&#x000A;You are standing in line at a kiosk at the carnival. The kiosk sells tickets to the Hell Ride attraction. The line for the ride forms to the south and the midway continues east and west from here. There is a concession stand to the south west. The kiosk is garishly painted in purple and green sparkles. There is a cashier here. The Cashier has a Hell Ride ticket.&#x000A;&#x000A;You can see a Cashier here.&#x000A;&#x000A;&gt;[2] buy ticket&#x000A;You fork over $2.50 for the Hell Ride ticket, leaving yourself with $12.50.&#x000A;&#x000A;&gt;[3] s&#x000A;&#x000A;&#x000A;&#x000A;Head of the Line&#x000A;You are standing in front of a ticket taker with his hand open waiting for your ticket. The entrance to the ride is south of here.&#x000A;&#x000A;You can see a Ride Attendent here.&#x000A;&#x000A;&gt;[4] give ticket to attendent&#x000A;You give the Hell Ride ticket to the Ride Attendent.&#x000A;&#x000A;&gt;[5] s&#x000A;&#x000A;Ride Entrance&#x000A;The cars that will take you into the fearsome Hell Ride stop here for you to board.  To the south is the track that will take you into the ride. The safety bar is raised allowing you to enter the car. East of here the darkness looks just a little bit darker.&#x000A;&#x000A;You can see a car (empty) here.&#x000A;&#x000A;&gt;[6] e&#x000A;&#x000A;Backstage Entrance&#x000A;This room is backstage at the Hell Ride attraction. West is back the way you came from. There an exit to the south. There is a pile of junk in the corner.&#x000A;&#x000A;&gt;[7] get all&#x000A;flashlight: Taken.&#x000A;&#x000A;&gt;[8] turn on flashlight&#x000A;You flip a switch. A strong, narrow beam of light shines from the flashlight.&#x000A;&#x000A;&gt;[9] s&#x000A;&#x000A;Maintenance Office&#x000A;This appears to be the maintenance office, There is a desk here,&#x000A;&#x000A;The desk appears to have a drawer.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
     <children>
       <child nodeId="node-1583"/>
+      <child nodeId="node-1590"/>
+      <child nodeId="node-1620"/>
+      <child nodeId="node-1641"/>
+      <child nodeId="node-1607"/>
+      <child nodeId="node-1673"/>
+      <child nodeId="node-1616"/>
     </children>
   </item>
   <item nodeId="node-1583">
@@ -194,6 +200,826 @@
   <item nodeId="node-1589">
     <command xml:space="preserve">n</command>
     <result xml:space="preserve">You can't go that way.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+  </item>
+  <item nodeId="node-1590">
+    <command xml:space="preserve">l</command>
+    <result xml:space="preserve">Darkness&#x000A;It is pitch dark, and you can't see a thing.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1591"/>
+    </children>
+  </item>
+  <item nodeId="node-1591">
+    <command xml:space="preserve">r</command>
+    <result xml:space="preserve">I didn't understand that sentence.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1592"/>
+    </children>
+  </item>
+  <item nodeId="node-1592">
+    <command xml:space="preserve">e</command>
+    <result xml:space="preserve">You can't go that way.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1593"/>
+    </children>
+  </item>
+  <item nodeId="node-1593">
+    <command xml:space="preserve">w</command>
+    <result xml:space="preserve">You can't go that way.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1594"/>
+    </children>
+  </item>
+  <item nodeId="node-1594">
+    <command xml:space="preserve">s</command>
+    <result xml:space="preserve">You can't go that way.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1595"/>
+    </children>
+  </item>
+  <item nodeId="node-1595">
+    <command xml:space="preserve">n</command>
+    <result xml:space="preserve">Darkness&#x000A;It is pitch dark, and you can't see a thing.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1596"/>
+    </children>
+  </item>
+  <item nodeId="node-1596">
+    <command xml:space="preserve">e</command>
+    <result xml:space="preserve">You can't go that way.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1597"/>
+    </children>
+  </item>
+  <item nodeId="node-1597">
+    <command xml:space="preserve">w</command>
+    <result xml:space="preserve">Ride Entrance&#x000A;The cars that will take you into the fearsome Hell Ride stop here for you to board.  To the south is the track that will take you into the ride. The safety bar is raised allowing you to enter the car. East of here is a gate with a sign that reads "Employees Only".&#x000A;&#x000A;You can see a car (empty) here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1598"/>
+    </children>
+  </item>
+  <item nodeId="node-1598">
+    <command xml:space="preserve">e</command>
+    <result xml:space="preserve">Darkness&#x000A;It is pitch dark, and you can't see a thing.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1599"/>
+    </children>
+  </item>
+  <item nodeId="node-1599">
+    <command xml:space="preserve">e</command>
+    <result xml:space="preserve">You can't go that way.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1600"/>
+    </children>
+  </item>
+  <item nodeId="node-1600">
+    <command xml:space="preserve">w</command>
+    <result xml:space="preserve">Ride Entrance&#x000A;The cars that will take you into the fearsome Hell Ride stop here for you to board.  To the south is the track that will take you into the ride. The safety bar is raised allowing you to enter the car. East of here is a gate with a sign that reads "Employees Only".&#x000A;&#x000A;You can see a car (empty) here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1601"/>
+    </children>
+  </item>
+  <item nodeId="node-1601">
+    <command xml:space="preserve">e</command>
+    <result xml:space="preserve">Darkness&#x000A;It is pitch dark, and you can't see a thing.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1602"/>
+    </children>
+  </item>
+  <item nodeId="node-1602">
+    <command xml:space="preserve">s</command>
+    <result xml:space="preserve">Darkness&#x000A;It is pitch dark, and you can't see a thing.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1603"/>
+    </children>
+  </item>
+  <item nodeId="node-1603">
+    <command xml:space="preserve">s</command>
+    <result xml:space="preserve">You can't go that way.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1604"/>
+    </children>
+  </item>
+  <item nodeId="node-1604">
+    <command xml:space="preserve">s</command>
+    <result xml:space="preserve">You can't go that way.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1605"/>
+    </children>
+  </item>
+  <item nodeId="node-1605">
+    <command xml:space="preserve">s</command>
+    <result xml:space="preserve">You can't go that way.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1606"/>
+    </children>
+  </item>
+  <item nodeId="node-1606">
+    <command xml:space="preserve">s</command>
+    <result xml:space="preserve">You can't go that way.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+  </item>
+  <item nodeId="node-1620">
+    <command xml:space="preserve">n</command>
+    <result xml:space="preserve">Backstage Entrance&#x000A;This room is backstage at the Hell Ride attraction. West is back the way you came from. There an exit to the south. There is a pile of junk in the corner.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1625"/>
+      <child nodeId="node-1621"/>
+      <child nodeId="node-1632"/>
+    </children>
+  </item>
+  <item nodeId="node-1625">
+    <command xml:space="preserve">examine pile of junk</command>
+    <result xml:space="preserve">You can't see any such thing.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1626"/>
+    </children>
+  </item>
+  <item nodeId="node-1626">
+    <command xml:space="preserve">l</command>
+    <result xml:space="preserve">Backstage Entrance&#x000A;This room is backstage at the Hell Ride attraction. West is back the way you came from. There an exit to the south. There is a pile of junk in the corner.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1627"/>
+    </children>
+  </item>
+  <item nodeId="node-1627">
+    <command xml:space="preserve">w</command>
+    <result xml:space="preserve">Ride Entrance&#x000A;The cars that will take you into the fearsome Hell Ride stop here for you to board.  To the south is the track that will take you into the ride. The safety bar is raised allowing you to enter the car. East of here the darkness looks just a little bit darker.&#x000A;&#x000A;You can see a car (empty) here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1628"/>
+    </children>
+  </item>
+  <item nodeId="node-1628">
+    <command xml:space="preserve">e</command>
+    <result xml:space="preserve">Backstage Entrance&#x000A;This room is backstage at the Hell Ride attraction. West is back the way you came from. There an exit to the south. There is a pile of junk in the corner.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1629"/>
+    </children>
+  </item>
+  <item nodeId="node-1629">
+    <command xml:space="preserve">s</command>
+    <result xml:space="preserve">Darkness&#x000A;It is pitch dark, and you can't see a thing.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1630"/>
+    </children>
+  </item>
+  <item nodeId="node-1630">
+    <command xml:space="preserve">n</command>
+    <result xml:space="preserve">Backstage Entrance&#x000A;This room is backstage at the Hell Ride attraction. West is back the way you came from. There an exit to the south. There is a pile of junk in the corner.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1631"/>
+    </children>
+  </item>
+  <item nodeId="node-1631">
+    <command xml:space="preserve">l at junk</command>
+    <result xml:space="preserve">You can't see any such thing.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+  </item>
+  <item nodeId="node-1621">
+    <command xml:space="preserve">get all</command>
+    <result xml:space="preserve">flashlight: Taken.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1622"/>
+      <child nodeId="node-1623"/>
+    </children>
+  </item>
+  <item nodeId="node-1622">
+    <command xml:space="preserve">l</command>
+    <result xml:space="preserve">Backstage Entrance&#x000A;This room is backstage at the Hell Ride attraction. West is back the way you came from. There an exit to the south. In the corner you see a discarded flashlight.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+  </item>
+  <item nodeId="node-1623">
+    <command xml:space="preserve">s</command>
+    <result xml:space="preserve">Darkness&#x000A;It is pitch dark, and you can't see a thing.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1624"/>
+    </children>
+  </item>
+  <item nodeId="node-1624">
+    <command xml:space="preserve">turn on flashlight</command>
+    <result xml:space="preserve">It isn't something you can switch.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+  </item>
+  <item nodeId="node-1632">
+    <command xml:space="preserve">n</command>
+    <result xml:space="preserve">You can't go that way.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1633"/>
+    </children>
+  </item>
+  <item nodeId="node-1633">
+    <command xml:space="preserve">e</command>
+    <result xml:space="preserve">You can't go that way.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1634"/>
+    </children>
+  </item>
+  <item nodeId="node-1634">
+    <command xml:space="preserve">s</command>
+    <result xml:space="preserve">Darkness&#x000A;It is pitch dark, and you can't see a thing.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1635"/>
+    </children>
+  </item>
+  <item nodeId="node-1635">
+    <command xml:space="preserve">n</command>
+    <result xml:space="preserve">Backstage Entrance&#x000A;This room is backstage at the Hell Ride attraction. West is back the way you came from. There an exit to the south. There is a pile of junk in the corner.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1636"/>
+    </children>
+  </item>
+  <item nodeId="node-1636">
+    <command xml:space="preserve">w</command>
+    <result xml:space="preserve">Ride Entrance&#x000A;The cars that will take you into the fearsome Hell Ride stop here for you to board.  To the south is the track that will take you into the ride. The safety bar is raised allowing you to enter the car. East of here the darkness looks just a little bit darker.&#x000A;&#x000A;You can see a car (empty) here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1637"/>
+    </children>
+  </item>
+  <item nodeId="node-1637">
+    <command xml:space="preserve">e</command>
+    <result xml:space="preserve">Backstage Entrance&#x000A;This room is backstage at the Hell Ride attraction. West is back the way you came from. There an exit to the south. There is a pile of junk in the corner.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1638"/>
+    </children>
+  </item>
+  <item nodeId="node-1638">
+    <command xml:space="preserve">w</command>
+    <result xml:space="preserve">Ride Entrance&#x000A;The cars that will take you into the fearsome Hell Ride stop here for you to board.  To the south is the track that will take you into the ride. The safety bar is raised allowing you to enter the car. East of here the darkness looks just a little bit darker.&#x000A;&#x000A;You can see a car (empty) here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1639"/>
+    </children>
+  </item>
+  <item nodeId="node-1639">
+    <command xml:space="preserve">n</command>
+    <result xml:space="preserve">Head of the Line&#x000A;You are standing in front of a ticket taker with his hand open waiting for your ticket. The entrance to the ride is south of here.&#x000A;&#x000A;You can see a Ride Attendant here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1640"/>
+    </children>
+  </item>
+  <item nodeId="node-1640">
+    <command xml:space="preserve">l</command>
+    <result xml:space="preserve">Head of the Line&#x000A;You are standing in front of a ticket taker with his hand open waiting for your ticket. The entrance to the ride is south of here.&#x000A;&#x000A;You can see a Ride Attendant here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+  </item>
+  <item nodeId="node-1641">
+    <command xml:space="preserve">restaret</command>
+    <result xml:space="preserve">I didn't understand that sentence.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1642"/>
+    </children>
+  </item>
+  <item nodeId="node-1642">
+    <command xml:space="preserve">restart</command>
+    <result xml:space="preserve">Are you sure you want to restart?</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1643"/>
+    </children>
+  </item>
+  <item nodeId="node-1643">
+    <command xml:space="preserve">yu</command>
+    <result xml:space="preserve">Please answer yes or no.&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1644"/>
+    </children>
+  </item>
+  <item nodeId="node-1644">
+    <command xml:space="preserve">y</command>
+    <result xml:space="preserve">wallet has no description.&#x000A;$15.00 in cash has no description.&#x000A;Sailor has no description.&#x000A;blueberry bush has no description.&#x000A;Little Eygpt has no description.&#x000A;drawer has no description.&#x000A;&#x000A;&#x000A;&#x000A;The carnival is in town and you had a date with your sweetie to visit it. After dinner and just as you arrive at the carnival, you and your date have a terrible fight. They storm off leaving you alone at the carnival. You decide to stay at the carnival anyway.&#x000A;&#x000A;The midway is bustling with activity-lights flashing, the sounds of carnival music, and the laughter of children mix with the occasional shrill scream of a roller coaster. Various attractions line the street, promising thrills, challenges, and wonders.&#x000A;&#x000A;Hell Ride&#x000A;The ride of a lifetime... by No Shoes&#x000A;Release 1 / Serial number 241202 / Inform 7 v10.1.2 / D&#x000A;&#x000A;Parking Lot&#x000A;You are in a parking lot full of cars. The midway is to the south. There is a blueberry bush here. There are blueberries on the bush&#x000A;&#x000A;You can see a dime here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1645"/>
+    </children>
+  </item>
+  <item nodeId="node-1645">
+    <command xml:space="preserve">s</command>
+    <result xml:space="preserve">Kiosk&#x000A;You are standing in line at a kiosk at the carnival. The kiosk sells tickets to the Hell Ride attraction. The line for the ride forms to the south and the midway continues east and west from here. There is a concession stand to the south west. The kiosk is garishly painted in purple and green sparkles. There is a cashier here. The Cashier has a Hell Ride ticket.&#x000A;&#x000A;You can see a Cashier here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1646"/>
+    </children>
+  </item>
+  <item nodeId="node-1646">
+    <command xml:space="preserve">buy ticket</command>
+    <result xml:space="preserve">You fork over $2.50 for the Hell Ride ticket, leaving yourself with $12.50.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1647"/>
+    </children>
+  </item>
+  <item nodeId="node-1647">
+    <command xml:space="preserve">s</command>
+    <result xml:space="preserve">Head of the Line&#x000A;You are standing in front of a ticket taker with his hand open waiting for your ticket. The entrance to the ride is south of here.&#x000A;&#x000A;You can see a Ride Attendant here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1648"/>
+    </children>
+  </item>
+  <item nodeId="node-1648">
+    <command xml:space="preserve">give ticket to attendent</command>
+    <result xml:space="preserve">You can't see any such thing.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1649"/>
+    </children>
+  </item>
+  <item nodeId="node-1649">
+    <command xml:space="preserve">give ticket to attendant</command>
+    <result xml:space="preserve">You give the Hell Ride ticket to the Ride Attendant.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1650"/>
+    </children>
+  </item>
+  <item nodeId="node-1650">
+    <command xml:space="preserve">s</command>
+    <result xml:space="preserve">Ride Entrance&#x000A;The cars that will take you into the fearsome Hell Ride stop here for you to board.  To the south is the track that will take you into the ride. The safety bar is raised allowing you to enter the car. East of here the darkness looks just a little bit darker.&#x000A;&#x000A;You can see a car (empty) here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1651"/>
+    </children>
+  </item>
+  <item nodeId="node-1651">
+    <command xml:space="preserve">e</command>
+    <result xml:space="preserve">Backstage Entrance&#x000A;This room is backstage at the Hell Ride attraction. West is back the way you came from. There an exit to the south. There is a pile of junk in the corner.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1652"/>
+    </children>
+  </item>
+  <item nodeId="node-1652">
+    <command xml:space="preserve">s</command>
+    <result xml:space="preserve">Darkness&#x000A;It is pitch dark, and you can't see a thing.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1653"/>
+    </children>
+  </item>
+  <item nodeId="node-1653">
+    <command xml:space="preserve">s</command>
+    <result xml:space="preserve">You can't go that way.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1654"/>
+    </children>
+  </item>
+  <item nodeId="node-1654">
+    <command xml:space="preserve">w</command>
+    <result xml:space="preserve">You can't go that way.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1655"/>
+    </children>
+  </item>
+  <item nodeId="node-1655">
+    <command xml:space="preserve">e</command>
+    <result xml:space="preserve">You can't go that way.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1656"/>
+    </children>
+  </item>
+  <item nodeId="node-1656">
+    <command xml:space="preserve">n</command>
+    <result xml:space="preserve">Backstage Entrance&#x000A;This room is backstage at the Hell Ride attraction. West is back the way you came from. There an exit to the south. There is a pile of junk in the corner.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1657"/>
+    </children>
+  </item>
+  <item nodeId="node-1657">
+    <command xml:space="preserve">search junk</command>
+    <result xml:space="preserve">In the pile of junk is a flashlight.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1658"/>
+    </children>
+  </item>
+  <item nodeId="node-1658">
+    <command xml:space="preserve">get flashlight</command>
+    <result xml:space="preserve">Taken.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1659"/>
+    </children>
+  </item>
+  <item nodeId="node-1659">
+    <command xml:space="preserve">turn on flashlight</command>
+    <result xml:space="preserve">You flip a switch. A strong, narrow beam of light shines from the flashlight.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1660"/>
+    </children>
+  </item>
+  <item nodeId="node-1660">
+    <command xml:space="preserve">s</command>
+    <result xml:space="preserve">Maintenance Office&#x000A;This appears to be the maintenance office, There is a desk here,&#x000A;&#x000A;The desk appears to have a drawer.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1661"/>
+    </children>
+  </item>
+  <item nodeId="node-1661">
+    <command xml:space="preserve">turn off flashlight</command>
+    <result xml:space="preserve">You switch the flashlight off.&#x000A;&#x000A;It is now pitch dark in here!&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1662"/>
+    </children>
+  </item>
+  <item nodeId="node-1662">
+    <command xml:space="preserve">l</command>
+    <result xml:space="preserve">Darkness&#x000A;It is pitch dark, and you can't see a thing.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1663"/>
+    </children>
+  </item>
+  <item nodeId="node-1663">
+    <command xml:space="preserve">z</command>
+    <result xml:space="preserve">Time passes.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1664"/>
+    </children>
+  </item>
+  <item nodeId="node-1664">
+    <command xml:space="preserve">z</command>
+    <result xml:space="preserve">Time passes.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1665"/>
+    </children>
+  </item>
+  <item nodeId="node-1665">
+    <command xml:space="preserve">z</command>
+    <result xml:space="preserve">Time passes.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1666"/>
+    </children>
+  </item>
+  <item nodeId="node-1666">
+    <command xml:space="preserve">z</command>
+    <result xml:space="preserve">Time passes.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1667"/>
+    </children>
+  </item>
+  <item nodeId="node-1667">
+    <command xml:space="preserve">z</command>
+    <result xml:space="preserve">Time passes.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1668"/>
+    </children>
+  </item>
+  <item nodeId="node-1668">
+    <command xml:space="preserve">z</command>
+    <result xml:space="preserve">Time passes.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1669"/>
+    </children>
+  </item>
+  <item nodeId="node-1669">
+    <command xml:space="preserve">z</command>
+    <result xml:space="preserve">Time passes.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1670"/>
+    </children>
+  </item>
+  <item nodeId="node-1670">
+    <command xml:space="preserve">z</command>
+    <result xml:space="preserve">Time passes.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1671"/>
+    </children>
+  </item>
+  <item nodeId="node-1671">
+    <command xml:space="preserve">z</command>
+    <result xml:space="preserve">Time passes.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1672"/>
+    </children>
+  </item>
+  <item nodeId="node-1672">
+    <command xml:space="preserve">z</command>
+    <result xml:space="preserve">Time passes.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+  </item>
+  <item nodeId="node-1607">
+    <command xml:space="preserve">s</command>
+    <result xml:space="preserve">You can't go that way.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1608"/>
+    </children>
+  </item>
+  <item nodeId="node-1608">
+    <command xml:space="preserve">w</command>
+    <result xml:space="preserve">You can't go that way.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1609"/>
+    </children>
+  </item>
+  <item nodeId="node-1609">
+    <command xml:space="preserve">e</command>
+    <result xml:space="preserve">You can't go that way.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1610"/>
+    </children>
+  </item>
+  <item nodeId="node-1610">
+    <command xml:space="preserve">n</command>
+    <result xml:space="preserve">Darkness&#x000A;It is pitch dark, and you can't see a thing.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1611"/>
+    </children>
+  </item>
+  <item nodeId="node-1611">
+    <command xml:space="preserve">s</command>
+    <result xml:space="preserve">Darkness&#x000A;It is pitch dark, and you can't see a thing.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1612"/>
+    </children>
+  </item>
+  <item nodeId="node-1612">
+    <command xml:space="preserve">l</command>
+    <result xml:space="preserve">Darkness&#x000A;It is pitch dark, and you can't see a thing.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1613"/>
+    </children>
+  </item>
+  <item nodeId="node-1613">
+    <command xml:space="preserve">get akk</command>
+    <result xml:space="preserve">You can't see any such thing.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1614"/>
+    </children>
+  </item>
+  <item nodeId="node-1614">
+    <command xml:space="preserve">get all</command>
+    <result xml:space="preserve">There are none at all available!&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1615"/>
+    </children>
+  </item>
+  <item nodeId="node-1615">
+    <command xml:space="preserve">open drawer</command>
+    <result xml:space="preserve">You can't see any such thing.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+  </item>
+  <item nodeId="node-1673">
+    <command xml:space="preserve">turn off light</command>
+    <result xml:space="preserve">You switch the flashlight off.&#x000A;&#x000A;It is now pitch dark in here!&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1681"/>
+      <child nodeId="node-1674"/>
+    </children>
+  </item>
+  <item nodeId="node-1681">
+    <command xml:space="preserve">s</command>
+    <result xml:space="preserve">You can't go that way.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1682"/>
+    </children>
+  </item>
+  <item nodeId="node-1682">
+    <command xml:space="preserve">e</command>
+    <result xml:space="preserve">You can't go that way.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1683"/>
+    </children>
+  </item>
+  <item nodeId="node-1683">
+    <command xml:space="preserve">w</command>
+    <result xml:space="preserve">You can't go that way.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+  </item>
+  <item nodeId="node-1674">
+    <command xml:space="preserve">turn off flashlight</command>
+    <result xml:space="preserve">You switch the flashlight off.&#x000A;&#x000A;It is now pitch dark in here!&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1675"/>
+    </children>
+  </item>
+  <item nodeId="node-1675">
+    <command xml:space="preserve">l</command>
+    <result xml:space="preserve">Darkness&#x000A;It is pitch dark, and you can't see a thing.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1676"/>
+    </children>
+  </item>
+  <item nodeId="node-1676">
+    <command xml:space="preserve">z</command>
+    <result xml:space="preserve">It's pitch black. You might be eaten by a grue!&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1677"/>
+    </children>
+  </item>
+  <item nodeId="node-1677">
+    <command xml:space="preserve">turn onm flashlight</command>
+    <result xml:space="preserve">You can't see any such thing.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1678"/>
+    </children>
+  </item>
+  <item nodeId="node-1678">
+    <command xml:space="preserve">turn on flashlight</command>
+    <result xml:space="preserve">You flip a switch. A strong, narrow beam of light shines from the flashlight.&#x000A;&#x000A;Maintenance Office&#x000A;This appears to be the maintenance office, There is a desk here,&#x000A;&#x000A;The desk appears to have a drawer.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1679"/>
+    </children>
+  </item>
+  <item nodeId="node-1679">
+    <command xml:space="preserve">turn off flashlight</command>
+    <result xml:space="preserve">You switch the flashlight off.&#x000A;&#x000A;It is now pitch dark in here!&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1680"/>
+    </children>
+  </item>
+  <item nodeId="node-1680">
+    <command xml:space="preserve">light flashlight</command>
+    <result xml:space="preserve">This dangerous act would achieve little.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+  </item>
+  <item nodeId="node-1616">
+    <command xml:space="preserve">w</command>
+    <result xml:space="preserve">You can't go that way.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1617"/>
+    </children>
+  </item>
+  <item nodeId="node-1617">
+    <command xml:space="preserve">e</command>
+    <result xml:space="preserve">You can't go that way.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1618"/>
+    </children>
+  </item>
+  <item nodeId="node-1618">
+    <command xml:space="preserve">n</command>
+    <result xml:space="preserve">Backstage Entrance&#x000A;This room is backstage at the Hell Ride attraction. There an exit to the south.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1619"/>
+    </children>
+  </item>
+  <item nodeId="node-1619">
+    <command xml:space="preserve">s</command>
+    <result xml:space="preserve">Darkness&#x000A;It is pitch dark, and you can't see a thing.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
   </item>

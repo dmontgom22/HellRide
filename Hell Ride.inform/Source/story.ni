@@ -325,17 +325,17 @@ Before going east when the location is the kiosk and the High Striker is unvisit
 Before looking when the location is the High Striker:
 	display Figure of HighStriker.
 
-The High Striker is a room. "This area features a tall, eye-catching machine adorned with bright, colorful lights, typically red, yellow, and blue. A large sign at the top reads 'Test Your Strength!' in bold, playful lettering. The machine’s base is made of polished wood, with a polished, vintage appearance. At the center is a sturdy metal pole, with a large bell hanging at the top, signaling when a successful attempt has been made. Along the length of the pole are markings indicating how strong you are.  A nearby sign says, 'Buy a mallet, strike the bell, win a prize.'[if the strongman attendant contains the mallet] You can see an over-sized mallet here.[end if][paragraph break]Spectators gather around, cheering on participants and offering lighthearted jabs and encouragement, creating a lively, competitive atmosphere. The sound of the mallet hitting the target is followed by the resonant clang of the bell (if struck), alongside the buzz of carnival music in the background."
+The High Striker is a room. "This area features a tall, eye-catching machine adorned with bright, colorful lights, typically red, yellow, and blue. A large sign at the top reads 'Test Your Strength!' in bold, playful lettering. The machine’s base is made of polished wood, with a polished, vintage appearance. At the center is a sturdy metal pole, with a large bell hanging at the top, signaling when a successful attempt has been made. Along the length of the pole are markings indicating how strong you are.  A nearby sign says, 'Buy a mallet, strike the bell, win a prize.'[if the strongman attendent contains the mallet] You can see an over-sized mallet here.[end if][paragraph break]Spectators gather around, cheering on participants and offering lighthearted jabs and encouragement, creating a lively, competitive atmosphere. The sound of the mallet hitting the target is followed by the resonant clang of the bell (if struck), alongside the buzz of carnival music in the background."
 
 The markings are here. The markings are scenery. Understand "marking" and "sign" and "signs" as markings. The description of markings is "There are five levels marked on the pole: Weakling, Getting There, Average, Almost Theee, and Muscle Man."
 
-The Strongman Attendant is here. The description of the Strongman Attendant is "An attendant is standing here [if strongman attendant is carrying the mallet]holding a mallet[end if]." 
+The Strongman Attendent is here. The description of the Strongman Attendent is "An Attendent is standing here [if strongman attendent is carrying the mallet]holding a mallet[end if]." 
 
-The Strongman Attendant carries the teddy bear, a swiss army knife, and a poster of Taylor Swift, and the mallet. The description of the teddy bear is "This is a teddy bear like you had when you were a kid. Right down to the red bow around its neck." The description of the swiss army knife is "This is the standard issue Swss Army knife with all the expected gadgets." The description of the poster of Taylor Swift is "This is a poster of America's swwetheart, Taylor Swift."
+The Strongman Attendent carries the teddy bear, a swiss army knife, and a poster of Taylor Swift, and the mallet. The description of the teddy bear is "This is a teddy bear like you had when you were a kid. Right down to the red bow around its neck." The description of the swiss army knife is "This is the standard issue Swss Army knife with all the expected gadgets." The description of the poster of Taylor Swift is "This is a poster of America's swwetheart, Taylor Swift."
 
 The lever is here. The lever is fixed in place. Understand "bullseye" and "target" as lever. The description of the lever is "There is a bullseye on the base. I guess this is where you have to aim the mallet."
 
-The mallet is carried by the Strongman Attendant.  The Price of the mallet is $2.00. Understand "hammer" as mallet. The description of the mallet is "The mallet is over sized, perhaps to give you an advantage in the Strong Man game."
+The mallet is carried by the Strongman Attendent.  The Price of the mallet is $2.00. Understand "hammer" as mallet. The description of the mallet is "The mallet is over sized, perhaps to give you an advantage in the Strong Man game."
 
 A strength pattern is a kind of value. The strength patterns are Weakling, Getting Stronger, Average, Almost There, Muscle Man.
 
@@ -351,7 +351,7 @@ Carry out hitting when the player is carrying the mallet:
 	
 After hitting the lever when second noun is the mallet 5 times :
 	play the sound of Strongman Bell;
-	say "You swing the mallet one more time. The bell rings as the striker reaches the top of the pole. The attendant says, 'You[']re a Muscle Man. Here's a prize for you.'";
+	say "You swing the mallet one more time. The bell rings as the striker reaches the top of the pole. The attendent says, 'You[']re a Muscle Man. Here's a prize for you.'";
 	increase score by 5;
 	say "Which prize would you like? 1) The stuffed teddy bear, 2) the Swiss Army knife, or 3) the poster of Taylor Swift?".
 	
@@ -381,7 +381,7 @@ Before going west when the location is the kiosk and the Show Facade is unvisite
 Before looking when the location is the Show Facade:
 	display Figure of LittleEgyptFacade.
 
-Show Facade is a room. Show Facade is east of Show Tent. "[if location is unvisited]You head west through the midway, the bright lights of the carnival fading behind you as you approach a wooden booth. A sign above the entrance reads 'Little Egypt Show – A Journey Into the Mysterious and Exotic!' A rotund attendant, wearing a fez and a dazzling smile, gestures to a small sign beside him that says 'Dime Admission.'[paragraph break][end if] You are standing in front of a dark and mysterious tent filled with illusions and exotic performers. Perhaps there’s a fortune teller inside, offering cryptic clues about the player's journey or a hidden artifact that can be collected. There is a stage in front of the tent. The Barker is encouraging you to step up, pay for, and enjoy the Little Egypt Show.[if location is unvisited]The barker cries: [paragraph break]Ladies and gentlemen, boys and girls, gather 'round! [line break]Step right up and witness the spectacle that’s taken the world by storm! [line break]She walks, she talks, she crawls on her belly like a reptile. [line break]Behold the one, the only Little Egypt, performing her legendary Dance of the Pyramids—a dazzling display of mystery, grace, and exotic allure! [line break]For just a dime, a mere one tenth of a dollar, prepare to be transported to the sands of Cairo, where enchantment and wonder await![end if]"
+Show Facade is a room. Show Facade is east of Show Tent. "[if location is unvisited]You head west through the midway, the bright lights of the carnival fading behind you as you approach a wooden booth. A sign above the entrance reads 'Little Egypt Show – A Journey Into the Mysterious and Exotic!' A rotund attendent, wearing a fez and a dazzling smile, gestures to a small sign beside him that says 'Dime Admission.'[paragraph break][end if] You are standing in front of a dark and mysterious tent filled with illusions and exotic performers. Perhaps there’s a fortune teller inside, offering cryptic clues about the player's journey or a hidden artifact that can be collected. There is a stage in front of the tent. The Barker is encouraging you to step up, pay for, and enjoy the Little Egypt Show.[if location is unvisited]The barker cries: [paragraph break]Ladies and gentlemen, boys and girls, gather 'round! [line break]Step right up and witness the spectacle that’s taken the world by storm! [line break]She walks, she talks, she crawls on her belly like a reptile. [line break]Behold the one, the only Little Egypt, performing her legendary Dance of the Pyramids—a dazzling display of mystery, grace, and exotic allure! [line break]For just a dime, a mere one tenth of a dollar, prepare to be transported to the sands of Cairo, where enchantment and wonder await![end if]"
 
 The Barker is a person in Show Facade. The description of the barker is "Here is a man dressed in black pants, a white shirt,a striped vest, a fez, and a dazzling smile. The barker cries: [paragraph break]Ladies and gentlemen, boys and girls, gather 'round! [line break]Step right up and witness the spectacle that’s taken the world by storm! [line break]She walks, she talks, she crawls on her belly like a reptile. [line break]Behold the one, the only Little Egypt, performing her legendary Dance of the Pyramids—a dazzling display of mystery, grace, and exotic allure! [line break]For just a dime, a mere one tenth of a dollar, prepare to be transported to the sands of Cairo, where enchantment and wonder await!"
 
@@ -393,7 +393,7 @@ Check going west when the location is the Show Facade and the barker is carrying
 	Continue the action.
 
 After giving when the noun is dime and the second noun is barker:
-	say "You hand over a dime, and the attendant nods, waving you through. As you step past the entrance, the air feels thicker, almost humid, and the sounds of the carnival fade away. You’ve entered an entirely different world now—one filled with the scents of incense and exotic spices, and the low, hypnotic music of a faraway land. Before you, a series of dimly lit tents stretch out, their flaps slightly swaying in the breeze. Intrigued, you take your first step into the Little Egypt Show. You can now head west into the show."
+	say "You hand over a dime, and the attendent nods, waving you through. As you step past the entrance, the air feels thicker, almost humid, and the sounds of the carnival fade away. You’ve entered an entirely different world now—one filled with the scents of incense and exotic spices, and the low, hypnotic music of a faraway land. Before you, a series of dimly lit tents stretch out, their flaps slightly swaying in the breeze. Intrigued, you take your first step into the Little Egypt Show. You can now head west into the show."
 
 Section 6 - Show Tent	
 
@@ -449,9 +449,9 @@ Before looking when the location is the Head of the Line:
 
 Head of the Line is a room. Head of the Line is south of Kiosk. Head of the Line is north of Ride Entrance. "You are standing in front of a ticket taker with his hand open waiting for your ticket. The entrance to the ride is south of here."
 
-The Ride Attendant is a man in Head of the Line. The description of the Ride Attendant is "This is another bored teenager. His thoughts are entirely focused on a cheeseburger for lunch.";
+The Ride Attendent is a man in Head of the Line. The description of the Ride Attendent is "This is another bored teenager. His thoughts are entirely focused on a cheeseburger for lunch.";
 
-Check going south when the location is Head of the Line and the Ride Attendant does not have the hell ride ticket:
+Check going south when the location is Head of the Line and the Ride Attendent does not have the hell ride ticket:
 	say "You[']ll need a ticket to go that way.";
 	stop the action.
 
@@ -461,7 +461,7 @@ HellRide is a region. Ride Entrance is in HellRide.
 
 Section 1 - Ride Entrance
 
-Test Ride with "get blueberries / s / buy hell ride ticket / s / give ticket to attendant / s / enter car / wait / z / z / z / z / z / z".
+Test Ride with "get blueberries / s / buy hell ride ticket / s / give ticket to attendent / s / enter car / wait / z / z / z / z / z / z".
 
 HellRideAuto is a scene. HellRideAuto begins when the player is in the car for 3 turns.
 
@@ -493,9 +493,9 @@ When HellRideAuto ends:
 	end the story finally saying "You have died.".
 	
 When play ends:
-	Say "You sit in dread as you watch the guillotine rising and falling, dropping like a stone on the cars in front of you. Thank goodness they are empty. As your turn comes, you raise your hands in a feeble attempt to stop the inevitable."
+	Say "You are stupified as you sit watching guillotine rising and falling, dropping like a stone on the cars in front of you. Thank goodness they are empty. As your turn comes, you raise your hands in a feeble attempt to stop the inevitable."
 	
-Ride Entrance is a room. Ride Entrance is south of Head of the Line. "The cars that will take you into the fearsome Hell Ride stop here for you to board.  To the south is the track that will take you into the ride. The safety bar is raised allowing you to enter the car. East of here is a gate with a sign that reads 'Employees Only'.". 
+Ride Entrance is a room. Ride Entrance is south of Head of the Line. "The cars that will take you into the fearsome Hell Ride stop here for you to board.  To the south is the track that will take you into the ride. The safety bar is raised allowing you to enter the car. East of here the darkness looks just a little bit darker."
 
 The car is a vehicle in the Ride Entrance. The description of the car is "A car waits to take you through the horror that is Hell Ride."
 
@@ -503,27 +503,63 @@ Before going south when the player is in the Ride Entrance:
 	say "You can't go that way." instead;
 	continue the action.
 	
-
-	
 Chapter 3 - Backstage
 
 Backstage is a region. Backstage Entrance, Maintenance Office is in Backstage.
 
 Section 1 - Backstage Entrance
 
-Test b with "s / buy ticket / s / give ticket to attendant / s".
+Test b with "s / buy ticket / s / give ticket to attendent / s / e / get all / turn on flashlight / s".
 
-Test Backstage with "".
+Test Backstage with "s / buy ticket / s / give ticket to attendent / s / e / s".
 
-Backstage Entrance is a dark room. Backstage Entrance is east of the Ride Entrance. "This room is backstage at the Hell Ride attraction. There an exit to the south."
+[flashlight mechanics]
+Showing action of something is an activity.
+
+Rule for showing action of something (called item):
+	if the item is switched on, say "[The item] is switched on.";
+	otherwise say "[The item] is switched off."
+
+The new described devices rule is listed instead of the examine devices rule in the carry out examining rules.
+
+This is the new described devices rule:
+	if the noun is a device:
+		carry out the showing action activity with the noun;
+		now examine text printed is true.
+
+Report switching on something:
+	say "You flip a switch. ";
+	carry out the showing action activity with the noun instead.
+
+An electric lamp is a kind of device.
+
+Rule for showing action of an electric lamp (called item):
+	if the item is switched on, say "[The item] is lit[if the number of visible lit things is greater than 1], competing with [the list of visible lit things which are not the item][end if].";
+	otherwise say "[The item] is dark."
+	
+Carry out switching on an electric lamp: now the noun is lit. Carry out switching off an electric lamp: now the noun is unlit.
+
+The flashlight is an electric lamp. understand "light" as flashlight. The description of the flashlight is "This is a flashlight. A nice one."
+
+Rule for showing action of the flashlight:
+	if the flashlight is switched on, say "A strong, narrow beam of light shines from the flashlight.";
+	otherwise say "It is currently switched off."
+
+Backstage Entrance is a room. Backstage Entrance is east of the Ride Entrance. "This room is backstage at the Hell Ride attraction. West is back the way you came from. There an exit to the south. There is a pile of junk in the corner."
+
+The pile of junk is a scenery container. The pile of junk is in the backstage entrance. The pile of junk contains the flashlight. The description of the pile of junk is "In the corner is a pile of junk."
+
+after examining when the noun is pile of junk:
+	say "You find a flashlight here.";
+
+Before printing the name of a lit electric lamp, say "lit ".
+Before printing the name of an unlit lit electric lamp, say "extinguished ".
+
+After waiting when the location is dark:
+	say "It's pitch black. You might be eaten by a grue!"
 
 Section 2 - Maintenance Office
 
+The Maintenance Office is a dark room. The maintenance office is south of the backstage entrance. "This appears to be the maintenance office, There is a desk here,". The desk is in the office. The desk is a container. "The desk appears to have a drawer."
 
-
-
-
-
-
-
-
+The drawer is part of the desk. The drawer is a container. It is closed and openable. The desk is in the maintenance office. The description of the desk is "The single drawer is [if the drawer is open]open[otherwise]shut[end if]."

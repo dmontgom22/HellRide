@@ -150,21 +150,21 @@
     </dict>
     <key>21</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.inform\Source\story.ni</string>
-        <key>Line</key><integer>508</integer>
+        <key>Line</key><integer>506</integer>
         <key>Title</key><string>Chapter 3 - Backstage</string>
         <key>Level</key><integer>4</integer>
         <key>Indentation</key><integer>2</integer>
     </dict>
     <key>22</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.inform\Source\story.ni</string>
-        <key>Line</key><integer>512</integer>
+        <key>Line</key><integer>510</integer>
         <key>Title</key><string>Section 1 - Backstage Entrance</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
     <key>23</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.inform\Source\story.ni</string>
-        <key>Line</key><integer>520</integer>
+        <key>Line</key><integer>561</integer>
         <key>Title</key><string>Section 2 - Maintenance Office</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
