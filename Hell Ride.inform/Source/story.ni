@@ -500,27 +500,27 @@ Before going south when the player is in the Ride Entrance:
 
 Section 2 - Stocks Room
 
-The Stocks Room is south of the Ride Entrance. The Stocks Room is west of the Maintenance Office. "You pass into a room which displays mannequins in stocks in a public square. The stocks are made of heavy wood. The townsfolk are there solely to harrass and ridicule the individuals on display. The punishee[']s eyes are downcast as the shame and humiliation of their predicaments are realized. The wax figures are especially life like."
+The Stocks Room is south of the Ride Entrance. "You pass into a room which displays mannequins in stocks in a public square. The stocks are made of heavy wood. The townsfolk are there solely to harrass and ridicule the individuals on display. The punishee[']s eyes are downcast as the shame and humiliation of their predicaments are realized. The wax figures are especially life like.".  The Aqua Door is west of the Maintenance Office. 
 
 Section 3 - Gallows Room
 
-The Gallows Room is south of the Stocks Room. The Gallows Room is west of the Crawl Space. "The next room is dominated by a gallows made of strong hardwood. Standing on the gallows is an executioner wearing a hood protecting his identity. Next to him is a man with a noose around his neck standing on a hatch ready to open."
+The Gallows Room is south of the Stocks Room. "The next room is dominated by a gallows made of strong hardwood. Standing on the gallows is an executioner wearing a hood protecting his identity. Next to him is a man with a noose around his neck standing on a hatch ready to open."
 
 Section 4 - Stake Room
 
-The Stake Room is south of the Gallows Room. The Stake Room is west of the Mechanical Room North. "Here you see a bonfire in full conflagration. The flames leap higher and higher consuming the woman tied to the stake. The townsfolk are here holding torches and  jeering at the sight of the poor soul being burnt alive."
+The Stake Room is south of the Gallows Room. "Here you see a bonfire in full conflagration. The flames leap higher and higher consuming the woman tied to the stake. The townsfolk are here holding torches and  jeering at the sight of the poor soul being burnt alive."
 
 Section 5 - Dungeon
 
-The Dungeon is south of the Stake Room. The Dungeon is west of Mechanical Room South. "This a dungeon with all the usual devices. There is a man stretched on the rack. His screams pierce the room. An iron maiden is occupied and you notice the blood seeping from the eyes, ears, and mouth. Another is strapped to a Saint Andrew's Cross and is being flogged harshly."
+The Dungeon is south of the Stake Room. "This a dungeon with all the usual devices. There is a man stretched on the rack. His screams pierce the room. An iron maiden is occupied and you notice the blood seeping from the eyes, ears, and mouth. Another is strapped to a Saint Andrew's Cross and is being flogged harshly."
 
 Section 6 - Guillotine Room
 
-The Guillotine Room is south of the Dungeon. The Guillotine Room is west of the Generator Room. "There is a guillotine in this room. The guillotine is being raised and lowered by some mechanism. It appears that the timing of the guillotine is off and it is being lowered onto the cars instead of between them. If a person were to be in a car as it passed under the guillotine, they would be decapitated."
+The Guillotine Room is south of the Dungeon. "There is a guillotine in this room. The guillotine is being raised and lowered by some mechanism. It appears that the timing of the guillotine is off and it is being lowered onto the cars instead of between them. If a person were to be in a car as it passed under the guillotine, they would be decapitated."
 
 Section 7 - Ride Exit
 
-The Ride Exit is south of the Guillotine Room. The Ride Exit is west of the Storage Room
+The Ride Exit is south of the Guillotine Room.
 
 Chapter 3 - Backstage
 
@@ -584,28 +584,38 @@ After going east when the location is Backstage Entrance and Backstage Entrance 
 
 Section 2 - Maintenance Office
 
-The Maintenance Office is a dark room. The maintenance office is south of the backstage entrance and east of the Stocks Room. "This appears to be the maintenance office, There is a desk here.". 
+The Maintenance Office is a dark room. The maintenance office is south of the backstage entrance. "This appears to be the maintenance office, There is a desk here.". 
 
 [ This is the code that breaks the opening]
 The desk is in the maintenance office. The desk is fixed in place. A drawer is part of the desk. The drawer is a closed openable container. The drawer is scenery. The description of the desk is "It's a desk. There are coffee stains and cigarette burns from years of abuse. The single drawer is [if the drawer is open]open[otherwise]shut[end if]."
 
 The scissors are in the drawer. The description is "This is a sharp pair of office scissors." The stapler is in the drawer. The description is "This is a red stapler." The ballpoint pen is in the drawer. The description is "Your standard ballpoint pen. It says Bic on the side." The pad of paper is in the drawer. The description is "This is a pad of lined paper."
 
+The Aqua Door is west of the Maintenance Office and east of the Stocks Room. The Aqua Door is a closed locked door. The description of the Aqua door is "It's an aqua colored door with the word 'Stocks' written on it." The key unlocks testit.
+
 Section 3 - Crawl Space
 
 The Crawl Space is a dark room. The Crawl Space is south of Maintenance Office. "This crawl space is extremely small. You begin to feel claustrophobic in here."
+
+The Crimson Door is west of the Crawl Space and east of the Gallows Room. The Crimson Door is a closed locked door. The description of the Crimson door is "It's an crimson colored door with the word 'Gallows' written on it." The key unlocks it.
 
 Section 4 - Mechanical Room North
 
 The Mechanical Room North is a dark room. The Mechanical Room North is south of the Crawl Space. "There is machinery filling the room." The toolbox is a closed openable container in the Mechanical Room North. The toolbox contains the monkey wrench, channel locks, pliers, and a hammer.
 
+The Emerald Door is west of the Mechanical Room North and east of the Stake Room. The Emerald Door is a closed locked door. The description of the Emerald door is "It's an emerald colored door with the word 'Stake' written on it." The key unlocks it.
+
 Section 5 - Mechanical Room South
 
 The Mechanical Room South is a dark room. The Mechanical Room South is south of the Mechanical Room North. "There is machinery filling the room." 
 
+The Grey Door is west of the Mechanical Room South and east of the Dungeon. The Grey Door is a closed locked door. The description of the Grey door is "It's a grey colored door with the word 'Dungeon' written on it." The key unlocks it.
+
 Section 6 - Generator Room
 
 The Generator Room is a dark room. The Generator Room is south of the Mechanical Room South. "There are two massive generators here powering the ride." 
+
+The Indigo Door is west of the Generator Room and east of the Guillotine Room. The Indigo Door is a closed locked door. The description of the Indigo door is "It's a indigo colored door with the word 'Dungeon' written on it." The key unlocks it.
 
 Section 7 - Electrical Room
 
@@ -614,7 +624,6 @@ The Electrical Room is a dark room. The Electrical Room is south of the Generato
 [Instead of going from the Electrical Room:
 	move the player to a random adjacent room.]
 	
-The Maintenance Office is north of the Electrical Room. 
 The Electrical Closet Eleven is a dark room. The Electrical Closet Eleven is northwest of the Electrical Room. "You are in a section of the electrical room. There is an electrical panel here. There is an exit to the south east." Electrical Panel Eleven is closed openable container in Electrical Closet Eleven. Electrical Panel Eleven is scenery. The printed name of Electrical Panel Eleven is "the electrical panel". Understand "panels" as panel. The description is "This is a standard issue 200 amp electrical panel supplying 220 power throughout the ride. The electrical panel is [if Electrical Panel Eleven is open]open[otherwise]closed[end if]."
 
 The Electrical Closet Nine is a dark room. Electrical Closet Nine is west of the Electrical Room. "You are in a section of the electrical room. There is an electrical panel here. There is an exit to the east." Electrical Panel Nine is closed openable container in Electrical Closet Nine. Electrical Panel Nine is scenery. The printed name of Electrical Panel Nine is "the electrical panel". Understand "panels" as panel. The description is "This is a standard issue 200 amp electrical panel supplying 220 power throughout the ride. The electrical panel is [if Electrical Panel Nine is open]open[otherwise]closed[end if]."
@@ -630,3 +639,7 @@ The Electrical Closet One is a dark room. The Electrical Closet One is northeast
 Section 8 - Storage Room
 
 The Storage Room is a dark room. The Storage Room is south of the Electrical Room.
+
+The Khaki Door is west of the Storage Room and east of the Ride Exit. The Khaki Door is a closed locked door. The description of the Khaki door is "It's a khaki colored door with the word 'Ride Exit' written on it." The key unlocks it.
+
+

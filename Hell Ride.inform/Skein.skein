@@ -415,13 +415,16 @@
   </item>
   <item nodeId="node-308">
     <command xml:space="preserve">test b</command>
-    <result xml:space="preserve">(Testing.)&#x000A;&#x000A;&gt;[1] s&#x000A;&#x000A;&#x000A;&#x000A;Kiosk&#x000A;You are standing in line at a kiosk at the carnival. The kiosk sells tickets to the Hell Ride attraction. The line for the ride forms to the south and the midway continues east and west from here. There is a concession stand to the south west. The kiosk is garishly painted in purple and green sparkles. There is a cashier here. The Cashier has a Hell Ride ticket.&#x000A;&#x000A;You can see a Cashier here.&#x000A;&#x000A;&gt;[2] buy ticket&#x000A;You fork over $2.50 for the Hell Ride ticket, leaving yourself with $12.50.&#x000A;&#x000A;&gt;[3] s&#x000A;&#x000A;&#x000A;&#x000A;Head of the Line&#x000A;You are standing in front of a ticket taker with his hand open waiting for your ticket. The entrance to the ride is south of here.&#x000A;&#x000A;You can see a Ride Attendent here.&#x000A;&#x000A;&gt;[4] give ticket to attendent&#x000A;You give the Hell Ride ticket to the Ride Attendent.&#x000A;&#x000A;&gt;[5] s&#x000A;&#x000A;Ride Entrance&#x000A;The cars that will take you into the fearsome Hell Ride stop here for you to board.  To the south is the track that will take you into the ride. The safety bar is raised allowing you to enter the car. East of here the darkness looks just a little bit darker.&#x000A;&#x000A;You can see a car (empty) here.&#x000A;&#x000A;&gt;[6] e&#x000A;&#x000A;Backstage Entrance&#x000A;This room is backstage at the Hell Ride attraction. The room is littered with bags of trash, piles of junk, and dust bunnies so large they should be paying rent. West is back the way you came from. There an exit to the south.&#x000A;&#x000A;&gt;[7] get all&#x000A;flashlight: Taken.&#x000A;&#x000A;&gt;[8] turn on flashlight&#x000A;You flip a switch. A strong, narrow beam of light shines from the flashlight.&#x000A;&#x000A;&gt;[9] s&#x000A;&#x000A;Maintenance Office&#x000A;This appears to be the maintenance office, There is a desk here.&#x000A;&#x000A;You can see a desk here.&#x000A;&#x000A;&gt;[10] s&#x000A;&#x000A;Crawl Space&#x000A;This crawl space is extremely small. You begin to feel claustrophobic in here.&#x000A;&#x000A;&gt;[11] s&#x000A;&#x000A;Mechanical Room North&#x000A;There is machinery filling the room.&#x000A;&#x000A;&gt;[12] s&#x000A;&#x000A;Mechanical Room South&#x000A;There is machinery filling the room.&#x000A;&#x000A;&gt;[13] s&#x000A;&#x000A;Generator Room&#x000A;There are two massive generators here powering the ride.&#x000A;&#x000A;&gt;[14] s&#x000A;&#x000A;Electrical Room&#x000A;This room is oozing with electromagnetic energy. You can feel your hair stand on end and all your nerves twitching. This feels dangerous! There are exits in all directions.&#x000A;&#x000A;&gt;</result>
+    <result xml:space="preserve">(Testing.)&#x000A;&#x000A;&gt;[1] s&#x000A;&#x000A;&#x000A;&#x000A;Kiosk&#x000A;You are standing in line at a kiosk at the carnival. The kiosk sells tickets to the Hell Ride attraction. The line for the ride forms to the south and the midway continues east and west from here. There is a concession stand to the south west. The kiosk is garishly painted in purple and green sparkles. There is a cashier here. The Cashier has a Hell Ride ticket.&#x000A;&#x000A;You can see a Cashier here.&#x000A;&#x000A;&gt;[2] buy ticket&#x000A;You fork over $2.50 for the Hell Ride ticket, leaving yourself with $12.50.&#x000A;&#x000A;&gt;[3] s&#x000A;&#x000A;&#x000A;&#x000A;Head of the Line&#x000A;You are standing in front of a ticket taker with his hand open waiting for your ticket. The entrance to the ride is south of here.&#x000A;&#x000A;You can see a Ride Attendent here.&#x000A;&#x000A;&gt;[4] give ticket to attendent&#x000A;You give the Hell Ride ticket to the Ride Attendent.&#x000A;&#x000A;&gt;[5] s&#x000A;&#x000A;Ride Entrance&#x000A;The cars that will take you into the fearsome Hell Ride stop here for you to board.  To the south is the track that will take you into the ride. The safety bar is raised allowing you to enter the car. East of here the darkness looks just a little bit darker.&#x000A;&#x000A;You can see a car (empty) here.&#x000A;&#x000A;&gt;[6] e&#x000A;Walking in the darkness with your arms extended you nearly fall through an open doorway.&#x000A;&#x000A;Backstage Entrance&#x000A;This room is backstage at the Hell Ride attraction. The room is littered with bags of trash, piles of junk, and dust bunnies so large they should be paying rent. West is back the way you came from. There an exit to the south.&#x000A;&#x000A;[Your score has just gone up by five points.]&#x000A;&#x000A;&gt;[7] get all&#x000A;flashlight: Taken.&#x000A;&#x000A;&gt;[8] turn on flashlight&#x000A;You flip a switch. A strong, narrow beam of light shines from the flashlight.&#x000A;&#x000A;&gt;[9] s&#x000A;&#x000A;Maintenance Office&#x000A;This appears to be the maintenance office, There is a desk here.&#x000A;&#x000A;You can see an Aqua Door and a desk here.&#x000A;&#x000A;&gt;[10] s&#x000A;&#x000A;Crawl Space&#x000A;This crawl space is extremely small. You begin to feel claustrophobic in here.&#x000A;&#x000A;You can see a Crimson Door here.&#x000A;&#x000A;&gt;[11] s&#x000A;&#x000A;Mechanical Room North&#x000A;There is machinery filling the room.&#x000A;&#x000A;You can see an Emerald Door and a toolbox (closed) here.&#x000A;&#x000A;&gt;[12] s&#x000A;&#x000A;Mechanical Room South&#x000A;There is machinery filling the room.&#x000A;&#x000A;You can see a Grey Door here.&#x000A;&#x000A;&gt;[13] s&#x000A;&#x000A;Generator Room&#x000A;There are two massive generators here powering the ride.&#x000A;&#x000A;You can see an Indigo Door here.&#x000A;&#x000A;&gt;[14] s&#x000A;&#x000A;Electrical Room&#x000A;This room is oozing with electromagnetic energy. You can feel your hair stand on end and all your nerves twitching. This feels dangerous! There are exits in all directions.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
     <children>
       <child nodeId="node-310"/>
       <child nodeId="node-309"/>
+      <child nodeId="node-391"/>
       <child nodeId="node-336"/>
+      <child nodeId="node-452"/>
+      <child nodeId="node-462"/>
       <child nodeId="node-320"/>
       <child nodeId="node-311"/>
       <child nodeId="node-339"/>
@@ -436,6 +439,544 @@
   <item nodeId="node-309">
     <command xml:space="preserve">l</command>
     <result xml:space="preserve">Maintenance Office&#x000A;This appears to be the maintenance office, There is a desk here.&#x000A;&#x000A;You can see a desk here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+  </item>
+  <item nodeId="node-391">
+    <command xml:space="preserve">n</command>
+    <result xml:space="preserve">Generator Room&#x000A;There are two massive generators here powering the ride.&#x000A;&#x000A;You can see an Indigo Door here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-392"/>
+      <child nodeId="node-442"/>
+    </children>
+  </item>
+  <item nodeId="node-392">
+    <command xml:space="preserve">n</command>
+    <result xml:space="preserve">Mechanical Room South&#x000A;There is machinery filling the room.&#x000A;&#x000A;You can see a Grey Door here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-393"/>
+    </children>
+  </item>
+  <item nodeId="node-393">
+    <command xml:space="preserve">n</command>
+    <result xml:space="preserve">Mechanical Room North&#x000A;There is machinery filling the room.&#x000A;&#x000A;You can see an Emerald Door and a toolbox (closed) here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-403"/>
+      <child nodeId="node-394"/>
+    </children>
+  </item>
+  <item nodeId="node-403">
+    <command xml:space="preserve">n</command>
+    <result xml:space="preserve">Crawl Space&#x000A;This crawl space is extremely small. You begin to feel claustrophobic in here.&#x000A;&#x000A;You can see a Crimson Door here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-404"/>
+    </children>
+  </item>
+  <item nodeId="node-404">
+    <command xml:space="preserve">n</command>
+    <result xml:space="preserve">Maintenance Office&#x000A;This appears to be the maintenance office, There is a desk here.&#x000A;&#x000A;You can see an Aqua Door and a desk here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-405"/>
+      <child nodeId="node-416"/>
+    </children>
+  </item>
+  <item nodeId="node-405">
+    <command xml:space="preserve">l at door</command>
+    <result xml:space="preserve">It's an aqua colored door with the word "Stocks" written on it.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-406"/>
+    </children>
+  </item>
+  <item nodeId="node-406">
+    <command xml:space="preserve">w</command>
+    <result xml:space="preserve">(first opening the Aqua Door)&#x000A;&#x000A;Stocks Room&#x000A;You pass into a room which displays mannequins in stocks in a public square. The stocks are made of heavy wood. The townsfolk are there solely to harrass and ridicule the individuals on display. The punishee's eyes are downcast as the shame and humiliation of their predicaments are realized. The wax figures are especially life like.&#x000A;&#x000A;You can see an Aqua Door here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-407"/>
+    </children>
+  </item>
+  <item nodeId="node-407">
+    <command xml:space="preserve">e</command>
+    <result xml:space="preserve">Maintenance Office&#x000A;This appears to be the maintenance office, There is a desk here.&#x000A;&#x000A;You can see an Aqua Door and a desk here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-408"/>
+    </children>
+  </item>
+  <item nodeId="node-408">
+    <command xml:space="preserve">w</command>
+    <result xml:space="preserve">Stocks Room&#x000A;You pass into a room which displays mannequins in stocks in a public square. The stocks are made of heavy wood. The townsfolk are there solely to harrass and ridicule the individuals on display. The punishee's eyes are downcast as the shame and humiliation of their predicaments are realized. The wax figures are especially life like.&#x000A;&#x000A;You can see an Aqua Door here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-409"/>
+      <child nodeId="node-412"/>
+    </children>
+  </item>
+  <item nodeId="node-409">
+    <command xml:space="preserve">close door</command>
+    <result xml:space="preserve">You close the Aqua Door.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-410"/>
+    </children>
+  </item>
+  <item nodeId="node-410">
+    <command xml:space="preserve">w</command>
+    <result xml:space="preserve">You can't go that way.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-411"/>
+    </children>
+  </item>
+  <item nodeId="node-411">
+    <command xml:space="preserve">e</command>
+    <result xml:space="preserve">(first opening the Aqua Door)&#x000A;&#x000A;Maintenance Office&#x000A;This appears to be the maintenance office, There is a desk here.&#x000A;&#x000A;You can see an Aqua Door and a desk here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+  </item>
+  <item nodeId="node-412">
+    <command xml:space="preserve">e</command>
+    <result xml:space="preserve">Maintenance Office&#x000A;This appears to be the maintenance office, There is a desk here.&#x000A;&#x000A;You can see an Aqua Door and a desk here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-413"/>
+    </children>
+  </item>
+  <item nodeId="node-413">
+    <command xml:space="preserve">w</command>
+    <result xml:space="preserve">Stocks Room&#x000A;You pass into a room which displays mannequins in stocks in a public square. The stocks are made of heavy wood. The townsfolk are there solely to harrass and ridicule the individuals on display. The punishee's eyes are downcast as the shame and humiliation of their predicaments are realized. The wax figures are especially life like.&#x000A;&#x000A;You can see an Aqua Door here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-414"/>
+    </children>
+  </item>
+  <item nodeId="node-414">
+    <command xml:space="preserve">close door</command>
+    <result xml:space="preserve">You close the Aqua Door.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-415"/>
+    </children>
+  </item>
+  <item nodeId="node-415">
+    <command xml:space="preserve">e</command>
+    <result xml:space="preserve">(first opening the Aqua Door)&#x000A;&#x000A;Maintenance Office&#x000A;This appears to be the maintenance office, There is a desk here.&#x000A;&#x000A;You can see an Aqua Door and a desk here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+  </item>
+  <item nodeId="node-416">
+    <command xml:space="preserve">w</command>
+    <result xml:space="preserve">(first opening the Aqua Door)&#x000A;(first unlocking the Aqua Door)&#x000A;You lack a key that fits the Aqua Door.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-417"/>
+    </children>
+  </item>
+  <item nodeId="node-417">
+    <command xml:space="preserve">w</command>
+    <result xml:space="preserve">(first opening the Aqua Door)&#x000A;(first unlocking the Aqua Door)&#x000A;You lack a key that fits the Aqua Door.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-418"/>
+    </children>
+  </item>
+  <item nodeId="node-418">
+    <command xml:space="preserve">w</command>
+    <result xml:space="preserve">(first opening the Aqua Door)&#x000A;(first unlocking the Aqua Door)&#x000A;You lack a key that fits the Aqua Door.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-419"/>
+    </children>
+  </item>
+  <item nodeId="node-419">
+    <command xml:space="preserve">w</command>
+    <result xml:space="preserve">(first opening the Aqua Door)&#x000A;(first unlocking the Aqua Door)&#x000A;You lack a key that fits the Aqua Door.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-420"/>
+    </children>
+  </item>
+  <item nodeId="node-420">
+    <command xml:space="preserve">w</command>
+    <result xml:space="preserve">(first opening the Aqua Door)&#x000A;(first unlocking the Aqua Door)&#x000A;You lack a key that fits the Aqua Door.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-421"/>
+    </children>
+  </item>
+  <item nodeId="node-421">
+    <command xml:space="preserve">w</command>
+    <result xml:space="preserve">(first opening the Aqua Door)&#x000A;(first unlocking the Aqua Door)&#x000A;You lack a key that fits the Aqua Door.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-422"/>
+    </children>
+  </item>
+  <item nodeId="node-422">
+    <command xml:space="preserve">w</command>
+    <result xml:space="preserve">(first opening the Aqua Door)&#x000A;(first unlocking the Aqua Door)&#x000A;You lack a key that fits the Aqua Door.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-423"/>
+    </children>
+  </item>
+  <item nodeId="node-423">
+    <command xml:space="preserve">w</command>
+    <result xml:space="preserve">(first opening the Aqua Door)&#x000A;(first unlocking the Aqua Door)&#x000A;You lack a key that fits the Aqua Door.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-424"/>
+    </children>
+  </item>
+  <item nodeId="node-424">
+    <command xml:space="preserve">w</command>
+    <result xml:space="preserve">(first opening the Aqua Door)&#x000A;(first unlocking the Aqua Door)&#x000A;You lack a key that fits the Aqua Door.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-425"/>
+    </children>
+  </item>
+  <item nodeId="node-425">
+    <command xml:space="preserve">w</command>
+    <result xml:space="preserve">(first opening the Aqua Door)&#x000A;(first unlocking the Aqua Door)&#x000A;You lack a key that fits the Aqua Door.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-426"/>
+    </children>
+  </item>
+  <item nodeId="node-426">
+    <command xml:space="preserve">w</command>
+    <result xml:space="preserve">(first opening the Aqua Door)&#x000A;(first unlocking the Aqua Door)&#x000A;You lack a key that fits the Aqua Door.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-427"/>
+    </children>
+  </item>
+  <item nodeId="node-427">
+    <command xml:space="preserve">unlock door</command>
+    <result xml:space="preserve">You lack a key that fits the Aqua Door.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-428"/>
+    </children>
+  </item>
+  <item nodeId="node-428">
+    <command xml:space="preserve">s</command>
+    <result xml:space="preserve">Crawl Space&#x000A;This crawl space is extremely small. You begin to feel claustrophobic in here.&#x000A;&#x000A;You can see a Crimson Door here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-429"/>
+    </children>
+  </item>
+  <item nodeId="node-429">
+    <command xml:space="preserve">s</command>
+    <result xml:space="preserve">Mechanical Room North&#x000A;There is machinery filling the room.&#x000A;&#x000A;You can see an Emerald Door and a toolbox (closed) here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-430"/>
+    </children>
+  </item>
+  <item nodeId="node-430">
+    <command xml:space="preserve">s</command>
+    <result xml:space="preserve">Mechanical Room South&#x000A;There is machinery filling the room.&#x000A;&#x000A;You can see a Grey Door here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-431"/>
+    </children>
+  </item>
+  <item nodeId="node-431">
+    <command xml:space="preserve">s</command>
+    <result xml:space="preserve">Generator Room&#x000A;There are two massive generators here powering the ride.&#x000A;&#x000A;You can see an Indigo Door here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-432"/>
+    </children>
+  </item>
+  <item nodeId="node-432">
+    <command xml:space="preserve">s</command>
+    <result xml:space="preserve">Electrical Room&#x000A;This room is oozing with electromagnetic energy. You can feel your hair stand on end and all your nerves twitching. This feels dangerous! There are exits in all directions.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-433"/>
+    </children>
+  </item>
+  <item nodeId="node-433">
+    <command xml:space="preserve">ne</command>
+    <result xml:space="preserve">Electrical Closet One&#x000A;You are in a section of the electrical room. There is an electrical panel here. There is an exit to the south west.&#x000A;&#x000A;You can see a key here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-434"/>
+    </children>
+  </item>
+  <item nodeId="node-434">
+    <command xml:space="preserve">get key</command>
+    <result xml:space="preserve">Taken.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-435"/>
+    </children>
+  </item>
+  <item nodeId="node-435">
+    <command xml:space="preserve">sw</command>
+    <result xml:space="preserve">Electrical Room&#x000A;This room is oozing with electromagnetic energy. You can feel your hair stand on end and all your nerves twitching. This feels dangerous! There are exits in all directions.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-436"/>
+    </children>
+  </item>
+  <item nodeId="node-436">
+    <command xml:space="preserve">n</command>
+    <result xml:space="preserve">Generator Room&#x000A;There are two massive generators here powering the ride.&#x000A;&#x000A;You can see an Indigo Door here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-437"/>
+    </children>
+  </item>
+  <item nodeId="node-437">
+    <command xml:space="preserve">n</command>
+    <result xml:space="preserve">Mechanical Room South&#x000A;There is machinery filling the room.&#x000A;&#x000A;You can see a Grey Door here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-438"/>
+    </children>
+  </item>
+  <item nodeId="node-438">
+    <command xml:space="preserve">n</command>
+    <result xml:space="preserve">Mechanical Room North&#x000A;There is machinery filling the room.&#x000A;&#x000A;You can see an Emerald Door and a toolbox (closed) here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-439"/>
+    </children>
+  </item>
+  <item nodeId="node-439">
+    <command xml:space="preserve">n</command>
+    <result xml:space="preserve">Crawl Space&#x000A;This crawl space is extremely small. You begin to feel claustrophobic in here.&#x000A;&#x000A;You can see a Crimson Door here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-440"/>
+    </children>
+  </item>
+  <item nodeId="node-440">
+    <command xml:space="preserve">n</command>
+    <result xml:space="preserve">Maintenance Office&#x000A;This appears to be the maintenance office, There is a desk here.&#x000A;&#x000A;You can see an Aqua Door and a desk here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-441"/>
+    </children>
+  </item>
+  <item nodeId="node-441">
+    <command xml:space="preserve">unlock door</command>
+    <result xml:space="preserve">You lack a key that fits the Aqua Door.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+  </item>
+  <item nodeId="node-394">
+    <command xml:space="preserve">s</command>
+    <result xml:space="preserve">Maintenance Office&#x000A;This appears to be the maintenance office, There is a desk here.&#x000A;&#x000A;It's an aqua colored door with the word "Stocks" written on it.&#x000A;&#x000A;You can also see a desk here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-395"/>
+    </children>
+  </item>
+  <item nodeId="node-395">
+    <command xml:space="preserve">w</command>
+    <result xml:space="preserve">(first opening the Aqua Door)&#x000A;&#x000A;Stocks Room&#x000A;You pass into a room which displays mannequins in stocks in a public square. The stocks are made of heavy wood. The townsfolk are there solely to harrass and ridicule the individuals on display. The punishee's eyes are downcast as the shame and humiliation of their predicaments are realized. The wax figures are especially life like.&#x000A;&#x000A;It's an aqua colored door with the word "Stocks" written on it.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-396"/>
+    </children>
+  </item>
+  <item nodeId="node-396">
+    <command xml:space="preserve">w</command>
+    <result xml:space="preserve">You can't go that way.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-397"/>
+    </children>
+  </item>
+  <item nodeId="node-397">
+    <command xml:space="preserve">e</command>
+    <result xml:space="preserve">Maintenance Office&#x000A;This appears to be the maintenance office, There is a desk here.&#x000A;&#x000A;It's an aqua colored door with the word "Stocks" written on it.&#x000A;&#x000A;You can also see a desk here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-398"/>
+    </children>
+  </item>
+  <item nodeId="node-398">
+    <command xml:space="preserve">w</command>
+    <result xml:space="preserve">Stocks Room&#x000A;You pass into a room which displays mannequins in stocks in a public square. The stocks are made of heavy wood. The townsfolk are there solely to harrass and ridicule the individuals on display. The punishee's eyes are downcast as the shame and humiliation of their predicaments are realized. The wax figures are especially life like.&#x000A;&#x000A;It's an aqua colored door with the word "Stocks" written on it.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-399"/>
+    </children>
+  </item>
+  <item nodeId="node-399">
+    <command xml:space="preserve">e</command>
+    <result xml:space="preserve">Maintenance Office&#x000A;This appears to be the maintenance office, There is a desk here.&#x000A;&#x000A;It's an aqua colored door with the word "Stocks" written on it.&#x000A;&#x000A;You can also see a desk here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-400"/>
+    </children>
+  </item>
+  <item nodeId="node-400">
+    <command xml:space="preserve">open door</command>
+    <result xml:space="preserve">That's already open.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-401"/>
+    </children>
+  </item>
+  <item nodeId="node-401">
+    <command xml:space="preserve">close door</command>
+    <result xml:space="preserve">You close the Aqua Door.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-402"/>
+    </children>
+  </item>
+  <item nodeId="node-402">
+    <command xml:space="preserve">l</command>
+    <result xml:space="preserve">Maintenance Office&#x000A;This appears to be the maintenance office, There is a desk here.&#x000A;&#x000A;It's an aqua colored door with the word "Stocks" written on it.&#x000A;&#x000A;You can also see a desk here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+  </item>
+  <item nodeId="node-442">
+    <command xml:space="preserve">s</command>
+    <result xml:space="preserve">Electrical Room&#x000A;This room is oozing with electromagnetic energy. You can feel your hair stand on end and all your nerves twitching. This feels dangerous! There are exits in all directions.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-443"/>
+    </children>
+  </item>
+  <item nodeId="node-443">
+    <command xml:space="preserve">ne</command>
+    <result xml:space="preserve">Electrical Closet One&#x000A;You are in a section of the electrical room. There is an electrical panel here. There is an exit to the south west.&#x000A;&#x000A;You can see a key here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-444"/>
+    </children>
+  </item>
+  <item nodeId="node-444">
+    <command xml:space="preserve">get all</command>
+    <result xml:space="preserve">key: Taken.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-445"/>
+    </children>
+  </item>
+  <item nodeId="node-445">
+    <command xml:space="preserve">sw</command>
+    <result xml:space="preserve">Electrical Room&#x000A;This room is oozing with electromagnetic energy. You can feel your hair stand on end and all your nerves twitching. This feels dangerous! There are exits in all directions.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-446"/>
+    </children>
+  </item>
+  <item nodeId="node-446">
+    <command xml:space="preserve">n</command>
+    <result xml:space="preserve">Generator Room&#x000A;There are two massive generators here powering the ride.&#x000A;&#x000A;You can see an Indigo Door here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-447"/>
+    </children>
+  </item>
+  <item nodeId="node-447">
+    <command xml:space="preserve">n</command>
+    <result xml:space="preserve">Mechanical Room South&#x000A;There is machinery filling the room.&#x000A;&#x000A;You can see a Grey Door here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-448"/>
+    </children>
+  </item>
+  <item nodeId="node-448">
+    <command xml:space="preserve">n</command>
+    <result xml:space="preserve">Mechanical Room North&#x000A;There is machinery filling the room.&#x000A;&#x000A;You can see an Emerald Door and a toolbox (closed) here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-449"/>
+    </children>
+  </item>
+  <item nodeId="node-449">
+    <command xml:space="preserve">n</command>
+    <result xml:space="preserve">Crawl Space&#x000A;This crawl space is extremely small. You begin to feel claustrophobic in here.&#x000A;&#x000A;You can see a Crimson Door here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-450"/>
+    </children>
+  </item>
+  <item nodeId="node-450">
+    <command xml:space="preserve">n</command>
+    <result xml:space="preserve">Maintenance Office&#x000A;This appears to be the maintenance office, There is a desk here.&#x000A;&#x000A;You can see an Aqua Door and a desk here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-451"/>
+    </children>
+  </item>
+  <item nodeId="node-451">
+    <command xml:space="preserve">open door with key</command>
+    <result xml:space="preserve">The key does not fit the Aqua Door.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
   </item>
@@ -460,6 +1001,270 @@
   <item nodeId="node-338">
     <command xml:space="preserve">open panel</command>
     <result xml:space="preserve">You open electrical panel.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+  </item>
+  <item nodeId="node-452">
+    <command xml:space="preserve">ne . get key</command>
+    <result xml:space="preserve">Electrical Closet One&#x000A;You are in a section of the electrical room. There is an electrical panel here. There is an exit to the south west.&#x000A;&#x000A;You can see a key here.&#x000A;&#x000A;Taken.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-453"/>
+    </children>
+  </item>
+  <item nodeId="node-453">
+    <command xml:space="preserve">sw</command>
+    <result xml:space="preserve">Electrical Room&#x000A;This room is oozing with electromagnetic energy. You can feel your hair stand on end and all your nerves twitching. This feels dangerous! There are exits in all directions.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-454"/>
+    </children>
+  </item>
+  <item nodeId="node-454">
+    <command xml:space="preserve">n</command>
+    <result xml:space="preserve">Generator Room&#x000A;There are two massive generators here powering the ride.&#x000A;&#x000A;You can see an Indigo Door here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-455"/>
+    </children>
+  </item>
+  <item nodeId="node-455">
+    <command xml:space="preserve">n</command>
+    <result xml:space="preserve">Mechanical Room South&#x000A;There is machinery filling the room.&#x000A;&#x000A;You can see a Grey Door here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-456"/>
+    </children>
+  </item>
+  <item nodeId="node-456">
+    <command xml:space="preserve">n</command>
+    <result xml:space="preserve">Mechanical Room North&#x000A;There is machinery filling the room.&#x000A;&#x000A;You can see an Emerald Door and a toolbox (closed) here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-457"/>
+    </children>
+  </item>
+  <item nodeId="node-457">
+    <command xml:space="preserve">n</command>
+    <result xml:space="preserve">Crawl Space&#x000A;This crawl space is extremely small. You begin to feel claustrophobic in here.&#x000A;&#x000A;You can see a Crimson Door here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-458"/>
+    </children>
+  </item>
+  <item nodeId="node-458">
+    <command xml:space="preserve">n</command>
+    <result xml:space="preserve">Maintenance Office&#x000A;This appears to be the maintenance office, There is a desk here.&#x000A;&#x000A;You can see an Aqua Door and a desk here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-459"/>
+    </children>
+  </item>
+  <item nodeId="node-459">
+    <command xml:space="preserve">unlock door</command>
+    <result xml:space="preserve">(with the key)&#x000A;You unlock the Aqua Door.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-460"/>
+    </children>
+  </item>
+  <item nodeId="node-460">
+    <command xml:space="preserve">w</command>
+    <result xml:space="preserve">(first opening the Aqua Door)&#x000A;&#x000A;Stocks Room&#x000A;You pass into a room which displays mannequins in stocks in a public square. The stocks are made of heavy wood. The townsfolk are there solely to harrass and ridicule the individuals on display. The punishee's eyes are downcast as the shame and humiliation of their predicaments are realized. The wax figures are especially life like.&#x000A;&#x000A;You can see an Aqua Door here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-461"/>
+    </children>
+  </item>
+  <item nodeId="node-461">
+    <command xml:space="preserve">e</command>
+    <result xml:space="preserve">Maintenance Office&#x000A;This appears to be the maintenance office, There is a desk here.&#x000A;&#x000A;You can see an Aqua Door and a desk here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+  </item>
+  <item nodeId="node-462">
+    <command xml:space="preserve">ne.get key.sw.s</command>
+    <result xml:space="preserve">Electrical Closet One&#x000A;You are in a section of the electrical room. There is an electrical panel here. There is an exit to the south west.&#x000A;&#x000A;You can see a key here.&#x000A;&#x000A;Taken.&#x000A;&#x000A;Electrical Room&#x000A;This room is oozing with electromagnetic energy. You can feel your hair stand on end and all your nerves twitching. This feels dangerous! There are exits in all directions.&#x000A;&#x000A;Storage Room&#x000A;You can see a Khaki Door here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-463"/>
+    </children>
+  </item>
+  <item nodeId="node-463">
+    <command xml:space="preserve">w</command>
+    <result xml:space="preserve">(first opening the Khaki Door)&#x000A;(first unlocking the Khaki Door)&#x000A;(with the key)&#x000A;&#x000A;Ride Exit&#x000A;You can see a Khaki Door here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-464"/>
+    </children>
+  </item>
+  <item nodeId="node-464">
+    <command xml:space="preserve">e</command>
+    <result xml:space="preserve">Storage Room&#x000A;You can see a Khaki Door here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-465"/>
+    </children>
+  </item>
+  <item nodeId="node-465">
+    <command xml:space="preserve">n</command>
+    <result xml:space="preserve">Electrical Room&#x000A;This room is oozing with electromagnetic energy. You can feel your hair stand on end and all your nerves twitching. This feels dangerous! There are exits in all directions.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-466"/>
+    </children>
+  </item>
+  <item nodeId="node-466">
+    <command xml:space="preserve">w</command>
+    <result xml:space="preserve">Electrical Closet Nine&#x000A;You are in a section of the electrical room. There is an electrical panel here. There is an exit to the east.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-467"/>
+    </children>
+  </item>
+  <item nodeId="node-467">
+    <command xml:space="preserve">e</command>
+    <result xml:space="preserve">Electrical Room&#x000A;This room is oozing with electromagnetic energy. You can feel your hair stand on end and all your nerves twitching. This feels dangerous! There are exits in all directions.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-468"/>
+    </children>
+  </item>
+  <item nodeId="node-468">
+    <command xml:space="preserve">n</command>
+    <result xml:space="preserve">Generator Room&#x000A;There are two massive generators here powering the ride.&#x000A;&#x000A;You can see an Indigo Door here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-469"/>
+    </children>
+  </item>
+  <item nodeId="node-469">
+    <command xml:space="preserve">w</command>
+    <result xml:space="preserve">(first opening the Indigo Door)&#x000A;(first unlocking the Indigo Door)&#x000A;(with the key)&#x000A;&#x000A;Guillotine Room&#x000A;There is a guillotine in this room. The guillotine is being raised and lowered by some mechanism. It appears that the timing of the guillotine is off and it is being lowered onto the cars instead of between them. If a person were to be in a car as it passed under the guillotine, they would be decapitated.&#x000A;&#x000A;You can see an Indigo Door here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-470"/>
+    </children>
+  </item>
+  <item nodeId="node-470">
+    <command xml:space="preserve">e</command>
+    <result xml:space="preserve">Generator Room&#x000A;There are two massive generators here powering the ride.&#x000A;&#x000A;You can see an Indigo Door here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-471"/>
+    </children>
+  </item>
+  <item nodeId="node-471">
+    <command xml:space="preserve">n</command>
+    <result xml:space="preserve">Mechanical Room South&#x000A;There is machinery filling the room.&#x000A;&#x000A;You can see a Grey Door here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-472"/>
+    </children>
+  </item>
+  <item nodeId="node-472">
+    <command xml:space="preserve">s</command>
+    <result xml:space="preserve">Generator Room&#x000A;There are two massive generators here powering the ride.&#x000A;&#x000A;You can see an Indigo Door here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-473"/>
+    </children>
+  </item>
+  <item nodeId="node-473">
+    <command xml:space="preserve">w</command>
+    <result xml:space="preserve">Guillotine Room&#x000A;There is a guillotine in this room. The guillotine is being raised and lowered by some mechanism. It appears that the timing of the guillotine is off and it is being lowered onto the cars instead of between them. If a person were to be in a car as it passed under the guillotine, they would be decapitated.&#x000A;&#x000A;You can see an Indigo Door here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-474"/>
+    </children>
+  </item>
+  <item nodeId="node-474">
+    <command xml:space="preserve">n</command>
+    <result xml:space="preserve">Dungeon&#x000A;This a dungeon with all the usual devices. There is a man stretched on the rack. His screams pierce the room. An iron maiden is occupied and you notice the blood seeping from the eyes, ears, and mouth. Another is strapped to a Saint Andrew's Cross and is being flogged harshly.&#x000A;&#x000A;You can see a Grey Door here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-475"/>
+    </children>
+  </item>
+  <item nodeId="node-475">
+    <command xml:space="preserve">e</command>
+    <result xml:space="preserve">(first opening the Grey Door)&#x000A;(first unlocking the Grey Door)&#x000A;(with the key)&#x000A;&#x000A;Mechanical Room South&#x000A;There is machinery filling the room.&#x000A;&#x000A;You can see a Grey Door here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-476"/>
+    </children>
+  </item>
+  <item nodeId="node-476">
+    <command xml:space="preserve">n</command>
+    <result xml:space="preserve">Mechanical Room North&#x000A;There is machinery filling the room.&#x000A;&#x000A;You can see an Emerald Door and a toolbox (closed) here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-477"/>
+    </children>
+  </item>
+  <item nodeId="node-477">
+    <command xml:space="preserve">w</command>
+    <result xml:space="preserve">(first opening the Emerald Door)&#x000A;(first unlocking the Emerald Door)&#x000A;(with the key)&#x000A;&#x000A;Stake Room&#x000A;Here you see a bonfire in full conflagration. The flames leap higher and higher consuming the woman tied to the stake. The townsfolk are here holding torches and  jeering at the sight of the poor soul being burnt alive.&#x000A;&#x000A;You can see an Emerald Door here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-478"/>
+    </children>
+  </item>
+  <item nodeId="node-478">
+    <command xml:space="preserve">n</command>
+    <result xml:space="preserve">Gallows Room&#x000A;The next room is dominated by a gallows made of strong hardwood. Standing on the gallows is an executioner wearing a hood protecting his identity. Next to him is a man with a noose around his neck standing on a hatch ready to open.&#x000A;&#x000A;You can see a Crimson Door here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-479"/>
+    </children>
+  </item>
+  <item nodeId="node-479">
+    <command xml:space="preserve">e</command>
+    <result xml:space="preserve">(first opening the Crimson Door)&#x000A;(first unlocking the Crimson Door)&#x000A;(with the key)&#x000A;&#x000A;Crawl Space&#x000A;This crawl space is extremely small. You begin to feel claustrophobic in here.&#x000A;&#x000A;You can see a Crimson Door here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-480"/>
+    </children>
+  </item>
+  <item nodeId="node-480">
+    <command xml:space="preserve">n</command>
+    <result xml:space="preserve">Maintenance Office&#x000A;This appears to be the maintenance office, There is a desk here.&#x000A;&#x000A;You can see an Aqua Door and a desk here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-481"/>
+    </children>
+  </item>
+  <item nodeId="node-481">
+    <command xml:space="preserve">w</command>
+    <result xml:space="preserve">(first opening the Aqua Door)&#x000A;(first unlocking the Aqua Door)&#x000A;(with the key)&#x000A;&#x000A;Stocks Room&#x000A;You pass into a room which displays mannequins in stocks in a public square. The stocks are made of heavy wood. The townsfolk are there solely to harrass and ridicule the individuals on display. The punishee's eyes are downcast as the shame and humiliation of their predicaments are realized. The wax figures are especially life like.&#x000A;&#x000A;You can see an Aqua Door here.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
   </item>
