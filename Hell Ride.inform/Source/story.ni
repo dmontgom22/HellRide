@@ -28,8 +28,8 @@ Include Singing Reloaded by Shin
 Use scoring.
 Use American Dialect.
 Use serial comma.
-The maximum score is 15.
-When play begins, seed the random-number generator with 1234.
+Use maximum things understood at once of at least 200.
+The maximum score is 45.
 The block giving rule is not listed in the check giving it to rules.
 
 Chapter 2- Money Mechanics
@@ -152,14 +152,35 @@ Report pouring it into:
 	
 Understand the liquid property as describing a fluid container. Understand "of" as a fluid container.
 
-Chapter 4- The Player
+Chapter 4 - Underlying Mechanics
+
+Underlying relates various things to one thing. The verb to underlie means the underlying relation. The verb to be under means the underlying relation. The verb to be beneath means the underlying relation.
+	
+Instead of looking under a thing which is underlaid by something (called the lost object):
+	say "You find [the list of things which underlie the noun]!";
+	now every thing which underlies the noun is carried by the player;
+	now every thing which underlies the noun does not underlie the noun.
+	
+Hiding it under is an action applying to one carried thing and one thing. Understand "put [something preferably held] under [something]" as hiding it under. Understand "hide [something preferably held] under [something]" as hiding it under. Understand the commands "shove" and "conceal" and "stick" as "hide".
+
+Check hiding it under:
+	if the second noun is not fixed in place, say "[The second noun] wouldn't be a very effective place of concealment." instead.
+
+Carry out hiding it under:
+	now the noun is nowhere;
+	now the noun underlies the second noun.
+
+Report hiding it under:
+	say "You shove [the noun] out of sight beneath [the second noun]."
+	
+Chapter 5- The Player
 
 The description of the player is "You are despondent given that you and your date just had a huge fight and they stormed off. Maybe visiting the attractions at the carnival will make you feel better." 
 
 Instead of examining the player:
 	say "Oh, stop fussing. You look fine."
 
-Chapter 5- Figures and Sounds
+Chapter 6- Figures and Sounds
 
 Figure of Hell Ride is the file "HellRide.png".
 
@@ -179,7 +200,7 @@ Figure of HellRideEntrance is the file "RideEntrance.png".
 
 Sound of Strongman Bell is the file "StrongmanBell.ogg".
 
-Chapter 6- Miscellaneous Goodies
+Chapter 7- Miscellaneous Goodies
 
 Test Misc with "get blueberries / xyzzy / hello sailor / please get the dime".
 
@@ -217,26 +238,7 @@ Casting xyzzy is an action applying to nothing.
 Carry out casting xyzzy:
 	say "A voice nearby says 'Plugh'."
 	
-Underlying relates various things to one thing. The verb to underlie means the underlying relation. The verb to be under means the underlying relation. The verb to be beneath means the underlying relation.
-	
-Instead of looking under a thing which is underlaid by something (called the lost object):
-	say "You find [the list of things which underlie the noun]!";
-	now every thing which underlies the noun is carried by the player;
-	now every thing which underlies the noun does not underlie the noun.
-	
-Hiding it under is an action applying to one carried thing and one thing. Understand "put [something preferably held] under [something]" as hiding it under. Understand "hide [something preferably held] under [something]" as hiding it under. Understand the commands "shove" and "conceal" and "stick" as "hide".
-
-Check hiding it under:
-	if the second noun is not fixed in place, say "[The second noun] wouldn't be a very effective place of concealment." instead.
-
-Carry out hiding it under:
-	now the noun is nowhere;
-	now the noun underlies the second noun.
-
-Report hiding it under:
-	say "You shove [the noun] out of sight beneath [the second noun]."
-	
-Chapter 7 - Testing descriptions - Not for release
+Chapter 8 - Testing descriptions - Not for release
 
 [When play begins (this is the run property checks at the start of play rule):
 	repeat with item running through things:
@@ -254,6 +256,7 @@ Section 1 - Parking Lot
 Test Me with "Test Egypt /  Test Concession / Test Striker / Test Backstage / Test Misc / Test Ride".
 
 When play begins:
+	seed the random-number generator with 1234; [BUGBUG set to 0]
 	display the figure of Hell Ride;
 	say "The carnival is in town and you had a date with your sweetie to visit it. After dinner and just as you arrive at the carnival, you and your date have a terrible fight. They storm off leaving you alone at the carnival. You decide to stay at the carnival anyway."
 
@@ -698,7 +701,7 @@ Section 1 - Backstage Entrance
 
 Test b with "get	blueberries / s / buy ticket / s / give ticket to attendent / s / e / l at piles / get flashlight / turn it on / s / s / s / open toolbox / get all from toolbox / s / s / s / ne / get silver key / sw".
 
-Test Backstage with "get	blueberries / s / buy ticket / s / give ticket to attendent / s / e / l at piles / get flashlight / turn it on / s / s / s / open toolbox / get all from toolbox / s / s / s / ne / get silver key / sw / s / w / n / n / n / n / n / n / e / w / n / n / n".
+Test Backstage with "get	blueberries / s / buy ticket / s / give ticket to attendent / s / e / l at piles / get flashlight / turn it on / s / s / s / open toolbox / get all from toolbox / s / s / s / ne / get silver key / sw / s / w / l in stand / get fuse / n / l under platform / n / l under seat / n / l in pyre / get fuse / n / l under platform / n / l under stocks / n / e / w / n / n / n"
 
 [flashlight mechanics]
 Showing action of something is an activity.
@@ -855,20 +858,51 @@ Despite its functionality, the electrical room carries a certain unease. The con
 
 This room is oozing with electromagnetic energy. You can feel your hair stand on end and all your nerves twitching. This feels dangerous! There are exits in all directions."
 
+[BUGBUG Uncomment before release]
 [Instead of going from the Electrical Room:
 	move the player to a random adjacent room.]
 	
-The Electrical Closet Eleven is a dark room. The Electrical Closet Eleven is northwest of the Electrical Room. "You are in a section of the electrical room. There is an electrical panel here. There is an exit to the south east." Electrical Panel Eleven is closed openable container in Electrical Closet Eleven. Electrical Panel Eleven is scenery. The printed name of Electrical Panel Eleven is "the electrical panel". Understand "panels" as panel. The description is "This is a standard issue 200 amp electrical panel supplying 220 power throughout the ride. The electrical panel is [if Electrical Panel Eleven is open]open[otherwise]closed[end if]."
+The Electrical Closet Eleven is a dark room. The Electrical Closet Eleven is northwest of the Electrical Room. "You are in a section of the electrical room. There is an electrical panel here. There is an exit to the south east." Electrical Panel Eleven is closed openable container in Electrical Closet Eleven. Electrical Panel Eleven is scenery. The printed name of Electrical Panel Eleven is "the electrical panel". Understand "panels" as panel. The description is "This is a standard issue 200 amp electrical panel supplying 220 power throughout the ride. The electrical panel is [if Electrical Panel Eleven is open]open[otherwise]closed[end if]." Socket Eleven is in Electrical Panel Eleven. The printed name of Socket Eleven is "the socket". Socket Eleven is a container. The description of Socket Eleven is "This is a socket. A fuse probably goes in here."
 
-The Electrical Closet Nine is a dark room. Electrical Closet Nine is west of the Electrical Room. "You are in a section of the electrical room. There is an electrical panel here. There is an exit to the east." Electrical Panel Nine is closed openable container in Electrical Closet Nine. Electrical Panel Nine is scenery. The printed name of Electrical Panel Nine is "the electrical panel". Understand "panels" as panel. The description is "This is a standard issue 200 amp electrical panel supplying 220 power throughout the ride. The electrical panel is [if Electrical Panel Nine is open]open[otherwise]closed[end if]."
+instead of putting when the noun is the Khaki Fuse and the second noun is Socket Eleven:
+	say "Done.";
+	increase score by 5;
+	now the Khaki Fuse is in Socket Eleven.
 
-The Electrical Closet Seven is a dark room. Electrical Closet Seven is southwest of the Electrical Room. "You are in a section of the electrical room. There is an electrical panel here. There is an exit to the north east." Electrical Panel Seven is closed openable container in Electrical Closet Seven. Electrical Panel Seven is scenery. The printed name of Electrical Panel Seven is "the electrical panel". Understand "panels" as panel. The description is "This is a standard issue 200 amp electrical panel supplying 220 power throughout the ride. The electrical panel is [if Electrical Panel Seven is open]open[otherwise]closed[end if]."
+The Electrical Closet Nine is a dark room. Electrical Closet Nine is west of the Electrical Room. "You are in a section of the electrical room. There is an electrical panel here. There is an exit to the east." Electrical Panel Nine is closed openable container in Electrical Closet Nine. Electrical Panel Nine is scenery. The printed name of Electrical Panel Nine is "the electrical panel". Understand "panels" as panel. The description is "This is a standard issue 200 amp electrical panel supplying 220 power throughout the ride. The electrical panel is [if Electrical Panel Nine is open]open[otherwise]closed[end if]." Socket Nine is in Electrical Panel Nine. The printed name of Socket Nine is "the socket". Socket Nine is a container. The description of Socket Nine is "This is a socket. A fuse probably goes in here."
 
-The Electrical Closet Five is a dark room. Electrical Closet Five is southeast of the Electrical Room."You are in a section of the electrical room. There is an electrical panel here. There is an exit to the north west." Electrical Panel Five is closed openable container in Electrical Closet Five. Electrical Panel Five is scenery. The printed name of Electrical Panel Five is "the electrical panel". Understand "panels" as panel. The description is "This is a standard issue 200 amp electrical panel supplying 220 power throughout the ride. The electrical panel is [if Electrical Panel Five is open]open[otherwise]closed[end if]."
+instead of putting when the noun is Indigo Fuse and the second noun is the Socket Nine:
+	say "Done.";
+	increase score by 5;
+	now the Indigo Fuse is in Socket Nine.
+	
+The Electrical Closet Seven is a dark room. Electrical Closet Seven is southwest of the Electrical Room. "You are in a section of the electrical room. There is an electrical panel here. There is an exit to the north east." Electrical Panel Seven is closed openable container in Electrical Closet Seven. Electrical Panel Seven is scenery. The printed name of Electrical Panel Seven is "the electrical panel". Understand "panels" as panel. The description is "This is a standard issue 200 amp electrical panel supplying 220 power throughout the ride. The electrical panel is [if Electrical Panel Seven is open]open[otherwise]closed[end if]." Socket Seven is in Electrical Panel Seven. The printed name of Socket Seven is "the socket". Socket Seven is a container. The description of Socket Seven is "This is a socket. A fuse probably goes in here."
 
-The Electrical Closet Three is a dark room. Electrical Closet Three is east of the Electrical Room. "You are in a section of the electrical room. There is an electrical panel here. There is an exit to the west." Electrical Panel Three is closed openable container in Electrical Closet Three. Electrical Panel Three is scenery. The printed name of Electrical Panel Three is "the electrical panel". Understand "panels" as panel. The description is "This is a standard issue 200 amp electrical panel supplying 220 power throughout the ride. The electrical panel is [if Electrical Panel Three is open]open[otherwise]closed[end if]."
+instead of putting when the noun is Grey Fuse and the second noun is the Socket Seven:
+	say "Done.";
+	increase score by 5;
+	now the Indigo Fuse is in Socket Seven.
 
-The Electrical Closet One is a dark room. The Electrical Closet One is northeast of the Electrical Room.  "You are in a section of the electrical room. There is an electrical panel here. There is an exit to the south west." Electrical Panel One is closed openable container in Electrical Closet One. Electrical Panel One is scenery. The printed name of Electrical Panel One is "the electrical panel". Understand "panels" as panel. The description is "This is a standard issue 200 amp electrical panel supplying 220 power throughout the ride. The electrical panel is [if Electrical Panel One is open]open[otherwise]closed[end if]." The silver key is in the Electrical Closet One. The description of the silver key is "This is a small silver key. I wonder what it unlocks."
+The Electrical Closet Five is a dark room. Electrical Closet Five is southeast of the Electrical Room."You are in a section of the electrical room. There is an electrical panel here. There is an exit to the north west." Electrical Panel Five is closed openable container in Electrical Closet Five. Electrical Panel Five is scenery. The printed name of Electrical Panel Five is "the electrical panel". Understand "panels" as panel. The description is "This is a standard issue 200 amp electrical panel supplying 220 power throughout the ride. The electrical panel is [if Electrical Panel Five is open]open[otherwise]closed[end if]." Socket Five is in Electrical Panel Five. The printed name of Socket Five is "the socket". Socket Five is a container. The description of Socket Five is "This is a socket. A fuse probably goes in here."
+
+instead of putting when the noun is Emerald Fuse and the second noun is the Socket Five:
+	say "Done.";
+	increase score by 5;
+	now the Emerald Fuse is in Socket Five.
+
+The Electrical Closet Three is a dark room. Electrical Closet Three is east of the Electrical Room. "You are in a section of the electrical room. There is an electrical panel here. There is an exit to the west." Electrical Panel Three is closed openable container in Electrical Closet Three. Electrical Panel Three is scenery. The printed name of Electrical Panel Three is "the electrical panel". Understand "panels" as panel. The description is "This is a standard issue 200 amp electrical panel supplying 220 power throughout the ride. The electrical panel is [if Electrical Panel Three is open]open[otherwise]closed[end if]." Socket Three is in Electrical Panel Three. The printed name of Socket Three is "the socket". Socket Three is a container. The description of Socket Three is "This is a socket. A fuse probably goes in here."
+
+instead of putting when the noun is Crimson Fuse and the second noun is the Socket Three:
+	say "Done.";
+	increase score by 5;
+	now the Crimson Fuse is in Socket Three.
+
+The Electrical Closet One is a dark room. The Electrical Closet One is northeast of the Electrical Room.  "You are in a section of the electrical room. There is an electrical panel here. There is an exit to the south west." Electrical Panel One is closed openable container in Electrical Closet One. Electrical Panel One is scenery. The printed name of Electrical Panel One is "the electrical panel". Understand "panels" as panel. The description is "This is a standard issue 200 amp electrical panel supplying 220 power throughout the ride. The electrical panel is [if Electrical Panel One is open]open[otherwise]closed[end if]." Socket One is in Electrical Panel One. The printed name of Socket One is "the socket". Socket One is a container. The description of Socket One is "This is a socket. A fuse probably goes in here." The silver key is in the Electrical Closet One. The description of the silver key is "This is a small silver key. I wonder what it unlocks."
+
+instead of putting when the noun is Aqua Fuse and the second noun is the Socket One:
+	say "Done.";
+	increase score by 5;
+	now the Aqua Fuse is in Socket One.
 
 Section 8 - Storage Room
 
