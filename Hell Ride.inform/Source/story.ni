@@ -217,7 +217,26 @@ Casting xyzzy is an action applying to nothing.
 Carry out casting xyzzy:
 	say "A voice nearby says 'Plugh'."
 	
-Section 7 - Testing descriptions - Not for release
+Underlying relates various things to one thing. The verb to underlie means the underlying relation. The verb to be under means the underlying relation. The verb to be beneath means the underlying relation.
+	
+Instead of looking under a thing which is underlaid by something (called the lost object):
+	say "You find [the list of things which underlie the noun]!";
+	now every thing which underlies the noun is carried by the player;
+	now every thing which underlies the noun does not underlie the noun.
+	
+Hiding it under is an action applying to one carried thing and one thing. Understand "put [something preferably held] under [something]" as hiding it under. Understand "hide [something preferably held] under [something]" as hiding it under. Understand the commands "shove" and "conceal" and "stick" as "hide".
+
+Check hiding it under:
+	if the second noun is not fixed in place, say "[The second noun] wouldn't be a very effective place of concealment." instead.
+
+Carry out hiding it under:
+	now the noun is nowhere;
+	now the noun underlies the second noun.
+
+Report hiding it under:
+	say "You shove [the noun] out of sight beneath [the second noun]."
+	
+Chapter 7 - Testing descriptions - Not for release
 
 [When play begins (this is the run property checks at the start of play rule):
 	repeat with item running through things:
@@ -362,7 +381,7 @@ The markings are here. The markings are scenery. Understand "marking" and "sign"
 
 The Strongman Attendent is here. The description of the Strongman Attendent is "An Attendent is standing here [if strongman attendent is carrying the mallet]holding a mallet[end if]." 
 
-The Strongman Attendent carries the teddy bear, a swiss army knife, and a poster of Taylor Swift, and the mallet. The description of the teddy bear is "This is a teddy bear like you had when you were a kid. Right down to the red bow around its neck." The Swiss Army knife is a container. The Swiss Army knife contains a screwdriver. The description of the swiss army knife is "This is the standard issue Swss Army knife with all the expected gadgets." The description of the poster of Taylor Swift is "This is a poster of America's swwetheart, Taylor Swift."
+The Strongman Attendent carries the teddy bear, a swiss army knife, and a poster of Taylor Swift, and the mallet. The description of the teddy bear is "This is a teddy bear like you had when you were a kid. Right down to the red bow around its neck." The Swiss Army knife is a container. The Swiss Army knife contains a screwdriver, an awl, fingernail clippers, can opener, and corkscrew. The description of the swiss army knife is "This is the standard issue Swss Army knife with all the expected gadgets." The description of the poster of Taylor Swift is "This is a poster of America's swwetheart, Taylor Swift."
 
 The lever is here. The lever is fixed in place. Understand "bullseye" and "target" as lever. The description of the lever is "There is a bullseye on the base. I guess this is where you have to aim the mallet."
 
@@ -546,7 +565,14 @@ Around the stocks, the townsfolk revel in their collective cruelty. A wiry man l
 [paragraph break]
 The square is alive with noise: the raucous laughter of the crowd, the occasional sharp crack of a thrown object against the wood, and the soft, pained murmurs of the punished. A passing bell tolls faintly in the distance, but here it is drowned out by the cruel symphony of the jeering mob.
 [paragraph break]
-Above it all, the gray sky looms, heavy with the promise of rain, as if nature itself disapproves of the spectacle. Yet the crowd pays no mind, delighting in their collective judgment, each jeer a reminder that today’s entertainment is another's living nightmare." The Aqua Door is west of the Maintenance Office. 
+Above it all, the gray sky looms, heavy with the promise of rain, as if nature itself disapproves of the spectacle. Yet the crowd pays no mind, delighting in their collective judgment, each jeer a reminder that today’s entertainment is another's living nightmare." 
+The Aqua Door is west of the Maintenance Office. 
+The wooden stocks are here. The wooden stocks are a supporter. The description of the wooden stocks is "At the square's center stand a row of crude wooden stocks, their heavy beams stained from years of weather and use. Iron clasps hold the unfortunate captives by their wrists and necks, their bodies forced into unnatural, humiliating postures." The Aqua Fuse is scenery in the Stocks Room. The Aqua Fuse underlies the stocks. The description of the aqua fuse is "This is an electrical fuse. It is aqua colored. The same as the door."
+
+Instead of looking under the stocks: 
+	increase score by 5;
+	now the player has the aqua fuse;
+	continue the action.
 
 Section 3 - Gallows Room
 
@@ -562,6 +588,13 @@ Above it all, the bell tower tolls, its mournful chime echoing through the squar
 [paragraph break]
 The executioner steps forward, adjusting the noose around the man’s neck with a practiced efficiency. The crowd falls silent, the weight of the moment hanging heavier than the rope itself. Somewhere in the distance, thunder rumbles faintly, as though the heavens themselves are bracing for what is to come."
 
+The gallows platform is here. The gallows platform is a supporter. Understand "gallows" as gallows platform. The description of the gallows platform is "At the center of the square, rising like a grim monument to mortality, stands the gallows—a wooden platform, darkened by age and weather, with thick ropes hanging like vipers poised to strike." The Crimson Fuse is scenery in the Gallows Room. The Crimson Fuse underlies the gallows platform. The description of the crimson fuse is "This is an electrical fuse. It is crimson colored. The same as the door."
+
+Instead of looking under the platform: 
+	increase score by 5;
+	now the player has the crimson fuse;
+	continue the action.
+
 Section 4 - Stake Room
 
 The Stake Room is south of the Gallows Room. "The public square is a grim tableau, the usual bustle of commerce and chatter replaced with an oppressive silence broken only by the crackling of the flames. At the center, three wooden stakes rise ominously from a circular pyre of logs and kindling, their rough surfaces darkened by smoke from countless such scenes before. Bound tightly to these stakes are three women, their wrists and ankles secured with coarse, heavy ropes. Their faces tell different stories—one of defiance, another of resignation, and the third of pure terror.
@@ -575,6 +608,13 @@ Thick, acrid smoke begins to rise, curling around the stakes like a living thing
 Above, the gray clouds hang low, as if nature itself mourns the scene unfolding below. A raven caws from its perch atop the town's bell tower, its black form stark against the ashen sky. The church bells toll in slow, deliberate cadence, each strike a grim punctuation to the scene.
 [paragraph break]
 As the flames consume the pyre, the crowd remains rooted, some transfixed by the spectacle, others quietly slipping away, their faces pale and drawn. The square, once a place of gatherings and life, is now a stage for death, its air heavy with smoke, ash, and the lingering cries of the condemned."
+
+The pyre is scenery in the Stake Room. The pyre is a container. understand "bonfire" and "fire" as the pyre. The description of the pyre is "At the center, three wooden stakes rise ominously from a circular pyre of logs and kindling, their rough surfaces darkened by smoke from countless such scenes before. Bound tightly to these stakes are three women, their wrists and ankles secured with coarse, heavy ropes. Their faces tell different stories—one of defiance, another of resignation, and the third of pure terror." The Emerald Fuse is in the pyre. The description of the emerald fuse is "This is an electrical fuse. It is emerald colored. The same as the door."
+
+Instead of taking the emerald fuse: 
+	say "Taken.";
+	increase score by 5;
+	now the player has the emerald fuse;
 
 Section 5 - Dungeon
 
@@ -592,6 +632,13 @@ Above it all, the dungeon's ceiling is low and oppressive, the occasional scuttl
 [paragraph break]
 This is a place of despair and cruelty, where the line between life and death is blurred, and the only certainty is the inevitability of suffering."
 
+The iron seat is scenery in the Dungeon. The description of the iron seat is "A spiked chair looms in the corner, its cruel design gleaming faintly in the dim light." The Grey Fuse underlies the iron seat. The description of the grey fuse is "This is an electrical fuse. It is grey colored. The same as the door."
+	
+Instead of looking under the iron seat: 
+	increase score by 5;
+	now the player has the grey fuse;
+	continue the action.
+
 Section 6 - Guillotine Room
 
 The Guillotine Room is south of the Dungeon. "The public square is a charged space, bustling with a crowd eager to witness the grim spectacle. The sky overhead is a patchwork of gray clouds, casting the cobblestone ground in a somber light. At the center of the square stands a raised wooden platform, stark and imposing, where the grim sentence is to be carried out.
@@ -601,7 +648,7 @@ A lone figure stands on the scaffold, their posture slumped under the weight of 
 The crowd presses closer, encircling the platform with a mix of emotions etched onto their faces. Some jeer, shouting curses and insults, their voices rising in a cacophony of condemnation. Others watch in heavy silence, their expressions grim and reflective. A few hold children on their shoulders, their young faces filled with curious fascination, unaware of the gravity of what they are about to witness.
 [paragraph break]
 At the edge of the platform, a town crier stands with a long scroll in hand, his voice carrying over the murmurs of the crowd:
-'his man has been found guilty of high treason against the crown. Let his punishment serve as a warning to all who would seek to defy the will of the realm!'
+'This man has been found guilty of high treason against the crown. Let his punishment serve as a warning to all who would seek to defy the will of the realm!'
 [paragraph break]
 The condemned flinches at the words but remains silent, their face pale and eyes darting nervously. The executioner, a large figure clad in a hooded black robe, stands nearby with arms crossed, their demeanor cold and methodical. A few feet away, the guillotine looms, its blade gleaming dully in the filtered light, ready to deliver the final judgment.
 [paragraph break]
@@ -611,9 +658,37 @@ As the condemned is led toward the guillotine, a crow caws from a nearby rooftop
 [paragraph break]
 There is just lone problem: the guillotine is being raised and lowered by some mechanism. It appears that the timing of the guillotine is off and it is being lowered onto the cars instead of between them. If a person were to be in a car as it passed under the guillotine, they would be decapitated."
 
+The guillotine platform is here. The guillotine platform is a supporter. Understand "scaffold" as guillotine platform. The description of the guillotine platform is "At the center of the square stands a raised wooden platform, stark and imposing, where the grim sentence is to be carried out." The Indigo Fuse is scenery in the Guillotine Room. The Indigo Fuse underlies the guillotine platform. The description of the indigo fuse is "This is an electrical fuse. It is indigo colored. The same as the door."
+
+Instead of looking under the platform: 
+	increase score by 5;
+	now the player has the indigo fuse;
+	continue the action.
+	
 Section 7 - Ride Exit
 
-The Ride Exit is south of the Guillotine Room.
+The Ride Exit is south of the Guillotine Room. "The exit of Hell Ride is as unsettling as the ride itself, designed to leave riders with a lingering sense of unease. The pathway emerges from a dark, narrow corridor, its walls painted in peeling black with streaks of red that resemble dripping blood. Dim, flickering lights cast erratic shadows across the uneven floor, creating an oppressive atmosphere that follows riders even after they’ve left the ride.
+[paragraph break]
+The air is cooler here, with a faint metallic tang and the unmistakable scent of dampness, as though the exit leads not back to the carnival but somewhere deeper underground. Sound effects of faint whispers and distant screams play softly in the background, barely audible over the creak of the exit door swinging open and the occasional burst of laughter or screams from the ride’s next passengers.
+[paragraph break]
+Riders step out into a small courtyard, enclosed by jagged, rusted metal fencing adorned with fake cobwebs and plastic bones. A weathered sign swings overhead, painted in bold, gothic letters: 'You[’]ve Survived… For Now.'
+[paragraph break]
+Nearby, a few carnival workers in tattered costumes linger, their expressions unsettlingly neutral as they watch riders leave. One might mumble cryptic phrases like, 'Not everyone makes it out…' before breaking into a crooked grin.
+[paragraph break]
+The exit path leads past a small merchandise stand selling ride-themed merchandise—'Hell Ride Survivor' t-shirts, devil horns, and glow-in-the-dark trinkets shaped like skulls. The stand is bathed in red light, adding to the ominous mood.
+[paragraph break]
+Just beyond the fencing, the cheerful sounds and colorful lights of the carnival midway feel jarringly out of place, a sharp contrast to the oppressive darkness of the ride. Riders often pause to gather themselves, exchanging nervous laughter or adjusting their belongings, before stepping back into the lively world of the carnival.
+[paragraph break]
+The Hell Ride exit leaves riders not just thrilled, but marked by the eerie experience, a reminder of the fine line between fun and fear that defines the carnival’s darkest attraction."
+
+The merchandise stand is scenery in the Ride Exit. The merchandise stand is a container. Understand "stand" as merchandise. The description of the merchandise is "The stand is bathed in red light, adding to the ominous mood." The Khaki Fuse is in the merchandise stand. The Khaki Fuse underlies the platform. The description of the khaki fuse is "This is an electrical fuse. It is khaki colored. The same as the door."
+
+Instead of taking in the stand: 
+	say "Taken.";
+	increase score by 5;
+	now the player has the khaki fuse;
+	continue the action.
+	
 
 Chapter 3 - Backstage
 
@@ -621,9 +696,9 @@ Backstage is a region. Backstage Entrance, Maintenance Office, Crawl Space, Mech
 
 Section 1 - Backstage Entrance
 
-Test b with "s / buy ticket / s / give ticket to attendent / s / e / get all / turn on flashlight / s / s / s / s / s / s / ne / get key / sw".
+Test b with "get	blueberries / s / buy ticket / s / give ticket to attendent / s / e / l at piles / get flashlight / turn it on / s / s / s / open toolbox / get all from toolbox / s / s / s / ne / get silver key / sw".
 
-Test Backstage with "get	blueberries / s / buy ticket / s / give ticket to attendent / s / e / l at piles / get flashlight / turn it on / s / s / s / open toolbox / get all from toolbox / s / s / s / ne / get silver key / sw / s / w / n / n / n / n / n / n / e / w / n / n / n"
+Test Backstage with "get	blueberries / s / buy ticket / s / give ticket to attendent / s / e / l at piles / get flashlight / turn it on / s / s / s / open toolbox / get all from toolbox / s / s / s / ne / get silver key / sw / s / w / n / n / n / n / n / n / e / w / n / n / n".
 
 [flashlight mechanics]
 Showing action of something is an activity.
@@ -651,7 +726,7 @@ Rule for showing action of an electric lamp (called item):
 	
 Carry out switching on an electric lamp: now the noun is lit. Carry out switching off an electric lamp: now the noun is unlit.
 
-The flashlight is an electric lamp. understand "light" as flashlight. The description of the flashlight is "This is a flashlight. A nice one."
+The flashlight is an electric lamp. understand "light" as flashlight. The description of the flashlight is "This is a flashlight. It[']s a nice one."
 
 Rule for showing action of the flashlight:
 	if the flashlight is switched on, say "A strong, narrow beam of light shines from the flashlight.";
@@ -659,7 +734,9 @@ Rule for showing action of the flashlight:
 
 Backstage Entrance is a room. Backstage Entrance is east of the Ride Entrance. "This room is backstage at the Hell Ride attraction. The room is littered with bags of trash, piles of junk, and dust bunnies so large they should be paying rent. West is back the way you came from. There an exit to the south."
 
-The pile of junk is a scenery container. The pile of junk is in the backstage entrance. The pile of junk contains the flashlight. Understand "piles" as pile of junk. The description of the pile of junk is "In the corner is a pile of junk."
+The dust bunnies are scenery. The dust bunnies are here. Understand "bunnies" as dust bunnies.
+The bags of trash are scenery. The bags of trash are here. Understand "bags" and "trash" as bags of trash.
+The pile of junk is a scenery container. The pile of junk is in the backstage entrance. The pile of junk contains the flashlight. Understand "piles" and "junk" as pile of junk. The description of the pile of junk is "In the corner is a pile of junk."
 
 after examining when the noun is pile of junk:
 	say "You find a flashlight here.";
@@ -669,6 +746,10 @@ Before printing the name of an unlit lit electric lamp, say "extinguished ".
 
 After waiting when the location is dark:
 	say "It's pitch black. You might be eaten by a grue!"
+	
+After waiting when the location is dark 4 times:
+	say "You have been eaten by a grue. It['] a terrible way to go.";
+	end the story finally.
 	
 After going east when the location is Backstage Entrance and Backstage Entrance is unvisited:
 	say "Walking in the darkness with your arms extended you nearly fall through an open doorway.";
@@ -697,6 +778,8 @@ The desk is in the maintenance office. The desk is fixed in place. A drawer is p
 The scissors are in the drawer. The description is "This is a sharp pair of office scissors." The stapler is in the drawer. The description is "This is a red stapler." The ballpoint pen is in the drawer. The description is "Your standard ballpoint pen. It says Bic on the side." The pad of paper is in the drawer. The description is "This is a pad of lined paper."
 
 The Aqua Door is west of the Maintenance Office and east of the Stocks Room. The Aqua Door is a closed locked door. The description of the Aqua door is "It's an aqua colored door with the word 'Stocks' written on it." The silver key unlocks it.
+
+The cans of paint, grease, and lubricant are here.
 
 Section 3 - Crawl Space
 
