@@ -232,13 +232,25 @@ The Midway is a region. Parking Lot, Kiosk, Concession Stand, High Striker, Show
 
 Section 1 - Parking Lot
 
-Test Me with "Test Egypt /  Test Concession / Test Striker / Test Misc / Test Ride".
+Test Me with "Test Egypt /  Test Concession / Test Striker / Test Backstage / Test Misc / Test Ride".
 
 When play begins:
 	display the figure of Hell Ride;
-	say "The carnival is in town and you had a date with your sweetie to visit it. After dinner and just as you arrive at the carnival, you and your date have a terrible fight. They storm off leaving you alone at the carnival. You decide to stay at the carnival anyway.[paragraph break]The midway is bustling with activity—lights flashing, the sounds of carnival music, and the laughter of children mix with the occasional shrill scream of a roller coaster. Various attractions line the street, promising thrills, challenges, and wonders."
+	say "The carnival is in town and you had a date with your sweetie to visit it. After dinner and just as you arrive at the carnival, you and your date have a terrible fight. They storm off leaving you alone at the carnival. You decide to stay at the carnival anyway."
 
-The Parking Lot is a room. The parking lot is north of the Kiosk. "You are in a parking lot full of cars. The midway is to the south. There is a blueberry bush here. [if blueberry bush contains blueberries]There are blueberries on the bush[otherwise]The bush has been picked clean.[end if]"
+The Parking Lot is a room. The parking lot is north of the Kiosk. "The carnival parking lot sprawls across an open field, its uneven gravel surface crunching under the tires of arriving cars. The lot is lit by a mix of temporary floodlights mounted on poles and the colorful glow of the carnival itself, which spills across the area in flashes of red, blue, and gold. The distant sounds of laughter, music, and the mechanical whir of rides drift across the lot, creating an air of excitement even before reaching the main grounds.
+[paragraph break]
+Rows of vehicles, from dusty sedans to pickup trucks with weathered paint, are parked haphazardly, guided by makeshift wooden signs and strings of flags fluttering in the breeze. Some families unload children, strollers, and blankets from their cars, their voices mingling with the distant carnival noise. Others sit in their vehicles, adjusting their jackets and preparing for the chilly evening ahead.
+[paragraph break]
+The edges of the lot are lined with trees and bushes, their shadows stretching across the ground, creating pockets of darkness. The occasional glow of a phone screen or flashlight pierces the dim corners as latecomers search for empty spots. Near the entrance, a weathered booth manned by a lone attendant collects parking fees, the cash box jingling with loose change.
+[paragraph break]
+Puddles from a recent rain reflect the flashing carnival lights, creating a surreal, shimmering effect on the ground. The smell of damp earth mixes with the distant aroma of popcorn and funnel cakes wafting from the midway. In some areas, patches of mud threaten to swallow unwary shoes, marked by the faint tread of earlier visitors.
+[paragraph break]
+At the far end of the lot, a handful of RVs and trailers are parked, their occupants relaxing in folding chairs, watching the lights of the Ferris wheel spin lazily against the night sky. Generators hum softly, providing power to the trailers, a subtle background noise beneath the larger symphony of the carnival.
+[paragraph break]
+The parking lot, while utilitarian, is alive with anticipation, serving as the gateway to the magic of the carnival. It’s a place of transition, where the mundane gives way to the extraordinary, and the humdrum rhythms of daily life are momentarily forgotten.
+[paragraph break]
+The midway is to the south. There is a blueberry bush here. [if blueberry bush contains blueberries]There are blueberries on the bush[otherwise]The bush has been picked clean.[end if]"
 
 Cars is here. cars is scenery. Understand "car" as cars. The description of cars is "There are all kinds of vehicles in the parking lot."
 
@@ -258,7 +270,19 @@ Before going south when the location is the Parking Lot and the Kiosk is unvisit
 Before looking when the location is the Kiosk:
 	display Figure of TicketBooth.
 
-The kiosk is a room. The kiosk is north of Head of the Line. The kiosk is east of the Show Facade. The kiosk is west of High Striker. The kiosk is northeast of the Concession Stand. The kiosk is south of the Parking Lot. "You are standing in line at a kiosk at the carnival. The kiosk sells tickets to the Hell Ride attraction. The line for the ride forms to the south and the midway continues east and west from here. There is a concession stand to the south west. The kiosk is garishly painted in purple and green sparkles. There is a cashier here. [if cashier is carrying hell ride ticket]The Cashier has a Hell Ride ticket.[end if]"
+The kiosk is a room. The kiosk is north of Head of the Line. The kiosk is east of the Show Facade. The kiosk is west of High Striker. The kiosk is northeast of the Concession Stand. The kiosk is south of the Parking Lot. "The ticket kiosk stands at the entrance to the carnival, a small but colorful booth designed to catch the eye and set the tone for the excitement ahead. Its exterior is painted in bright red and yellow stripes, with bold, blocky letters above the window that read 'Tickets Here!' Strings of twinkling lights outline the edges, blinking in rhythmic patterns to draw attention.
+[paragraph break]
+The kiosk is compact, with a single window where a smiling attendant greets visitors. Behind the glass, rows of ticket rolls in vibrant colors—blue, red, and yellow—are neatly arranged in dispensers. A small cash drawer sits open beside them, jingling softly as the attendant counts out change. To the side of the window, a digital payment system is set up for those who prefer modern convenience, its screen glowing faintly in the dim light.
+[paragraph break]
+A colorful signboard is propped up next to the kiosk, listing ticket prices for rides, games, and attractions. At the top, in bold letters, it reads: 'Step Right Up! Your Adventure Awaits!' Below, the list of options is accompanied by playful illustrations of roller coasters, Ferris wheels, and cotton candy.
+[paragraph break]
+The kiosk roof juts out slightly, providing shelter to visitors during rain or shine. Bright pennant flags are strung from the corners of the roof to nearby poles, fluttering in the breeze and adding to the festive atmosphere. The smell of popcorn and fried dough wafts through the air, carried over from nearby food stalls.
+[paragraph break]
+The ground around the kiosk is well-trodden, with patches of worn grass and compacted dirt revealing the heavy foot traffic of eager carnival-goers. A line of families, couples, and groups of friends forms in front of the kiosk, buzzing with excitement as they wait their turn to purchase tickets.
+[paragraph break]
+The ticket kiosk is more than just a point of entry—it’s the first step into the carnival’s magic, where anticipation builds and the promise of thrills and wonders begins to take shape.
+[paragraph break]
+The midway continues east and west from here. There is a concession stand to the south west. There is a cashier here. [if cashier has the hell ride ticket]The Cashier has a Hell Ride ticket.[end if]."
 
 The Hell Ride ticket is a thing. The price of the Hell Ride ticket is $2.50. The description of the Hell Ride ticket is "This Hell Ride ticket will 'Admit One' to the Hell Ride.[line break]It[']s a real 'E' ticket, baby!"
 
@@ -279,7 +303,19 @@ Before going southwest when the location is the kiosk and the Concession Stand i
 Before looking when the location is the Concession Stand:
 	display Figure of ConcessionStand.
 
-The Concession Stand is a room. "You are standing in front of a brightly lit Concession Stand. There is a menu to the right of the window. You can see the treats inside the stand."
+The Concession Stand is a room. "The concession stand is a vibrant, bustling hub of activity, perched along the midway with its enticing smells and bright signage luring carnival-goers. The booth is painted in cheerful, primary colors—reds, blues, and yellows—with bold lettering across the top that proclaims: 'SODA! POPCORN! CANDY APPLES! COTTON CANDY! PRETZELS!' Strings of tiny, twinkling lights frame the stand, casting a warm glow that makes it stand out even in the carnival’s dazzling atmosphere.
+[paragraph break]
+Behind the counter, the scene is a whirlwind of movement. A large popcorn machine sits to one side, its glass case fogged up with heat as golden kernels tumble and pop inside, filling the air with their buttery aroma. Nearby, a spinning rack of candy apples gleams under the lights, their glossy red coatings catching every glimmer. Cotton candy machines whirl on the opposite side, their sugary strands forming fluffy clouds of pink and blue, ready to be twirled onto paper cones.
+[paragraph break]
+Stacks of soft pretzels sit under a heat lamp, their golden-brown surfaces glistening with melted butter and coarse salt. Warm, doughy scents mingle with the sugary sweetness of the candy apples and cotton candy, creating an irresistible combination. Ice-cold sodas are arranged in a cooler behind the counter, their colorful labels visible through the condensation on the glass door.
+[paragraph break]
+The countertop is a cheerful chaos of activity. Paper bags and napkins are stacked neatly in one corner, alongside small cups of nacho cheese for pretzels and sugar sprinkles for cotton candy. A handwritten menu board leans against the front of the stand, listing prices in playful chalk lettering.
+[paragraph break]
+The workers, wearing brightly colored aprons and matching hats, move quickly and efficiently, handing out snacks to eager customers. Behind them, shelves are stocked with supplies: bags of popcorn kernels, bottles of soda syrup, and tubs of pretzel dough, ready to keep the stand running all night.
+[paragraph break]
+In front of the stand, the crowd is lively and animated. Children tug at their parents’ sleeves, pointing at the spinning cotton candy or the shiny candy apples. Teens laugh and chat as they sip sodas and share buttery pretzels. The stand is not just a place to grab a quick snack—it’s a sensory experience that enhances the carnival’s magic, offering a delicious pause amid the excitement.
+[paragraph break]
+There is a menu to the right of the window. You can see the treats inside the stand."
 
 treats is here. Treats is scenery. Understand "treat" as treats. The description of treats is "There are a variety of things to eat here."
 
@@ -587,7 +623,7 @@ Section 1 - Backstage Entrance
 
 Test b with "s / buy ticket / s / give ticket to attendent / s / e / get all / turn on flashlight / s / s / s / s / s / s / ne / get key / sw".
 
-Test Backstage with "s / buy ticket / s / give ticket to attendent / s / e / s / s / s".
+Test Backstage with "get	blueberries / s / buy ticket / s / give ticket to attendent / s / e / l at piles / get flashlight / turn it on / s / s / s / open toolbox / get all from toolbox / s / s / s / ne / get silver key / sw / s / w / n / n / n / n / n / n / e / w / n / n / n"
 
 [flashlight mechanics]
 Showing action of something is an activity.
@@ -641,7 +677,19 @@ After going east when the location is Backstage Entrance and Backstage Entrance 
 
 Section 2 - Maintenance Office
 
-The Maintenance Office is a dark room. The maintenance office is south of the backstage entrance. "This appears to be the maintenance office, There is a desk here.". 
+The Maintenance Office is a dark room. The maintenance office is south of the backstage entrance. "The maintenance office is a chaotic and dimly lit space tucked away behind the glitz and glamour of the carnival. It smells of grease, sweat, and faintly of popcorn from the midway outside. The air is heavy and warm, thick with the lingering scent of oil and dust stirred up by constant work.
+[paragraph break]
+The walls are lined with cluttered shelves holding an assortment of tools and parts—rusty wrenches, screwdrivers, hammers, bolts, and screws organized (or not) in mismatched containers. Tattered labels, some scrawled in fading marker, hint at what lies inside. Cans of paint, grease, and lubricant sit precariously on the edges of workbenches, their lids half-open or missing entirely.
+[paragraph break]
+The center of the room is dominated by a large desk scarred with years of use. A vise clamp holds a bent piece of metal in place, while a spread of loose wires, gears, and springs litter the surface. A single, broken fluorescent light hangs from the ceiling.
+[paragraph break]
+In one corner, a disassembled ride mechanism sits, its inner workings exposed like the guts of a machine. Chains and pulleys dangle from hooks overhead, their metallic clink echoing faintly as they sway slightly with the vibration of the rides outside. A half-drained mug of coffee sits forgotten on a stool nearby, next to a grease-stained manual lying open to a random page.
+[paragraph break]
+The walls bear evidence of the room’s purpose: faded safety posters warning of hazards, a corkboard pinned with ride maintenance schedules and hastily scribbled notes, and a faded photograph of the carnival in its prime. A clock ticks faintly in the background, though its hands don’t seem to match the current time.
+[paragraph break]
+The floor is uneven and gritty, coated in a fine layer of dust and littered with stray nails and scraps of metal. In one corner, a toolbox sits half-open, its contents spilling out as though abandoned mid-task. Nearby, a rickety fan struggles to spin, offering little relief from the oppressive heat.
+[paragraph break]
+Despite the disarray, the room hums with purpose. This is the beating heart of the carnival’s machinery, a hidden realm where the magic of the attractions is kept alive by grease-stained hands and sheer determination.". 
 
 [ This is the code that breaks the opening]
 The desk is in the maintenance office. The desk is fixed in place. A drawer is part of the desk. The drawer is a closed openable container. The drawer is scenery. The description of the desk is "It's a desk. There are coffee stains and cigarette burns from years of abuse. The single drawer is [if the drawer is open]open[otherwise]shut[end if]."
@@ -652,31 +700,77 @@ The Aqua Door is west of the Maintenance Office and east of the Stocks Room. The
 
 Section 3 - Crawl Space
 
-The Crawl Space is a dark room. The Crawl Space is south of Maintenance Office. "This crawl space is extremely small. You begin to feel claustrophobic in here."
+The Crawl Space is a dark room. The Crawl Space is south of Maintenance Office. "The crawl space beneath the carnival ride is a tight, claustrophobic tunnel shrouded in darkness and filled with the hum of machinery above. The air is stale and heavy, carrying the sharp metallic scent of oil and the faint tang of rust. Every sound is amplified in the confined space—the groaning of steel beams, the clanking of chains, and the rhythmic thrum of motors driving the ride above.
+[paragraph break]
+The ground is uneven, a mix of packed dirt and loose gravel scattered with forgotten tools, scraps of metal, and tangled wires. Overhead, a network of pipes and cables crisscross the space, some wrapped in fraying insulation that crackles faintly as you crawl past. Small puddles of murky water collect in dips on the floor, their surfaces rippling with vibrations from the ride’s movement."
 
 The Crimson Door is west of the Crawl Space and east of the Gallows Room. The Crimson Door is a closed locked door. The description of the Crimson door is "It's an crimson colored door with the word 'Gallows' written on it." The silver key unlocks it.
 
 Section 4 - Mechanical Room North
 
-The Mechanical Room North is a dark room. The Mechanical Room North is south of the Crawl Space. "There is machinery filling the room." The toolbox is a closed openable container in the Mechanical Room North. The toolbox contains the monkey wrench, channel locks, pliers, and a hammer.
+The Mechanical Room North is a dark room. The Mechanical Room North is south of the Crawl Space. "The north mechanical room is smaller and more focused, housing the auxiliary systems that support the ride’s operation. It’s quieter than the south room, though the hum of capacitors and relays creates a constant, low background noise. Rows of electrical panels line the walls, each labeled with functions such as 'Lighting Controls,' 'Brake Systems', and 'Emergency Shutdown'. Smaller cables and conduits run along the walls, connecting these systems to the main hub in the south room.
+[paragraph break]
+In one corner, a hydraulic pump and reservoir control specific mechanisms of the ride, such as lifting arms or rotating platforms. Pressure gauges flicker intermittently, and the occasional hiss of fluid escaping creates a sharp contrast to the otherwise subdued atmosphere. A small generator sits nearby, its housing slightly dented but functional, ready to activate in case of a power failure.
+[paragraph break]
+A compact workbench is tucked against the eastern wall, strewn with tools and coiled wires. Above it, shelves are stacked with neatly labeled replacement parts: fuses, cables, and hydraulic tubing. A faded diagram of the ride’s layout is pinned to the wall nearby, marked with annotations in red ink from previous maintenance efforts.
+[paragraph break]
+The lighting is dimmer here, provided by a single hanging bulb that casts soft shadows across the room. The air feels cooler and slightly damp, with a faint smell of mildew mixing with the metallic tang of the machinery.
+[paragraph break]
+The north mechanical room functions as a support system, ensuring that auxiliary processes run smoothly and that emergency backups are ready to deploy if needed. Though quieter and less imposing than its southern counterpart, it is just as critical to the ride’s overall operation." 
+
+The toolbox is a closed openable container in the Mechanical Room North. The toolbox contains the monkey wrench, channel locks, pliers, and a hammer.
 
 The Emerald Door is west of the Mechanical Room North and east of the Stake Room. The Emerald Door is a closed locked door. The description of the Emerald door is "It's an emerald colored door with the word 'Stake' written on it." The silver key unlocks it.
 
 Section 5 - Mechanical Room South
 
-The Mechanical Room South is a dark room. The Mechanical Room South is south of the Mechanical Room North. "There is machinery filling the room." 
+The Mechanical Room South is a dark room. The Mechanical Room South is south of the Mechanical Room North. "The south mechanical room is the heart of the carnival ride, a large, noisy space where the primary systems are housed. The room is dominated by a massive motor, its rhythmic hum filling the air as it drives the ride’s main mechanics. Thick belts and pulleys extend from the motor to a series of gears and drive shafts, each component working in seamless coordination to power the ride.
+[paragraph break]
+The walls are lined with heavy-duty electrical panels, their surfaces marked with warning labels like 'High Voltage' and 'Do Not Open While Powered'. Bright indicator lights blink in greens and reds, providing a visual heartbeat to the room’s constant activity. Overhead, insulated wires and steel conduits run along the ceiling, their routes clearly labeled but seemingly endless.
+[paragraph break]
+A workbench along one wall is cluttered with tools—wrenches, screwdrivers, and pliers—neatly arranged next to containers of spare parts like bolts, washers, and lubricants. Manuals and maintenance logs sit open, their pages marked with grease-stained fingerprints. The faint smell of oil and metal pervades the air, along with a hint of ozone from the electrical systems.
+[paragraph break]
+A cooling fan whirs in the corner, its blades spinning in a futile attempt to temper the room’s warmth. The sound of chains clinking occasionally breaks through the hum, accompanied by the sharp hiss of hydraulic fluid releasing pressure. The floor is a patchwork of metal grates and concrete, worn smooth in some areas by years of use.
+[paragraph break]
+The south mechanical room is brightly lit, with overhead fluorescent lights encased in protective wire cages. This is the main operations hub, where the power of the ride is generated and controlled, ensuring its thrilling movements stay in sync." 
 
 The Grey Door is west of the Mechanical Room South and east of the Dungeon. The Grey Door is a closed locked door. The description of the Grey door is "It's a grey colored door with the word 'Dungeon' written on it." The silver key unlocks it.
 
 Section 6 - Generator Room
 
-The Generator Room is a dark room. The Generator Room is south of the Mechanical Room South. "There are two massive generators here powering the ride." 
+The Generator Room is a dark room. The Generator Room is south of the Mechanical Room South. "The generator room is a compact, industrial space tucked away from the vibrant chaos of the carnival, where the hum and flicker of electricity are birthed to power the attractions. The walls are constructed of reinforced concrete, their surfaces marked with grime, oil streaks, and the faint outlines of graffiti left by past workers. The room smells of diesel fuel, hot metal, and the faint tang of ozone, mingled with the earthy scent of dampness from the surrounding ground.
+[paragraph break]
+At the center of the room sits the main generator, a hulking, metallic beast of machinery. Its steel casing is scuffed and dented from years of use, though it still functions with a steady, low rumble that resonates through the floor. Thick cables, black and rubberized, extend like veins from the generator to the room’s walls, where they feed into an array of junction boxes and circuit breakers.
+[paragraph break]
+The generator’s control panel is mounted to one side, cluttered with buttons, switches, and gauges. Labels, many peeling or faded, identify each component: 'Fuel Intake', 'Voltage Control', 'Emergency Shutoff'. A small display screen flickers with real-time readouts, showing power levels and load distribution to the various carnival attractions.
+[paragraph break]
+The floor is made of rough, uneven concrete, with small puddles of spilled fuel or condensation pooling in its crevices. Along the walls, shelves are stacked with spare parts—fuel filters, spark plugs, and coils of insulated wire. Tools are scattered on a nearby workbench, alongside a canister of grease and a well-worn maintenance manual.
+[paragraph break]
+The air is thick and warm, vibrating faintly with the generator’s operation. A vent in the corner struggles to extract the heat, its fan spinning with a faint, rhythmic whir. The dim lighting in the room comes from a single industrial bulb encased in a protective cage, casting harsh shadows across the machinery and walls.
+[paragraph break]
+In one corner, a row of diesel fuel canisters stands neatly arranged, their metallic surfaces gleaming under the light. A faded safety poster hangs above them, its message barely legible: 'Fuel Safely—No Open Flames!'
+[paragraph break]
+Despite its utilitarian design, the room carries an air of importance. The generator room is the heartbeat of the carnival, its steady output ensuring that the lights flash, the rides whirl, and the sounds of joy and terror continue uninterrupted. Yet, in its stark isolation, it feels oddly disconnected from the lively world it powers, a quiet reminder of the machinery behind the magic." 
 
 The Indigo Door is west of the Generator Room and east of the Guillotine Room. The Indigo Door is a closed locked door. The description of the Indigo door is "It's a indigo colored door with the word 'Guillotine' written on it." The silver key unlocks it.
 
 Section 7 - Electrical Room
 
-The Electrical Room is a dark room. The Electrical Room is south of the Generator Room. "This room is oozing with electromagnetic energy. You can feel your hair stand on end and all your nerves twitching. This feels dangerous! There are exits in all directions."
+The Electrical Room is a dark room. The Electrical Room is south of the Generator Room. "The electrical room is a compact but vital space, tucked away behind the scenes of the carnival’s bustling attractions. The room hums with a steady, electric energy, the air thick with the scent of overheated wires, metal, and a faint tang of ozone. The walls are lined with metal panels, some polished and sleek, others weathered and streaked with grease from years of operation.
+
+A central breaker panel dominates one wall, its surface covered in a grid of switches and levers, each labeled with destinations like 'Ferris Wheel Lights', 'Carousel Motors', and 'Midway Games'. Bright indicator lights blink sporadically, casting green, yellow, and red glows that reflect off the polished steel surfaces. Overhead, conduits and thick bundles of cables snake across the ceiling, bound together with zip ties and disappearing into the walls to distribute power throughout the carnival.
+
+In one corner of the room, a junction box sits open, its wires spilling out like the veins of the carnival. A maintenance worker’s touch lingers here, with tools scattered on a small workbench nearby: wire cutters, screwdrivers, and spools of electrical tape. A laminated wiring diagram is pinned to the wall above the bench, its corners dog-eared and smudged with greasy fingerprints.
+
+The floor is concrete, its surface marked with scratches, oil stains, and scattered bits of wire clippings. A faint vibration runs through the room, a pulse from the generator in the adjacent space or the distant hum of the carnival rides.
+
+Mounted along another wall is an emergency shutdown panel, painted bright red with a prominent lever labeled 'Master Power Off.' A fire extinguisher hangs nearby, accompanied by a faded safety poster warning about the dangers of electrical fires. Below it, a collection of replacement fuses and circuit boards are neatly arranged on a shelf, ready for use when something inevitably malfunctions.
+
+A small fan sits on the workbench, oscillating weakly to counter the oppressive heat radiating from the machinery. The light in the room comes from bare fluorescent tubes overhead, their cold glow flickering slightly, casting sharp shadows that shift with every movement.
+
+Despite its functionality, the electrical room carries a certain unease. The constant hum of electricity, the flicker of lights, and the sharpness of exposed wires hint at the delicate balance of power keeping the carnival alive. It’s a space where the magic of the midway is stripped bare, revealing the raw energy coursing through its veins.
+
+This room is oozing with electromagnetic energy. You can feel your hair stand on end and all your nerves twitching. This feels dangerous! There are exits in all directions."
 
 [Instead of going from the Electrical Room:
 	move the player to a random adjacent room.]
@@ -695,7 +789,19 @@ The Electrical Closet One is a dark room. The Electrical Closet One is northeast
 
 Section 8 - Storage Room
 
-The Storage Room is a dark room. The Storage Room is south of the Electrical Room.
+The Storage Room is a dark room. The Storage Room is south of the Electrical Room. "The carnival storage room is a chaotic yet oddly functional space, tucked away from the flashing lights and lively crowds. Its walls are made of corrugated metal or weathered wood, with patches of rust and peeling paint revealing the room's age. The faint smell of grease, dust, and damp canvas hangs in the air, mingled with a hint of stale popcorn and cotton candy from the midway outside.
+[paragraph break]
+Shelves line the walls, crammed with a mishmash of supplies. Boxes of lightbulbs, spools of electrical wiring, and stacks of replacement parts for rides and games are piled haphazardly, some labeled in fading marker, others left to mystery. A collection of brightly colored pennant flags and strings of carnival lights dangles from hooks, their wires tangled into an unruly knot.
+[paragraph break]
+In one corner, a pile of folded canvas tarps and tent poles leans precariously against the wall, ready to be deployed for setting up new attractions or repairing existing ones. Nearby, oversized crates are labeled with blocky stencils: 'GAME PRIZES', RIDE PARTS', and 'SPARE SIGNAGE'. One crate is open, revealing a jumble of stuffed animals, rubber balls, and plastic toys meant to delight lucky winners.
+[paragraph break]
+The center of the room is dominated by larger items—spare seats for rides, unassembled game booths, and the occasional disassembled attraction part, like a faded carousel horse or a section of a Ferris wheel’s gondola. These are covered in tarps or wrapped in protective blankets, their surfaces scratched and worn from transport and use.
+[paragraph break]
+A small, battered desk sits near the entrance, cluttered with maintenance logs, mismatched tools, and a few empty coffee cups. Above it, a corkboard displays a chaotic array of pinned notes: ride schedules, repair requests, and a map of the carnival grounds with certain areas circled in red. A single fluorescent light flickers overhead, casting uneven shadows across the room and giving it a slightly eerie feel.
+[paragraph break]
+The floor is a patchwork of concrete and dirt, strewn with stray bolts, screws, and scraps of paper. In the darker corners, the scuttling of a rat or the glint of a spider’s web serves as a reminder that this space, while essential, is far from pristine.
+[paragraph break]
+The carnival storage room is not glamorous, but it is vital—a hidden world of spare parts, forgotten treasures, and organized chaos that keeps the carnival running smoothly. It’s a backstage glimpse into the hard work and improvisation that make the magic possible."
 
 The Khaki Door is west of the Storage Room and east of the Ride Exit. The Khaki Door is a closed locked door. The description of the Khaki door is "It's a khaki colored door with the word 'Ride Exit' written on it." The silver key unlocks it.
 
