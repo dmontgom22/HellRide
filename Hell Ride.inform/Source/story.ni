@@ -29,7 +29,7 @@ Use scoring.
 Use American Dialect.
 Use serial comma.
 Use maximum things understood at once of at least 200.
-The maximum score is 75.
+The maximum score is 80.
 The block giving rule is not listed in the check giving it to rules.
 
 Chapter 2 - New Mechanics, Actions, Phrases
@@ -219,10 +219,17 @@ Section 5 - Miscellaneous
 
 Test Misc with "brief / get blueberries / xyzzy / hello sailor / please get the dime".
 
+[seen or unseen for adaptive test]
 A thing can be seen or unseen.
 
 Carry out examining a thing:
 	now the noun is seen.
+	
+[scored rooms]
+A room can be scored or unscored.
+
+Carry out going to a unvisited scored room:
+	increase the score by 5.
 
 
 Section 6 - Hello Sailor
@@ -250,13 +257,6 @@ Casting xyzzy is an action applying to nothing.
 
 Carry out casting xyzzy:
 	say "A voice nearby says 'Plugh'."
-	
-Section 8 - Scored Rooms
-
-A room can be scored or unscored.
-
-Carry out going to a unvisited scored room:
-	increase the score by 5.
 	
 Chapter 3- The Player
 
@@ -291,7 +291,7 @@ Figure of HellRideEntrance is the file "RideEntrance.png".
 
 Sound of Strongman Bell is the file "StrongmanBell.ogg".
 
-Chapter 5 - Testing descriptions - Not for release
+Chapter 5 - Testing For Empty Descriptions - Not for release
 
 [When play begins (this is the run property checks at the start of play rule):
 	repeat with item running through things:
@@ -307,7 +307,7 @@ Section 1 - Parking Lot
 Test Me with "brief / Test Egypt /  Test Concession / Test Striker / Test Backstage / Test Misc / Test Ride".
 
 When play begins:
-	seed the random-number generator with 1234; [BUGBUG set to 0]
+	seed the random-number generator with 0; [BUGBUG set to 0]
 	display the figure of Hell Ride;
 	say "The carnival is in town and you had a date with your sweetie to visit it. After dinner and just as you arrive at the carnival, you and your date have a terrible fight. They storm off leaving you alone at the carnival. You decide to stay at the carnival anyway."
 
@@ -437,7 +437,12 @@ The markings are here. The markings are scenery. Understand "marking" and "sign"
 
 The Strongman Attendant is here. The description of the Strongman Attendant is "An Attendant is standing here [if strongman attendant is carrying the mallet]holding a mallet[end if]." 
 
-The Strongman Attendant carries the teddy bear, a Swiss army knife, and a poster of Taylor Swift, and the mallet. The description of the teddy bear is "This is a teddy bear like you had when you were a kid. Right down to the red bow around its neck." The Swiss Army knife is a container. The Swiss Army knife contains a screwdriver, an awl, fingernail clippers, can opener, and corkscrew. The description of the Swiss army knife is "This is the standard issue Swiss Army knife with all the expected gadgets." The description of the poster of Taylor Swift is "This is a poster of America's sweetheart, Taylor Swift."
+The Strongman Attendant carries the teddy bear, a Swiss army knife, and a poster of Taylor Swift, and the mallet. The description of the teddy bear is "This is a teddy bear like you had when you were a kid. Right down to the red bow around its neck." The Swiss Army knife is a container. 
+
+The screwdriver is part of the knife. The awl is a part of the knife. The fingernail clippers is a part of the knife. The can opener is part of the knife. The corkscrew is part of the knife.
+
+
+[The Swiss Army knife contains a screwdriver, an awl, fingernail clippers, can opener, and corkscrew.] The description of the Swiss army knife is "This is the standard issue Swiss Army knife with all the expected gadgets." The description of the poster of Taylor Swift is "This is a poster of America's sweetheart, Taylor Swift."
 
 The lever is here. The lever is fixed in place. Understand "bullseye" and "target" as lever. The description of the lever is "There is a bullseye on the base. I guess this is where you have to aim the mallet."
 
@@ -458,24 +463,24 @@ Carry out hitting when the player is carrying the mallet:
 After hitting the lever when second noun is the mallet 5 times :
 	play the sound of Strongman Bell;
 	say "You swing the mallet one more time. The bell rings as the striker reaches the top of the pole. The attendant says, 'You[']re a Muscle Man. Here's a prize for you.'";
-	say "Which prize would you like? 1) The stuffed teddy bear, 2) the Swiss Army knife, or 3) the poster of Taylor Swift?".
+	say "Which prize would you like? 1) A stuffed teddy bear, 2) A Swiss Army knife, or 3) A poster of Taylor Swift?".
 	
 after Reading a command :
-	if the player's command matches "1" and the location is the high striker:
-		say "You are now holding a cute little teddy bear.";
+	if the player's command matches "1" and the location is the high striker and the player is not carrying the teddy bear and the player is not carrying the swiss army knife and the player is not carrying the poster of taylor swift:
 		increase score by 5;
+		say "You are now holding a cute little teddy bear.";
 		now the player carries the teddy bear;
 		reject the player's command.
 		
 after Reading a command:
-	if the player's command matches "2" and the location is the high striker:
+	if the player's command matches "2" and the location is the high striker and the player is not carrying the teddy bear and the player is not carrying the swiss army knife and the player is not carrying the poster of taylor swift:
 		say "You are now holding a Swiss Army knife.";
 		increase score by 5;
 		now the player carries the Swiss army knife;
 		reject the player's command.
 		
 after Reading a command:
-	if the player's command matches "3" and the location is the high striker:
+	if the player's command matches "3" and the location is the high striker and the player is not carrying the teddy bear and the player is not carrying the swiss army knife and the player is not carrying the poster of taylor swift:
 		say "You are now holding a poster of Taylor Swift.";
 		increase score by 5;
 		now the player carries the poster of taylor swift;
@@ -666,7 +671,7 @@ The tension in the square is palpable as the crier steps aside and the execution
 
 As the condemned is led toward the guillotine, a crow caws from a nearby rooftop, its harsh cry echoing through the square like a dark omen. The crowd leans forward, holding its collective breath, as the weight of justice and mortality descends upon the scene. 
 
-There is just lone problem: the guillotine is being raised and lowered by some mechanism. It appears that the timing of the guillotine is off and it is being lowered onto the cars instead of between them. If a person were to be in a car as it passed under the guillotine, they would be decapitated.
+There is just one problem: the guillotine is being raised and lowered by some mechanism. It appears that the timing of the guillotine is off and it is being lowered onto the cars instead of between them. If a person were to be in a car as it passed under the guillotine, they would be decapitated.
 
 Looks like your goose is cooked. Say 'Goodnight, Gracie!"
 
@@ -703,7 +708,7 @@ Above it all, the gray sky looms, heavy with the promise of rain, as if nature i
 
 The wooden stocks are here. The wooden stocks are a supporter. The wooden stocks are fixed in place. The description of the wooden stocks is "At the square's center stand a row of crude wooden stocks, their heavy beams stained from years of weather and use. Iron clasps hold the unfortunate captives by their wrists and necks, their bodies forced into unnatural, humiliating postures." 
 
-The Aqua Fuse is scenery in the Stocks Room. The Aqua Fuse underlies the wooden stocks. The aqua fuse can be found or lost. The aqua fuse is lost. The description of the aqua fuse is "This is an electrical fuse. It is aqua colored. The same as the door."
+The Aqua Fuse is scenery in the Stocks Room. The Aqua Fuse underlies the wooden stocks. The aqua fuse can be found or lost. The aqua fuse is lost. The description of the aqua fuse is "This is an electrical fuse. It is aqua colored. The same color as the door."
 
 Instead of looking under a thing which is underlaid by something (called the lost object):
 	say "You find [the list of things which underlie the noun]!";
@@ -750,7 +755,7 @@ The executioner steps forward, adjusting the noose around the man’s neck with 
 
 The gallows platform is here. The gallows platform is a supporter. The gallows platform is fixed in place. Understand "gallows" as gallows platform. The description of the gallows platform is "At the center of the square, rising like a grim monument to mortality, stands the gallows—a wooden platform, darkened by age and weather, with thick ropes hanging like vipers poised to strike." 
 
-The Crimson Fuse is scenery in the Gallows Room. The Crimson Fuse underlies the gallows platform. The crimson fuse can be found or lost. The crimson fuse is lost. The description of the crimson fuse is "This is an electrical fuse. It is crimson colored. The same as the door."
+The Crimson Fuse is scenery in the Gallows Room. The Crimson Fuse underlies the gallows platform. The crimson fuse can be found or lost. The crimson fuse is lost. The description of the crimson fuse is "This is an electrical fuse. It is crimson colored. The same color as the door."
 
 Section 4 - Stake Room
 
@@ -766,9 +771,9 @@ Above, the gray clouds hang low, as if nature itself mourns the scene unfolding 
 
 As the flames consume the pyre, the crowd remains rooted, some transfixed by the spectacle, others quietly slipping away, their faces pale and drawn. The square, once a place of gatherings and life, is now a stage for death, its air heavy with smoke, ash, and the lingering cries of the condemned."
 
-The pyre is scenery in the Stake Room. The pyre is a container. understand "bonfire" and "fire" as the pyre. The description of the pyre is "At the center, three wooden stakes rise ominously from a circular pyre of logs and kindling, their rough surfaces darkened by smoke from countless such scenes before. Bound tightly to these stakes are three women, their wrists and ankles secured with coarse, heavy ropes. Their faces tell different stories—one of defiance, another of resignation, and the third of pure terror." 
+The pyre is scenery in the Stake Room. The pyre is a container. understand "bonfire", "fire", "stake", "stakes", "flame", and "flames" as the pyre. The description of the pyre is "At the center, three wooden stakes rise ominously from a circular pyre of logs and kindling, their rough surfaces darkened by smoke from countless such scenes before. Bound tightly to these stakes are three women, their wrists and ankles secured with coarse, heavy ropes. Their faces tell different stories—one of defiance, another of resignation, and the third of pure terror." 
 
-The Emerald Fuse is in the pyre. The emerald fuse can be found or lost. The emerald fuse is lost. The description of the emerald fuse is "This is an electrical fuse. It is emerald colored. The same as the door."
+The Emerald Fuse is in the pyre. The emerald fuse can be found or lost. The emerald fuse is lost. The description of the emerald fuse is "This is an electrical fuse. It is emerald colored. The same color as the door where you found it."
 
 Section 5 - Dungeon
 
@@ -788,7 +793,7 @@ This is a place of despair and cruelty, where the line between life and death is
 
 The iron seat is scenery in the Dungeon. The description of the iron seat is "A spiked chair looms in the corner, its cruel design gleaming faintly in the dim light." 
 
-The Grey Fuse underlies the iron seat. The grey fuse can be found or lost. The grey fuse is lost. The description of the grey fuse is "This is an electrical fuse. It is grey colored. The same as the door."
+The Grey Fuse underlies the iron seat. The grey fuse can be found or lost. The grey fuse is lost. The description of the grey fuse is "This is an electrical fuse. It is grey colored. The same color as the door where you found it."
 	
 Section 6 - Guillotine Room
 
@@ -810,7 +815,7 @@ There is just lone problem: the guillotine is being raised and lowered by some m
 
 The guillotine platform is here. The guillotine platform is a supporter. Understand "scaffold" as guillotine platform. The description of the guillotine platform is "At the center of the square stands a raised wooden platform, stark and imposing, where the grim sentence is to be carried out." 
 
-The Indigo Fuse is scenery in the Guillotine Room. The Indigo Fuse underlies the guillotine platform. The indigo fuse can be found or lost. The indigo fuse is lost. The description of the indigo fuse is "This is an electrical fuse. It is indigo colored. The same as the door."
+The Indigo Fuse is scenery in the Guillotine Room. The Indigo Fuse underlies the guillotine platform. The indigo fuse can be found or lost. The indigo fuse is lost. The description of the indigo fuse is "This is an electrical fuse. It is indigo colored. The same color as the door where you found it."
 	
 Section 7 - Ride Exit
 
@@ -830,7 +835,7 @@ The Hell Ride exit leaves riders not just thrilled, but marked by the eerie expe
 
 The merchandise stand is scenery in the Ride Exit. The merchandise stand is a container. Understand "stand" as merchandise. The description of the merchandise is "The stand is bathed in red light, adding to the ominous mood." 
 
-The Khaki Fuse is in the merchandise stand. The Khaki Fuse underlies the merchandise stand. The khaki fuse can be found or lost. The khaki fuse is lost. The description of the khaki fuse is "This is an electrical fuse. It is khaki colored. The same as the door."
+The Khaki Fuse is in the merchandise stand. The Khaki Fuse underlies the merchandise stand. The khaki fuse can be found or lost. The khaki fuse is lost. The description of the khaki fuse is "This is an electrical fuse. It is khaki colored. The same color as the door where you found it."
 
 Chapter 3 - Backstage
 
@@ -908,7 +913,7 @@ The lighting is dimmer here, provided by a single hanging bulb that casts soft s
 
 The north mechanical room functions as a support system, ensuring that auxiliary processes run smoothly and that emergency backups are ready to deploy if needed. Though quieter and less imposing than its southern counterpart, it is just as critical to the ride’s overall operation." 
 
-The toolbox is a closed openable container in the Mechanical Room North. The toolbox contains the monkey wrench, channel locks, pliers, and a hammer.
+The toolbox is a closed openable container in the Mechanical Room North. The toolbox contains a monkey wrench, a channel locks, pliers, and a hammer.
 
 The Emerald Door is west of the Mechanical Room North and east of the Stake Room. The Emerald Door is a closed locked door. The description of the Emerald door is "It's an emerald colored door with the word 'Stake' written on it." The silver key unlocks it.
 
@@ -952,7 +957,7 @@ A central breaker panel dominates one wall, its surface covered in a grid of swi
 
 In one corner of the room, a junction box sits open, its wires spilling out like the veins of the carnival. A maintenance worker’s touch lingers here, with tools scattered on a small workbench nearby: wire cutters, screwdrivers, and spools of electrical tape. A laminated wiring diagram is pinned to the wall above the bench, its corners dog-eared and smudged with greasy fingerprints.
 
-The floor is concrete, its surface marked with scratches, oil stains, and scattered bits of wire clippings. A faint vibration runs through the room, a pulse from the generator in the adjacent space or the distant hum of the carnival rides.
+The floor is dirt, its surface marked with scratches, oil stains, and scattered bits of wire clippings. A faint vibration runs through the room, a pulse from the generator in the adjacent space or the distant hum of the carnival rides.
 
 Mounted along another wall is an emergency shutdown panel, painted bright red with a prominent lever labeled 'Master Power Off.' A fire extinguisher hangs nearby, accompanied by a faded safety poster warning about the dangers of electrical fires. Below it, a collection of replacement fuses and circuit boards are neatly arranged on a shelf, ready for use when something inevitably malfunctions.
 
@@ -965,9 +970,8 @@ This room is oozing with electromagnetic energy. You can feel your hair stand on
 [BUGBUG Uncomment before release]
 [Instead of going from the Electrical Room:
 	move the player to a random adjacent room.]
-
-[Electrical Closet Eleven]	
-The Electrical Closet Eleven is a dark room. The Electrical Room Eleven is northwest of the Electrical Room. "You are in a section of the electrical room. There is an electrical panel here. There is an exit to the south east." 
+	
+The Electrical Closet Eleven is a dark room. The Electrical Closet Eleven is northwest of the Electrical Room. "You are in a section of the electrical room. There is an electrical panel here. There is an exit to the south east." 
 
 Electrical Panel Eleven is a closed openable container in Electrical Closet Eleven. Electrical Panel Eleven is scenery. The printed name of Electrical Panel Eleven is "the electrical panel". Understand "panels" as panel. The description is "This is a standard issue 200 amp electrical panel supplying 220 power throughout the ride. The electrical panel is [if Electrical Panel Eleven is open]open[otherwise]closed[end if]." 
 
@@ -1058,10 +1062,24 @@ The carnival storage room is not glamorous, but it is vital—a hidden world of 
 
 The Khaki Door is west of the Storage Room and east of the Ride Exit. The Khaki Door is a closed locked door. The description of the Khaki door is "It's a khaki colored door with the word 'Ride Exit' written on it." The silver key unlocks it.
 
+Chapter 4 - Second Floor
+
+Section 1 - Dark Hallway
+
+Dark Hallway is a dark room. It is up from the Electrical Room. 
+	
+Section 2 - Control Room
+
+Control Room is a dark room. The Control Room is west of the Dark Hallway. "You are in what is obviously a control room of some sort control room. There are panels and boards and benches with dials and levers and and buttons. There is an exit down from here." 
+
+
 Part 3 Regions
 
 The Midway is a region. Parking Lot, Kiosk, Concession Stand, High Striker, Show Facade, Show Tent, and Head of the Line are in the Midway;
 
 HellRide is a region. Ride Entrance, Stocks Room, Gallows Room, Stake Room, Dungeon, Guillotine Room, Ride Exit is in HellRide.
 
-Backstage is a region. Passage, Maintenance Office, Crawl Space, Mechanical Room North, Mechanical Room South, Generator Room, Electrical Room, Electrical Closet One, Electrical Closet Three, Electrical Closet Five, Electrical Closet Seven, Electrical Closet Nine, Electrical Closet Eleven, and Storage Room is in Backstage.
+Backstage is a region. Passage, Maintenance Office, Crawl Space, Mechanical Room North, Mechanical Room South, Generator Room, Electrical Room, Electrical Closet One, Electrical Closet Three, Electrical Closet Five, Electrical Closet Seven, Electrical Closet Nine, Electrical Closet Eleven, Storage Room are in Backstage.
+
+Second Floor is a region. Dark Hallway, and Control Room are in the Second Floor.
+
