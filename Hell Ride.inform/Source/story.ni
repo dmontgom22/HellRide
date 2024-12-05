@@ -29,7 +29,7 @@ Use scoring.
 Use American Dialect.
 Use serial comma.
 Use maximum things understood at once of at least 200.
-The maximum score is 50.
+The maximum score is 75.
 The block giving rule is not listed in the check giving it to rules.
 
 Chapter 2 - New Mechanics, Actions, Phrases
@@ -217,7 +217,7 @@ Before printing the name of an unlit lit electric lamp, say "extinguished ".
 	
 Section 5 - Miscellaneous
 
-Test Misc with "get blueberries / xyzzy / hello sailor / please get the dime".
+Test Misc with "brief / get blueberries / xyzzy / hello sailor / please get the dime".
 
 A thing can be seen or unseen.
 
@@ -304,7 +304,7 @@ Chapter 1 - The Midway
 
 Section 1 - Parking Lot
 
-Test Me with "Test Egypt /  Test Concession / Test Striker / Test Backstage / Test Misc / Test Ride".
+Test Me with "brief / Test Egypt /  Test Concession / Test Striker / Test Backstage / Test Misc / Test Ride".
 
 When play begins:
 	seed the random-number generator with 1234; [BUGBUG set to 0]
@@ -312,17 +312,17 @@ When play begins:
 	say "The carnival is in town and you had a date with your sweetie to visit it. After dinner and just as you arrive at the carnival, you and your date have a terrible fight. They storm off leaving you alone at the carnival. You decide to stay at the carnival anyway."
 
 The Parking Lot is a room. The parking lot is north of the Kiosk. "The carnival parking lot sprawls across an open field, its uneven gravel surface crunching under the tires of arriving cars. The lot is lit by a mix of temporary floodlights mounted on poles and the colorful glow of the carnival itself, which spills across the area in flashes of red, blue, and gold. The distant sounds of laughter, music, and the mechanical whir of rides drift across the lot, creating an air of excitement even before reaching the main grounds.
-[paragraph break]
+
 Rows of vehicles, from dusty sedans to pickup trucks with weathered paint, are parked haphazardly, guided by makeshift wooden signs and strings of flags fluttering in the breeze. Some families unload children, strollers, and blankets from their cars, their voices mingling with the distant carnival noise. Others sit in their vehicles, adjusting their jackets and preparing for the chilly evening ahead.
-[paragraph break]
+
 The edges of the lot are lined with trees and bushes, their shadows stretching across the ground, creating pockets of darkness. The occasional glow of a phone screen or flashlight pierces the dim corners as latecomers search for empty spots. Near the entrance, a weathered booth manned by a lone attendant collects parking fees, the cash box jingling with loose change.
-[paragraph break]
+
 Puddles from a recent rain reflect the flashing carnival lights, creating a surreal, shimmering effect on the ground. The smell of damp earth mixes with the distant aroma of popcorn and funnel cakes wafting from the midway. In some areas, patches of mud threaten to swallow unwary shoes, marked by the faint tread of earlier visitors.
-[paragraph break]
+
 At the far end of the lot, a handful of RVs and trailers are parked, their occupants relaxing in folding chairs, watching the lights of the Ferris wheel spin lazily against the night sky. Generators hum softly, providing power to the trailers, a subtle background noise beneath the larger symphony of the carnival.
-[paragraph break]
+
 The parking lot, while utilitarian, is alive with anticipation, serving as the gateway to the magic of the carnival. It’s a place of transition, where the mundane gives way to the extraordinary, and the humdrum rhythms of daily life are momentarily forgotten.
-[paragraph break]
+
 The midway is to the south. There is a blueberry bush here. [if blueberry bush contains blueberries]There are blueberries on the bush[otherwise]The bush has been picked clean.[end if]"
 
 Cars is here. cars is scenery. Understand "car" as cars. The description of cars is "There are all kinds of vehicles in the parking lot."
@@ -344,17 +344,17 @@ Before looking when the location is the Kiosk:
 	display Figure of TicketBooth.
 
 The kiosk is a room. The kiosk is north of Head of the Line. The kiosk is east of the Show Facade. The kiosk is west of High Striker. The kiosk is northeast of the Concession Stand. The kiosk is south of the Parking Lot. "The ticket kiosk stands at the entrance to the carnival, a small but colorful booth designed to catch the eye and set the tone for the excitement ahead. Its exterior is painted in bright red and yellow stripes, with bold, blocky letters above the window that read 'Tickets Here!' Strings of twinkling lights outline the edges, blinking in rhythmic patterns to draw attention.
-[paragraph break]
-The kiosk is compact, with a single window where a smiling attendant greets visitors. Behind the glass, rows of ticket rolls in vibrant colors—blue, red, and yellow—are neatly arranged in dispensers. A small cash drawer sits open beside them, jingling softly as the attendant counts out change. To the side of the window, a digital payment system is set up for those who prefer modern convenience, its screen glowing faintly in the dim light.
-[paragraph break]
+
+The kiosk is compact, with a single window where a smiling attendant greets visitors. Behind the glass, rows of ticket rolls in vibrant colors — blue, red, and yellow — are neatly arranged in dispensers. A small cash drawer sits open beside them, jingling softly as the attendant counts out change. To the side of the window, a digital payment system is set up for those who prefer modern convenience, its screen glowing faintly in the dim light.
+
 A colorful signboard is propped up next to the kiosk, listing ticket prices for rides, games, and attractions. At the top, in bold letters, it reads: 'Step Right Up! Your Adventure Awaits!' Below, the list of options is accompanied by playful illustrations of roller coasters, Ferris wheels, and cotton candy.
-[paragraph break]
+
 The kiosk roof juts out slightly, providing shelter to visitors during rain or shine. Bright pennant flags are strung from the corners of the roof to nearby poles, fluttering in the breeze and adding to the festive atmosphere. The smell of popcorn and fried dough wafts through the air, carried over from nearby food stalls.
-[paragraph break]
+
 The ground around the kiosk is well-trodden, with patches of worn grass and compacted dirt revealing the heavy foot traffic of eager carnival-goers. A line of families, couples, and groups of friends forms in front of the kiosk, buzzing with excitement as they wait their turn to purchase tickets.
-[paragraph break]
+
 The ticket kiosk is more than just a point of entry—it’s the first step into the carnival’s magic, where anticipation builds and the promise of thrills and wonders begins to take shape.
-[paragraph break]
+
 The midway continues east and west from here. There is a concession stand to the south west. There is a cashier here. [if cashier has the hell ride ticket]The Cashier has a Hell Ride ticket.[end if]."
 
 The Hell Ride ticket is a thing. The price of the Hell Ride ticket is $2.50. The description of the Hell Ride ticket is "This Hell Ride ticket will 'Admit One' to the Hell Ride.[line break]It[']s a real 'E' ticket, baby!"
@@ -368,7 +368,7 @@ After buying the hell ride ticket:
 
 Section 3 - Concession Stand
 
-Test Concession with "get blueberries / s / sw / l at treats / read menu / buy cola / buy popcorn / buy candy apple / buy cotton candy / buy pretzel / inventory / drink soda / g / g / g / g / i / ne / n".
+Test Concession with "brief / get blueberries / s / sw / l at treats / read menu / buy cola / buy popcorn / buy candy apple / buy cotton candy / buy pretzel / inventory / drink soda / g / g / g / g / i / ne / n".
 
 Before going southwest when the location is the kiosk and the Concession Stand is unvisited:
 	display Figure of ConcessionStand.
@@ -377,17 +377,17 @@ Before looking when the location is the Concession Stand:
 	display Figure of ConcessionStand.
 
 The Concession Stand is a room. "The concession stand is a vibrant, bustling hub of activity, perched along the midway with its enticing smells and bright signage luring carnival-goers. The booth is painted in cheerful, primary colors—reds, blues, and yellows—with bold lettering across the top that proclaims: 'SODA! POPCORN! CANDY APPLES! COTTON CANDY! PRETZELS!' Strings of tiny, twinkling lights frame the stand, casting a warm glow that makes it stand out even in the carnival’s dazzling atmosphere.
-[paragraph break]
+
 Behind the counter, the scene is a whirlwind of movement. A large popcorn machine sits to one side, its glass case fogged up with heat as golden kernels tumble and pop inside, filling the air with their buttery aroma. Nearby, a spinning rack of candy apples gleams under the lights, their glossy red coatings catching every glimmer. Cotton candy machines whirl on the opposite side, their sugary strands forming fluffy clouds of pink and blue, ready to be twirled onto paper cones.
-[paragraph break]
+
 Stacks of soft pretzels sit under a heat lamp, their golden-brown surfaces glistening with melted butter and coarse salt. Warm, doughy scents mingle with the sugary sweetness of the candy apples and cotton candy, creating an irresistible combination. Ice-cold sodas are arranged in a cooler behind the counter, their colorful labels visible through the condensation on the glass door.
-[paragraph break]
-The countertop is a cheerful chaos of activity. Paper bags and napkins are stacked neatly in one corner, alongside small cups of nacho cheese for pretzels and sugar sprinkles for cotton candy. A handwritten menu board leans against the front of the stand, listing prices in playful chalk lettering.
-[paragraph break]
+
+The counter top is a cheerful chaos of activity. Paper bags and napkins are stacked neatly in one corner, alongside small cups of nacho cheese for pretzels and sugar sprinkles for cotton candy. A handwritten menu board leans against the front of the stand, listing prices in playful chalk lettering.
+
 The workers, wearing brightly colored aprons and matching hats, move quickly and efficiently, handing out snacks to eager customers. Behind them, shelves are stocked with supplies: bags of popcorn kernels, bottles of soda syrup, and tubs of pretzel dough, ready to keep the stand running all night.
-[paragraph break]
-In front of the stand, the crowd is lively and animated. Children tug at their parents’ sleeves, pointing at the spinning cotton candy or the shiny candy apples. Teens laugh and chat as they sip sodas and share buttery pretzels. The stand is not just a place to grab a quick snack—it’s a sensory experience that enhances the carnival’s magic, offering a delicious pause amid the excitement.
-[paragraph break]
+
+In front of the stand, the crowd is lively and animated. Children tug at their parents’ sleeves, pointing at the spinning cotton candy or the shiny candy apples. Teens laugh and chat as they sip sodas and share buttery pretzels. The stand is not just a place to grab a quick snack—it’s a sensory experience that enhances the carnival’s magic, offering a delicious pause amid the excitement. 
+
 There is a menu to the right of the window. You can see the treats inside the stand."
 
 treats is here. Treats is scenery. Understand "treat" as treats. The description of treats is "There are a variety of things to eat here."
@@ -413,7 +413,7 @@ Instead of player drinking a fluid container:
 
 A bucket of popcorn is here. The bucket of popcorn is edible. The price of popcorn is $2.50. The description of the popcorn is "The bucket of popcorn looks enormous!"
 
-A candy apple is here. The candy apple is edible. The price of a candy apple is $1.50. The description of the candy apple is "The candy apple is your typical carmel covered apple. It looks like it would get stuck in your teeth."
+A candy apple is here. The candy apple is edible. The price of a candy apple is $1.50. The description of the candy apple is "The candy apple is your typical caramel covered apple. It looks like it would get stuck in your teeth."
 
 Cotton candy is here. Cotton candy is edible. The price of cotton candy is $1.50. The description of cotton candy is "The cotton candy is a mixture of pink and blue floss."
 
@@ -421,7 +421,7 @@ A soft pretzel is here. The soft pretzel is edible. The price of the soft pretze
 
 Section 4 - High Striker
 
-Test Striker with "get blueberries / s / e / buy mallet / hit lever with mallet / g / g / g / g / 2 / w / n".
+Test Striker with "brief / get blueberries / s / e / buy mallet / hit lever with mallet / g / g / g / g / 2 / w / n".
 
 Before going east when the location is the kiosk and the High Striker is unvisited:
 	display Figure of HighStriker.
@@ -429,17 +429,19 @@ Before going east when the location is the kiosk and the High Striker is unvisit
 Before looking when the location is the High Striker:
 	display Figure of HighStriker.
 
-The High Striker is a room. "This area features a tall, eye-catching machine adorned with bright, colorful lights, typically red, yellow, and blue. A large sign at the top reads 'Test Your Strength!' in bold, playful lettering. The machine’s base is made of polished wood, with a polished, vintage appearance. At the center is a sturdy metal pole, with a large bell hanging at the top, signaling when a successful attempt has been made. Along the length of the pole are markings indicating how strong you are.  A nearby sign says, 'Buy a mallet, strike the bell, win a prize.'[if the strongman attendent contains the mallet] You can see an over-sized mallet here.[end if][paragraph break]Spectators gather around, cheering on participants and offering lighthearted jabs and encouragement, creating a lively, competitive atmosphere. The sound of the mallet hitting the target is followed by the resonant clang of the bell (if struck), alongside the buzz of carnival music in the background."
+The High Striker is a room. "This area features a tall, eye-catching machine adorned with bright, colorful lights, typically red, yellow, and blue. A large sign at the top reads 'Test Your Strength!' in bold, playful lettering. The machine’s base is made of polished wood, with a polished, vintage appearance. At the center is a sturdy metal pole, with a large bell hanging at the top, signaling when a successful attempt has been made. Along the length of the pole are markings indicating how strong you are.  A nearby sign says, 'Buy a mallet, strike the bell, win a prize.'[if the strongman attendant contains the mallet] You can see an over-sized mallet here.[end if]
 
-The markings are here. The markings are scenery. Understand "marking" and "sign" and "signs" as markings. The description of markings is "There are five levels marked on the pole: Weakling, Getting There, Average, Almost Theee, and Muscle Man."
+Spectators gather around, cheering on participants and offering lighthearted jabs and encouragement, creating a lively, competitive atmosphere. The sound of the mallet hitting the target is followed by the resonant clang of the bell (if struck), alongside the buzz of carnival music in the background."
 
-The Strongman Attendent is here. The description of the Strongman Attendent is "An Attendent is standing here [if strongman attendent is carrying the mallet]holding a mallet[end if]." 
+The markings are here. The markings are scenery. Understand "marking" and "sign" and "signs" as markings. The description of markings is "There are five levels marked on the pole: Weakling, Getting There, Average, Almost There, and Muscle Man."
 
-The Strongman Attendent carries the teddy bear, a swiss army knife, and a poster of Taylor Swift, and the mallet. The description of the teddy bear is "This is a teddy bear like you had when you were a kid. Right down to the red bow around its neck." The Swiss Army knife is a container. The Swiss Army knife contains a screwdriver, an awl, fingernail clippers, can opener, and corkscrew. The description of the swiss army knife is "This is the standard issue Swss Army knife with all the expected gadgets." The description of the poster of Taylor Swift is "This is a poster of America's swwetheart, Taylor Swift."
+The Strongman Attendant is here. The description of the Strongman Attendant is "An Attendant is standing here [if strongman attendant is carrying the mallet]holding a mallet[end if]." 
+
+The Strongman Attendant carries the teddy bear, a Swiss army knife, and a poster of Taylor Swift, and the mallet. The description of the teddy bear is "This is a teddy bear like you had when you were a kid. Right down to the red bow around its neck." The Swiss Army knife is a container. The Swiss Army knife contains a screwdriver, an awl, fingernail clippers, can opener, and corkscrew. The description of the Swiss army knife is "This is the standard issue Swiss Army knife with all the expected gadgets." The description of the poster of Taylor Swift is "This is a poster of America's sweetheart, Taylor Swift."
 
 The lever is here. The lever is fixed in place. Understand "bullseye" and "target" as lever. The description of the lever is "There is a bullseye on the base. I guess this is where you have to aim the mallet."
 
-The mallet is carried by the Strongman Attendent.  The Price of the mallet is $2.00. Understand "hammer" as mallet. The description of the mallet is "The mallet is over sized, perhaps to give you an advantage in the Strong Man game."
+The mallet is carried by the Strongman Attendant.  The Price of the mallet is $2.00. Understand "hammer" as mallet. The description of the mallet is "The mallet is over sized, perhaps to give you an advantage in the Strong Man game."
 
 A strength pattern is a kind of value. The strength patterns are Weakling, Getting Stronger, Average, Almost There, Muscle Man.
 
@@ -455,7 +457,7 @@ Carry out hitting when the player is carrying the mallet:
 	
 After hitting the lever when second noun is the mallet 5 times :
 	play the sound of Strongman Bell;
-	say "You swing the mallet one more time. The bell rings as the striker reaches the top of the pole. The attendent says, 'You[']re a Muscle Man. Here's a prize for you.'";
+	say "You swing the mallet one more time. The bell rings as the striker reaches the top of the pole. The attendant says, 'You[']re a Muscle Man. Here's a prize for you.'";
 	say "Which prize would you like? 1) The stuffed teddy bear, 2) the Swiss Army knife, or 3) the poster of Taylor Swift?".
 	
 after Reading a command :
@@ -469,7 +471,7 @@ after Reading a command:
 	if the player's command matches "2" and the location is the high striker:
 		say "You are now holding a Swiss Army knife.";
 		increase score by 5;
-		now the player carries the swiss army knife;
+		now the player carries the Swiss army knife;
 		reject the player's command.
 		
 after Reading a command:
@@ -487,9 +489,15 @@ Before going west when the location is the kiosk and the Show Facade is unvisite
 Before looking when the location is the Show Facade:
 	display Figure of LittleEgyptFacade.
 
-Show Facade is a room. Show Facade is east of Show Tent. "[if location is unvisited]You head west through the midway, the bright lights of the carnival fading behind you as you approach a wooden booth. A sign above the entrance reads 'Little Egypt Show – A Journey Into the Mysterious and Exotic!' A rotund attendent, wearing a fez and a dazzling smile, gestures to a small sign beside him that says 'Dime Admission.'[paragraph break][end if] You are standing in front of a dark and mysterious tent filled with illusions and exotic performers. Perhaps there’s a fortune teller inside, offering cryptic clues about the player's journey or a hidden artifact that can be collected. There is a stage in front of the tent. The Barker is encouraging you to step up, pay for, and enjoy the Little Egypt Show.[if location is unvisited]The barker cries: [paragraph break]Ladies and gentlemen, boys and girls, gather 'round! [line break]Step right up and witness the spectacle that’s taken the world by storm! [line break]She walks, she talks, she crawls on her belly like a reptile. [line break]Behold the one, the only Little Egypt, performing her legendary Dance of the Pyramids—a dazzling display of mystery, grace, and exotic allure! [line break]For just a dime, a mere one tenth of a dollar, prepare to be transported to the sands of Cairo, where enchantment and wonder await![end if]"
+Show Facade is a room. Show Facade is east of Show Tent. "[if location is unvisited]You head west through the midway, the bright lights of the carnival fading behind you as you approach a wooden booth. A sign above the entrance reads 'Little Egypt Show – A Journey Into the Mysterious and Exotic!' A rotund attendant, wearing a fez and a dazzling smile, gestures to a small sign beside him that says 'Dime Admission.'[end if] 
 
-The Barker is a person in Show Facade. The description of the barker is "Here is a man dressed in black pants, a white shirt,a striped vest, a fez, and a dazzling smile. The barker cries: [paragraph break]Ladies and gentlemen, boys and girls, gather 'round! [line break]Step right up and witness the spectacle that’s taken the world by storm! [line break]She walks, she talks, she crawls on her belly like a reptile. [line break]Behold the one, the only Little Egypt, performing her legendary Dance of the Pyramids—a dazzling display of mystery, grace, and exotic allure! [line break]For just a dime, a mere one tenth of a dollar, prepare to be transported to the sands of Cairo, where enchantment and wonder await!"
+You are standing in front of a dark and mysterious tent filled with illusions and exotic performers. Perhaps there’s a fortune teller inside, offering cryptic clues about the player's journey or a hidden artifact that can be collected. There is a stage in front of the tent. The Barker is encouraging you to step up, pay for, and enjoy the Little Egypt Show.[if location is unvisited]The barker cries: 
+
+Ladies and gentlemen, boys and girls, gather 'round! [line break]Step right up and witness the spectacle that’s taken the world by storm! [line break]She walks, she talks, she crawls on her belly like a reptile. [line break]Behold the one, the only Little Egypt, performing her legendary Dance of the Pyramids—a dazzling display of mystery, grace, and exotic allure! [line break]For just a dime, a mere one tenth of a dollar, prepare to be transported to the sands of Cairo, where enchantment and wonder await![end if]"
+
+The Barker is a person in Show Facade. The description of the barker is "Here is a man dressed in black pants, a white shirt,a striped vest, a fez, and a dazzling smile. The barker cries:
+
+Ladies and gentlemen, boys and girls, gather 'round! [line break]Step right up and witness the spectacle that’s taken the world by storm! [line break]She walks, she talks, she crawls on her belly like a reptile. [line break]Behold the one, the only Little Egypt, performing her legendary Dance of the Pyramids—a dazzling display of mystery, grace, and exotic allure! [line break]For just a dime, a mere one tenth of a dollar, prepare to be transported to the sands of Cairo, where enchantment and wonder await!"
 
 Check going west when the location is the Show Facade and the barker is not carrying the dime:
 	say "It'll cost you a dime to go that way.";
@@ -499,11 +507,11 @@ Check going west when the location is the Show Facade and the barker is carrying
 	Continue the action.
 
 After giving when the noun is dime and the second noun is barker:
-	say "You hand over a dime, and the attendent nods, waving you through. As you step past the entrance, the air feels thicker, almost humid, and the sounds of the carnival fade away. You’ve entered an entirely different world now—one filled with the scents of incense and exotic spices, and the low, hypnotic music of a faraway land. Before you, a series of dimly lit tents stretch out, their flaps slightly swaying in the breeze. Intrigued, you take your first step into the Little Egypt Show. You can now head west into the show."
+	say "You hand over a dime, and the attendant nods, waving you through. As you step past the entrance, the air feels thicker, almost humid, and the sounds of the carnival fade away. You’ve entered an entirely different world now—one filled with the scents of incense and exotic spices, and the low, hypnotic music of a faraway land. Before you, a series of dimly lit tents stretch out, their flaps slightly swaying in the breeze. Intrigued, you take your first step into the Little Egypt Show. You can now head west into the show."
 
 Section 6 - Show Tent	
 
-Test Egypt with "get blueberries / get dime / s / w / l at barker / give dime to barker / w / sit in chair / z / z / z / z / z / e / e / n".
+Test Egypt with "brief / get blueberries / get dime / s / w / l at barker / give dime to barker / w / sit in chair / z / z / z / z / z / e / e / n".
 
 Before going west when the location is the Show Facade and the Show Tent is unvisited and barker is carrying the dime:
 	display Figure of LittleEgyptShow.	
@@ -513,7 +521,7 @@ Before looking when the location is the the Show Tent:
 
 The Show Tent is a room. The Show Tent is west of Show Facade. "You are inside the Little Egypt Show. The attraction facade is to the east. There is a folding chair should you want to sit down and wait for the show to start."
 
-Little Eygpt is a woman. Little Egypt is in the Show Tent. Little Egypt is scenery. The description of Little Egypt is "Little Egypt is an exotic looking, beautiful woman who is draped in flowing silk veils which she skillfully uses as part of the dance. Her attire consists of a sparkling, sequined bodice and a flowing skirt, adorned with jingling coin belts and jewelry that accentuate her movements."
+Little Egypt is a woman. Little Egypt is in the Show Tent. Little Egypt is scenery. The description of Little Egypt is "Little Egypt is an exotic looking, beautiful woman who is draped in flowing silk veils which she skillfully uses as part of the dance. Her attire consists of a sparkling, sequined bodice and a flowing skirt, adorned with jingling coin belts and jewelry that accentuate her movements."
 
 The Stage is here. The Stage is scenery. The description of the Stage is "The stage is decorated to resemble an exotic Middle Eastern market or palace, featuring rich, colorful fabrics, brass ornaments, and lanterns casting a warm, flickering glow. Scents of incense waft through the air, enhancing the atmosphere of mystique. The backdrop displays painted scenes of pyramids, desert landscapes, and domed structures to evoking a sense of being transported to the 'Middle East'."
 
@@ -549,9 +557,9 @@ Section 7 - Head of the Line
 
 Head of the Line is a room. Head of the Line is south of Kiosk. Head of the Line is north of Ride Entrance. "You are standing in front of a ticket taker with his hand open waiting for your ticket. The entrance to the ride is south of here."
 
-The Ride Attendent is a man in Head of the Line. The description of the Ride Attendent is "This is another bored teenager. His thoughts are entirely focused on a cheeseburger for lunch.";
+The Ride Attendant is a man in Head of the Line. The description of the Ride Attendant is "This is another bored teenager. His thoughts are entirely focused on a cheeseburger for lunch.";
 
-Check going south when the location is Head of the Line and the Ride Attendent does not have the hell ride ticket:
+Check going south when the location is Head of the Line and the Ride Attendant does not have the hell ride ticket:
 	say "You[']ll need a ticket to go that way.";
 	stop the action.
 
@@ -565,7 +573,7 @@ Before going south when the location is the kiosk and the Head of the Line is un
 Before looking when the location is the Head of the Line:
 	display Figure of HellRideEntrance.
 
-Test Ride with "get blueberries / s / buy hell ride ticket / s / give ticket to attendent / s / enter car / wait / z / z / z / z / z / z / z".
+Test Ride with "brief / get blueberries / s / buy hell ride ticket / s / give ticket to attendant / s / enter car / wait / z / z / z / z / z / z / z".
 
 HellRideAuto is a scene. HellRideAuto begins when the player is in the car for 3 turns.
 
@@ -580,13 +588,87 @@ Every turn during HellRideAuto:
 		
 Table of HellRide Events
 event
-"[bold type]Entrance[roman type][line break]The car has begun to move toward the entrance of the ride and the safety bar has been lowered. The entrance to Hell Ride is a chilling spectacle designed to draw both thrill-seekers and the morbidly curious. The facade looms before you, a grotesque masterpiece of twisted metal and carved wood, illuminated by flickering, blood-red lights that cast eerie shadows across the ground. The air smells faintly of sulfur, mingling with the sweet scent of carnival popcorn from nearby stalls.[paragraph break]A towering archway frames the entrance, its design a chaotic blend of flames, jagged spikes, and sinister, grinning skulls. The words 'HELL RIDE' are emblazoned above in glowing, flickering letters that seem to pulse like a heartbeat. Beneath the sign, two sculpted demons crouch, their clawed hands extending outward as though inviting—or daring—you to enter.[paragraph break]Dark curtains, frayed and stained, hang over the entrance, swaying faintly in a breeze that seems to carry whispers and low, menacing chuckles. As you approach, the faint sound of distorted organ music grows louder, interspersed with sudden shrieks and the grinding of unseen machinery. A crooked sign at the side reads: 'One Ticket Admission: Enter If You Dare!'[paragraph break]Nearby, a carnival barker with a waxen smile stands under a sputtering gaslight, his voice raspy and theatrical: 'Step right up, brave souls! Take the ride of your life—or your afterlife! The gates of hell are open, and the darkness beckons!'[paragraph break]Through the entrance, the interior is shrouded in near-total darkness, save for flashes of sickly green light that illuminate the suggestion of twisting paths and grotesque shapes. The only certainty is that once you step inside, there’s no turning back from the horrors that await."
-"[bold type]Hallway[roman type][line break]The doors open and your car passes through into the darkness.[paragraph break]Mist fills the area as you move to the next room."
-"[bold type]The Stocks[roman type][line break]The public square is an open expanse of cobblestones, surrounded by the weathered facades of timber-framed buildings. The air is heavy with the mingling scents of smoke from distant chimneys, damp earth, and the faint metallic tang of the nearby smithy. At the square's center stand a row of crude wooden stocks, their heavy beams stained from years of weather and use. Iron clasps hold the unfortunate captives by their wrists and necks, their bodies forced into unnatural, humiliating postures. [paragraph break]The punished individuals, heads bowed in shame, are caught in an agonizing tableau of disgrace. Their expressions, a mix of resignation and despair, reflect the full weight of their predicaments. Their clothing hangs in tatters, furthering their exposure to the biting wind and the sharp tongues of the gathered crowd.[paragraph break]Around the stocks, the townsfolk revel in their collective cruelty. A wiry man leans in close, spitting insults with glee, his laughter cutting through the air. A stout woman clutching a basket of overripe vegetables hurls a squashed tomato, which splatters across one captive’s cheek, drawing a chorus of jeers. Nearby, children mimic their elders, pointing and shrieking in mockery, their faces alight with mischief.[paragraph break]The square is alive with noise: the raucous laughter of the crowd, the occasional sharp crack of a thrown object against the wood, and the soft, pained murmurs of the punished. A passing bell tolls faintly in the distance, but here it is drowned out by the cruel symphony of the jeering mob.[paragraph break]Above it all, the gray sky looms, heavy with the promise of rain, as if nature itself disapproves of the spectacle. Yet the crowd pays no mind, delighting in their collective judgment, each jeer a reminder that today’s entertainment is another's living nightmare.[paragraph break]Mist fills the area as you move to the next room."
-"[bold type]The Gallows[roman type][line break]The public square lies under a brooding, overcast sky, its cobblestones slick with the morning's drizzle. A grim silence has settled over the gathered crowd, broken only by the occasional murmur or the restless shuffling of feet. At the center of the square, rising like a grim monument to mortality, stands the gallows—a wooden platform, darkened by age and weather, with thick ropes hanging like vipers poised to strike.[paragraph break]Atop the gallows, a hooded executioner looms, his imposing frame draped in a black cloak that billows faintly in the wind. His face is obscured by the deep cowl, but his presence radiates cold, methodical purpose. In his gloved hands, he adjusts the noose, its coarse fibers frayed from repeated use, ensuring it is ready for the task at hand.[paragraph break]Standing beside him is the condemned man, his hands bound tightly behind his back. His face is pale, drawn, and haunted, beads of sweat mingling with the light rain. His eyes dart to the crowd, seeking pity, perhaps, but finding only a sea of indifferent faces. His breath comes in shallow bursts, each exhalation visible in the chilly air, a stark reminder of the life still in him—for now.[paragraph break]The crowd gathers in a semicircle around the platform, a mixture of somber onlookers, opportunistic vendors hawking bread and cider, and children craning their necks for a better view. An old man mutters a prayer under his breath, clutching a rosary, while a group of rough-looking men smirk and exchange bets on how long the drop will take.[paragraph break]Above it all, the bell tower tolls, its mournful chime echoing through the square, a countdown to the inevitable. The condemned man flinches with each clang, his shoulders tensing as the final moments draw near. A raven perches on the gallows’ beam, its black eyes unblinking, as if waiting for the end with morbid curiosity.[paragraph break]The executioner steps forward, adjusting the noose around the man’s neck with a practiced efficiency. The crowd falls silent, the weight of the moment hanging heavier than the rope itself. Somewhere in the distance, thunder rumbles faintly, as though the heavens themselves are bracing for what is to come.[paragraph break]Mist fills the area as you move to the next room."
-"[bold type]The Stake[roman type][line break]The public square is a grim tableau, the usual bustle of commerce and chatter replaced with an oppressive silence broken only by the crackling of the flames. At the center, three wooden stakes rise ominously from a circular pyre of logs and kindling, their rough surfaces darkened by smoke from countless such scenes before. Bound tightly to these stakes are three women, their wrists and ankles secured with coarse, heavy ropes. Their faces tell different stories—one of defiance, another of resignation, and the third of pure terror.[paragraph break]A crowd encircles the pyre, their expressions a mix of morbid fascination, righteous fury, and hesitant pity. Children cling to their mothers' skirts, staring wide-eyed, while town elders nod solemnly as though approving the grim spectacle. Some townsfolk jeer loudly, throwing small stones or rotten vegetables at the condemned. Others murmur prayers or make the sign of the cross, their eyes averted.[paragraph break]The executioner, clad in a soot-streaked hood and leather apron, steps forward, his torch a blazing beacon in the dreary scene. The flames dance and writhe as he lowers the torch to the base of the pyre, igniting the dry wood with a sudden, hungry roar. A cheer erupts from a faction of the crowd, while others fall into an uneasy silence, watching the fire climb higher.[paragraph break]Thick, acrid smoke begins to rise, curling around the stakes like a living thing. The women cry out—some in curses, others in prayers—and their voices echo across the square, mingling with the crackle of the flames. The heat radiates outward, and even those in the crowd begin to feel its oppressive warmth.[paragraph break]Above, the gray clouds hang low, as if nature itself mourns the scene unfolding below. A raven caws from its perch atop the town's bell tower, its black form stark against the ashen sky. The church bells toll in slow, deliberate cadence, each strike a grim punctuation to the scene.[paragraph break]As the flames consume the pyre, the crowd remains rooted, some transfixed by the spectacle, others quietly slipping away, their faces pale and drawn. The square, once a place of gatherings and life, is now a stage for death, its air heavy with smoke, ash, and the lingering cries of the condemned.[paragraph break]Mist fills the area as you move to the next room."
-"[bold type]The Dungeon[roman type][line break]The dungeon is a dim, oppressive chamber carved deep into the earth, its stone walls slick with moisture and coated in a thin layer of grime. The air is heavy with the stench of sweat, blood, and mildew, punctuated by the faint, acrid tang of burning oil from flickering torches mounted on rusty iron sconces. Shadows dance on the walls, creating grotesque shapes that seem almost alive in the unsteady light.[paragraph break]Chains hang from the walls and ceilings, their metallic clinking faintly audible as prisoners shift or shudder in their restraints. The room is filled with the soft, pitiful moans of the tormented, their cries occasionally rising to sharp, desperate screams that echo through the corridors beyond. The sound of dripping water from a cracked stone ceiling adds an eerie rhythm to the unsettling cacophony.[paragraph break]Scattered throughout the dungeon are various instruments of pain and suffering, their designs brutal and unyielding. A rack sits in the center of the room, its wooden frame splintered from years of use. Nearby, a brazier glows a dull red, its coals smoldering beneath a collection of iron tools—branding irons, pincers, and knives, their edges darkened with dried blood. A spiked chair looms in the corner, its cruel design gleaming faintly in the dim light.[paragraph break]Prisoners are scattered across the room, each trapped in their own nightmare. A man lies stretched on the rack, his face contorted in agony as the torturer methodically turns the wheel, the creaking of wood and rope echoing in the chamber. Another prisoner hangs limply from manacles affixed to the wall, their body bruised and battered, barely able to lift their head. A third, seated in the spiked chair, breathes in shallow gasps, their movements restricted by the cruel embrace of the iron seat.[paragraph break]The torturer moves about the chamber with practiced efficiency, their face obscured by a hood, their leather apron stained with the evidence of countless victims. They work silently, their movements methodical and devoid of emotion, as if the suffering around them were merely a task to be completed.[paragraph break]Above it all, the dungeon's ceiling is low and oppressive, the occasional scuttling of rats in the shadows serving as a reminder of the filth and decay that permeates the space. The only exit—a heavy, iron-bound door reinforced with rivets—seems more a barrier to hope than a passage to freedom, its small viewing slit barred and shadowed.[paragraph break]This is a place of despair and cruelty, where the line between life and death is blurred, and the only certainty is the inevitability of suffering.[paragraph break]Mist fills the area as you move to the next room."
-"[bold type]The Guillotine[roman type][line break]The public square is a charged space, bustling with a crowd eager to witness the grim spectacle. The sky overhead is a patchwork of gray clouds, casting the cobblestone ground in a somber light. At the center of the square stands a raised wooden platform, stark and imposing, where the grim sentence is to be carried out.[paragraph break]A lone figure stands on the scaffold, their posture slumped under the weight of their fate. Their hands are bound tightly behind their back with coarse ropes, and their head hangs low, avoiding the stares of the gathered crowd. Their clothing, once fine, is now tattered and muddied, a visible testament to the fall from grace that has led to this moment.[paragraph break]The crowd presses closer, encircling the platform with a mix of emotions etched onto their faces. Some jeer, shouting curses and insults, their voices rising in a cacophony of condemnation. Others watch in heavy silence, their expressions grim and reflective. A few hold children on their shoulders, their young faces filled with curious fascination, unaware of the gravity of what they are about to witness.[paragraph break]At the edge of the platform, a town crier stands with a long scroll in hand, his voice carrying over the murmurs of the crowd:'his man has been found guilty of high treason against the crown. Let his punishment serve as a warning to all who would seek to defy the will of the realm!'[paragraph break]The condemned flinches at the words but remains silent, their face pale and eyes darting nervously. The executioner, a large figure clad in a hooded black robe, stands nearby with arms crossed, their demeanor cold and methodical. A few feet away, the guillotine looms, its blade gleaming dully in the filtered light, ready to deliver the final judgment.[paragraph break]The tension in the square is palpable as the crier steps aside and the executioner signals for the crowd to quiet. The murmurs fade, replaced by an oppressive silence that hangs over the scene like a shroud. The only sounds now are the rustle of the wind and the faint creak of the wooden scaffold.[paragraph break]As the condemned is led toward the guillotine, a crow caws from a nearby rooftop, its harsh cry echoing through the square like a dark omen. The crowd leans forward, holding its collective breath, as the weight of justice and mortality descends upon the scene. [paragraph break]There is just lone problem: the guillotine is being raised and lowered by some mechanism. It appears that the timing of the guillotine is off and it is being lowered onto the cars instead of between them. If a person were to be in a car as it passed under the guillotine, they would be decapitated.[paragraph break]Looks like your goose is cooked. Say 'Goodnight, Gracie!"
+"[bold type]Entrance[roman type][line break]The car has begun to move toward the entrance of the ride and the safety bar has been lowered. The entrance to Hell Ride is a chilling spectacle designed to draw both thrill-seekers and the morbidly curious. The facade looms before you, a grotesque masterpiece of twisted metal and carved wood, illuminated by flickering, blood-red lights that cast eerie shadows across the ground. The air smells faintly of sulfur, mingling with the sweet scent of carnival popcorn from nearby stalls.
+
+A towering archway frames the entrance, its design a chaotic blend of flames, jagged spikes, and sinister, grinning skulls. The words 'HELL RIDE' are emblazoned above in glowing, flickering letters that seem to pulse like a heartbeat. Beneath the sign, two sculpted demons crouch, their clawed hands extending outward as though inviting—or daring—you to enter.
+
+Dark curtains, frayed and stained, hang over the entrance, swaying faintly in a breeze that seems to carry whispers and low, menacing chuckles. As you approach, the faint sound of distorted organ music grows louder, interspersed with sudden shrieks and the grinding of unseen machinery. A crooked sign at the side reads: 'One Ticket Admission: Enter If You Dare!'
+
+Nearby, a carnival barker with a waxen smile stands under a sputtering gaslight, his voice raspy and theatrical: 'Step right up, brave souls! Take the ride of your life—or your afterlife! The gates of hell are open, and the darkness beckons!'
+
+Through the entrance, the interior is shrouded in near-total darkness, save for flashes of sickly green light that illuminate the suggestion of twisting paths and grotesque shapes. The only certainty is that once you step inside, there’s no turning back from the horrors that await."
+"[bold type]Hallway[roman type][line break]The doors open and your car passes through into the darkness.
+
+Mist fills the area as you move to the next room."
+"[bold type]The Stocks[roman type][line break]The public square is an open expanse of cobblestones, surrounded by the weathered facades of timber-framed buildings. The air is heavy with the mingling scents of smoke from distant chimneys, damp earth, and the faint metallic tang of the nearby smithy. At the square's center stand a row of crude wooden stocks, their heavy beams stained from years of weather and use. Iron clasps hold the unfortunate captives by their wrists and necks, their bodies forced into unnatural, humiliating postures. 
+
+The punished individuals, heads bowed in shame, are caught in an agonizing tableau of disgrace. Their expressions, a mix of resignation and despair, reflect the full weight of their predicaments. Their clothing hangs in tatters, furthering their exposure to the biting wind and the sharp tongues of the gathered crowd.
+
+Around the stocks, the townsfolk revel in their collective cruelty. A wiry man leans in close, spitting insults with glee, his laughter cutting through the air. A stout woman clutching a basket of overripe vegetables hurls a squashed tomato, which splatters across one captive’s cheek, drawing a chorus of jeers. Nearby, children mimic their elders, pointing and shrieking in mockery, their faces alight with mischief.
+
+The square is alive with noise: the raucous laughter of the crowd, the occasional sharp crack of a thrown object against the wood, and the soft, pained murmurs of the punished. A passing bell tolls faintly in the distance, but here it is drowned out by the cruel symphony of the jeering mob.
+
+Above it all, the gray sky looms, heavy with the promise of rain, as if nature itself disapproves of the spectacle. Yet the crowd pays no mind, delighting in their collective judgment, each jeer a reminder that today’s entertainment is another's living nightmare.
+
+Mist fills the area as you move to the next room."
+"[bold type]The Gallows[roman type][line break]The public square lies under a brooding, overcast sky, its cobblestones slick with the morning's drizzle. A grim silence has settled over the gathered crowd, broken only by the occasional murmur or the restless shuffling of feet. At the center of the square, rising like a grim monument to mortality, stands the gallows—a wooden platform, darkened by age and weather, with thick ropes hanging like vipers poised to strike.
+
+Atop the gallows, a hooded executioner looms, his imposing frame draped in a black cloak that billows faintly in the wind. His face is obscured by the deep cowl, but his presence radiates cold, methodical purpose. In his gloved hands, he adjusts the noose, its coarse fibers frayed from repeated use, ensuring it is ready for the task at hand.
+
+Standing beside him is the condemned man, his hands bound tightly behind his back. His face is pale, drawn, and haunted, beads of sweat mingling with the light rain. His eyes dart to the crowd, seeking pity, perhaps, but finding only a sea of indifferent faces. His breath comes in shallow bursts, each exhalation visible in the chilly air, a stark reminder of the life still in him—for now.
+
+The crowd gathers in a semicircle around the platform, a mixture of somber onlookers, opportunistic vendors hawking bread and cider, and children craning their necks for a better view. An old man mutters a prayer under his breath, clutching a rosary, while a group of rough-looking men smirk and exchange bets on how long the drop will take.
+
+Above it all, the bell tower tolls, its mournful chime echoing through the square, a countdown to the inevitable. The condemned man flinches with each clang, his shoulders tensing as the final moments draw near. A raven perches on the gallows’ beam, its black eyes unblinking, as if waiting for the end with morbid curiosity.
+
+The executioner steps forward, adjusting the noose around the man’s neck with a practiced efficiency. The crowd falls silent, the weight of the moment hanging heavier than the rope itself. Somewhere in the distance, thunder rumbles faintly, as though the heavens themselves are bracing for what is to come.
+
+Mist fills the area as you move to the next room."
+"[bold type]The Stake[roman type][line break]The public square is a grim tableau, the usual bustle of commerce and chatter replaced with an oppressive silence broken only by the crackling of the flames. At the center, three wooden stakes rise ominously from a circular pyre of logs and kindling, their rough surfaces darkened by smoke from countless such scenes before. Bound tightly to these stakes are three women, their wrists and ankles secured with coarse, heavy ropes. Their faces tell different stories—one of defiance, another of resignation, and the third of pure terror.
+
+A crowd encircles the pyre, their expressions a mix of morbid fascination, righteous fury, and hesitant pity. Children cling to their mothers' skirts, staring wide-eyed, while town elders nod solemnly as though approving the grim spectacle. Some townsfolk jeer loudly, throwing small stones or rotten vegetables at the condemned. Others murmur prayers or make the sign of the cross, their eyes averted.
+
+The executioner, clad in a soot-streaked hood and leather apron, steps forward, his torch a blazing beacon in the dreary scene. The flames dance and writhe as he lowers the torch to the base of the pyre, igniting the dry wood with a sudden, hungry roar. A cheer erupts from a faction of the crowd, while others fall into an uneasy silence, watching the fire climb higher.
+
+Thick, acrid smoke begins to rise, curling around the stakes like a living thing. The women cry out—some in curses, others in prayers—and their voices echo across the square, mingling with the crackle of the flames. The heat radiates outward, and even those in the crowd begin to feel its oppressive warmth.
+
+Above, the gray clouds hang low, as if nature itself mourns the scene unfolding below. A raven caws from its perch atop the town's bell tower, its black form stark against the ashen sky. The church bells toll in slow, deliberate cadence, each strike a grim punctuation to the scene.
+
+As the flames consume the pyre, the crowd remains rooted, some transfixed by the spectacle, others quietly slipping away, their faces pale and drawn. The square, once a place of gatherings and life, is now a stage for death, its air heavy with smoke, ash, and the lingering cries of the condemned.
+
+Mist fills the area as you move to the next room."
+"[bold type]The Dungeon[roman type][line break]The dungeon is a dim, oppressive chamber carved deep into the earth, its stone walls slick with moisture and coated in a thin layer of grime. The air is heavy with the stench of sweat, blood, and mildew, punctuated by the faint, acrid tang of burning oil from flickering torches mounted on rusty iron sconces. Shadows dance on the walls, creating grotesque shapes that seem almost alive in the unsteady light.
+
+Chains hang from the walls and ceilings, their metallic clinking faintly audible as prisoners shift or shudder in their restraints. The room is filled with the soft, pitiful moans of the tormented, their cries occasionally rising to sharp, desperate screams that echo through the corridors beyond. The sound of dripping water from a cracked stone ceiling adds an eerie rhythm to the unsettling cacophony.
+
+Scattered throughout the dungeon are various instruments of pain and suffering, their designs brutal and unyielding. A rack sits in the center of the room, its wooden frame splintered from years of use. Nearby, a brazier glows a dull red, its coals smoldering beneath a collection of iron tools—branding irons, pincers, and knives, their edges darkened with dried blood. A spiked chair looms in the corner, its cruel design gleaming faintly in the dim light.
+
+Prisoners are scattered across the room, each trapped in their own nightmare. A man lies stretched on the rack, his face contorted in agony as the torturer methodically turns the wheel, the creaking of wood and rope echoing in the chamber. Another prisoner hangs limply from manacles affixed to the wall, their body bruised and battered, barely able to lift their head. A third, seated in the spiked chair, breathes in shallow gasps, their movements restricted by the cruel embrace of the iron seat.
+
+The torturer moves about the chamber with practiced efficiency, their face obscured by a hood, their leather apron stained with the evidence of countless victims. They work silently, their movements methodical and devoid of emotion, as if the suffering around them were merely a task to be completed.
+
+Above it all, the dungeon's ceiling is low and oppressive, the occasional scuttling of rats in the shadows serving as a reminder of the filth and decay that permeates the space. The only exit—a heavy, iron-bound door reinforced with rivets—seems more a barrier to hope than a passage to freedom, its small viewing slit barred and shadowed.
+
+This is a place of despair and cruelty, where the line between life and death is blurred, and the only certainty is the inevitability of suffering.
+
+Mist fills the area as you move to the next room."
+"[bold type]The Guillotine[roman type][line break]The public square is a charged space, bustling with a crowd eager to witness the grim spectacle. The sky overhead is a patchwork of gray clouds, casting the cobblestone ground in a somber light. At the center of the square stands a raised wooden platform, stark and imposing, where the grim sentence is to be carried out.
+
+A lone figure stands on the scaffold, their posture slumped under the weight of their fate. Their hands are bound tightly behind their back with coarse ropes, and their head hangs low, avoiding the stares of the gathered crowd. Their clothing, once fine, is now tattered and muddied, a visible testament to the fall from grace that has led to this moment.
+
+The crowd presses closer, encircling the platform with a mix of emotions etched onto their faces. Some jeer, shouting curses and insults, their voices rising in a cacophony of condemnation. Others watch in heavy silence, their expressions grim and reflective. A few hold children on their shoulders, their young faces filled with curious fascination, unaware of the gravity of what they are about to witness.
+
+At the edge of the platform, a town crier stands with a long scroll in hand, his voice carrying over the murmurs of the crowd:'his man has been found guilty of high treason against the crown. Let his punishment serve as a warning to all who would seek to defy the will of the realm!'
+
+The condemned flinches at the words but remains silent, their face pale and eyes darting nervously. The executioner, a large figure clad in a hooded black robe, stands nearby with arms crossed, their demeanor cold and methodical. A few feet away, the guillotine looms, its blade gleaming dully in the filtered light, ready to deliver the final judgment.
+
+The tension in the square is palpable as the crier steps aside and the executioner signals for the crowd to quiet. The murmurs fade, replaced by an oppressive silence that hangs over the scene like a shroud. The only sounds now are the rustle of the wind and the faint creak of the wooden scaffold.
+
+As the condemned is led toward the guillotine, a crow caws from a nearby rooftop, its harsh cry echoing through the square like a dark omen. The crowd leans forward, holding its collective breath, as the weight of justice and mortality descends upon the scene. 
+
+There is just lone problem: the guillotine is being raised and lowered by some mechanism. It appears that the timing of the guillotine is off and it is being lowered onto the cars instead of between them. If a person were to be in a car as it passed under the guillotine, they would be decapitated.
+
+Looks like your goose is cooked. Say 'Goodnight, Gracie!"
 
 HellRideAuto ends when the number of filled rows in the Table of HellRide Events is 0.
 
@@ -597,7 +679,7 @@ When HellRideAuto ends:
 	end the story finally saying "You have died.".
 	
 When play ends:
-	Say "You are stupified as you sit watching guillotine rising and falling, dropping like a stone on the cars in front of you. Thank goodness they are empty. As your turn comes, you raise your hands in a feeble attempt to stop the inevitable."
+	Say "You are stupefied as you sit watching guillotine rising and falling, dropping like a stone on the cars in front of you. Thank goodness they are empty. As your turn comes, you raise your hands in a feeble attempt to stop the inevitable."
 	
 Ride Entrance is a room. Ride Entrance is south of Head of the Line. "The cars that will take you into the fearsome Hell Ride stop here for you to board.  To the south is the track that will take you into the ride. The safety bar is raised allowing you to enter the car. The darkness looks just a little bit darker."
 
@@ -610,13 +692,13 @@ Before going south when the player is in the Ride Entrance:
 Section 2 - Stocks Room
 
 The Stocks Room is south of the Ride Entrance. "The public square is an open expanse of cobblestones, surrounded by the weathered facades of timber-framed buildings. The air is heavy with the mingling scents of smoke from distant chimneys, damp earth, and the faint metallic tang of the nearby smithy. At the square's center stand a row of crude wooden stocks, their heavy beams stained from years of weather and use. Iron clasps hold the unfortunate captives by their wrists and necks, their bodies forced into unnatural, humiliating postures.
-[paragraph break]
+
 The punished individuals, heads bowed in shame, are caught in an agonizing tableau of disgrace. Their expressions, a mix of resignation and despair, reflect the full weight of their predicaments. Their clothing hangs in tatters, furthering their exposure to the biting wind and the sharp tongues of the gathered crowd.
-[paragraph break]
+
 Around the stocks, the townsfolk revel in their collective cruelty. A wiry man leans in close, spitting insults with glee, his laughter cutting through the air. A stout woman clutching a basket of overripe vegetables hurls a squashed tomato, which splatters across one captive’s cheek, drawing a chorus of jeers. Nearby, children mimic their elders, pointing and shrieking in mockery, their faces alight with mischief.
-[paragraph break]
+
 The square is alive with noise: the raucous laughter of the crowd, the occasional sharp crack of a thrown object against the wood, and the soft, pained murmurs of the punished. A passing bell tolls faintly in the distance, but here it is drowned out by the cruel symphony of the jeering mob.
-[paragraph break]
+
 Above it all, the gray sky looms, heavy with the promise of rain, as if nature itself disapproves of the spectacle. Yet the crowd pays no mind, delighting in their collective judgment, each jeer a reminder that today’s entertainment is another's living nightmare." 
 
 The wooden stocks are here. The wooden stocks are a supporter. The wooden stocks are fixed in place. The description of the wooden stocks is "At the square's center stand a row of crude wooden stocks, their heavy beams stained from years of weather and use. Iron clasps hold the unfortunate captives by their wrists and necks, their bodies forced into unnatural, humiliating postures." 
@@ -655,15 +737,15 @@ Instead of looking under a thing which is underlaid by something (called the los
 Section 3 - Gallows Room
 
 The Gallows Room is south of the Stocks Room.  "The public square lies under a brooding, overcast sky, its cobblestones slick with the morning's drizzle. A grim silence has settled over the gathered crowd, broken only by the occasional murmur or the restless shuffling of feet. At the center of the square, rising like a grim monument to mortality, stands the gallows—a wooden platform, darkened by age and weather, with thick ropes hanging like vipers poised to strike.
-[paragraph break]
+
 Atop the gallows, a hooded executioner looms, his imposing frame draped in a black cloak that billows faintly in the wind. His face is obscured by the deep cowl, but his presence radiates cold, methodical purpose. In his gloved hands, he adjusts the noose, its coarse fibers frayed from repeated use, ensuring it is ready for the task at hand.
-[paragraph break]
+
 Standing beside him is the condemned man, his hands bound tightly behind his back. His face is pale, drawn, and haunted, beads of sweat mingling with the light rain. His eyes dart to the crowd, seeking pity, perhaps, but finding only a sea of indifferent faces. His breath comes in shallow bursts, each exhalation visible in the chilly air, a stark reminder of the life still in him—for now.
-[paragraph break]
+
 The crowd gathers in a semicircle around the platform, a mixture of somber onlookers, opportunistic vendors hawking bread and cider, and children craning their necks for a better view. An old man mutters a prayer under his breath, clutching a rosary, while a group of rough-looking men smirk and exchange bets on how long the drop will take.
-[paragraph break]
+
 Above it all, the bell tower tolls, its mournful chime echoing through the square, a countdown to the inevitable. The condemned man flinches with each clang, his shoulders tensing as the final moments draw near. A raven perches on the gallows’ beam, its black eyes unblinking, as if waiting for the end with morbid curiosity.
-[paragraph break]
+
 The executioner steps forward, adjusting the noose around the man’s neck with a practiced efficiency. The crowd falls silent, the weight of the moment hanging heavier than the rope itself. Somewhere in the distance, thunder rumbles faintly, as though the heavens themselves are bracing for what is to come."
 
 The gallows platform is here. The gallows platform is a supporter. The gallows platform is fixed in place. Understand "gallows" as gallows platform. The description of the gallows platform is "At the center of the square, rising like a grim monument to mortality, stands the gallows—a wooden platform, darkened by age and weather, with thick ropes hanging like vipers poised to strike." 
@@ -673,15 +755,15 @@ The Crimson Fuse is scenery in the Gallows Room. The Crimson Fuse underlies the 
 Section 4 - Stake Room
 
 The Stake Room is south of the Gallows Room. "The public square is a grim tableau, the usual bustle of commerce and chatter replaced with an oppressive silence broken only by the crackling of the flames. At the center, three wooden stakes rise ominously from a circular pyre of logs and kindling, their rough surfaces darkened by smoke from countless such scenes before. Bound tightly to these stakes are three women, their wrists and ankles secured with coarse, heavy ropes. Their faces tell different stories—one of defiance, another of resignation, and the third of pure terror.
-[paragraph break]
+
 A crowd encircles the pyre, their expressions a mix of morbid fascination, righteous fury, and hesitant pity. Children cling to their mothers' skirts, staring wide-eyed, while town elders nod solemnly as though approving the grim spectacle. Some townsfolk jeer loudly, throwing small stones or rotten vegetables at the condemned. Others murmur prayers or make the sign of the cross, their eyes averted.
-[paragraph break]
+
 The executioner, clad in a soot-streaked hood and leather apron, steps forward, his torch a blazing beacon in the dreary scene. The flames dance and writhe as he lowers the torch to the base of the pyre, igniting the dry wood with a sudden, hungry roar. A cheer erupts from a faction of the crowd, while others fall into an uneasy silence, watching the fire climb higher.
-[paragraph break]
+
 Thick, acrid smoke begins to rise, curling around the stakes like a living thing. The women cry out—some in curses, others in prayers—and their voices echo across the square, mingling with the crackle of the flames. The heat radiates outward, and even those in the crowd begin to feel its oppressive warmth.
-[paragraph break]
+
 Above, the gray clouds hang low, as if nature itself mourns the scene unfolding below. A raven caws from its perch atop the town's bell tower, its black form stark against the ashen sky. The church bells toll in slow, deliberate cadence, each strike a grim punctuation to the scene.
-[paragraph break]
+
 As the flames consume the pyre, the crowd remains rooted, some transfixed by the spectacle, others quietly slipping away, their faces pale and drawn. The square, once a place of gatherings and life, is now a stage for death, its air heavy with smoke, ash, and the lingering cries of the condemned."
 
 The pyre is scenery in the Stake Room. The pyre is a container. understand "bonfire" and "fire" as the pyre. The description of the pyre is "At the center, three wooden stakes rise ominously from a circular pyre of logs and kindling, their rough surfaces darkened by smoke from countless such scenes before. Bound tightly to these stakes are three women, their wrists and ankles secured with coarse, heavy ropes. Their faces tell different stories—one of defiance, another of resignation, and the third of pure terror." 
@@ -691,17 +773,17 @@ The Emerald Fuse is in the pyre. The emerald fuse can be found or lost. The emer
 Section 5 - Dungeon
 
 The Dungeon is south of the Stake Room. "The dungeon is a dim, oppressive chamber carved deep into the earth, its stone walls slick with moisture and coated in a thin layer of grime. The air is heavy with the stench of sweat, blood, and mildew, punctuated by the faint, acrid tang of burning oil from flickering torches mounted on rusty iron sconces. Shadows dance on the walls, creating grotesque shapes that seem almost alive in the unsteady light.
-[paragraph break]
+
 Chains hang from the walls and ceilings, their metallic clinking faintly audible as prisoners shift or shudder in their restraints. The room is filled with the soft, pitiful moans of the tormented, their cries occasionally rising to sharp, desperate screams that echo through the corridors beyond. The sound of dripping water from a cracked stone ceiling adds an eerie rhythm to the unsettling cacophony.
-[paragraph break]
+
 Scattered throughout the dungeon are various instruments of pain and suffering, their designs brutal and unyielding. A rack sits in the center of the room, its wooden frame splintered from years of use. Nearby, a brazier glows a dull red, its coals smoldering beneath a collection of iron tools—branding irons, pincers, and knives, their edges darkened with dried blood. A spiked chair looms in the corner, its cruel design gleaming faintly in the dim light.
-[paragraph break]
+
 Prisoners are scattered across the room, each trapped in their own nightmare. A man lies stretched on the rack, his face contorted in agony as the torturer methodically turns the wheel, the creaking of wood and rope echoing in the chamber. Another prisoner hangs limply from manacles affixed to the wall, their body bruised and battered, barely able to lift their head. A third, seated in the spiked chair, breathes in shallow gasps, their movements restricted by the cruel embrace of the iron seat.
-[paragraph break]
+
 The torturer moves about the chamber with practiced efficiency, their face obscured by a hood, their leather apron stained with the evidence of countless victims. They work silently, their movements methodical and devoid of emotion, as if the suffering around them were merely a task to be completed.
-[paragraph break]
+
 Above it all, the dungeon's ceiling is low and oppressive, the occasional scuttling of rats in the shadows serving as a reminder of the filth and decay that permeates the space. The only exit—a heavy, iron-bound door reinforced with rivets—seems more a barrier to hope than a passage to freedom, its small viewing slit barred and shadowed.
-[paragraph break]
+
 This is a place of despair and cruelty, where the line between life and death is blurred, and the only certainty is the inevitability of suffering."
 
 The iron seat is scenery in the Dungeon. The description of the iron seat is "A spiked chair looms in the corner, its cruel design gleaming faintly in the dim light." 
@@ -711,20 +793,19 @@ The Grey Fuse underlies the iron seat. The grey fuse can be found or lost. The g
 Section 6 - Guillotine Room
 
 The Guillotine Room is south of the Dungeon. "The public square is a charged space, bustling with a crowd eager to witness the grim spectacle. The sky overhead is a patchwork of gray clouds, casting the cobblestone ground in a somber light. At the center of the square stands a raised wooden platform, stark and imposing, where the grim sentence is to be carried out.
-[paragraph break]
+
 A lone figure stands on the scaffold, their posture slumped under the weight of their fate. Their hands are bound tightly behind their back with coarse ropes, and their head hangs low, avoiding the stares of the gathered crowd. Their clothing, once fine, is now tattered and muddied, a visible testament to the fall from grace that has led to this moment.
-[paragraph break]
+
 The crowd presses closer, encircling the platform with a mix of emotions etched onto their faces. Some jeer, shouting curses and insults, their voices rising in a cacophony of condemnation. Others watch in heavy silence, their expressions grim and reflective. A few hold children on their shoulders, their young faces filled with curious fascination, unaware of the gravity of what they are about to witness.
-[paragraph break]
-At the edge of the platform, a town crier stands with a long scroll in hand, his voice carrying over the murmurs of the crowd:
-'This man has been found guilty of high treason against the crown. Let his punishment serve as a warning to all who would seek to defy the will of the realm!'
-[paragraph break]
+
+At the edge of the platform, a town crier stands with a long scroll in hand, his voice carrying over the murmurs of the crowd:'This man has been found guilty of high treason against the crown. Let his punishment serve as a warning to all who would seek to defy the will of the realm!'
+
 The condemned flinches at the words but remains silent, their face pale and eyes darting nervously. The executioner, a large figure clad in a hooded black robe, stands nearby with arms crossed, their demeanor cold and methodical. A few feet away, the guillotine looms, its blade gleaming dully in the filtered light, ready to deliver the final judgment.
-[paragraph break]
+
 The tension in the square is palpable as the crier steps aside and the executioner signals for the crowd to quiet. The murmurs fade, replaced by an oppressive silence that hangs over the scene like a shroud. The only sounds now are the rustle of the wind and the faint creak of the wooden scaffold.
-[paragraph break]
+
 As the condemned is led toward the guillotine, a crow caws from a nearby rooftop, its harsh cry echoing through the square like a dark omen. The crowd leans forward, holding its collective breath, as the weight of justice and mortality descends upon the scene. 
-[paragraph break]
+
 There is just lone problem: the guillotine is being raised and lowered by some mechanism. It appears that the timing of the guillotine is off and it is being lowered onto the cars instead of between them. If a person were to be in a car as it passed under the guillotine, they would be decapitated."
 
 The guillotine platform is here. The guillotine platform is a supporter. Understand "scaffold" as guillotine platform. The description of the guillotine platform is "At the center of the square stands a raised wooden platform, stark and imposing, where the grim sentence is to be carried out." 
@@ -734,17 +815,17 @@ The Indigo Fuse is scenery in the Guillotine Room. The Indigo Fuse underlies the
 Section 7 - Ride Exit
 
 The Ride Exit is south of the Guillotine Room. "The exit of Hell Ride is as unsettling as the ride itself, designed to leave riders with a lingering sense of unease. The pathway emerges from a dark, narrow corridor, its walls painted in peeling black with streaks of red that resemble dripping blood. Dim, flickering lights cast erratic shadows across the uneven floor, creating an oppressive atmosphere that follows riders even after they’ve left the ride.
-[paragraph break]
+
 The air is cooler here, with a faint metallic tang and the unmistakable scent of dampness, as though the exit leads not back to the carnival but somewhere deeper underground. Sound effects of faint whispers and distant screams play softly in the background, barely audible over the creak of the exit door swinging open and the occasional burst of laughter or screams from the ride’s next passengers.
-[paragraph break]
-Riders step out into a small courtyard, enclosed by jagged, rusted metal fencing adorned with fake cobwebs and plastic bones. A weathered sign swings overhead, painted in bold, gothic letters: 'You[’]ve Survived… For Now.'
-[paragraph break]
-Nearby, a few carnival workers in tattered costumes linger, their expressions unsettlingly neutral as they watch riders leave. One might mumble cryptic phrases like, 'Not everyone makes it out…' before breaking into a crooked grin.
-[paragraph break]
+
+Riders step out into a small courtyard, enclosed by jagged, rusted metal fencing adorned with fake cobwebs and plastic bones. A weathered sign swings overhead, painted in bold, Gothic letters: 'You[’]ve Survived… For Now.'
+
+Nearby, a few carnival workers in tattered costumes linger, their expressions disturbingly neutral as they watch riders leave. One might mumble cryptic phrases like, 'Not everyone makes it out…' before breaking into a crooked grin.
+
 The exit path leads past a small merchandise stand selling ride-themed merchandise—'Hell Ride Survivor' t-shirts, devil horns, and glow-in-the-dark trinkets shaped like skulls. The stand is bathed in red light, adding to the ominous mood.
-[paragraph break]
+
 Just beyond the fencing, the cheerful sounds and colorful lights of the carnival midway feel jarringly out of place, a sharp contrast to the oppressive darkness of the ride. Riders often pause to gather themselves, exchanging nervous laughter or adjusting their belongings, before stepping back into the lively world of the carnival.
-[paragraph break]
+
 The Hell Ride exit leaves riders not just thrilled, but marked by the eerie experience, a reminder of the fine line between fun and fear that defines the carnival’s darkest attraction."
 
 The merchandise stand is scenery in the Ride Exit. The merchandise stand is a container. Understand "stand" as merchandise. The description of the merchandise is "The stand is bathed in red light, adding to the ominous mood." 
@@ -756,14 +837,17 @@ Chapter 3 - Backstage
 Section 1 - Dark Passage
 
 [get the key]
-Test b1 with "get	blueberries / s / buy ticket / s / give ticket to attendent / s / e / l at piles / get flashlight / turn it on / s / s / s / open toolbox / get all from toolbox / s / s / s / ne / get silver key / l at panel / open panel / l at socket / sw / n / n / n / n / n"
+Test b1 with "brief. get	blueberries / s / buy ticket / s / give ticket to attendant / s / e / l at piles / get flashlight / turn it on / s / s / s / open toolbox / get all from toolbox / s / s / s / ne / get silver key / l at panel / open panel / l at socket / sw / n / n / n / n / n"
 
 [get the fuses]
-Test b2 with "w / l under stocks / e / s / w / l under platform / e / s / w / l in pyre / get fuse from pyre / e / s / w / l under seat / e / s / w / l under platform / e / s / s / w / l under stand / score / i"
+Test b2 with "w / l under stocks / e / s / w / l under platform / e / s / w / l in pyre / get fuse from pyre / e / s / w / l under seat / e / s / w / l under platform / e / s / s / w / l under stand / e / n"
 
 [fill the sockets]
+Test b3 with "ne / open panel / put aqua in socket / sw / e / open panel / put crimson in socket / w / se / open panel / put emerald in socket / nw / sw / open panel / put grey in socket / ne / w / open panel / put indigo in socket / e / nw / open panel / put khaki in socket / se"
 
-Test Backstage with "get	blueberries / s / buy ticket / s / give ticket to attendent / s / e / l at piles / get flashlight / turn it on / s / s / s / open toolbox / get all from toolbox / s / s / s / ne / get silver key / sw / s / w / l in stand / get fuse / n / l under platform / n / l under seat / n / l in pyre / get fuse / n / l under platform / n / l under stocks / n / e / w / n / n / n"
+test b4 with "n / n / n / n / n / n / w / n / n / n"
+
+Test Backstage with "test b1 / test b2 / test b3 / test b4"
 
 Dark Passage is a room. Dark Passage is east of the Ride Entrance. The dark passage is scored. "This room is backstage at the Hell Ride attraction. The room is littered with bags of trash, piles of junk, and dust bunnies so large they should be paying rent. West is back the way you came from. There an exit to the south."
 
@@ -782,17 +866,17 @@ After waiting when the location is dark 4 times:
 Section 2 - Maintenance Office
 
 The Maintenance Office is a dark room. The maintenance office is south of the dark passage. "The maintenance office is a chaotic and dimly lit space tucked away behind the glitz and glamour of the carnival. It smells of grease, sweat, and faintly of popcorn from the midway outside. The air is heavy and warm, thick with the lingering scent of oil and dust stirred up by constant work.
-[paragraph break]
+
 The walls are lined with cluttered shelves holding an assortment of tools and parts—rusty wrenches, screwdrivers, hammers, bolts, and screws organized (or not) in mismatched containers. Tattered labels, some scrawled in fading marker, hint at what lies inside. Cans of paint, grease, and lubricant sit precariously on the edges of workbenches, their lids half-open or missing entirely.
-[paragraph break]
+
 The center of the room is dominated by a large desk scarred with years of use. A vise clamp holds a bent piece of metal in place, while a spread of loose wires, gears, and springs litter the surface. A single, broken fluorescent light hangs from the ceiling.
-[paragraph break]
+
 In one corner, a disassembled ride mechanism sits, its inner workings exposed like the guts of a machine. Chains and pulleys dangle from hooks overhead, their metallic clink echoing faintly as they sway slightly with the vibration of the rides outside. A half-drained mug of coffee sits forgotten on a stool nearby, next to a grease-stained manual lying open to a random page.
-[paragraph break]
-The walls bear evidence of the room’s purpose: faded safety posters warning of hazards, a corkboard pinned with ride maintenance schedules and hastily scribbled notes, and a faded photograph of the carnival in its prime. A clock ticks faintly in the background, though its hands don’t seem to match the current time.
-[paragraph break]
+
+The walls bear evidence of the room’s purpose: faded safety posters warning of hazards, a cork board pinned with ride maintenance schedules and hastily scribbled notes, and a faded photograph of the carnival in its prime. A clock ticks faintly in the background, though its hands don’t seem to match the current time.
+
 The floor is uneven and gritty, coated in a fine layer of dust and littered with stray nails and scraps of metal. In one corner, a toolbox sits half-open, its contents spilling out as though abandoned mid-task. Nearby, a rickety fan struggles to spin, offering little relief from the oppressive heat.
-[paragraph break]
+
 Despite the disarray, the room hums with purpose. This is the beating heart of the carnival’s machinery, a hidden realm where the magic of the attractions is kept alive by grease-stained hands and sheer determination.". 
 
 [ This is the code that breaks the opening]
@@ -807,7 +891,7 @@ The cans of paint, grease, and lubricant are here.
 Section 3 - Crawl Space
 
 The Crawl Space is a dark room. The Crawl Space is south of Maintenance Office. "The crawl space beneath the carnival ride is a tight, claustrophobic tunnel shrouded in darkness and filled with the hum of machinery above. The air is stale and heavy, carrying the sharp metallic scent of oil and the faint tang of rust. Every sound is amplified in the confined space—the groaning of steel beams, the clanking of chains, and the rhythmic thrum of motors driving the ride above.
-[paragraph break]
+
 The ground is uneven, a mix of packed dirt and loose gravel scattered with forgotten tools, scraps of metal, and tangled wires. Overhead, a network of pipes and cables crisscross the space, some wrapped in fraying insulation that crackles faintly as you crawl past. Small puddles of murky water collect in dips on the floor, their surfaces rippling with vibrations from the ride’s movement."
 
 The Crimson Door is west of the Crawl Space and east of the Gallows Room. The Crimson Door is a closed locked door. The description of the Crimson door is "It's an crimson colored door with the word 'Gallows' written on it." The silver key unlocks it.
@@ -815,13 +899,13 @@ The Crimson Door is west of the Crawl Space and east of the Gallows Room. The Cr
 Section 4 - Mechanical Room North
 
 The Mechanical Room North is a dark room. The Mechanical Room North is south of the Crawl Space. "The north mechanical room is smaller and more focused, housing the auxiliary systems that support the ride’s operation. It’s quieter than the south room, though the hum of capacitors and relays creates a constant, low background noise. Rows of electrical panels line the walls, each labeled with functions such as 'Lighting Controls,' 'Brake Systems', and 'Emergency Shutdown'. Smaller cables and conduits run along the walls, connecting these systems to the main hub in the south room.
-[paragraph break]
+
 In one corner, a hydraulic pump and reservoir control specific mechanisms of the ride, such as lifting arms or rotating platforms. Pressure gauges flicker intermittently, and the occasional hiss of fluid escaping creates a sharp contrast to the otherwise subdued atmosphere. A small generator sits nearby, its housing slightly dented but functional, ready to activate in case of a power failure.
-[paragraph break]
+
 A compact workbench is tucked against the eastern wall, strewn with tools and coiled wires. Above it, shelves are stacked with neatly labeled replacement parts: fuses, cables, and hydraulic tubing. A faded diagram of the ride’s layout is pinned to the wall nearby, marked with annotations in red ink from previous maintenance efforts.
-[paragraph break]
+
 The lighting is dimmer here, provided by a single hanging bulb that casts soft shadows across the room. The air feels cooler and slightly damp, with a faint smell of mildew mixing with the metallic tang of the machinery.
-[paragraph break]
+
 The north mechanical room functions as a support system, ensuring that auxiliary processes run smoothly and that emergency backups are ready to deploy if needed. Though quieter and less imposing than its southern counterpart, it is just as critical to the ride’s overall operation." 
 
 The toolbox is a closed openable container in the Mechanical Room North. The toolbox contains the monkey wrench, channel locks, pliers, and a hammer.
@@ -831,13 +915,13 @@ The Emerald Door is west of the Mechanical Room North and east of the Stake Room
 Section 5 - Mechanical Room South
 
 The Mechanical Room South is a dark room. The Mechanical Room South is south of the Mechanical Room North. "The south mechanical room is the heart of the carnival ride, a large, noisy space where the primary systems are housed. The room is dominated by a massive motor, its rhythmic hum filling the air as it drives the ride’s main mechanics. Thick belts and pulleys extend from the motor to a series of gears and drive shafts, each component working in seamless coordination to power the ride.
-[paragraph break]
+
 The walls are lined with heavy-duty electrical panels, their surfaces marked with warning labels like 'High Voltage' and 'Do Not Open While Powered'. Bright indicator lights blink in greens and reds, providing a visual heartbeat to the room’s constant activity. Overhead, insulated wires and steel conduits run along the ceiling, their routes clearly labeled but seemingly endless.
-[paragraph break]
+
 A workbench along one wall is cluttered with tools—wrenches, screwdrivers, and pliers—neatly arranged next to containers of spare parts like bolts, washers, and lubricants. Manuals and maintenance logs sit open, their pages marked with grease-stained fingerprints. The faint smell of oil and metal pervades the air, along with a hint of ozone from the electrical systems.
-[paragraph break]
+
 A cooling fan whirs in the corner, its blades spinning in a futile attempt to temper the room’s warmth. The sound of chains clinking occasionally breaks through the hum, accompanied by the sharp hiss of hydraulic fluid releasing pressure. The floor is a patchwork of metal grates and concrete, worn smooth in some areas by years of use.
-[paragraph break]
+
 The south mechanical room is brightly lit, with overhead fluorescent lights encased in protective wire cages. This is the main operations hub, where the power of the ride is generated and controlled, ensuring its thrilling movements stay in sync." 
 
 The Grey Door is west of the Mechanical Room South and east of the Dungeon. The Grey Door is a closed locked door. The description of the Grey door is "It's a grey colored door with the word 'Dungeon' written on it." The silver key unlocks it.
@@ -845,17 +929,17 @@ The Grey Door is west of the Mechanical Room South and east of the Dungeon. The 
 Section 6 - Generator Room
 
 The Generator Room is a dark room. The Generator Room is south of the Mechanical Room South. "The generator room is a compact, industrial space tucked away from the vibrant chaos of the carnival, where the hum and flicker of electricity are birthed to power the attractions. The walls are constructed of reinforced concrete, their surfaces marked with grime, oil streaks, and the faint outlines of graffiti left by past workers. The room smells of diesel fuel, hot metal, and the faint tang of ozone, mingled with the earthy scent of dampness from the surrounding ground.
-[paragraph break]
+
 At the center of the room sits the main generator, a hulking, metallic beast of machinery. Its steel casing is scuffed and dented from years of use, though it still functions with a steady, low rumble that resonates through the floor. Thick cables, black and rubberized, extend like veins from the generator to the room’s walls, where they feed into an array of junction boxes and circuit breakers.
-[paragraph break]
+
 The generator’s control panel is mounted to one side, cluttered with buttons, switches, and gauges. Labels, many peeling or faded, identify each component: 'Fuel Intake', 'Voltage Control', 'Emergency Shutoff'. A small display screen flickers with real-time readouts, showing power levels and load distribution to the various carnival attractions.
-[paragraph break]
+
 The floor is made of rough, uneven concrete, with small puddles of spilled fuel or condensation pooling in its crevices. Along the walls, shelves are stacked with spare parts—fuel filters, spark plugs, and coils of insulated wire. Tools are scattered on a nearby workbench, alongside a canister of grease and a well-worn maintenance manual.
-[paragraph break]
+
 The air is thick and warm, vibrating faintly with the generator’s operation. A vent in the corner struggles to extract the heat, its fan spinning with a faint, rhythmic whir. The dim lighting in the room comes from a single industrial bulb encased in a protective cage, casting harsh shadows across the machinery and walls.
-[paragraph break]
+
 In one corner, a row of diesel fuel canisters stands neatly arranged, their metallic surfaces gleaming under the light. A faded safety poster hangs above them, its message barely legible: 'Fuel Safely—No Open Flames!'
-[paragraph break]
+
 Despite its utilitarian design, the room carries an air of importance. The generator room is the heartbeat of the carnival, its steady output ensuring that the lights flash, the rides whirl, and the sounds of joy and terror continue uninterrupted. Yet, in its stark isolation, it feels oddly disconnected from the lively world it powers, a quiet reminder of the machinery behind the magic." 
 
 The Indigo Door is west of the Generator Room and east of the Guillotine Room. The Indigo Door is a closed locked door. The description of the Indigo door is "It's a indigo colored door with the word 'Guillotine' written on it." The silver key unlocks it.
@@ -881,45 +965,77 @@ This room is oozing with electromagnetic energy. You can feel your hair stand on
 [BUGBUG Uncomment before release]
 [Instead of going from the Electrical Room:
 	move the player to a random adjacent room.]
-	
-The Electrical Closet Eleven is a dark room. The Electrical Room Eleven is northwest of the Electrical Room. "You are in a section of the electrical room. There is an electrical panel here. There is an exit to the south east." Electrical Panel Eleven is a closed openable container in Electrical Closet Eleven. Electrical Panel Eleven is scenery. The printed name of Electrical Panel Eleven is "the electrical panel". Understand "panels" as panel. The description is "This is a standard issue 200 amp electrical panel supplying 220 power throughout the ride. The electrical panel is [if Electrical Panel Eleven is open]open[otherwise]closed[end if]." Socket Eleven is in Electrical Panel Eleven. The printed name of Socket Eleven is "the socket". Socket Eleven is a container. The description of Socket Eleven is "This is a socket. A fuse probably goes in here."
 
-instead of putting when the noun is the Khaki Fuse and the second noun is Socket Eleven:
+[Electrical Closet Eleven]	
+The Electrical Closet Eleven is a dark room. The Electrical Room Eleven is northwest of the Electrical Room. "You are in a section of the electrical room. There is an electrical panel here. There is an exit to the south east." 
+
+Electrical Panel Eleven is a closed openable container in Electrical Closet Eleven. Electrical Panel Eleven is scenery. The printed name of Electrical Panel Eleven is "the electrical panel". Understand "panels" as panel. The description is "This is a standard issue 200 amp electrical panel supplying 220 power throughout the ride. The electrical panel is [if Electrical Panel Eleven is open]open[otherwise]closed[end if]." 
+
+Socket Eleven is in Electrical Panel Eleven. The printed name of Socket Eleven is "the socket". Socket Eleven is a container. Socket Eleven is fixed in place. The description of Socket Eleven is "This is a socket. A fuse probably goes in here. The socket [if socket Eleven is empty]is empty.[otherwise]contains [list of things in socket Eleven].[end if]"
+
+instead of inserting when the noun is the Khaki Fuse and the second noun is Socket Eleven:
 	say "Done.";
 	increase score by 5;
 	now the Khaki Fuse is in Socket Eleven.
 
-The Electrical Closet Nine is a dark room. Electrical Closet Nine is west of the Electrical Room. "You are in a section of the electrical room. There is an electrical panel here. There is an exit to the east." Electrical Panel Nine is closed openable container in Electrical Closet Nine. Electrical Panel Nine is scenery. The printed name of Electrical Panel Nine is "the electrical panel". Understand "panels" as panel. The description is "This is a standard issue 200 amp electrical panel supplying 220 power throughout the ride. The electrical panel is [if Electrical Panel Nine is open]open[otherwise]closed[end if]." Socket Nine is in Electrical Panel Nine. The printed name of Socket Nine is "the socket". Socket Nine is a container. The description of Socket Nine is "This is a socket. A fuse probably goes in here."
+[Electrical Closet Nine]
+The Electrical Closet Nine is a dark room. Electrical Closet Nine is west of the Electrical Room. "You are in a section of the electrical room. There is an electrical panel here. There is an exit to the east." 
 
-instead of putting when the noun is Indigo Fuse and the second noun is the Socket Nine:
+Electrical Panel Nine is closed openable container in Electrical Closet Nine. Electrical Panel Nine is scenery. The printed name of Electrical Panel Nine is "the electrical panel". Understand "panels" as panel. The description is "This is a standard issue 200 amp electrical panel supplying 220 power throughout the ride. The electrical panel is [if Electrical Panel Nine is open]open[otherwise]closed[end if]." 
+
+Socket Nine is in Electrical Panel Nine. The printed name of Socket Nine is "the socket". Socket Nine is a container. Socket Nine is fixed in place. The description of Socket Nine is "This is a socket. A fuse probably goes in here. The socket [if socket Nine is empty]is empty.[otherwise]contains [list of things in socket Nine].[end if]"
+
+instead of inserting when the noun is Indigo Fuse and the second noun is the Socket Nine:
 	say "Done.";
 	increase score by 5;
 	now the Indigo Fuse is in Socket Nine.
-	
-The Electrical Closet Seven is a dark room. Electrical Closet Seven is southwest of the Electrical Room. "You are in a section of the electrical room. There is an electrical panel here. There is an exit to the north east." Electrical Panel Seven is closed openable container in Electrical Closet Seven. Electrical Panel Seven is scenery. The printed name of Electrical Panel Seven is "the electrical panel". Understand "panels" as panel. The description is "This is a standard issue 200 amp electrical panel supplying 220 power throughout the ride. The electrical panel is [if Electrical Panel Seven is open]open[otherwise]closed[end if]." Socket Seven is in Electrical Panel Seven. The printed name of Socket Seven is "the socket". Socket Seven is a container. The description of Socket Seven is "This is a socket. A fuse probably goes in here."
 
-instead of putting when the noun is Grey Fuse and the second noun is the Socket Seven:
+[Electrical Closet Seven]
+The Electrical Closet Seven is a dark room. Electrical Closet Seven is southwest of the Electrical Room. "You are in a section of the electrical room. There is an electrical panel here. There is an exit to the north east." 
+
+Electrical Panel Seven is closed openable container in Electrical Closet Seven. Electrical Panel Seven is scenery. The printed name of Electrical Panel Seven is "the electrical panel". Understand "panels" as panel. The description is "This is a standard issue 200 amp electrical panel supplying 220 power throughout the ride. The electrical panel is [if Electrical Panel Seven is open]open[otherwise]closed[end if]." 
+
+Socket Seven is in Electrical Panel Seven. The printed name of Socket Seven is "the socket". Socket Seven is a container. Socket Seven is fixed in place. The description of Socket Seven is "This is a socket. A fuse probably goes in here. The socket [if socket Seven is empty]is empty.[otherwise]contains [list of things in socket Seven].[end if]"
+
+instead of inserting when the noun is Grey Fuse and the second noun is the Socket Seven:
 	say "Done.";
 	increase score by 5;
-	now the Indigo Fuse is in Socket Seven.
+	now the Grey Fuse is in Socket Seven.
 
-The Electrical Closet Five is a dark room. Electrical Closet Five is southeast of the Electrical Room."You are in a section of the electrical room. There is an electrical panel here. There is an exit to the north west." Electrical Panel Five is closed openable container in Electrical Closet Five. Electrical Panel Five is scenery. The printed name of Electrical Panel Five is "the electrical panel". Understand "panels" as panel. The description is "This is a standard issue 200 amp electrical panel supplying 220 power throughout the ride. The electrical panel is [if Electrical Panel Five is open]open[otherwise]closed[end if]." Socket Five is in Electrical Panel Five. The printed name of Socket Five is "the socket". Socket Five is a container. The description of Socket Five is "This is a socket. A fuse probably goes in here."
+[Electrical Closet Five]
+The Electrical Closet Five is a dark room. Electrical Closet Five is southeast of the Electrical Room."You are in a section of the electrical room. There is an electrical panel here. There is an exit to the north west." 
 
-instead of putting when the noun is Emerald Fuse and the second noun is the Socket Five:
+Electrical Panel Five is closed openable container in Electrical Closet Five. Electrical Panel Five is scenery. The printed name of Electrical Panel Five is "the electrical panel". Understand "panels" as panel. The description is "This is a standard issue 200 amp electrical panel supplying 220 power throughout the ride. The electrical panel is [if Electrical Panel Five is open]open[otherwise]closed[end if]." 
+
+Socket Five is in Electrical Panel Five. The printed name of Socket Five is "the socket". Socket Five is a container. Socket Five is fixed in place. The description of Socket Five is "This is a socket. A fuse probably goes in here. The socket [if socket Five is empty]is empty.[otherwise]contains [list of things in socket Five].[end if]"
+
+instead of inserting when the noun is Emerald Fuse and the second noun is the Socket Five:
 	say "Done.";
 	increase score by 5;
 	now the Emerald Fuse is in Socket Five.
 
-The Electrical Closet Three is a dark room. Electrical Closet Three is east of the Electrical Room. "You are in a section of the electrical room. There is an electrical panel here. There is an exit to the west." Electrical Panel Three is closed openable container in Electrical Closet Three. Electrical Panel Three is scenery. The printed name of Electrical Panel Three is "the electrical panel". Understand "panels" as panel. The description is "This is a standard issue 200 amp electrical panel supplying 220 power throughout the ride. The electrical panel is [if Electrical Panel Three is open]open[otherwise]closed[end if]." Socket Three is in Electrical Panel Three. The printed name of Socket Three is "the socket". Socket Three is a container. The description of Socket Three is "This is a socket. A fuse probably goes in here."
+[Electrical Closet Three]
+The Electrical Closet Three is a dark room. Electrical Closet Three is east of the Electrical Room. "You are in a section of the electrical room. There is an electrical panel here. There is an exit to the west." 
 
-instead of putting when the noun is Crimson Fuse and the second noun is the Socket Three:
+Electrical Panel Three is closed openable container in Electrical Closet Three. Electrical Panel Three is scenery. The printed name of Electrical Panel Three is "the electrical panel". Understand "panels" as panel. The description is "This is a standard issue 200 amp electrical panel supplying 220 power throughout the ride. The electrical panel is [if Electrical Panel Three is open]open[otherwise]closed[end if]." 
+
+Socket Three is in Electrical Panel Three. The printed name of Socket Three is "the socket". Socket Three is a container. Socket Three is fixed in place. The description of Socket Three is "This is a socket. A fuse probably goes in here. The socket [if socket Three is empty]is empty.[otherwise]contains [list of things in socket Three].[end if]"
+
+instead of inserting when the noun is Crimson Fuse and the second noun is the Socket Three:
 	say "Done.";
 	increase score by 5;
 	now the Crimson Fuse is in Socket Three.
 
-The Electrical Closet One is a dark room. The Electrical Closet One is northeast of the Electrical Room.  "You are in a section of the electrical room. There is an electrical panel here. There is an exit to the south west." Electrical Panel One is closed openable container in Electrical Closet One. Electrical Panel One is scenery. The printed name of Electrical Panel One is "the electrical panel". Understand "panels" as panel. The description is "This is a standard issue 200 amp electrical panel supplying 220 power throughout the ride. The electrical panel is [if Electrical Panel One is open]open[otherwise]closed[end if]." Socket One is in Electrical Panel One. The printed name of Socket One is "the socket". Socket One is a container. The description of Socket One is "This is a socket. A fuse probably goes in here." The silver key is in the Electrical Closet One. The description of the silver key is "This is a small silver key. I wonder what it unlocks."
+[Electrical Closet One] 
+The Electrical Closet One is a dark room. The Electrical Closet One is northeast of the Electrical Room.  "You are in a section of the electrical room. There is an electrical panel here. There is an exit to the south west." 
 
-instead of putting when the noun is Aqua Fuse and the second noun is the Socket One:
+Electrical Panel One is closed openable container in Electrical Closet One. Electrical Panel One is scenery. The printed name of Electrical Panel One is "the electrical panel". Understand "panels" as panel. The description is "This is a standard issue 200 amp electrical panel supplying 220 power throughout the ride. The electrical panel is [if Electrical Panel One is open]open[otherwise]closed[end if]." 
+
+Socket One is in Electrical Panel One. The printed name of Socket One is "the socket". Socket One is a container. Socket One is fixed in place. The description of Socket One is "This is a socket. A fuse probably goes in here. The socket [if socket One contains nothing]is empty.[otherwise]contains [list of things in socket One].[end if]".
+
+The silver key is in the Electrical Closet One. The description of the silver key is "This is a small silver key. I wonder what it unlocks."
+
+instead of inserting when the noun is Aqua Fuse and the second noun is the Socket One:
 	say "Done.";
 	increase score by 5;
 	now the Aqua Fuse is in Socket One.
@@ -927,17 +1043,17 @@ instead of putting when the noun is Aqua Fuse and the second noun is the Socket 
 Section 8 - Storage Room
 
 The Storage Room is a dark room. The Storage Room is south of the Electrical Room. "The carnival storage room is a chaotic yet oddly functional space, tucked away from the flashing lights and lively crowds. Its walls are made of corrugated metal or weathered wood, with patches of rust and peeling paint revealing the room's age. The faint smell of grease, dust, and damp canvas hangs in the air, mingled with a hint of stale popcorn and cotton candy from the midway outside.
-[paragraph break]
+
 Shelves line the walls, crammed with a mishmash of supplies. Boxes of lightbulbs, spools of electrical wiring, and stacks of replacement parts for rides and games are piled haphazardly, some labeled in fading marker, others left to mystery. A collection of brightly colored pennant flags and strings of carnival lights dangles from hooks, their wires tangled into an unruly knot.
-[paragraph break]
-In one corner, a pile of folded canvas tarps and tent poles leans precariously against the wall, ready to be deployed for setting up new attractions or repairing existing ones. Nearby, oversized crates are labeled with blocky stencils: 'GAME PRIZES', RIDE PARTS', and 'SPARE SIGNAGE'. One crate is open, revealing a jumble of stuffed animals, rubber balls, and plastic toys meant to delight lucky winners.
-[paragraph break]
+
+In one corner, a pile of folded canvas tarps and tent poles leans precariously against the wall, ready to be deployed for setting up new attractions or repairing existing ones. Nearby, over sized crates are labeled with blocky stencils: 'GAME PRIZES', RIDE PARTS', and 'SPARE SIGNAGE'. One crate is open, revealing a jumble of stuffed animals, rubber balls, and plastic toys meant to delight lucky winners.
+
 The center of the room is dominated by larger items—spare seats for rides, unassembled game booths, and the occasional disassembled attraction part, like a faded carousel horse or a section of a Ferris wheel’s gondola. These are covered in tarps or wrapped in protective blankets, their surfaces scratched and worn from transport and use.
-[paragraph break]
-A small, battered desk sits near the entrance, cluttered with maintenance logs, mismatched tools, and a few empty coffee cups. Above it, a corkboard displays a chaotic array of pinned notes: ride schedules, repair requests, and a map of the carnival grounds with certain areas circled in red. A single fluorescent light flickers overhead, casting uneven shadows across the room and giving it a slightly eerie feel.
-[paragraph break]
+
+A small, battered desk sits near the entrance, cluttered with maintenance logs, mismatched tools, and a few empty coffee cups. Above it, a cork board displays a chaotic array of pinned notes: ride schedules, repair requests, and a map of the carnival grounds with certain areas circled in red. A single fluorescent light flickers overhead, casting uneven shadows across the room and giving it a slightly eerie feel.
+
 The floor is a patchwork of concrete and dirt, strewn with stray bolts, screws, and scraps of paper. In the darker corners, the scuttling of a rat or the glint of a spider’s web serves as a reminder that this space, while essential, is far from pristine.
-[paragraph break]
+
 The carnival storage room is not glamorous, but it is vital—a hidden world of spare parts, forgotten treasures, and organized chaos that keeps the carnival running smoothly. It’s a backstage glimpse into the hard work and improvisation that make the magic possible."
 
 The Khaki Door is west of the Storage Room and east of the Ride Exit. The Khaki Door is a closed locked door. The description of the Khaki door is "It's a khaki colored door with the word 'Ride Exit' written on it." The silver key unlocks it.
