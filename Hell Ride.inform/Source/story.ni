@@ -29,10 +29,12 @@ Use scoring.
 Use American Dialect.
 Use serial comma.
 Use maximum things understood at once of at least 200.
-The maximum score is 45.
+The maximum score is 50.
 The block giving rule is not listed in the check giving it to rules.
 
-Chapter 2- Money Mechanics
+Chapter 2 - New Mechanics, Actions, Phrases
+
+Section 1- Money Mechanics
 
 Price is a kind of value. $10.99 specifies a price. A thing has a price. The price of a thing is usually $0.00. After examining something for sale, say "It can be yours for [the price of the noun]."
 
@@ -70,7 +72,7 @@ Instead of buying something free:
 Instead of buying the money:
 	say "The money belongs to you; you buy things with it."
 	
-Chapter 3- Drink Mechanics
+Section 2- Drink Mechanics
 
 A volume is a kind of value. 15.9 fl oz specifies a volume with parts ounces and tenths (optional, preamble optional).
 
@@ -152,14 +154,15 @@ Report pouring it into:
 	
 Understand the liquid property as describing a fluid container. Understand "of" as a fluid container.
 
-Chapter 4 - Underlying Mechanics
+Section 3 - Underlying Mechanics
 
 Underlying relates various things to one thing. The verb to underlie means the underlying relation. The verb to be under means the underlying relation. The verb to be beneath means the underlying relation.
 	
-Instead of looking under a thing which is underlaid by something (called the lost object):
+[This must be duplicated for each fuse in order to work properly]
+[Instead of looking under a thing which is underlaid by something (called the lost object):
 	say "You find [the list of things which underlie the noun]!";
 	now every thing which underlies the noun is carried by the player;
-	now every thing which underlies the noun does not underlie the noun.
+	now every thing which underlies the noun does not underlie the noun.]
 	
 Hiding it under is an action applying to one carried thing and one thing. Understand "put [something preferably held] under [something]" as hiding it under. Understand "hide [something preferably held] under [something]" as hiding it under. Understand the commands "shove" and "conceal" and "stick" as "hide".
 
@@ -173,14 +176,102 @@ Carry out hiding it under:
 Report hiding it under:
 	say "You shove [the noun] out of sight beneath [the second noun]."
 	
-Chapter 5- The Player
+Section 4 - Flashlight Mechanics
+
+Showing action of something is an activity.
+
+Rule for showing action of something (called item):
+	if the item is switched on, say "[The item] is switched on.";
+	otherwise say "[The item] is switched off."
+
+The new described devices rule is listed instead of the examine devices rule in the carry out examining rules.
+
+This is the new described devices rule:
+	if the noun is a device:
+		carry out the showing action activity with the noun;
+		now examine text printed is true.
+
+Report switching on something:
+	say "You flip a switch. ";
+	carry out the showing action activity with the noun instead.
+
+An electric lamp is a kind of device.
+
+Rule for showing action of an electric lamp (called item):
+	if the item is switched on, say "[The item] is lit[if the number of visible lit things is greater than 1], competing with [the list of visible lit things which are not the item][end if].";
+	otherwise say "[The item] is dark."
+	
+Carry out switching on an electric lamp: now the noun is lit. Carry out switching off an electric lamp: now the noun is unlit.
+
+The flashlight is an electric lamp. understand "light" as flashlight. The description of the flashlight is "This is a flashlight. It[']s a nice one."
+
+Rule for showing action of the flashlight:
+	if the flashlight is switched on, say "A strong, narrow beam of light shines from the flashlight.";
+	otherwise say "It is currently switched off."
+	
+After waiting when the location is dark:
+	say "It's pitch black. You might be eaten by a grue!"
+	
+Before printing the name of a lit electric lamp, say "lit ".
+Before printing the name of an unlit lit electric lamp, say "extinguished ".
+	
+Section 5 - Miscellaneous
+
+Test Misc with "get blueberries / xyzzy / hello sailor / please get the dime".
+
+A thing can be seen or unseen.
+
+Carry out examining a thing:
+	now the noun is seen.
+
+
+Section 6 - Hello Sailor
+
+Asking someone about something is speech. Telling someone about something is speech. Answering someone that something is speech. Asking someone for something is speech.
+
+The Sailor is a man. The sailor is in the Parking Lot. The sailor is scenery.
+
+Helloing is an action applying to one thing. Understand "hello [someone]" as helloing. understand "[someone] hello" as helloing.
+
+Instead of helloing the sailor:
+	say "Nothing happens here."
+	
+Instead of speech when the noun is Sailor:
+	say "Nothing happens here."
+	
+every turn:
+	now the sailor is in the location.
+	
+Section 7 - xyzzy
+
+Understand "xyzzy" or "say xyzzy" or "cast xyzzy" as casting xyzzy.
+
+Casting xyzzy is an action applying to nothing.
+
+Carry out casting xyzzy:
+	say "A voice nearby says 'Plugh'."
+	
+Section 8 - Scored Rooms
+
+A room can be scored or unscored.
+
+Carry out going to a unvisited scored room:
+	increase the score by 5.
+	
+Chapter 3- The Player
 
 The description of the player is "You are despondent given that you and your date just had a huge fight and they stormed off. Maybe visiting the attractions at the carnival will make you feel better." 
 
 Instead of examining the player:
 	say "Oh, stop fussing. You look fine."
+	
+After reading a command:
+	if the player's command includes "please":
+		say "Please do not say please.";
+		reject the player's command.
 
-Chapter 6- Figures and Sounds
+
+Chapter 4- Figures and Sounds
 
 Figure of Hell Ride is the file "HellRide.png".
 
@@ -200,45 +291,7 @@ Figure of HellRideEntrance is the file "RideEntrance.png".
 
 Sound of Strongman Bell is the file "StrongmanBell.ogg".
 
-Chapter 7- Miscellaneous Goodies
-
-Test Misc with "get blueberries / xyzzy / hello sailor / please get the dime".
-
-A thing can be seen or unseen.
-
-Carry out examining a thing:
-	now the noun is seen.
-	
-After reading a command:
-	if the player's command includes "please":
-		say "Please do not say please.";
-		reject the player's command.
-
-[hello sailor]
-Asking someone about something is speech. Telling someone about something is speech. Answering someone that something is speech. Asking someone for something is speech.
-
-The Sailor is a man. The sailor is in the Parking Lot. The sailor is scenery.
-
-Helloing is an action applying to one thing. Understand "hello [someone]" as helloing. understand "[someone] hello" as helloing.
-
-Instead of helloing the sailor:
-	say "Nothing happens here."
-	
-Instead of speech when the noun is Sailor:
-	say "Nothing happens here."
-	
-every turn:
-	now the sailor is in the location.
-	
-[xyzzy]
-Understand "xyzzy" or "say xyzzy" or "cast xyzzy" as casting xyzzy.
-
-Casting xyzzy is an action applying to nothing.
-
-Carry out casting xyzzy:
-	say "A voice nearby says 'Plugh'."
-	
-Chapter 8 - Testing descriptions - Not for release
+Chapter 5 - Testing descriptions - Not for release
 
 [When play begins (this is the run property checks at the start of play rule):
 	repeat with item running through things:
@@ -248,8 +301,6 @@ Chapter 8 - Testing descriptions - Not for release
 Part 2 - The Game
 
 Chapter 1 - The Midway
-
-The Midway is a region. Parking Lot, Kiosk, Concession Stand, High Striker, Show Facade, Show Tent, and Head of the Line are in the Midway;
 
 Section 1 - Parking Lot
 
@@ -496,12 +547,6 @@ LittleEgyptAuto ends when the number of filled rows in the Table of LittleEgypt 
 
 Section 7 - Head of the Line
 
-Before going south when the location is the kiosk and the Head of the Line is unvisited:
-	display Figure of HellRideEntrance.
-	
-Before looking when the location is the Head of the Line:
-	display Figure of HellRideEntrance.
-
 Head of the Line is a room. Head of the Line is south of Kiosk. Head of the Line is north of Ride Entrance. "You are standing in front of a ticket taker with his hand open waiting for your ticket. The entrance to the ride is south of here."
 
 The Ride Attendent is a man in Head of the Line. The description of the Ride Attendent is "This is another bored teenager. His thoughts are entirely focused on a cheeseburger for lunch.";
@@ -510,11 +555,15 @@ Check going south when the location is Head of the Line and the Ride Attendent d
 	say "You[']ll need a ticket to go that way.";
 	stop the action.
 
-Chapter 2 - The Ride
-
-HellRide is a region. Ride Entrance, Stocks Room, Gallows Room, Stake Room, Dungeon, Guillotine Room, Ride Exit is in HellRide.
+Chapter 2 - Hell Ride
 
 Section 1 - Ride Entrance
+
+Before going south when the location is the kiosk and the Head of the Line is unvisited:
+	display Figure of HellRideEntrance.
+	
+Before looking when the location is the Head of the Line:
+	display Figure of HellRideEntrance.
 
 Test Ride with "get blueberries / s / buy hell ride ticket / s / give ticket to attendent / s / enter car / wait / z / z / z / z / z / z / z".
 
@@ -569,13 +618,39 @@ Around the stocks, the townsfolk revel in their collective cruelty. A wiry man l
 The square is alive with noise: the raucous laughter of the crowd, the occasional sharp crack of a thrown object against the wood, and the soft, pained murmurs of the punished. A passing bell tolls faintly in the distance, but here it is drowned out by the cruel symphony of the jeering mob.
 [paragraph break]
 Above it all, the gray sky looms, heavy with the promise of rain, as if nature itself disapproves of the spectacle. Yet the crowd pays no mind, delighting in their collective judgment, each jeer a reminder that today’s entertainment is another's living nightmare." 
-The Aqua Door is west of the Maintenance Office. 
-The wooden stocks are here. The wooden stocks are a supporter. The description of the wooden stocks is "At the square's center stand a row of crude wooden stocks, their heavy beams stained from years of weather and use. Iron clasps hold the unfortunate captives by their wrists and necks, their bodies forced into unnatural, humiliating postures." The Aqua Fuse is scenery in the Stocks Room. The Aqua Fuse underlies the stocks. The description of the aqua fuse is "This is an electrical fuse. It is aqua colored. The same as the door."
 
-Instead of looking under the stocks: 
-	increase score by 5;
-	now the player has the aqua fuse;
-	continue the action.
+The wooden stocks are here. The wooden stocks are a supporter. The wooden stocks are fixed in place. The description of the wooden stocks is "At the square's center stand a row of crude wooden stocks, their heavy beams stained from years of weather and use. Iron clasps hold the unfortunate captives by their wrists and necks, their bodies forced into unnatural, humiliating postures." 
+
+The Aqua Fuse is scenery in the Stocks Room. The Aqua Fuse underlies the wooden stocks. The aqua fuse can be found or lost. The aqua fuse is lost. The description of the aqua fuse is "This is an electrical fuse. It is aqua colored. The same as the door."
+
+Instead of looking under a thing which is underlaid by something (called the lost object):
+	say "You find [the list of things which underlie the noun]!";
+	now every thing which underlies the noun is carried by the player;
+	now every thing which underlies the noun does not underlie the noun;
+	if the player carries the aqua fuse for the first time and the aqua fuse is lost:
+		say "Taken.";
+		increase score by 5;
+		if the player carries the aqua fuse, now the aqua fuse is found;
+	if the player carries the crimson fuse for the first time and the crimson fuse is lost:
+		say "Taken.";
+		increase score by 5;
+		if the player carries the crimson fuse, now the crimson fuse is found;
+	if the player carries the emerald fuse for the first time and the emerald fuse is lost:
+		say "Taken.";
+		increase score by 5;
+		if the player carries the emerald fuse, now the emerald fuse is found;
+	if the player carries the grey fuse for the first time and the grey fuse is lost:
+		say "Taken.";
+		increase score by 5;
+		if the player carries the grey fuse, now the grey fuse is found;
+	if the player carries the indigo fuse for the first time and the indigo fuse is lost:
+		say "Taken.";
+		increase score by 5;
+		if the player carries the indigo fuse, now the indigo fuse is found;
+	if the player carries the khaki fuse for the first time and the khaki fuse is lost:
+		say "Taken.";
+		increase score by 5;
+		if the player carries the khaki fuse, now the khaki fuse is found.
 
 Section 3 - Gallows Room
 
@@ -591,12 +666,9 @@ Above it all, the bell tower tolls, its mournful chime echoing through the squar
 [paragraph break]
 The executioner steps forward, adjusting the noose around the man’s neck with a practiced efficiency. The crowd falls silent, the weight of the moment hanging heavier than the rope itself. Somewhere in the distance, thunder rumbles faintly, as though the heavens themselves are bracing for what is to come."
 
-The gallows platform is here. The gallows platform is a supporter. Understand "gallows" as gallows platform. The description of the gallows platform is "At the center of the square, rising like a grim monument to mortality, stands the gallows—a wooden platform, darkened by age and weather, with thick ropes hanging like vipers poised to strike." The Crimson Fuse is scenery in the Gallows Room. The Crimson Fuse underlies the gallows platform. The description of the crimson fuse is "This is an electrical fuse. It is crimson colored. The same as the door."
+The gallows platform is here. The gallows platform is a supporter. The gallows platform is fixed in place. Understand "gallows" as gallows platform. The description of the gallows platform is "At the center of the square, rising like a grim monument to mortality, stands the gallows—a wooden platform, darkened by age and weather, with thick ropes hanging like vipers poised to strike." 
 
-Instead of looking under the platform: 
-	increase score by 5;
-	now the player has the crimson fuse;
-	continue the action.
+The Crimson Fuse is scenery in the Gallows Room. The Crimson Fuse underlies the gallows platform. The crimson fuse can be found or lost. The crimson fuse is lost. The description of the crimson fuse is "This is an electrical fuse. It is crimson colored. The same as the door."
 
 Section 4 - Stake Room
 
@@ -612,12 +684,9 @@ Above, the gray clouds hang low, as if nature itself mourns the scene unfolding 
 [paragraph break]
 As the flames consume the pyre, the crowd remains rooted, some transfixed by the spectacle, others quietly slipping away, their faces pale and drawn. The square, once a place of gatherings and life, is now a stage for death, its air heavy with smoke, ash, and the lingering cries of the condemned."
 
-The pyre is scenery in the Stake Room. The pyre is a container. understand "bonfire" and "fire" as the pyre. The description of the pyre is "At the center, three wooden stakes rise ominously from a circular pyre of logs and kindling, their rough surfaces darkened by smoke from countless such scenes before. Bound tightly to these stakes are three women, their wrists and ankles secured with coarse, heavy ropes. Their faces tell different stories—one of defiance, another of resignation, and the third of pure terror." The Emerald Fuse is in the pyre. The description of the emerald fuse is "This is an electrical fuse. It is emerald colored. The same as the door."
+The pyre is scenery in the Stake Room. The pyre is a container. understand "bonfire" and "fire" as the pyre. The description of the pyre is "At the center, three wooden stakes rise ominously from a circular pyre of logs and kindling, their rough surfaces darkened by smoke from countless such scenes before. Bound tightly to these stakes are three women, their wrists and ankles secured with coarse, heavy ropes. Their faces tell different stories—one of defiance, another of resignation, and the third of pure terror." 
 
-Instead of taking the emerald fuse: 
-	say "Taken.";
-	increase score by 5;
-	now the player has the emerald fuse;
+The Emerald Fuse is in the pyre. The emerald fuse can be found or lost. The emerald fuse is lost. The description of the emerald fuse is "This is an electrical fuse. It is emerald colored. The same as the door."
 
 Section 5 - Dungeon
 
@@ -635,13 +704,10 @@ Above it all, the dungeon's ceiling is low and oppressive, the occasional scuttl
 [paragraph break]
 This is a place of despair and cruelty, where the line between life and death is blurred, and the only certainty is the inevitability of suffering."
 
-The iron seat is scenery in the Dungeon. The description of the iron seat is "A spiked chair looms in the corner, its cruel design gleaming faintly in the dim light." The Grey Fuse underlies the iron seat. The description of the grey fuse is "This is an electrical fuse. It is grey colored. The same as the door."
-	
-Instead of looking under the iron seat: 
-	increase score by 5;
-	now the player has the grey fuse;
-	continue the action.
+The iron seat is scenery in the Dungeon. The description of the iron seat is "A spiked chair looms in the corner, its cruel design gleaming faintly in the dim light." 
 
+The Grey Fuse underlies the iron seat. The grey fuse can be found or lost. The grey fuse is lost. The description of the grey fuse is "This is an electrical fuse. It is grey colored. The same as the door."
+	
 Section 6 - Guillotine Room
 
 The Guillotine Room is south of the Dungeon. "The public square is a charged space, bustling with a crowd eager to witness the grim spectacle. The sky overhead is a patchwork of gray clouds, casting the cobblestone ground in a somber light. At the center of the square stands a raised wooden platform, stark and imposing, where the grim sentence is to be carried out.
@@ -661,12 +727,9 @@ As the condemned is led toward the guillotine, a crow caws from a nearby rooftop
 [paragraph break]
 There is just lone problem: the guillotine is being raised and lowered by some mechanism. It appears that the timing of the guillotine is off and it is being lowered onto the cars instead of between them. If a person were to be in a car as it passed under the guillotine, they would be decapitated."
 
-The guillotine platform is here. The guillotine platform is a supporter. Understand "scaffold" as guillotine platform. The description of the guillotine platform is "At the center of the square stands a raised wooden platform, stark and imposing, where the grim sentence is to be carried out." The Indigo Fuse is scenery in the Guillotine Room. The Indigo Fuse underlies the guillotine platform. The description of the indigo fuse is "This is an electrical fuse. It is indigo colored. The same as the door."
+The guillotine platform is here. The guillotine platform is a supporter. Understand "scaffold" as guillotine platform. The description of the guillotine platform is "At the center of the square stands a raised wooden platform, stark and imposing, where the grim sentence is to be carried out." 
 
-Instead of looking under the platform: 
-	increase score by 5;
-	now the player has the indigo fuse;
-	continue the action.
+The Indigo Fuse is scenery in the Guillotine Room. The Indigo Fuse underlies the guillotine platform. The indigo fuse can be found or lost. The indigo fuse is lost. The description of the indigo fuse is "This is an electrical fuse. It is indigo colored. The same as the door."
 	
 Section 7 - Ride Exit
 
@@ -684,84 +747,41 @@ Just beyond the fencing, the cheerful sounds and colorful lights of the carnival
 [paragraph break]
 The Hell Ride exit leaves riders not just thrilled, but marked by the eerie experience, a reminder of the fine line between fun and fear that defines the carnival’s darkest attraction."
 
-The merchandise stand is scenery in the Ride Exit. The merchandise stand is a container. Understand "stand" as merchandise. The description of the merchandise is "The stand is bathed in red light, adding to the ominous mood." The Khaki Fuse is in the merchandise stand. The Khaki Fuse underlies the platform. The description of the khaki fuse is "This is an electrical fuse. It is khaki colored. The same as the door."
+The merchandise stand is scenery in the Ride Exit. The merchandise stand is a container. Understand "stand" as merchandise. The description of the merchandise is "The stand is bathed in red light, adding to the ominous mood." 
 
-Instead of taking in the stand: 
-	say "Taken.";
-	increase score by 5;
-	now the player has the khaki fuse;
-	continue the action.
-	
+The Khaki Fuse is in the merchandise stand. The Khaki Fuse underlies the merchandise stand. The khaki fuse can be found or lost. The khaki fuse is lost. The description of the khaki fuse is "This is an electrical fuse. It is khaki colored. The same as the door."
 
 Chapter 3 - Backstage
 
-Backstage is a region. Backstage Entrance, Maintenance Office, Crawl Space, Mechanical Room North, Mechanical Room South, Generator Room, Electrical Room, Electrical Closet One, Electrical Closet Three, Electrical Closet Five, Electrical Closet Seven, Electrical Closet Nine, Electrical Closet Eleven, and Storage Room is in Backstage.
+Section 1 - Dark Passage
 
-Section 1 - Backstage Entrance
+[get the key]
+Test b1 with "get	blueberries / s / buy ticket / s / give ticket to attendent / s / e / l at piles / get flashlight / turn it on / s / s / s / open toolbox / get all from toolbox / s / s / s / ne / get silver key / l at panel / open panel / l at socket / sw / n / n / n / n / n"
 
-Test b with "get	blueberries / s / buy ticket / s / give ticket to attendent / s / e / l at piles / get flashlight / turn it on / s / s / s / open toolbox / get all from toolbox / s / s / s / ne / get silver key / sw".
+[get the fuses]
+Test b2 with "w / l under stocks / e / s / w / l under platform / e / s / w / l in pyre / get fuse from pyre / e / s / w / l under seat / e / s / w / l under platform / e / s / s / w / l under stand / score / i"
+
+[fill the sockets]
 
 Test Backstage with "get	blueberries / s / buy ticket / s / give ticket to attendent / s / e / l at piles / get flashlight / turn it on / s / s / s / open toolbox / get all from toolbox / s / s / s / ne / get silver key / sw / s / w / l in stand / get fuse / n / l under platform / n / l under seat / n / l in pyre / get fuse / n / l under platform / n / l under stocks / n / e / w / n / n / n"
 
-[flashlight mechanics]
-Showing action of something is an activity.
-
-Rule for showing action of something (called item):
-	if the item is switched on, say "[The item] is switched on.";
-	otherwise say "[The item] is switched off."
-
-The new described devices rule is listed instead of the examine devices rule in the carry out examining rules.
-
-This is the new described devices rule:
-	if the noun is a device:
-		carry out the showing action activity with the noun;
-		now examine text printed is true.
-
-Report switching on something:
-	say "You flip a switch. ";
-	carry out the showing action activity with the noun instead.
-
-An electric lamp is a kind of device.
-
-Rule for showing action of an electric lamp (called item):
-	if the item is switched on, say "[The item] is lit[if the number of visible lit things is greater than 1], competing with [the list of visible lit things which are not the item][end if].";
-	otherwise say "[The item] is dark."
-	
-Carry out switching on an electric lamp: now the noun is lit. Carry out switching off an electric lamp: now the noun is unlit.
-
-The flashlight is an electric lamp. understand "light" as flashlight. The description of the flashlight is "This is a flashlight. It[']s a nice one."
-
-Rule for showing action of the flashlight:
-	if the flashlight is switched on, say "A strong, narrow beam of light shines from the flashlight.";
-	otherwise say "It is currently switched off."
-
-Backstage Entrance is a room. Backstage Entrance is east of the Ride Entrance. "This room is backstage at the Hell Ride attraction. The room is littered with bags of trash, piles of junk, and dust bunnies so large they should be paying rent. West is back the way you came from. There an exit to the south."
+Dark Passage is a room. Dark Passage is east of the Ride Entrance. The dark passage is scored. "This room is backstage at the Hell Ride attraction. The room is littered with bags of trash, piles of junk, and dust bunnies so large they should be paying rent. West is back the way you came from. There an exit to the south."
 
 The dust bunnies are scenery. The dust bunnies are here. Understand "bunnies" as dust bunnies.
 The bags of trash are scenery. The bags of trash are here. Understand "bags" and "trash" as bags of trash.
-The pile of junk is a scenery container. The pile of junk is in the backstage entrance. The pile of junk contains the flashlight. Understand "piles" and "junk" as pile of junk. The description of the pile of junk is "In the corner is a pile of junk."
+The pile of junk is a scenery container. The pile of junk is in the dark passage. The pile of junk contains the flashlight. Understand "piles" and "junk" as pile of junk. The description of the pile of junk is "In the corner is a pile of junk."
 
 after examining when the noun is pile of junk:
 	say "You find a flashlight here.";
 
-Before printing the name of a lit electric lamp, say "lit ".
-Before printing the name of an unlit lit electric lamp, say "extinguished ".
-
-After waiting when the location is dark:
-	say "It's pitch black. You might be eaten by a grue!"
-	
+[BUGBUG This is busted]
 After waiting when the location is dark 4 times:
 	say "You have been eaten by a grue. It['] a terrible way to go.";
 	end the story finally.
-	
-After going east when the location is Backstage Entrance and Backstage Entrance is unvisited:
-	say "Walking in the darkness with your arms extended you nearly fall through an open doorway.";
-	increase score by 5;
-	continue the action.
 
 Section 2 - Maintenance Office
 
-The Maintenance Office is a dark room. The maintenance office is south of the backstage entrance. "The maintenance office is a chaotic and dimly lit space tucked away behind the glitz and glamour of the carnival. It smells of grease, sweat, and faintly of popcorn from the midway outside. The air is heavy and warm, thick with the lingering scent of oil and dust stirred up by constant work.
+The Maintenance Office is a dark room. The maintenance office is south of the dark passage. "The maintenance office is a chaotic and dimly lit space tucked away behind the glitz and glamour of the carnival. It smells of grease, sweat, and faintly of popcorn from the midway outside. The air is heavy and warm, thick with the lingering scent of oil and dust stirred up by constant work.
 [paragraph break]
 The walls are lined with cluttered shelves holding an assortment of tools and parts—rusty wrenches, screwdrivers, hammers, bolts, and screws organized (or not) in mismatched containers. Tattered labels, some scrawled in fading marker, hint at what lies inside. Cans of paint, grease, and lubricant sit precariously on the edges of workbenches, their lids half-open or missing entirely.
 [paragraph break]
@@ -862,7 +882,7 @@ This room is oozing with electromagnetic energy. You can feel your hair stand on
 [Instead of going from the Electrical Room:
 	move the player to a random adjacent room.]
 	
-The Electrical Closet Eleven is a dark room. The Electrical Closet Eleven is northwest of the Electrical Room. "You are in a section of the electrical room. There is an electrical panel here. There is an exit to the south east." Electrical Panel Eleven is closed openable container in Electrical Closet Eleven. Electrical Panel Eleven is scenery. The printed name of Electrical Panel Eleven is "the electrical panel". Understand "panels" as panel. The description is "This is a standard issue 200 amp electrical panel supplying 220 power throughout the ride. The electrical panel is [if Electrical Panel Eleven is open]open[otherwise]closed[end if]." Socket Eleven is in Electrical Panel Eleven. The printed name of Socket Eleven is "the socket". Socket Eleven is a container. The description of Socket Eleven is "This is a socket. A fuse probably goes in here."
+The Electrical Closet Eleven is a dark room. The Electrical Room Eleven is northwest of the Electrical Room. "You are in a section of the electrical room. There is an electrical panel here. There is an exit to the south east." Electrical Panel Eleven is a closed openable container in Electrical Closet Eleven. Electrical Panel Eleven is scenery. The printed name of Electrical Panel Eleven is "the electrical panel". Understand "panels" as panel. The description is "This is a standard issue 200 amp electrical panel supplying 220 power throughout the ride. The electrical panel is [if Electrical Panel Eleven is open]open[otherwise]closed[end if]." Socket Eleven is in Electrical Panel Eleven. The printed name of Socket Eleven is "the socket". Socket Eleven is a container. The description of Socket Eleven is "This is a socket. A fuse probably goes in here."
 
 instead of putting when the noun is the Khaki Fuse and the second noun is Socket Eleven:
 	say "Done.";
@@ -922,4 +942,10 @@ The carnival storage room is not glamorous, but it is vital—a hidden world of 
 
 The Khaki Door is west of the Storage Room and east of the Ride Exit. The Khaki Door is a closed locked door. The description of the Khaki door is "It's a khaki colored door with the word 'Ride Exit' written on it." The silver key unlocks it.
 
+Part 3 Regions
 
+The Midway is a region. Parking Lot, Kiosk, Concession Stand, High Striker, Show Facade, Show Tent, and Head of the Line are in the Midway;
+
+HellRide is a region. Ride Entrance, Stocks Room, Gallows Room, Stake Room, Dungeon, Guillotine Room, Ride Exit is in HellRide.
+
+Backstage is a region. Passage, Maintenance Office, Crawl Space, Mechanical Room North, Mechanical Room South, Generator Room, Electrical Room, Electrical Closet One, Electrical Closet Three, Electrical Closet Five, Electrical Closet Seven, Electrical Closet Nine, Electrical Closet Eleven, and Storage Room is in Backstage.
