@@ -209,9 +209,10 @@ The flashlight is an electric lamp. understand "light" as flashlight. The descri
 Rule for showing action of the flashlight:
 	if the flashlight is switched on, say "A strong, narrow beam of light shines from the flashlight.";
 	otherwise say "It is currently switched off."
-	
-After waiting when the location is not lit:
-	say "It's pitch black. You might be eaten by a grue!"
+
+[BUGBUG the grue is broken]	
+[After doing anything when the location is dark:
+	say "It's pitch black. You might be eaten by a grue!"]
 	
 Before printing the name of a lit electric lamp, say "lit ".
 Before printing the name of an unlit lit electric lamp, say "extinguished ".
@@ -912,7 +913,7 @@ Test b1 with "brief. get	blueberries / s / buy ticket / s / give ticket to atten
 Test b2 with "w / l under stocks / e / s / w / l under platform / e / s / w / l in pyre / get fuse from pyre / e / s / w / l under seat / e / s / w / l under platform / e / s / s / w / l in stand / get khaki fuse/ e / n"
 
 [fill the sockets]
-Test b3 with "ne / open panel / put aqua in socket / sw / e / open panel / put crimson in socket / w / se / open panel / put emerald in socket / nw / sw / open panel / put grey in socket / ne / w / open panel / put indigo in socket / e / nw / open panel / put khaki in socket / se"
+Test b3 with "ne / open panel / put aqua in socket / sw / e / open panel / put crimson in socket / w / se / open panel / put emerald in socket / nw / sw / open panel / put grey in socket / ne / w / open panel / put indigo in socket / e / nw / testl at panel / unlock panel with knife / l at panel / open  panel / l at panel / l at switch. / l at indicator / l at socket / put khaki in socket / l at socket. se"
 
 test b4 with "n / n / n / n / n / n / w / n / n / n / score"
 
@@ -1053,24 +1054,30 @@ A switch is kind of a device. A switch can be switched on or switched off. The p
 	
 The Electrical Closet Eleven is a dark room. The Electrical Closet Eleven is northwest of the Electrical Room. "You are in a section of the electrical room. There is an electrical panel here. There is an exit to the south east." 
 
-Electrical Panel Eleven is a locked closed openable container in Electrical Closet Eleven. The swiss army knife unlocks it. Electrical Panel Eleven is scenery. The printed name of Electrical Panel Eleven is "the electrical panel". The description is "This is a standard issue 200 amp electrical panel supplying 220 power throughout the ride. The electrical panel is [if Electrical Panel Eleven is open]open. Inside the panel you see a switch and a socket,[otherwise]closed[end if]. [if Electrical Panel Eleven is locked]There are screws holding it shut.[end if]" 
+Electrical Panel Eleven is a locked closed openable container in Electrical Closet Eleven. The swiss army knife unlocks it. Electrical Panel Eleven is scenery. The printed name of Electrical Panel Eleven is "the electrical panel". The description is "This is a standard issue 200 amp electrical panel supplying 220 power throughout the ride. The electrical panel is [if Electrical Panel Eleven is open]open. Inside the panel you see a switch, a socket, and an indicator light.[otherwise]closed[end if]. [if Electrical Panel Eleven is locked]There are screws holding it shut.[end if]" 
 
-Socket Eleven is part of Electrical Panel Eleven. Socket Eleven is a container. Socket Eleven can be filled or unfilled. Socket Eleven is unfilled. The printed name of socket Eleven is "the socket". The description is "This is a socket. A fuse probably goes in here. The socket contains [list of things in socket Eleven]."
+Socket Eleven is part of Electrical Panel Eleven. Socket Eleven is a container. Socket Eleven can be filled or unfilled. Socket Eleven is unfilled. The printed name of socket Eleven is "the socket". The description is "This is a socket. A fuse probably goes in here."
 
-Switch Eleven is a device. Switch Eleven is part of Electrical Panel Eleven. The description is "This is a big switch. You could probably switch it [if switch Eleven is switched on]on[otherwise]off[end if] if you wanted to."
+Switch Eleven is a switched off device. Switch Eleven is part of Electrical Panel Eleven. The printed name of Switch Eleven is "the switch". The description is "This is a big switch. You could probably turn it [if switch Eleven is switched off]on[otherwise]off[end if] if you wanted to."
+
+Indicator Light Eleven is a switched off device. Indicator Light Eleven is part of Electrical Panel Eleven. The printed name of Indicator Light Eleven is "the indicator". The description of Indicator Light Eleven is "The indicator is currently [if Indicator Light Eleven is switched on]indicating something[otherwise]indicating nothing[end if]."
 
 Instead of switching on Switch Eleven:
 	say "You push the switch.";
 	if Switch Eleven is switched off and the Khaki fuse is not in socket Eleven:
-		say "Nothing happens." instead;
+		say "Nothing obvious happens." instead;
 	if Switch Eleven is switched off:
 		say "The indicator light goes on.";
 		now Switch Eleven is switched on;
+		now Indicator Light Eleven is switched on;
 		stop the action;
 	if Switch Eleven is switched on:
 		say "The indicator light goes off.";
 		now Switch Eleven is switched off;
+		now Indicator Light Eleven is switched on;
 		stop the action.
+		
+Instead of switching on Indicator Light Eleven, say "You can['] turn that on." instead;
 
 instead of inserting when the noun is the Khaki Fuse and the second noun is Socket Eleven and Socket Eleven is unfilled:
 	say "You hear a satisfying snick as the fuse slides into place.";
@@ -1083,23 +1090,27 @@ Section 9 - Electrical Closet Nine
 
 The Electrical Closet Nine is a dark room. The Electrical Closet Nine is west of the Electrical Room. "You are in a section of the electrical room. There is an electrical panel here. There is an exit to the east." 
 
-Electrical Panel Nine is a locked closed openable container in Electrical Closet Nine. The swiss army knife unlocks it. Electrical Panel Nine is scenery. The printed name of Electrical Panel Nine is "the electrical panel". The description is "This is a standard issue 200 amp electrical panel supplying 220 power throughout the ride. The electrical panel is [if Electrical Panel Nine is open]open. Inside the panel you see a switch and a socket,[otherwise]closed[end if]. [if Electrical Panel Nine is locked]There are screws holding it shut.[end if]" 
+Electrical Panel Nine is a locked closed openable container in Electrical Closet Nine. The swiss army knife unlocks it. Electrical Panel Nine is scenery. The printed name of Electrical Panel Nine is "the electrical panel". The description is "This is a standard issue 200 amp electrical panel supplying 220 power throughout the ride. The electrical panel is [if Electrical Panel Nine is open]open. Inside the panel you see a switch, a socket, and an indicator light.[otherwise]closed[end if]. [if Electrical Panel Nine is locked]There are screws holding it shut.[end if]" 
 
-Socket Nine is part of Electrical Panel Nine. Socket Nine is a container. Socket Nine can be filled or unfilled. Socket Nine is unfilled. The printed name of a socket Nine is "the socket". The description is "This is a socket. A fuse probably goes in here. The socket contains [list of things in socket Nine]."
+Socket Nine is part of Electrical Panel Nine. Socket Nine is a container. Socket Nine can be filled or unfilled. Socket Nine is unfilled. The printed name of a socket Nine is "the socket". The description is "This is a socket. A fuse probably goes in here."
 
-Switch Nine is a device. Switch Nine is part of Electrical Panel Nine. The description is "This is a big switch. You could probably switch it [if switch Nine is switched on]on[otherwise]off[end if] if you wanted to."
+Switch Nine is a switched off device. Switch Nine is part of Electrical Panel Nine. The printed name of Switch Nine is "the switch". The description is "This is a big switch. You could probably turn it [if switch Nine is switched off]on[otherwise]off[end if] if you wanted to."
+
+Indicator Light Nine is a switched off device. Indicator Light Nine is part of Electrical Panel Nine. The printed name of Indicator Light Nine is "the indicator". The description of Indicator Light Nine is "The indicator is currently [if Indicator Light Nine is switched on]indicating something[otherwise]indicating nothing[end if]."
 
 Instead of switching on Switch Nine:
 	say "You push the switch.";
 	if Switch Nine is switched off and the Indigo fuse is not in socket Nine:
-		say "Nothing happens." instead;
+		say "Nothing obvious happens." instead;
 	if Switch Nine is switched off:
 		say "The indicator light goes on.";
 		now Switch Nine is switched on;
+		now Indicator Light Nine is switched on;
 		stop the action;
 	if Switch Nine is switched on:
 		say "The indicator light goes off.";
 		now Switch Nine is switched off;
+		now Indicator Light Nine is switched off;
 		stop the action.
 
 instead of inserting when the noun is the Indigo Fuse and the second noun is Socket Nine and Socket Nine is unfilled:
@@ -1114,23 +1125,27 @@ Section 10 - Electrical Closet Seven
 
 The Electrical Closet Seven is a dark room. Electrical Closet Seven is southwest of the Electrical Room. "You are in a section of the electrical room. There is an electrical panel here. There is an exit to the north east." 
 
-Electrical Panel Seven is a locked closed openable container in Electrical Closet Seven. The swiss army knife unlocks it. Electrical Panel Seven is scenery. The printed name of Electrical Panel Seven is "the electrical panel". The description is "This is a standard issue 200 amp electrical panel supplying 220 power throughout the ride. The electrical panel is [if Electrical Panel Seven is open]open. Inside the panel you see a switch and a socket,[otherwise]closed[end if]. [if Electrical Panel Seven is locked]There are screws holding it shut.[end if]" 
+Electrical Panel Seven is a locked closed openable container in Electrical Closet Seven. The swiss army knife unlocks it. Electrical Panel Seven is scenery. The printed name of Electrical Panel Seven is "the electrical panel". The description is "This is a standard issue 200 amp electrical panel supplying 220 power throughout the ride. The electrical panel is [if Electrical Panel Seven is open]open. Inside the panel you see a switch, a socket, and an indicator light.[otherwise]closed[end if]. [if Electrical Panel Seven is locked]There are screws holding it shut.[end if]" 
 
-Socket Seven is part of Electrical Panel Seven. Socket Seven is a container. Socket Seven can be filled or unfilled. Socket Seven is unfilled. The printed name of a socket Seven is "the socket". The description is "This is a socket. A fuse probably goes in here. The socket contains [list of things in socket Seven]."
+Socket Seven is part of Electrical Panel Seven. Socket Seven is a container. Socket Seven can be filled or unfilled. Socket Seven is unfilled. The printed name of a socket Seven is "the socket". The description is "This is a socket. A fuse probably goes in here.."
 
-Switch Seven is a device. Switch Seven is part of Electrical Panel Seven. The description is "This is a big switch. You could probably switch it [if switch Seven is switched on]on[otherwise]off[end if] if you wanted to."
+Switch Seven is a switched off device. Switch Seven is part of Electrical Panel Seven. The printed name of Switch Seven is "the switch". The description is "This is a big switch. You could probably turn it [if switch Seven is switched off]on[otherwise]off[end if] if you wanted to."
+
+Indicator Light Seven is a switched off device. Indicator Light Seven is part of Electrical Panel Seven. The printed name of Indicator Light Seven is "the indicator". The description of Indicator Light Seven is "The indicator is currently [if Indicator Light Seven is switched on]indicating something[otherwise]indicating nothing[end if]."
 
 Instead of switching on Switch Seven:
 	say "You push the switch.";
 	if Switch Seven is switched off and the Indigo fuse is not in socket Seven:
-		say "Nothing happens." instead;
+		say "Nothing obvious happens." instead;
 	if Switch Seven is switched off:
 		say "The indicator light goes on.";
 		now Switch Seven is switched on;
+		now Indicator Light Seven is switched on;
 		stop the action;
 	if Switch Seven is switched on:
 		say "The indicator light goes off.";
 		now Switch Seven is switched off;
+		now Indicator Light Seven is switched off;
 		stop the action.
 
 instead of inserting when the noun is the Grey Fuse and the second noun is Socket Seven and Socket Seven is unfilled:
@@ -1144,23 +1159,27 @@ Section 11 - Electrical Closet Five
 
 The Electrical Closet Five is a dark room. Electrical Closet Five is southeast of the Electrical Room."You are in a section of the electrical room. There is an electrical panel here. There is an exit to the north west." 
 
-Electrical Panel Five is a locked closed openable container in Electrical Closet Five. The swiss army knife unlocks it. Electrical Panel Five is scenery. The printed name of Electrical Panel Five is "the electrical panel". The description is "This is a standard issue 200 amp electrical panel supplying 220 power throughout the ride. The electrical panel is [if Electrical Panel Five is open]open. Inside the panel you see a switch and a socket,[otherwise]closed[end if]. [if Electrical Panel Five is locked]There are screws holding it shut.[end if]" 
+Electrical Panel Five is a locked closed openable container in Electrical Closet Five. The swiss army knife unlocks it. Electrical Panel Five is scenery. The printed name of Electrical Panel Five is "the electrical panel". The description is "This is a standard issue 200 amp electrical panel supplying 220 power throughout the ride. The electrical panel is [if Electrical Panel Five is open]open. Inside the panel you see a switch, a socket, and an indicator light.[otherwise]closed[end if]. [if Electrical Panel Five is locked]There are screws holding it shut.[end if]" 
 
-Socket Five is part of Electrical Panel Five. Socket Five is a container. Socket Five can be filled or unfilled. Socket Five is unfilled. The printed name of a socket Five is "the socket". The description is "This is a socket. A fuse probably goes in here. The socket contains [list of things in socket Five]."
+Socket Five is part of Electrical Panel Five. Socket Five is a container. Socket Five can be filled or unfilled. Socket Five is unfilled. The printed name of a socket Five is "the socket". The description is "This is a socket. A fuse probably goes in here."
 
-Switch Five is a device. Switch Five is part of Electrical Panel Five. The description is "This is a big switch. You could probably switch it [if switch Five is switched on]on[otherwise]off[end if] if you wanted to."
+Switch Five is a switched off device. Switch Five is part of Electrical Panel Five. The printed name of Switch Five is "the switch". The description is "This is a big switch. You could probably turn it [if switch Five is switched off]on[otherwise]off[end if] if you wanted to."
+
+Indicator Light Five is a switched off device. Indicator Light Five is part of Electrical Panel Five. The printed name of Indicator Light Five is "the indicator". The description of Indicator Light Five is "The indicator is currently [if Indicator Light Five is switched on]indicating something[otherwise]indicating nothing[end if]."
 
 Instead of switching on Switch Five:
 	say "You push the switch.";
 	if Switch Five is switched off and the Emerald fuse is not in socket Five:
-		say "Nothing happens." instead;
+		say "Nothing obvious happens." instead;
 	if Switch Five is switched off:
 		say "The indicator light goes on.";
 		now Switch Five is switched on;
+		now Indicator Light Five is switched on;
 		stop the action;
 	if Switch Five is switched on:
 		say "The indicator light goes off.";
 		now Switch Five is switched off;
+		now Indicator Light Five is switched off;
 		stop the action.
 
 instead of inserting when the noun is the Emerald Fuse and the second noun is Socket Five and Socket Five is unfilled:
@@ -1174,23 +1193,27 @@ Section 12 - Electrical Closet Three
 
 The Electrical Closet Three is a dark room. Electrical Closet Three is east of the Electrical Room. "You are in a section of the electrical room. There is an electrical panel here. There is an exit to the west." 
 
-Electrical Panel Three is a locked closed openable container in Electrical Closet Three. The swiss army knife unlocks it. Electrical Panel Three is scenery. The printed name of Electrical Panel Three is "the electrical panel". The description is "This is a standard issue 200 amp electrical panel supplying 220 power throughout the ride. The electrical panel is [if Electrical Panel Three is open]open. Inside the panel you see a switch and a socket,[otherwise]closed[end if]. [if Electrical Panel Three is locked]There are screws holding it shut.[end if]" 
+Electrical Panel Three is a locked closed openable container in Electrical Closet Three. The swiss army knife unlocks it. Electrical Panel Three is scenery. The printed name of Electrical Panel Three is "the electrical panel". The description is "This is a standard issue 200 amp electrical panel supplying 220 power throughout the ride. The electrical panel is [if Electrical Panel Three is open]open. Inside the panel you see a switch, a socket, and an indicator light.[otherwise]closed[end if]. [if Electrical Panel Three is locked]There are screws holding it shut.[end if]" 
 
-Socket Three is part of Electrical Panel Three. Socket Three is a container. Socket Three can be filled or unfilled. Socket Three is unfilled. The printed name of a socket Three is "the socket". The description is "This is a socket. A fuse probably goes in here. The socket contains [list of things in socket Three]."
+Socket Three is part of Electrical Panel Three. Socket Three is a container. Socket Three can be filled or unfilled. Socket Three is unfilled. The printed name of a socket Three is "the socket". The description is "This is a socket. A fuse probably goes in here."
 
-Switch Three is a device. Switch Three is part of Electrical Panel Three. The description is "This is a big switch. You could probably switch it [if switch Three is switched on]on[otherwise]off[end if] if you wanted to."
+Switch Three is a switched off device. Switch Three is part of Electrical Panel Three. The printed name of Switch Three is "the switch". The description is "This is a big switch. You could probably turn it [if switch Three is switched off]on[otherwise]off[end if] if you wanted to."
+
+Indicator Light Three is a switched off device. Indicator Light Three is part of Electrical Panel Three. The printed name of Indicator Light Three is "the indicator". The description of Indicator Light Three is "The indicator is currently [if Indicator Light Three is switched on]indicating something[otherwise]indicating nothing[end if]."
 
 Instead of switching on Switch Three:
 	say "You push the switch.";
 	if Switch Three is switched off and the Crimson fuse is not in socket Three:
-		say "Nothing happens." instead;
+		say "Nothing obvious happens." instead;
 	if Switch Three is switched off:
 		say "The indicator light goes on.";
 		now Switch Three is switched on;
+		now Indicator Light Three is switched on;
 		stop the action;
 	if Switch Three is switched on:
 		say "The indicator light goes off.";
 		now Switch Three is switched off;
+		now Indicator Light Three is switched off;
 		stop the action.
 
 instead of inserting when the noun is the Crimson Fuse and the second noun is Socket Three and Socket Three is unfilled:
@@ -1204,23 +1227,27 @@ Section 13 - Electrical Closet One
 
 The Electrical Closet One is a dark room. The Electrical Closet One is northeast of the Electrical Room.  "You are in a section of the electrical room. There is an electrical panel here. There is an exit to the south west." 
 
-Electrical Panel One is a locked closed openable container in Electrical Closet One. The swiss army knife unlocks it. Electrical Panel One is scenery. The printed name of Electrical Panel One is "the electrical panel". The description is "This is a standard issue 200 amp electrical panel supplying 220 power throughout the ride. The electrical panel is [if Electrical Panel One is open]open. Inside the panel you see a switch and a socket,[otherwise]closed[end if]. [if Electrical Panel One is locked]There are screws holding it shut.[end if]" 
+Electrical Panel One is a locked closed openable container in Electrical Closet One. The swiss army knife unlocks it. Electrical Panel One is scenery. The printed name of Electrical Panel One is "the electrical panel". The description is "This is a standard issue 200 amp electrical panel supplying 220 power throughout the ride. The electrical panel is [if Electrical Panel One is open]open. Inside the panel you see a switch, a socket, and an indicator light.[otherwise]closed[end if]. [if Electrical Panel One is locked]There are screws holding it shut.[end if]" 
 
-Socket One is part of Electrical Panel One. Socket One is a container. Socket One can be filled or unfilled. Socket One is unfilled. The printed name of a socket One is "the socket". The description is "This is a socket. A fuse probably goes in here. The socket contains [list of things in socket One]."
+Socket One is part of Electrical Panel One. Socket One is a container. Socket One can be filled or unfilled. Socket One is unfilled. The printed name of a socket One is "the socket". The description is "This is a socket. A fuse probably goes in here."
 
-Switch One is a device. Switch One is part of Electrical Panel One. The description is "This is a big switch. You could probably switch it [if switch One is switched on]on[otherwise]off[end if] if you wanted to."
+Switch One is a switched off device. Switch One is part of Electrical Panel One. The printed name of Switch One is "the switch". The description is "This is a big switch. You could probably turn it [if switch One is switched off]on[otherwise]off[end if] if you wanted to."
+
+Indicator Light One is a switched off device. Indicator Light One is part of Electrical Panel One. The printed name of Indicator Light One is "the indicator". The description of Indicator Light One is "The indicator is currently [if Indicator Light One is switched on]indicating something[otherwise]indicating nothing[end if]."
 
 Instead of switching on Switch One:
 	say "You push the switch.";
 	if Switch One is switched off and the Aqua fuse is not in socket One:
-		say "Nothing happens." instead;
+		say "Nothing obvious happens." instead;
 	if Switch One is switched off:
 		say "The indicator light goes on.";
 		now Switch One is switched on;
+		now Indicator Light One is switched on;
 		stop the action;
 	if Switch One is switched on:
 		say "The indicator light goes off.";
 		now Switch One is switched off;
+		now Indicator Light One is switched off;
 		stop the action.
 
 instead of inserting when the noun is the Aqua Fuse and the second noun is Socket One and Socket One is unfilled:
