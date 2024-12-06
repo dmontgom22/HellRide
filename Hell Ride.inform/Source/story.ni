@@ -4,6 +4,7 @@ Chapter 1 - Inform Settings, Biblio Card, and Includes
 
 Use dynamic memory allocation of at least 32768.
 Use maximum text length of at least 2048.
+Use DICT_WORD_SIZE of 15.
 
 The story title is "Hell Ride".
 The story author is "No Shoes".
@@ -209,7 +210,7 @@ Rule for showing action of the flashlight:
 	if the flashlight is switched on, say "A strong, narrow beam of light shines from the flashlight.";
 	otherwise say "It is currently switched off."
 	
-After waiting when the location is dark:
+After waiting when the location is not lit:
 	say "It's pitch black. You might be eaten by a grue!"
 	
 Before printing the name of a lit electric lamp, say "lit ".
@@ -217,10 +218,10 @@ Before printing the name of an unlit lit electric lamp, say "extinguished ".
 	
 Section 5 - Miscellaneous
 
-Test Misc with "brief / get blueberries / xyzzy / hello sailor / please get the dime".
+Test Misc with "brief / get blueberries / xyzzy / hello sailor / please get the dime / score".
 
-[seen or unseen for adaptive test]
-A thing can be seen or unseen.
+[seen or unseen for adaptive text]
+A thing can be seen or unseen. A thing is usually unseen.
 
 Carry out examining a thing:
 	now the noun is seen.
@@ -229,7 +230,17 @@ Carry out examining a thing:
 A room can be scored or unscored.
 
 Carry out going to a unvisited scored room:
+	play the sound of Strongman Bell;
 	increase the score by 5.
+	
+[heaven and earth]
+A room can be indoors or outdoors. A room is usually indoors. 
+
+The sky is a backdrop. The sky is everywhere.
+
+The description of the sky is "[if the location is outdoors]It[']s a beautiful evening. Not a cloud in the sky. The moon is out and there are so many stars to see. A shooting star streaks across the sky.[otherwise]You[']re indoors. You can't see the sky here."
+
+The ground is a backdrop. The ground is everywhere. Understand "floor" as the ground.
 
 
 Section 6 - Hello Sailor
@@ -307,11 +318,11 @@ Section 1 - Parking Lot
 Test Me with "brief / Test Egypt /  Test Concession / Test Striker / Test Backstage / Test Misc / Test Ride".
 
 When play begins:
-	seed the random-number generator with 0; [BUGBUG set to 0]
+	seed the random-number generator with 1234; [BUGBUG set to 0]
 	display the figure of Hell Ride;
 	say "The carnival is in town and you had a date with your sweetie to visit it. After dinner and just as you arrive at the carnival, you and your date have a terrible fight. They storm off leaving you alone at the carnival. You decide to stay at the carnival anyway."
 
-The Parking Lot is a room. The parking lot is north of the Kiosk. "The carnival parking lot sprawls across an open field, its uneven gravel surface crunching under the tires of arriving cars. The lot is lit by a mix of temporary floodlights mounted on poles and the colorful glow of the carnival itself, which spills across the area in flashes of red, blue, and gold. The distant sounds of laughter, music, and the mechanical whir of rides drift across the lot, creating an air of excitement even before reaching the main grounds.
+The Parking Lot is a room. The parking lot is north of the Kiosk. The parking lot is outdoors. "The carnival parking lot sprawls across an open field, its uneven gravel surface crunching under the tires of arriving cars. The lot is lit by a mix of temporary floodlights mounted on poles and the colorful glow of the carnival itself, which spills across the area in flashes of red, blue, and gold. The distant sounds of laughter, music, and the mechanical whir of rides drift across the lot, creating an air of excitement even before reaching the main grounds.
 
 Rows of vehicles, from dusty sedans to pickup trucks with weathered paint, are parked haphazardly, guided by makeshift wooden signs and strings of flags fluttering in the breeze. Some families unload children, strollers, and blankets from their cars, their voices mingling with the distant carnival noise. Others sit in their vehicles, adjusting their jackets and preparing for the chilly evening ahead.
 
@@ -323,15 +334,16 @@ At the far end of the lot, a handful of RVs and trailers are parked, their occup
 
 The parking lot, while utilitarian, is alive with anticipation, serving as the gateway to the magic of the carnival. It’s a place of transition, where the mundane gives way to the extraordinary, and the humdrum rhythms of daily life are momentarily forgotten.
 
-The midway is to the south. There is a blueberry bush here. [if blueberry bush contains blueberries]There are blueberries on the bush[otherwise]The bush has been picked clean.[end if]"
+The midway is to the south. There is a blueberry bush here. [if blueberry bush contains blueberries]There are blueberries on the bush.[otherwise]The bush has been picked clean.[end if] [if the dime is in the Parking Lot] You see something shiny on the ground.[end if]"
 
-Cars is here. cars is scenery. Understand "car" as cars. The description of cars is "There are all kinds of vehicles in the parking lot."
+Cars is here. The cars are scenery. Understand "car", "vehicle", and "vehicles" as cars. The description of cars is "There are all kinds of vehicles in the parking lot."
 
 The blueberry bush is here. the blueberry bush is scenery. the blueberry bush is a container. the blueberry bush is not portable. the blueberry bush contains blueberries. The description of the blueberries is "The blueberries are ripe, juicy, and a deep blue color.".
 
-The dime is here. The description of the dime is "It's a dime. Ten cents. One tenth of a dollar."
+The dime is here. Understand "shiny" as dime. The description of the dime is "It's a dime. Ten cents. One tenth of a dollar. It['] very shiny"
 
 After taking blueberries:
+	play the sound of Strongman Bell;
 	increase score by 5;
 	say "Good Job!".
 
@@ -343,7 +355,7 @@ Before going south when the location is the Parking Lot and the Kiosk is unvisit
 Before looking when the location is the Kiosk:
 	display Figure of TicketBooth.
 
-The kiosk is a room. The kiosk is north of Head of the Line. The kiosk is east of the Show Facade. The kiosk is west of High Striker. The kiosk is northeast of the Concession Stand. The kiosk is south of the Parking Lot. "The ticket kiosk stands at the entrance to the carnival, a small but colorful booth designed to catch the eye and set the tone for the excitement ahead. Its exterior is painted in bright red and yellow stripes, with bold, blocky letters above the window that read 'Tickets Here!' Strings of twinkling lights outline the edges, blinking in rhythmic patterns to draw attention.
+The kiosk is a room. The kiosk is north of Head of the Line. The kiosk is east of the Show Facade. The kiosk is outdoors. The kiosk is west of High Striker. The kiosk is northeast of the Concession Stand. The kiosk is south of the Parking Lot. "The ticket kiosk stands at the entrance to the carnival, a small but colorful booth designed to catch the eye and set the tone for the excitement ahead. Its exterior is painted in bright red and yellow stripes, with bold, blocky letters above the window that read 'Tickets Here!' Strings of twinkling lights outline the edges, blinking in rhythmic patterns to draw attention.
 
 The kiosk is compact, with a single window where a smiling attendant greets visitors. Behind the glass, rows of ticket rolls in vibrant colors — blue, red, and yellow — are neatly arranged in dispensers. A small cash drawer sits open beside them, jingling softly as the attendant counts out change. To the side of the window, a digital payment system is set up for those who prefer modern convenience, its screen glowing faintly in the dim light.
 
@@ -362,13 +374,14 @@ The Hell Ride ticket is a thing. The price of the Hell Ride ticket is $2.50. The
 The Cashier is a man in the kiosk. The cashier carries the Hell Ride ticket. The description of cashier is "This is a bored teenager hired to sell ride tickets all week at this carnival. He's thinking about having a brewski with his bros after work.". 
 
 After buying the hell ride ticket:
+	play the sound of Strongman Bell;
 	increase score by 5;
 	say "Well done!";
 	
 
 Section 3 - Concession Stand
 
-Test Concession with "brief / get blueberries / s / sw / l at treats / read menu / buy cola / buy popcorn / buy candy apple / buy cotton candy / buy pretzel / inventory / drink soda / g / g / g / g / i / ne / n".
+Test Concession with "brief / get blueberries / s / sw / l at treats / read menu / buy cola / buy popcorn / buy candy apple / buy cotton candy / buy pretzel / inventory / drink soda / g / g / g / g / i / ne / n / score".
 
 Before going southwest when the location is the kiosk and the Concession Stand is unvisited:
 	display Figure of ConcessionStand.
@@ -376,7 +389,7 @@ Before going southwest when the location is the kiosk and the Concession Stand i
 Before looking when the location is the Concession Stand:
 	display Figure of ConcessionStand.
 
-The Concession Stand is a room. "The concession stand is a vibrant, bustling hub of activity, perched along the midway with its enticing smells and bright signage luring carnival-goers. The booth is painted in cheerful, primary colors—reds, blues, and yellows—with bold lettering across the top that proclaims: 'SODA! POPCORN! CANDY APPLES! COTTON CANDY! PRETZELS!' Strings of tiny, twinkling lights frame the stand, casting a warm glow that makes it stand out even in the carnival’s dazzling atmosphere.
+The Concession Stand is a room. The concession stand is outdoors. "The concession stand is a vibrant, bustling hub of activity, perched along the midway with its enticing smells and bright signage luring carnival-goers. The booth is painted in cheerful, primary colors—reds, blues, and yellows—with bold lettering across the top that proclaims: 'SODA! POPCORN! CANDY APPLES! COTTON CANDY! PRETZELS!' Strings of tiny, twinkling lights frame the stand, casting a warm glow that makes it stand out even in the carnival’s dazzling atmosphere.
 
 Behind the counter, the scene is a whirlwind of movement. A large popcorn machine sits to one side, its glass case fogged up with heat as golden kernels tumble and pop inside, filling the air with their buttery aroma. Nearby, a spinning rack of candy apples gleams under the lights, their glossy red coatings catching every glimmer. Cotton candy machines whirl on the opposite side, their sugary strands forming fluffy clouds of pink and blue, ready to be twirled onto paper cones.
 
@@ -421,7 +434,7 @@ A soft pretzel is here. The soft pretzel is edible. The price of the soft pretze
 
 Section 4 - High Striker
 
-Test Striker with "brief / get blueberries / s / e / buy mallet / hit lever with mallet / g / g / g / g / 2 / w / n".
+Test Striker with "brief / get blueberries / s / e / buy mallet / hit lever with mallet / g / g / g / g / 2 / w / n / score".
 
 Before going east when the location is the kiosk and the High Striker is unvisited:
 	display Figure of HighStriker.
@@ -429,7 +442,7 @@ Before going east when the location is the kiosk and the High Striker is unvisit
 Before looking when the location is the High Striker:
 	display Figure of HighStriker.
 
-The High Striker is a room. "This area features a tall, eye-catching machine adorned with bright, colorful lights, typically red, yellow, and blue. A large sign at the top reads 'Test Your Strength!' in bold, playful lettering. The machine’s base is made of polished wood, with a polished, vintage appearance. At the center is a sturdy metal pole, with a large bell hanging at the top, signaling when a successful attempt has been made. Along the length of the pole are markings indicating how strong you are.  A nearby sign says, 'Buy a mallet, strike the bell, win a prize.'[if the strongman attendant contains the mallet] You can see an over-sized mallet here.[end if]
+The High Striker is a room. The High Striker is outdoors. "This area features a tall, eye-catching machine adorned with bright, colorful lights, typically red, yellow, and blue. A large sign at the top reads 'Test Your Strength!' in bold, playful lettering. The machine’s base is made of polished wood, with a polished, vintage appearance. At the center is a sturdy metal pole, with a large bell hanging at the top, signaling when a successful attempt has been made. Along the length of the pole are markings indicating how strong you are.  A nearby sign says, 'Buy a mallet, strike the bell, win a prize.'[if the strongman attendant contains the mallet] You can see an over-sized mallet here.[end if]
 
 Spectators gather around, cheering on participants and offering lighthearted jabs and encouragement, creating a lively, competitive atmosphere. The sound of the mallet hitting the target is followed by the resonant clang of the bell (if struck), alongside the buzz of carnival music in the background."
 
@@ -437,12 +450,31 @@ The markings are here. The markings are scenery. Understand "marking" and "sign"
 
 The Strongman Attendant is here. The description of the Strongman Attendant is "An Attendant is standing here [if strongman attendant is carrying the mallet]holding a mallet[end if]." 
 
-The Strongman Attendant carries the teddy bear, a Swiss army knife, and a poster of Taylor Swift, and the mallet. The description of the teddy bear is "This is a teddy bear like you had when you were a kid. Right down to the red bow around its neck." The Swiss Army knife is a container. 
+The Strongman Attendant carries the teddy bear, a Swiss army knife, and a poster of Taylor Swift, and the mallet. The description of the teddy bear is "This is a teddy bear like you had when you were a kid. Right down to the red bow around its neck." 
 
-The screwdriver is part of the knife. The awl is a part of the knife. The fingernail clippers is a part of the knife. The can opener is part of the knife. The corkscrew is part of the knife.
+The Swiss Army knife is a container. The Swiss Army knife contains a screwdriver, an awl, fingernail clippers, can opener, and corkscrew. [The screwdriver, awl, fingernail clippers, can opener, and corkscrew are fixed in place.] The description of the Swiss army knife is "This is the standard issue Swiss Army knife with all the expected gadgets." 
 
-
-[The Swiss Army knife contains a screwdriver, an awl, fingernail clippers, can opener, and corkscrew.] The description of the Swiss army knife is "This is the standard issue Swiss Army knife with all the expected gadgets." The description of the poster of Taylor Swift is "This is a poster of America's sweetheart, Taylor Swift."
+instead of taking when the noun is screwdriver:
+	say "You can't take that!";
+	stop the action.
+	
+instead of taking when the noun is awl:
+	say "You can't take that!";
+	stop the action.
+		
+instead of taking when the noun is fingernail clippers:
+	say "You can't take that!";
+	stop the action.
+		
+instead of taking when the noun is can opener:
+	say "You can't take that!";
+	stop the action.
+		
+instead of taking when the noun is corkscrew:
+	say "You can't take that!";
+	stop the action.
+	
+The description of the poster of Taylor Swift is "This is a poster of America's sweetheart, Taylor Swift."
 
 The lever is here. The lever is fixed in place. Understand "bullseye" and "target" as lever. The description of the lever is "There is a bullseye on the base. I guess this is where you have to aim the mallet."
 
@@ -463,10 +495,11 @@ Carry out hitting when the player is carrying the mallet:
 After hitting the lever when second noun is the mallet 5 times :
 	play the sound of Strongman Bell;
 	say "You swing the mallet one more time. The bell rings as the striker reaches the top of the pole. The attendant says, 'You[']re a Muscle Man. Here's a prize for you.'";
-	say "Which prize would you like? 1) A stuffed teddy bear, 2) A Swiss Army knife, or 3) A poster of Taylor Swift?".
+	say "Which prize would you like? 1) a teddy bear, 2) a Swiss Army knife, or 3) a poster of Taylor Swift?".
 	
 after Reading a command :
 	if the player's command matches "1" and the location is the high striker and the player is not carrying the teddy bear and the player is not carrying the swiss army knife and the player is not carrying the poster of taylor swift:
+		play the sound of Strongman Bell;
 		increase score by 5;
 		say "You are now holding a cute little teddy bear.";
 		now the player carries the teddy bear;
@@ -475,6 +508,7 @@ after Reading a command :
 after Reading a command:
 	if the player's command matches "2" and the location is the high striker and the player is not carrying the teddy bear and the player is not carrying the swiss army knife and the player is not carrying the poster of taylor swift:
 		say "You are now holding a Swiss Army knife.";
+		play the sound of Strongman Bell;
 		increase score by 5;
 		now the player carries the Swiss army knife;
 		reject the player's command.
@@ -482,6 +516,7 @@ after Reading a command:
 after Reading a command:
 	if the player's command matches "3" and the location is the high striker and the player is not carrying the teddy bear and the player is not carrying the swiss army knife and the player is not carrying the poster of taylor swift:
 		say "You are now holding a poster of Taylor Swift.";
+		play the sound of Strongman Bell;
 		increase score by 5;
 		now the player carries the poster of taylor swift;
 		reject the player's command.
@@ -494,7 +529,7 @@ Before going west when the location is the kiosk and the Show Facade is unvisite
 Before looking when the location is the Show Facade:
 	display Figure of LittleEgyptFacade.
 
-Show Facade is a room. Show Facade is east of Show Tent. "[if location is unvisited]You head west through the midway, the bright lights of the carnival fading behind you as you approach a wooden booth. A sign above the entrance reads 'Little Egypt Show – A Journey Into the Mysterious and Exotic!' A rotund attendant, wearing a fez and a dazzling smile, gestures to a small sign beside him that says 'Dime Admission.'[end if] 
+Show Facade is a room. Show Facade is east of Show Tent. Show Facade is outdoors. "[if location is unvisited]You head west through the midway, the bright lights of the carnival fading behind you as you approach a wooden booth. A sign above the entrance reads 'Little Egypt Show – A Journey Into the Mysterious and Exotic!' A rotund attendant, wearing a fez and a dazzling smile, gestures to a small sign beside him that says 'Dime Admission.'[end if] 
 
 You are standing in front of a dark and mysterious tent filled with illusions and exotic performers. Perhaps there’s a fortune teller inside, offering cryptic clues about the player's journey or a hidden artifact that can be collected. There is a stage in front of the tent. The Barker is encouraging you to step up, pay for, and enjoy the Little Egypt Show.[if location is unvisited]The barker cries: 
 
@@ -516,7 +551,7 @@ After giving when the noun is dime and the second noun is barker:
 
 Section 6 - Show Tent	
 
-Test Egypt with "brief / get blueberries / get dime / s / w / l at barker / give dime to barker / w / sit in chair / z / z / z / z / z / e / e / n".
+Test Egypt with "brief / get blueberries / get dime / s / w / l at barker / give dime to barker / w / z / z / n / z / z / z / e / e / n / score".
 
 Before going west when the location is the Show Facade and the Show Tent is unvisited and barker is carrying the dime:
 	display Figure of LittleEgyptShow.	
@@ -535,7 +570,8 @@ The Folding Chair is in Show Tent. The Folding Chair is a enterable scenery supp
 LittleEgyptAuto is a scene. LittleEgyptAuto begins when the player is in the Show Tent for the second turn.
 
 When LittleEgyptAuto ends:
-	say "You applaud until your hands are sore. Did she wink at me?";
+	say "You applaud until your hands are sore. Did she just wink at me?";
+	play the sound of Strongman Bell;
 	increase score by 5.
 	
 Every turn during LittleEgyptAuto:
@@ -545,7 +581,7 @@ Every turn during LittleEgyptAuto:
 		rule succeeds.
 
 Instead of doing something other than waiting, looking, listening or examining during LittleEgyptAuto:
-	say "You're much to entranced to do anything other than watch the show. You are riveted!".
+	say "You're much too entranced to do anything other than watch the show. You are riveted[if the player is in the folding chair] to your seat[end if]!".
 
 Table of LittleEgypt Events
 event
@@ -560,7 +596,7 @@ LittleEgyptAuto ends when the number of filled rows in the Table of LittleEgypt 
 
 Section 7 - Head of the Line
 
-Head of the Line is a room. Head of the Line is south of Kiosk. Head of the Line is north of Ride Entrance. "You are standing in front of a ticket taker with his hand open waiting for your ticket. The entrance to the ride is south of here."
+Head of the Line is a room. Head of the Line is south of Kiosk. Head of the Line is north of Ride Entrance. The Head of the Line is outdoors. "You are standing in front of a ticket taker with his hand open waiting for your ticket. The entrance to the ride is south of here. The ride attendant tells you that you[']re lucky you showed up when you did because this will be the last trip through Hell Ride. You notice that all the other cars are empty."
 
 The Ride Attendant is a man in Head of the Line. The description of the Ride Attendant is "This is another bored teenager. His thoughts are entirely focused on a cheeseburger for lunch.";
 
@@ -673,18 +709,17 @@ As the condemned is led toward the guillotine, a crow caws from a nearby rooftop
 
 There is just one problem: the guillotine is being raised and lowered by some mechanism. It appears that the timing of the guillotine is off and it is being lowered onto the cars instead of between them. If a person were to be in a car as it passed under the guillotine, they would be decapitated.
 
-Looks like your goose is cooked. Say 'Goodnight, Gracie!"
+Looks like your goose is cooked. Say 'Goodnight, Gracie! 
+
+You are stupefied as you sit watching guillotine rising and falling, dropping like a stone on the cars in front of you. Thank goodness they are empty. As your turn comes, you raise your hands in a feeble attempt to stop the inevitable."
 
 HellRideAuto ends when the number of filled rows in the Table of HellRide Events is 0.
 
 Instead of doing something other than waiting, looking, listening or examining during HellRideAuto:
-	say "You are enjoying the ride too much to do anything but wait and enjoy the show."
+	say "You are enjoying the ride too much to do anything but wait and enjoy the ride."
 	
 When HellRideAuto ends:
 	end the story finally saying "You have died.".
-	
-When play ends:
-	Say "You are stupefied as you sit watching guillotine rising and falling, dropping like a stone on the cars in front of you. Thank goodness they are empty. As your turn comes, you raise your hands in a feeble attempt to stop the inevitable."
 	
 Ride Entrance is a room. Ride Entrance is south of Head of the Line. "The cars that will take you into the fearsome Hell Ride stop here for you to board.  To the south is the track that will take you into the ride. The safety bar is raised allowing you to enter the car. The darkness looks just a little bit darker."
 
@@ -695,6 +730,8 @@ Before going south when the player is in the Ride Entrance:
 	continue the action.
 
 Section 2 - Stocks Room
+
+A fuse is a kind of thing. A fuse can be lost or found. A fuse is usually lost.
 
 The Stocks Room is south of the Ride Entrance. "The public square is an open expanse of cobblestones, surrounded by the weathered facades of timber-framed buildings. The air is heavy with the mingling scents of smoke from distant chimneys, damp earth, and the faint metallic tang of the nearby smithy. At the square's center stand a row of crude wooden stocks, their heavy beams stained from years of weather and use. Iron clasps hold the unfortunate captives by their wrists and necks, their bodies forced into unnatural, humiliating postures.
 
@@ -708,37 +745,17 @@ Above it all, the gray sky looms, heavy with the promise of rain, as if nature i
 
 The wooden stocks are here. The wooden stocks are a supporter. The wooden stocks are fixed in place. The description of the wooden stocks is "At the square's center stand a row of crude wooden stocks, their heavy beams stained from years of weather and use. Iron clasps hold the unfortunate captives by their wrists and necks, their bodies forced into unnatural, humiliating postures." 
 
-The Aqua Fuse is scenery in the Stocks Room. The Aqua Fuse underlies the wooden stocks. The aqua fuse can be found or lost. The aqua fuse is lost. The description of the aqua fuse is "This is an electrical fuse. It is aqua colored. The same color as the door."
+The Aqua Fuse underlies the wooden stocks. The aqua fuse can be lost or found. It is lost. The description of the aqua fuse is "This is an electrical fuse. It is aqua colored. The same color as the door where you found it."
 
-Instead of looking under a thing which is underlaid by something (called the lost object):
+Instead of looking under a thing which is underlaid by the aqua fuse when the aqua fuse is lost:
 	say "You find [the list of things which underlie the noun]!";
 	now every thing which underlies the noun is carried by the player;
 	now every thing which underlies the noun does not underlie the noun;
-	if the player carries the aqua fuse for the first time and the aqua fuse is lost:
-		say "Taken.";
-		increase score by 5;
-		if the player carries the aqua fuse, now the aqua fuse is found;
-	if the player carries the crimson fuse for the first time and the crimson fuse is lost:
-		say "Taken.";
-		increase score by 5;
-		if the player carries the crimson fuse, now the crimson fuse is found;
-	if the player carries the emerald fuse for the first time and the emerald fuse is lost:
-		say "Taken.";
-		increase score by 5;
-		if the player carries the emerald fuse, now the emerald fuse is found;
-	if the player carries the grey fuse for the first time and the grey fuse is lost:
-		say "Taken.";
-		increase score by 5;
-		if the player carries the grey fuse, now the grey fuse is found;
-	if the player carries the indigo fuse for the first time and the indigo fuse is lost:
-		say "Taken.";
-		increase score by 5;
-		if the player carries the indigo fuse, now the indigo fuse is found;
-	if the player carries the khaki fuse for the first time and the khaki fuse is lost:
-		say "Taken.";
-		increase score by 5;
-		if the player carries the khaki fuse, now the khaki fuse is found.
-
+	say "Taken.";
+	play the sound of Strongman Bell;
+	increase score by 5;
+	now the aqua fuse is found.
+	
 Section 3 - Gallows Room
 
 The Gallows Room is south of the Stocks Room.  "The public square lies under a brooding, overcast sky, its cobblestones slick with the morning's drizzle. A grim silence has settled over the gathered crowd, broken only by the occasional murmur or the restless shuffling of feet. At the center of the square, rising like a grim monument to mortality, stands the gallows—a wooden platform, darkened by age and weather, with thick ropes hanging like vipers poised to strike.
@@ -755,7 +772,16 @@ The executioner steps forward, adjusting the noose around the man’s neck with 
 
 The gallows platform is here. The gallows platform is a supporter. The gallows platform is fixed in place. Understand "gallows" as gallows platform. The description of the gallows platform is "At the center of the square, rising like a grim monument to mortality, stands the gallows—a wooden platform, darkened by age and weather, with thick ropes hanging like vipers poised to strike." 
 
-The Crimson Fuse is scenery in the Gallows Room. The Crimson Fuse underlies the gallows platform. The crimson fuse can be found or lost. The crimson fuse is lost. The description of the crimson fuse is "This is an electrical fuse. It is crimson colored. The same color as the door."
+The Crimson Fuse underlies the gallows platform. The crimson fuse can be lost or found. It is lost. The description of the crimson fuse is "This is an electrical fuse. It is crimson colored. The same color as the door where you found it."
+
+Instead of looking under a thing which is underlaid by the crimson fuse when the crimson fuse is lost:
+	say "You find [the list of things which underlie the noun]!";
+	now every thing which underlies the noun is carried by the player;
+	now every thing which underlies the noun does not underlie the noun;
+	say "Taken.";
+	play the sound of Strongman Bell;
+	increase score by 5;
+	now the crimson fuse is found.
 
 Section 4 - Stake Room
 
@@ -773,7 +799,17 @@ As the flames consume the pyre, the crowd remains rooted, some transfixed by the
 
 The pyre is scenery in the Stake Room. The pyre is a container. understand "bonfire", "fire", "stake", "stakes", "flame", and "flames" as the pyre. The description of the pyre is "At the center, three wooden stakes rise ominously from a circular pyre of logs and kindling, their rough surfaces darkened by smoke from countless such scenes before. Bound tightly to these stakes are three women, their wrists and ankles secured with coarse, heavy ropes. Their faces tell different stories—one of defiance, another of resignation, and the third of pure terror." 
 
-The Emerald Fuse is in the pyre. The emerald fuse can be found or lost. The emerald fuse is lost. The description of the emerald fuse is "This is an electrical fuse. It is emerald colored. The same color as the door where you found it."
+The Emerald Fuse is in the pyre. The emerald fuse can be lost or found. It is lost. The description of the emerald fuse is "This is an electrical fuse. It is emerald colored. The same color as the door where you found it."
+
+Instead of taking the emerald fuse when the emerald fuse is lost:
+	say "You find [the list of things which contain the noun]!";
+	now every thing which underlies the noun is carried by the player;
+	now every thing which underlies the noun does not underlie the noun;
+	say "Taken.";
+	play the sound of Strongman Bell;
+	increase score by 5;
+	now the emerald fuse is found;
+	now the emerald fuse is in the player.
 
 Section 5 - Dungeon
 
@@ -791,9 +827,18 @@ Above it all, the dungeon's ceiling is low and oppressive, the occasional scuttl
 
 This is a place of despair and cruelty, where the line between life and death is blurred, and the only certainty is the inevitability of suffering."
 
-The iron seat is scenery in the Dungeon. The description of the iron seat is "A spiked chair looms in the corner, its cruel design gleaming faintly in the dim light." 
+The iron seat is scenery in the Dungeon. The iron seat is a supporter. understand "spiked chair" as iron seat. The description of the iron seat is "A spiked chair looms in the corner, its cruel design gleaming faintly in the dim light." 
 
-The Grey Fuse underlies the iron seat. The grey fuse can be found or lost. The grey fuse is lost. The description of the grey fuse is "This is an electrical fuse. It is grey colored. The same color as the door where you found it."
+The Grey Fuse underlies the iron seat. The grey fuse can be lost or found. It is lost. The description of the grey fuse is "This is an electrical fuse. It is grey colored. The same color as the door where you found it."
+
+Instead of looking under a thing which is underlaid by the grey fuse when the grey fuse is lost:
+	say "You find [the list of things which underlie the noun]!";
+	now every thing which underlies the noun is carried by the player;
+	now every thing which underlies the noun does not underlie the noun;
+	say "Taken.";
+	play the sound of Strongman Bell;
+	increase score by 5;
+	now the grey fuse is found.
 	
 Section 6 - Guillotine Room
 
@@ -815,7 +860,16 @@ There is just lone problem: the guillotine is being raised and lowered by some m
 
 The guillotine platform is here. The guillotine platform is a supporter. Understand "scaffold" as guillotine platform. The description of the guillotine platform is "At the center of the square stands a raised wooden platform, stark and imposing, where the grim sentence is to be carried out." 
 
-The Indigo Fuse is scenery in the Guillotine Room. The Indigo Fuse underlies the guillotine platform. The indigo fuse can be found or lost. The indigo fuse is lost. The description of the indigo fuse is "This is an electrical fuse. It is indigo colored. The same color as the door where you found it."
+The Indigo Fuse underlies the guillotine platform. The indigo fuse can be lost or found. It is lost. The description of the indigo fuse is "This is an electrical fuse. It is indigo colored. The same color as the door where you found it."
+
+Instead of looking under a thing which is underlaid by the indigo fuse when the indigo fuse is lost:
+	say "You find [the list of things which underlie the noun]!";
+	now every thing which underlies the noun is carried by the player;
+	now every thing which underlies the noun does not underlie the noun;
+	say "Taken.";
+	play the sound of Strongman Bell;
+	increase score by 5;
+	now the indigo fuse is found.
 	
 Section 7 - Ride Exit
 
@@ -835,24 +889,34 @@ The Hell Ride exit leaves riders not just thrilled, but marked by the eerie expe
 
 The merchandise stand is scenery in the Ride Exit. The merchandise stand is a container. Understand "stand" as merchandise. The description of the merchandise is "The stand is bathed in red light, adding to the ominous mood." 
 
-The Khaki Fuse is in the merchandise stand. The Khaki Fuse underlies the merchandise stand. The khaki fuse can be found or lost. The khaki fuse is lost. The description of the khaki fuse is "This is an electrical fuse. It is khaki colored. The same color as the door where you found it."
+The Khaki Fuse is in the merchandise stand. The Khaki Fuse underlies the merchandise stand. The khaki fuse can be lost or found. It is lost. The description of the khaki fuse is "This is an electrical fuse. It is khaki colored. The same color as the door where you found it."
 
+Instead of taking the khaki fuse when the khaki fuse is lost:
+	say "You find [the list of things which underlie the noun]!";
+	now every thing which underlies the noun is carried by the player;
+	now every thing which underlies the noun does not underlie the noun;
+	say "Taken.";
+	play the sound of Strongman Bell;
+	increase score by 5;
+	now the khaki fuse is found;
+	now the khaki fuse is in the player
+	
 Chapter 3 - Backstage
 
 Section 1 - Dark Passage
 
 [get the key]
-Test b1 with "brief. get	blueberries / s / buy ticket / s / give ticket to attendant / s / e / l at piles / get flashlight / turn it on / s / s / s / open toolbox / get all from toolbox / s / s / s / ne / get silver key / l at panel / open panel / l at socket / sw / n / n / n / n / n"
+Test b1 with "brief. get	blueberries / s / buy ticket / s / give ticket to attendant / s / e / l at piles / get flashlight / turn it on / s / turn on radio / s / s / open toolbox / get all from toolbox / s / s / s / ne / get silver key / l at panel / open panel / l at socket / sw / n / n / n / n / n"
 
 [get the fuses]
-Test b2 with "w / l under stocks / e / s / w / l under platform / e / s / w / l in pyre / get fuse from pyre / e / s / w / l under seat / e / s / w / l under platform / e / s / s / w / l under stand / e / n"
+Test b2 with "w / l under stocks / e / s / w / l under platform / e / s / w / l in pyre / get fuse from pyre / e / s / w / l under seat / e / s / w / l under platform / e / s / s / w / l in stand / get khaki fuse/ e / n"
 
 [fill the sockets]
 Test b3 with "ne / open panel / put aqua in socket / sw / e / open panel / put crimson in socket / w / se / open panel / put emerald in socket / nw / sw / open panel / put grey in socket / ne / w / open panel / put indigo in socket / e / nw / open panel / put khaki in socket / se"
 
-test b4 with "n / n / n / n / n / n / w / n / n / n"
+test b4 with "n / n / n / n / n / n / w / n / n / n / score"
 
-Test Backstage with "test b1 / test b2 / test b3 / test b4"
+Test Backstage with "test striker / test b1 / test b2 / test b3 / test b4"
 
 Dark Passage is a room. Dark Passage is east of the Ride Entrance. The dark passage is scored. "This room is backstage at the Hell Ride attraction. The room is littered with bags of trash, piles of junk, and dust bunnies so large they should be paying rent. West is back the way you came from. There an exit to the south."
 
@@ -885,7 +949,19 @@ The floor is uneven and gritty, coated in a fine layer of dust and littered with
 Despite the disarray, the room hums with purpose. This is the beating heart of the carnival’s machinery, a hidden realm where the magic of the attractions is kept alive by grease-stained hands and sheer determination.". 
 
 [ This is the code that breaks the opening]
-The desk is in the maintenance office. The desk is fixed in place. A drawer is part of the desk. The drawer is a closed openable container. The drawer is scenery. The description of the desk is "It's a desk. There are coffee stains and cigarette burns from years of abuse. The single drawer is [if the drawer is open]open[otherwise]shut[end if]."
+The desk is in the maintenance office. The desk is a supporter. The desk is fixed in place. A drawer is part of the desk. The drawer is a closed openable container. The drawer is scenery. The description of the desk is "It's a desk. There are coffee stains and cigarette burns from years of abuse. The single drawer is [if the drawer is open]open[otherwise]shut[end if]."
+
+The radio is a device on the desk. The radio is switched off and fixed in place. "[if switched on]The radio burbles on[otherwise]The radio is off[end if]." 
+
+Every turn when the radio is switched on and the location is Maintenance Office:
+	say "[one of]'The radio plays 'Stairway to Heaven by Led Zeppelin.'[or]'The DJ just cued up Pink Floyd[']s 'Comfortably Numb'.[or]Pharell[']s 'Happy' is playing now.[or]'Folsom Prison Blues' by Johnny Cash is on the air.'[or]'Peace Train' by Cat Stevens is playing now.'[cycling]"
+	
+Rule for showing action of the radio:
+	if the radio is switched on, say "Through the static, you pick up hear bits of the latest Taylor Swift song.";
+	otherwise say "The radio is silent. You're saving the batteries."
+
+Instead of listening in the presence of the switched on radio:
+	carry out the showing action activity with the radio instead.
 
 The scissors are in the drawer. The description is "This is a sharp pair of office scissors." The stapler is in the drawer. The description is "This is a red stapler." The ballpoint pen is in the drawer. The description is "Your standard ballpoint pen. It says Bic on the side." The pad of paper is in the drawer. The description is "This is a pad of lined paper."
 
@@ -965,86 +1041,198 @@ A small fan sits on the workbench, oscillating weakly to counter the oppressive 
 
 Despite its functionality, the electrical room carries a certain unease. The constant hum of electricity, the flicker of lights, and the sharpness of exposed wires hint at the delicate balance of power keeping the carnival alive. It’s a space where the magic of the midway is stripped bare, revealing the raw energy coursing through its veins.
 
-This room is oozing with electromagnetic energy. You can feel your hair stand on end and all your nerves twitching. This feels dangerous! There are exits in all directions."
+This room is oozing with electromagnetic energy. You can feel your hair stand on end and all your nerves twitching. This feels dangerous! There are exits in all directions, including up."
 
 [BUGBUG Uncomment before release]
 [Instead of going from the Electrical Room:
 	move the player to a random adjacent room.]
 	
+Section 8 - Electrical Closet Eleven
+
+A switch is kind of a device. A switch can be switched on or switched off. The printed name of a switch is "the switch". A switch is usually switched off. A switch is fixed in place.
+	
 The Electrical Closet Eleven is a dark room. The Electrical Closet Eleven is northwest of the Electrical Room. "You are in a section of the electrical room. There is an electrical panel here. There is an exit to the south east." 
 
-Electrical Panel Eleven is a closed openable container in Electrical Closet Eleven. Electrical Panel Eleven is scenery. The printed name of Electrical Panel Eleven is "the electrical panel". Understand "panels" as panel. The description is "This is a standard issue 200 amp electrical panel supplying 220 power throughout the ride. The electrical panel is [if Electrical Panel Eleven is open]open[otherwise]closed[end if]." 
+Electrical Panel Eleven is a locked closed openable container in Electrical Closet Eleven. The swiss army knife unlocks it. Electrical Panel Eleven is scenery. The printed name of Electrical Panel Eleven is "the electrical panel". The description is "This is a standard issue 200 amp electrical panel supplying 220 power throughout the ride. The electrical panel is [if Electrical Panel Eleven is open]open. Inside the panel you see a switch and a socket,[otherwise]closed[end if]. [if Electrical Panel Eleven is locked]There are screws holding it shut.[end if]" 
 
-Socket Eleven is in Electrical Panel Eleven. The printed name of Socket Eleven is "the socket". Socket Eleven is a container. Socket Eleven is fixed in place. The description of Socket Eleven is "This is a socket. A fuse probably goes in here. The socket [if socket Eleven is empty]is empty.[otherwise]contains [list of things in socket Eleven].[end if]"
+Socket Eleven is part of Electrical Panel Eleven. Socket Eleven is a container. Socket Eleven can be filled or unfilled. Socket Eleven is unfilled. The printed name of socket Eleven is "the socket". The description is "This is a socket. A fuse probably goes in here. The socket contains [list of things in socket Eleven]."
 
-instead of inserting when the noun is the Khaki Fuse and the second noun is Socket Eleven:
-	say "Done.";
+Switch Eleven is a device. Switch Eleven is part of Electrical Panel Eleven. The description is "This is a big switch. You could probably switch it [if switch Eleven is switched on]on[otherwise]off[end if] if you wanted to."
+
+Instead of switching on Switch Eleven:
+	say "You push the switch.";
+	if Switch Eleven is switched off and the Khaki fuse is not in socket Eleven:
+		say "Nothing happens." instead;
+	if Switch Eleven is switched off:
+		say "The indicator light goes on.";
+		now Switch Eleven is switched on;
+		stop the action;
+	if Switch Eleven is switched on:
+		say "The indicator light goes off.";
+		now Switch Eleven is switched off;
+		stop the action.
+
+instead of inserting when the noun is the Khaki Fuse and the second noun is Socket Eleven and Socket Eleven is unfilled:
+	say "You hear a satisfying snick as the fuse slides into place.";
+	play the sound of Strongman Bell;
 	increase score by 5;
+	now Socket Eleven is filled;
 	now the Khaki Fuse is in Socket Eleven.
 
-[Electrical Closet Nine]
-The Electrical Closet Nine is a dark room. Electrical Closet Nine is west of the Electrical Room. "You are in a section of the electrical room. There is an electrical panel here. There is an exit to the east." 
+Section 9 - Electrical Closet Nine
 
-Electrical Panel Nine is closed openable container in Electrical Closet Nine. Electrical Panel Nine is scenery. The printed name of Electrical Panel Nine is "the electrical panel". Understand "panels" as panel. The description is "This is a standard issue 200 amp electrical panel supplying 220 power throughout the ride. The electrical panel is [if Electrical Panel Nine is open]open[otherwise]closed[end if]." 
+The Electrical Closet Nine is a dark room. The Electrical Closet Nine is west of the Electrical Room. "You are in a section of the electrical room. There is an electrical panel here. There is an exit to the east." 
 
-Socket Nine is in Electrical Panel Nine. The printed name of Socket Nine is "the socket". Socket Nine is a container. Socket Nine is fixed in place. The description of Socket Nine is "This is a socket. A fuse probably goes in here. The socket [if socket Nine is empty]is empty.[otherwise]contains [list of things in socket Nine].[end if]"
+Electrical Panel Nine is a locked closed openable container in Electrical Closet Nine. The swiss army knife unlocks it. Electrical Panel Nine is scenery. The printed name of Electrical Panel Nine is "the electrical panel". The description is "This is a standard issue 200 amp electrical panel supplying 220 power throughout the ride. The electrical panel is [if Electrical Panel Nine is open]open. Inside the panel you see a switch and a socket,[otherwise]closed[end if]. [if Electrical Panel Nine is locked]There are screws holding it shut.[end if]" 
 
-instead of inserting when the noun is Indigo Fuse and the second noun is the Socket Nine:
-	say "Done.";
+Socket Nine is part of Electrical Panel Nine. Socket Nine is a container. Socket Nine can be filled or unfilled. Socket Nine is unfilled. The printed name of a socket Nine is "the socket". The description is "This is a socket. A fuse probably goes in here. The socket contains [list of things in socket Nine]."
+
+Switch Nine is a device. Switch Nine is part of Electrical Panel Nine. The description is "This is a big switch. You could probably switch it [if switch Nine is switched on]on[otherwise]off[end if] if you wanted to."
+
+Instead of switching on Switch Nine:
+	say "You push the switch.";
+	if Switch Nine is switched off and the Indigo fuse is not in socket Nine:
+		say "Nothing happens." instead;
+	if Switch Nine is switched off:
+		say "The indicator light goes on.";
+		now Switch Nine is switched on;
+		stop the action;
+	if Switch Nine is switched on:
+		say "The indicator light goes off.";
+		now Switch Nine is switched off;
+		stop the action.
+
+instead of inserting when the noun is the Indigo Fuse and the second noun is Socket Nine and Socket Nine is unfilled:
+	say "You hear a satisfying snick as the fuse slides into place.";
+	play the sound of Strongman Bell;
 	increase score by 5;
+	now Socket Nine is filled;
 	now the Indigo Fuse is in Socket Nine.
 
-[Electrical Closet Seven]
+
+Section 10 - Electrical Closet Seven
+
 The Electrical Closet Seven is a dark room. Electrical Closet Seven is southwest of the Electrical Room. "You are in a section of the electrical room. There is an electrical panel here. There is an exit to the north east." 
 
-Electrical Panel Seven is closed openable container in Electrical Closet Seven. Electrical Panel Seven is scenery. The printed name of Electrical Panel Seven is "the electrical panel". Understand "panels" as panel. The description is "This is a standard issue 200 amp electrical panel supplying 220 power throughout the ride. The electrical panel is [if Electrical Panel Seven is open]open[otherwise]closed[end if]." 
+Electrical Panel Seven is a locked closed openable container in Electrical Closet Seven. The swiss army knife unlocks it. Electrical Panel Seven is scenery. The printed name of Electrical Panel Seven is "the electrical panel". The description is "This is a standard issue 200 amp electrical panel supplying 220 power throughout the ride. The electrical panel is [if Electrical Panel Seven is open]open. Inside the panel you see a switch and a socket,[otherwise]closed[end if]. [if Electrical Panel Seven is locked]There are screws holding it shut.[end if]" 
 
-Socket Seven is in Electrical Panel Seven. The printed name of Socket Seven is "the socket". Socket Seven is a container. Socket Seven is fixed in place. The description of Socket Seven is "This is a socket. A fuse probably goes in here. The socket [if socket Seven is empty]is empty.[otherwise]contains [list of things in socket Seven].[end if]"
+Socket Seven is part of Electrical Panel Seven. Socket Seven is a container. Socket Seven can be filled or unfilled. Socket Seven is unfilled. The printed name of a socket Seven is "the socket". The description is "This is a socket. A fuse probably goes in here. The socket contains [list of things in socket Seven]."
 
-instead of inserting when the noun is Grey Fuse and the second noun is the Socket Seven:
-	say "Done.";
+Switch Seven is a device. Switch Seven is part of Electrical Panel Seven. The description is "This is a big switch. You could probably switch it [if switch Seven is switched on]on[otherwise]off[end if] if you wanted to."
+
+Instead of switching on Switch Seven:
+	say "You push the switch.";
+	if Switch Seven is switched off and the Indigo fuse is not in socket Seven:
+		say "Nothing happens." instead;
+	if Switch Seven is switched off:
+		say "The indicator light goes on.";
+		now Switch Seven is switched on;
+		stop the action;
+	if Switch Seven is switched on:
+		say "The indicator light goes off.";
+		now Switch Seven is switched off;
+		stop the action.
+
+instead of inserting when the noun is the Grey Fuse and the second noun is Socket Seven and Socket Seven is unfilled:
+	say "You hear a satisfying snick as the fuse slides into place.";
+	play the sound of Strongman Bell;
 	increase score by 5;
+	now Socket Seven is filled;
 	now the Grey Fuse is in Socket Seven.
 
-[Electrical Closet Five]
+Section 11 - Electrical Closet Five
+
 The Electrical Closet Five is a dark room. Electrical Closet Five is southeast of the Electrical Room."You are in a section of the electrical room. There is an electrical panel here. There is an exit to the north west." 
 
-Electrical Panel Five is closed openable container in Electrical Closet Five. Electrical Panel Five is scenery. The printed name of Electrical Panel Five is "the electrical panel". Understand "panels" as panel. The description is "This is a standard issue 200 amp electrical panel supplying 220 power throughout the ride. The electrical panel is [if Electrical Panel Five is open]open[otherwise]closed[end if]." 
+Electrical Panel Five is a locked closed openable container in Electrical Closet Five. The swiss army knife unlocks it. Electrical Panel Five is scenery. The printed name of Electrical Panel Five is "the electrical panel". The description is "This is a standard issue 200 amp electrical panel supplying 220 power throughout the ride. The electrical panel is [if Electrical Panel Five is open]open. Inside the panel you see a switch and a socket,[otherwise]closed[end if]. [if Electrical Panel Five is locked]There are screws holding it shut.[end if]" 
 
-Socket Five is in Electrical Panel Five. The printed name of Socket Five is "the socket". Socket Five is a container. Socket Five is fixed in place. The description of Socket Five is "This is a socket. A fuse probably goes in here. The socket [if socket Five is empty]is empty.[otherwise]contains [list of things in socket Five].[end if]"
+Socket Five is part of Electrical Panel Five. Socket Five is a container. Socket Five can be filled or unfilled. Socket Five is unfilled. The printed name of a socket Five is "the socket". The description is "This is a socket. A fuse probably goes in here. The socket contains [list of things in socket Five]."
 
-instead of inserting when the noun is Emerald Fuse and the second noun is the Socket Five:
-	say "Done.";
+Switch Five is a device. Switch Five is part of Electrical Panel Five. The description is "This is a big switch. You could probably switch it [if switch Five is switched on]on[otherwise]off[end if] if you wanted to."
+
+Instead of switching on Switch Five:
+	say "You push the switch.";
+	if Switch Five is switched off and the Emerald fuse is not in socket Five:
+		say "Nothing happens." instead;
+	if Switch Five is switched off:
+		say "The indicator light goes on.";
+		now Switch Five is switched on;
+		stop the action;
+	if Switch Five is switched on:
+		say "The indicator light goes off.";
+		now Switch Five is switched off;
+		stop the action.
+
+instead of inserting when the noun is the Emerald Fuse and the second noun is Socket Five and Socket Five is unfilled:
+	say "You hear a satisfying snick as the fuse slides into place.";
+	play the sound of Strongman Bell;
 	increase score by 5;
+	now Socket Five is filled;
 	now the Emerald Fuse is in Socket Five.
 
-[Electrical Closet Three]
+Section 12 - Electrical Closet Three
+
 The Electrical Closet Three is a dark room. Electrical Closet Three is east of the Electrical Room. "You are in a section of the electrical room. There is an electrical panel here. There is an exit to the west." 
 
-Electrical Panel Three is closed openable container in Electrical Closet Three. Electrical Panel Three is scenery. The printed name of Electrical Panel Three is "the electrical panel". Understand "panels" as panel. The description is "This is a standard issue 200 amp electrical panel supplying 220 power throughout the ride. The electrical panel is [if Electrical Panel Three is open]open[otherwise]closed[end if]." 
+Electrical Panel Three is a locked closed openable container in Electrical Closet Three. The swiss army knife unlocks it. Electrical Panel Three is scenery. The printed name of Electrical Panel Three is "the electrical panel". The description is "This is a standard issue 200 amp electrical panel supplying 220 power throughout the ride. The electrical panel is [if Electrical Panel Three is open]open. Inside the panel you see a switch and a socket,[otherwise]closed[end if]. [if Electrical Panel Three is locked]There are screws holding it shut.[end if]" 
 
-Socket Three is in Electrical Panel Three. The printed name of Socket Three is "the socket". Socket Three is a container. Socket Three is fixed in place. The description of Socket Three is "This is a socket. A fuse probably goes in here. The socket [if socket Three is empty]is empty.[otherwise]contains [list of things in socket Three].[end if]"
+Socket Three is part of Electrical Panel Three. Socket Three is a container. Socket Three can be filled or unfilled. Socket Three is unfilled. The printed name of a socket Three is "the socket". The description is "This is a socket. A fuse probably goes in here. The socket contains [list of things in socket Three]."
 
-instead of inserting when the noun is Crimson Fuse and the second noun is the Socket Three:
-	say "Done.";
+Switch Three is a device. Switch Three is part of Electrical Panel Three. The description is "This is a big switch. You could probably switch it [if switch Three is switched on]on[otherwise]off[end if] if you wanted to."
+
+Instead of switching on Switch Three:
+	say "You push the switch.";
+	if Switch Three is switched off and the Crimson fuse is not in socket Three:
+		say "Nothing happens." instead;
+	if Switch Three is switched off:
+		say "The indicator light goes on.";
+		now Switch Three is switched on;
+		stop the action;
+	if Switch Three is switched on:
+		say "The indicator light goes off.";
+		now Switch Three is switched off;
+		stop the action.
+
+instead of inserting when the noun is the Crimson Fuse and the second noun is Socket Three and Socket Three is unfilled:
+	say "You hear a satisfying snick as the fuse slides into place.";
+	play the sound of Strongman Bell;
 	increase score by 5;
+	now Socket Three is filled;
 	now the Crimson Fuse is in Socket Three.
 
-[Electrical Closet One] 
+Section 13 - Electrical Closet One
+
 The Electrical Closet One is a dark room. The Electrical Closet One is northeast of the Electrical Room.  "You are in a section of the electrical room. There is an electrical panel here. There is an exit to the south west." 
 
-Electrical Panel One is closed openable container in Electrical Closet One. Electrical Panel One is scenery. The printed name of Electrical Panel One is "the electrical panel". Understand "panels" as panel. The description is "This is a standard issue 200 amp electrical panel supplying 220 power throughout the ride. The electrical panel is [if Electrical Panel One is open]open[otherwise]closed[end if]." 
+Electrical Panel One is a locked closed openable container in Electrical Closet One. The swiss army knife unlocks it. Electrical Panel One is scenery. The printed name of Electrical Panel One is "the electrical panel". The description is "This is a standard issue 200 amp electrical panel supplying 220 power throughout the ride. The electrical panel is [if Electrical Panel One is open]open. Inside the panel you see a switch and a socket,[otherwise]closed[end if]. [if Electrical Panel One is locked]There are screws holding it shut.[end if]" 
 
-Socket One is in Electrical Panel One. The printed name of Socket One is "the socket". Socket One is a container. Socket One is fixed in place. The description of Socket One is "This is a socket. A fuse probably goes in here. The socket [if socket One contains nothing]is empty.[otherwise]contains [list of things in socket One].[end if]".
+Socket One is part of Electrical Panel One. Socket One is a container. Socket One can be filled or unfilled. Socket One is unfilled. The printed name of a socket One is "the socket". The description is "This is a socket. A fuse probably goes in here. The socket contains [list of things in socket One]."
 
+Switch One is a device. Switch One is part of Electrical Panel One. The description is "This is a big switch. You could probably switch it [if switch One is switched on]on[otherwise]off[end if] if you wanted to."
+
+Instead of switching on Switch One:
+	say "You push the switch.";
+	if Switch One is switched off and the Aqua fuse is not in socket One:
+		say "Nothing happens." instead;
+	if Switch One is switched off:
+		say "The indicator light goes on.";
+		now Switch One is switched on;
+		stop the action;
+	if Switch One is switched on:
+		say "The indicator light goes off.";
+		now Switch One is switched off;
+		stop the action.
+
+instead of inserting when the noun is the Aqua Fuse and the second noun is Socket One and Socket One is unfilled:
+	say "You hear a satisfying snick as the fuse slides into place.";
+	play the sound of Strongman Bell;
+	increase score by 5;
+	now Socket One is filled;
+	now the Aqua Fuse is in Socket One.
+	
 The silver key is in the Electrical Closet One. The description of the silver key is "This is a small silver key. I wonder what it unlocks."
 
-instead of inserting when the noun is Aqua Fuse and the second noun is the Socket One:
-	say "Done.";
-	increase score by 5;
-	now the Aqua Fuse is in Socket One.
-
-Section 8 - Storage Room
+Section 14 - Storage Room
 
 The Storage Room is a dark room. The Storage Room is south of the Electrical Room. "The carnival storage room is a chaotic yet oddly functional space, tucked away from the flashing lights and lively crowds. Its walls are made of corrugated metal or weathered wood, with patches of rust and peeling paint revealing the room's age. The faint smell of grease, dust, and damp canvas hangs in the air, mingled with a hint of stale popcorn and cotton candy from the midway outside.
 
@@ -1075,7 +1263,7 @@ Control Room is a dark room. The Control Room is west of the Dark Hallway. "You 
 
 Part 3 Regions
 
-The Midway is a region. Parking Lot, Kiosk, Concession Stand, High Striker, Show Facade, Show Tent, and Head of the Line are in the Midway;
+The Midway is a region. Parking Lot, Kiosk, Concession Stand, High Striker, Show Facade, Show Tent, and Head of the Line are in the Midway. The sky is in the Midway.
 
 HellRide is a region. Ride Entrance, Stocks Room, Gallows Room, Stake Room, Dungeon, Guillotine Room, Ride Exit is in HellRide.
 

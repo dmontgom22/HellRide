@@ -7,7 +7,7 @@ Using Inform kit 'EnglishLanguageKit' (priority 1).
 Using Inform kit 'WorldModelKit' (priority 2).
 Using Inform kit 'CommandParserKit' (priority 3).
 756 Preform nonterminals read from C:\Program Files\Inform\Internal\Languages\English\Syntax.preform
-I've now read your source text, which is 16784 words long.
+I've now read your source text, which is 18436 words long.
 Included: core, naming, instance counting, interactive fiction, spatial model, backdrops, bibliographic data, chronology, devices, mapping, persons, player, regions, scenes, scoring, timed rules, times of day, actions, going, command, showme, multimedia, figures, sounds, glulx external files
 Excluded: 
 I've also read Basic Inform by Graham Nelson, which is 7691 words long.
@@ -26,7 +26,6 @@ I've also read Basic Screen Effects by Emily Short, which is 2223 words long.
 Phase I ... Dividing source into compilation units
 -----------------------------------------------------
 
-.... Task__write_XML_headings_file() took 1cs
 
 
 -----------------------------------------------------
@@ -50,7 +49,7 @@ Loading kinds definitions from C:\Program Files\Inform\Internal\Inter\CommandPar
 Phase III ... Pre-pass through major nodes
 -----------------------------------------------------
 
-.... MajorNodes__pre_pass() took 6cs
+.... MajorNodes__pre_pass() took 5cs
 
 
 -----------------------------------------------------
@@ -64,7 +63,7 @@ Phase IV ... First pass through major nodes
 Phase V ... Second pass through major nodes
 -----------------------------------------------------
 
-.... MajorNodes__pass_2() took 1cs
+.... MajorNodes__pass_2() took 3cs
 
 
 -----------------------------------------------------
@@ -83,7 +82,6 @@ Phase VII ... Completing the model world
 Phase VIII ... Tables and grammar
 -----------------------------------------------------
 
-.... Understand__traverse() took 1cs
 
 
 -----------------------------------------------------
@@ -98,6 +96,7 @@ Phase X ... Phrases and rules
 -----------------------------------------------------
 
 .... ImperativeDefinitions__assess_all() took 3cs
+.... Tables__traverse_to_stock() took 1cs
 
 
 -----------------------------------------------------
@@ -111,11 +110,9 @@ Phase XI ... Generating inter (1)
 Phase XII ... Generating inter (2)
 -----------------------------------------------------
 
-.... CompletionModule__compile() took 1cs
 .... RTProperties__compile() took 1cs
-.... RTKindConstructors__compile_permissions() took 1cs
-.... InferenceSubjects__emit_all() took 2cs
-.... ImperativeDefinitions__compile_first_block() took 1cs
+.... InferenceSubjects__emit_all() took 1cs
+.... CompilationUnits__complete_metadata() took 1cs
 
 
 ==== Phase XII.1 ... Slashing command grammar ====
@@ -130,9 +127,8 @@ Phase XII ... Generating inter (2)
 Phase XIII ... Generating inter (3)
 -----------------------------------------------------
 
-.... Sequence__undertake_queued_tasks() took 113cs
-.... Sequence__undertake_queued_tasks() took 1cs
-.... RTPhrasebook__compile_entries() took 2cs
+.... Sequence__undertake_queued_tasks() took 112cs
+.... RTPhrasebook__compile_entries() took 3cs
 
 
 -----------------------------------------------------
@@ -155,20 +151,21 @@ Phase XV ... Generating inter (5)
 
 .... Sequence__undertake_queued_tasks() took 1cs
 Providing for a total heap of 32768, given requirement of 32768
-.... Sequence__lint_inter() took 2cs
+.... Sequence__lint_inter() took 1cs
 
 
 -----------------------------------------------------
 Phase XVI ... Bibliographic work
 -----------------------------------------------------
 
+.... ReleaseInstructions__write_ifiction_and_blurb() took 3cs
 
 
 -----------------------------------------------------
 Phase XVII ... Complete
 -----------------------------------------------------
 
-Compile CPU time: 156 centiseconds
+Compile CPU time: 154 centiseconds
 
 
 ==== Phase XVII.1 ... step 1/15: read <- *memory ====
@@ -213,12 +210,12 @@ Compile CPU time: 156 centiseconds
 
 ==== Phase XVII.11 ... step 11/15: eliminate-redundant-labels ====
 
-2184 redundant label(s) removed
+2284 redundant label(s) removed
 
 
 ==== Phase XVII.12 ... step 12/15: eliminate-redundant-operations ====
 
-575 redundant operation(s) removed
+606 redundant operation(s) removed
 
 
 ==== Phase XVII.13 ... step 13/15: optionally-generate text ->  ====
@@ -238,9 +235,10 @@ HTML tag stack:
     2. p (opened at line 50 of 'inter/index-module/Chapter 3/Map Element.w')
     3. p (opened at line 50 of 'inter/index-module/Chapter 3/Map Element.w')
     4. p (opened at line 50 of 'inter/index-module/Chapter 3/Map Element.w')
-    5. div (opened at line 177 of 'inter/index-module/Chapter 3/The Periodic Table.w')
-    6. body (opened at line 370 of 'D:/Programs/Adv/Inform7/Distribution/inweb/foundation-module/Chapter 5/HTML.w')
-    7. html (opened at line 236 of 'D:/Programs/Adv/Inform7/Distribution/inweb/foundation-module/Chapter 5/HTML.w')
+    5. p (opened at line 406 of 'inter/index-module/Chapter 3/Map Element.w')
+    6. div (opened at line 177 of 'inter/index-module/Chapter 3/The Periodic Table.w')
+    7. body (opened at line 370 of 'D:/Programs/Adv/Inform7/Distribution/inweb/foundation-module/Chapter 5/HTML.w')
+    8. html (opened at line 236 of 'D:/Programs/Adv/Inform7/Distribution/inweb/foundation-module/Chapter 5/HTML.w')
 
 
 Trying to close body at line 374 of 'D:/Programs/Adv/Inform7/Distribution/inweb/foundation-module/Chapter 5/HTML.w', but:
@@ -249,9 +247,10 @@ HTML tag stack:
     1. p (opened at line 50 of 'inter/index-module/Chapter 3/Map Element.w')
     2. p (opened at line 50 of 'inter/index-module/Chapter 3/Map Element.w')
     3. p (opened at line 50 of 'inter/index-module/Chapter 3/Map Element.w')
-    4. div (opened at line 177 of 'inter/index-module/Chapter 3/The Periodic Table.w')
-    5. body (opened at line 370 of 'D:/Programs/Adv/Inform7/Distribution/inweb/foundation-module/Chapter 5/HTML.w')
-    6. html (opened at line 236 of 'D:/Programs/Adv/Inform7/Distribution/inweb/foundation-module/Chapter 5/HTML.w')
+    4. p (opened at line 406 of 'inter/index-module/Chapter 3/Map Element.w')
+    5. div (opened at line 177 of 'inter/index-module/Chapter 3/The Periodic Table.w')
+    6. body (opened at line 370 of 'D:/Programs/Adv/Inform7/Distribution/inweb/foundation-module/Chapter 5/HTML.w')
+    7. html (opened at line 236 of 'D:/Programs/Adv/Inform7/Distribution/inweb/foundation-module/Chapter 5/HTML.w')
 
 
 Trying to close html at line 375 of 'D:/Programs/Adv/Inform7/Distribution/inweb/foundation-module/Chapter 5/HTML.w', but:
@@ -259,9 +258,10 @@ Tag error: closed HTML tag which wasn't open
 HTML tag stack:
     1. p (opened at line 50 of 'inter/index-module/Chapter 3/Map Element.w')
     2. p (opened at line 50 of 'inter/index-module/Chapter 3/Map Element.w')
-    3. div (opened at line 177 of 'inter/index-module/Chapter 3/The Periodic Table.w')
-    4. body (opened at line 370 of 'D:/Programs/Adv/Inform7/Distribution/inweb/foundation-module/Chapter 5/HTML.w')
-    5. html (opened at line 236 of 'D:/Programs/Adv/Inform7/Distribution/inweb/foundation-module/Chapter 5/HTML.w')
+    3. p (opened at line 406 of 'inter/index-module/Chapter 3/Map Element.w')
+    4. div (opened at line 177 of 'inter/index-module/Chapter 3/The Periodic Table.w')
+    5. body (opened at line 370 of 'D:/Programs/Adv/Inform7/Distribution/inweb/foundation-module/Chapter 5/HTML.w')
+    6. html (opened at line 236 of 'D:/Programs/Adv/Inform7/Distribution/inweb/foundation-module/Chapter 5/HTML.w')
 
 
 Trying to close p at line 324 of 'services/html-module/Chapter 2/Documentation Renderer.w', but:
@@ -7656,7 +7656,7 @@ HTML tag stack:
     52. html (opened at line 236 of 'D:/Programs/Adv/Inform7/Distribution/inweb/foundation-module/Chapter 5/HTML.w')
 
 
-Back end elapsed time: 196cs
+Back end elapsed time: 236cs
 Total of 127 files written as streams.
 Vacant escapes: %: ..CDE.GH..K.M.O.QR.TU...YZab..e..h.jklm.o.qr......yz0123456789
 Vacant escapes: $: .....F...J..........UVW.....................s.u..x.........789
