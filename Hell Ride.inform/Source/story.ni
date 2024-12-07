@@ -209,15 +209,33 @@ The flashlight is an electric lamp. understand "light" as flashlight. The descri
 Rule for showing action of the flashlight:
 	if the flashlight is switched on, say "A strong, narrow beam of light shines from the flashlight.";
 	otherwise say "It is currently switched off."
-
-[BUGBUG the grue is broken]	
-[After doing anything when the location is dark:
-	say "It's pitch black. You might be eaten by a grue!"]
-	
+		
 Before printing the name of a lit electric lamp, say "lit ".
 Before printing the name of an unlit lit electric lamp, say "extinguished ".
+
+Section 5 - Grues
+
+The lurking grue is a backdrop. The lurking grue is everywhere. The description of the lurking grue is "The grue is a sinister, lurking presence in the dark places of the earth. Its favorite diet is humans, but its insatiable appetite is tempered by its fear of light. No grue has ever been seen by the light of day, and few have survived its fearsome jaws to tell the tale."
+
+Rule for printing the description of a dark room: say "It is pitch black.  You are likely to be eaten by a grue." instead. 
+Rule for printing a refusal to act in the dark: say "It is too dark in here to see." instead.
+
+The going action has a number called the dark terminus count. 
+Setting action variables for going: 
+	now the dark terminus count is 0; 
+	if in darkness, increase the dark terminus count by 1. 
+The last carry out going rule: 
+	if in darkness, increase the dark terminus count by 1.
 	
-Section 5 - Miscellaneous
+After going:
+	if the dark terminus count is 2:
+		say "Oh no! You walked directly into the slavering fangs of a lurking grue!";
+		end the story finally;
+	if the dark terminus count is not 2:
+		continue the action.
+
+	
+Section 6 - Miscellaneous
 
 Test Misc with "brief / get blueberries / xyzzy / hello sailor / please get the dime / score".
 
@@ -244,24 +262,23 @@ The description of the sky is "[if the location is outdoors]It[']s a beautiful e
 The ground is a backdrop. The ground is everywhere. Understand "floor" as the ground.
 
 
-Section 6 - Hello Sailor
+Section 7 - Hello Sailor
 
-Asking someone about something is speech. Telling someone about something is speech. Answering someone that something is speech. Asking someone for something is speech.
+Hi-speaking is an action applying to one visible thing. Understand "hello [something]" and "hi [something]" as hi-speaking.
+Check hi-speaking:
+if the noun is the sailor, say "Nothing happens here." instead;
+if the noun is not a person, say "I think that only schizophrenics say 'Hello' to [a noun]." instead.
+Carry out hi-speaking:
+say "[The noun] bows his head to you in greeting."
 
-The Sailor is a man. The sailor is in the Parking Lot. The sailor is scenery.
+The Sailor is a backdrop. The sailor is everywhere. The sailor is scenery.
 
-Helloing is an action applying to one thing. Understand "hello [someone]" as helloing. understand "[someone] hello" as helloing.
+Check hi-speaking the sailor for the tenth time:
+say "I think that phrase is getting a bit worn out." instead.
+Check hi-speaking the sailor for the 20th time:
+say "You seem to be repeating yourself." instead.
 
-Instead of helloing the sailor:
-	say "Nothing happens here."
-	
-Instead of speech when the noun is Sailor:
-	say "Nothing happens here."
-	
-every turn:
-	now the sailor is in the location.
-	
-Section 7 - xyzzy
+Section 8 - xyzzy
 
 Understand "xyzzy" or "say xyzzy" or "cast xyzzy" as casting xyzzy.
 
@@ -341,7 +358,7 @@ Cars is here. The cars are scenery. Understand "car", "vehicle", and "vehicles" 
 
 The blueberry bush is here. the blueberry bush is scenery. the blueberry bush is a container. the blueberry bush is not portable. the blueberry bush contains blueberries. The description of the blueberries is "The blueberries are ripe, juicy, and a deep blue color.".
 
-The dime is here. Understand "shiny" as dime. The description of the dime is "It's a dime. Ten cents. One tenth of a dollar. It['] very shiny"
+The dime is here. Understand "shiny" as dime. The description of the dime is "It[']s a dime. Ten cents. One tenth of a dollar. It['] very shiny"
 
 After taking blueberries:
 	play the sound of Strongman Bell;
@@ -732,8 +749,6 @@ Before going south when the player is in the Ride Entrance:
 
 Section 2 - Stocks Room
 
-A fuse is a kind of thing. A fuse can be lost or found. A fuse is usually lost.
-
 The Stocks Room is south of the Ride Entrance. "The public square is an open expanse of cobblestones, surrounded by the weathered facades of timber-framed buildings. The air is heavy with the mingling scents of smoke from distant chimneys, damp earth, and the faint metallic tang of the nearby smithy. At the square's center stand a row of crude wooden stocks, their heavy beams stained from years of weather and use. Iron clasps hold the unfortunate captives by their wrists and necks, their bodies forced into unnatural, humiliating postures.
 
 The punished individuals, heads bowed in shame, are caught in an agonizing tableau of disgrace. Their expressions, a mix of resignation and despair, reflect the full weight of their predicaments. Their clothing hangs in tatters, furthering their exposure to the biting wind and the sharp tongues of the gathered crowd.
@@ -907,7 +922,7 @@ Chapter 3 - Backstage
 Section 1 - Dark Passage
 
 [get the key]
-Test b1 with "brief. get	blueberries / s / buy ticket / s / give ticket to attendant / s / e / l at piles / get flashlight / turn it on / s / turn on radio / s / s / open toolbox / get all from toolbox / s / s / s / ne / get silver key / l at panel / open panel / l at socket / sw / n / n / n / n / n"
+Test b1 with "brief. get	blueberries / s / buy ticket / s / give ticket to attendant / s / e / l at piles / get flashlight / turn it on / s / turn on radio / l at desk / open drawer / get all from the drawer / s / s / open toolbox / get all from toolbox / s / s / s / ne / get silver key / l at panel / open panel / l at socket / sw / n / n / n / n / n"
 
 [get the fuses]
 Test b2 with "w / l under stocks / e / s / w / l under platform / e / s / w / l in pyre / get fuse from pyre / e / s / w / l under seat / e / s / w / l under platform / e / s / s / w / l in stand / get khaki fuse/ e / n"
@@ -928,11 +943,6 @@ The pile of junk is a scenery container. The pile of junk is in the dark passage
 after examining when the noun is pile of junk:
 	say "You find a flashlight here.";
 
-[BUGBUG This is busted]
-After waiting when the location is dark 4 times:
-	say "You have been eaten by a grue. It['] a terrible way to go.";
-	end the story finally.
-
 Section 2 - Maintenance Office
 
 The Maintenance Office is a dark room. The maintenance office is south of the dark passage. "The maintenance office is a chaotic and dimly lit space tucked away behind the glitz and glamour of the carnival. It smells of grease, sweat, and faintly of popcorn from the midway outside. The air is heavy and warm, thick with the lingering scent of oil and dust stirred up by constant work.
@@ -947,15 +957,14 @@ The walls bear evidence of the room’s purpose: faded safety posters warning of
 
 The floor is uneven and gritty, coated in a fine layer of dust and littered with stray nails and scraps of metal. In one corner, a toolbox sits half-open, its contents spilling out as though abandoned mid-task. Nearby, a rickety fan struggles to spin, offering little relief from the oppressive heat.
 
-Despite the disarray, the room hums with purpose. This is the beating heart of the carnival’s machinery, a hidden realm where the magic of the attractions is kept alive by grease-stained hands and sheer determination.". 
+Despite the disarray, the room hums with purpose. This is the beating heart of the carnival’s machinery, a hidden realm where the magic of the attractions is kept alive by grease-stained hands and sheer determination." 
 
-[ This is the code that breaks the opening]
-The desk is in the maintenance office. The desk is a supporter. The desk is fixed in place. A drawer is part of the desk. The drawer is a closed openable container. The drawer is scenery. The description of the desk is "It's a desk. There are coffee stains and cigarette burns from years of abuse. The single drawer is [if the drawer is open]open[otherwise]shut[end if]."
+The desk is in the maintenance office. The desk is a supporter. The desk is fixed in place. A drawer is part of the desk. The drawer is a closed openable container. The drawer is scenery. The description of the desk is "It[']s a desk. There are coffee stains and cigarette burns from years of abuse. The single drawer is [if the drawer is open]open[otherwise]shut[end if]."
 
 The radio is a device on the desk. The radio is switched off and fixed in place. "[if switched on]The radio burbles on[otherwise]The radio is off[end if]." 
 
 Every turn when the radio is switched on and the location is Maintenance Office:
-	say "[one of]'The radio plays 'Stairway to Heaven by Led Zeppelin.'[or]'The DJ just cued up Pink Floyd[']s 'Comfortably Numb'.[or]Pharell[']s 'Happy' is playing now.[or]'Folsom Prison Blues' by Johnny Cash is on the air.'[or]'Peace Train' by Cat Stevens is playing now.'[cycling]"
+	say "[one of]'The radio plays 'Stairway to Heaven by Led Zeppelin.'[or]'The DJ just cued up Pink Floyd[']s 'Comfortably Numb'.[or]Pharell[']s 'Happy' is playing now.[or]'Folsom Prison Blues' by Johnny Cash is on the air.'[or]'Peace Train' by Cat Stevens can be heard playing on the radio.'[cycling]"
 	
 Rule for showing action of the radio:
 	if the radio is switched on, say "Through the static, you pick up hear bits of the latest Taylor Swift song.";
@@ -966,7 +975,7 @@ Instead of listening in the presence of the switched on radio:
 
 The scissors are in the drawer. The description is "This is a sharp pair of office scissors." The stapler is in the drawer. The description is "This is a red stapler." The ballpoint pen is in the drawer. The description is "Your standard ballpoint pen. It says Bic on the side." The pad of paper is in the drawer. The description is "This is a pad of lined paper."
 
-The Aqua Door is west of the Maintenance Office and east of the Stocks Room. The Aqua Door is a closed locked door. The description of the Aqua door is "It's an aqua colored door with the word 'Stocks' written on it." The silver key unlocks it.
+The Aqua Door is west of the Maintenance Office and east of the Stocks Room. The Aqua Door is a closed locked door. The description of the Aqua door is "It[']s an aqua colored door with the word 'Stocks' written on it." The silver key unlocks it.
 
 The cans of paint, grease, and lubricant are here.
 
@@ -976,7 +985,7 @@ The Crawl Space is a dark room. The Crawl Space is south of Maintenance Office. 
 
 The ground is uneven, a mix of packed dirt and loose gravel scattered with forgotten tools, scraps of metal, and tangled wires. Overhead, a network of pipes and cables crisscross the space, some wrapped in fraying insulation that crackles faintly as you crawl past. Small puddles of murky water collect in dips on the floor, their surfaces rippling with vibrations from the ride’s movement."
 
-The Crimson Door is west of the Crawl Space and east of the Gallows Room. The Crimson Door is a closed locked door. The description of the Crimson door is "It's an crimson colored door with the word 'Gallows' written on it." The silver key unlocks it.
+The Crimson Door is west of the Crawl Space and east of the Gallows Room. The Crimson Door is a closed locked door. The description of the Crimson door is "It[']s a crimson colored door with the word 'Gallows' written on it." The silver key unlocks it.
 
 Section 4 - Mechanical Room North
 
@@ -992,7 +1001,7 @@ The north mechanical room functions as a support system, ensuring that auxiliary
 
 The toolbox is a closed openable container in the Mechanical Room North. The toolbox contains a monkey wrench, a channel locks, pliers, and a hammer.
 
-The Emerald Door is west of the Mechanical Room North and east of the Stake Room. The Emerald Door is a closed locked door. The description of the Emerald door is "It's an emerald colored door with the word 'Stake' written on it." The silver key unlocks it.
+The Emerald Door is west of the Mechanical Room North and east of the Stake Room. The Emerald Door is a closed locked door. The description of the Emerald door is "It[']s an emerald colored door with the word 'Stake' written on it." The silver key unlocks it.
 
 Section 5 - Mechanical Room South
 
@@ -1006,7 +1015,7 @@ A cooling fan whirs in the corner, its blades spinning in a futile attempt to te
 
 The south mechanical room is brightly lit, with overhead fluorescent lights encased in protective wire cages. This is the main operations hub, where the power of the ride is generated and controlled, ensuring its thrilling movements stay in sync." 
 
-The Grey Door is west of the Mechanical Room South and east of the Dungeon. The Grey Door is a closed locked door. The description of the Grey door is "It's a grey colored door with the word 'Dungeon' written on it." The silver key unlocks it.
+The Grey Door is west of the Mechanical Room South and east of the Dungeon. The Grey Door is a closed locked door. The description of the Grey door is "It[']s a grey colored door with the word 'Dungeon' written on it." The silver key unlocks it.
 
 Section 6 - Generator Room
 
@@ -1024,7 +1033,7 @@ In one corner, a row of diesel fuel canisters stands neatly arranged, their meta
 
 Despite its utilitarian design, the room carries an air of importance. The generator room is the heartbeat of the carnival, its steady output ensuring that the lights flash, the rides whirl, and the sounds of joy and terror continue uninterrupted. Yet, in its stark isolation, it feels oddly disconnected from the lively world it powers, a quiet reminder of the machinery behind the magic." 
 
-The Indigo Door is west of the Generator Room and east of the Guillotine Room. The Indigo Door is a closed locked door. The description of the Indigo door is "It's a indigo colored door with the word 'Guillotine' written on it." The silver key unlocks it.
+The Indigo Door is west of the Generator Room and east of the Guillotine Room. The Indigo Door is a closed locked door. The description of the Indigo door is "It[']s an indigo colored door with the word 'Guillotine' written on it." The silver key unlocks it.
 
 Section 7 - Electrical Room
 
@@ -1043,6 +1052,8 @@ A small fan sits on the workbench, oscillating weakly to counter the oppressive 
 Despite its functionality, the electrical room carries a certain unease. The constant hum of electricity, the flicker of lights, and the sharpness of exposed wires hint at the delicate balance of power keeping the carnival alive. It’s a space where the magic of the midway is stripped bare, revealing the raw energy coursing through its veins.
 
 This room is oozing with electromagnetic energy. You can feel your hair stand on end and all your nerves twitching. This feels dangerous! There are exits in all directions, including up."
+
+The Ladder is up from the Electrical Room and down from the Dark Hallway. The ladder is an open door. The description of the Ladder is "It[']s a typical 10 foot ladder."
 
 [BUGBUG Uncomment before release]
 [Instead of going from the Electrical Room:
@@ -1275,18 +1286,30 @@ The floor is a patchwork of concrete and dirt, strewn with stray bolts, screws, 
 
 The carnival storage room is not glamorous, but it is vital—a hidden world of spare parts, forgotten treasures, and organized chaos that keeps the carnival running smoothly. It’s a backstage glimpse into the hard work and improvisation that make the magic possible."
 
-The Khaki Door is west of the Storage Room and east of the Ride Exit. The Khaki Door is a closed locked door. The description of the Khaki door is "It's a khaki colored door with the word 'Ride Exit' written on it." The silver key unlocks it.
+The Khaki Door is west of the Storage Room and east of the Ride Exit. The Khaki Door is a closed locked door. The description of the Khaki door is "It[']s a khaki colored door with the word 'Ride Exit' written on it." The silver key unlocks it.
 
 Chapter 4 - Second Floor
 
 Section 1 - Dark Hallway
 
-Dark Hallway is a dark room. It is up from the Electrical Room. 
+Dark Hallway is a dark room. "This is a poorly lit hallway. Ahead you can see the glow of an open door."
 	
 Section 2 - Control Room
 
-Control Room is a dark room. The Control Room is west of the Dark Hallway. "You are in what is obviously a control room of some sort control room. There are panels and boards and benches with dials and levers and and buttons. There is an exit down from here." 
+Control Room is a dark room. The Control Room is west of the Dark Hallway. "The backstage control room is a functional, no-frills space hidden behind the glitter and chaos of the carnival. It’s where the real work happens—a nerve center for monitoring and managing the operations of the rides, attractions, and lighting systems. The room is enclosed by plain, industrial walls, painted a dull gray and marked with scuffs, scratches, and the occasional smudge of grease or fingerprints.
 
+Rows of monitors line the main wall, displaying live feeds from security cameras and ride controls. Each screen shows a different part of the carnival: blinking lights of the Ferris wheel, the whirling motion of a carousel, and the eerie darkness of the Hell Ride. A few screens flicker or show static, adding to the sense of wear and tear that pervades the room. Beneath the monitors, a control panel is cluttered with switches, buttons, and dials, each labeled with functions like 'Ride Start,' 'Lighting Override', and 'Emergency Stop.' Small lights blink in green, yellow, or red, signaling the status of different systems.
+
+The hum of electronics fills the air, mingled with the occasional crackle of a two-way radio resting on a desk. The radios buzz intermittently with the voices of carnival workers reporting issues or coordinating movements:
+'Maintenance to Tilt-a-Whirl—need a wrench at Station 2!'
+
+The floor is a patchwork of worn linoleum and exposed concrete, littered with stray papers, toolkits, and empty coffee cups. A cluttered desk sits against one wall, covered with logbooks, ride schedules, and laminated emergency procedures. A corkboard above the desk is pinned with maintenance charts, carnival maps, and handwritten notes, some of them circled in red ink with messages like 'Check circuit breakers on Zipper' or 'Replace bulbs near south entrance.'
+
+A single fluorescent light fixture hangs overhead, buzzing faintly as it casts a cold, sterile glow across the room. The air is cool but tinged with a faint metallic smell, mixed with the earthy dampness from the surrounding carnival grounds. In one corner, a small, battered first-aid kit hangs on the wall, its contents slightly spilling out, and a faded fire extinguisher sits nearby.
+
+Despite its unassuming appearance, the control room feels alive with purpose—a behind-the-scenes hub that ensures the carnival’s magic unfolds without a hitch. It’s a space where the mechanics, electronics, and human effort merge to keep the carnival running smoothly, even as chaos and excitement reign outside." 
+
+The Control Panel is a thing in the Control Room. The Control Panel is a supporter and fixed in place. The description of the Control Panel is "The Control Board is populated with buttons on the left side, a set of dials in the middle, and a set of lights on the right."
 
 Part 3 Regions
 
