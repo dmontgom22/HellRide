@@ -233,11 +233,10 @@ After going:
 		end the story finally;
 	if the dark terminus count is not 2:
 		continue the action.
-
 	
 Section 6 - Miscellaneous
 
-Test Misc with "brief / get blueberries / xyzzy / hello sailor / please get the dime / score".
+Test Misc with "brief / get blueberries / xyzzy / hello sailor / please get the dime / i / score".
 
 [seen or unseen for adaptive text]
 A thing can be seen or unseen. A thing is usually unseen.
@@ -317,6 +316,8 @@ Figure of LittleEgyptShow is the file "LittleEgyptShow.png".
 Figure of HighStriker is the file "HighStriker.png".
 
 Figure of HellRideEntrance is the file "RideEntrance.png".
+
+Figure of ControlPanel is the file "ControlPanel.png".
 
 Sound of Strongman Bell is the file "StrongmanBell.ogg".
 
@@ -399,7 +400,7 @@ After buying the hell ride ticket:
 
 Section 3 - Concession Stand
 
-Test Concession with "brief / get blueberries / s / sw / l at treats / read menu / buy cola / buy popcorn / buy candy apple / buy cotton candy / buy pretzel / inventory / drink soda / g / g / g / g / i / ne / n / score".
+Test Concession with "brief / get blueberries / s / sw / l at treats / read menu / buy cola / buy popcorn / buy candy apple / buy cotton candy / buy pretzel / inventory / drink soda / g / g / g / g / i / ne / n / i / score".
 
 Before going southwest when the location is the kiosk and the Concession Stand is unvisited:
 	display Figure of ConcessionStand.
@@ -446,13 +447,13 @@ A bucket of popcorn is here. The bucket of popcorn is edible. The price of popco
 
 A candy apple is here. The candy apple is edible. The price of a candy apple is $1.50. The description of the candy apple is "The candy apple is your typical caramel covered apple. It looks like it would get stuck in your teeth."
 
-Cotton candy is here. Cotton candy is edible. The price of cotton candy is $1.50. The description of cotton candy is "The cotton candy is a mixture of pink and blue floss."
+cotton candy is here. Cotton candy is edible. The price of cotton candy is $1.50. The description of cotton candy is "The cotton candy is a mixture of pink and blue floss."
 
 A soft pretzel is here. The soft pretzel is edible. The price of the soft pretzel is $1.50. The description of the soft pretzel is "The soft pretzel is sprinkled generously with salt."
 
 Section 4 - High Striker
 
-Test Striker with "brief / get blueberries / s / e / buy mallet / hit lever with mallet / g / g / g / g / 2 / w / n / score".
+Test Striker with "brief / get blueberries / s / e / buy mallet / hit lever with mallet / g / g / g / g / 2 / w / n / i / score".
 
 Before going east when the location is the kiosk and the High Striker is unvisited:
 	display Figure of HighStriker.
@@ -468,31 +469,15 @@ The markings are here. The markings are scenery. Understand "marking" and "sign"
 
 The Strongman Attendant is here. The description of the Strongman Attendant is "An Attendant is standing here [if strongman attendant is carrying the mallet]holding a mallet[end if]." 
 
-The Strongman Attendant carries the teddy bear, a Swiss army knife, and a poster of Taylor Swift, and the mallet. The description of the teddy bear is "This is a teddy bear like you had when you were a kid. Right down to the red bow around its neck." 
+The Strongman Attendant carries the teddy bear, a Swiss army knife, and a poster of Taylor Swift, the magenta fuse, and the mallet. 
 
-The Swiss Army knife is a container. The Swiss Army knife contains a screwdriver, an awl, fingernail clippers, can opener, and corkscrew. [The screwdriver, awl, fingernail clippers, can opener, and corkscrew are fixed in place.] The description of the Swiss army knife is "This is the standard issue Swiss Army knife with all the expected gadgets." 
+The description of the teddy bear is "This is a teddy bear like you had when you were a kid. Right down to the red bow around its neck." 
 
-instead of taking when the noun is screwdriver:
-	say "You can't take that!";
-	stop the action.
-	
-instead of taking when the noun is awl:
-	say "You can't take that!";
-	stop the action.
-		
-instead of taking when the noun is fingernail clippers:
-	say "You can't take that!";
-	stop the action.
-		
-instead of taking when the noun is can opener:
-	say "You can't take that!";
-	stop the action.
-		
-instead of taking when the noun is corkscrew:
-	say "You can't take that!";
-	stop the action.
+The Swiss Army knife is a container. The screwdriver, awl, fingernail clippers, can opener, and corkscrew are part of the Swiss Army knife. The description of the Swiss army knife is "This is the standard issue Swiss Army knife with a screwdriver, an awl, a pair fingernail clippers, a can opener, and a corkscrew." 
 	
 The description of the poster of Taylor Swift is "This is a poster of America's sweetheart, Taylor Swift."
+
+The description of the magenta fuse is "This is an exlectrical fuse. It is magenta colored."
 
 The lever is here. The lever is fixed in place. Understand "bullseye" and "target" as lever. The description of the lever is "There is a bullseye on the base. I guess this is where you have to aim the mallet."
 
@@ -513,10 +498,10 @@ Carry out hitting when the player is carrying the mallet:
 After hitting the lever when second noun is the mallet 5 times :
 	play the sound of Strongman Bell;
 	say "You swing the mallet one more time. The bell rings as the striker reaches the top of the pole. The attendant says, 'You[']re a Muscle Man. Here's a prize for you.'";
-	say "Which prize would you like? 1) a teddy bear, 2) a Swiss Army knife, or 3) a poster of Taylor Swift?".
+	say "Which prize would you like? 1) a teddy bear, 2) a Swiss Army knife, 3) a poster of Taylor Swift, or 4) a magenta fuse?".
 	
 after Reading a command :
-	if the player's command matches "1" and the location is the high striker and the player is not carrying the teddy bear and the player is not carrying the swiss army knife and the player is not carrying the poster of taylor swift:
+	if the player's command matches "1" and the location is the high striker and the player is not carrying the teddy bear and the player is not carrying the swiss army knife and the player is not carrying the poster of taylor swift and the player is not carrying the magenta fuse:
 		play the sound of Strongman Bell;
 		increase score by 5;
 		say "You are now holding a cute little teddy bear.";
@@ -524,7 +509,7 @@ after Reading a command :
 		reject the player's command.
 		
 after Reading a command:
-	if the player's command matches "2" and the location is the high striker and the player is not carrying the teddy bear and the player is not carrying the swiss army knife and the player is not carrying the poster of taylor swift:
+	if the player's command matches "2" and the location is the high striker and the player is not carrying the teddy bear and the player is not carrying the swiss army knife and the player is not carrying the poster of taylor swift and the player is not carrying the magenta fuse:
 		say "You are now holding a Swiss Army knife.";
 		play the sound of Strongman Bell;
 		increase score by 5;
@@ -532,11 +517,19 @@ after Reading a command:
 		reject the player's command.
 		
 after Reading a command:
-	if the player's command matches "3" and the location is the high striker and the player is not carrying the teddy bear and the player is not carrying the swiss army knife and the player is not carrying the poster of taylor swift:
+	if the player's command matches "3" and the location is the high striker and the player is not carrying the teddy bear and the player is not carrying the swiss army knife and the player is not carrying the poster of taylor swift and the player is not carrying the magenta fuse:
 		say "You are now holding a poster of Taylor Swift.";
 		play the sound of Strongman Bell;
 		increase score by 5;
 		now the player carries the poster of taylor swift;
+		reject the player's command.
+		
+after Reading a command:
+	if the player's command matches "4" and the location is the high striker and the player is not carrying the teddy bear and the player is not carrying the swiss army knife and the player is not carrying the poster of taylor swift and the player is not carrying the magenta fuse:
+		say "You are now holding a magenta colored fuse.";
+		play the sound of Strongman Bell;
+		increase score by 5;
+		now the player carries the magenta fuse;
 		reject the player's command.
 
 Section 5 - Show Facade
@@ -569,7 +562,7 @@ After giving when the noun is dime and the second noun is barker:
 
 Section 6 - Show Tent	
 
-Test Egypt with "brief / get blueberries / get dime / s / w / l at barker / give dime to barker / w / z / z / n / z / z / z / e / e / n / score".
+Test Egypt with "brief / get blueberries / get dime / s / w / l at barker / give dime to barker / w / z / z / n / z / z / z / e / e / n / i / score".
 
 Before going west when the location is the Show Facade and the Show Tent is unvisited and barker is carrying the dime:
 	display Figure of LittleEgyptShow.	
@@ -581,6 +574,8 @@ The Show Tent is a room. The Show Tent is west of Show Facade. "You are inside t
 
 Little Egypt is a woman. Little Egypt is in the Show Tent. Little Egypt is scenery. The description of Little Egypt is "Little Egypt is an exotic looking, beautiful woman who is draped in flowing silk veils which she skillfully uses as part of the dance. Her attire consists of a sparkling, sequined bodice and a flowing skirt, adorned with jingling coin belts and jewelry that accentuate her movements."
 
+The sheer veil is a thing. The description of the SHeer Veil is "This is a sheer gold veil that Little Egypt wore (and removed) during her show. You head swims as you smell the scent of her perfume: patchouli."
+
 The Stage is here. The Stage is scenery. The description of the Stage is "The stage is decorated to resemble an exotic Middle Eastern market or palace, featuring rich, colorful fabrics, brass ornaments, and lanterns casting a warm, flickering glow. Scents of incense waft through the air, enhancing the atmosphere of mystique. The backdrop displays painted scenes of pyramids, desert landscapes, and domed structures to evoking a sense of being transported to the 'Middle East'."
 
 The Folding Chair is in Show Tent. The Folding Chair is a enterable scenery supporter. The description of the Folding Chair is "This is one of many folding chairs in the tent tonight."
@@ -588,9 +583,10 @@ The Folding Chair is in Show Tent. The Folding Chair is a enterable scenery supp
 LittleEgyptAuto is a scene. LittleEgyptAuto begins when the player is in the Show Tent for the second turn.
 
 When LittleEgyptAuto ends:
-	say "You applaud until your hands are sore. Did she just wink at me?";
+	say "You applaud until your hands are sore. Did she just wink at me?[paragraph break]As she leaves the stage, Little Egypt tosses one of her veils to you!";
 	play the sound of Strongman Bell;
-	increase score by 5.
+	increase score by 5;
+	now the player carries the Sheer Veil.
 	
 Every turn during LittleEgyptAuto:
 	repeat through Table of LittleEgypt Events:
@@ -928,9 +924,9 @@ Test b1 with "brief. get	blueberries / s / buy ticket / s / give ticket to atten
 Test b2 with "w / l under stocks / e / s / w / l under platform / e / s / w / l in pyre / get fuse from pyre / e / s / w / l under seat / e / s / w / l under platform / e / s / s / w / l in stand / get khaki fuse/ e / n"
 
 [fill the sockets]
-Test b3 with "ne / open panel / put aqua in socket / sw / e / open panel / put crimson in socket / w / se / open panel / put emerald in socket / nw / sw / open panel / put grey in socket / ne / w / open panel / put indigo in socket / e / nw / testl at panel / unlock panel with knife / l at panel / open  panel / l at panel / l at switch. / l at indicator / l at socket / put khaki in socket / l at socket. se"
+Test b3 with "ne / open panel / put aqua in socket / sw / e / open panel / put crimson in socket / w / se / open panel / put emerald in socket / nw / sw / open panel / put grey in socket / ne / w / open panel / put indigo in socket / e / nw / l at panel / unlock panel with knife / l at panel / open  panel / l at panel / l at switch. / l at indicator / l at socket / put khaki in socket / l at socket. se"
 
-test b4 with "n / n / n / n / n / n / w / n / n / n / score"
+test b4 with "n / n / n / n / n / n / w / n / n / n / i / score"
 
 Test Backstage with "test striker / test b1 / test b2 / test b3 / test b4"
 
@@ -975,7 +971,7 @@ Instead of listening in the presence of the switched on radio:
 
 The scissors are in the drawer. The description is "This is a sharp pair of office scissors." The stapler is in the drawer. The description is "This is a red stapler." The ballpoint pen is in the drawer. The description is "Your standard ballpoint pen. It says Bic on the side." The pad of paper is in the drawer. The description is "This is a pad of lined paper."
 
-The Aqua Door is west of the Maintenance Office and east of the Stocks Room. The Aqua Door is a closed locked door. The description of the Aqua door is "It[']s an aqua colored door with the word 'Stocks' written on it." The silver key unlocks it.
+The aqua door is west of the Maintenance Office and east of the Stocks Room. The Aqua Door is a closed locked door. The description of the Aqua door is "It[']s an aqua colored door with the word 'Stocks' written on it." The silver key unlocks it.
 
 The cans of paint, grease, and lubricant are here.
 
@@ -985,7 +981,7 @@ The Crawl Space is a dark room. The Crawl Space is south of Maintenance Office. 
 
 The ground is uneven, a mix of packed dirt and loose gravel scattered with forgotten tools, scraps of metal, and tangled wires. Overhead, a network of pipes and cables crisscross the space, some wrapped in fraying insulation that crackles faintly as you crawl past. Small puddles of murky water collect in dips on the floor, their surfaces rippling with vibrations from the ride’s movement."
 
-The Crimson Door is west of the Crawl Space and east of the Gallows Room. The Crimson Door is a closed locked door. The description of the Crimson door is "It[']s a crimson colored door with the word 'Gallows' written on it." The silver key unlocks it.
+The crimson door is west of the Crawl Space and east of the Gallows Room. The Crimson Door is a closed locked door. The description of the Crimson door is "It[']s a crimson colored door with the word 'Gallows' written on it." The silver key unlocks it.
 
 Section 4 - Mechanical Room North
 
@@ -1001,7 +997,7 @@ The north mechanical room functions as a support system, ensuring that auxiliary
 
 The toolbox is a closed openable container in the Mechanical Room North. The toolbox contains a monkey wrench, a channel locks, pliers, and a hammer.
 
-The Emerald Door is west of the Mechanical Room North and east of the Stake Room. The Emerald Door is a closed locked door. The description of the Emerald door is "It[']s an emerald colored door with the word 'Stake' written on it." The silver key unlocks it.
+The emerald door is west of the Mechanical Room North and east of the Stake Room. The Emerald Door is a closed locked door. The description of the Emerald door is "It[']s an emerald colored door with the word 'Stake' written on it." The silver key unlocks it.
 
 Section 5 - Mechanical Room South
 
@@ -1015,7 +1011,7 @@ A cooling fan whirs in the corner, its blades spinning in a futile attempt to te
 
 The south mechanical room is brightly lit, with overhead fluorescent lights encased in protective wire cages. This is the main operations hub, where the power of the ride is generated and controlled, ensuring its thrilling movements stay in sync." 
 
-The Grey Door is west of the Mechanical Room South and east of the Dungeon. The Grey Door is a closed locked door. The description of the Grey door is "It[']s a grey colored door with the word 'Dungeon' written on it." The silver key unlocks it.
+The grey door is west of the Mechanical Room South and east of the Dungeon. The Grey Door is a closed locked door. Understand "gray" and "Gray" as grey. The description of the Grey door is "It[']s a grey colored door with the word 'Dungeon' written on it." The silver key unlocks it.
 
 Section 6 - Generator Room
 
@@ -1033,7 +1029,7 @@ In one corner, a row of diesel fuel canisters stands neatly arranged, their meta
 
 Despite its utilitarian design, the room carries an air of importance. The generator room is the heartbeat of the carnival, its steady output ensuring that the lights flash, the rides whirl, and the sounds of joy and terror continue uninterrupted. Yet, in its stark isolation, it feels oddly disconnected from the lively world it powers, a quiet reminder of the machinery behind the magic." 
 
-The Indigo Door is west of the Generator Room and east of the Guillotine Room. The Indigo Door is a closed locked door. The description of the Indigo door is "It[']s an indigo colored door with the word 'Guillotine' written on it." The silver key unlocks it.
+The indigo door is west of the Generator Room and east of the Guillotine Room. The Indigo Door is a closed locked door. The description of the Indigo door is "It[']s an indigo colored door with the word 'Guillotine' written on it." The silver key unlocks it.
 
 Section 7 - Electrical Room
 
@@ -1054,6 +1050,9 @@ Despite its functionality, the electrical room carries a certain unease. The con
 This room is oozing with electromagnetic energy. You can feel your hair stand on end and all your nerves twitching. This feels dangerous! There are exits in all directions, including up."
 
 The Ladder is up from the Electrical Room and down from the Dark Hallway. The ladder is an open door. The description of the Ladder is "It[']s a typical 10 foot ladder."
+
+Instead of climbing a ladder:
+	try entering the noun.
 
 [BUGBUG Uncomment before release]
 [Instead of going from the Electrical Room:
@@ -1286,7 +1285,7 @@ The floor is a patchwork of concrete and dirt, strewn with stray bolts, screws, 
 
 The carnival storage room is not glamorous, but it is vital—a hidden world of spare parts, forgotten treasures, and organized chaos that keeps the carnival running smoothly. It’s a backstage glimpse into the hard work and improvisation that make the magic possible."
 
-The Khaki Door is west of the Storage Room and east of the Ride Exit. The Khaki Door is a closed locked door. The description of the Khaki door is "It[']s a khaki colored door with the word 'Ride Exit' written on it." The silver key unlocks it.
+The khaki door is west of the Storage Room and east of the Ride Exit. The Khaki Door is a closed locked door. The description of the Khaki door is "It[']s a khaki colored door with the word 'Ride Exit' written on it." The silver key unlocks it.
 
 Chapter 4 - Second Floor
 
@@ -1309,7 +1308,64 @@ A single fluorescent light fixture hangs overhead, buzzing faintly as it casts a
 
 Despite its unassuming appearance, the control room feels alive with purpose—a behind-the-scenes hub that ensures the carnival’s magic unfolds without a hitch. It’s a space where the mechanics, electronics, and human effort merge to keep the carnival running smoothly, even as chaos and excitement reign outside." 
 
-The Control Panel is a thing in the Control Room. The Control Panel is a supporter and fixed in place. The description of the Control Panel is "The Control Board is populated with buttons on the left side, a set of dials in the middle, and a set of lights on the right."
+The fuse count is a number that varies. The fuse count is 0.
+every turn when the location is the control room:
+	count the fuses.
+	
+To count the fuses:
+	let fuse count be 0;
+	if the aqua fuse is in socket one, increment the fuse count;
+	if the crimson fuse is in socket three, increment the fuse count;
+	if the emerald fuse is in socket five, increment the fuse count;
+	if the grey fuse is in socket seven, increment the fuse count;
+	if the indigo fuse is in socket nine, increment the fuse count;
+	if the khaki fuse is in socket eleven, increment the fuse count;
+	say "The fuse count is [fuse count]."
+	
+The Control Panel is a thing in the Control Room. The Control Panel is a supporter and fixed in place. The description of the Control Panel is "The control panel is populated with a row of colored lights. From left to right, the colors are aqua, crimson, emerald, grey, indigo, and khaki. Below the lights is a row of similarly colored dials and below that is a row of buttons. (The poorly generated AI image is meant for comparison purposes only. LOL)";
+
+after examining when the noun is control panel:
+	count the fuses;
+	say "The control panel is [if fuse count is 6]lit up like a Christmas tree[otherwise]dark[end if]. [fuse count]";
+	display the figure of ControlPanel.
+
+A colored light is a kind of device. A colored light is fixed in place. A colored light is usually switched off. 
+The aqua light is a colored light. It is part of the control panel. The description of the aqua light is "This is an aqua colored light. The light is [if the aqua light is switched on]on[otherwise]off[end if]."
+The crimson light is a colored light. It is part of the control panel. The description of the crimson light is "This is an crimson colored light. The light is [if the crimson light is switched on]on[otherwise]off[end if]."
+The emerald light is a colored light. It is part of the control panel. The description of the emerald light is "This is an emerald colored light. The light is [if the emerald light is switched on]on[otherwise]off[end if]."
+The grey light is a colored light. It is part of the control panel. The description of the grey light is "This is an grey colored light. The light is [if the grey light is switched on]on[otherwise]off[end if]."
+The indigo light is a colored light. It is part of the control panel. The description of the indigo light is "This is an indigo colored light. The light is [if the indigo light is switched on]on[otherwise]off[end if]."
+The khaki light is a colored light. It is part of the control panel. The description of the khaki light is "This is an khaki colored light. The light is [if the khaki light is switched on]on[otherwise]off[end if]."
+
+A colored button is a kind of device. A colored button is fixed in place. A colored button is usually switched off.
+The aqua button is a colored button. It is part of the control panel. The description of the aqua button is "This is an aqua colored button. It is currently switched [if the aqua light is switched on]on[otherwise]off[end if]."
+The crimson button is a colored button. It is part of the control panel. The description of the crimson button is "This is a crimson colored button. It is currently switched [if the aqua light is switched on]on[otherwise]off[end if]."
+The emerald button is a colored button. It is part of the control panel. The description of the emerald button is "This is an emerald colored button. It is currently switched [if the aqua light is switched on]on[otherwise]off[end if]."
+The grey button is a colored button. It is part of the control panel. The description of the grey button is "This is a grey colored button. It is currently switched [if the aqua light is switched on]on[otherwise]off[end if]."
+The indigo button is a colored button. It is part of the control panel. The description of the indigo button is "This is an indigo colored button. It is currently switched [if the aqua light is switched on]on[otherwise]off[end if]."
+The khaki button is a colored button. It is part of the control panel. The description of the khaki button is "This is a khaki colored button. It is currently switched [if the aqua light is switched on]on[otherwise]off[end if]."
+
+A colored dial is a kind of a device. A colored dial is fixed in place. A colored dial has a number called a dial setting. A dial setting is usually 0. 
+The aqua dial is a colored dial. It is part of the control panel. The description of the aqua dial is "This is an aqua dial. It is curently set to [dial setting]".
+The crimson dial is a colored dial. It is part of the control panel. The description of the crimson dial is "This is a crimson dial. It is curently set to [dial setting]".
+The emerald dial is a colored dial. It is part of the control panel. The description of the emerald dial is "This is an emerald dial. It is curently set to [dial setting]".
+The grey dial is a colored dial. It is part of the control panel. The description of the grey dial is "This is a grey dial. It is curently set to [dial setting]".
+The indigo dial is a colored dial. It is part of the control panel. The description of the indigo dial is "This is an indigo dial. It is curently set to [dial setting]".
+The khaki dial is a colored dial. It is part of the control panel. The description of the khaki dial is "This is a khaki dial. It is curently set to [dial setting]".
+
+Spinning it to is an action applying to one thing and one number. Check spinning it to: if the noun is not a colored dial, say "[The noun] does not spin." instead. Report spinning it to: 
+	say "The dial is now set to [second noun]".
+	[now dial setting is the second noun.]
+
+Understand "spin [something] to [a number]" as spinning it to. Understand "turn [something] to [a number]" as spinning it to.
+
+[After spinning the closed Safe to 1384: now the Safe is open; say "Clonk! and the safe door swings slowly open, revealing [a list of things in the Safe]."]
+
+Instead of pushing a colored button (called button): 
+	now all colored buttons are switched off;
+	if the button is switched off, try switching on the button; otherwise try switching off the button.
+	
+
 
 Part 3 Regions
 

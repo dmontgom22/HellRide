@@ -22,10 +22,12 @@
             <string>Figures\HighStriker.png</string>
             <key>10</key>
             <string>Figures\RideEntrance.png</string>
+            <key>11</key>
+            <string>Figures\ControlPanel.png</string>
         </dict>
         <key>Sounds</key>
         <dict>
-            <key>11</key>
+            <key>12</key>
             <string>Sounds\StrongmanBell.ogg</string>
         </dict>
     </dict>
