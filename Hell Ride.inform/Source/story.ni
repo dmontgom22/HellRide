@@ -30,7 +30,7 @@ Use scoring.
 Use American Dialect.
 Use serial comma.
 Use maximum things understood at once of at least 200.
-The maximum score is 80.
+The maximum score is 85.
 The block giving rule is not listed in the check giving it to rules.
 
 Chapter 2 - New Mechanics, Actions, Phrases
@@ -194,7 +194,8 @@ This is the new described devices rule:
 
 Report switching on something:
 	say "You flip a switch. ";
-	carry out the showing action activity with the noun instead.
+	carry out the showing action activity with the noun instead;
+	continue the action.
 
 An electric lamp is a kind of device.
 
@@ -238,7 +239,9 @@ Section 6 - Miscellaneous
 
 Test Misc with "brief / get blueberries / xyzzy / hello sailor / please get the dime / i / score".
 
-[seen or unseen for adaptive text]
+[for adaptive text]
+A thing can be broken or unbroken. A thing is usually unbroken.
+
 A thing can be seen or unseen. A thing is usually unseen.
 
 Carry out examining a thing:
@@ -757,7 +760,7 @@ Above it all, the gray sky looms, heavy with the promise of rain, as if nature i
 
 The wooden stocks are here. The wooden stocks are a supporter. The wooden stocks are fixed in place. The description of the wooden stocks is "At the square's center stand a row of crude wooden stocks, their heavy beams stained from years of weather and use. Iron clasps hold the unfortunate captives by their wrists and necks, their bodies forced into unnatural, humiliating postures." 
 
-The Aqua Fuse underlies the wooden stocks. The aqua fuse can be lost or found. It is lost. The description of the aqua fuse is "This is an electrical fuse. It is aqua colored. The same color as the door where you found it."
+The aqua fuse underlies the wooden stocks. The aqua fuse can be lost or found. It is lost. The description of the aqua fuse is "This is an electrical fuse. It is aqua colored. The same color as the door where you found it."
 
 Instead of looking under a thing which is underlaid by the aqua fuse when the aqua fuse is lost:
 	say "You find [the list of things which underlie the noun]!";
@@ -784,7 +787,7 @@ The executioner steps forward, adjusting the noose around the man’s neck with 
 
 The gallows platform is here. The gallows platform is a supporter. The gallows platform is fixed in place. Understand "gallows" as gallows platform. The description of the gallows platform is "At the center of the square, rising like a grim monument to mortality, stands the gallows—a wooden platform, darkened by age and weather, with thick ropes hanging like vipers poised to strike." 
 
-The Crimson Fuse underlies the gallows platform. The crimson fuse can be lost or found. It is lost. The description of the crimson fuse is "This is an electrical fuse. It is crimson colored. The same color as the door where you found it."
+The crimson fuse underlies the gallows platform. The crimson fuse can be lost or found. It is lost. The description of the crimson fuse is "This is an electrical fuse. It is crimson colored. The same color as the door where you found it."
 
 Instead of looking under a thing which is underlaid by the crimson fuse when the crimson fuse is lost:
 	say "You find [the list of things which underlie the noun]!";
@@ -811,7 +814,7 @@ As the flames consume the pyre, the crowd remains rooted, some transfixed by the
 
 The pyre is scenery in the Stake Room. The pyre is a container. understand "bonfire", "fire", "stake", "stakes", "flame", and "flames" as the pyre. The description of the pyre is "At the center, three wooden stakes rise ominously from a circular pyre of logs and kindling, their rough surfaces darkened by smoke from countless such scenes before. Bound tightly to these stakes are three women, their wrists and ankles secured with coarse, heavy ropes. Their faces tell different stories—one of defiance, another of resignation, and the third of pure terror." 
 
-The Emerald Fuse is in the pyre. The emerald fuse can be lost or found. It is lost. The description of the emerald fuse is "This is an electrical fuse. It is emerald colored. The same color as the door where you found it."
+The emerald fuse is in the pyre. The emerald fuse can be lost or found. It is lost. The description of the emerald fuse is "This is an electrical fuse. It is emerald colored. The same color as the door where you found it."
 
 Instead of taking the emerald fuse when the emerald fuse is lost:
 	say "You find [the list of things which contain the noun]!";
@@ -841,7 +844,7 @@ This is a place of despair and cruelty, where the line between life and death is
 
 The iron seat is scenery in the Dungeon. The iron seat is a supporter. understand "spiked chair" as iron seat. The description of the iron seat is "A spiked chair looms in the corner, its cruel design gleaming faintly in the dim light." 
 
-The Grey Fuse underlies the iron seat. The grey fuse can be lost or found. It is lost. The description of the grey fuse is "This is an electrical fuse. It is grey colored. The same color as the door where you found it."
+The grey fuse underlies the iron seat. The grey fuse can be lost or found. It is lost. The description of the grey fuse is "This is an electrical fuse. It is grey colored. The same color as the door where you found it."
 
 Instead of looking under a thing which is underlaid by the grey fuse when the grey fuse is lost:
 	say "You find [the list of things which underlie the noun]!";
@@ -872,7 +875,7 @@ There is just lone problem: the guillotine is being raised and lowered by some m
 
 The guillotine platform is here. The guillotine platform is a supporter. Understand "scaffold" as guillotine platform. The description of the guillotine platform is "At the center of the square stands a raised wooden platform, stark and imposing, where the grim sentence is to be carried out." 
 
-The Indigo Fuse underlies the guillotine platform. The indigo fuse can be lost or found. It is lost. The description of the indigo fuse is "This is an electrical fuse. It is indigo colored. The same color as the door where you found it."
+The indigo fuse underlies the guillotine platform. The indigo fuse can be lost or found. It is lost. The description of the indigo fuse is "This is an electrical fuse. It is indigo colored. The same color as the door where you found it."
 
 Instead of looking under a thing which is underlaid by the indigo fuse when the indigo fuse is lost:
 	say "You find [the list of things which underlie the noun]!";
@@ -901,7 +904,7 @@ The Hell Ride exit leaves riders not just thrilled, but marked by the eerie expe
 
 The merchandise stand is scenery in the Ride Exit. The merchandise stand is a container. Understand "stand" as merchandise. The description of the merchandise is "The stand is bathed in red light, adding to the ominous mood." 
 
-The Khaki Fuse is in the merchandise stand. The Khaki Fuse underlies the merchandise stand. The khaki fuse can be lost or found. It is lost. The description of the khaki fuse is "This is an electrical fuse. It is khaki colored. The same color as the door where you found it."
+The khaki fuse is in the merchandise stand. The Khaki Fuse underlies the merchandise stand. The khaki fuse can be lost or found. It is lost. The description of the khaki fuse is "This is an electrical fuse. It is khaki colored. The same color as the door where you found it."
 
 Instead of taking the khaki fuse when the khaki fuse is lost:
 	say "You find [the list of things which underlie the noun]!";
@@ -921,7 +924,7 @@ Section 1 - Dark Passage
 Test b1 with "brief. get	blueberries / s / buy ticket / s / give ticket to attendant / s / e / l at piles / get flashlight / turn it on / s / turn on radio / l at desk / open drawer / get all from the drawer / s / s / open toolbox / get all from toolbox / s / s / s / ne / get silver key / l at panel / open panel / l at socket / sw / n / n / n / n / n"
 
 [get the fuses]
-Test b2 with "w / l under stocks / e / s / w / l under platform / e / s / w / l in pyre / get fuse from pyre / e / s / w / l under seat / e / s / w / l under platform / e / s / s / w / l in stand / get khaki fuse/ e / n"
+Test b2 with "w / l under stocks / e / s / w / l under platform / e / s / w / l in pyre / get fuse from pyre / e / s / w / l under seat / e / s / w / l under platform / e / s / s / w / l in stand / get khaki fuse from merchandise stand / e / n"
 
 [fill the sockets]
 Test b3 with "ne / open panel / put aqua in socket / sw / e / open panel / put crimson in socket / w / se / open panel / put emerald in socket / nw / sw / open panel / put grey in socket / ne / w / open panel / put indigo in socket / e / nw / l at panel / unlock panel with knife / l at panel / open  panel / l at panel / l at switch. / l at indicator / l at socket / put khaki in socket / l at socket. se"
@@ -1237,6 +1240,8 @@ Section 13 - Electrical Closet One
 
 The Electrical Closet One is a dark room. The Electrical Closet One is northeast of the Electrical Room.  "You are in a section of the electrical room. There is an electrical panel here. There is an exit to the south west." 
 
+The Electrical CLoset One is a scored room.
+
 Electrical Panel One is a locked closed openable container in Electrical Closet One. The swiss army knife unlocks it. Electrical Panel One is scenery. The printed name of Electrical Panel One is "the electrical panel". The description is "This is a standard issue 200 amp electrical panel supplying 220 power throughout the ride. The electrical panel is [if Electrical Panel One is open]open. Inside the panel you see a switch, a socket, and an indicator light.[otherwise]closed[end if]. [if Electrical Panel One is locked]There are screws holding it shut.[end if]" 
 
 Socket One is part of Electrical Panel One. Socket One is a container. Socket One can be filled or unfilled. Socket One is unfilled. The printed name of a socket One is "the socket". The description is "This is a socket. A fuse probably goes in here."
@@ -1308,10 +1313,18 @@ A single fluorescent light fixture hangs overhead, buzzing faintly as it casts a
 
 Despite its unassuming appearance, the control room feels alive with purpose—a behind-the-scenes hub that ensures the carnival’s magic unfolds without a hitch. It’s a space where the mechanics, electronics, and human effort merge to keep the carnival running smoothly, even as chaos and excitement reign outside." 
 
-The fuse count is a number that varies. The fuse count is 0.
+[control panel]
+The Control Panel is a thing in the Control Room. The Control Panel is a supporter and fixed in place. The description of the Control Panel is "The control panel is populated with a row of colored lights. From left to right, the colors are aqua, crimson, emerald, grey, indigo, and khaki. Below the lights is a row of similarly colored dials and below that is a row of buttons. (The poorly generated AI & human image is meant for comparison purposes only. LOL)";
+
+after examining when the noun is control panel:
+	count the fuses;
+	say "The control panel is [if fuse count is 6]lit up like a Christmas tree[otherwise]dark[end if]. [fuse count]";
+	display the figure of ControlPanel.
+
 every turn when the location is the control room:
 	count the fuses.
 	
+The fuse count is a number that varies. The fuse count is 0.
 To count the fuses:
 	let fuse count be 0;
 	if the aqua fuse is in socket one, increment the fuse count;
@@ -1319,17 +1332,10 @@ To count the fuses:
 	if the emerald fuse is in socket five, increment the fuse count;
 	if the grey fuse is in socket seven, increment the fuse count;
 	if the indigo fuse is in socket nine, increment the fuse count;
-	if the khaki fuse is in socket eleven, increment the fuse count;
-	say "The fuse count is [fuse count]."
+	if the khaki fuse is in socket eleven, increment the fuse count.
 	
-The Control Panel is a thing in the Control Room. The Control Panel is a supporter and fixed in place. The description of the Control Panel is "The control panel is populated with a row of colored lights. From left to right, the colors are aqua, crimson, emerald, grey, indigo, and khaki. Below the lights is a row of similarly colored dials and below that is a row of buttons. (The poorly generated AI image is meant for comparison purposes only. LOL)";
-
-after examining when the noun is control panel:
-	count the fuses;
-	say "The control panel is [if fuse count is 6]lit up like a Christmas tree[otherwise]dark[end if]. [fuse count]";
-	display the figure of ControlPanel.
-
-A colored light is a kind of device. A colored light is fixed in place. A colored light is usually switched off. 
+[lights]
+A colored light is a kind of device. A colored light is fixed in place. A colored light is usually switched off. Understand "indicator" as colored light.
 The aqua light is a colored light. It is part of the control panel. The description of the aqua light is "This is an aqua colored light. The light is [if the aqua light is switched on]on[otherwise]off[end if]."
 The crimson light is a colored light. It is part of the control panel. The description of the crimson light is "This is an crimson colored light. The light is [if the crimson light is switched on]on[otherwise]off[end if]."
 The emerald light is a colored light. It is part of the control panel. The description of the emerald light is "This is an emerald colored light. The light is [if the emerald light is switched on]on[otherwise]off[end if]."
@@ -1337,14 +1343,11 @@ The grey light is a colored light. It is part of the control panel. The descript
 The indigo light is a colored light. It is part of the control panel. The description of the indigo light is "This is an indigo colored light. The light is [if the indigo light is switched on]on[otherwise]off[end if]."
 The khaki light is a colored light. It is part of the control panel. The description of the khaki light is "This is an khaki colored light. The light is [if the khaki light is switched on]on[otherwise]off[end if]."
 
-A colored button is a kind of device. A colored button is fixed in place. A colored button is usually switched off.
-The aqua button is a colored button. It is part of the control panel. The description of the aqua button is "This is an aqua colored button. It is currently switched [if the aqua light is switched on]on[otherwise]off[end if]."
-The crimson button is a colored button. It is part of the control panel. The description of the crimson button is "This is a crimson colored button. It is currently switched [if the aqua light is switched on]on[otherwise]off[end if]."
-The emerald button is a colored button. It is part of the control panel. The description of the emerald button is "This is an emerald colored button. It is currently switched [if the aqua light is switched on]on[otherwise]off[end if]."
-The grey button is a colored button. It is part of the control panel. The description of the grey button is "This is a grey colored button. It is currently switched [if the aqua light is switched on]on[otherwise]off[end if]."
-The indigo button is a colored button. It is part of the control panel. The description of the indigo button is "This is an indigo colored button. It is currently switched [if the aqua light is switched on]on[otherwise]off[end if]."
-The khaki button is a colored button. It is part of the control panel. The description of the khaki button is "This is a khaki colored button. It is currently switched [if the aqua light is switched on]on[otherwise]off[end if]."
+instead of switching on a colored light, say "You can[']t do that!"
 
+instead of switching off a colored light, say "you can[']t do that!"
+
+[dials]
 A colored dial is a kind of a device. A colored dial is fixed in place. A colored dial has a number called a dial setting. A dial setting is usually 0. 
 The aqua dial is a colored dial. It is part of the control panel. The description of the aqua dial is "This is an aqua dial. It is curently set to [dial setting]".
 The crimson dial is a colored dial. It is part of the control panel. The description of the crimson dial is "This is a crimson dial. It is curently set to [dial setting]".
@@ -1361,9 +1364,133 @@ Understand "spin [something] to [a number]" as spinning it to. Understand "turn 
 
 [After spinning the closed Safe to 1384: now the Safe is open; say "Clonk! and the safe door swings slowly open, revealing [a list of things in the Safe]."]
 
-Instead of pushing a colored button (called button): 
-	now all colored buttons are switched off;
-	if the button is switched off, try switching on the button; otherwise try switching off the button.
+[buttons]
+A colored button is a kind of device. A colored button is fixed in place. A colored button is usually switched off.
+The aqua button is a colored button. It is part of the control panel. The description of the aqua button is "This is an aqua colored button."
+The crimson button is a colored button. It is part of the control panel. The description of the crimson button is "This is a crimson colored button."
+The emerald button is a colored button. It is part of the control panel. The description of the emerald button is "This is an emerald colored button."
+The grey button is a colored button. It is part of the control panel. The description of the grey button is "This is a grey colored button."
+The indigo button is a colored button. It is part of the control panel. The description of the indigo button is "This is an indigo colored button."
+The khaki button is a colored button. It is part of the control panel. The description of the khaki button is "This is a khaki colored button."
+
+[Instead of pushing a colored button (called button): 
+	say "The monitor flickers for a second and the scene it[']s displaying changes.";
+	now all colored lights are switched off;
+	if the button is switched off, try switching on the button; otherwise try switching off the button;
+	continue the action.]
+
+instead of switching on or pushing the aqua button, try switching on the aqua button.
+Instead of switching on the aqua button:
+	if the aqua button is switched off and the aqua fuse is in socket one 
+		begin;
+			say "The monitor flickers for a second and the scene it[']s displaying changes.";
+			say "The monitor now shows a tableau of poor unfortunate townsfolk locked in stocks.";
+			say "The aqua indicator is now on.";
+			now all colored buttons are switched off;
+			now all colored lights are switched off;
+			now the aqua button is switched on;
+			now the aqua light is switched on;
+		else;
+			say "The monitor turns off and the screen goes black.";
+			say "The aqua indicator is now off.";
+			now all colored lights are switched off;
+			now all the colored buttons are switched off;
+		end if.
+		
+Instead of switching on or pushing the crimson button: 
+	if the crimson button is switched off and the crimson fuse is in socket three
+		begin;
+			say "The monitor flickers for a second and the scene it[']s displaying changes.";
+			say "The monitor now shows a scene of someone waiting to be hanged.";
+			say "The crimson indicator is now on.";
+			now all colored buttons are switched off;
+			now all colored lights are switched off;
+			now the crimson button is switched on;
+			now the crimson light is switched on;
+		else;
+			say "The monitor turns off and the screen goes black.";
+			say "The crimson indicator is now off.";
+			now all colored lights are switched off;
+			now all the colored buttons are switched off;
+		end if.
+		
+Instead of switching on or pushing the emerald button: 
+	if the emerald button is switched off and the emerald fuse is in socket five
+		begin;
+			say "The monitor flickers for a second and the scene it[']s displaying changes.";
+			say "The monitor now displays a scene of witches being burned at the stake.";
+			say "The emerald indicator is now on.";
+			now all colored buttons are switched off;
+			now all colored lights are switched off;
+			now the emerald button is switched on;
+			now the emerald light is switched on;
+		else;
+			say "The monitor turns off and the screen goes black.";
+			say "The emerald indicator is now off.";
+			now all colored lights are switched off;
+			now all the colored buttons are switched off;
+		end if;
+		
+Instead of switching on or pushing the grey button: 
+	if the grey button is switched off and the grey fuse is in socket seven
+		begin;
+			say "The monitor flickers for a second and the scene it[']s displaying changes.";
+			say "The monitor now shows the implements of torture in the dungeon.";
+			say "The grey indicator is now on.";
+			now all colored buttons are switched off;
+			now all colored lights are switched off;
+			now the grey button is switched on;
+			now the grey light is switched on;
+		else;
+			say "The monitor turns off and the screen goes black.";
+			say "The grey indicator is now off.";
+			now all colored lights are switched off;
+			now all the colored buttons are switched off;
+		end if;
+
+Instead of switching on or pushing the indigo button: 
+	if the indigo button is switched off and the indigo fuse is in socket nine
+		begin;
+			say "The monitor flickers for a second and the scene it[']s displaying changes.";
+			say "The monitor now shows a tableau of a guillotine rising and falling over the ride exit.";
+			say "The indigo indicator is now on.";
+			now all colored buttons are switched off;
+			now all colored lights are switched off;
+			now the indigo button is switched on;
+			now the indigo light is switched on;
+		else;
+			say "The monitor turns off and the screen goes black.";
+			say "The indigo indicator is now off.";
+			now all colored lights are switched off;
+			now all the colored buttons are switched off;
+		end if;
+
+Instead of Switching on or pushing the khaki button: 
+	if the khaki button is switched off and the khaki fuse is in socket eleven
+		begin;
+			say "The monitor flickers for a second and the scene it[']s displaying changes.";
+			say "The monitor shows a the gift shop located at the Hell Ride exit.";
+			say "The khaki indicator is now on.";
+			now all colored buttons are switched off;
+			now all colored lights are switched off;
+			now the khaki button is switched on;
+			now the khaki light is switched on;
+		else;
+			say "The monitor turns off and the screen goes black.";
+			say "The khaki indicator is now off.";
+			now all colored lights are switched off;
+			now all the colored buttons are switched off;
+		end if.
+
+The monitor is part of the control panel. The monitor is fixed in place. 
+instead of examining the monitor:
+	if the aqua button is switched on, say "The monitor now shows a tableau of poor unfortunate townsfolk locked in stocks.";
+	if the crimson button is switched on, say "The monitor now shows a scene of someone waiting to be hanged.";
+	if the emerald button is switched on, say "The monitor now displays a scene of witches being burned at the stake.";
+	if the grey button is switched on, say "The monitor now shows the implements of torture in the dungeon.";
+	if the indigo button is switched on, say "The monitor now shows a tableau of a guillotine rising and falling over the ride exit.";
+	if the khaki button is switched on, say "The monitor shows a the gift shop located at the Hell Ride exit.".
+					
 	
 
 
