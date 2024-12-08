@@ -322,25 +322,25 @@ Global match_length = 0;
 Global match_from = 0;
 Global parsetoken_nesting = 0;
 Array Global_Vars --> 0
-  (0) ! -->1 = V67_number_understood (V67_number_understood)
-  (0) ! -->2 = V68_real_number_understood (V68_real_number_understood)
-  (0) ! -->3 = V69_truth_state_understood (V69_truth_state_understood)
-  (0) ! -->4 = V70_external_file_understood (V70_external_file_understood)
-  (540) ! -->5 = V71_time_understood (V71_time_understood)
-  (I_entire_game_U1) ! -->6 = V72_scene_understood (V72_scene_understood)
-  (I_figure_of_cover_U1) ! -->7 = V73_figure_name_understood (V73_figure_name_understood)
-  (I_sound_of_strongman_bell_U1) ! -->8 = V74_sound_name_understood (V74_sound_name_understood)
-  (I_english_language_U1) ! -->9 = V75_natural_language_understo (V75_natural_language_understo)
-  (I_present_tense_U1) ! -->10 = V76_grammatical_tense_underst (V76_grammatical_tense_underst)
-  (I_first_person_singular_U1) ! -->11 = V77_narrative_viewpoint_under (V77_narrative_viewpoint_under)
-  (I_nominative_U1) ! -->12 = V78_grammatical_case_understo (V78_grammatical_case_understo)
-  (I_neuter_gender_U1) ! -->13 = V79_grammatical_gender_unders (V79_grammatical_gender_unders)
-  (I_didn_t_understand_error_U1) ! -->14 = V80_command_parser_error_unde (V80_command_parser_error_unde)
-  (I_brief_U1) ! -->15 = V81_verbosity_understood (V81_verbosity_understood)
-  (0) ! -->16 = V82_price_understood (V82_price_understood)
-  (0) ! -->17 = V83_volume_understood (V83_volume_understood)
-  (I_water_U1) ! -->18 = V84_liquid_understood (V84_liquid_understood)
-  (I_weakling_U1) ! -->19 = V85_strength_pattern_understo (V85_strength_pattern_understo)
+  (0) ! -->1 = V68_number_understood (V68_number_understood)
+  (0) ! -->2 = V69_real_number_understood (V69_real_number_understood)
+  (0) ! -->3 = V70_truth_state_understood (V70_truth_state_understood)
+  (0) ! -->4 = V71_external_file_understood (V71_external_file_understood)
+  (540) ! -->5 = V72_time_understood (V72_time_understood)
+  (I_entire_game_U1) ! -->6 = V73_scene_understood (V73_scene_understood)
+  (I_figure_of_cover_U1) ! -->7 = V74_figure_name_understood (V74_figure_name_understood)
+  (I_sound_of_strongman_bell_U1) ! -->8 = V75_sound_name_understood (V75_sound_name_understood)
+  (I_english_language_U1) ! -->9 = V76_natural_language_understo (V76_natural_language_understo)
+  (I_present_tense_U1) ! -->10 = V77_grammatical_tense_underst (V77_grammatical_tense_underst)
+  (I_first_person_singular_U1) ! -->11 = V78_narrative_viewpoint_under (V78_narrative_viewpoint_under)
+  (I_nominative_U1) ! -->12 = V79_grammatical_case_understo (V79_grammatical_case_understo)
+  (I_neuter_gender_U1) ! -->13 = V80_grammatical_gender_unders (V80_grammatical_gender_unders)
+  (I_didn_t_understand_error_U1) ! -->14 = V81_command_parser_error_unde (V81_command_parser_error_unde)
+  (I_brief_U1) ! -->15 = V82_verbosity_understood (V82_verbosity_understood)
+  (0) ! -->16 = V83_price_understood (V83_price_understood)
+  (0) ! -->17 = V84_volume_understood (V84_volume_understood)
+  (I_water_U1) ! -->18 = V85_liquid_understood (V85_liquid_understood)
+  (I_weakling_U1) ! -->19 = V86_strength_pattern_understo (V86_strength_pattern_understo)
   (I_english_language_U1) ! -->20 = V1_language_of_play (V1_language_of_play)
   (0) ! -->21 = V12_darkness_witnessed (V12_darkness_witnessed)
   (bc_U152) ! -->22 = V26_command_prompt (V26_command_prompt)
@@ -362,13 +362,13 @@ Array Global_Vars --> 0
   (0) ! -->38 = V52_visibility_level_count (V52_visibility_level_count)
   (0) ! -->39 = V53_visibility_ceiling (V53_visibility_ceiling)
   (0) ! -->40 = V54_examine_text_printed (V54_examine_text_printed)
-  (selfobj) ! -->41 = V86_actor (V86_actor)
-  (0) ! -->42 = V87_action_in_world (V87_action_in_world)
-  (0) ! -->43 = V88_action_keeping_silent (V88_action_keeping_silent)
-  (0) ! -->44 = V89_specific_check_rulebook (V89_specific_check_rulebook)
-  (0) ! -->45 = V90_specific_carry_out_rulebo (V90_specific_carry_out_rulebo)
-  (0) ! -->46 = V91_specific_report_rulebook (V91_specific_report_rulebook)
-  (0) ! -->47 = V92_within_the_player_s_sight (V92_within_the_player_s_sight)
+  (selfobj) ! -->41 = V87_actor (V87_actor)
+  (0) ! -->42 = V88_action_in_world (V88_action_in_world)
+  (0) ! -->43 = V89_action_keeping_silent (V89_action_keeping_silent)
+  (0) ! -->44 = V90_specific_check_rulebook (V90_specific_check_rulebook)
+  (0) ! -->45 = V91_specific_carry_out_rulebo (V91_specific_carry_out_rulebo)
+  (0) ! -->46 = V92_specific_report_rulebook (V92_specific_report_rulebook)
+  (0) ! -->47 = V93_within_the_player_s_sight (V93_within_the_player_s_sight)
   (0) ! -->48 = V56_key_unlocked_with (V56_key_unlocked_with)
   (0) ! -->49 = V57_key_locked_with (V57_key_locked_with)
   (table_data_U3) ! -->50 = V58_status_bar_table (V58_status_bar_table)
@@ -379,6 +379,7 @@ Array Global_Vars --> 0
   (1) ! -->55 = V64_current_menu_selection (V64_current_menu_selection)
   (0) ! -->56 = V65_dark_terminus_count (V65_dark_terminus_count)
   (0) ! -->57 = V66_fuse_count (V66_fuse_count)
+  (0) ! -->58 = V67_dial_count (V67_dial_count)
 ;
 Constant subterfuge_1 = absent;
 Constant subterfuge_2 = animate;
@@ -505,10 +506,10 @@ Constant subterfuge_122 = K22_switch_Count;
 Constant subterfuge_123 = K22_switch_Next;
 Constant subterfuge_124 = K23_colored_light_Count;
 Constant subterfuge_125 = K23_colored_light_Next;
-Constant subterfuge_126 = K24_colored_dial_Count;
-Constant subterfuge_127 = K24_colored_dial_Next;
-Constant subterfuge_128 = K25_colored_button_Count;
-Constant subterfuge_129 = K25_colored_button_Next;
+Constant subterfuge_126 = K24_colored_button_Count;
+Constant subterfuge_127 = K24_colored_button_Next;
+Constant subterfuge_128 = K25_colored_dial_Count;
+Constant subterfuge_129 = K25_colored_dial_Next;
 Constant subterfuge_130 = P_scored;
 Constant subterfuge_131 = P_indoors;
 Constant subterfuge_132 = P_price;
@@ -3070,12 +3071,12 @@ Constant ICOUNT_COLORED_LIGHT = 6;
 Constant K23_colored_light_First = I_aqua_light_U1;
 Constant kind_ref_U80 = 561;
 Constant WEAK_ID_81 = 36;
-Constant ICOUNT_COLORED_DIAL = 6;
-Constant K24_colored_dial_First = I_aqua_dial_U1;
+Constant ICOUNT_COLORED_BUTTON = 6;
+Constant K24_colored_button_First = I_aqua_button_U1;
 Constant kind_ref_U81 = 561;
 Constant WEAK_ID_82 = 37;
-Constant ICOUNT_COLORED_BUTTON = 6;
-Constant K25_colored_button_First = I_aqua_button_U1;
+Constant ICOUNT_COLORED_DIAL = 6;
+Constant K25_colored_dial_First = I_aqua_dial_U1;
 Constant anchor_U417 = 1105;
 Constant anchor_U418 = 1105;
 Constant anchor_U419 = 1105;
@@ -3192,6 +3193,7 @@ Constant anchor_U529 = 1105;
 Constant anchor_U530 = 1105;
 Constant anchor_U531 = 1105;
 Constant anchor_U532 = 1105;
+Constant anchor_U533 = 1105;
 Constant property_id_U117 = 42;
 Constant property_id_U118 = 43;
 Constant property_id_U119 = 44;
@@ -3473,6 +3475,8 @@ Constant line_ref_U253 = 561;
 Constant line_ref_U254 = 561;
 Constant line_ref_U255 = 561;
 Constant line_ref_U256 = 561;
+Constant line_ref_U257 = 561;
+Constant line_ref_U258 = 561;
 Constant KIT_CONFIGURATION_BITMAP = 389;
 Constant KIT_CONFIGURATION_LOOKMODE = 2;
 Constant MAX_FRAME_SIZE_NEEDED = 6;
@@ -5365,37 +5369,37 @@ Constant text_U382 = alphabetised_text_242;
 Constant text_U383 = alphabetised_text_200;
 Constant text_U384 = alphabetised_text_250;
 Constant text_U385 = alphabetised_text_200;
-Constant text_U386 = alphabetised_text_180;
-Constant text_U387 = alphabetised_text_199;
-Constant text_U388 = alphabetised_text_205;
-Constant text_U389 = alphabetised_text_199;
-Constant text_U390 = alphabetised_text_220;
-Constant text_U391 = alphabetised_text_199;
-Constant text_U392 = alphabetised_text_231;
-Constant text_U393 = alphabetised_text_199;
-Constant text_U394 = alphabetised_text_239;
-Constant text_U395 = alphabetised_text_199;
-Constant text_U396 = alphabetised_text_247;
-Constant text_U397 = alphabetised_text_199;
-Constant text_U398 = alphabetised_text_179;
-Constant text_U399 = alphabetised_text_149;
+Constant text_U386 = alphabetised_text_179;
+Constant text_U387 = alphabetised_text_149;
+Constant text_U388 = alphabetised_text_198;
+Constant text_U389 = alphabetised_text_204;
+Constant text_U390 = alphabetised_text_136;
+Constant text_U391 = alphabetised_text_198;
+Constant text_U392 = alphabetised_text_219;
+Constant text_U393 = alphabetised_text_156;
+Constant text_U394 = alphabetised_text_198;
+Constant text_U395 = alphabetised_text_230;
+Constant text_U396 = alphabetised_text_137;
+Constant text_U397 = alphabetised_text_198;
+Constant text_U398 = alphabetised_text_238;
+Constant text_U399 = alphabetised_text_158;
 Constant text_U400 = alphabetised_text_198;
-Constant text_U401 = alphabetised_text_204;
-Constant text_U402 = alphabetised_text_136;
+Constant text_U401 = alphabetised_text_246;
+Constant text_U402 = alphabetised_text_138;
 Constant text_U403 = alphabetised_text_198;
-Constant text_U404 = alphabetised_text_219;
-Constant text_U405 = alphabetised_text_156;
-Constant text_U406 = alphabetised_text_198;
-Constant text_U407 = alphabetised_text_230;
-Constant text_U408 = alphabetised_text_137;
-Constant text_U409 = alphabetised_text_198;
-Constant text_U410 = alphabetised_text_238;
-Constant text_U411 = alphabetised_text_158;
-Constant text_U412 = alphabetised_text_198;
-Constant text_U413 = alphabetised_text_246;
-Constant text_U414 = alphabetised_text_138;
-Constant text_U415 = alphabetised_text_198;
-Constant text_U416 = alphabetised_text_260;
+Constant text_U404 = alphabetised_text_260;
+Constant text_U405 = alphabetised_text_180;
+Constant text_U406 = alphabetised_text_199;
+Constant text_U407 = alphabetised_text_205;
+Constant text_U408 = alphabetised_text_199;
+Constant text_U409 = alphabetised_text_220;
+Constant text_U410 = alphabetised_text_199;
+Constant text_U411 = alphabetised_text_231;
+Constant text_U412 = alphabetised_text_199;
+Constant text_U413 = alphabetised_text_239;
+Constant text_U414 = alphabetised_text_199;
+Constant text_U415 = alphabetised_text_247;
+Constant text_U416 = alphabetised_text_199;
 Constant text_U417 = alphabetised_text_69;
 Constant text_U418 = alphabetised_text_275;
 Constant text_U419 = alphabetised_text_51;
@@ -5415,8 +5419,8 @@ Constant K22_switch_First = nothing;
 Constant text_U427 = alphabetised_text_296;
 Constant text_U428 = alphabetised_text_290;
 Constant text_U429 = alphabetised_text_200;
-Constant text_U430 = alphabetised_text_199;
-Constant text_U431 = alphabetised_text_198;
+Constant text_U430 = alphabetised_text_198;
+Constant text_U431 = alphabetised_text_199;
 Constant text_U432 = alphabetised_text_174;
 Constant column_identity_U45 = table_column_id_U19;
 Constant text_U433 = alphabetised_text_7;
@@ -5684,10 +5688,10 @@ Array A_K22_switch_Count --> [ 1; subterfuge_122; 0; "switch"; K0_kind; K1_room;
 Array A_K22_switch_Next --> [ 1; subterfuge_123; 0; "switch"; K0_kind; K1_room; K2_thing; K9_region; K3_direction; NULL; ];
 Array A_K23_colored_light_Count --> [ 1; subterfuge_124; 0; "colored light"; K0_kind; K1_room; K2_thing; K9_region; K3_direction; NULL; ];
 Array A_K23_colored_light_Next --> [ 1; subterfuge_125; 0; "colored light"; K0_kind; K1_room; K2_thing; K9_region; K3_direction; NULL; ];
-Array A_K24_colored_dial_Count --> [ 1; subterfuge_126; 0; "colored dial"; K0_kind; K1_room; K2_thing; K9_region; K3_direction; NULL; ];
-Array A_K24_colored_dial_Next --> [ 1; subterfuge_127; 0; "colored dial"; K0_kind; K1_room; K2_thing; K9_region; K3_direction; NULL; ];
-Array A_K25_colored_button_Count --> [ 1; subterfuge_128; 0; "colored button"; K0_kind; K1_room; K2_thing; K9_region; K3_direction; NULL; ];
-Array A_K25_colored_button_Next --> [ 1; subterfuge_129; 0; "colored button"; K0_kind; K1_room; K2_thing; K9_region; K3_direction; NULL; ];
+Array A_K24_colored_button_Count --> [ 1; subterfuge_126; 0; "colored button"; K0_kind; K1_room; K2_thing; K9_region; K3_direction; NULL; ];
+Array A_K24_colored_button_Next --> [ 1; subterfuge_127; 0; "colored button"; K0_kind; K1_room; K2_thing; K9_region; K3_direction; NULL; ];
+Array A_K25_colored_dial_Count --> [ 1; subterfuge_128; 0; "colored dial"; K0_kind; K1_room; K2_thing; K9_region; K3_direction; NULL; ];
+Array A_K25_colored_dial_Next --> [ 1; subterfuge_129; 0; "colored dial"; K0_kind; K1_room; K2_thing; K9_region; K3_direction; NULL; ];
 Array A_P_scored --> [ 2; subterfuge_130; 1; "scored"; K1_room; NULL; ];
 Array A_P_indoors --> [ 2; subterfuge_131; 1; "indoors"; K1_room; NULL; ];
 Array A_P_price --> [ 1; subterfuge_132; 0; "price"; K2_thing; NULL; ];
@@ -5696,7 +5700,7 @@ Array A_P_seen --> [ 2; subterfuge_134; 1; "seen"; K2_thing; NULL; ];
 Array A_P_fluid_capacity --> [ 1; subterfuge_135; 0; "fluid capacity"; K20_fluid_container; NULL; ];
 Array A_P_current_volume --> [ 1; subterfuge_136; 0; "current volume"; K20_fluid_container; NULL; ];
 Array A_P_liquid --> [ 1; subterfuge_137; 0; "liquid"; K20_fluid_container; NULL; ];
-Array A_P_dial_setting --> [ 1; subterfuge_138; 0; "dial setting"; K24_colored_dial; NULL; ];
+Array A_P_dial_setting --> [ 1; subterfuge_138; 0; "dial setting"; K25_colored_dial; NULL; ];
 Array A_P_underlying_relation_storag --> [ 1; subterfuge_139; 0; "underlying relation storage"; K2_thing; NULL; ];
 Array A_P_lost --> [ 2; subterfuge_140; 1; "lost"; I_aqua_fuse_U1; I_crimson_fuse_U1; I_emerald_fuse_U1; I_grey_fuse_U1; I_indigo_fuse_U1; I_khaki_fuse_U1; NULL; ];
 Array A_P_filled --> [ 2; subterfuge_141; 1; "filled"; I_socket_eleven_U1; I_socket_nine_U1; I_socket_seven_U1; I_socket_five_U1; I_socket_three_U1; I_socket_one_U1; NULL; ];
@@ -5716,8 +5720,8 @@ Array activity_var_creators --> [ 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0
 Array TimedEventsTable table [ 0; 0; ];
 Array TimedEventTimesTable table [ 0; 0; ];
 Array PastActionsI6Routines --> [ PAPR1; PAPR2; PAPR3; 0; 0; ];
-Array TableOfVerbs --> [ call_U135; call_U136; call_U137; call_U138; call_U139; call_U140; call_U141; call_U142; call_U143; call_U144; call_U145; call_U146; call_U147; call_U148; call_U149; call_U150; call_U151; call_U152; call_U153; call_U1853; call_U1854; call_U1855; call_U1856; call_U1857; call_U1858; call_U1859; call_U1860; call_U1861; call_U1862; call_U1863; call_U1864; call_U1865; call_U1866; call_U1867; call_U1868; call_U1869; call_U1870; call_U1871; call_U1872; call_U1873; call_U1874; call_U1875; call_U1876; call_U1877; call_U1878; call_U1879; call_U1880; call_U1881; call_U1882; call_U1883; call_U1884; call_U1885; call_U1886; call_U1887; call_U1888; call_U1889; call_U1890; call_U1891; call_U1892; call_U1893; call_U1894; call_U1895; call_U1896; call_U1897; call_U1898; call_U1899; call_U1900; call_U1901; call_U1902; call_U1903; call_U1904; call_U1905; call_U1906; call_U1907; call_U1908; call_U1909; call_U1910; call_U1911; call_U1912; call_U1913; call_U1914; call_U1915; call_U1916; call_U1917; call_U1918; call_U1919; call_U1920; call_U1921; call_U1922; call_U1923; call_U206; call_U207; call_U208; call_U209; call_U210; call_U211; call_U2013; call_U2014; call_U2122; call_U2123; call_U2497; call_U2498; call_U2499; call_U2500; call_U2501; call_U2502; call_U2503; 0; ];
-Array KindHierarchy --> [ K0_kind; 0; K1_room; 0; K2_thing; 0; K3_direction; 0; K4_door; 2; K5_container; 2; K6_supporter; 2; K7_backdrop; 2; K8_person; 2; K9_region; 0; K10_man; 8; K11_woman; 8; K12_animal; 8; K13_device; 2; K14_vehicle; 5; K15_player_s_holdall; 5; K16_passkey; 2; K17_keychain; 6; K18_rideable_animal; 12; K19_rideable_vehicle; 6; K20_fluid_container; 5; K21_electric_lamp; 13; K22_switch; 13; K23_colored_light; 13; K24_colored_dial; 13; K25_colored_button; 13; ];
+Array TableOfVerbs --> [ call_U135; call_U136; call_U137; call_U138; call_U139; call_U140; call_U141; call_U142; call_U143; call_U144; call_U145; call_U146; call_U147; call_U148; call_U149; call_U150; call_U151; call_U152; call_U153; call_U1853; call_U1854; call_U1855; call_U1856; call_U1857; call_U1858; call_U1859; call_U1860; call_U1861; call_U1862; call_U1863; call_U1864; call_U1865; call_U1866; call_U1867; call_U1868; call_U1869; call_U1870; call_U1871; call_U1872; call_U1873; call_U1874; call_U1875; call_U1876; call_U1877; call_U1878; call_U1879; call_U1880; call_U1881; call_U1882; call_U1883; call_U1884; call_U1885; call_U1886; call_U1887; call_U1888; call_U1889; call_U1890; call_U1891; call_U1892; call_U1893; call_U1894; call_U1895; call_U1896; call_U1897; call_U1898; call_U1899; call_U1900; call_U1901; call_U1902; call_U1903; call_U1904; call_U1905; call_U1906; call_U1907; call_U1908; call_U1909; call_U1910; call_U1911; call_U1912; call_U1913; call_U1914; call_U1915; call_U1916; call_U1917; call_U1918; call_U1919; call_U1920; call_U1921; call_U1922; call_U1923; call_U206; call_U207; call_U208; call_U209; call_U210; call_U211; call_U2013; call_U2014; call_U2122; call_U2123; call_U2499; call_U2500; call_U2501; call_U2502; call_U2503; call_U2504; call_U2505; 0; ];
+Array KindHierarchy --> [ K0_kind; 0; K1_room; 0; K2_thing; 0; K3_direction; 0; K4_door; 2; K5_container; 2; K6_supporter; 2; K7_backdrop; 2; K8_person; 2; K9_region; 0; K10_man; 8; K11_woman; 8; K12_animal; 8; K13_device; 2; K14_vehicle; 5; K15_player_s_holdall; 5; K16_passkey; 2; K17_keychain; 6; K18_rideable_animal; 12; K19_rideable_vehicle; 6; K20_fluid_container; 5; K21_electric_lamp; 13; K22_switch; 13; K23_colored_light; 13; K24_colored_button; 13; K25_colored_dial; 13; ];
 Array ResourceIDsOfFigures --> [ 0; 1; 3; 4; 5; 6; 7; 8; 9; 10; 11; 0; ];
 Array ResourceIDsOfSounds --> [ 0; 12; 0; ];
 Array TableOfExternalFiles --> [ 0; 0; ];
@@ -7839,93 +7843,93 @@ Array bc_U994 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
 Array bc_U995 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
 Array inline_U131 --> [ 0; 0; 0; 0; 0; 0; ];
 Array bc_U996 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U386; ];
-Array ts_array_U487 --> [ CONSTANT_PACKED_TEXT_STORAGE; call_U2265; ];
-Array bc_U997 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
-Array bc_U998 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U387; ];
-Array bc_U999 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
+Array bc_U997 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U387; ];
+Array bc_U998 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
+Array bc_U999 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U388; ];
 Array bc_U1000 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
+Array bc_U1001 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
 Array inline_U132 --> [ 0; 0; 0; 0; 0; 0; ];
-Array bc_U1001 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U388; ];
-Array ts_array_U488 --> [ CONSTANT_PACKED_TEXT_STORAGE; call_U2266; ];
-Array bc_U1002 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
-Array bc_U1003 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U389; ];
+Array bc_U1002 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U389; ];
+Array bc_U1003 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U390; ];
 Array bc_U1004 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
-Array bc_U1005 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
-Array inline_U133 --> [ 0; 0; 0; 0; 0; 0; ];
-Array bc_U1006 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U390; ];
-Array ts_array_U489 --> [ CONSTANT_PACKED_TEXT_STORAGE; call_U2267; ];
+Array bc_U1005 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U391; ];
+Array bc_U1006 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
 Array bc_U1007 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
-Array bc_U1008 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U391; ];
-Array bc_U1009 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
+Array inline_U133 --> [ 0; 0; 0; 0; 0; 0; ];
+Array bc_U1008 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U392; ];
+Array bc_U1009 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U393; ];
 Array bc_U1010 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
-Array inline_U134 --> [ 0; 0; 0; 0; 0; 0; ];
-Array bc_U1011 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U392; ];
-Array ts_array_U490 --> [ CONSTANT_PACKED_TEXT_STORAGE; call_U2268; ];
+Array bc_U1011 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U394; ];
 Array bc_U1012 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
-Array bc_U1013 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U393; ];
-Array bc_U1014 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
-Array bc_U1015 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
-Array inline_U135 --> [ 0; 0; 0; 0; 0; 0; ];
-Array bc_U1016 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U394; ];
-Array ts_array_U491 --> [ CONSTANT_PACKED_TEXT_STORAGE; call_U2269; ];
-Array bc_U1017 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
-Array bc_U1018 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U395; ];
+Array bc_U1013 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
+Array inline_U134 --> [ 0; 0; 0; 0; 0; 0; ];
+Array bc_U1014 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U395; ];
+Array bc_U1015 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U396; ];
+Array bc_U1016 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
+Array bc_U1017 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U397; ];
+Array bc_U1018 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
 Array bc_U1019 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
-Array bc_U1020 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
-Array inline_U136 --> [ 0; 0; 0; 0; 0; 0; ];
-Array bc_U1021 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U396; ];
-Array ts_array_U492 --> [ CONSTANT_PACKED_TEXT_STORAGE; call_U2270; ];
+Array inline_U135 --> [ 0; 0; 0; 0; 0; 0; ];
+Array bc_U1020 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U398; ];
+Array bc_U1021 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U399; ];
 Array bc_U1022 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
-Array bc_U1023 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U397; ];
+Array bc_U1023 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U400; ];
 Array bc_U1024 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
 Array bc_U1025 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
-Array inline_U137 --> [ 0; 0; 0; 0; 0; 0; ];
-Array bc_U1026 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U398; ];
-Array bc_U1027 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U399; ];
+Array inline_U136 --> [ 0; 0; 0; 0; 0; 0; ];
+Array bc_U1026 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U401; ];
+Array bc_U1027 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U402; ];
 Array bc_U1028 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
-Array bc_U1029 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U400; ];
+Array bc_U1029 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U403; ];
 Array bc_U1030 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
 Array bc_U1031 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
-Array inline_U138 --> [ 0; 0; 0; 0; 0; 0; ];
-Array bc_U1032 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U401; ];
-Array bc_U1033 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U402; ];
+Array inline_U137 --> [ 0; 0; 0; 0; 0; 0; ];
+Array bc_U1032 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U404; ];
+Array bc_U1033 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
 Array bc_U1034 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
-Array bc_U1035 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U403; ];
+Array bc_U1035 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
 Array bc_U1036 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
 Array bc_U1037 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
-Array inline_U139 --> [ 0; 0; 0; 0; 0; 0; ];
-Array bc_U1038 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U404; ];
-Array bc_U1039 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U405; ];
-Array bc_U1040 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
-Array bc_U1041 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U406; ];
+Array inline_U138 --> [ 0; 0; 0; 0; 0; 0; ];
+Array bc_U1038 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U405; ];
+Array ts_array_U487 --> [ CONSTANT_PACKED_TEXT_STORAGE; call_U2265; ];
+Array bc_U1039 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
+Array bc_U1040 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U406; ];
+Array bc_U1041 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
 Array bc_U1042 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
-Array bc_U1043 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
-Array inline_U140 --> [ 0; 0; 0; 0; 0; 0; ];
-Array bc_U1044 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U407; ];
+Array inline_U139 --> [ 0; 0; 0; 0; 0; 0; ];
+Array bc_U1043 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U407; ];
+Array ts_array_U488 --> [ CONSTANT_PACKED_TEXT_STORAGE; call_U2266; ];
+Array bc_U1044 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
 Array bc_U1045 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U408; ];
 Array bc_U1046 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
-Array bc_U1047 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U409; ];
-Array bc_U1048 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
+Array bc_U1047 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
+Array inline_U140 --> [ 0; 0; 0; 0; 0; 0; ];
+Array bc_U1048 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U409; ];
+Array ts_array_U489 --> [ CONSTANT_PACKED_TEXT_STORAGE; call_U2267; ];
 Array bc_U1049 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
-Array inline_U141 --> [ 0; 0; 0; 0; 0; 0; ];
 Array bc_U1050 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U410; ];
-Array bc_U1051 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U411; ];
+Array bc_U1051 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
 Array bc_U1052 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
-Array bc_U1053 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U412; ];
+Array inline_U141 --> [ 0; 0; 0; 0; 0; 0; ];
+Array bc_U1053 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U411; ];
+Array ts_array_U490 --> [ CONSTANT_PACKED_TEXT_STORAGE; call_U2268; ];
 Array bc_U1054 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
-Array bc_U1055 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
+Array bc_U1055 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U412; ];
+Array bc_U1056 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
+Array bc_U1057 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
 Array inline_U142 --> [ 0; 0; 0; 0; 0; 0; ];
-Array bc_U1056 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U413; ];
-Array bc_U1057 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U414; ];
-Array bc_U1058 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
-Array bc_U1059 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U415; ];
-Array bc_U1060 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
+Array bc_U1058 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U413; ];
+Array ts_array_U491 --> [ CONSTANT_PACKED_TEXT_STORAGE; call_U2269; ];
+Array bc_U1059 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
+Array bc_U1060 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U414; ];
 Array bc_U1061 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
+Array bc_U1062 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
 Array inline_U143 --> [ 0; 0; 0; 0; 0; 0; ];
-Array bc_U1062 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U416; ];
-Array bc_U1063 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
+Array bc_U1063 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U415; ];
+Array ts_array_U492 --> [ CONSTANT_PACKED_TEXT_STORAGE; call_U2270; ];
 Array bc_U1064 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
-Array bc_U1065 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
+Array bc_U1065 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U416; ];
 Array bc_U1066 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
 Array bc_U1067 --> [ CONSTANT_PACKED_TEXT_STORAGE; EMPTY_TEXT_PACKED; ];
 Array inline_U144 --> [ 0; 0; 0; 0; 0; 0; ];
@@ -8022,13 +8026,13 @@ Array bc_U1125 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U437; ];
 Array bc_U1126 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U438; ];
 Array table_data_U14 table [ column_data_U45; ];
 Array column_data_U46 table [ column_bits_U46; column_blanks_U45; ts_array_U493; ts_array_U494; ts_array_U495; ts_array_U496; ts_array_U497; ts_array_U498; ts_array_U499; ];
-Array ts_array_U493 --> [ CONSTANT_PACKED_TEXT_STORAGE; call_U2504; ];
-Array ts_array_U494 --> [ CONSTANT_PACKED_TEXT_STORAGE; call_U2505; ];
-Array ts_array_U495 --> [ CONSTANT_PACKED_TEXT_STORAGE; call_U2506; ];
-Array ts_array_U496 --> [ CONSTANT_PACKED_TEXT_STORAGE; call_U2507; ];
-Array ts_array_U497 --> [ CONSTANT_PACKED_TEXT_STORAGE; call_U2508; ];
-Array ts_array_U498 --> [ CONSTANT_PACKED_TEXT_STORAGE; call_U2509; ];
-Array ts_array_U499 --> [ CONSTANT_PACKED_TEXT_STORAGE; call_U2510; ];
+Array ts_array_U493 --> [ CONSTANT_PACKED_TEXT_STORAGE; call_U2506; ];
+Array ts_array_U494 --> [ CONSTANT_PACKED_TEXT_STORAGE; call_U2507; ];
+Array ts_array_U495 --> [ CONSTANT_PACKED_TEXT_STORAGE; call_U2508; ];
+Array ts_array_U496 --> [ CONSTANT_PACKED_TEXT_STORAGE; call_U2509; ];
+Array ts_array_U497 --> [ CONSTANT_PACKED_TEXT_STORAGE; call_U2510; ];
+Array ts_array_U498 --> [ CONSTANT_PACKED_TEXT_STORAGE; call_U2511; ];
+Array ts_array_U499 --> [ CONSTANT_PACKED_TEXT_STORAGE; call_U2512; ];
 Array table_data_U15 table [ column_data_U46; ];
 Array script_U1 -> [ 98; 114; 105; 101; 102; 47; 103; 101; 116; 32; 98; 108; 117; 101; 98; 101; 114; 114; 105; 101; 115; 47; 120; 121; 122; 122; 121; 47; 104; 101; 108; 108; 111; 32; 115; 97; 105; 108; 111; 114; 47; 112; 108; 101; 97; 115; 101; 32; 103; 101; 116; 32; 116; 104; 101; 32; 100; 105; 109; 101; 47; 105; 47; 115; 99; 111; 114; 101; 124; 124; 124; 124; ];
 Array requirements_U1 --> [ 0; 0; ];
@@ -8209,19 +8213,19 @@ Array name_array148 --> [ 'emerald'; 'light'; 'colored//p'; 'lights//p'; 'indica
 Array name_array149 --> [ 'grey'; 'light'; 'colored//p'; 'lights//p'; 'indicator'; ];
 Array name_array150 --> [ 'indigo'; 'light'; 'colored//p'; 'lights//p'; 'indicator'; ];
 Array name_array151 --> [ 'khaki'; 'light'; 'colored//p'; 'lights//p'; 'indicator'; ];
-Array name_array152 --> [ 'aqua'; 'dial'; 'colored//p'; 'dials//p'; ];
-Array name_array153 --> [ 'crimson'; 'dial'; 'colored//p'; 'dials//p'; ];
-Array name_array154 --> [ 'emerald'; 'dial'; 'colored//p'; 'dials//p'; ];
-Array name_array155 --> [ 'grey'; 'dial'; 'colored//p'; 'dials//p'; ];
-Array name_array156 --> [ 'indigo'; 'dial'; 'colored//p'; 'dials//p'; ];
-Array name_array157 --> [ 'khaki'; 'dial'; 'colored//p'; 'dials//p'; ];
-Array name_array158 --> [ 'aqua'; 'button'; 'colored//p'; 'buttons//p'; ];
-Array name_array159 --> [ 'crimson'; 'button'; 'colored//p'; 'buttons//p'; ];
-Array name_array160 --> [ 'emerald'; 'button'; 'colored//p'; 'buttons//p'; ];
-Array name_array161 --> [ 'grey'; 'button'; 'colored//p'; 'buttons//p'; ];
-Array name_array162 --> [ 'indigo'; 'button'; 'colored//p'; 'buttons//p'; ];
-Array name_array163 --> [ 'khaki'; 'button'; 'colored//p'; 'buttons//p'; ];
-Array name_array164 --> [ 'monitor'; 'things//p'; ];
+Array name_array152 --> [ 'aqua'; 'button'; 'colored//p'; 'buttons//p'; ];
+Array name_array153 --> [ 'crimson'; 'button'; 'colored//p'; 'buttons//p'; ];
+Array name_array154 --> [ 'emerald'; 'button'; 'colored//p'; 'buttons//p'; ];
+Array name_array155 --> [ 'grey'; 'button'; 'colored//p'; 'buttons//p'; ];
+Array name_array156 --> [ 'indigo'; 'button'; 'colored//p'; 'buttons//p'; ];
+Array name_array157 --> [ 'khaki'; 'button'; 'colored//p'; 'buttons//p'; ];
+Array name_array158 --> [ 'monitor'; 'things//p'; 'screen'; ];
+Array name_array159 --> [ 'aqua'; 'dial'; 'colored//p'; 'dials//p'; ];
+Array name_array160 --> [ 'crimson'; 'dial'; 'colored//p'; 'dials//p'; ];
+Array name_array161 --> [ 'emerald'; 'dial'; 'colored//p'; 'dials//p'; ];
+Array name_array162 --> [ 'grey'; 'dial'; 'colored//p'; 'dials//p'; ];
+Array name_array163 --> [ 'indigo'; 'dial'; 'colored//p'; 'dials//p'; ];
+Array name_array164 --> [ 'khaki'; 'dial'; 'colored//p'; 'dials//p'; ];
 Array name_array165 --> [ 'midway'; 'regions//p'; ];
 Array name_array166 --> [ 'hellride'; 'regions//p'; ];
 Array name_array167 --> [ 'backstage'; 'regions//p'; ];
@@ -8572,22 +8576,22 @@ Class K23_colored_light
     with article bc_U1106
     with list_together bc_U1107
 ;
-Class K24_colored_dial
+Class K24_colored_button
   class K13_device
     with plural bc_U1108
-    with P_dial_setting 0
     has static
+    has ~on
     with description bc_U1109
     with initial bc_U1110
     with short_name bc_U1111
     with article bc_U1112
     with list_together bc_U1113
 ;
-Class K25_colored_button
+Class K25_colored_dial
   class K13_device
     with plural bc_U1114
+    with P_dial_setting 0
     has static
-    has ~on
     with description bc_U1115
     with initial bc_U1116
     with short_name bc_U1117
@@ -11303,13 +11307,13 @@ K23_colored_light I_khaki_light_U1    with short_name bc_U991
     with vector 0
     has mark_as_thing
     with component_parent I_control_panel_U1
-    with component_sibling I_aqua_dial_U1
+    with component_sibling I_aqua_button_U1
     has switchable
     with KD_Count 23
     with IK2_Count 109
-    with K2_thing_Next I_aqua_dial_U1
+    with K2_thing_Next I_aqua_button_U1
     with K13_device_Count 19
-    with K13_device_Next I_aqua_dial_U1
+    with K13_device_Next I_aqua_button_U1
     with K23_colored_light_Count 5
     with K23_colored_light_Next 0
     with action_bitmap 0 0 0 0 0 0
@@ -11319,269 +11323,270 @@ K23_colored_light I_khaki_light_U1    with short_name bc_U991
     with article bc_U994
     with list_together bc_U995
 ;
-K24_colored_dial I_aqua_dial_U1    with short_name bc_U996
+K24_colored_button I_aqua_button_U1    with short_name bc_U996
+    with description bc_U997
+    with vector 0
+    has mark_as_thing
+    with component_parent I_control_panel_U1
+    with component_sibling I_crimson_button_U1
+    has switchable
+    with KD_Count 24
+    with IK2_Count 110
+    with K2_thing_Next I_crimson_button_U1
+    with K13_device_Count 20
+    with K13_device_Next I_crimson_button_U1
+    with K24_colored_button_Count 0
+    with K24_colored_button_Next I_crimson_button_U1
+    with action_bitmap 0 0 0 0 0 0
+    with name 'aqua' 'button' 'colored//p' 'buttons//p'
+    with initial bc_U998
+    with plural bc_U999
+    with article bc_U1000
+    with list_together bc_U1001
+;
+K24_colored_button I_crimson_button_U1    with short_name bc_U1002
+    with description bc_U1003
+    with vector 0
+    has mark_as_thing
+    with component_parent I_control_panel_U1
+    with component_sibling I_emerald_button_U1
+    has switchable
+    with KD_Count 24
+    with IK2_Count 111
+    with K2_thing_Next I_emerald_button_U1
+    with K13_device_Count 21
+    with K13_device_Next I_emerald_button_U1
+    with K24_colored_button_Count 1
+    with K24_colored_button_Next I_emerald_button_U1
+    with action_bitmap 0 0 0 0 0 0
+    with name 'crimson' 'button' 'colored//p' 'buttons//p'
+    with initial bc_U1004
+    with plural bc_U1005
+    with article bc_U1006
+    with list_together bc_U1007
+;
+K24_colored_button I_emerald_button_U1    with short_name bc_U1008
+    with description bc_U1009
+    with vector 0
+    has mark_as_thing
+    with component_parent I_control_panel_U1
+    with component_sibling I_grey_button_U1
+    has switchable
+    with KD_Count 24
+    with IK2_Count 112
+    with K2_thing_Next I_grey_button_U1
+    with K13_device_Count 22
+    with K13_device_Next I_grey_button_U1
+    with K24_colored_button_Count 2
+    with K24_colored_button_Next I_grey_button_U1
+    with action_bitmap 0 0 0 0 0 0
+    with name 'emerald' 'button' 'colored//p' 'buttons//p'
+    with initial bc_U1010
+    with plural bc_U1011
+    with article bc_U1012
+    with list_together bc_U1013
+;
+K24_colored_button I_grey_button_U1    with short_name bc_U1014
+    with description bc_U1015
+    with vector 0
+    has mark_as_thing
+    with component_parent I_control_panel_U1
+    with component_sibling I_indigo_button_U1
+    has switchable
+    with KD_Count 24
+    with IK2_Count 113
+    with K2_thing_Next I_indigo_button_U1
+    with K13_device_Count 23
+    with K13_device_Next I_indigo_button_U1
+    with K24_colored_button_Count 3
+    with K24_colored_button_Next I_indigo_button_U1
+    with action_bitmap 0 0 0 0 0 0
+    with name 'grey' 'button' 'colored//p' 'buttons//p'
+    with initial bc_U1016
+    with plural bc_U1017
+    with article bc_U1018
+    with list_together bc_U1019
+;
+K24_colored_button I_indigo_button_U1    with short_name bc_U1020
+    with description bc_U1021
+    with vector 0
+    has mark_as_thing
+    with component_parent I_control_panel_U1
+    with component_sibling I_khaki_button_U1
+    has switchable
+    with KD_Count 24
+    with IK2_Count 114
+    with K2_thing_Next I_khaki_button_U1
+    with K13_device_Count 24
+    with K13_device_Next I_khaki_button_U1
+    with K24_colored_button_Count 4
+    with K24_colored_button_Next I_khaki_button_U1
+    with action_bitmap 0 0 0 0 0 0
+    with name 'indigo' 'button' 'colored//p' 'buttons//p'
+    with initial bc_U1022
+    with plural bc_U1023
+    with article bc_U1024
+    with list_together bc_U1025
+;
+K24_colored_button I_khaki_button_U1    with short_name bc_U1026
+    with description bc_U1027
+    with vector 0
+    has mark_as_thing
+    with component_parent I_control_panel_U1
+    with component_sibling I_monitor_U1
+    has switchable
+    with KD_Count 24
+    with IK2_Count 115
+    with K2_thing_Next I_monitor_U1
+    with K13_device_Count 25
+    with K13_device_Next I_aqua_dial_U1
+    with K24_colored_button_Count 5
+    with K24_colored_button_Next 0
+    with action_bitmap 0 0 0 0 0 0
+    with name 'khaki' 'button' 'colored//p' 'buttons//p'
+    with initial bc_U1028
+    with plural bc_U1029
+    with article bc_U1030
+    with list_together bc_U1031
+;
+K2_thing I_monitor_U1    with short_name bc_U1032
+    has static
+    with vector 0
+    has mark_as_thing
+    with component_parent I_control_panel_U1
+    with component_sibling I_aqua_dial_U1
+    with KD_Count 2
+    with IK2_Count 116
+    with K2_thing_Next I_aqua_dial_U1
+    with action_bitmap 0 0 0 0 0 0
+    with parse_name parse_name159
+    with name 'monitor' 'things//p' 'screen'
+    with description bc_U1033
+    with initial bc_U1034
+    with plural bc_U1035
+    with article bc_U1036
+    with list_together bc_U1037
+;
+K25_colored_dial I_aqua_dial_U1    with short_name bc_U1038
     with description ts_array_U487
     with vector 0
     has mark_as_thing
     with component_parent I_control_panel_U1
     with component_sibling I_crimson_dial_U1
     has switchable
-    with KD_Count 24
-    with IK2_Count 110
+    with KD_Count 25
+    with IK2_Count 117
     with K2_thing_Next I_crimson_dial_U1
-    with K13_device_Count 20
+    with K13_device_Count 26
     with K13_device_Next I_crimson_dial_U1
-    with K24_colored_dial_Count 0
-    with K24_colored_dial_Next I_crimson_dial_U1
+    with K25_colored_dial_Count 0
+    with K25_colored_dial_Next I_crimson_dial_U1
     with action_bitmap 0 0 0 0 0 0
     with name 'aqua' 'dial' 'colored//p' 'dials//p'
-    with initial bc_U997
-    with plural bc_U998
-    with article bc_U999
-    with list_together bc_U1000
+    with initial bc_U1039
+    with plural bc_U1040
+    with article bc_U1041
+    with list_together bc_U1042
 ;
-K24_colored_dial I_crimson_dial_U1    with short_name bc_U1001
+K25_colored_dial I_crimson_dial_U1    with short_name bc_U1043
     with description ts_array_U488
     with vector 0
     has mark_as_thing
     with component_parent I_control_panel_U1
     with component_sibling I_emerald_dial_U1
     has switchable
-    with KD_Count 24
-    with IK2_Count 111
+    with KD_Count 25
+    with IK2_Count 118
     with K2_thing_Next I_emerald_dial_U1
-    with K13_device_Count 21
+    with K13_device_Count 27
     with K13_device_Next I_emerald_dial_U1
-    with K24_colored_dial_Count 1
-    with K24_colored_dial_Next I_emerald_dial_U1
+    with K25_colored_dial_Count 1
+    with K25_colored_dial_Next I_emerald_dial_U1
     with action_bitmap 0 0 0 0 0 0
     with name 'crimson' 'dial' 'colored//p' 'dials//p'
-    with initial bc_U1002
-    with plural bc_U1003
-    with article bc_U1004
-    with list_together bc_U1005
+    with initial bc_U1044
+    with plural bc_U1045
+    with article bc_U1046
+    with list_together bc_U1047
 ;
-K24_colored_dial I_emerald_dial_U1    with short_name bc_U1006
+K25_colored_dial I_emerald_dial_U1    with short_name bc_U1048
     with description ts_array_U489
     with vector 0
     has mark_as_thing
     with component_parent I_control_panel_U1
     with component_sibling I_grey_dial_U1
     has switchable
-    with KD_Count 24
-    with IK2_Count 112
+    with KD_Count 25
+    with IK2_Count 119
     with K2_thing_Next I_grey_dial_U1
-    with K13_device_Count 22
+    with K13_device_Count 28
     with K13_device_Next I_grey_dial_U1
-    with K24_colored_dial_Count 2
-    with K24_colored_dial_Next I_grey_dial_U1
+    with K25_colored_dial_Count 2
+    with K25_colored_dial_Next I_grey_dial_U1
     with action_bitmap 0 0 0 0 0 0
     with name 'emerald' 'dial' 'colored//p' 'dials//p'
-    with initial bc_U1007
-    with plural bc_U1008
-    with article bc_U1009
-    with list_together bc_U1010
+    with initial bc_U1049
+    with plural bc_U1050
+    with article bc_U1051
+    with list_together bc_U1052
 ;
-K24_colored_dial I_grey_dial_U1    with short_name bc_U1011
+K25_colored_dial I_grey_dial_U1    with short_name bc_U1053
     with description ts_array_U490
     with vector 0
     has mark_as_thing
     with component_parent I_control_panel_U1
     with component_sibling I_indigo_dial_U1
     has switchable
-    with KD_Count 24
-    with IK2_Count 113
+    with KD_Count 25
+    with IK2_Count 120
     with K2_thing_Next I_indigo_dial_U1
-    with K13_device_Count 23
+    with K13_device_Count 29
     with K13_device_Next I_indigo_dial_U1
-    with K24_colored_dial_Count 3
-    with K24_colored_dial_Next I_indigo_dial_U1
+    with K25_colored_dial_Count 3
+    with K25_colored_dial_Next I_indigo_dial_U1
     with action_bitmap 0 0 0 0 0 0
     with name 'grey' 'dial' 'colored//p' 'dials//p'
-    with initial bc_U1012
-    with plural bc_U1013
-    with article bc_U1014
-    with list_together bc_U1015
+    with initial bc_U1054
+    with plural bc_U1055
+    with article bc_U1056
+    with list_together bc_U1057
 ;
-K24_colored_dial I_indigo_dial_U1    with short_name bc_U1016
+K25_colored_dial I_indigo_dial_U1    with short_name bc_U1058
     with description ts_array_U491
     with vector 0
     has mark_as_thing
     with component_parent I_control_panel_U1
     with component_sibling I_khaki_dial_U1
     has switchable
-    with KD_Count 24
-    with IK2_Count 114
+    with KD_Count 25
+    with IK2_Count 121
     with K2_thing_Next I_khaki_dial_U1
-    with K13_device_Count 24
+    with K13_device_Count 30
     with K13_device_Next I_khaki_dial_U1
-    with K24_colored_dial_Count 4
-    with K24_colored_dial_Next I_khaki_dial_U1
+    with K25_colored_dial_Count 4
+    with K25_colored_dial_Next I_khaki_dial_U1
     with action_bitmap 0 0 0 0 0 0
     with name 'indigo' 'dial' 'colored//p' 'dials//p'
-    with initial bc_U1017
-    with plural bc_U1018
-    with article bc_U1019
-    with list_together bc_U1020
+    with initial bc_U1059
+    with plural bc_U1060
+    with article bc_U1061
+    with list_together bc_U1062
 ;
-K24_colored_dial I_khaki_dial_U1    with short_name bc_U1021
+K25_colored_dial I_khaki_dial_U1    with short_name bc_U1063
     with description ts_array_U492
     with vector 0
     has mark_as_thing
     with component_parent I_control_panel_U1
-    with component_sibling I_aqua_button_U1
-    has switchable
-    with KD_Count 24
-    with IK2_Count 115
-    with K2_thing_Next I_aqua_button_U1
-    with K13_device_Count 25
-    with K13_device_Next I_aqua_button_U1
-    with K24_colored_dial_Count 5
-    with K24_colored_dial_Next 0
-    with action_bitmap 0 0 0 0 0 0
-    with name 'khaki' 'dial' 'colored//p' 'dials//p'
-    with initial bc_U1022
-    with plural bc_U1023
-    with article bc_U1024
-    with list_together bc_U1025
-;
-K25_colored_button I_aqua_button_U1    with short_name bc_U1026
-    with description bc_U1027
-    with vector 0
-    has mark_as_thing
-    with component_parent I_control_panel_U1
-    with component_sibling I_crimson_button_U1
     has switchable
     with KD_Count 25
-    with IK2_Count 116
-    with K2_thing_Next I_crimson_button_U1
-    with K13_device_Count 26
-    with K13_device_Next I_crimson_button_U1
-    with K25_colored_button_Count 0
-    with K25_colored_button_Next I_crimson_button_U1
-    with action_bitmap 0 0 0 0 0 0
-    with name 'aqua' 'button' 'colored//p' 'buttons//p'
-    with initial bc_U1028
-    with plural bc_U1029
-    with article bc_U1030
-    with list_together bc_U1031
-;
-K25_colored_button I_crimson_button_U1    with short_name bc_U1032
-    with description bc_U1033
-    with vector 0
-    has mark_as_thing
-    with component_parent I_control_panel_U1
-    with component_sibling I_emerald_button_U1
-    has switchable
-    with KD_Count 25
-    with IK2_Count 117
-    with K2_thing_Next I_emerald_button_U1
-    with K13_device_Count 27
-    with K13_device_Next I_emerald_button_U1
-    with K25_colored_button_Count 1
-    with K25_colored_button_Next I_emerald_button_U1
-    with action_bitmap 0 0 0 0 0 0
-    with name 'crimson' 'button' 'colored//p' 'buttons//p'
-    with initial bc_U1034
-    with plural bc_U1035
-    with article bc_U1036
-    with list_together bc_U1037
-;
-K25_colored_button I_emerald_button_U1    with short_name bc_U1038
-    with description bc_U1039
-    with vector 0
-    has mark_as_thing
-    with component_parent I_control_panel_U1
-    with component_sibling I_grey_button_U1
-    has switchable
-    with KD_Count 25
-    with IK2_Count 118
-    with K2_thing_Next I_grey_button_U1
-    with K13_device_Count 28
-    with K13_device_Next I_grey_button_U1
-    with K25_colored_button_Count 2
-    with K25_colored_button_Next I_grey_button_U1
-    with action_bitmap 0 0 0 0 0 0
-    with name 'emerald' 'button' 'colored//p' 'buttons//p'
-    with initial bc_U1040
-    with plural bc_U1041
-    with article bc_U1042
-    with list_together bc_U1043
-;
-K25_colored_button I_grey_button_U1    with short_name bc_U1044
-    with description bc_U1045
-    with vector 0
-    has mark_as_thing
-    with component_parent I_control_panel_U1
-    with component_sibling I_indigo_button_U1
-    has switchable
-    with KD_Count 25
-    with IK2_Count 119
-    with K2_thing_Next I_indigo_button_U1
-    with K13_device_Count 29
-    with K13_device_Next I_indigo_button_U1
-    with K25_colored_button_Count 3
-    with K25_colored_button_Next I_indigo_button_U1
-    with action_bitmap 0 0 0 0 0 0
-    with name 'grey' 'button' 'colored//p' 'buttons//p'
-    with initial bc_U1046
-    with plural bc_U1047
-    with article bc_U1048
-    with list_together bc_U1049
-;
-K25_colored_button I_indigo_button_U1    with short_name bc_U1050
-    with description bc_U1051
-    with vector 0
-    has mark_as_thing
-    with component_parent I_control_panel_U1
-    with component_sibling I_khaki_button_U1
-    has switchable
-    with KD_Count 25
-    with IK2_Count 120
-    with K2_thing_Next I_khaki_button_U1
-    with K13_device_Count 30
-    with K13_device_Next I_khaki_button_U1
-    with K25_colored_button_Count 4
-    with K25_colored_button_Next I_khaki_button_U1
-    with action_bitmap 0 0 0 0 0 0
-    with name 'indigo' 'button' 'colored//p' 'buttons//p'
-    with initial bc_U1052
-    with plural bc_U1053
-    with article bc_U1054
-    with list_together bc_U1055
-;
-K25_colored_button I_khaki_button_U1    with short_name bc_U1056
-    with description bc_U1057
-    with vector 0
-    has mark_as_thing
-    with component_parent I_control_panel_U1
-    with component_sibling I_monitor_U1
-    has switchable
-    with KD_Count 25
-    with IK2_Count 121
-    with K2_thing_Next I_monitor_U1
-    with K13_device_Count 31
-    with K13_device_Next 0
-    with K25_colored_button_Count 5
-    with K25_colored_button_Next 0
-    with action_bitmap 0 0 0 0 0 0
-    with name 'khaki' 'button' 'colored//p' 'buttons//p'
-    with initial bc_U1058
-    with plural bc_U1059
-    with article bc_U1060
-    with list_together bc_U1061
-;
-K2_thing I_monitor_U1    with short_name bc_U1062
-    has static
-    with vector 0
-    has mark_as_thing
-    with component_parent I_control_panel_U1
-    with KD_Count 2
     with IK2_Count 122
     with K2_thing_Next 0
+    with K13_device_Count 31
+    with K13_device_Next 0
+    with K25_colored_dial_Count 5
+    with K25_colored_dial_Next 0
     with action_bitmap 0 0 0 0 0 0
-    with name 'monitor' 'things//p'
-    with description bc_U1063
+    with name 'khaki' 'dial' 'colored//p' 'dials//p'
     with initial bc_U1064
     with plural bc_U1065
     with article bc_U1066
@@ -11688,10 +11693,10 @@ K9_region I_second_floor_U1    with short_name bc_U1080
 #ifndef K22_switch_Next; Constant K22_switch_Next = 0; #endif;
 #ifndef K23_colored_light_Count; Constant K23_colored_light_Count = 0; #endif;
 #ifndef K23_colored_light_Next; Constant K23_colored_light_Next = 0; #endif;
-#ifndef K24_colored_dial_Count; Constant K24_colored_dial_Count = 0; #endif;
-#ifndef K24_colored_dial_Next; Constant K24_colored_dial_Next = 0; #endif;
-#ifndef K25_colored_button_Count; Constant K25_colored_button_Count = 0; #endif;
-#ifndef K25_colored_button_Next; Constant K25_colored_button_Next = 0; #endif;
+#ifndef K24_colored_button_Count; Constant K24_colored_button_Count = 0; #endif;
+#ifndef K24_colored_button_Next; Constant K24_colored_button_Next = 0; #endif;
+#ifndef K25_colored_dial_Count; Constant K25_colored_dial_Count = 0; #endif;
+#ifndef K25_colored_dial_Next; Constant K25_colored_dial_Next = 0; #endif;
 #ifndef P_price; Constant P_price = 0; #endif;
 #ifndef P_fluid_capacity; Constant P_fluid_capacity = 0; #endif;
 #ifndef P_current_volume; Constant P_current_volume = 0; #endif;
@@ -12669,7 +12674,7 @@ Global max_z_object;
             return call_U2335(sk);
             ;
         WEAK_ID_82:
-            return call_U2337(sk);
+            return call_U2336(sk);
             ;
         OBJECT_TY:
             return call_U1(sk);
@@ -13169,11 +13174,11 @@ Global max_z_object;
     if ((k == K23_colored_light)) {
         print "colored light";
     }
-    if ((k == K24_colored_dial)) {
-        print "colored dial";
-    }
-    if ((k == K25_colored_button)) {
+    if ((k == K24_colored_button)) {
         print "colored button";
+    }
+    if ((k == K25_colored_dial)) {
+        print "colored dial";
     }
 ];
 [ KOVSupportFunction k fail;
@@ -13210,7 +13215,7 @@ Global max_z_object;
     (na = call_U1835(which, na, t_0));
     (na = call_U1841(which, na, t_0));
     (na = call_U2321(which, na, t_0));
-    (na = call_U2336(which, na, t_0));
+    (na = call_U2337(which, na, t_0));
     (na = call_U2(which, na, t_0));
     return na;
 ];
@@ -15340,43 +15345,47 @@ Global max_z_object;
             rtrue;
         }
         if ((R == call_U2457)) {
-            print "Check spinning it to";
-            rtrue;
-        }
-        if ((R == call_U2458)) {
-            print "Report spinning it to";
-            rtrue;
-        }
-        if ((R == call_U2459)) {
             print "instead of switching on or pushing the aqua button";
             rtrue;
         }
-        if ((R == call_U2460)) {
+        if ((R == call_U2458)) {
             print "Instead of switching on the aqua button";
             rtrue;
         }
-        if ((R == call_U2465)) {
+        if ((R == call_U2463)) {
             print "Instead of switching on or pushing the crimson button";
             rtrue;
         }
-        if ((R == call_U2470)) {
+        if ((R == call_U2468)) {
             print "Instead of switching on or pushing the emerald button";
             rtrue;
         }
-        if ((R == call_U2475)) {
+        if ((R == call_U2473)) {
             print "Instead of switching on or pushing the grey button";
             rtrue;
         }
-        if ((R == call_U2480)) {
+        if ((R == call_U2478)) {
             print "Instead of switching on or pushing the indigo button";
             rtrue;
         }
-        if ((R == call_U2485)) {
+        if ((R == call_U2483)) {
             print "Instead of Switching on or pushing the khaki button";
             rtrue;
         }
-        if ((R == call_U2490)) {
+        if ((R == call_U2488)) {
             print "instead of examining the monitor";
+            rtrue;
+        }
+        if ((R == call_U2489)) {
+            print "Check spinning it to";
+            rtrue;
+        }
+        if ((R == call_U2490)) {
+            print "Report spinning it to";
+            rtrue;
+        }
+        if ((R == call_U2491)) {
+            print "every turn when the location is the control room";
             rtrue;
         }
         print "(nameless rule at address ";
@@ -33088,6 +33097,20 @@ Global max_z_object;
     if (say__p) {
         RulebookParBreak(forbid_breaks);
     }
+    (rv = (call_U2491)());
+    if (rv) {
+        if ((rv == 2)) {
+            return reason_the_action_failed;
+        }
+        return call_U2491;
+    }
+    ((latest_rule_result-->(0)) = 0);
+    if ((original_deadflag ~= deadflag)) {
+        rfalse;
+    }
+    if (say__p) {
+        RulebookParBreak(forbid_breaks);
+    }
     (rv = (call_U2407)());
     if (rv) {
         if ((rv == 2)) {
@@ -34498,12 +34521,12 @@ Global max_z_object;
         if (say__p) {
             RulebookParBreak(forbid_breaks);
         }
-        (rv = (call_U2460)());
+        (rv = (call_U2458)());
         if (rv) {
             if ((rv == 2)) {
                 return reason_the_action_failed;
             }
-            return call_U2460;
+            return call_U2458;
         }
         ((latest_rule_result-->(0)) = 0);
     } else {
@@ -34518,12 +34541,12 @@ Global max_z_object;
         if (say__p) {
             RulebookParBreak(forbid_breaks);
         }
-        (rv = (call_U2490)());
+        (rv = (call_U2488)());
         if (rv) {
             if ((rv == 2)) {
                 return reason_the_action_failed;
             }
-            return call_U2490;
+            return call_U2488;
         }
         ((latest_rule_result-->(0)) = 0);
     } else {
@@ -34537,12 +34560,12 @@ Global max_z_object;
     if (say__p) {
         RulebookParBreak(forbid_breaks);
     }
-    (rv = (call_U2459)());
+    (rv = (call_U2457)());
     if (rv) {
         if ((rv == 2)) {
             return reason_the_action_failed;
         }
-        return call_U2459;
+        return call_U2457;
     }
     ((latest_rule_result-->(0)) = 0);
     if ((original_deadflag ~= deadflag)) {
@@ -34551,12 +34574,12 @@ Global max_z_object;
     if (say__p) {
         RulebookParBreak(forbid_breaks);
     }
-    (rv = (call_U2465)());
+    (rv = (call_U2463)());
     if (rv) {
         if ((rv == 2)) {
             return reason_the_action_failed;
         }
-        return call_U2465;
+        return call_U2463;
     }
     ((latest_rule_result-->(0)) = 0);
     if ((original_deadflag ~= deadflag)) {
@@ -34565,12 +34588,12 @@ Global max_z_object;
     if (say__p) {
         RulebookParBreak(forbid_breaks);
     }
-    (rv = (call_U2470)());
+    (rv = (call_U2468)());
     if (rv) {
         if ((rv == 2)) {
             return reason_the_action_failed;
         }
-        return call_U2470;
+        return call_U2468;
     }
     ((latest_rule_result-->(0)) = 0);
     if ((original_deadflag ~= deadflag)) {
@@ -34579,12 +34602,12 @@ Global max_z_object;
     if (say__p) {
         RulebookParBreak(forbid_breaks);
     }
-    (rv = (call_U2475)());
+    (rv = (call_U2473)());
     if (rv) {
         if ((rv == 2)) {
             return reason_the_action_failed;
         }
-        return call_U2475;
+        return call_U2473;
     }
     ((latest_rule_result-->(0)) = 0);
     if ((original_deadflag ~= deadflag)) {
@@ -34593,12 +34616,12 @@ Global max_z_object;
     if (say__p) {
         RulebookParBreak(forbid_breaks);
     }
-    (rv = (call_U2480)());
+    (rv = (call_U2478)());
     if (rv) {
         if ((rv == 2)) {
             return reason_the_action_failed;
         }
-        return call_U2480;
+        return call_U2478;
     }
     ((latest_rule_result-->(0)) = 0);
     if ((original_deadflag ~= deadflag)) {
@@ -34607,12 +34630,12 @@ Global max_z_object;
     if (say__p) {
         RulebookParBreak(forbid_breaks);
     }
-    (rv = (call_U2485)());
+    (rv = (call_U2483)());
     if (rv) {
         if ((rv == 2)) {
             return reason_the_action_failed;
         }
-        return call_U2485;
+        return call_U2483;
     }
     ((latest_rule_result-->(0)) = 0);
     if ((action == ##Examine)) {
@@ -41646,7 +41669,7 @@ Global max_z_object;
     ParaContent();
     print " ";
     ParaContent();
-    (call_U2497)(CV_POS,I_third_person_plural_U1,story_tense);
+    (call_U2499)(CV_POS,I_third_person_plural_U1,story_tense);
     ParaContent();
     print " none at all available!";
     rtrue;
@@ -71623,23 +71646,23 @@ Global max_z_object;
     }
 ];
 [ call_U2286 forbid_breaks rv;
-    (rv = (call_U2457)());
+    (rv = (call_U2489)());
     if (rv) {
         if ((rv == 2)) {
             return reason_the_action_failed;
         }
-        return call_U2457;
+        return call_U2489;
     }
     ((latest_rule_result-->(0)) = 0);
     rfalse;
 ];
 [ call_U2288 forbid_breaks rv;
-    (rv = (call_U2458)());
+    (rv = (call_U2490)());
     if (rv) {
         if ((rv == 2)) {
             return reason_the_action_failed;
         }
-        return call_U2458;
+        return call_U2490;
     }
     ((latest_rule_result-->(0)) = 0);
     rfalse;
@@ -73019,14 +73042,14 @@ Global max_z_object;
 ];
 [ E6 value which;
     if ((value == 0)) {
-        call_U2491(value);
+        call_U2492(value);
         rtrue;
     }
     if ((NUMBER_TY_Abs(value) >= 1)) {
-        call_U2491(value);
+        call_U2492(value);
         rtrue;
     }
-    call_U2491(value);
+    call_U2492(value);
     rtrue;
     rtrue;
 ];
@@ -73050,14 +73073,14 @@ Global max_z_object;
 ];
 [ E9 value which;
     if ((value == 0)) {
-        call_U2493(value);
+        call_U2494(value);
         rtrue;
     }
     if ((NUMBER_TY_Abs(value) >= 1)) {
-        call_U2493(value);
+        call_U2494(value);
         rtrue;
     }
-    call_U2493(value);
+    call_U2494(value);
     rtrue;
     rtrue;
 ];
@@ -73309,10 +73332,13 @@ Global max_z_object;
 [ call_U2335 sk;
     rfalse;
 ];
-[ call_U2336 which na t_0;
+[ call_U2336 sk;
+    rfalse;
+];
+[ call_U2337 which na t_0;
     #ifdef DEBUG;
         if (which) {
-            if ((t_0 ofclass K24_colored_dial)) {
+            if ((t_0 ofclass K25_colored_dial)) {
                 if ((na > 0)) {
                     (na = 0);
                     print "^";
@@ -73325,9 +73351,6 @@ Global max_z_object;
         }
         return na;
     #endif;
-];
-[ call_U2337 sk;
-    rfalse;
 ];
 [ call_U2338;
     if ((((action == ##Examine)) && ((((actor == player)) && ((((noun ofclass K2_thing)) && (call_U2137(noun)))))))) {
@@ -73556,7 +73579,7 @@ Global max_z_object;
             print " contains ";
             ParaContent();
             @push self;
-            call_U2495(GProperty(OBJECT_TY, (self = noun), A_P_current_volume));
+            call_U2496(GProperty(OBJECT_TY, (self = noun), A_P_current_volume));
             @pull self;
             ParaContent();
             print " of ";
@@ -73836,7 +73859,7 @@ Global max_z_object;
         print " now contains ";
         ParaContent();
         @push self;
-        call_U2495(GProperty(OBJECT_TY, (self = noun), A_P_current_volume));
+        call_U2496(GProperty(OBJECT_TY, (self = noun), A_P_current_volume));
         @pull self;
         ParaContent();
         print " of ";
@@ -73854,7 +73877,7 @@ Global max_z_object;
         print " contains ";
         ParaContent();
         @push self;
-        call_U2495(GProperty(OBJECT_TY, (self = second), A_P_current_volume));
+        call_U2496(GProperty(OBJECT_TY, (self = second), A_P_current_volume));
         @pull self;
         ParaContent();
         print " of ";
@@ -76031,7 +76054,7 @@ Global max_z_object;
         if (debug_rules) {
             DB_Rule(call_U2453, 1003, 0);
         }
-        call_U2496();
+        call_U2497();
         (say__p = 1);
         ParaContent();
         print "The control panel is ";
@@ -76064,7 +76087,7 @@ Global max_z_object;
         if (debug_rules) {
             DB_Rule(call_U2454, 1004, 0);
         }
-        call_U2496();
+        call_U2497();
     } else {
         if ((debug_rules > 1)) {
             DB_Rule(call_U2454, 1004, 4);
@@ -76119,64 +76142,26 @@ Global max_z_object;
     rfalse;
 ];
 [ call_U2457;
-    if ((actor == player)) {
-        if (debug_rules) {
-            DB_Rule(call_U2457, 1008, 0);
-        }
-        if ((~~((noun ofclass K24_colored_dial)))) {
-            (say__p = 1);
-            ParaContent();
-            CDefArt(noun);
-            ParaContent();
-            print " does not spin.";
-            print "^";
-            rtrue;
-        }
-    } else {
-        if ((debug_rules > 1)) {
-            DB_Rule(call_U2457, 1008, 3);
-        }
-    }
-    rfalse;
-];
-[ call_U2458;
-    if ((actor == player)) {
-        if (debug_rules) {
-            DB_Rule(call_U2458, 1009, 0);
-        }
-        (say__p = 1);
-        ParaContent();
-        print "The dial is now set to ";
-        ParaContent();
-        PrintShortName(second);
-    } else {
-        if ((debug_rules > 1)) {
-            DB_Rule(call_U2458, 1009, 3);
-        }
-    }
-    rfalse;
-];
-[ call_U2459;
     if ((((((action == ##Push)) || ((action == ##SwitchOn)))) && ((((actor == player)) && ((noun == I_aqua_button_U1)))))) {
         (self = noun);
         if (debug_rules) {
-            DB_Rule(call_U2459, 1010, 0);
+            DB_Rule(call_U2457, 1008, 0);
         }
         TryAction(0, player, ##SwitchOn, I_aqua_button_U1, 0);
         RulebookFails(0, 0);
         rtrue;
     } else {
         if ((debug_rules > 1)) {
-            DB_Rule(call_U2459, 1010, 2);
+            DB_Rule(call_U2457, 1008, 2);
         }
     }
     rfalse;
 ];
-[ call_U2460;
+[ call_U2458;
     if ((((action == ##SwitchOn)) && ((((actor == player)) && ((noun == I_aqua_button_U1)))))) {
         (self = noun);
         if (debug_rules) {
-            DB_Rule(call_U2460, 1011, 0);
+            DB_Rule(call_U2458, 1009, 0);
         }
         if (((call_U339(I_aqua_button_U1)) && ((I_socket_one_U1 == ContainerOf(I_aqua_fuse_U1))))) {
             (say__p = 1);
@@ -76195,8 +76180,8 @@ Global max_z_object;
             ParaContent();
             print "The aqua indicator is now on.";
             print "^";
-            call_U2461();
-            call_U2462();
+            call_U2459();
+            call_U2460();
             call_U337(I_aqua_button_U1);
             call_U337(I_aqua_light_U1);
         } else {
@@ -76208,22 +76193,44 @@ Global max_z_object;
             ParaContent();
             print "The aqua indicator is now off.";
             print "^";
-            call_U2463();
-            call_U2464();
+            call_U2461();
+            call_U2462();
         }
         RulebookFails(0, 0);
         rtrue;
     } else {
         if ((debug_rules > 1)) {
-            DB_Rule(call_U2460, 1011, 2);
+            DB_Rule(call_U2458, 1009, 2);
         }
     }
     rfalse;
 ];
+[ call_U2459 x x_ix qcy_0 qcn_0;
+    (qcy_0 = 0);
+    (qcn_0 = 0);
+    for ((x = K24_colored_button_First):x:(x = (x.K24_colored_button_Next))) {
+        (qcn_0)++;
+        call_U340(x);
+        (qcy_0)++;
+    }
+    if ((qcy_0 == qcn_0)) {
+    }
+];
+[ call_U2460 x x_ix qcy_0 qcn_0;
+    (qcy_0 = 0);
+    (qcn_0 = 0);
+    for ((x = K23_colored_light_First):x:(x = (x.K23_colored_light_Next))) {
+        (qcn_0)++;
+        call_U340(x);
+        (qcy_0)++;
+    }
+    if ((qcy_0 == qcn_0)) {
+    }
+];
 [ call_U2461 x x_ix qcy_0 qcn_0;
     (qcy_0 = 0);
     (qcn_0 = 0);
-    for ((x = K25_colored_button_First):x:(x = (x.K25_colored_button_Next))) {
+    for ((x = K23_colored_light_First):x:(x = (x.K23_colored_light_Next))) {
         (qcn_0)++;
         call_U340(x);
         (qcy_0)++;
@@ -76234,7 +76241,7 @@ Global max_z_object;
 [ call_U2462 x x_ix qcy_0 qcn_0;
     (qcy_0 = 0);
     (qcn_0 = 0);
-    for ((x = K23_colored_light_First):x:(x = (x.K23_colored_light_Next))) {
+    for ((x = K24_colored_button_First):x:(x = (x.K24_colored_button_Next))) {
         (qcn_0)++;
         call_U340(x);
         (qcy_0)++;
@@ -76242,33 +76249,11 @@ Global max_z_object;
     if ((qcy_0 == qcn_0)) {
     }
 ];
-[ call_U2463 x x_ix qcy_0 qcn_0;
-    (qcy_0 = 0);
-    (qcn_0 = 0);
-    for ((x = K23_colored_light_First):x:(x = (x.K23_colored_light_Next))) {
-        (qcn_0)++;
-        call_U340(x);
-        (qcy_0)++;
-    }
-    if ((qcy_0 == qcn_0)) {
-    }
-];
-[ call_U2464 x x_ix qcy_0 qcn_0;
-    (qcy_0 = 0);
-    (qcn_0 = 0);
-    for ((x = K25_colored_button_First):x:(x = (x.K25_colored_button_Next))) {
-        (qcn_0)++;
-        call_U340(x);
-        (qcy_0)++;
-    }
-    if ((qcy_0 == qcn_0)) {
-    }
-];
-[ call_U2465;
+[ call_U2463;
     if ((((((action == ##Push)) || ((action == ##SwitchOn)))) && ((((actor == player)) && ((noun == I_crimson_button_U1)))))) {
         (self = noun);
         if (debug_rules) {
-            DB_Rule(call_U2465, 1012, 0);
+            DB_Rule(call_U2463, 1010, 0);
         }
         if (((call_U339(I_crimson_button_U1)) && ((I_socket_three_U1 == ContainerOf(I_crimson_fuse_U1))))) {
             (say__p = 1);
@@ -76287,8 +76272,8 @@ Global max_z_object;
             ParaContent();
             print "The crimson indicator is now on.";
             print "^";
-            call_U2466();
-            call_U2467();
+            call_U2464();
+            call_U2465();
             call_U337(I_crimson_button_U1);
             call_U337(I_crimson_light_U1);
         } else {
@@ -76300,22 +76285,44 @@ Global max_z_object;
             ParaContent();
             print "The crimson indicator is now off.";
             print "^";
-            call_U2468();
-            call_U2469();
+            call_U2466();
+            call_U2467();
         }
         RulebookFails(0, 0);
         rtrue;
     } else {
         if ((debug_rules > 1)) {
-            DB_Rule(call_U2465, 1012, 2);
+            DB_Rule(call_U2463, 1010, 2);
         }
     }
     rfalse;
 ];
+[ call_U2464 x x_ix qcy_0 qcn_0;
+    (qcy_0 = 0);
+    (qcn_0 = 0);
+    for ((x = K24_colored_button_First):x:(x = (x.K24_colored_button_Next))) {
+        (qcn_0)++;
+        call_U340(x);
+        (qcy_0)++;
+    }
+    if ((qcy_0 == qcn_0)) {
+    }
+];
+[ call_U2465 x x_ix qcy_0 qcn_0;
+    (qcy_0 = 0);
+    (qcn_0 = 0);
+    for ((x = K23_colored_light_First):x:(x = (x.K23_colored_light_Next))) {
+        (qcn_0)++;
+        call_U340(x);
+        (qcy_0)++;
+    }
+    if ((qcy_0 == qcn_0)) {
+    }
+];
 [ call_U2466 x x_ix qcy_0 qcn_0;
     (qcy_0 = 0);
     (qcn_0 = 0);
-    for ((x = K25_colored_button_First):x:(x = (x.K25_colored_button_Next))) {
+    for ((x = K23_colored_light_First):x:(x = (x.K23_colored_light_Next))) {
         (qcn_0)++;
         call_U340(x);
         (qcy_0)++;
@@ -76326,7 +76333,7 @@ Global max_z_object;
 [ call_U2467 x x_ix qcy_0 qcn_0;
     (qcy_0 = 0);
     (qcn_0 = 0);
-    for ((x = K23_colored_light_First):x:(x = (x.K23_colored_light_Next))) {
+    for ((x = K24_colored_button_First):x:(x = (x.K24_colored_button_Next))) {
         (qcn_0)++;
         call_U340(x);
         (qcy_0)++;
@@ -76334,33 +76341,11 @@ Global max_z_object;
     if ((qcy_0 == qcn_0)) {
     }
 ];
-[ call_U2468 x x_ix qcy_0 qcn_0;
-    (qcy_0 = 0);
-    (qcn_0 = 0);
-    for ((x = K23_colored_light_First):x:(x = (x.K23_colored_light_Next))) {
-        (qcn_0)++;
-        call_U340(x);
-        (qcy_0)++;
-    }
-    if ((qcy_0 == qcn_0)) {
-    }
-];
-[ call_U2469 x x_ix qcy_0 qcn_0;
-    (qcy_0 = 0);
-    (qcn_0 = 0);
-    for ((x = K25_colored_button_First):x:(x = (x.K25_colored_button_Next))) {
-        (qcn_0)++;
-        call_U340(x);
-        (qcy_0)++;
-    }
-    if ((qcy_0 == qcn_0)) {
-    }
-];
-[ call_U2470;
+[ call_U2468;
     if ((((((action == ##Push)) || ((action == ##SwitchOn)))) && ((((actor == player)) && ((noun == I_emerald_button_U1)))))) {
         (self = noun);
         if (debug_rules) {
-            DB_Rule(call_U2470, 1013, 0);
+            DB_Rule(call_U2468, 1011, 0);
         }
         if (((call_U339(I_emerald_button_U1)) && ((I_socket_five_U1 == ContainerOf(I_emerald_fuse_U1))))) {
             (say__p = 1);
@@ -76379,8 +76364,8 @@ Global max_z_object;
             ParaContent();
             print "The emerald indicator is now on.";
             print "^";
-            call_U2471();
-            call_U2472();
+            call_U2469();
+            call_U2470();
             call_U337(I_emerald_button_U1);
             call_U337(I_emerald_light_U1);
         } else {
@@ -76392,22 +76377,44 @@ Global max_z_object;
             ParaContent();
             print "The emerald indicator is now off.";
             print "^";
-            call_U2473();
-            call_U2474();
+            call_U2471();
+            call_U2472();
         }
         RulebookFails(0, 0);
         rtrue;
     } else {
         if ((debug_rules > 1)) {
-            DB_Rule(call_U2470, 1013, 2);
+            DB_Rule(call_U2468, 1011, 2);
         }
     }
     rfalse;
 ];
+[ call_U2469 x x_ix qcy_0 qcn_0;
+    (qcy_0 = 0);
+    (qcn_0 = 0);
+    for ((x = K24_colored_button_First):x:(x = (x.K24_colored_button_Next))) {
+        (qcn_0)++;
+        call_U340(x);
+        (qcy_0)++;
+    }
+    if ((qcy_0 == qcn_0)) {
+    }
+];
+[ call_U2470 x x_ix qcy_0 qcn_0;
+    (qcy_0 = 0);
+    (qcn_0 = 0);
+    for ((x = K23_colored_light_First):x:(x = (x.K23_colored_light_Next))) {
+        (qcn_0)++;
+        call_U340(x);
+        (qcy_0)++;
+    }
+    if ((qcy_0 == qcn_0)) {
+    }
+];
 [ call_U2471 x x_ix qcy_0 qcn_0;
     (qcy_0 = 0);
     (qcn_0 = 0);
-    for ((x = K25_colored_button_First):x:(x = (x.K25_colored_button_Next))) {
+    for ((x = K23_colored_light_First):x:(x = (x.K23_colored_light_Next))) {
         (qcn_0)++;
         call_U340(x);
         (qcy_0)++;
@@ -76418,7 +76425,7 @@ Global max_z_object;
 [ call_U2472 x x_ix qcy_0 qcn_0;
     (qcy_0 = 0);
     (qcn_0 = 0);
-    for ((x = K23_colored_light_First):x:(x = (x.K23_colored_light_Next))) {
+    for ((x = K24_colored_button_First):x:(x = (x.K24_colored_button_Next))) {
         (qcn_0)++;
         call_U340(x);
         (qcy_0)++;
@@ -76426,33 +76433,11 @@ Global max_z_object;
     if ((qcy_0 == qcn_0)) {
     }
 ];
-[ call_U2473 x x_ix qcy_0 qcn_0;
-    (qcy_0 = 0);
-    (qcn_0 = 0);
-    for ((x = K23_colored_light_First):x:(x = (x.K23_colored_light_Next))) {
-        (qcn_0)++;
-        call_U340(x);
-        (qcy_0)++;
-    }
-    if ((qcy_0 == qcn_0)) {
-    }
-];
-[ call_U2474 x x_ix qcy_0 qcn_0;
-    (qcy_0 = 0);
-    (qcn_0 = 0);
-    for ((x = K25_colored_button_First):x:(x = (x.K25_colored_button_Next))) {
-        (qcn_0)++;
-        call_U340(x);
-        (qcy_0)++;
-    }
-    if ((qcy_0 == qcn_0)) {
-    }
-];
-[ call_U2475;
+[ call_U2473;
     if ((((((action == ##Push)) || ((action == ##SwitchOn)))) && ((((actor == player)) && ((noun == I_grey_button_U1)))))) {
         (self = noun);
         if (debug_rules) {
-            DB_Rule(call_U2475, 1014, 0);
+            DB_Rule(call_U2473, 1012, 0);
         }
         if (((call_U339(I_grey_button_U1)) && ((I_socket_seven_U1 == ContainerOf(I_grey_fuse_U1))))) {
             (say__p = 1);
@@ -76471,8 +76456,8 @@ Global max_z_object;
             ParaContent();
             print "The grey indicator is now on.";
             print "^";
-            call_U2476();
-            call_U2477();
+            call_U2474();
+            call_U2475();
             call_U337(I_grey_button_U1);
             call_U337(I_grey_light_U1);
         } else {
@@ -76484,22 +76469,44 @@ Global max_z_object;
             ParaContent();
             print "The grey indicator is now off.";
             print "^";
-            call_U2478();
-            call_U2479();
+            call_U2476();
+            call_U2477();
         }
         RulebookFails(0, 0);
         rtrue;
     } else {
         if ((debug_rules > 1)) {
-            DB_Rule(call_U2475, 1014, 2);
+            DB_Rule(call_U2473, 1012, 2);
         }
     }
     rfalse;
 ];
+[ call_U2474 x x_ix qcy_0 qcn_0;
+    (qcy_0 = 0);
+    (qcn_0 = 0);
+    for ((x = K24_colored_button_First):x:(x = (x.K24_colored_button_Next))) {
+        (qcn_0)++;
+        call_U340(x);
+        (qcy_0)++;
+    }
+    if ((qcy_0 == qcn_0)) {
+    }
+];
+[ call_U2475 x x_ix qcy_0 qcn_0;
+    (qcy_0 = 0);
+    (qcn_0 = 0);
+    for ((x = K23_colored_light_First):x:(x = (x.K23_colored_light_Next))) {
+        (qcn_0)++;
+        call_U340(x);
+        (qcy_0)++;
+    }
+    if ((qcy_0 == qcn_0)) {
+    }
+];
 [ call_U2476 x x_ix qcy_0 qcn_0;
     (qcy_0 = 0);
     (qcn_0 = 0);
-    for ((x = K25_colored_button_First):x:(x = (x.K25_colored_button_Next))) {
+    for ((x = K23_colored_light_First):x:(x = (x.K23_colored_light_Next))) {
         (qcn_0)++;
         call_U340(x);
         (qcy_0)++;
@@ -76510,7 +76517,7 @@ Global max_z_object;
 [ call_U2477 x x_ix qcy_0 qcn_0;
     (qcy_0 = 0);
     (qcn_0 = 0);
-    for ((x = K23_colored_light_First):x:(x = (x.K23_colored_light_Next))) {
+    for ((x = K24_colored_button_First):x:(x = (x.K24_colored_button_Next))) {
         (qcn_0)++;
         call_U340(x);
         (qcy_0)++;
@@ -76518,33 +76525,11 @@ Global max_z_object;
     if ((qcy_0 == qcn_0)) {
     }
 ];
-[ call_U2478 x x_ix qcy_0 qcn_0;
-    (qcy_0 = 0);
-    (qcn_0 = 0);
-    for ((x = K23_colored_light_First):x:(x = (x.K23_colored_light_Next))) {
-        (qcn_0)++;
-        call_U340(x);
-        (qcy_0)++;
-    }
-    if ((qcy_0 == qcn_0)) {
-    }
-];
-[ call_U2479 x x_ix qcy_0 qcn_0;
-    (qcy_0 = 0);
-    (qcn_0 = 0);
-    for ((x = K25_colored_button_First):x:(x = (x.K25_colored_button_Next))) {
-        (qcn_0)++;
-        call_U340(x);
-        (qcy_0)++;
-    }
-    if ((qcy_0 == qcn_0)) {
-    }
-];
-[ call_U2480;
+[ call_U2478;
     if ((((((action == ##Push)) || ((action == ##SwitchOn)))) && ((((actor == player)) && ((noun == I_indigo_button_U1)))))) {
         (self = noun);
         if (debug_rules) {
-            DB_Rule(call_U2480, 1015, 0);
+            DB_Rule(call_U2478, 1013, 0);
         }
         if (((call_U339(I_indigo_button_U1)) && ((I_socket_nine_U1 == ContainerOf(I_indigo_fuse_U1))))) {
             (say__p = 1);
@@ -76563,8 +76548,8 @@ Global max_z_object;
             ParaContent();
             print "The indigo indicator is now on.";
             print "^";
-            call_U2481();
-            call_U2482();
+            call_U2479();
+            call_U2480();
             call_U337(I_indigo_button_U1);
             call_U337(I_indigo_light_U1);
         } else {
@@ -76576,22 +76561,44 @@ Global max_z_object;
             ParaContent();
             print "The indigo indicator is now off.";
             print "^";
-            call_U2483();
-            call_U2484();
+            call_U2481();
+            call_U2482();
         }
         RulebookFails(0, 0);
         rtrue;
     } else {
         if ((debug_rules > 1)) {
-            DB_Rule(call_U2480, 1015, 2);
+            DB_Rule(call_U2478, 1013, 2);
         }
     }
     rfalse;
 ];
+[ call_U2479 x x_ix qcy_0 qcn_0;
+    (qcy_0 = 0);
+    (qcn_0 = 0);
+    for ((x = K24_colored_button_First):x:(x = (x.K24_colored_button_Next))) {
+        (qcn_0)++;
+        call_U340(x);
+        (qcy_0)++;
+    }
+    if ((qcy_0 == qcn_0)) {
+    }
+];
+[ call_U2480 x x_ix qcy_0 qcn_0;
+    (qcy_0 = 0);
+    (qcn_0 = 0);
+    for ((x = K23_colored_light_First):x:(x = (x.K23_colored_light_Next))) {
+        (qcn_0)++;
+        call_U340(x);
+        (qcy_0)++;
+    }
+    if ((qcy_0 == qcn_0)) {
+    }
+];
 [ call_U2481 x x_ix qcy_0 qcn_0;
     (qcy_0 = 0);
     (qcn_0 = 0);
-    for ((x = K25_colored_button_First):x:(x = (x.K25_colored_button_Next))) {
+    for ((x = K23_colored_light_First):x:(x = (x.K23_colored_light_Next))) {
         (qcn_0)++;
         call_U340(x);
         (qcy_0)++;
@@ -76602,7 +76609,7 @@ Global max_z_object;
 [ call_U2482 x x_ix qcy_0 qcn_0;
     (qcy_0 = 0);
     (qcn_0 = 0);
-    for ((x = K23_colored_light_First):x:(x = (x.K23_colored_light_Next))) {
+    for ((x = K24_colored_button_First):x:(x = (x.K24_colored_button_Next))) {
         (qcn_0)++;
         call_U340(x);
         (qcy_0)++;
@@ -76610,33 +76617,11 @@ Global max_z_object;
     if ((qcy_0 == qcn_0)) {
     }
 ];
-[ call_U2483 x x_ix qcy_0 qcn_0;
-    (qcy_0 = 0);
-    (qcn_0 = 0);
-    for ((x = K23_colored_light_First):x:(x = (x.K23_colored_light_Next))) {
-        (qcn_0)++;
-        call_U340(x);
-        (qcy_0)++;
-    }
-    if ((qcy_0 == qcn_0)) {
-    }
-];
-[ call_U2484 x x_ix qcy_0 qcn_0;
-    (qcy_0 = 0);
-    (qcn_0 = 0);
-    for ((x = K25_colored_button_First):x:(x = (x.K25_colored_button_Next))) {
-        (qcn_0)++;
-        call_U340(x);
-        (qcy_0)++;
-    }
-    if ((qcy_0 == qcn_0)) {
-    }
-];
-[ call_U2485;
+[ call_U2483;
     if ((((((action == ##Push)) || ((action == ##SwitchOn)))) && ((((actor == player)) && ((noun == I_khaki_button_U1)))))) {
         (self = noun);
         if (debug_rules) {
-            DB_Rule(call_U2485, 1016, 0);
+            DB_Rule(call_U2483, 1014, 0);
         }
         if (((call_U339(I_khaki_button_U1)) && ((I_socket_eleven_U1 == ContainerOf(I_khaki_fuse_U1))))) {
             (say__p = 1);
@@ -76655,8 +76640,8 @@ Global max_z_object;
             ParaContent();
             print "The khaki indicator is now on.";
             print "^";
-            call_U2486();
-            call_U2487();
+            call_U2484();
+            call_U2485();
             call_U337(I_khaki_button_U1);
             call_U337(I_khaki_light_U1);
         } else {
@@ -76668,22 +76653,44 @@ Global max_z_object;
             ParaContent();
             print "The khaki indicator is now off.";
             print "^";
-            call_U2488();
-            call_U2489();
+            call_U2486();
+            call_U2487();
         }
         RulebookFails(0, 0);
         rtrue;
     } else {
         if ((debug_rules > 1)) {
-            DB_Rule(call_U2485, 1016, 2);
+            DB_Rule(call_U2483, 1014, 2);
         }
     }
     rfalse;
 ];
+[ call_U2484 x x_ix qcy_0 qcn_0;
+    (qcy_0 = 0);
+    (qcn_0 = 0);
+    for ((x = K24_colored_button_First):x:(x = (x.K24_colored_button_Next))) {
+        (qcn_0)++;
+        call_U340(x);
+        (qcy_0)++;
+    }
+    if ((qcy_0 == qcn_0)) {
+    }
+];
+[ call_U2485 x x_ix qcy_0 qcn_0;
+    (qcy_0 = 0);
+    (qcn_0 = 0);
+    for ((x = K23_colored_light_First):x:(x = (x.K23_colored_light_Next))) {
+        (qcn_0)++;
+        call_U340(x);
+        (qcy_0)++;
+    }
+    if ((qcy_0 == qcn_0)) {
+    }
+];
 [ call_U2486 x x_ix qcy_0 qcn_0;
     (qcy_0 = 0);
     (qcn_0 = 0);
-    for ((x = K25_colored_button_First):x:(x = (x.K25_colored_button_Next))) {
+    for ((x = K23_colored_light_First):x:(x = (x.K23_colored_light_Next))) {
         (qcn_0)++;
         call_U340(x);
         (qcy_0)++;
@@ -76694,7 +76701,7 @@ Global max_z_object;
 [ call_U2487 x x_ix qcy_0 qcn_0;
     (qcy_0 = 0);
     (qcn_0 = 0);
-    for ((x = K23_colored_light_First):x:(x = (x.K23_colored_light_Next))) {
+    for ((x = K24_colored_button_First):x:(x = (x.K24_colored_button_Next))) {
         (qcn_0)++;
         call_U340(x);
         (qcy_0)++;
@@ -76702,33 +76709,11 @@ Global max_z_object;
     if ((qcy_0 == qcn_0)) {
     }
 ];
-[ call_U2488 x x_ix qcy_0 qcn_0;
-    (qcy_0 = 0);
-    (qcn_0 = 0);
-    for ((x = K23_colored_light_First):x:(x = (x.K23_colored_light_Next))) {
-        (qcn_0)++;
-        call_U340(x);
-        (qcy_0)++;
-    }
-    if ((qcy_0 == qcn_0)) {
-    }
-];
-[ call_U2489 x x_ix qcy_0 qcn_0;
-    (qcy_0 = 0);
-    (qcn_0 = 0);
-    for ((x = K25_colored_button_First):x:(x = (x.K25_colored_button_Next))) {
-        (qcn_0)++;
-        call_U340(x);
-        (qcy_0)++;
-    }
-    if ((qcy_0 == qcn_0)) {
-    }
-];
-[ call_U2490;
+[ call_U2488;
     if ((((action == ##Examine)) && ((((actor == player)) && ((noun == I_monitor_U1)))))) {
         (self = noun);
         if (debug_rules) {
-            DB_Rule(call_U2490, 1017, 0);
+            DB_Rule(call_U2488, 1015, 0);
         }
         if (call_U336(I_aqua_button_U1)) {
             (say__p = 1);
@@ -76770,12 +76755,76 @@ Global max_z_object;
         rtrue;
     } else {
         if ((debug_rules > 1)) {
-            DB_Rule(call_U2490, 1017, 2);
+            DB_Rule(call_U2488, 1015, 2);
         }
     }
     rfalse;
 ];
-[ call_U2491 value rem S;
+[ call_U2489;
+    if ((actor == player)) {
+        if (debug_rules) {
+            DB_Rule(call_U2489, 1016, 0);
+        }
+        if ((~~((noun ofclass K25_colored_dial)))) {
+            (say__p = 1);
+            ParaContent();
+            CDefArt(noun);
+            ParaContent();
+            print " does not spin.";
+            print "^";
+            rtrue;
+        }
+    } else {
+        if ((debug_rules > 1)) {
+            DB_Rule(call_U2489, 1016, 3);
+        }
+    }
+    rfalse;
+];
+[ call_U2490;
+    if ((actor == player)) {
+        if (debug_rules) {
+            DB_Rule(call_U2490, 1017, 0);
+        }
+        if ((((parsed_number < 0)) || ((parsed_number > 11)))) {
+            (say__p = 1);
+            ParaContent();
+            print "The dial can only be set from 0 to 11.";
+            print "^";
+            rtrue;
+        } else {
+            (say__p = 1);
+            ParaContent();
+            print "The dial is now set to ";
+            ParaContent();
+            print (say__n = parsed_number);
+            ParaContent();
+            print ".";
+            print "^";
+            call_U337(I_aqua_dial_U1);
+            WriteGProperty(OBJECT_TY, noun, A_P_dial_setting, parsed_number);
+        }
+    } else {
+        if ((debug_rules > 1)) {
+            DB_Rule(call_U2490, 1017, 3);
+        }
+    }
+    rfalse;
+];
+[ call_U2491;
+    if ((real_location == I_control_room_U1)) {
+        if (debug_rules) {
+            DB_Rule(call_U2491, 1018, 0);
+        }
+        call_U2498();
+    } else {
+        if ((debug_rules > 1)) {
+            DB_Rule(call_U2491, 1018, 4);
+        }
+    }
+    rfalse;
+];
+[ call_U2492 value rem S;
     print "$";
     print (value/100);
     print ".";
@@ -76785,7 +76834,7 @@ Global max_z_object;
     print (value%100);
     rtrue;
 ];
-[ call_U2492 original_wn group_wn v w rv wpos mid_word matched_number cur_word cur_len cur_addr sgn tot f x;
+[ call_U2493 original_wn group_wn v w rv wpos mid_word matched_number cur_word cur_len cur_addr sgn tot f x;
     (wpos = 0);
     (mid_word = 0);
     (matched_number = 0);
@@ -76945,7 +76994,7 @@ Global max_z_object;
     .Failed;
     return GPR_FAIL;
 ];
-[ call_U2493 value rem S;
+[ call_U2494 value rem S;
     print (value/10);
     if (((value%10) == 0)) {
         rtrue;
@@ -76958,7 +77007,7 @@ Global max_z_object;
     print "oz";
     rtrue;
 ];
-[ call_U2494 original_wn group_wn v w rv wpos mid_word matched_number cur_word cur_len cur_addr sgn tot f x;
+[ call_U2495 original_wn group_wn v w rv wpos mid_word matched_number cur_word cur_len cur_addr sgn tot f x;
     (wpos = 0);
     (mid_word = 0);
     (matched_number = 0);
@@ -77127,7 +77176,7 @@ Global max_z_object;
     .Failed;
     return GPR_FAIL;
 ];
-[ call_U2495 t_0 tmp_0;
+[ call_U2496 t_0 tmp_0;
     if ((t_0 < 5)) {
         (say__p = 1);
         ParaContent();
@@ -77161,7 +77210,7 @@ Global max_z_object;
     }
     rfalse;
 ];
-[ call_U2496 tmp_0;
+[ call_U2497 tmp_0;
     (tmp_0 = 0);
     if ((I_socket_one_U1 == ContainerOf(I_aqua_fuse_U1))) {
         (tmp_0 = (tmp_0 + 1));
@@ -77181,6 +77230,44 @@ Global max_z_object;
     if ((I_socket_eleven_U1 == ContainerOf(I_khaki_fuse_U1))) {
         (tmp_0 = (tmp_0 + 1));
     }
+    (say__p = 1);
+    ParaContent();
+    print "The fuse count is ";
+    ParaContent();
+    print (say__n = tmp_0);
+    ParaContent();
+    print ".";
+    print "^";
+    rfalse;
+];
+[ call_U2498 tmp_0;
+    (tmp_0 = 0);
+    if ((GProperty(OBJECT_TY, I_aqua_dial_U1, A_P_dial_setting) == 1)) {
+        (tmp_0 = (tmp_0 + 1));
+    }
+    if ((GProperty(OBJECT_TY, I_crimson_dial_U1, A_P_dial_setting) == 3)) {
+        (tmp_0 = (tmp_0 + 1));
+    }
+    if ((GProperty(OBJECT_TY, I_emerald_dial_U1, A_P_dial_setting) == 5)) {
+        (tmp_0 = (tmp_0 + 1));
+    }
+    if ((GProperty(OBJECT_TY, I_grey_dial_U1, A_P_dial_setting) == 7)) {
+        (tmp_0 = (tmp_0 + 1));
+    }
+    if ((GProperty(OBJECT_TY, I_indigo_dial_U1, A_P_dial_setting) == 9)) {
+        (tmp_0 = (tmp_0 + 1));
+    }
+    if ((GProperty(OBJECT_TY, I_khaki_dial_U1, A_P_dial_setting) == 11)) {
+        (tmp_0 = (tmp_0 + 1));
+    }
+    (say__p = 1);
+    ParaContent();
+    print "The dial count is ";
+    ParaContent();
+    print (say__n = tmp_0);
+    ParaContent();
+    print ".";
+    print "^";
     rfalse;
 ];
 [ ConjugateVerb1 fn vp t modal_to;
@@ -77324,7 +77411,7 @@ Global max_z_object;
             ;
     }
 ];
-[ call_U2497 fn vp t modal_to;
+[ call_U2499 fn vp t modal_to;
     (t = ConjugateVerb1(fn, vp, t, modal_to));
     if ((fn == CV_MODAL)) {
         return t;
@@ -77453,7 +77540,7 @@ Global max_z_object;
             ;
     }
 ];
-[ call_U2498 fn vp t modal_to;
+[ call_U2500 fn vp t modal_to;
     (t = ConjugateVerb62(fn, vp, t, modal_to));
     if ((fn == CV_MODAL)) {
         return t;
@@ -77535,24 +77622,6 @@ Global max_z_object;
             ;
     }
 ];
-[ call_U2499 fn vp t modal_to;
-    (t = ConjugateVerb63(fn, vp, t, modal_to));
-    if ((fn == CV_MODAL)) {
-        return t;
-    }
-    if ((fn == CV_MEANING)) {
-        return MEANINGLESS_RR;
-    }
-];
-[ call_U2500 fn vp t modal_to;
-    (t = ConjugateVerb63(fn, vp, t, modal_to));
-    if ((fn == CV_MODAL)) {
-        return t;
-    }
-    if ((fn == CV_MEANING)) {
-        return MEANINGLESS_RR;
-    }
-];
 [ call_U2501 fn vp t modal_to;
     (t = ConjugateVerb63(fn, vp, t, modal_to));
     if ((fn == CV_MODAL)) {
@@ -77563,6 +77632,24 @@ Global max_z_object;
     }
 ];
 [ call_U2502 fn vp t modal_to;
+    (t = ConjugateVerb63(fn, vp, t, modal_to));
+    if ((fn == CV_MODAL)) {
+        return t;
+    }
+    if ((fn == CV_MEANING)) {
+        return MEANINGLESS_RR;
+    }
+];
+[ call_U2503 fn vp t modal_to;
+    (t = ConjugateVerb63(fn, vp, t, modal_to));
+    if ((fn == CV_MODAL)) {
+        return t;
+    }
+    if ((fn == CV_MEANING)) {
+        return MEANINGLESS_RR;
+    }
+];
+[ call_U2504 fn vp t modal_to;
     (t = ConjugateVerb63(fn, vp, t, modal_to));
     if ((fn == CV_MODAL)) {
         return t;
@@ -77644,7 +77731,7 @@ Global max_z_object;
             ;
     }
 ];
-[ call_U2503 fn vp t modal_to;
+[ call_U2505 fn vp t modal_to;
     (t = ConjugateVerb105(fn, vp, t, modal_to));
     if ((fn == CV_MODAL)) {
         return t;
@@ -77935,7 +78022,7 @@ Global max_z_object;
             ;
     }
 ];
-[ call_U2504;
+[ call_U2506;
     #ifdef DEBUG;
         if (suppress_text_substitution) {
             print "~[bold type]Entrance[roman type][line break]The car has begun to move toward the entrance of the ride and the safety bar has been lowered. The entrance to Hell Ride is a chilling spectacle designed to draw both thrill-seekers and the morbidly curious. The facade looms before you, a grotesque masterpiece of twisted metal and carved wood, illuminated by flickering, blood-red lights that cast eerie shadows across the ground. The air smells faintly of sulfur, mingling with the sweet scent of carnival popcorn from nearby stalls.^^A towering archway frames the entrance, its design a chaotic blend of flames, jagged spikes, and sinister, grinning skulls. The words 'HELL RIDE' are emblazoned above in glowing, flickering letters that seem to pulse like a heartbeat. Beneath the sign, two sculpted demons crouch, their clawed hands extending outward as though inviting-or daring-you to enter.^^Dark curtains, frayed and stained, hang over the entrance, swaying faintly in a breeze that seems to carry whispers and low, menacing chuckles. As you approach, the faint sound of distorted organ music grows louder, interspersed with sudden shrieks and the grinding of unseen machinery. A crooked sign at the side reads: 'One Ticket Admission: Enter If You Dare!'^^Nearby, a carnival barker with a waxen smile stands under a sputtering gaslight, his voice raspy and theatrical: 'Step right up, brave souls! Take the ride of your life-or your afterlife! The gates of hell are open, and the darkness beckons!'^^Through the entrance, the interior is shrouded in near-total darkness, save for flashes of sickly green light that illuminate the suggestion of twisting paths and grotesque shapes. The only certainty is that once you step inside, there's no turning back from the horrors that await.~";
@@ -77955,7 +78042,7 @@ Global max_z_object;
     print "The car has begun to move toward the entrance of the ride and the safety bar has been lowered. The entrance to Hell Ride is a chilling spectacle designed to draw both thrill-seekers and the morbidly curious. The facade looms before you, a grotesque masterpiece of twisted metal and carved wood, illuminated by flickering, blood-red lights that cast eerie shadows across the ground. The air smells faintly of sulfur, mingling with the sweet scent of carnival popcorn from nearby stalls.^^A towering archway frames the entrance, its design a chaotic blend of flames, jagged spikes, and sinister, grinning skulls. The words ~HELL RIDE~ are emblazoned above in glowing, flickering letters that seem to pulse like a heartbeat. Beneath the sign, two sculpted demons crouch, their clawed hands extending outward as though inviting-or daring-you to enter.^^Dark curtains, frayed and stained, hang over the entrance, swaying faintly in a breeze that seems to carry whispers and low, menacing chuckles. As you approach, the faint sound of distorted organ music grows louder, interspersed with sudden shrieks and the grinding of unseen machinery. A crooked sign at the side reads: ~One Ticket Admission: Enter If You Dare!~^^Nearby, a carnival barker with a waxen smile stands under a sputtering gaslight, his voice raspy and theatrical: ~Step right up, brave souls! Take the ride of your life-or your afterlife! The gates of hell are open, and the darkness beckons!~^^Through the entrance, the interior is shrouded in near-total darkness, save for flashes of sickly green light that illuminate the suggestion of twisting paths and grotesque shapes. The only certainty is that once you step inside, there's no turning back from the horrors that await.";
     rtrue;
 ];
-[ call_U2505;
+[ call_U2507;
     #ifdef DEBUG;
         if (suppress_text_substitution) {
             print "~[bold type]Hallway[roman type][line break]The doors open and your car passes through into the darkness.^^Mist fills the area as you move to the next room.~";
@@ -77975,7 +78062,7 @@ Global max_z_object;
     print "The doors open and your car passes through into the darkness.^^Mist fills the area as you move to the next room.";
     rtrue;
 ];
-[ call_U2506;
+[ call_U2508;
     #ifdef DEBUG;
         if (suppress_text_substitution) {
             print "~[bold type]The Stocks[roman type][line break]The public square is an open expanse of cobblestones, surrounded by the weathered facades of timber-framed buildings. The air is heavy with the mingling scents of smoke from distant chimneys, damp earth, and the faint metallic tang of the nearby smithy. At the square's center stand a row of crude wooden stocks, their heavy beams stained from years of weather and use. Iron clasps hold the unfortunate captives by their wrists and necks, their bodies forced into unnatural, humiliating postures.^^The punished individuals, heads bowed in shame, are caught in an agonizing tableau of disgrace. Their expressions, a mix of resignation and despair, reflect the full weight of their predicaments. Their clothing hangs in tatters, furthering their exposure to the biting wind and the sharp tongues of the gathered crowd.^^Around the stocks, the townsfolk revel in their collective cruelty. A wiry man leans in close, spitting insults with glee, his laughter cutting through the air. A stout woman clutching a basket of overripe vegetables hurls a squashed tomato, which splatters across one captive's cheek, drawing a chorus of jeers. Nearby, children mimic their elders, pointing and shrieking in mockery, their faces alight with mischief.^^The square is alive with noise: the raucous laughter of the crowd, the occasional sharp crack of a thrown object against the wood, and the soft, pained murmurs of the punished. A passing bell tolls faintly in the distance, but here it is drowned out by the cruel symphony of the jeering mob.^^Above it all, the gray sky looms, heavy with the promise of rain, as if nature itself disapproves of the spectacle. Yet the crowd pays no mind, delighting in their collective judgment, each jeer a reminder that today's entertainment is another's living nightmare.^^Mist fills the area as you move to the next room.~";
@@ -77995,7 +78082,7 @@ Global max_z_object;
     print "The public square is an open expanse of cobblestones, surrounded by the weathered facades of timber-framed buildings. The air is heavy with the mingling scents of smoke from distant chimneys, damp earth, and the faint metallic tang of the nearby smithy. At the square's center stand a row of crude wooden stocks, their heavy beams stained from years of weather and use. Iron clasps hold the unfortunate captives by their wrists and necks, their bodies forced into unnatural, humiliating postures.^^The punished individuals, heads bowed in shame, are caught in an agonizing tableau of disgrace. Their expressions, a mix of resignation and despair, reflect the full weight of their predicaments. Their clothing hangs in tatters, furthering their exposure to the biting wind and the sharp tongues of the gathered crowd.^^Around the stocks, the townsfolk revel in their collective cruelty. A wiry man leans in close, spitting insults with glee, his laughter cutting through the air. A stout woman clutching a basket of overripe vegetables hurls a squashed tomato, which splatters across one captive's cheek, drawing a chorus of jeers. Nearby, children mimic their elders, pointing and shrieking in mockery, their faces alight with mischief.^^The square is alive with noise: the raucous laughter of the crowd, the occasional sharp crack of a thrown object against the wood, and the soft, pained murmurs of the punished. A passing bell tolls faintly in the distance, but here it is drowned out by the cruel symphony of the jeering mob.^^Above it all, the gray sky looms, heavy with the promise of rain, as if nature itself disapproves of the spectacle. Yet the crowd pays no mind, delighting in their collective judgment, each jeer a reminder that today's entertainment is another's living nightmare.^^Mist fills the area as you move to the next room.";
     rtrue;
 ];
-[ call_U2507;
+[ call_U2509;
     #ifdef DEBUG;
         if (suppress_text_substitution) {
             print "~[bold type]The Gallows[roman type][line break]The public square lies under a brooding, overcast sky, its cobblestones slick with the morning's drizzle. A grim silence has settled over the gathered crowd, broken only by the occasional murmur or the restless shuffling of feet. At the center of the square, rising like a grim monument to mortality, stands the gallows-a wooden platform, darkened by age and weather, with thick ropes hanging like vipers poised to strike.^^Atop the gallows, a hooded executioner looms, his imposing frame draped in a black cloak that billows faintly in the wind. His face is obscured by the deep cowl, but his presence radiates cold, methodical purpose. In his gloved hands, he adjusts the noose, its coarse fibers frayed from repeated use, ensuring it is ready for the task at hand.^^Standing beside him is the condemned man, his hands bound tightly behind his back. His face is pale, drawn, and haunted, beads of sweat mingling with the light rain. His eyes dart to the crowd, seeking pity, perhaps, but finding only a sea of indifferent faces. His breath comes in shallow bursts, each exhalation visible in the chilly air, a stark reminder of the life still in him-for now.^^The crowd gathers in a semicircle around the platform, a mixture of somber onlookers, opportunistic vendors hawking bread and cider, and children craning their necks for a better view. An old man mutters a prayer under his breath, clutching a rosary, while a group of rough-looking men smirk and exchange bets on how long the drop will take.^^Above it all, the bell tower tolls, its mournful chime echoing through the square, a countdown to the inevitable. The condemned man flinches with each clang, his shoulders tensing as the final moments draw near. A raven perches on the gallows' beam, its black eyes unblinking, as if waiting for the end with morbid curiosity.^^The executioner steps forward, adjusting the noose around the man's neck with a practiced efficiency. The crowd falls silent, the weight of the moment hanging heavier than the rope itself. Somewhere in the distance, thunder rumbles faintly, as though the heavens themselves are bracing for what is to come.^^Mist fills the area as you move to the next room.~";
@@ -78015,7 +78102,7 @@ Global max_z_object;
     print "The public square lies under a brooding, overcast sky, its cobblestones slick with the morning's drizzle. A grim silence has settled over the gathered crowd, broken only by the occasional murmur or the restless shuffling of feet. At the center of the square, rising like a grim monument to mortality, stands the gallows-a wooden platform, darkened by age and weather, with thick ropes hanging like vipers poised to strike.^^Atop the gallows, a hooded executioner looms, his imposing frame draped in a black cloak that billows faintly in the wind. His face is obscured by the deep cowl, but his presence radiates cold, methodical purpose. In his gloved hands, he adjusts the noose, its coarse fibers frayed from repeated use, ensuring it is ready for the task at hand.^^Standing beside him is the condemned man, his hands bound tightly behind his back. His face is pale, drawn, and haunted, beads of sweat mingling with the light rain. His eyes dart to the crowd, seeking pity, perhaps, but finding only a sea of indifferent faces. His breath comes in shallow bursts, each exhalation visible in the chilly air, a stark reminder of the life still in him-for now.^^The crowd gathers in a semicircle around the platform, a mixture of somber onlookers, opportunistic vendors hawking bread and cider, and children craning their necks for a better view. An old man mutters a prayer under his breath, clutching a rosary, while a group of rough-looking men smirk and exchange bets on how long the drop will take.^^Above it all, the bell tower tolls, its mournful chime echoing through the square, a countdown to the inevitable. The condemned man flinches with each clang, his shoulders tensing as the final moments draw near. A raven perches on the gallows~ beam, its black eyes unblinking, as if waiting for the end with morbid curiosity.^^The executioner steps forward, adjusting the noose around the man's neck with a practiced efficiency. The crowd falls silent, the weight of the moment hanging heavier than the rope itself. Somewhere in the distance, thunder rumbles faintly, as though the heavens themselves are bracing for what is to come.^^Mist fills the area as you move to the next room.";
     rtrue;
 ];
-[ call_U2508;
+[ call_U2510;
     #ifdef DEBUG;
         if (suppress_text_substitution) {
             print "~[bold type]The Stake[roman type][line break]The public square is a grim tableau, the usual bustle of commerce and chatter replaced with an oppressive silence broken only by the crackling of the flames. At the center, three wooden stakes rise ominously from a circular pyre of logs and kindling, their rough surfaces darkened by smoke from countless such scenes before. Bound tightly to these stakes are three women, their wrists and ankles secured with coarse, heavy ropes. Their faces tell different stories-one of defiance, another of resignation, and the third of pure terror.^^A crowd encircles the pyre, their expressions a mix of morbid fascination, righteous fury, and hesitant pity. Children cling to their mothers' skirts, staring wide-eyed, while town elders nod solemnly as though approving the grim spectacle. Some townsfolk jeer loudly, throwing small stones or rotten vegetables at the condemned. Others murmur prayers or make the sign of the cross, their eyes averted.^^The executioner, clad in a soot-streaked hood and leather apron, steps forward, his torch a blazing beacon in the dreary scene. The flames dance and writhe as he lowers the torch to the base of the pyre, igniting the dry wood with a sudden, hungry roar. A cheer erupts from a faction of the crowd, while others fall into an uneasy silence, watching the fire climb higher.^^Thick, acrid smoke begins to rise, curling around the stakes like a living thing. The women cry out-some in curses, others in prayers-and their voices echo across the square, mingling with the crackle of the flames. The heat radiates outward, and even those in the crowd begin to feel its oppressive warmth.^^Above, the gray clouds hang low, as if nature itself mourns the scene unfolding below. A raven caws from its perch atop the town's bell tower, its black form stark against the ashen sky. The church bells toll in slow, deliberate cadence, each strike a grim punctuation to the scene.^^As the flames consume the pyre, the crowd remains rooted, some transfixed by the spectacle, others quietly slipping away, their faces pale and drawn. The square, once a place of gatherings and life, is now a stage for death, its air heavy with smoke, ash, and the lingering cries of the condemned.^^Mist fills the area as you move to the next room.~";
@@ -78035,7 +78122,7 @@ Global max_z_object;
     print "The public square is a grim tableau, the usual bustle of commerce and chatter replaced with an oppressive silence broken only by the crackling of the flames. At the center, three wooden stakes rise ominously from a circular pyre of logs and kindling, their rough surfaces darkened by smoke from countless such scenes before. Bound tightly to these stakes are three women, their wrists and ankles secured with coarse, heavy ropes. Their faces tell different stories-one of defiance, another of resignation, and the third of pure terror.^^A crowd encircles the pyre, their expressions a mix of morbid fascination, righteous fury, and hesitant pity. Children cling to their mothers~ skirts, staring wide-eyed, while town elders nod solemnly as though approving the grim spectacle. Some townsfolk jeer loudly, throwing small stones or rotten vegetables at the condemned. Others murmur prayers or make the sign of the cross, their eyes averted.^^The executioner, clad in a soot-streaked hood and leather apron, steps forward, his torch a blazing beacon in the dreary scene. The flames dance and writhe as he lowers the torch to the base of the pyre, igniting the dry wood with a sudden, hungry roar. A cheer erupts from a faction of the crowd, while others fall into an uneasy silence, watching the fire climb higher.^^Thick, acrid smoke begins to rise, curling around the stakes like a living thing. The women cry out-some in curses, others in prayers-and their voices echo across the square, mingling with the crackle of the flames. The heat radiates outward, and even those in the crowd begin to feel its oppressive warmth.^^Above, the gray clouds hang low, as if nature itself mourns the scene unfolding below. A raven caws from its perch atop the town's bell tower, its black form stark against the ashen sky. The church bells toll in slow, deliberate cadence, each strike a grim punctuation to the scene.^^As the flames consume the pyre, the crowd remains rooted, some transfixed by the spectacle, others quietly slipping away, their faces pale and drawn. The square, once a place of gatherings and life, is now a stage for death, its air heavy with smoke, ash, and the lingering cries of the condemned.^^Mist fills the area as you move to the next room.";
     rtrue;
 ];
-[ call_U2509;
+[ call_U2511;
     #ifdef DEBUG;
         if (suppress_text_substitution) {
             print "~[bold type]The Dungeon[roman type][line break]The dungeon is a dim, oppressive chamber carved deep into the earth, its stone walls slick with moisture and coated in a thin layer of grime. The air is heavy with the stench of sweat, blood, and mildew, punctuated by the faint, acrid tang of burning oil from flickering torches mounted on rusty iron sconces. Shadows dance on the walls, creating grotesque shapes that seem almost alive in the unsteady light.^^Chains hang from the walls and ceilings, their metallic clinking faintly audible as prisoners shift or shudder in their restraints. The room is filled with the soft, pitiful moans of the tormented, their cries occasionally rising to sharp, desperate screams that echo through the corridors beyond. The sound of dripping water from a cracked stone ceiling adds an eerie rhythm to the unsettling cacophony.^^Scattered throughout the dungeon are various instruments of pain and suffering, their designs brutal and unyielding. A rack sits in the center of the room, its wooden frame splintered from years of use. Nearby, a brazier glows a dull red, its coals smoldering beneath a collection of iron tools-branding irons, pincers, and knives, their edges darkened with dried blood. A spiked chair looms in the corner, its cruel design gleaming faintly in the dim light.^^Prisoners are scattered across the room, each trapped in their own nightmare. A man lies stretched on the rack, his face contorted in agony as the torturer methodically turns the wheel, the creaking of wood and rope echoing in the chamber. Another prisoner hangs limply from manacles affixed to the wall, their body bruised and battered, barely able to lift their head. A third, seated in the spiked chair, breathes in shallow gasps, their movements restricted by the cruel embrace of the iron seat.^^The torturer moves about the chamber with practiced efficiency, their face obscured by a hood, their leather apron stained with the evidence of countless victims. They work silently, their movements methodical and devoid of emotion, as if the suffering around them were merely a task to be completed.^^Above it all, the dungeon's ceiling is low and oppressive, the occasional scuttling of rats in the shadows serving as a reminder of the filth and decay that permeates the space. The only exit-a heavy, iron-bound door reinforced with rivets-seems more a barrier to hope than a passage to freedom, its small viewing slit barred and shadowed.^^This is a place of despair and cruelty, where the line between life and death is blurred, and the only certainty is the inevitability of suffering.^^Mist fills the area as you move to the next room.~";
@@ -78055,7 +78142,7 @@ Global max_z_object;
     print "The dungeon is a dim, oppressive chamber carved deep into the earth, its stone walls slick with moisture and coated in a thin layer of grime. The air is heavy with the stench of sweat, blood, and mildew, punctuated by the faint, acrid tang of burning oil from flickering torches mounted on rusty iron sconces. Shadows dance on the walls, creating grotesque shapes that seem almost alive in the unsteady light.^^Chains hang from the walls and ceilings, their metallic clinking faintly audible as prisoners shift or shudder in their restraints. The room is filled with the soft, pitiful moans of the tormented, their cries occasionally rising to sharp, desperate screams that echo through the corridors beyond. The sound of dripping water from a cracked stone ceiling adds an eerie rhythm to the unsettling cacophony.^^Scattered throughout the dungeon are various instruments of pain and suffering, their designs brutal and unyielding. A rack sits in the center of the room, its wooden frame splintered from years of use. Nearby, a brazier glows a dull red, its coals smoldering beneath a collection of iron tools-branding irons, pincers, and knives, their edges darkened with dried blood. A spiked chair looms in the corner, its cruel design gleaming faintly in the dim light.^^Prisoners are scattered across the room, each trapped in their own nightmare. A man lies stretched on the rack, his face contorted in agony as the torturer methodically turns the wheel, the creaking of wood and rope echoing in the chamber. Another prisoner hangs limply from manacles affixed to the wall, their body bruised and battered, barely able to lift their head. A third, seated in the spiked chair, breathes in shallow gasps, their movements restricted by the cruel embrace of the iron seat.^^The torturer moves about the chamber with practiced efficiency, their face obscured by a hood, their leather apron stained with the evidence of countless victims. They work silently, their movements methodical and devoid of emotion, as if the suffering around them were merely a task to be completed.^^Above it all, the dungeon's ceiling is low and oppressive, the occasional scuttling of rats in the shadows serving as a reminder of the filth and decay that permeates the space. The only exit-a heavy, iron-bound door reinforced with rivets-seems more a barrier to hope than a passage to freedom, its small viewing slit barred and shadowed.^^This is a place of despair and cruelty, where the line between life and death is blurred, and the only certainty is the inevitability of suffering.^^Mist fills the area as you move to the next room.";
     rtrue;
 ];
-[ call_U2510;
+[ call_U2512;
     #ifdef DEBUG;
         if (suppress_text_substitution) {
             print "~[bold type]The Guillotine[roman type][line break]The public square is a charged space, bustling with a crowd eager to witness the grim spectacle. The sky overhead is a patchwork of gray clouds, casting the cobblestone ground in a somber light. At the center of the square stands a raised wooden platform, stark and imposing, where the grim sentence is to be carried out.^^A lone figure stands on the scaffold, their posture slumped under the weight of their fate. Their hands are bound tightly behind their back with coarse ropes, and their head hangs low, avoiding the stares of the gathered crowd. Their clothing, once fine, is now tattered and muddied, a visible testament to the fall from grace that has led to this moment.^^The crowd presses closer, encircling the platform with a mix of emotions etched onto their faces. Some jeer, shouting curses and insults, their voices rising in a cacophony of condemnation. Others watch in heavy silence, their expressions grim and reflective. A few hold children on their shoulders, their young faces filled with curious fascination, unaware of the gravity of what they are about to witness.^^At the edge of the platform, a town crier stands with a long scroll in hand, his voice carrying over the murmurs of the crowd:'his man has been found guilty of high treason against the crown. Let his punishment serve as a warning to all who would seek to defy the will of the realm!'^^The condemned flinches at the words but remains silent, their face pale and eyes darting nervously. The executioner, a large figure clad in a hooded black robe, stands nearby with arms crossed, their demeanor cold and methodical. A few feet away, the guillotine looms, its blade gleaming dully in the filtered light, ready to deliver the final judgment.^^The tension in the square is palpable as the crier steps aside and the executioner signals for the crowd to quiet. The murmurs fade, replaced by an oppressive silence that hangs over the scene like a shroud. The only sounds now are the rustle of the wind and the faint creak of the wooden scaffold.^^As the condemned is led toward the guillotine, a crow caws from a nearby rooftop, its harsh cry echoing through the square like a dark omen. The crowd leans forward, holding its collective breath, as the weight of justice and mortality descends upon the scene.^^There is just one problem: the guillotine is being raised and lowered by some mechanism. It appears that the timing of the guillotine is off and it is being lowered onto the cars instead of between them. If a person were to be in a car as it passed under the guillotine, they would be decapitated.^^Looks like your goose is cooked. Say 'Goodnight, Gracie!^^You are stupefied as you sit watching guillotine rising and falling, dropping like a stone on the cars in front of you. Thank goodness they are empty. As your turn comes, you raise your hands in a feeble attempt to stop the inevitable.~";
@@ -80474,6 +80561,79 @@ Global max_z_object;
     return n;
 ];
 [ parse_name107 original_wn group_wn try_from_wn n f w rv g ss spn pass pass1_n pass2_n;
+    #ifdef DEBUG;
+        if ((parser_trace >= 3)) {
+            print "Parse_name called^";
+        }
+    #endif;
+    if ((parser_action == ##TheSame)) {
+        rfalse;
+    }
+    (original_wn = wn);
+    (pass = 1);
+    while ((pass <= 3)) {
+        (wn = original_wn);
+        (try_from_wn = wn);
+        (f = 0);
+        (n = 0);
+        while (1) {
+            if ((((parser_action ~= ##TheSame)) && ((pass == 1)))) {
+                while (WordInProperty(NextWordStopped(), self, A_name)) {
+                    (f = 1);
+                }
+                (wn)--;
+                (try_from_wn = wn);
+            }
+            if ((((pass == 1)) || ((pass == 2)))) {
+            }
+            if ((((parser_action ~= ##TheSame)) && ((pass == 1)))) {
+                while (WordInProperty(NextWordStopped(), self, A_name)) {
+                    (f = 1);
+                }
+                (wn)--;
+                (try_from_wn = wn);
+            }
+            break;
+        }
+        while (WordInProperty(NextWordStopped(), self, A_name)) {
+            (n)++;
+        }
+        if (((f) || ((n > 0)))) {
+            (n = ((n + try_from_wn) - original_wn));
+        }
+        if ((pass == 1)) {
+            (pass1_n = n);
+        }
+        if ((pass == 2)) {
+            (pass2_n = n);
+        }
+        (pass)++;
+    }
+    #ifdef DEBUG;
+        if ((parser_trace >= 3)) {
+            print "Pass 1: ";
+            print pass1_n;
+            print " Pass 2: ";
+            print pass2_n;
+            print " Pass 3: ";
+            print n;
+            print "^";
+        }
+    #endif;
+    if ((pass1_n > n)) {
+        (n = pass1_n);
+    }
+    if ((pass2_n > n)) {
+        (n = pass2_n);
+    }
+    (wn = (original_wn + n));
+    if ((n == 0)) {
+        return -1;
+    }
+    DetectPluralWord(original_wn, n);
+    return n;
+];
+[ parse_name159 original_wn group_wn try_from_wn n f w rv g ss spn pass pass1_n pass2_n;
     #ifdef DEBUG;
         if ((parser_trace >= 3)) {
             print "Parse_name called^";
@@ -103088,6 +103248,7 @@ Verb 'wave'
 	* -> WaveHands 
 	* noun -> Wave;
 Verb 'set' 'adjust' 
+	* noun 'to' DECIMAL_TOKEN -> A_spinning_it_to 
 	* noun 'to' topic -> SetTo;
 Verb 'pull' 'drag' 
 	* noun -> Pull;

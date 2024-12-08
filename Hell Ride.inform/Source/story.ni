@@ -1332,8 +1332,9 @@ To count the fuses:
 	if the emerald fuse is in socket five, increment the fuse count;
 	if the grey fuse is in socket seven, increment the fuse count;
 	if the indigo fuse is in socket nine, increment the fuse count;
-	if the khaki fuse is in socket eleven, increment the fuse count.
-	
+	if the khaki fuse is in socket eleven, increment the fuse count;
+	say "The fuse count is [fuse count].".
+		
 [lights]
 A colored light is a kind of device. A colored light is fixed in place. A colored light is usually switched off. Understand "indicator" as colored light.
 The aqua light is a colored light. It is part of the control panel. The description of the aqua light is "This is an aqua colored light. The light is [if the aqua light is switched on]on[otherwise]off[end if]."
@@ -1347,23 +1348,6 @@ instead of switching on a colored light, say "You can[']t do that!"
 
 instead of switching off a colored light, say "you can[']t do that!"
 
-[dials]
-A colored dial is a kind of a device. A colored dial is fixed in place. A colored dial has a number called a dial setting. A dial setting is usually 0. 
-The aqua dial is a colored dial. It is part of the control panel. The description of the aqua dial is "This is an aqua dial. It is curently set to [dial setting]".
-The crimson dial is a colored dial. It is part of the control panel. The description of the crimson dial is "This is a crimson dial. It is curently set to [dial setting]".
-The emerald dial is a colored dial. It is part of the control panel. The description of the emerald dial is "This is an emerald dial. It is curently set to [dial setting]".
-The grey dial is a colored dial. It is part of the control panel. The description of the grey dial is "This is a grey dial. It is curently set to [dial setting]".
-The indigo dial is a colored dial. It is part of the control panel. The description of the indigo dial is "This is an indigo dial. It is curently set to [dial setting]".
-The khaki dial is a colored dial. It is part of the control panel. The description of the khaki dial is "This is a khaki dial. It is curently set to [dial setting]".
-
-Spinning it to is an action applying to one thing and one number. Check spinning it to: if the noun is not a colored dial, say "[The noun] does not spin." instead. Report spinning it to: 
-	say "The dial is now set to [second noun]".
-	[now dial setting is the second noun.]
-
-Understand "spin [something] to [a number]" as spinning it to. Understand "turn [something] to [a number]" as spinning it to.
-
-[After spinning the closed Safe to 1384: now the Safe is open; say "Clonk! and the safe door swings slowly open, revealing [a list of things in the Safe]."]
-
 [buttons]
 A colored button is a kind of device. A colored button is fixed in place. A colored button is usually switched off.
 The aqua button is a colored button. It is part of the control panel. The description of the aqua button is "This is an aqua colored button."
@@ -1372,13 +1356,7 @@ The emerald button is a colored button. It is part of the control panel. The des
 The grey button is a colored button. It is part of the control panel. The description of the grey button is "This is a grey colored button."
 The indigo button is a colored button. It is part of the control panel. The description of the indigo button is "This is an indigo colored button."
 The khaki button is a colored button. It is part of the control panel. The description of the khaki button is "This is a khaki colored button."
-
-[Instead of pushing a colored button (called button): 
-	say "The monitor flickers for a second and the scene it[']s displaying changes.";
-	now all colored lights are switched off;
-	if the button is switched off, try switching on the button; otherwise try switching off the button;
-	continue the action.]
-
+	
 instead of switching on or pushing the aqua button, try switching on the aqua button.
 Instead of switching on the aqua button:
 	if the aqua button is switched off and the aqua fuse is in socket one 
@@ -1482,7 +1460,7 @@ Instead of Switching on or pushing the khaki button:
 			now all the colored buttons are switched off;
 		end if.
 
-The monitor is part of the control panel. The monitor is fixed in place. 
+The monitor is part of the control panel. The monitor is fixed in place. Understand "screen" as monitor.
 instead of examining the monitor:
 	if the aqua button is switched on, say "The monitor now shows a tableau of poor unfortunate townsfolk locked in stocks.";
 	if the crimson button is switched on, say "The monitor now shows a scene of someone waiting to be hanged.";
@@ -1490,11 +1468,45 @@ instead of examining the monitor:
 	if the grey button is switched on, say "The monitor now shows the implements of torture in the dungeon.";
 	if the indigo button is switched on, say "The monitor now shows a tableau of a guillotine rising and falling over the ride exit.";
 	if the khaki button is switched on, say "The monitor shows a the gift shop located at the Hell Ride exit.".
-					
+
+[dials]
+A colored dial is a kind of a device. A colored dial is fixed in place. A colored dial has a number called a dial setting. A dial setting is usually 0. 
+The aqua dial is a colored dial. It is part of the control panel. The description of the aqua dial is "This is an aqua dial. It is curently set to [dial setting]".
+The crimson dial is a colored dial. It is part of the control panel. The description of the crimson dial is "This is a crimson dial. It is curently set to [dial setting]".
+The emerald dial is a colored dial. It is part of the control panel. The description of the emerald dial is "This is an emerald dial. It is curently set to [dial setting]".
+The grey dial is a colored dial. It is part of the control panel. The description of the grey dial is "This is a grey dial. It is curently set to [dial setting]".
+The indigo dial is a colored dial. It is part of the control panel. The description of the indigo dial is "This is an indigo dial. It is curently set to [dial setting]".
+The khaki dial is a colored dial. It is part of the control panel. The description of the khaki dial is "This is a khaki dial. It is curently set to [dial setting]".
+
+The fuse count is a number that varies. The fuse count is 0.
+Spinning it to is an action applying to one thing and one number. Check spinning it to: if the noun is not a colored dial, say "[The noun] does not spin." instead. Report spinning it to: 
+	if the number understood is less than 0 or the number understood is greater than 11:
+		say "The dial can only be set from 0 to 11.";
+		stop the action;
+	otherwise:
+		say "The dial is now set to [the number understood].";
+		now the aqua dial is switched on;
+		now the dial setting of the noun is the number understood;
+
+Understand "spin [something] to [a number]" as spinning it to. Understand "turn [something] to [a number]" as spinning it to. Understand "set [something] to [a number]" as spinning it to.
+
+every turn when the location is the control room:
+	count the dials;
 	
+The dial count is a number that varies. The dial count is 0.
+To count the dials:
+	let dial count be 0;
+	if dial setting of the aqua dial is 1, increment the dial count;
+	if dial setting of the crimson dial is 3, increment the dial count;
+	if dial setting of the emerald dial is 5, increment the dial count;
+	if dial setting of the grey dial is 7, increment the dial count;
+	if dial setting of the indigo dial is 9, increment the dial count;
+	if dial setting of the khaki dial is 11, increment the dial count;
+	say "The dial count is [dial count].".
 
-
-Part 3 Regions
+[After spinning the closed Safe to 1384: now the Safe is open; say "Clonk! and the safe door swings slowly open, revealing [a list of things in the Safe]."]	
+					
+Part 3 - Regions
 
 The Midway is a region. Parking Lot, Kiosk, Concession Stand, High Striker, Show Facade, Show Tent, and Head of the Line are in the Midway. The sky is in the Midway.
 
