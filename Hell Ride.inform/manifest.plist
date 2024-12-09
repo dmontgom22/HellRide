@@ -24,10 +24,22 @@
             <string>Figures\RideEntrance.png</string>
             <key>11</key>
             <string>Figures\ControlPanel.png</string>
+            <key>12</key>
+            <string>Figures\ControlPanelStocks.png</string>
+            <key>13</key>
+            <string>Figures\ControlPanelGallows.png</string>
+            <key>14</key>
+            <string>Figures\ControlPanelStake.png</string>
+            <key>15</key>
+            <string>Figures\ControlPanelDungeon.png</string>
+            <key>16</key>
+            <string>Figures\ControlPanelGuillotine.png</string>
+            <key>17</key>
+            <string>Figures\ControlPanelExit.png</string>
         </dict>
         <key>Sounds</key>
         <dict>
-            <key>12</key>
+            <key>18</key>
             <string>Sounds\StrongmanBell.ogg</string>
         </dict>
     </dict>
