@@ -2,6 +2,7 @@ Part 1 - World Model
 
 Chapter 1 - Inform Settings, Biblio Card, and Includes
 
+Use maximum things understood at once of at least 200.
 Use dynamic memory allocation of at least 65536.
 Use maximum text length of at least 4096.
 Use DICT_WORD_SIZE of 15.
@@ -29,8 +30,7 @@ Include Singing Reloaded by Shin
 Use scoring.
 Use American Dialect.
 Use serial comma.
-Use maximum things understood at once of at least 200.
-The maximum score is 95.
+The maximum score is 100.
 The block giving rule is not listed in the check giving it to rules.
 
 Chapter 2 - New Mechanics, Actions, Phrases
@@ -231,7 +231,7 @@ The last carry out going rule:
 After going:
 	if the dark terminus count is 2:
 		say "Oh no! You walked directly into the slavering fangs of a lurking grue!";
-		end the story finally;
+		end the story finally saying "You have died!";
 	if the dark terminus count is not 2:
 		continue the action.
 	
@@ -263,6 +263,12 @@ The description of the sky is "[if the location is outdoors]It[']s a beautiful e
 
 The ground is a backdrop. The ground is everywhere. Understand "floor" as the ground.
 
+[new things]
+A switch is kind of a device. A switch can be switched on or switched off. The printed name of a switch is "the switch". A switch is usually switched off. A switch is fixed in place.
+
+A socket is a kind of open container. A socket is fixed in place. A socket can be filled or unfilled. A socket is usually unfilled. The printed name of a socket is "the socket".  
+
+A colored fuse is a kind of thing. A colored fuse can be lost or found. A colored fuse is usually lost. 
 
 Section 7 - Hello Sailor
 
@@ -342,7 +348,18 @@ Chapter 5 - Testing For Empty Descriptions - Not for release
 	repeat with item running through things:
 		if description of the item is "":
 			say "[item] has no description."]
+			
+When play begins:
+	seed the random-number generator with 1234.
+			
+Chapter 6 - Randomized Rooms, etc - For Release Only
 
+When play begins:
+	seed the random-number generator with 0.
+
+Instead of going from the Electrical Room:
+	move the player to a random adjacent room.
+	
 Part 2 - The Game
 
 Chapter 1 - The Midway
@@ -354,7 +371,6 @@ Test Live with "brief / Test Egypt /  Test Concession / Test Striker / Test Misc
 Test Die with "brief / Test Egypt /  Test Concession / Test Striker / Test Misc / Test Ride".
 
 When play begins:
-	seed the random-number generator with 1234; [BUGBUG set to 0]
 	display the figure of Hell Ride;
 	say "The carnival is in town and you had a date with your sweetie to visit it. After dinner and just as you arrive at the carnival, you and your date have a terrible fight. They storm off leaving you alone at the carnival. You decide to stay at the carnival anyway."
 
@@ -490,7 +506,9 @@ The Strongman Attendant carries the teddy bear, a Swiss army knife, and a poster
 
 The description of the teddy bear is "This is a teddy bear like you had when you were a kid. Right down to the red bow around its neck." 
 
-The Swiss Army knife is a container. The screwdriver, awl, fingernail clippers, can opener, and corkscrew are part of the Swiss Army knife. The description of the Swiss army knife is "This is the standard issue Swiss Army knife with a screwdriver, an awl, a pair fingernail clippers, a can opener, and a corkscrew." 
+The Swiss Army knife is an open container. The screwdriver, awl, fingernail clippers, can opener, and corkscrew are in the Swiss Army knife. The description of the Swiss army knife is "This is the standard issue Swiss Army knife with a screwdriver, an awl, a pair fingernail clippers, a can opener, and a corkscrew." 
+
+instead of taking when the noun is in the swiss army knife, say "That's part of the Swiss Army knife. You can[']t take that!" instead.
 	
 The description of the poster of Taylor Swift is "This is a poster of America's sweetheart, Taylor Swift."
 
@@ -762,10 +780,6 @@ Before going south when the player is in the Ride Entrance:
 
 Section 2 - Stocks Room
 
-A colored fuse is a kind of thing. A colored fuse can be lost or found. A colored fuse is usually lost. A colored fuse has a thing called a home.
-
-Definition: a colored fuse is correctly situated if it is in its home.
-
 The Stocks Room is south of the Ride Entrance. "The public square is an open expanse of cobblestones, surrounded by the weathered facades of timber-framed buildings. The air is heavy with the mingling scents of smoke from distant chimneys, damp earth, and the faint metallic tang of the nearby smithy. At the square's center stand a row of crude wooden stocks, their heavy beams stained from years of weather and use. Iron clasps hold the unfortunate captives by their wrists and necks, their bodies forced into unnatural, humiliating postures.
 
 The punished individuals, heads bowed in shame, are caught in an agonizing tableau of disgrace. Their expressions, a mix of resignation and despair, reflect the full weight of their predicaments. Their clothing hangs in tatters, furthering their exposure to the biting wind and the sharp tongues of the gathered crowd.
@@ -778,7 +792,7 @@ Above it all, the gray sky looms, heavy with the promise of rain, as if nature i
 
 The wooden stocks are here. The wooden stocks are a supporter. The wooden stocks are fixed in place. The description of the wooden stocks is "At the square's center stand a row of crude wooden stocks, their heavy beams stained from years of weather and use. Iron clasps hold the unfortunate captives by their wrists and necks, their bodies forced into unnatural, humiliating postures." 
 
-The aqua fuse is a colored fuse. The home of the aqua fuse is socket one. The aqua fuse underlies the wooden stocks. The description of the aqua fuse is "This is an electrical fuse. It is aqua colored. The same color as the door where you found it."
+The aqua fuse is a colored fuse. The aqua fuse underlies the wooden stocks. The description of the aqua fuse is "This is an electrical fuse. It is aqua colored. The same color as the door where you found it."
 
 Instead of looking under a thing which is underlaid by the aqua fuse when the aqua fuse is lost:
 	say "You find [the list of things which underlie the noun]!";
@@ -805,7 +819,7 @@ The executioner steps forward, adjusting the noose around the man’s neck with 
 
 The gallows platform is here. The gallows platform is a supporter. The gallows platform is fixed in place. Understand "gallows" as gallows platform. The description of the gallows platform is "At the center of the square, rising like a grim monument to mortality, stands the gallows—a wooden platform, darkened by age and weather, with thick ropes hanging like vipers poised to strike." 
 
-The crimson fuse is a colored fuse. The home of the crimson fuse is socket three. The crimson fuse underlies the gallows platform. The description of the crimson fuse is "This is an electrical fuse. It is crimson colored. The same color as the door where you found it."
+The crimson fuse is a colored fuse. The crimson fuse underlies the gallows platform. The description of the crimson fuse is "This is an electrical fuse. It is crimson colored. The same color as the door where you found it."
 
 Instead of looking under a thing which is underlaid by the crimson fuse when the crimson fuse is lost:
 	say "You find [the list of things which underlie the noun]!";
@@ -832,7 +846,7 @@ As the flames consume the pyre, the crowd remains rooted, some transfixed by the
 
 The pyre is scenery in the Stake Room. The pyre is a container. understand "bonfire", "fire", "stake", "stakes", "flame", and "flames" as the pyre. The description of the pyre is "At the center, three wooden stakes rise ominously from a circular pyre of logs and kindling, their rough surfaces darkened by smoke from countless such scenes before. Bound tightly to these stakes are three women, their wrists and ankles secured with coarse, heavy ropes. Their faces tell different stories—one of defiance, another of resignation, and the third of pure terror." 
 
-The emerald fuse is a colored fuse. The home of the emerald fuse is socket five. The emerald fuse is in the pyre. The description of the emerald fuse is "This is an electrical fuse. It is emerald colored. The same color as the door where you found it."
+The emerald fuse is a colored fuse. The emerald fuse is in the pyre. The description of the emerald fuse is "This is an electrical fuse. It is emerald colored. The same color as the door where you found it."
 
 Instead of taking the emerald fuse when the emerald fuse is lost:
 	say "You find [the list of things which contain the noun]!";
@@ -862,7 +876,7 @@ This is a place of despair and cruelty, where the line between life and death is
 
 The iron seat is scenery in the Dungeon. The iron seat is a supporter. understand "spiked chair" as iron seat. The description of the iron seat is "A spiked chair looms in the corner, its cruel design gleaming faintly in the dim light." 
 
-The gray fuse is a colored fuse. The home of the gray fuse is socket seven. The gray fuse underlies the iron seat. The description of the gray fuse is "This is an electrical fuse. It is gray colored. The same color as the door where you found it."
+The gray fuse is a colored fuse. The gray fuse underlies the iron seat. The description of the gray fuse is "This is an electrical fuse. It is gray colored. The same color as the door where you found it."
 
 Instead of looking under a thing which is underlaid by the gray fuse when the gray fuse is lost:
 	say "You find [the list of things which underlie the noun]!";
@@ -893,7 +907,7 @@ There is just lone problem: the guillotine is being raised and lowered by some m
 
 The guillotine platform is here. The guillotine platform is a supporter. Understand "scaffold" as guillotine platform. The description of the guillotine platform is "At the center of the square stands a raised wooden platform, stark and imposing, where the grim sentence is to be carried out." 
 
-The indigo fuse is a colored fuse. The home of the indigo fuse is socket nine. The indigo fuse underlies the guillotine platform. The description of the indigo fuse is "This is an electrical fuse. It is indigo colored. The same color as the door where you found it."
+The indigo fuse is a colored fuse. The indigo fuse underlies the guillotine platform. The description of the indigo fuse is "This is an electrical fuse. It is indigo colored. The same color as the door where you found it."
 
 Instead of looking under a thing which is underlaid by the indigo fuse when the indigo fuse is lost:
 	say "You find [the list of things which underlie the noun]!";
@@ -922,7 +936,7 @@ The Hell Ride exit leaves riders not just thrilled, but marked by the eerie expe
 
 The merchandise stand is scenery in the Ride Exit. The merchandise stand is a container. Understand "stand" as merchandise. The description of the merchandise is "The stand is bathed in red light, adding to the ominous mood." 
 
-The khaki fuse is a colored fuse. The home of the khaki fuse is socket one. The khaki fuse is in the merchandise stand. The Khaki Fuse underlies the merchandise stand. The description of the khaki fuse is "This is an electrical fuse. It is khaki colored. The same color as the door where you found it."
+The khaki fuse is a colored fuse. The khaki fuse is in the merchandise stand. The Khaki Fuse underlies the merchandise stand. The description of the khaki fuse is "This is an electrical fuse. It is khaki colored. The same color as the door where you found it."
 
 Instead of taking the khaki fuse when the khaki fuse is lost:
 	say "You find [the list of things which underlie the noun]!";
@@ -945,10 +959,10 @@ Test b1 with "brief. get	blueberries / s / buy ticket / s / give ticket to atten
 Test b2 with "w / l under stocks / e / s / w / l under platform / e / s / w / l in pyre / get fuse from pyre / e / s / w / l under seat / e / s / w / l under platform / e / s / s / w / l in stand / get khaki fuse from merchandise stand / e / n"
 
 [fill the sockets]
-Test b3 with "ne / open panel / put aqua in socket / sw / e / open panel / put crimson in socket / w / se / open panel / put emerald in socket / nw / sw / open panel / put gray in socket / ne / w / open panel / put indigo in socket / e / nw / l at panel / unlock panel with knife / l at panel / open  panel / l at panel / l at switch. / l at indicator / l at socket / put khaki in socket / l at socket / se"
+Test b3 with "ne / open panel / put aqua in socket  / push switch / sw / e / open panel / put crimson in socket / push switch / w / se / open panel / put emerald in socket / push switch / nw / sw / open panel / put gray in socket / push switch / ne / w / open panel / put indigo in socket / push switch / e / nw / l at panel / unlock panel with knife / l at panel / open  panel / l at panel / l at switch. / l at indicator / l at socket / put khaki in socket / push switch / l at socket / se"
 
 [turn the dials]
-test b4 with "climb ladder / w / l at control panel / turn aqua dial to 1 / turn crimson dial to three / turn emerald dial to 5 / turn gray dial to seven / turn indigo dial to 9 / turn khaki dial to eleven / push aqua button / push khaki button / push indigo button"
+test b4 with "climb ladder / w / l at control panel / turn aqua dial to 1 / turn crimson dial to three / turn emerald dial to 5 / turn gray dial to seven / turn indigo dial to 9 / turn khaki dial to eleven / push aqua button / push khaki button"
 
 test b5 with "n / n / n / n / n / n / w / n / n / n / i / score"
 
@@ -961,7 +975,12 @@ The bags of trash are scenery. The bags of trash are here. Understand "bags" and
 The pile of junk is a scenery container. The pile of junk is in the dark passage. The pile of junk contains the flashlight. Understand "piles" and "junk" as pile of junk. The description of the pile of junk is "In the corner is a pile of junk."
 
 after examining when the noun is pile of junk:
-	say "You find a flashlight here.";
+	say "You find a flashlight here.".
+	
+after taking the flashlight for the first time:
+	say "Taken.";
+	play the sound of Strongman Bell;
+	increase score by 5.
 
 Section 2 - Maintenance Office
 
@@ -1078,29 +1097,32 @@ The Ladder is up from the Electrical Room and down from the Dark Hallway. The la
 Instead of climbing a ladder:
 	try entering the noun.
 
-[BUGBUG Uncomment before release]
-[Instead of going from the Electrical Room:
-	move the player to a random adjacent room.]
-	
 Section 8 - Electrical Closet Eleven
 
-A switch is kind of a device. A switch can be switched on or switched off. The printed name of a switch is "the switch". A switch is usually switched off. A switch is fixed in place.
-	
 The Electrical Closet Eleven is a dark room. The Electrical Closet Eleven is northwest of the Electrical Room. "You are in a section of the electrical room. There is an electrical panel here. There is an exit to the south east." 
 
 Electrical Panel Eleven is a locked closed openable container in Electrical Closet Eleven. The swiss army knife unlocks it. Electrical Panel Eleven is scenery. The printed name of Electrical Panel Eleven is "the electrical panel". The description is "This is a standard issue 200 amp electrical panel supplying 220 power throughout the ride. The electrical panel is [if Electrical Panel Eleven is open]open. Inside the panel you see a switch, a socket, and an indicator light.[otherwise]closed[end if]. [if Electrical Panel Eleven is locked]There are screws holding it shut.[end if]" 
 
-Socket Eleven is part of Electrical Panel Eleven. Socket Eleven is a container. Socket Eleven can be filled or unfilled. Socket Eleven is unfilled. The printed name of socket Eleven is "the socket". The description is "This is a socket. A fuse probably goes in here."
+Socket Eleven is in Electrical Panel Eleven. Socket Eleven is a socket. The description is "This is a socket. A fuse probably goes in here."
 
 Switch Eleven is a switched off device. Switch Eleven is part of Electrical Panel Eleven. The printed name of Switch Eleven is "the switch". The description is "This is a big switch. You could probably turn it [if switch Eleven is switched off]on[otherwise]off[end if] if you wanted to."
 
 Indicator Light Eleven is a switched off device. Indicator Light Eleven is part of Electrical Panel Eleven. The printed name of Indicator Light Eleven is "the indicator". The description of Indicator Light Eleven is "The indicator is currently [if Indicator Light Eleven is switched on]indicating something[otherwise]indicating nothing[end if]."
 
-Instead of switching on Switch Eleven:
-	say "You push the switch.";
-	if Switch Eleven is switched off and the Khaki fuse is not in socket Eleven:
+Points Awarded Eleven is a truth state that varies. Points Awarded Eleven is false.
+Instead of switching on or pushing Switch Eleven:
+	if Switch Eleven is switched off and the Khaki Fuse is not in Socket Eleven:
+		say "You push the switch.";
 		say "Nothing obvious happens." instead;
-	if Switch Eleven is switched off:
+	if Switch Eleven is switched off and the Khaki Fuse is in Socket Eleven and Points Awarded Eleven is false:
+		say "The indicator light goes on.";
+		now Switch Eleven is switched on;
+		now Indicator Light Eleven is switched on;
+		play the sound of Strongman Bell;
+		increase score by 5;
+		now Points Awarded Eleven is true;
+		stop the action;
+	if Switch Eleven is switched off and the Khaki Fuse is in Socket Nine:
 		say "The indicator light goes on.";
 		now Switch Eleven is switched on;
 		now Indicator Light Eleven is switched on;
@@ -1108,17 +1130,30 @@ Instead of switching on Switch Eleven:
 	if Switch Eleven is switched on:
 		say "The indicator light goes off.";
 		now Switch Eleven is switched off;
-		now Indicator Light Eleven is switched on;
+		now Indicator Light Eleven is switched off;
 		stop the action.
 		
-Instead of switching on Indicator Light Eleven, say "You can['] turn that on." instead;
+Instead of switching on Indicator Light Eleven, say "You can['] turn that on." instead.
 
-instead of inserting when the noun is the Khaki Fuse and the second noun is Socket Eleven and Socket Eleven is unfilled:
+instead of inserting when Socket Eleven is filled, say "The socket is already filled.".
+
+after taking when Socket Eleven is filled:
+	now Socket Eleven is unfilled.
+
+instead of inserting when the noun is the Khaki Fuse and the second noun is Socket Eleven and Socket Eleven is unfilled and panel eleven is unlocked:
 	say "You hear a satisfying snick as the fuse slides into place.";
-	play the sound of Strongman Bell;
-	increase score by 5;
 	now Socket Eleven is filled;
 	now the Khaki Fuse is in Socket Eleven.
+	
+instead of inserting when the noun is the Khaki Fuse and the second noun is Socket Eleven and Socket Eleven is unfilled and panel eleven is locked:
+	say "But the electrical panel is shut tight!";
+	stop the action.
+	
+instead of unlocking when the location is Electrical Closet Eleven:
+	say "Using the screwdriver on the Swiss Army knife, you remove the cover to the electrical panel.";
+	now Electrical Panel Eleven is unlocked.
+
+instead of locking when the location is Electrical Closet Eleven, say "you can['] lock that!" instead.
 
 Section 9 - Electrical Closet Nine
 
@@ -1126,17 +1161,26 @@ The Electrical Closet Nine is a dark room. The Electrical Closet Nine is west of
 
 Electrical Panel Nine is a locked closed openable container in Electrical Closet Nine. The swiss army knife unlocks it. Electrical Panel Nine is scenery. The printed name of Electrical Panel Nine is "the electrical panel". The description is "This is a standard issue 200 amp electrical panel supplying 220 power throughout the ride. The electrical panel is [if Electrical Panel Nine is open]open. Inside the panel you see a switch, a socket, and an indicator light.[otherwise]closed[end if]. [if Electrical Panel Nine is locked]There are screws holding it shut.[end if]" 
 
-Socket Nine is part of Electrical Panel Nine. Socket Nine is a container. Socket Nine can be filled or unfilled. Socket Nine is unfilled. The printed name of a socket Nine is "the socket". The description is "This is a socket. A fuse probably goes in here."
+Socket Nine is in Electrical Panel Nine. Socket Nine is an open container. Socket Nine is fixed in place. Socket Nine can be filled or unfilled. Socket Nine is unfilled. The printed name of a socket Nine is "the socket". The description is "This is a socket. A fuse probably goes in here."
 
 Switch Nine is a switched off device. Switch Nine is part of Electrical Panel Nine. The printed name of Switch Nine is "the switch". The description is "This is a big switch. You could probably turn it [if switch Nine is switched off]on[otherwise]off[end if] if you wanted to."
 
 Indicator Light Nine is a switched off device. Indicator Light Nine is part of Electrical Panel Nine. The printed name of Indicator Light Nine is "the indicator". The description of Indicator Light Nine is "The indicator is currently [if Indicator Light Nine is switched on]indicating something[otherwise]indicating nothing[end if]."
 
-Instead of switching on Switch Nine:
-	say "You push the switch.";
-	if Switch Nine is switched off and the Indigo fuse is not in socket Nine:
+Points Awarded Nine is a truth state that varies. Points Awarded Nine is false.
+Instead of switching on or pushing Switch Nine:
+	if Switch Nine is switched off and the Indigo Fuse is not in Socket Nine:
+		say "You push the switch.";
 		say "Nothing obvious happens." instead;
-	if Switch Nine is switched off:
+	if Switch Nine is switched off and the Indigo Fuse is in Socket Nine and Points Awarded Nine is false:
+		say "The indicator light goes on.";
+		now Switch Nine is switched on;
+		now Indicator Light Nine is switched on;
+		play the sound of Strongman Bell;
+		increase score by 5;
+		now Points Awarded Nine is true;
+		stop the action;
+	if Switch Nine is switched off and the Indigo Fuse is in Socket Nine:
 		say "The indicator light goes on.";
 		now Switch Nine is switched on;
 		now Indicator Light Nine is switched on;
@@ -1146,14 +1190,28 @@ Instead of switching on Switch Nine:
 		now Switch Nine is switched off;
 		now Indicator Light Nine is switched off;
 		stop the action.
+		
+Instead of switching on Indicator Light Nine, say "You can['] turn that on." instead.
 
-instead of inserting when the noun is the Indigo Fuse and the second noun is Socket Nine and Socket Nine is unfilled:
+instead of inserting when Socket Nine is filled, say "The socket is already filled.".
+
+after taking when Socket Nine is filled:
+	now Socket Nine is unfilled.
+
+instead of inserting when the noun is the Indigo Fuse and the second noun is Socket Nine and Socket Nine is unfilled and panel nine is unlocked:
 	say "You hear a satisfying snick as the fuse slides into place.";
-	play the sound of Strongman Bell;
-	increase score by 5;
 	now Socket Nine is filled;
 	now the Indigo Fuse is in Socket Nine.
 
+instead of inserting when the noun is the Indigo Fuse and the second noun is Socket Nine and Socket Nine is unfilled and panel nine is locked:
+	say "But the electrical panel is shut tight!";
+	stop the action.
+	
+instead of unlocking when the location is Electrical Closet Nine:
+	say "Using the screwdriver on the Swiss Army knife, you remove the cover to the electrical panel.";
+	now Electrical Panel Nine is unlocked.
+
+instead of locking when the location is Electrical Closet Nine, say "you can['] lock that!" instead.
 
 Section 10 - Electrical Closet Seven
 
@@ -1161,17 +1219,26 @@ The Electrical Closet Seven is a dark room. Electrical Closet Seven is southwest
 
 Electrical Panel Seven is a locked closed openable container in Electrical Closet Seven. The swiss army knife unlocks it. Electrical Panel Seven is scenery. The printed name of Electrical Panel Seven is "the electrical panel". The description is "This is a standard issue 200 amp electrical panel supplying 220 power throughout the ride. The electrical panel is [if Electrical Panel Seven is open]open. Inside the panel you see a switch, a socket, and an indicator light.[otherwise]closed[end if]. [if Electrical Panel Seven is locked]There are screws holding it shut.[end if]" 
 
-Socket Seven is part of Electrical Panel Seven. Socket Seven is a container. Socket Seven can be filled or unfilled. Socket Seven is unfilled. The printed name of a socket Seven is "the socket". The description is "This is a socket. A fuse probably goes in here.."
+Socket Seven is in Electrical Panel Seven. Socket Seven is an open container. Socket Seven is fixed in place. Socket Seven can be filled or unfilled. Socket Seven is unfilled. The printed name of a socket Seven is "the socket". The description is "This is a socket. A fuse probably goes in here.."
 
 Switch Seven is a switched off device. Switch Seven is part of Electrical Panel Seven. The printed name of Switch Seven is "the switch". The description is "This is a big switch. You could probably turn it [if switch Seven is switched off]on[otherwise]off[end if] if you wanted to."
 
 Indicator Light Seven is a switched off device. Indicator Light Seven is part of Electrical Panel Seven. The printed name of Indicator Light Seven is "the indicator". The description of Indicator Light Seven is "The indicator is currently [if Indicator Light Seven is switched on]indicating something[otherwise]indicating nothing[end if]."
 
-Instead of switching on Switch Seven:
-	say "You push the switch.";
-	if Switch Seven is switched off and the Indigo fuse is not in socket Seven:
+Points Awarded Seven is a truth state that varies. Points Awarded Seven is false.
+Instead of switching on or pushing Switch Seven:
+	if Switch Seven is switched off and the Gray Fuse is not in Socket One:
+		say "You push the switch.";
 		say "Nothing obvious happens." instead;
-	if Switch Seven is switched off:
+	if Switch One is switched off and the Aqua Fuse is in Socket Seven and Points Awarded Seven is false:
+		say "The indicator light goes on.";
+		now Switch Seven is switched on;
+		now Indicator Light Seven is switched on;
+		play the sound of Strongman Bell;
+		increase score by 5;
+		now Points Awarded Seven is true;
+		stop the action;
+	if Switch Seven is switched off and the Gray Fuse is in Socket Seven:
 		say "The indicator light goes on.";
 		now Switch Seven is switched on;
 		now Indicator Light Seven is switched on;
@@ -1181,13 +1248,28 @@ Instead of switching on Switch Seven:
 		now Switch Seven is switched off;
 		now Indicator Light Seven is switched off;
 		stop the action.
+		
+Instead of switching on Indicator Light Seven, say "You can['] turn that on." instead.
 
-instead of inserting when the noun is the gray Fuse and the second noun is Socket Seven and Socket Seven is unfilled:
+instead of inserting when Socket Seven is filled, say "The socket is already filled.".
+
+after taking when Socket Seven is filled:
+	now Socket Seven is unfilled.
+
+instead of inserting when the noun is the gray Fuse and the second noun is Socket Seven and Socket Seven is unfilled and panel seven is unlocked:
 	say "You hear a satisfying snick as the fuse slides into place.";
-	play the sound of Strongman Bell;
-	increase score by 5;
 	now Socket Seven is filled;
 	now the gray Fuse is in Socket Seven.
+	
+instead of inserting when the noun is the Gray Fuse and the second noun is Socket Seven and Socket Seven is unfilled and panel seven is locked:
+	say "But the electrical panel is shut tight!";
+	stop the action.
+	
+instead of unlocking when the location is Electrical Closet Seven:
+	say "Using the screwdriver on the Swiss Army knife, you remove the cover to the electrical panel.";
+	now Electrical Panel Seven is unlocked.
+
+instead of locking when the location is Electrical Closet Seven, say "you can['] lock that!" instead.
 
 Section 11 - Electrical Closet Five
 
@@ -1195,17 +1277,26 @@ The Electrical Closet Five is a dark room. Electrical Closet Five is southeast o
 
 Electrical Panel Five is a locked closed openable container in Electrical Closet Five. The swiss army knife unlocks it. Electrical Panel Five is scenery. The printed name of Electrical Panel Five is "the electrical panel". The description is "This is a standard issue 200 amp electrical panel supplying 220 power throughout the ride. The electrical panel is [if Electrical Panel Five is open]open. Inside the panel you see a switch, a socket, and an indicator light.[otherwise]closed[end if]. [if Electrical Panel Five is locked]There are screws holding it shut.[end if]" 
 
-Socket Five is part of Electrical Panel Five. Socket Five is a container. Socket Five can be filled or unfilled. Socket Five is unfilled. The printed name of a socket Five is "the socket". The description is "This is a socket. A fuse probably goes in here."
+Socket Five is in Electrical Panel Five. Socket Five is an open container. Socket Five is fixed in place. Socket Five can be filled or unfilled. Socket Five is unfilled. The printed name of a socket Five is "the socket". The description is "This is a socket. A fuse probably goes in here."
 
-Switch Five is a switched off device. Switch Five is part of Electrical Panel Five. The printed name of Switch Five is "the switch". The description is "This is a big switch. You could probably turn it [if switch Five is switched off]on[otherwise]off[end if] if you wanted to."
+Switch Five is a switched off device. Switch Five is in Electrical Panel Five. The printed name of Switch Five is "the switch". The description is "This is a big switch. You could probably turn it [if switch Five is switched off]on[otherwise]off[end if] if you wanted to."
 
 Indicator Light Five is a switched off device. Indicator Light Five is part of Electrical Panel Five. The printed name of Indicator Light Five is "the indicator". The description of Indicator Light Five is "The indicator is currently [if Indicator Light Five is switched on]indicating something[otherwise]indicating nothing[end if]."
 
-Instead of switching on Switch Five:
-	say "You push the switch.";
-	if Switch Five is switched off and the Emerald fuse is not in socket Five:
+Points Awarded Five is a truth state that varies. Points Awarded Five is false.
+Instead of switching on or pushing Switch Five:
+	if Switch Five is switched off and the Emerald Fuse is not in Socket Five:
+		say "You push the switch.";
 		say "Nothing obvious happens." instead;
-	if Switch Five is switched off:
+	if Switch Five is switched off and the Emerald Fuse is in Socket Five and Points Awarded Five is false:
+		say "The indicator light goes on.";
+		now Switch Five is switched on;
+		now Indicator Light Five is switched on;
+		play the sound of Strongman Bell;
+		increase score by 5;
+		now Points Awarded Five is true;
+		stop the action;
+	if Switch Five is switched off and the Emerald Fuse is in Socket Five:
 		say "The indicator light goes on.";
 		now Switch Five is switched on;
 		now Indicator Light Five is switched on;
@@ -1215,13 +1306,28 @@ Instead of switching on Switch Five:
 		now Switch Five is switched off;
 		now Indicator Light Five is switched off;
 		stop the action.
+		
+Instead of switching on Indicator Light Five, say "You can['] turn that on." instead.
 
-instead of inserting when the noun is the Emerald Fuse and the second noun is Socket Five and Socket Five is unfilled:
+instead of inserting when Socket Five is filled, say "The socket is already filled.".
+
+after taking when Socket Five is filled:
+	now Socket Five is unfilled.
+
+instead of inserting when the noun is the Emerald Fuse and the second noun is Socket Five and Socket Five is unfilled and panel five is unlocked:
 	say "You hear a satisfying snick as the fuse slides into place.";
-	play the sound of Strongman Bell;
-	increase score by 5;
 	now Socket Five is filled;
 	now the Emerald Fuse is in Socket Five.
+	
+instead of inserting when the noun is the Emerald Fuse and the second noun is Socket Five and Socket Five is unfilled and panel five is locked:
+	say "But the electrical panel is shut tight!";
+	stop the action.
+
+instead of unlocking when the location is Electrical Closet Five:
+	say "Using the screwdriver on the Swiss Army knife, you remove the cover to the electrical panel.";
+	now Electrical Panel Five is unlocked.
+
+instead of locking when the location is Electrical Closet Five, say "you can['] lock that!" instead.
 
 Section 12 - Electrical Closet Three
 
@@ -1229,17 +1335,26 @@ The Electrical Closet Three is a dark room. Electrical Closet Three is east of t
 
 Electrical Panel Three is a locked closed openable container in Electrical Closet Three. The swiss army knife unlocks it. Electrical Panel Three is scenery. The printed name of Electrical Panel Three is "the electrical panel". The description is "This is a standard issue 200 amp electrical panel supplying 220 power throughout the ride. The electrical panel is [if Electrical Panel Three is open]open. Inside the panel you see a switch, a socket, and an indicator light.[otherwise]closed[end if]. [if Electrical Panel Three is locked]There are screws holding it shut.[end if]" 
 
-Socket Three is part of Electrical Panel Three. Socket Three is a container. Socket Three can be filled or unfilled. Socket Three is unfilled. The printed name of a socket Three is "the socket". The description is "This is a socket. A fuse probably goes in here."
+Socket Three is in Electrical Panel Three. Socket Three is an open container. Socket Three is fixed in place. Socket Three can be filled or unfilled. Socket Three is unfilled. The printed name of a socket Three is "the socket". The description is "This is a socket. A fuse probably goes in here."
 
 Switch Three is a switched off device. Switch Three is part of Electrical Panel Three. The printed name of Switch Three is "the switch". The description is "This is a big switch. You could probably turn it [if switch Three is switched off]on[otherwise]off[end if] if you wanted to."
 
 Indicator Light Three is a switched off device. Indicator Light Three is part of Electrical Panel Three. The printed name of Indicator Light Three is "the indicator". The description of Indicator Light Three is "The indicator is currently [if Indicator Light Three is switched on]indicating something[otherwise]indicating nothing[end if]."
 
-Instead of switching on Switch Three:
-	say "You push the switch.";
-	if Switch Three is switched off and the Crimson fuse is not in socket Three:
+Points Awarded Three is a truth state that varies. Points Awarded Three is false.
+Instead of switching on or pushing Switch Three:
+	if Switch Three is switched off and the Crimson Fuse is not in Socket Three:
+		say "You push the switch.";
 		say "Nothing obvious happens." instead;
-	if Switch Three is switched off:
+	if Switch Three is switched off and the Crimson Fuse is in Socket Three and Points Awarded Three is false:
+		say "The indicator light goes on.";
+		now Switch Three is switched on;
+		now Indicator Light Three is switched on;
+		play the sound of Strongman Bell;
+		increase score by 5;
+		now Points Awarded Three is true;
+		stop the action;
+	if Switch Three is switched off and the Crimson Fuse is in Socket Three:
 		say "The indicator light goes on.";
 		now Switch Three is switched on;
 		now Indicator Light Three is switched on;
@@ -1249,33 +1364,57 @@ Instead of switching on Switch Three:
 		now Switch Three is switched off;
 		now Indicator Light Three is switched off;
 		stop the action.
+		
+Instead of switching on Indicator Light Three, say "You can['] turn that on." instead.
 
-instead of inserting when the noun is the Crimson Fuse and the second noun is Socket Three and Socket Three is unfilled:
+instead of inserting when Socket Three is filled, say "The socket is already filled.".
+
+after taking when Socket Three is filled:
+	now Socket Three is unfilled.
+
+instead of inserting when the noun is the Crimson Fuse and the second noun is Socket Three and Socket Three is unfilled and panel three is unlocked:
 	say "You hear a satisfying snick as the fuse slides into place.";
-	play the sound of Strongman Bell;
-	increase score by 5;
 	now Socket Three is filled;
 	now the Crimson Fuse is in Socket Three.
+	
+instead of inserting when the noun is the Crimson Fuse and the second noun is Socket Three and Socket Three is unfilled and panel three is locked:
+	say "But the electrical panel is shut tight!";
+	stop the action.
+
+instead of unlocking when the location is Electrical Closet Three:
+	say "Using the screwdriver on the Swiss Army knife, you remove the cover to the electrical panel.";
+	now Electrical Panel Three is unlocked.
+
+instead of locking when the location is Electrical Closet Three, say "you can['] lock that!" instead.
 
 Section 13 - Electrical Closet One
 
 The Electrical Closet One is a dark room. The Electrical Closet One is northeast of the Electrical Room.  "You are in a section of the electrical room. There is an electrical panel here. There is an exit to the south west." 
 
-The Electrical CLoset One is a scored room.
+The Electrical Closet One is a scored room.
 
 Electrical Panel One is a locked closed openable container in Electrical Closet One. The swiss army knife unlocks it. Electrical Panel One is scenery. The printed name of Electrical Panel One is "the electrical panel". The description is "This is a standard issue 200 amp electrical panel supplying 220 power throughout the ride. The electrical panel is [if Electrical Panel One is open]open. Inside the panel you see a switch, a socket, and an indicator light.[otherwise]closed[end if]. [if Electrical Panel One is locked]There are screws holding it shut.[end if]" 
 
-Socket One is part of Electrical Panel One. Socket One is a container. Socket One can be filled or unfilled. Socket One is unfilled. The printed name of a socket One is "the socket". The description is "This is a socket. A fuse probably goes in here."
+Socket One is in Electrical Panel One. Socket One is an open container. Socket One is fixed in place. Socket One can be filled or unfilled. Socket One is unfilled. The printed name of a socket One is "the socket". The description is "This is a socket. A fuse probably goes in here."
 
 Switch One is a switched off device. Switch One is part of Electrical Panel One. The printed name of Switch One is "the switch". The description is "This is a big switch. You could probably turn it [if switch One is switched off]on[otherwise]off[end if] if you wanted to."
 
 Indicator Light One is a switched off device. Indicator Light One is part of Electrical Panel One. The printed name of Indicator Light One is "the indicator". The description of Indicator Light One is "The indicator is currently [if Indicator Light One is switched on]indicating something[otherwise]indicating nothing[end if]."
 
-Instead of switching on Switch One:
-	say "You push the switch.";
-	if Switch One is switched off and the Aqua fuse is not in socket One:
+Points Awarded One is a truth state that varies. Points Awarded One is false.
+Instead of switching on or pushing Switch One:
+	if Switch One is switched off and the Aqua Fuse is not in Socket One:
+		say "You push the switch.";
 		say "Nothing obvious happens." instead;
-	if Switch One is switched off:
+	if Switch One is switched off and the Aqua Fuse is in Socket One and Points Awarded One is false:
+		say "The indicator light goes on.";
+		now Switch One is switched on;
+		now Indicator Light One is switched on;
+		play the sound of Strongman Bell;
+		increase score by 5;
+		now Points Awarded One is true;
+		stop the action;
+	if Switch One is switched off and the Aqua Fuse is in Socket One:
 		say "The indicator light goes on.";
 		now Switch One is switched on;
 		now Indicator Light One is switched on;
@@ -1285,13 +1424,28 @@ Instead of switching on Switch One:
 		now Switch One is switched off;
 		now Indicator Light One is switched off;
 		stop the action.
+		
+Instead of switching on Indicator Light One, say "You can['] turn that on." instead.
 
-instead of inserting when the noun is the Aqua Fuse and the second noun is Socket One and Socket One is unfilled:
+instead of inserting when Socket One is filled, say "The socket is already filled.".
+
+after taking when Socket One is filled:
+	now Socket One is unfilled.
+
+instead of inserting when the noun is the Aqua Fuse and the second noun is Socket One and Socket One is unfilled and panel one is unlocked:
 	say "You hear a satisfying snick as the fuse slides into place.";
-	play the sound of Strongman Bell;
-	increase score by 5;
 	now Socket One is filled;
 	now the Aqua Fuse is in Socket One.
+	
+instead of inserting when the noun is the Aqua Fuse and the second noun is Socket One and Socket One is unfilled and panel one is locked:
+	say "But the electrical panel is shut tight!";
+	stop the action.
+
+instead of unlocking when the location is Electrical Closet One:
+	say "Using the screwdriver on the Swiss Army knife, you remove the cover to the electrical panel.";
+	now Electrical Panel One is unlocked.
+
+instead of locking when the location is Electrical Closet One, say "you can['] lock that!" instead.
 	
 The silver key is in the Electrical Closet One. The description of the silver key is "This is a small silver key. I wonder what it unlocks."
 
@@ -1354,6 +1508,16 @@ instead of examining the control panel:
 	else if the khaki fuse is in socket eleven and the khaki button is switched on:
 		display the figure of ControlPanelExit.
 	
+The switch count is a number that varies. The switch count is 0.
+To count the switches:
+	now the switch count is 0;
+	if switch one is switched on, increment the switch count;
+	if switch three is switched on, increment the switch count;
+	if switch five is switched on, increment the switch count;
+	if switch seven is switched on, increment the switch count;
+	if switch nine is switched on, increment the switch count;
+	if switch eleven is switched on, increment the switch count.
+	
 The fuse count is a number that varies. The fuse count is 0.
 To count the fuses:
 	now the fuse count is 0;
@@ -1365,6 +1529,7 @@ To count the fuses:
 	if the khaki fuse is in socket eleven, increment the fuse count.
 
 every turn when the location is the control room:
+	count the fuses;
 	count the fuses;
 	count the dials.
 	[say "fuse count: [fuse count], dial count: [dial count]."]
@@ -1380,6 +1545,13 @@ every turn when the location is the Control Room:
 		now the dial setting of the indigo dial is 0;	
 		now the dial setting of the khaki dial is 0;
 		now all the colored buttons are switched off;
+		
+[BUGBUG remove debug output]
+every turn when the location is the control room:
+	count the fuses;
+	count the fuses;
+	count the dials;
+	say "switch count: [switch count], fuse count: [fuse count], dial count: [dial count]."
 		
 [lights]
 A colored light is a kind of device. A colored light is fixed in place. A colored light is usually switched off. Understand "indicator" as colored light.
@@ -1417,6 +1589,7 @@ Instead of switching on or pushing the indigo button:
 			now all colored lights are switched off;
 			now the indigo button is switched on;
 			now the indigo light is switched on;
+			play the sound of Strongman Bell;
 			increase score by 5;
 			end the story finally saying "You have won!";
 		else;
