@@ -11,7 +11,7 @@ The story title is "Hell Ride".
 The story author is "No Shoes".
 The story headline is "The ride of a lifetime...".
 The story genre is "Horror".
-The release number is 1.
+The release number is 101.
 The story description is "You've decided to stay and enjoy the carnival anyway."
 The story creation year is 2024.
 
@@ -215,6 +215,8 @@ Before printing the name of a lit electric lamp, say "lit ".
 Before printing the name of an unlit lit electric lamp, say "extinguished ".
 
 Section 5 - Grues
+
+Test grues with "s / buy ticket / s / give ticket to ride attendant / s / e / s / s"
 
 The lurking grue is a backdrop. The lurking grue is everywhere. The description of the lurking grue is "The grue is a sinister, lurking presence in the dark places of the earth. Its favorite diet is humans, but its insatiable appetite is tempered by its fear of light. No grue has ever been seen by the light of day, and few have survived its fearsome jaws to tell the tale."
 
@@ -975,7 +977,12 @@ Test Backstage with "test b1 / test b2 / test b3 / test b4"
 Dark Passage is a room. Dark Passage is east of the Ride Entrance. The dark passage is scored. "This room is backstage at the Hell Ride attraction. The room is littered with bags of trash, piles of junk, and dust bunnies so large they should be paying rent. West is back the way you came from. There an exit to the south."
 
 The dust bunnies are scenery. The dust bunnies are here. Understand "bunnies" as dust bunnies.
+
 The bags of trash are scenery. The bags of trash are here. Understand "bags" and "trash" as bags of trash.
+
+instead of looking under when the noun is the pile of junk:
+	try examining the junk instead. 
+
 The pile of junk is a scenery container. The pile of junk is in the dark passage. The pile of junk contains the flashlight. Understand "piles" and "junk" as pile of junk. The description of the pile of junk is "In the corner is a pile of junk."
 
 after examining when the noun is pile of junk:
