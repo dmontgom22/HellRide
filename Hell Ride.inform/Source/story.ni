@@ -62,7 +62,7 @@ Instead of buying something:
 	now the price of the noun is $0.00;
 	now the player is carrying the noun.
 	
-The player carries a wallet. The wallet contains money. The price of the money is $15.00. The printed name of the money is "[price of the money] in cash". Understand "cash" as the money.
+The player carries a wallet. The wallet contains money. The printed name of the money is "[price of the money] in cash". Understand "cash" as the money.
 
 Instead of taking the money:
 	say "Best to leave it alone until you need to buy something."
@@ -351,6 +351,8 @@ Chapter 5 - Testing For Empty Descriptions - Not for release
 			
 When play begins:
 	seed the random-number generator with 1234.
+	
+The price of the money is $15.00. 
 			
 Chapter 6 - Randomized Rooms, etc - For Release Only
 
@@ -360,19 +362,21 @@ When play begins:
 Instead of going from the Electrical Room:
 	move the player to a random adjacent room.
 	
+The price of the money is $10.00. 
+	
 Part 2 - The Game
 
 Chapter 1 - The Midway
 
 Section 1 - Parking Lot
 
-Test Live with "brief / Test Egypt /  Test Concession / Test Striker / Test Misc / Test Backstage".
+Test Live with "brief / Test Egypt / Test Concession / Test Striker / Test Misc / Test Backstage".
 
-Test Die with "brief / Test Egypt /  Test Concession / Test Striker / Test Misc / Test Ride".
+Test Die with "brief / Test Egypt / Test Concession / Test Striker / Test Misc / Test Ride".
 
 When play begins:
 	display the figure of Hell Ride;
-	say "The carnival is in town and you had a date with your sweetie to visit it. After dinner and just as you arrive at the carnival, you and your date have a terrible fight. They storm off leaving you alone at the carnival. You decide to stay at the carnival anyway."
+	say "The carnival is in town and you and your sweetie had a date to visit it. After dinner and just as you arrive at the carnival, you and your date have a terrible fight. They storm off leaving you alone at the carnival. You decide to stay at the carnival anyway."
 
 The Parking Lot is a room. The parking lot is north of the Kiosk. The parking lot is outdoors. "The carnival parking lot sprawls across an open field, its uneven gravel surface crunching under the tires of arriving cars. The lot is lit by a mix of temporary floodlights mounted on poles and the colorful glow of the carnival itself, which spills across the area in flashes of red, blue, and gold. The distant sounds of laughter, music, and the mechanical whir of rides drift across the lot, creating an air of excitement even before reaching the main grounds.
 
@@ -962,11 +966,11 @@ Test b2 with "w / l under stocks / e / s / w / l under platform / e / s / w / l 
 Test b3 with "ne / open panel / put aqua in socket  / push switch / sw / e / open panel / put crimson in socket / push switch / w / se / open panel / put emerald in socket / push switch / nw / sw / open panel / put gray in socket / push switch / ne / w / open panel / put indigo in socket / push switch / e / nw / l at panel / unlock panel with knife / l at panel / open  panel / l at panel / l at switch. / l at indicator / l at socket / put khaki in socket / push switch / l at socket / se"
 
 [turn the dials]
-test b4 with "climb ladder / w / l at control panel / turn aqua dial to 1 / turn crimson dial to three / turn emerald dial to 5 / turn gray dial to seven / turn indigo dial to 9 / turn khaki dial to eleven / push aqua button / push khaki button"
+test b4 with "n / n / n / n / n / climb ladder / w / l at control panel / turn aqua dial to 1 / turn crimson dial to three / turn emerald dial to 5 / turn gray dial to seven / turn indigo dial to 9 / turn khaki dial to eleven / push aqua button / l at panel / push crimson button / l at panel  / push emerald button / l at panel / push gray button / l at panel / push khaki button"
 
-test b5 with "n / n / n / n / n / n / w / n / n / n / i / score"
+test b5 with "n / n / n / n / n / w / n / n / n / i / score"
 
-Test Backstage with "test striker / test b1 / test b2 / test b3 / test b4"
+Test Backstage with "test b1 / test b2 / test b3 / test b4"
 
 Dark Passage is a room. Dark Passage is east of the Ride Entrance. The dark passage is scored. "This room is backstage at the Hell Ride attraction. The room is littered with bags of trash, piles of junk, and dust bunnies so large they should be paying rent. West is back the way you came from. There an exit to the south."
 
@@ -1017,6 +1021,12 @@ The scissors are in the drawer. The description is "This is a sharp pair of offi
 The aqua door is west of the Maintenance Office and east of the Stocks Room. The Aqua Door is a closed locked door. The description of the Aqua door is "It[']s an aqua colored door with the word 'Stocks' written on it." The silver key unlocks it.
 
 The cans of paint, grease, and lubricant are here.
+
+The ladder is up from the Maintenance Office and down from the Dark Hallway. The ladder is an open door. The description of the Ladder is "It[']s a typical 10 foot ladder."
+
+Instead of climbing a ladder:
+	try entering the noun.
+
 
 Section 3 - Crawl Space
 
@@ -1090,12 +1100,7 @@ A small fan sits on the workbench, oscillating weakly to counter the oppressive 
 
 Despite its functionality, the electrical room carries a certain unease. The constant hum of electricity, the flicker of lights, and the sharpness of exposed wires hint at the delicate balance of power keeping the carnival alive. It’s a space where the magic of the midway is stripped bare, revealing the raw energy coursing through its veins.
 
-This room is oozing with electromagnetic energy. You can feel your hair stand on end and all your nerves twitching. This feels dangerous! There are exits in all directions, including up."
-
-The Ladder is up from the Electrical Room and down from the Dark Hallway. The ladder is an open door. The description of the Ladder is "It[']s a typical 10 foot ladder."
-
-Instead of climbing a ladder:
-	try entering the noun.
+This room is oozing with electromagnetic energy. You can feel your hair stand on end and all your nerves twitching. This feels dangerous! There are exits in all directions."
 
 Section 8 - Electrical Closet Eleven
 
@@ -1122,6 +1127,11 @@ Instead of switching on or pushing Switch Eleven:
 		increase score by 5;
 		now Points Awarded Eleven is true;
 		stop the action;
+	if Switch Eleven is switched off and the Khaki Fuse is in Socket Eleven and Points Awarded Eleven is true:
+		say "The indicator light goes on.";
+		now Switch Eleven is switched on;
+		now Indicator Light Eleven is switched on;
+		stop the action;
 	if Switch Eleven is switched off and the Khaki Fuse is in Socket Nine:
 		say "The indicator light goes on.";
 		now Switch Eleven is switched on;
@@ -1132,21 +1142,31 @@ Instead of switching on or pushing Switch Eleven:
 		now Switch Eleven is switched off;
 		now Indicator Light Eleven is switched off;
 		stop the action.
-		
+
 Instead of switching on Indicator Light Eleven, say "You can['] turn that on." instead.
+
+instead of inserting when the noun is not a colored fuse, say "That won[']t fit in the socket." instead.
 
 instead of inserting when Socket Eleven is filled, say "The socket is already filled.".
 
-after taking when Socket Eleven is filled:
-	now Socket Eleven is unfilled.
-
-instead of inserting when the noun is the Khaki Fuse and the second noun is Socket Eleven and Socket Eleven is unfilled and panel eleven is unlocked:
+before taking:
+	if Socket Eleven is filled and the noun is a colored fuse:
+		say "Taken.";
+		now the noun is in the player;
+		now Indicator Light Eleven is switched off;
+		now Switch Eleven is switched off;
+		now Socket Eleven is unfilled;
+		stop the action.
+	
+instead of inserting when the noun is the Khaki Fuse and the second noun is Socket Eleven and Socket Eleven is unfilled and panel eleven is open:
 	say "You hear a satisfying snick as the fuse slides into place.";
 	now Socket Eleven is filled;
 	now the Khaki Fuse is in Socket Eleven.
-	
-instead of inserting when the noun is the Khaki Fuse and the second noun is Socket Eleven and Socket Eleven is unfilled and panel eleven is locked:
-	say "But the electrical panel is shut tight!";
+
+instead of inserting when the noun is a colored fuse and the second noun is Socket Eleven and Socket Eleven is unfilled:
+	say "You put the fuse in the socket.";
+	now the noun is in Socket Eleven;
+	now Socket Eleven is filled;
 	stop the action.
 	
 instead of unlocking when the location is Electrical Closet Eleven:
@@ -1180,6 +1200,11 @@ Instead of switching on or pushing Switch Nine:
 		increase score by 5;
 		now Points Awarded Nine is true;
 		stop the action;
+	if Switch Nine is switched off and the Indigo Fuse is in Socket Nine and Points Awarded Nine is true:
+		say "The indicator light goes on.";
+		now Switch Nine is switched on;
+		now Indicator Light Nine is switched on;
+		stop the action;
 	if Switch Nine is switched off and the Indigo Fuse is in Socket Nine:
 		say "The indicator light goes on.";
 		now Switch Nine is switched on;
@@ -1190,21 +1215,31 @@ Instead of switching on or pushing Switch Nine:
 		now Switch Nine is switched off;
 		now Indicator Light Nine is switched off;
 		stop the action.
-		
+
 Instead of switching on Indicator Light Nine, say "You can['] turn that on." instead.
+
+instead of inserting when the noun is not a colored fuse, say "That won[']t fit in the socket." instead.
 
 instead of inserting when Socket Nine is filled, say "The socket is already filled.".
 
-after taking when Socket Nine is filled:
-	now Socket Nine is unfilled.
-
-instead of inserting when the noun is the Indigo Fuse and the second noun is Socket Nine and Socket Nine is unfilled and panel nine is unlocked:
+before taking:
+	if Socket Nine is filled and the noun is a colored fuse:
+		say "Taken.";
+		now the noun is in the player;
+		now Indicator Light Nine is switched off;
+		now Switch Nine is switched off;
+		now Socket Nine is unfilled;
+		stop the action.
+	
+instead of inserting when the noun is the Indigo Fuse and the second noun is Socket Nine and Socket Nine is unfilled and panel Nine is open:
 	say "You hear a satisfying snick as the fuse slides into place.";
 	now Socket Nine is filled;
 	now the Indigo Fuse is in Socket Nine.
 
-instead of inserting when the noun is the Indigo Fuse and the second noun is Socket Nine and Socket Nine is unfilled and panel nine is locked:
-	say "But the electrical panel is shut tight!";
+instead of inserting when the noun is a colored fuse and the second noun is Socket Nine and Socket Nine is unfilled:
+	say "You put the fuse in the socket.";
+	now the noun is in Socket Nine;
+	now Socket Nine is filled;
 	stop the action.
 	
 instead of unlocking when the location is Electrical Closet Nine:
@@ -1227,10 +1262,10 @@ Indicator Light Seven is a switched off device. Indicator Light Seven is part of
 
 Points Awarded Seven is a truth state that varies. Points Awarded Seven is false.
 Instead of switching on or pushing Switch Seven:
-	if Switch Seven is switched off and the Gray Fuse is not in Socket One:
+	if Switch Seven is switched off and the Gray Fuse is not in Socket Seven:
 		say "You push the switch.";
 		say "Nothing obvious happens." instead;
-	if Switch One is switched off and the Aqua Fuse is in Socket Seven and Points Awarded Seven is false:
+	if Switch Seven is switched off and the Gray Fuse is in Socket Seven and Points Awarded Seven is false:
 		say "The indicator light goes on.";
 		now Switch Seven is switched on;
 		now Indicator Light Seven is switched on;
@@ -1238,7 +1273,12 @@ Instead of switching on or pushing Switch Seven:
 		increase score by 5;
 		now Points Awarded Seven is true;
 		stop the action;
-	if Switch Seven is switched off and the Gray Fuse is in Socket Seven:
+	if Switch Seven is switched off and the Gray Fuse is in Socket Seven and Points Awarded Seven is true:
+		say "The indicator light goes on.";
+		now Switch Seven is switched on;
+		now Indicator Light Seven is switched on;
+		stop the action;
+	if Switch Seven is switched off and the Gray Fuse is in Socket Nine:
 		say "The indicator light goes on.";
 		now Switch Seven is switched on;
 		now Indicator Light Seven is switched on;
@@ -1248,21 +1288,31 @@ Instead of switching on or pushing Switch Seven:
 		now Switch Seven is switched off;
 		now Indicator Light Seven is switched off;
 		stop the action.
-		
+
 Instead of switching on Indicator Light Seven, say "You can['] turn that on." instead.
+
+instead of inserting when the noun is not a colored fuse, say "That won[']t fit in the socket." instead.
 
 instead of inserting when Socket Seven is filled, say "The socket is already filled.".
 
-after taking when Socket Seven is filled:
-	now Socket Seven is unfilled.
-
-instead of inserting when the noun is the gray Fuse and the second noun is Socket Seven and Socket Seven is unfilled and panel seven is unlocked:
+before taking:
+	if Socket Seven is filled and the noun is a colored fuse:
+		say "Taken.";
+		now the noun is in the player;
+		now Indicator Light Seven is switched off;
+		now Switch Seven is switched off;
+		now Socket Seven is unfilled;
+		stop the action.
+	
+instead of inserting when the noun is the Gray Fuse and the second noun is Socket Seven and Socket Seven is unfilled and panel Seven is open:
 	say "You hear a satisfying snick as the fuse slides into place.";
 	now Socket Seven is filled;
-	now the gray Fuse is in Socket Seven.
-	
-instead of inserting when the noun is the Gray Fuse and the second noun is Socket Seven and Socket Seven is unfilled and panel seven is locked:
-	say "But the electrical panel is shut tight!";
+	now the Gray Fuse is in Socket Seven.
+
+instead of inserting when the noun is a colored fuse and the second noun is Socket Seven and Socket Seven is unfilled:
+	say "You put the fuse in the socket.";
+	now the noun is in Socket Seven;
+	now Socket Seven is filled;
 	stop the action.
 	
 instead of unlocking when the location is Electrical Closet Seven:
@@ -1296,7 +1346,12 @@ Instead of switching on or pushing Switch Five:
 		increase score by 5;
 		now Points Awarded Five is true;
 		stop the action;
-	if Switch Five is switched off and the Emerald Fuse is in Socket Five:
+	if Switch Five is switched off and the Emerald Fuse is in Socket Five and Points Awarded Five is true:
+		say "The indicator light goes on.";
+		now Switch Five is switched on;
+		now Indicator Light Five is switched on;
+		stop the action;
+	if Switch Five is switched off and the Emerald Fuse is in Socket Nine:
 		say "The indicator light goes on.";
 		now Switch Five is switched on;
 		now Indicator Light Five is switched on;
@@ -1306,23 +1361,33 @@ Instead of switching on or pushing Switch Five:
 		now Switch Five is switched off;
 		now Indicator Light Five is switched off;
 		stop the action.
-		
+
 Instead of switching on Indicator Light Five, say "You can['] turn that on." instead.
+
+instead of inserting when the noun is not a colored fuse, say "That won[']t fit in the socket." instead.
 
 instead of inserting when Socket Five is filled, say "The socket is already filled.".
 
-after taking when Socket Five is filled:
-	now Socket Five is unfilled.
-
-instead of inserting when the noun is the Emerald Fuse and the second noun is Socket Five and Socket Five is unfilled and panel five is unlocked:
+before taking:
+	if Socket Five is filled and the noun is a colored fuse:
+		say "Taken.";
+		now the noun is in the player;
+		now Indicator Light Five is switched off;
+		now Switch Five is switched off;
+		now Socket Five is unfilled;
+		stop the action.
+	
+instead of inserting when the noun is the Emerald Fuse and the second noun is Socket Five and Socket Five is unfilled and panel Five is open:
 	say "You hear a satisfying snick as the fuse slides into place.";
 	now Socket Five is filled;
 	now the Emerald Fuse is in Socket Five.
-	
-instead of inserting when the noun is the Emerald Fuse and the second noun is Socket Five and Socket Five is unfilled and panel five is locked:
-	say "But the electrical panel is shut tight!";
-	stop the action.
 
+instead of inserting when the noun is a colored fuse and the second noun is Socket Five and Socket Five is unfilled:
+	say "You put the fuse in the socket.";
+	now the noun is in Socket Five;
+	now Socket Five is filled;
+	stop the action.
+	
 instead of unlocking when the location is Electrical Closet Five:
 	say "Using the screwdriver on the Swiss Army knife, you remove the cover to the electrical panel.";
 	now Electrical Panel Five is unlocked.
@@ -1354,7 +1419,12 @@ Instead of switching on or pushing Switch Three:
 		increase score by 5;
 		now Points Awarded Three is true;
 		stop the action;
-	if Switch Three is switched off and the Crimson Fuse is in Socket Three:
+	if Switch Three is switched off and the Crimson Fuse is in Socket Three and Points Awarded Three is true:
+		say "The indicator light goes on.";
+		now Switch Three is switched on;
+		now Indicator Light Three is switched on;
+		stop the action;
+	if Switch Three is switched off and the Crimson Fuse is in Socket Nine:
 		say "The indicator light goes on.";
 		now Switch Three is switched on;
 		now Indicator Light Three is switched on;
@@ -1364,23 +1434,33 @@ Instead of switching on or pushing Switch Three:
 		now Switch Three is switched off;
 		now Indicator Light Three is switched off;
 		stop the action.
-		
+
 Instead of switching on Indicator Light Three, say "You can['] turn that on." instead.
+
+instead of inserting when the noun is not a colored fuse, say "That won[']t fit in the socket." instead.
 
 instead of inserting when Socket Three is filled, say "The socket is already filled.".
 
-after taking when Socket Three is filled:
-	now Socket Three is unfilled.
-
-instead of inserting when the noun is the Crimson Fuse and the second noun is Socket Three and Socket Three is unfilled and panel three is unlocked:
+before taking:
+	if Socket Three is filled and the noun is a colored fuse:
+		say "Taken.";
+		now the noun is in the player;
+		now Indicator Light Three is switched off;
+		now Switch Three is switched off;
+		now Socket Three is unfilled;
+		stop the action.
+	
+instead of inserting when the noun is the Crimson Fuse and the second noun is Socket Three and Socket Three is unfilled and panel Three is open:
 	say "You hear a satisfying snick as the fuse slides into place.";
 	now Socket Three is filled;
 	now the Crimson Fuse is in Socket Three.
-	
-instead of inserting when the noun is the Crimson Fuse and the second noun is Socket Three and Socket Three is unfilled and panel three is locked:
-	say "But the electrical panel is shut tight!";
-	stop the action.
 
+instead of inserting when the noun is a colored fuse and the second noun is Socket Three and Socket Three is unfilled:
+	say "You put the fuse in the socket.";
+	now the noun is in Socket Three;
+	now Socket Three is filled;
+	stop the action.
+	
 instead of unlocking when the location is Electrical Closet Three:
 	say "Using the screwdriver on the Swiss Army knife, you remove the cover to the electrical panel.";
 	now Electrical Panel Three is unlocked.
@@ -1414,7 +1494,12 @@ Instead of switching on or pushing Switch One:
 		increase score by 5;
 		now Points Awarded One is true;
 		stop the action;
-	if Switch One is switched off and the Aqua Fuse is in Socket One:
+	if Switch One is switched off and the Aqua Fuse is in Socket One and Points Awarded One is true:
+		say "The indicator light goes on.";
+		now Switch One is switched on;
+		now Indicator Light One is switched on;
+		stop the action;
+	if Switch One is switched off and the Aqua Fuse is in Socket Nine:
 		say "The indicator light goes on.";
 		now Switch One is switched on;
 		now Indicator Light One is switched on;
@@ -1424,23 +1509,33 @@ Instead of switching on or pushing Switch One:
 		now Switch One is switched off;
 		now Indicator Light One is switched off;
 		stop the action.
-		
+
 Instead of switching on Indicator Light One, say "You can['] turn that on." instead.
+
+instead of inserting when the noun is not a colored fuse, say "That won[']t fit in the socket." instead.
 
 instead of inserting when Socket One is filled, say "The socket is already filled.".
 
-after taking when Socket One is filled:
-	now Socket One is unfilled.
-
-instead of inserting when the noun is the Aqua Fuse and the second noun is Socket One and Socket One is unfilled and panel one is unlocked:
+before taking:
+	if Socket One is filled and the noun is a colored fuse:
+		say "Taken.";
+		now the noun is in the player;
+		now Indicator Light One is switched off;
+		now Switch One is switched off;
+		now Socket One is unfilled;
+		stop the action.
+	
+instead of inserting when the noun is the Aqua Fuse and the second noun is Socket One and Socket One is unfilled and panel One is open:
 	say "You hear a satisfying snick as the fuse slides into place.";
 	now Socket One is filled;
 	now the Aqua Fuse is in Socket One.
-	
-instead of inserting when the noun is the Aqua Fuse and the second noun is Socket One and Socket One is unfilled and panel one is locked:
-	say "But the electrical panel is shut tight!";
-	stop the action.
 
+instead of inserting when the noun is a colored fuse and the second noun is Socket One and Socket One is unfilled:
+	say "You put the fuse in the socket.";
+	now the noun is in Socket One;
+	now Socket One is filled;
+	stop the action.
+	
 instead of unlocking when the location is Electrical Closet One:
 	say "Using the screwdriver on the Swiss Army knife, you remove the cover to the electrical panel.";
 	now Electrical Panel One is unlocked.
@@ -1492,8 +1587,8 @@ Despite its unassuming appearance, the control room feels alive with purpose—a
 The Control Panel is a thing in the Control Room. The Control Panel is a supporter and fixed in place. 
 
 instead of examining the control panel:
-	say "The control panel is populated with a row of colored lights. From left to right, the colors are aqua, crimson, emerald, gray, indigo, and khaki. Below the lights is a row of similarly colored dials and below that is a row of buttons. (The poorly generated AI & human image is meant for comparison purposes only. LOL) The control panel is [if fuse count is 6]lit up like a Christmas tree[otherwise]dark[end if].[line break]";
-	if fuse count is 6 and every colored button is switched off:
+	say "The control panel is populated with a row of colored lights. From left to right, the colors are aqua, crimson, emerald, gray, indigo, and khaki. Below the lights is a row of similarly colored dials and below that is a row of buttons. (The poorly generated AI & human image is meant for comparison purposes only. LOL) The control panel is [if switch count is 6]lit up like a Christmas tree[otherwise]dark[end if].[line break]";
+	if switch count is 6 and every colored button is switched off:
 		display the figure of ControlPanel;
 	else if the aqua fuse is in socket one and the aqua button is switched on:
 		display the figure of ControlPanelStocks;
@@ -1517,25 +1612,9 @@ To count the switches:
 	if switch seven is switched on, increment the switch count;
 	if switch nine is switched on, increment the switch count;
 	if switch eleven is switched on, increment the switch count.
-	
-The fuse count is a number that varies. The fuse count is 0.
-To count the fuses:
-	now the fuse count is 0;
-	if the aqua fuse is in socket one, increment the fuse count;
-	if the crimson fuse is in socket three, increment the fuse count;
-	if the emerald fuse is in socket five, increment the fuse count;
-	if the gray fuse is in socket seven, increment the fuse count;
-	if the indigo fuse is in socket nine, increment the fuse count;
-	if the khaki fuse is in socket eleven, increment the fuse count.
-
-every turn when the location is the control room:
-	count the fuses;
-	count the fuses;
-	count the dials.
-	[say "fuse count: [fuse count], dial count: [dial count]."]
 		
 every turn when the location is the Control Room:
-	if fuse count is not 6:
+	if switch count is not 6:
 		now all the colored lights are switched off;
 		now all the colored dials are switched off;
 		now the dial setting of the aqua dial is 0;
@@ -1548,10 +1627,9 @@ every turn when the location is the Control Room:
 		
 [BUGBUG remove debug output]
 every turn when the location is the control room:
-	count the fuses;
-	count the fuses;
+	count the switches;
 	count the dials;
-	say "switch count: [switch count], fuse count: [fuse count], dial count: [dial count]."
+	[say "switch count: [switch count], dial count: [dial count]."]
 		
 [lights]
 A colored light is a kind of device. A colored light is fixed in place. A colored light is usually switched off. Understand "indicator" as colored light.
@@ -1580,11 +1658,12 @@ every turn:
 
 [pushing the indigo button is the winning move]
 Instead of switching on or pushing the indigo button: 
-	if the fuse count is 6 and the dial count is 6 and the indigo button is switched off
+	if the switch count is 6 and the dial count is 6 and the indigo button is switched off
 		begin;
 			say "The monitor flickers for a second and the scene it[']s displaying changes.";
 			say "The monitor now shows a tableau of a guillotine. It has stopped rising and falling over the ride exit. The ride is safe again!";
 			say "The indigo indicator is now on.";
+			display the figure of ControlPanelGuillotine;
 			now all colored buttons are switched off;
 			now all colored lights are switched off;
 			now the indigo button is switched on;
@@ -1600,7 +1679,7 @@ Instead of switching on or pushing the indigo button:
 		end if.
 		
 Instead of switching on or pushing the aqua button: 
-	if the fuse count is 6 and the dial count is 6 and the aqua button is switched off
+	if the switch count is 6 and the dial count is 6 and the aqua button is switched off
 		begin;
 			say "The monitor flickers for a second and the scene it[']s displaying changes.";
 			say "The monitor now shows a tableau of poor unfortunate townsfolk locked in stocks.";
@@ -1617,7 +1696,7 @@ Instead of switching on or pushing the aqua button:
 		end if.
 		
 Instead of switching on or pushing the crimson button: 
-	if the fuse count is 6 and the dial count is 6 and the crimson button is switched off
+	if the switch count is 6 and the dial count is 6 and the crimson button is switched off
 		begin;
 			say "The monitor flickers for a second and the scene it[']s displaying changes.";
 			say "The monitor now shows a scene of someone waiting to be hanged.";
@@ -1634,7 +1713,7 @@ Instead of switching on or pushing the crimson button:
 		end if.
 		
 Instead of switching on or pushing the emerald button: 
-	if the fuse count is 6 and the dial count is 6 and the emerald button is switched off
+	if the switch count is 6 and the dial count is 6 and the emerald button is switched off
 		begin;
 			say "The monitor flickers for a second and the scene it[']s displaying changes.";
 			say "The monitor now displays a scene of witches being burned at the stake.";
@@ -1651,7 +1730,7 @@ Instead of switching on or pushing the emerald button:
 		end if;
 		
 Instead of switching on or pushing the gray button: 
-	if the fuse count is 6 and the dial count is 6 and the gray button is switched off
+	if the switch count is 6 and the dial count is 6 and the gray button is switched off
 		begin;
 			say "The monitor flickers for a second and the scene it[']s displaying changes.";
 			say "The monitor now shows the implements of torture in the dungeon.";
@@ -1668,7 +1747,7 @@ Instead of switching on or pushing the gray button:
 		end if;
 
 Instead of Switching on or pushing the khaki button: 
-	if the fuse count is 6 and the dial count is 6 and the khaki button is switched off
+	if the switch count is 6 and the dial count is 6 and the khaki button is switched off
 		begin;
 			say "The monitor flickers for a second and the scene it[']s displaying changes.";
 			say "The monitor shows a the gift shop located at the Hell Ride exit.";
