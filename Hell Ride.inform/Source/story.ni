@@ -11,7 +11,7 @@ The story title is "Hell Ride".
 The story author is "No Shoes".
 The story headline is "The ride of a lifetime...".
 The story genre is "Horror".
-The release number is 101.
+The release number is 102.
 The story description is "You've decided to stay and enjoy the carnival anyway."
 The story creation year is 2024.
 
@@ -216,7 +216,7 @@ Before printing the name of an unlit lit electric lamp, say "extinguished ".
 
 Section 5 - Grues
 
-Test grues with "s / buy ticket / s / give ticket to ride attendant / s / e / s / s"
+Test grues with "test parking / s / buy hell ride ticket / s / give hell ride ticket to ride attendant / s / e / s / s"
 
 The lurking grue is a backdrop. The lurking grue is everywhere. The description of the lurking grue is "The grue is a sinister, lurking presence in the dark places of the earth. Its favorite diet is humans, but its insatiable appetite is tempered by its fear of light. No grue has ever been seen by the light of day, and few have survived its fearsome jaws to tell the tale."
 
@@ -304,27 +304,11 @@ The description of the player is "You are despondent given that you and your dat
 Instead of examining the player:
 	say "Oh, stop fussing. You look fine."
 
-The player carries the car keys. Understand "car key" and "key" as the car keys. The description of the car keys is "These are your car keys. It[']s a wonder you could find them, your house is such a mess."
+The player carries the keys. Understand "car key" and "key" as the keys. The description of the keys is "These are your car keys. It[']s a wonder you could find them, your house is such a mess."
 	
 The coupon is in the wallet. The description of the coupon is "You found this in a stack of coupons on the counter of the gas station."
 
 every turn when examining the coupon, display Figure of Coupon.
-
-instead of giving the coupon to the parking attendant:
-	if the parking attendant carries the parking ticket:
-		say "Given.";
-		now the price of the parking ticket is $1.00;
-		now the parking attendant carries the coupon;	
-	otherwise if the player carries the parking ticket:
-		say "Given. But you already bought a parking ticket.";
-		now the parking attendant carries the coupon;
-	otherwise:
-		say "Warning Will Robinson!"
-		
-instead of buying the parking ticket:
-	say "Done.[paragraph break]The attendant says,, 'Don't forget to leave your stub on your dashboard.";
-	now the player carries the parking ticket;
-	now the player carries the parking stub.
 
 After reading a command:
 	if the player's command includes "please":
@@ -396,9 +380,11 @@ Chapter 1 - The Midway
 
 Section 1 - Parking Lot
 
-Test Live with "brief / Test Egypt / Test Concession / Test Striker / Test Misc / Test Backstage".
+Test Live with "brief / Test Parking / Test Egypt / Test Concession / Test Striker / Test Misc / Test Backstage".
 
-Test Die with "brief / Test Egypt / Test Concession / Test Striker / Test Misc / Test Ride".
+Test Die with "brief / Test Parking / Test Egypt / Test Concession / Test Striker / Test Misc / Test Ride".
+
+Test parking with "get blueberries / give coupon to attendant / buy ticket / get in car / open glove box / get gloves / wear gloves / put stub on the dashboard / l at the dashboard / l under seat / s / exit".
 
 When play begins:
 	display the figure of Hell Ride;
@@ -420,28 +406,54 @@ The midway is to the south. There is a blueberry bush here. [if blueberry bush c
 
 The Parking Attendant is a man in the the parking lot. The parking attendant carries the parking ticket and the parking stub. The price of the parking ticket is $3.00. The description of Parking Attendant is "This is a bored teenager just trying to earn enough money to take his sweetie to the movies next week.". 
 
-The beater car is a vehicle in the parking lot. The beater car is fixed in place. Understand "vehicle" as the beater car. The description of the beater car is "This is your car. It[']s seen better days. You can see the seat, the dashboard, and the glove box."
+The beater car is an enterable open container in the parking lot. The beater car is fixed in place. Understand "vehicle" as the beater car. The description of the beater car is "This is your car. It[']s seen better days. You can see the seat, the dashboard, and the glove box."
 
 The car seat is a part of the car. The car seat is a supporter. It is fixed in place. The description of the seat is "A faux leather seat that looked great when it was new."
 
 The dashboard is a part of the car. The dashboard is a supporter. The description of the dashboard is "It looks like you could set something there."
 
-The glove box is part of the car. The glove box is a locked openable container. The car keys unlocks it. Understand "glove compartment" and "compartment" as the glove box. The gloves are inside the glove box. The description of the gloves is "A nice set of sheepskin gloves. They[']re very warm."
+The glove box is part of the car. The glove box is a locked openable container. The keys unlocks it. Understand "glove compartment" and "compartment" as the glove box. The gloves are inside the glove box. The gloves are wearable. The description of the gloves is "A nice set of sheepskin gloves. They[']re very warm."
 
 The blueberry bush is here. the blueberry bush is scenery. the blueberry bush is a container. the blueberry bush is not portable. the blueberry bush contains blueberries. Understand "berries" as blueberries. The blueberries are edible.The description of the blueberries is "The blueberries are ripe and juicy.".
 
 The dime underlies the car seat. Understand "shiny" as dime. The description of the dime is "It[']s a dime. Ten cents. One tenth of a dollar. And very shiny"
+
+Instead of looking under a thing which is underlaid by the dime:
+	say "You find [the list of things which underlie the noun]!";
+	now every thing which underlies the noun is carried by the player;
+	now every thing which underlies the noun does not underlie the noun;
+	say "Taken.";
+	play the sound of Strongman Bell;
+	increase score by 5;
 
 After taking blueberries:
 	play the sound of Strongman Bell;
 	increase score by 5;
 	say "Good Job!".
 	
-instead of going south when the player does not carry the parking ticket, say "You have to pay to park." instead.
+instead of giving the coupon to the parking attendant:
+	if the parking attendant carries the parking ticket:
+		say "Given.";
+		now the price of the parking ticket is $1.00;
+		now the parking attendant carries the coupon;	
+	otherwise if the player carries the parking ticket:
+		say "Given. But you already bought a parking ticket.";
+		now the parking attendant carries the coupon;
+	otherwise:
+		say "Danger Will Robinson, this is a bug!"
+		
+instead of buying the parking ticket:
+	say "Done.[paragraph break]The attendant says, 'Don't forget to leave your stub on your dashboard'.";
+	now the player carries the parking ticket;
+	now the player carries the parking stub.
 	
+instead of going south when the location is the parking lot and the player does not carry the parking ticket, say "You have to pay to park." instead.
+
+instead of going south when the location is the parking lot and the player is in the beater car, say "You have to exit your car first." instead.
+
 Section 2 - Kiosk
 
-After going south when the location is the Parking Lot and the Kiosk is unvisited and the player carries the parking ticket:
+After going south when the location is the Kiosk and the Kiosk is unvisited and the player carries the parking ticket:
 	display Figure of TicketBooth.
 	
 Before looking when the location is the Kiosk:
@@ -637,7 +649,7 @@ After giving when the noun is dime and the second noun is barker:
 
 Section 6 - Show Tent	
 
-Test Egypt with "brief / get blueberries / get dime / s / w / l at barker / give dime to barker / w / z / z / n / z / z / z / e / e / n / i / score".
+Test Egypt with "brief / get blueberries / s / w / l at barker / give dime to barker / w / z / z / n / z / z / z / e / e / n / i / score".
 
 Before going west when the location is the Show Facade and the Show Tent is unvisited and barker is carrying the dime:
 	display Figure of LittleEgyptShow.	
@@ -645,17 +657,17 @@ Before going west when the location is the Show Facade and the Show Tent is unvi
 Before looking when the location is the the Show Tent:
 	display Figure of LittleEgyptShow.		
 
-The Show Tent is a room. The Show Tent is west of Show Facade. "You are inside the Little Egypt Show. The attraction facade is to the east. There is a folding chair should you want to sit down and wait for the show to start."
+The Show Tent is a room. The Show Tent is west of Show Facade. "You are inside the Little Egypt Show. The attraction facade is to the east. There folding chairs organized neatly in rows. The show should start soon."
 
 Little Egypt is a woman. Little Egypt is in the Show Tent. Little Egypt is scenery. The description of Little Egypt is "Little Egypt is an exotic looking, beautiful woman who is draped in flowing silk veils which she skillfully uses as part of the dance. Her attire consists of a sparkling, sequined bodice and a flowing skirt, adorned with jingling coin belts and jewelry that accentuate her movements."
 
-The sheer veil is a thing. The description of the SHeer Veil is "This is a sheer gold veil that Little Egypt wore (and removed) during her show. You head swims as you smell the scent of her perfume: patchouli."
+The sheer veil is a thing. The description of the Sheer Veil is "This is a sheer gold veil that Little Egypt wore (and removed) during her show. Your head swims as you smell the scent of her perfume on her veil: patchouli."
 
 The Stage is here. The Stage is scenery. The description of the Stage is "The stage is decorated to resemble an exotic Middle Eastern market or palace, featuring rich, colorful fabrics, brass ornaments, and lanterns casting a warm, flickering glow. Scents of incense waft through the air, enhancing the atmosphere of mystique. The backdrop displays painted scenes of pyramids, desert landscapes, and domed structures to evoking a sense of being transported to the 'Middle East'."
 
-The Folding Chair is in Show Tent. The Folding Chair is a enterable scenery supporter. The description of the Folding Chair is "This is one of many folding chairs in the tent tonight."
+The folding chair is a enterable scenery supporter in Show Tent. The description of the Folding Chair is "This is one of many folding chairs in the tent tonight."
 
-LittleEgyptAuto is a scene. LittleEgyptAuto begins when the player is in the Show Tent for the second turn.
+LittleEgyptAuto is a scene. LittleEgyptAuto begins when the player is in the folding chair for 2 turns.
 
 When LittleEgyptAuto ends:
 	say "You applaud until your hands are sore. Did she just wink at me?[paragraph break]As she leaves the stage, Little Egypt tosses one of her veils to you!";
@@ -703,7 +715,7 @@ Before going south when the location is the kiosk and the Head of the Line is un
 Before looking when the location is the Head of the Line:
 	display Figure of HellRideEntrance.
 
-Test Ride with "brief / get blueberries / s / buy hell ride ticket / s / give ticket to attendant / s / enter hellride car / wait / z / z / z / z / z / z / z".
+Test Ride with "brief / get blueberries / s / buy hell ride ticket / s / give hell ride ticket to attendant / s / enter hell ride car / wait / z / z / z / z / z / z / z".
 
 HellRideAuto is a scene. HellRideAuto begins when the player is in the hell ride car for 3 turns.
 
@@ -993,7 +1005,7 @@ Chapter 3 - Backstage
 Section 1 - Dark Passage
 
 [get the key]
-Test b1 with "brief. get	blueberries / s / buy ticket / s / give ticket to attendant / s / e / l at piles / get flashlight / turn it on / s / turn on radio / l at desk / open drawer / get all from the drawer / s / s / open toolbox / get all from toolbox / s / s / s / ne / get silver key / l at panel / open panel / l at socket / sw / n / n / n / n / n"
+Test b1 with "brief / s / buy hell ride ticket / s / give hell ride ticket to attendant / s / e / l at piles / get flashlight / turn it on / s / turn on radio / l at desk / open drawer / get all from the drawer / s / s / open toolbox / get all from toolbox / s / s / s / ne / get silver key / l at panel / open panel / l at socket / sw / n / n / n / n / n"
 
 [get the fuses]
 Test b2 with "w / l under stocks / e / s / w / l under platform / e / s / w / l in pyre / get fuse from pyre / e / s / w / l under seat / e / s / w / l under platform / e / s / s / w / l in stand / get khaki fuse from merchandise stand / e / n"
