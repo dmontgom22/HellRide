@@ -384,7 +384,7 @@ Test Live with "brief / Test Parking / Test Egypt / Test Concession / Test Strik
 
 Test Die with "brief / Test Parking / Test Egypt / Test Concession / Test Striker / Test Misc / Test Ride".
 
-Test parking with "get blueberries / give coupon to attendant / buy ticket / get in car / open glove box / get gloves / wear gloves / put stub on the dashboard / l at the dashboard / l under seat / s / exit".
+Test parking with "brief. get blueberries / give coupon to attendant / buy ticket / get in car / open glove box / get gloves / wear gloves / put stub on the dashboard / l at the dashboard / l under seat / s / exit".
 
 When play begins:
 	display the figure of Hell Ride;
@@ -442,10 +442,11 @@ instead of giving the coupon to the parking attendant:
 	otherwise:
 		say "Danger Will Robinson, this is a bug!"
 		
-instead of buying the parking ticket:
-	say "Done.[paragraph break]The attendant says, 'Don't forget to leave your stub on your dashboard'.";
+before buying the parking ticket:
+	say "The attendant says, 'Don't forget to leave your stub on your dashboard'.";
 	now the player carries the parking ticket;
-	now the player carries the parking stub.
+	now the player carries the parking stub;
+	continue the action.
 	
 instead of going south when the location is the parking lot and the player does not carry the parking ticket, say "You have to pay to park." instead.
 
@@ -667,7 +668,7 @@ The Stage is here. The Stage is scenery. The description of the Stage is "The st
 
 The folding chair is a enterable scenery supporter in Show Tent. The description of the Folding Chair is "This is one of many folding chairs in the tent tonight."
 
-LittleEgyptAuto is a scene. LittleEgyptAuto begins when the player is in the folding chair for 2 turns.
+LittleEgyptAuto is a scene. LittleEgyptAuto begins when the player is in the show tent for 2 turns.
 
 When LittleEgyptAuto ends:
 	say "You applaud until your hands are sore. Did she just wink at me?[paragraph break]As she leaves the stage, Little Egypt tosses one of her veils to you!";

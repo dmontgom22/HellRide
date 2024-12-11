@@ -8261,7 +8261,7 @@ Array script_U3 -> [ 98; 114; 105; 101; 102; 47; 116; 101; 115; 116; 32; 112; 97
 Array requirements_U3 --> [ 0; 0; ];
 Array script_U4 -> [ 98; 114; 105; 101; 102; 47; 116; 101; 115; 116; 32; 112; 97; 114; 107; 105; 110; 103; 47; 116; 101; 115; 116; 32; 101; 103; 121; 112; 116; 47; 116; 101; 115; 116; 32; 99; 111; 110; 99; 101; 115; 115; 105; 111; 110; 47; 116; 101; 115; 116; 32; 115; 116; 114; 105; 107; 101; 114; 47; 116; 101; 115; 116; 32; 109; 105; 115; 99; 47; 116; 101; 115; 116; 32; 114; 105; 100; 101; 124; 124; 124; 124; ];
 Array requirements_U4 --> [ 0; 0; ];
-Array script_U5 -> [ 103; 101; 116; 32; 98; 108; 117; 101; 98; 101; 114; 114; 105; 101; 115; 47; 103; 105; 118; 101; 32; 99; 111; 117; 112; 111; 110; 32; 116; 111; 32; 97; 116; 116; 101; 110; 100; 97; 110; 116; 47; 98; 117; 121; 32; 116; 105; 99; 107; 101; 116; 47; 103; 101; 116; 32; 105; 110; 32; 99; 97; 114; 47; 111; 112; 101; 110; 32; 103; 108; 111; 118; 101; 32; 98; 111; 120; 47; 103; 101; 116; 32; 103; 108; 111; 118; 101; 115; 47; 119; 101; 97; 114; 32; 103; 108; 111; 118; 101; 115; 47; 112; 117; 116; 32; 115; 116; 117; 98; 32; 111; 110; 32; 116; 104; 101; 32; 100; 97; 115; 104; 98; 111; 97; 114; 100; 47; 108; 32; 97; 116; 32; 116; 104; 101; 32; 100; 97; 115; 104; 98; 111; 97; 114; 100; 47; 108; 32; 117; 110; 100; 101; 114; 32; 115; 101; 97; 116; 47; 115; 47; 101; 120; 105; 116; 124; 124; 124; 124; ];
+Array script_U5 -> [ 98; 114; 105; 101; 102; 46; 32; 103; 101; 116; 32; 98; 108; 117; 101; 98; 101; 114; 114; 105; 101; 115; 47; 103; 105; 118; 101; 32; 99; 111; 117; 112; 111; 110; 32; 116; 111; 32; 97; 116; 116; 101; 110; 100; 97; 110; 116; 47; 98; 117; 121; 32; 116; 105; 99; 107; 101; 116; 47; 103; 101; 116; 32; 105; 110; 32; 99; 97; 114; 47; 111; 112; 101; 110; 32; 103; 108; 111; 118; 101; 32; 98; 111; 120; 47; 103; 101; 116; 32; 103; 108; 111; 118; 101; 115; 47; 119; 101; 97; 114; 32; 103; 108; 111; 118; 101; 115; 47; 112; 117; 116; 32; 115; 116; 117; 98; 32; 111; 110; 32; 116; 104; 101; 32; 100; 97; 115; 104; 98; 111; 97; 114; 100; 47; 108; 32; 97; 116; 32; 116; 104; 101; 32; 100; 97; 115; 104; 98; 111; 97; 114; 100; 47; 108; 32; 117; 110; 100; 101; 114; 32; 115; 101; 97; 116; 47; 115; 47; 101; 120; 105; 116; 124; 124; 124; 124; ];
 Array requirements_U5 --> [ 0; 0; ];
 Array script_U6 -> [ 98; 114; 105; 101; 102; 47; 103; 101; 116; 32; 98; 108; 117; 101; 98; 101; 114; 114; 105; 101; 115; 47; 115; 47; 115; 119; 47; 108; 32; 97; 116; 32; 116; 114; 101; 97; 116; 115; 47; 114; 101; 97; 100; 32; 109; 101; 110; 117; 47; 98; 117; 121; 32; 99; 111; 108; 97; 47; 98; 117; 121; 32; 112; 111; 112; 99; 111; 114; 110; 47; 98; 117; 121; 32; 99; 97; 110; 100; 121; 32; 97; 112; 112; 108; 101; 47; 98; 117; 121; 32; 99; 111; 116; 116; 111; 110; 32; 99; 97; 110; 100; 121; 47; 98; 117; 121; 32; 112; 114; 101; 116; 122; 101; 108; 47; 105; 110; 118; 101; 110; 116; 111; 114; 121; 47; 100; 114; 105; 110; 107; 32; 115; 111; 100; 97; 47; 103; 47; 103; 47; 103; 47; 103; 47; 105; 47; 110; 101; 47; 110; 47; 105; 47; 115; 99; 111; 114; 101; 124; 124; 124; 124; ];
 Array requirements_U6 --> [ 0; 0; ];
@@ -15587,7 +15587,7 @@ Global max_z_object;
             rtrue;
         }
         if ((R == call_U2390)) {
-            print "instead of buying the parking ticket";
+            print "before buying the parking ticket";
             rtrue;
         }
         if ((R == call_U2391)) {
@@ -18769,7 +18769,7 @@ Global max_z_object;
             TestStart(script_U4, requirements_U4, 78);
             ;
         'parking':
-            TestStart(script_U5, requirements_U5, 165);
+            TestStart(script_U5, requirements_U5, 172);
             ;
         'concession':
             TestStart(script_U6, requirements_U6, 158);
@@ -34639,6 +34639,26 @@ Global max_z_object;
             RulebookParBreak(forbid_breaks);
         }
     }
+    if ((action == ##Buy)) {
+        if ((original_deadflag ~= deadflag)) {
+            rfalse;
+        }
+        if (say__p) {
+            RulebookParBreak(forbid_breaks);
+        }
+        (rv = (call_U2390)());
+        if (rv) {
+            if ((rv == 2)) {
+                return reason_the_action_failed;
+            }
+            return call_U2390;
+        }
+        ((latest_rule_result-->(0)) = 0);
+    } else {
+        if (say__p) {
+            RulebookParBreak(forbid_breaks);
+        }
+    }
     if ((action == ##A_locking_keylessly)) {
         if ((original_deadflag ~= deadflag)) {
             rfalse;
@@ -35248,20 +35268,6 @@ Global max_z_object;
                 return reason_the_action_failed;
             }
             return call_U2346;
-        }
-        ((latest_rule_result-->(0)) = 0);
-        if ((original_deadflag ~= deadflag)) {
-            rfalse;
-        }
-        if (say__p) {
-            RulebookParBreak(forbid_breaks);
-        }
-        (rv = (call_U2390)());
-        if (rv) {
-            if ((rv == 2)) {
-                return reason_the_action_failed;
-            }
-            return call_U2390;
         }
         ((latest_rule_result-->(0)) = 0);
     } else {
@@ -76045,17 +76051,11 @@ Global max_z_object;
         }
         (say__p = 1);
         ParaContent();
-        print "Done.";
-        ParaContent();
-        DivideParagraphPoint();
-        print "^";
-        ParaContent();
         print "The attendant says, ~Don't forget to leave your stub on your dashboard~.";
         print "^";
         MoveObject(I_parking_ticket_U1, player);
         MoveObject(I_parking_stub_U1, player);
-        RulebookFails(0, 0);
-        rtrue;
+        rfalse;
     } else {
         if ((debug_rules > 1)) {
             DB_Rule(call_U2390, 950, 2);
@@ -80993,7 +80993,7 @@ Global max_z_object;
     rtrue;
 ];
 [ PCONR1;
-    return (I_folding_chair_U1 == ContainerOf(player));
+    return (I_show_tent_U1 == ContainerOf(player));
 ];
 [ PCONR2;
     return (I_hell_ride_car_U1 == ContainerOf(player));
