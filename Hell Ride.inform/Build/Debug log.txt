@@ -1,5 +1,5 @@
 Debugging log of inform7
-inform7 was called as: C:\Program Files\Inform\Compilers\inform7 -internal C:\Program Files\Inform\Internal -external C:\Users\danamont\Documents\Inform -project C:\HellRide\Hell Ride.inform -format=Inform6/32d
+inform7 was called as: C:\Program Files\Inform\Compilers\inform7 -release -internal C:\Program Files\Inform\Internal -external C:\Users\danamont\Documents\Inform -project C:\HellRide\Hell Ride.inform -format=Inform6/32
 Reading further switches from file: <no file>
 Completed expert settings file
 Using Inform kit 'BasicInformKit' (priority 0).
@@ -26,6 +26,7 @@ I've also read Basic Screen Effects by Emily Short, which is 2223 words long.
 Phase I ... Dividing source into compilation units
 -----------------------------------------------------
 
+.... Emit__create_emission_tree() took 1cs
 
 
 -----------------------------------------------------
@@ -43,35 +44,34 @@ Loading kinds definitions from C:\Program Files\Inform\Internal\Inter\WorldModel
 Loading kinds definitions from C:\Program Files\Inform\Internal\Inter\WorldModelKit\kinds\Figures.neptune
 Loading kinds definitions from C:\Program Files\Inform\Internal\Inter\WorldModelKit\kinds\Sounds.neptune
 Loading kinds definitions from C:\Program Files\Inform\Internal\Inter\CommandParserKit\kinds\Parsing.neptune
-.... Task__make_built_in_kind_constructors() took 30cs
 
 
 -----------------------------------------------------
 Phase III ... Pre-pass through major nodes
 -----------------------------------------------------
 
-.... MajorNodes__pre_pass() took 10cs
+.... MajorNodes__pre_pass() took 7cs
+.... Task__verify() took 1cs
 
 
 -----------------------------------------------------
 Phase IV ... First pass through major nodes
 -----------------------------------------------------
 
-.... MajorNodes__pass_1() took 10cs
+.... MajorNodes__pass_1() took 6cs
 
 
 -----------------------------------------------------
 Phase V ... Second pass through major nodes
 -----------------------------------------------------
 
-.... MajorNodes__pass_2() took 1cs
+.... MajorNodes__pass_2() took 3cs
 
 
 -----------------------------------------------------
 Phase VI ... Making the model world
 -----------------------------------------------------
 
-.... RTKindDeclarations__declare_base_kinds() took 1cs
 
 
 -----------------------------------------------------
@@ -90,29 +90,28 @@ Phase VIII ... Tables and grammar
 Phase IX ... Augment model world
 -----------------------------------------------------
 
-.... World__stage_V() took 3cs
+.... World__stage_V() took 1cs
 
 
 -----------------------------------------------------
 Phase X ... Phrases and rules
 -----------------------------------------------------
 
-.... ImperativeDefinitions__assess_all() took 9cs
+.... ImperativeDefinitions__assess_all() took 7cs
 
 
 -----------------------------------------------------
 Phase XI ... Generating inter (1)
 -----------------------------------------------------
 
-.... RTKindConstructors__compile() took 6cs
-.... RTBibliographicData__compile_constants() took 1cs
+.... RTKindConstructors__compile() took 4cs
+.... InstanceCounting__define_IK_sequence_start_constants() took 1cs
 
 
 -----------------------------------------------------
 Phase XII ... Generating inter (2)
 -----------------------------------------------------
 
-.... CompletionModule__compile() took 2cs
 .... RTKindConstructors__compile_permissions() took 1cs
 .... ImperativeDefinitions__compile_first_block() took 1cs
 
@@ -129,10 +128,8 @@ Phase XII ... Generating inter (2)
 Phase XIII ... Generating inter (3)
 -----------------------------------------------------
 
-.... Sequence__undertake_queued_tasks() took 142cs
-.... RTRelations__compile() took 1cs
-.... Sequence__undertake_queued_tasks() took 1cs
-.... RTPhrasebook__compile_entries() took 5cs
+.... Sequence__undertake_queued_tasks() took 124cs
+.... RTPhrasebook__compile_entries() took 3cs
 
 
 -----------------------------------------------------
@@ -155,7 +152,7 @@ Phase XV ... Generating inter (5)
 
 .... Sequence__undertake_queued_tasks() took 1cs
 Providing for a total heap of 65536, given requirement of 65536
-.... Sequence__lint_inter() took 3cs
+.... Sequence__lint_inter() took 1cs
 
 
 -----------------------------------------------------
@@ -168,7 +165,7 @@ Phase XVI ... Bibliographic work
 Phase XVII ... Complete
 -----------------------------------------------------
 
-Compile CPU time: 235 centiseconds
+Compile CPU time: 171 centiseconds
 
 
 ==== Phase XVII.1 ... step 1/15: read <- *memory ====
@@ -213,12 +210,12 @@ Compile CPU time: 235 centiseconds
 
 ==== Phase XVII.11 ... step 11/15: eliminate-redundant-labels ====
 
-2555 redundant label(s) removed
+2547 redundant label(s) removed
 
 
 ==== Phase XVII.12 ... step 12/15: eliminate-redundant-operations ====
 
-702 redundant operation(s) removed
+703 redundant operation(s) removed
 
 
 ==== Phase XVII.13 ... step 13/15: optionally-generate text ->  ====
@@ -7659,8 +7656,8 @@ HTML tag stack:
     52. html (opened at line 236 of 'D:/Programs/Adv/Inform7/Distribution/inweb/foundation-module/Chapter 5/HTML.w')
 
 
-Back end elapsed time: 429cs
-Total of 128 files written as streams.
+Back end elapsed time: 228cs
+Total of 127 files written as streams.
 Vacant escapes: %: ..CDE.GH..K.M.O.QR.TU...YZab..e..h.jklm.o.qr......yz0123456789
 Vacant escapes: $: .....F...J..........UVW.....................s.u..x.........789
 
