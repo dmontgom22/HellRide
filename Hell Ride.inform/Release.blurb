@@ -30,7 +30,8 @@ picture 14 "C:\HellRide\Hell Ride.materials\Figures\ControlPanelStake.png"
 picture 15 "C:\HellRide\Hell Ride.materials\Figures\ControlPanelDungeon.png"
 picture 16 "C:\HellRide\Hell Ride.materials\Figures\ControlPanelGuillotine.png"
 picture 17 "C:\HellRide\Hell Ride.materials\Figures\ControlPanelExit.png"
-sound 18 "C:\HellRide\Hell Ride.materials\Sounds\StrongmanBell.ogg"
+picture 18 "C:\HellRide\Hell Ride.materials\Figures\Coupon.png"
+sound 19 "C:\HellRide\Hell Ride.materials\Sounds\StrongmanBell.ogg"
 
 ! Placeholder variables
 
