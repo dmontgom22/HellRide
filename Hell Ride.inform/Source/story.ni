@@ -1,6 +1,6 @@
 Part 1 - World Model
 
-Chapter 1 - Inform Settings, Biblio Card, and Includes
+Chapter 1 - Inform Settings, Biblio Card, and Extensions
 
 Use maximum things understood at once of at least 200.
 Use dynamic memory allocation of at least 65536.
@@ -11,7 +11,7 @@ The story title is "Hell Ride".
 The story author is "No Shoes".
 The story headline is "The ride of a lifetime...".
 The story genre is "Horror".
-The release number is 101.
+The release number is 102.
 The story description is "You've decided to stay and enjoy the carnival anyway."
 The story creation year is 2024.
 
@@ -30,7 +30,7 @@ Include Singing Reloaded by Shin
 Use scoring.
 Use American Dialect.
 Use serial comma.
-The maximum score is 100.
+The maximum score is 105.
 The block giving rule is not listed in the check giving it to rules.
 
 Chapter 2 - New Mechanics, Actions, Phrases
@@ -216,7 +216,7 @@ Before printing the name of an unlit lit electric lamp, say "extinguished ".
 
 Section 5 - Grues
 
-Test grues with "s / buy ticket / s / give ticket to ride attendant / s / e / s / s"
+Test grues with "test parking / s / buy hell ride ticket / s / give hell ride ticket to ride attendant / s / e / s / s"
 
 The lurking grue is a backdrop. The lurking grue is everywhere. The description of the lurking grue is "The grue is a sinister, lurking presence in the dark places of the earth. Its favorite diet is humans, but its insatiable appetite is tempered by its fear of light. No grue has ever been seen by the light of day, and few have survived its fearsome jaws to tell the tale."
 
@@ -303,7 +303,13 @@ The description of the player is "You are despondent given that you and your dat
 
 Instead of examining the player:
 	say "Oh, stop fussing. You look fine."
+
+The player carries the keys. Understand "car key" and "key" as the keys. The description of the keys is "These are your car keys. It[']s a wonder you could find them, your house is such a mess."
 	
+The coupon is in the wallet. The description of the coupon is "You found this in a stack of coupons on the counter of the gas station."
+
+every turn when examining the coupon, display Figure of Coupon.
+
 After reading a command:
 	if the player's command includes "please":
 		say "Please do not say please.";
@@ -342,6 +348,8 @@ Figure of ControlPanelGuillotine is the file "ControlPanelGuillotine.png".
 
 Figure of ControlPanelExit is the file "ControlPanelExit.png".
 
+Figure of Coupon is the file "Coupon.png".
+
 Sound of Strongman Bell is the file "StrongmanBell.ogg".
 
 Chapter 5 - Testing For Empty Descriptions - Not for release
@@ -372,9 +380,11 @@ Chapter 1 - The Midway
 
 Section 1 - Parking Lot
 
-Test Live with "brief / Test Egypt / Test Concession / Test Striker / Test Misc / Test Backstage".
+Test Live with "brief / Test Parking / Test Egypt / Test Concession / Test Striker / Test Misc / Test Backstage".
 
-Test Die with "brief / Test Egypt / Test Concession / Test Striker / Test Misc / Test Ride".
+Test Die with "brief / Test Parking / Test Egypt / Test Concession / Test Striker / Test Misc / Test Ride".
+
+Test parking with "brief. get blueberries / give coupon to attendant / buy ticket / get in car / open glove box / get gloves / wear gloves / put stub on the dashboard / l at the dashboard / l under seat / s / exit".
 
 When play begins:
 	display the figure of Hell Ride;
@@ -392,22 +402,59 @@ At the far end of the lot, a handful of RVs and trailers are parked, their occup
 
 The parking lot, while utilitarian, is alive with anticipation, serving as the gateway to the magic of the carnival. It’s a place of transition, where the mundane gives way to the extraordinary, and the humdrum rhythms of daily life are momentarily forgotten.
 
-The midway is to the south. There is a blueberry bush here. [if blueberry bush contains blueberries]There are blueberries on the bush.[otherwise]The bush has been picked clean.[end if] [if the dime is in the Parking Lot] You see something shiny on the ground.[end if]"
+The midway is to the south. There is a blueberry bush here. [if blueberry bush contains blueberries]There are blueberries on the bush.[otherwise]The bush has been picked clean.[end if][if the dime is in the Parking Lot] You see something shiny on the ground.[end if]"
 
-Cars is here. The cars are scenery. Understand "car", "vehicle", and "vehicles" as cars. The description of cars is "There are all kinds of vehicles in the parking lot."
+The Parking Attendant is a man in the the parking lot. The parking attendant carries the parking ticket and the parking stub. The price of the parking ticket is $3.00. The description of Parking Attendant is "This is a bored teenager just trying to earn enough money to take his sweetie to the movies next week.". 
 
-The blueberry bush is here. the blueberry bush is scenery. the blueberry bush is a container. the blueberry bush is not portable. the blueberry bush contains blueberries. The description of the blueberries is "The blueberries are ripe, juicy, and a deep blue color.".
+The beater car is an enterable open container in the parking lot. The beater car is fixed in place. Understand "vehicle" as the beater car. The description of the beater car is "This is your car. It[']s seen better days. You can see the seat, the dashboard, and the glove box."
 
-The dime is here. Understand "shiny" as dime. The description of the dime is "It[']s a dime. Ten cents. One tenth of a dollar. It['] very shiny"
+The car seat is a part of the car. The car seat is a supporter. It is fixed in place. The description of the seat is "A faux leather seat that looked great when it was new."
+
+The dashboard is a part of the car. The dashboard is a supporter. The description of the dashboard is "It looks like you could set something there."
+
+The glove box is part of the car. The glove box is a locked openable container. The keys unlocks it. Understand "glove compartment" and "compartment" as the glove box. The gloves are inside the glove box. The gloves are wearable. The description of the gloves is "A nice set of sheepskin gloves. They[']re very warm."
+
+The blueberry bush is here. the blueberry bush is scenery. the blueberry bush is a container. the blueberry bush is not portable. the blueberry bush contains blueberries. Understand "berries" as blueberries. The blueberries are edible.The description of the blueberries is "The blueberries are ripe and juicy.".
+
+The dime underlies the car seat. Understand "shiny" as dime. The description of the dime is "It[']s a dime. Ten cents. One tenth of a dollar. And very shiny"
+
+Instead of looking under a thing which is underlaid by the dime:
+	say "You find [the list of things which underlie the noun]!";
+	now every thing which underlies the noun is carried by the player;
+	now every thing which underlies the noun does not underlie the noun;
+	say "Taken.";
+	play the sound of Strongman Bell;
+	increase score by 5;
 
 After taking blueberries:
 	play the sound of Strongman Bell;
 	increase score by 5;
 	say "Good Job!".
+	
+instead of giving the coupon to the parking attendant:
+	if the parking attendant carries the parking ticket:
+		say "Given.";
+		now the price of the parking ticket is $1.00;
+		now the parking attendant carries the coupon;	
+	otherwise if the player carries the parking ticket:
+		say "Given. But you already bought a parking ticket.";
+		now the parking attendant carries the coupon;
+	otherwise:
+		say "Danger Will Robinson, this is a bug!"
+		
+before buying the parking ticket:
+	say "The attendant says, 'Don't forget to leave your stub on your dashboard'.";
+	now the player carries the parking ticket;
+	now the player carries the parking stub;
+	continue the action.
+	
+instead of going south when the location is the parking lot and the player does not carry the parking ticket, say "You have to pay to park." instead.
+
+instead of going south when the location is the parking lot and the player is in the beater car, say "You have to exit your car first." instead.
 
 Section 2 - Kiosk
 
-Before going south when the location is the Parking Lot and the Kiosk is unvisited:
+After going south when the location is the Kiosk and the Kiosk is unvisited and the player carries the parking ticket:
 	display Figure of TicketBooth.
 	
 Before looking when the location is the Kiosk:
@@ -603,7 +650,7 @@ After giving when the noun is dime and the second noun is barker:
 
 Section 6 - Show Tent	
 
-Test Egypt with "brief / get blueberries / get dime / s / w / l at barker / give dime to barker / w / z / z / n / z / z / z / e / e / n / i / score".
+Test Egypt with "brief / get blueberries / s / w / l at barker / give dime to barker / w / z / z / n / z / z / z / e / e / n / i / score".
 
 Before going west when the location is the Show Facade and the Show Tent is unvisited and barker is carrying the dime:
 	display Figure of LittleEgyptShow.	
@@ -611,17 +658,17 @@ Before going west when the location is the Show Facade and the Show Tent is unvi
 Before looking when the location is the the Show Tent:
 	display Figure of LittleEgyptShow.		
 
-The Show Tent is a room. The Show Tent is west of Show Facade. "You are inside the Little Egypt Show. The attraction facade is to the east. There is a folding chair should you want to sit down and wait for the show to start."
+The Show Tent is a room. The Show Tent is west of Show Facade. "You are inside the Little Egypt Show. The attraction facade is to the east. There folding chairs organized neatly in rows. The show should start soon."
 
 Little Egypt is a woman. Little Egypt is in the Show Tent. Little Egypt is scenery. The description of Little Egypt is "Little Egypt is an exotic looking, beautiful woman who is draped in flowing silk veils which she skillfully uses as part of the dance. Her attire consists of a sparkling, sequined bodice and a flowing skirt, adorned with jingling coin belts and jewelry that accentuate her movements."
 
-The sheer veil is a thing. The description of the SHeer Veil is "This is a sheer gold veil that Little Egypt wore (and removed) during her show. You head swims as you smell the scent of her perfume: patchouli."
+The sheer veil is a thing. The description of the Sheer Veil is "This is a sheer gold veil that Little Egypt wore (and removed) during her show. Your head swims as you smell the scent of her perfume on her veil: patchouli."
 
 The Stage is here. The Stage is scenery. The description of the Stage is "The stage is decorated to resemble an exotic Middle Eastern market or palace, featuring rich, colorful fabrics, brass ornaments, and lanterns casting a warm, flickering glow. Scents of incense waft through the air, enhancing the atmosphere of mystique. The backdrop displays painted scenes of pyramids, desert landscapes, and domed structures to evoking a sense of being transported to the 'Middle East'."
 
-The Folding Chair is in Show Tent. The Folding Chair is a enterable scenery supporter. The description of the Folding Chair is "This is one of many folding chairs in the tent tonight."
+The folding chair is a enterable scenery supporter in Show Tent. The description of the Folding Chair is "This is one of many folding chairs in the tent tonight."
 
-LittleEgyptAuto is a scene. LittleEgyptAuto begins when the player is in the Show Tent for the second turn.
+LittleEgyptAuto is a scene. LittleEgyptAuto begins when the player is in the show tent for 2 turns.
 
 When LittleEgyptAuto ends:
 	say "You applaud until your hands are sore. Did she just wink at me?[paragraph break]As she leaves the stage, Little Egypt tosses one of her veils to you!";
@@ -669,9 +716,9 @@ Before going south when the location is the kiosk and the Head of the Line is un
 Before looking when the location is the Head of the Line:
 	display Figure of HellRideEntrance.
 
-Test Ride with "brief / get blueberries / s / buy hell ride ticket / s / give ticket to attendant / s / enter car / wait / z / z / z / z / z / z / z".
+Test Ride with "brief / get blueberries / s / buy hell ride ticket / s / give hell ride ticket to attendant / s / enter hell ride car / wait / z / z / z / z / z / z / z".
 
-HellRideAuto is a scene. HellRideAuto begins when the player is in the car for 3 turns.
+HellRideAuto is a scene. HellRideAuto begins when the player is in the hell ride car for 3 turns.
 
 When HellRideAuto begins:
 	say "The car moves forward and the safety bar begins to lower."
@@ -771,14 +818,14 @@ You are stupefied as you sit watching guillotine rising and falling, dropping li
 HellRideAuto ends when the number of filled rows in the Table of HellRide Events is 0.
 
 Instead of doing something other than waiting, looking, listening or examining during HellRideAuto:
-	say "You are enjoying the ride too much to do anything but wait and enjoy the ride."
+	say "You are having such a good time that you don['] want to do anything but wait and enjoy the ride."
 	
 When HellRideAuto ends:
 	end the story finally saying "You have died.".
 	
 Ride Entrance is a room. Ride Entrance is south of Head of the Line. "The cars that will take you into the fearsome Hell Ride stop here for you to board.  To the south is the track that will take you into the ride. The safety bar is raised allowing you to enter the car. The darkness looks just a little bit darker."
 
-The car is a vehicle in the Ride Entrance. The description of the car is "A car waits to take you through the horror that is Hell Ride."
+The Hell Ride car is a vehicle in the Ride Entrance. The description of the Hell Ride car is "A car waits to take you through the horror that is Hell Ride."
 
 Before going south when the player is in the Ride Entrance:
 	say "You can't go that way." instead;
@@ -959,7 +1006,7 @@ Chapter 3 - Backstage
 Section 1 - Dark Passage
 
 [get the key]
-Test b1 with "brief. get	blueberries / s / buy ticket / s / give ticket to attendant / s / e / l at piles / get flashlight / turn it on / s / turn on radio / l at desk / open drawer / get all from the drawer / s / s / open toolbox / get all from toolbox / s / s / s / ne / get silver key / l at panel / open panel / l at socket / sw / n / n / n / n / n"
+Test b1 with "brief / s / buy hell ride ticket / s / give hell ride ticket to attendant / s / e / l at piles / get flashlight / turn it on / s / turn on radio / l at desk / open drawer / get all from the drawer / s / s / open toolbox / get all from toolbox / s / s / s / ne / get silver key / l at panel / open panel / l at socket / sw / n / n / n / n / n"
 
 [get the fuses]
 Test b2 with "w / l under stocks / e / s / w / l under platform / e / s / w / l in pyre / get fuse from pyre / e / s / w / l under seat / e / s / w / l under platform / e / s / s / w / l in stand / get khaki fuse from merchandise stand / e / n"
@@ -969,8 +1016,6 @@ Test b3 with "ne / open panel / put aqua in socket  / push switch / sw / e / ope
 
 [turn the dials]
 test b4 with "n / n / n / n / n / climb ladder / w / l at control panel / turn aqua dial to 1 / turn crimson dial to three / turn emerald dial to 5 / turn gray dial to seven / turn indigo dial to 9 / turn khaki dial to eleven / push aqua button / l at panel / push crimson button / l at panel  / push emerald button / l at panel / push gray button / l at panel / push khaki button"
-
-test b5 with "n / n / n / n / n / w / n / n / n / i / score"
 
 Test Backstage with "test b1 / test b2 / test b3 / test b4"
 
@@ -983,7 +1028,7 @@ The bags of trash are scenery. The bags of trash are here. Understand "bags" and
 instead of looking under when the noun is the pile of junk:
 	try examining the junk instead. 
 
-The pile of junk is a scenery container. The pile of junk is in the dark passage. The pile of junk contains the flashlight. Understand "piles" and "junk" as pile of junk. The description of the pile of junk is "In the corner is a pile of junk."
+The pile of junk is a scenery container. The pile of junk is in the dark passage. The pile of junk contains the flashlight. Understand "piles" and "junk" as pile of junk. 
 
 after examining when the noun is pile of junk:
 	say "You find a flashlight here.".

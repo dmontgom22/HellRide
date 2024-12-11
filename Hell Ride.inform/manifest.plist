@@ -36,10 +36,12 @@
             <string>Figures\ControlPanelGuillotine.png</string>
             <key>17</key>
             <string>Figures\ControlPanelExit.png</string>
+            <key>18</key>
+            <string>Figures\Coupon.png</string>
         </dict>
         <key>Sounds</key>
         <dict>
-            <key>18</key>
+            <key>19</key>
             <string>Sounds\StrongmanBell.ogg</string>
         </dict>
     </dict>
