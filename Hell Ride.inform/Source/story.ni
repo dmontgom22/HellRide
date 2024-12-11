@@ -304,7 +304,7 @@ The description of the player is "You are despondent given that you and your dat
 Instead of examining the player:
 	say "Oh, stop fussing. You look fine."
 
-The player carries the keys. Understand "car key" and "key" as the keys. The description of the keys is "These are your car keys. It[']s a wonder you could find them, your house is such a mess."
+The keys underlie the car seat. Understand "car key" and "car keys" and "key" as the keys. The description of the keys is "These are your car keys. It[']s a wonder you could find them, your house is such a mess."
 	
 The coupon is in the wallet. The description of the coupon is "You found this in a stack of coupons on the counter of the gas station."
 
@@ -362,7 +362,7 @@ Chapter 5 - Testing For Empty Descriptions - Not for release
 When play begins:
 	seed the random-number generator with 1234.
 	
-The price of the money is $15.00. 
+The price of the money is $20.00. 
 			
 Chapter 6 - Randomized Rooms, etc - For Release Only
 
@@ -384,7 +384,7 @@ Test Live with "brief / Test Parking / Test Egypt / Test Concession / Test Strik
 
 Test Die with "brief / Test Parking / Test Egypt / Test Concession / Test Striker / Test Misc / Test Ride".
 
-Test parking with "brief. get blueberries / give coupon to attendant / buy ticket / get in car / open glove box / get gloves / wear gloves / put stub on the dashboard / l at the dashboard / l under seat / s / exit".
+Test parking with "brief / get blueberries / give coupon to attendant / buy ticket / get in car / l under seat / open glove box / get gloves / wear gloves / put stub on the dashboard / l at the dashboard / s / exit".
 
 When play begins:
 	display the figure of Hell Ride;
@@ -434,7 +434,7 @@ After taking blueberries:
 instead of giving the coupon to the parking attendant:
 	if the parking attendant carries the parking ticket:
 		say "Given.";
-		now the price of the parking ticket is $1.00;
+		now the price of the parking ticket is $3.00;
 		now the parking attendant carries the coupon;	
 	otherwise if the player carries the parking ticket:
 		say "Given. But you already bought a parking ticket.";
