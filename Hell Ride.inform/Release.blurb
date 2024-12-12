@@ -36,7 +36,7 @@ sound 19 "C:\HellRide\Hell Ride.materials\Sounds\StrongmanBell.ogg"
 ! Placeholder variables
 
 placeholder [IFID] = "E0A5AFB9-18BF-4485-B083-426CA51CCE70"
-placeholder [RELEASE] = "104"
+placeholder [RELEASE] = "105"
 placeholder [YEAR] = "2024"
 placeholder [TITLE] = "Hell Ride"
 placeholder [AUTHOR] = "No Shoes"
