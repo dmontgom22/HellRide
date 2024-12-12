@@ -43,16 +43,16 @@ Definition: a thing is free if the price of it is $0.00.
 Definition: a thing is for sale if it is not free.
 
 Instead of taking something for sale:
-	say "You'll have to pay for that."
+	say "You[']ll have to pay for that."
 
 Before buying something for sale when the money is not in the wallet:
-	say "You're broke." instead.
+	say "You[']re broke." instead.
 
 Before buying something for sale when the money is free:
-	say "You're broke." instead.
+	say "You[']re broke." instead.
 
 Before buying something for sale when the price of the money is less than the price of the noun:
-	say "You don't have enough money to cover the price of [the noun]." instead.
+	say "You don[']t have enough money to cover the price of [the noun]." instead.
 
 Instead of buying something:
 	decrease the price of the money by the price of the noun;
@@ -134,8 +134,8 @@ Understand "pour [something] in/into/on/onto [something]" as pouring it into. Un
 Pouring it into is an action applying to two things.
 
 Check pouring it into:
-	if the noun is not a fluid container, say "You can't pour [the noun]." instead;
-	if the second noun is not a fluid container, say "You can't pour liquids into [the second noun]." instead;
+	if the noun is not a fluid container, say "You can[']t pour [the noun]." instead;
+	if the second noun is not a fluid container, say "You can[']t pour liquids into [the second noun]." instead;
 	if the noun is the second noun, say "You can hardly pour [the noun] into itself." instead;
 	if the liquid of the noun is not the liquid of the second noun:
 		if the second noun is empty, now the liquid of the second noun is the liquid of the noun;
@@ -168,7 +168,7 @@ Underlying relates various things to one thing. The verb to underlie means the u
 Hiding it under is an action applying to one carried thing and one thing. Understand "put [something preferably held] under [something]" as hiding it under. Understand "hide [something preferably held] under [something]" as hiding it under. Understand the commands "shove" and "conceal" and "stick" as "hide".
 
 Check hiding it under:
-	if the second noun is not fixed in place, say "[The second noun] wouldn't be a very effective place of concealment." instead.
+	if the second noun is not fixed in place, say "[The second noun] wouldn[']t be a very effective place of concealment." instead.
 
 Carry out hiding it under:
 	now the noun is nowhere;
@@ -261,7 +261,7 @@ A room can be indoors or outdoors. A room is usually indoors.
 
 The sky is a backdrop. The sky is everywhere.
 
-The description of the sky is "[if the location is outdoors]It[']s a beautiful evening. Not a cloud in the sky. The moon is out and there are so many stars to see. A shooting star streaks across the sky.[otherwise]You[']re indoors. You can't see the sky here."
+The description of the sky is "[if the location is outdoors]It[']s a beautiful evening. Not a cloud in the sky. The moon is out and there are so many stars to see. A shooting star streaks across the sky.[otherwise]You[']re indoors. You can[']t see the sky here."
 
 The ground is a backdrop. The ground is everywhere. Understand "floor" as the ground.
 
@@ -324,6 +324,21 @@ every turn:
 		if the parking stub is not on the dashboard:
 			say " Your heart sinks as you realize that is your plate. You race to the parking lot in time to see the tow truck pull away with your car in tow";
 			end the story finally saying "You start the long walk home."
+			
+When play begins:
+	 choose row 1 in Table of Basic Help Options;
+	 now description entry is "Hell Ride - A Ride to remember...
+
+In the early 1980[']s, I had an Apple II Plus. And the very first game I ever bought was Infocom[']s Zork I: The Great Underground Empire. This was cool. It was all text-based. The game described your surroundings and you interacted with commands that say what you wanted to do. This 'Interactive Fiction' really evoked in a game what I appreciated about reading: rich descriptions, colorful characters, and the like. After Zork I, there was Zork II and III. Enchanter, Moonmist, Suspect, and so many more. I played them all with my best friend Andy.
+
+Andy and I were software developers at the time and we thought, 'We can do this!' So we set out to do this. We developed a game engine with a natural language parser And it was pretty good. We could support most of the kinds of things they did, certainly less graceful but pretty good. In fact, our parser was better than theirs in the case where the sentence was ambiguous. e.g. 'Walk into the room with the lamp.' Is the player carrying the lamp? Or is the lamp in the room?
+
+For fun, we reverse engineered parts of Infocom[']s game format. We found the dictionary, certain text tokens use for text substitution, the game text. We also discovered the first example of compression I had ever seen and it just about made my head explode. They stored all ASCII characters in five bits! Pow! Mind blown. I had never considered anything like that. Just another hook.
+
+We developed two prototypes: Diner and Hell Ride. Diner was about bank robbers coming into the diner where you are a short order cook and have to save the day. Hell Ride was pretty close to what you find here. I decided to implement it using modern tools. It[']s pretty good.
+
+I hope you enjoy it.
+d."
 
 Chapter 4- Figures and Sounds
 
@@ -454,7 +469,7 @@ instead of giving the coupon to the parking attendant:
 		say "Danger Will Robinson, this is a bug!"
 		
 before buying the parking ticket:
-	say "The attendant says, 'Don't forget to leave the parking stub on your dashboard'.";
+	say "The attendant says, 'Don[']t forget to leave the parking stub on your dashboard'.";
 	now the player carries the parking ticket;
 	now the player carries the parking stub;
 	continue the action.
@@ -487,7 +502,7 @@ The midway continues east and west from here. There is a concession stand to the
 
 The Hell Ride ticket is a thing. The price of the Hell Ride ticket is $3.00. The description of the Hell Ride ticket is "This Hell Ride ticket will 'Admit One' to the Hell Ride.[line break]It[']s a real 'E' ticket, baby!"
 
-The Cashier is a man in the kiosk. The cashier carries the Hell Ride ticket. The description of cashier is "This is a bored teenager hired to sell ride tickets all week at this carnival. He's thinking about having a brewski with his bros after work.". 
+The Cashier is a man in the kiosk. The cashier carries the Hell Ride ticket. The description of cashier is "This is a bored teenager hired to sell ride tickets all week at this carnival. He[']s thinking about having a brewski with his bros after work.". 
 
 After buying the hell ride ticket:
 	play the sound of Strongman Bell;
@@ -572,9 +587,9 @@ The description of the teddy bear is "This is a teddy bear like you had when you
 
 The Swiss Army knife is an open container. The screwdriver, awl, fingernail clippers, can opener, and corkscrew are in the Swiss Army knife. The description of the Swiss army knife is "This is the standard issue Swiss Army knife with a screwdriver, an awl, a pair fingernail clippers, a can opener, and a corkscrew." 
 
-instead of taking when the noun is in the swiss army knife, say "That's part of the Swiss Army knife. You can[']t take that!" instead.
+instead of taking when the noun is in the swiss army knife, say "That[']s part of the Swiss Army knife. You can[']t take that!" instead.
 	
-The description of the poster of Taylor Swift is "This is a poster of America's sweetheart, Taylor Swift."
+The description of the poster of Taylor Swift is "This is a poster of America[']s sweetheart, Taylor Swift."
 
 The description of the magenta fuse is "This is an exlectrical fuse. It is magenta colored."
 
@@ -596,7 +611,7 @@ Carry out hitting when the player is carrying the mallet:
 	
 After hitting the lever when second noun is the mallet 5 times :
 	play the sound of Strongman Bell;
-	say "You swing the mallet one more time. The bell rings as the striker reaches the top of the pole. The attendant says, 'You[']re a Muscle Man. Here's a prize for you.'";
+	say "You swing the mallet one more time. The bell rings as the striker reaches the top of the pole. The attendant says, 'You[']re a Muscle Man. Here[']s a prize for you.'";
 	say "Which prize would you like? 1) a teddy bear, 2) a Swiss Army knife, 3) a poster of Taylor Swift, or 4) a magenta fuse?".
 	
 after Reading a command :
@@ -641,16 +656,16 @@ Before looking when the location is the Show Facade:
 
 Show Facade is a room. Show Facade is east of Show Tent. Show Facade is outdoors. "[if location is unvisited]You head west through the midway, the bright lights of the carnival fading behind you as you approach a wooden booth. A sign above the entrance reads 'Little Egypt Show – A Journey Into the Mysterious and Exotic!' A rotund attendant, wearing a fez and a dazzling smile, gestures to a small sign beside him that says 'Dime Admission.'[end if] 
 
-You are standing in front of a dark and mysterious tent filled with illusions and exotic performers. Perhaps there’s a fortune teller inside, offering cryptic clues about the player's journey or a hidden artifact that can be collected. There is a stage in front of the tent. The Barker is encouraging you to step up, pay for, and enjoy the Little Egypt Show.[if location is unvisited]The barker cries: 
+You are standing in front of a dark and mysterious tent filled with illusions and exotic performers. Perhaps there’s a fortune teller inside, offering cryptic clues about your journey or a hidden artifact that can be collected. There is a stage in front of the tent. The Barker is encouraging you to step up, pay for, and enjoy the Little Egypt Show.[if location is unvisited]The barker cries: 
 
-Ladies and gentlemen, boys and girls, gather 'round! [line break]Step right up and witness the spectacle that’s taken the world by storm! [line break]She walks, she talks, she crawls on her belly like a reptile. [line break]Behold the one, the only Little Egypt, performing her legendary Dance of the Pyramids—a dazzling display of mystery, grace, and exotic allure! [line break]For just a dime, a mere one tenth of a dollar, prepare to be transported to the sands of Cairo, where enchantment and wonder await![end if]"
+Ladies and gentlemen, boys and girls, gather [']round! [line break]Step right up and witness the spectacle that[’]s taken the world by storm! [line break]She walks, she talks, she crawls on her belly like a reptile. [line break]Behold the one, the only Little Egypt, performing her legendary Dance of the Pyramids—a dazzling display of mystery, grace, and exotic allure! [line break]For just a dime, a mere one tenth of a dollar, prepare to be transported to the sands of Cairo, where enchantment and wonder await![end if]"
 
 The Barker is a person in Show Facade. The description of the barker is "Here is a man dressed in black pants, a white shirt,a striped vest, a fez, and a dazzling smile. The barker cries:
 
-Ladies and gentlemen, boys and girls, gather 'round! [line break]Step right up and witness the spectacle that’s taken the world by storm! [line break]She walks, she talks, she crawls on her belly like a reptile. [line break]Behold the one, the only Little Egypt, performing her legendary Dance of the Pyramids—a dazzling display of mystery, grace, and exotic allure! [line break]For just a dime, a mere one tenth of a dollar, prepare to be transported to the sands of Cairo, where enchantment and wonder await!"
+Ladies and gentlemen, boys and girls, gather [']round! [line break]Step right up and witness the spectacle that[’]s taken the world by storm! [line break]She walks, she talks, she crawls on her belly like a reptile. [line break]Behold the one, the only Little Egypt, performing her legendary Dance of the Pyramids—a dazzling display of mystery, grace, and exotic allure! [line break]For just a dime, a mere one tenth of a dollar, prepare to be transported to the sands of Cairo, where enchantment and wonder await!"
 
 Check going west when the location is the Show Facade and the barker is not carrying the dime:
-	say "It'll cost you a dime to go that way.";
+	say "It[']ll cost you a dime to go that way.";
 	stop the action.
 	
 Check going west when the location is the Show Facade and the barker is carrying the dime:
@@ -694,7 +709,7 @@ Every turn during LittleEgyptAuto:
 		rule succeeds.
 
 Instead of doing something other than waiting, looking, listening or examining during LittleEgyptAuto:
-	say "You're much too entranced to do anything other than watch the show. You are riveted[if the player is in the folding chair] to your seat[end if]!".
+	say "You[']re much too entranced to do anything other than watch the show. You are riveted[if the player is in the folding chair] to your seat[end if]!".
 
 Table of LittleEgypt Events
 event
@@ -702,7 +717,7 @@ event
 "Little Egypt emerges draped in flowing silk veils which she skillfully uses as part of the dance. Her attire consists of a sparkling, sequined bodice and a flowing skirt, adorned with jingling coin belts and jewelry that accentuate her movements."
 "The performance begins with slow, undulating movements, drawing the you into the rhythm of exotic live music played on traditional instruments like the oud, darbuka, or zurna. As the tempo builds, her hips, torso, and hands move in intricate, mesmerizing patterns, demonstrating remarkable control and fluidity. She incorporates dramatic spins, drops, and shimmies, often accentuating the beat of the music with a quick jingle of her coin belt."
 "Little Egypt makes eye contact with you and smiles enigmatically. During her performance she balances a sword on her head and accents her dance with finger cymbals."
-"The music alternates between hauntingly slow melodies and rapid, energetic drum beats, creating an emotional arc that keeps the you entranced. Little Egypt relies on the music's dynamic changes to tell a story with movements reflecting joy, sorrow, seduction, and celebration."
+"The music alternates between hauntingly slow melodies and rapid, energetic drum beats, creating an emotional arc that keeps the you entranced. Little Egypt relies on the music[']s dynamic changes to tell a story with movements reflecting joy, sorrow, seduction, and celebration."
 "The performance concludes with a dramatic flourish of a fast-paced shimmy, a bold spin, and Little Egypt dramatically casts off her veils. The dancer takes a bow to enthusiastic applause, leaving you spellbound by the sensual yet artful display."
 
 LittleEgyptAuto ends when the number of filled rows in the Table of LittleEgypt Events is 0.
@@ -754,7 +769,7 @@ Through the entrance, the interior is shrouded in near-total darkness, save for 
 "[bold type]Hallway[roman type][line break]The doors open and your car passes through into the darkness.
 
 Mist fills the area as you move to the next room."
-"[bold type]The Stocks[roman type][line break]The public square is an open expanse of cobblestones, surrounded by the weathered facades of timber-framed buildings. The air is heavy with the mingling scents of smoke from distant chimneys, damp earth, and the faint metallic tang of the nearby smithy. At the square's center stand a row of crude wooden stocks, their heavy beams stained from years of weather and use. Iron clasps hold the unfortunate captives by their wrists and necks, their bodies forced into unnatural, humiliating postures. 
+"[bold type]The Stocks[roman type][line break]The public square is an open expanse of cobblestones, surrounded by the weathered facades of timber-framed buildings. The air is heavy with the mingling scents of smoke from distant chimneys, damp earth, and the faint metallic tang of the nearby smithy. At the square[']s center stand a row of crude wooden stocks, their heavy beams stained from years of weather and use. Iron clasps hold the unfortunate captives by their wrists and necks, their bodies forced into unnatural, humiliating postures. 
 
 The punished individuals, heads bowed in shame, are caught in an agonizing tableau of disgrace. Their expressions, a mix of resignation and despair, reflect the full weight of their predicaments. Their clothing hangs in tatters, furthering their exposure to the biting wind and the sharp tongues of the gathered crowd.
 
@@ -762,10 +777,10 @@ Around the stocks, the townsfolk revel in their collective cruelty. A wiry man l
 
 The square is alive with noise: the raucous laughter of the crowd, the occasional sharp crack of a thrown object against the wood, and the soft, pained murmurs of the punished. A passing bell tolls faintly in the distance, but here it is drowned out by the cruel symphony of the jeering mob.
 
-Above it all, the gray sky looms, heavy with the promise of rain, as if nature itself disapproves of the spectacle. Yet the crowd pays no mind, delighting in their collective judgment, each jeer a reminder that today’s entertainment is another's living nightmare.
+Above it all, the gray sky looms, heavy with the promise of rain, as if nature itself disapproves of the spectacle. Yet the crowd pays no mind, delighting in their collective judgment, each jeer a reminder that today’s entertainment is another[']s living nightmare.
 
 Mist fills the area as you move to the next room."
-"[bold type]The Gallows[roman type][line break]The public square lies under a brooding, overcast sky, its cobblestones slick with the morning's drizzle. A grim silence has settled over the gathered crowd, broken only by the occasional murmur or the restless shuffling of feet. At the center of the square, rising like a grim monument to mortality, stands the gallows—a wooden platform, darkened by age and weather, with thick ropes hanging like vipers poised to strike.
+"[bold type]The Gallows[roman type][line break]The public square lies under a brooding, overcast sky, its cobblestones slick with the morning[']s drizzle. A grim silence has settled over the gathered crowd, broken only by the occasional murmur or the restless shuffling of feet. At the center of the square, rising like a grim monument to mortality, stands the gallows—a wooden platform, darkened by age and weather, with thick ropes hanging like vipers poised to strike.
 
 Atop the gallows, a hooded executioner looms, his imposing frame draped in a black cloak that billows faintly in the wind. His face is obscured by the deep cowl, but his presence radiates cold, methodical purpose. In his gloved hands, he adjusts the noose, its coarse fibers frayed from repeated use, ensuring it is ready for the task at hand.
 
@@ -780,13 +795,13 @@ The executioner steps forward, adjusting the noose around the man’s neck with 
 Mist fills the area as you move to the next room."
 "[bold type]The Stake[roman type][line break]The public square is a grim tableau, the usual bustle of commerce and chatter replaced with an oppressive silence broken only by the crackling of the flames. At the center, three wooden stakes rise ominously from a circular pyre of logs and kindling, their rough surfaces darkened by smoke from countless such scenes before. Bound tightly to these stakes are three women, their wrists and ankles secured with coarse, heavy ropes. Their faces tell different stories—one of defiance, another of resignation, and the third of pure terror.
 
-A crowd encircles the pyre, their expressions a mix of morbid fascination, righteous fury, and hesitant pity. Children cling to their mothers' skirts, staring wide-eyed, while town elders nod solemnly as though approving the grim spectacle. Some townsfolk jeer loudly, throwing small stones or rotten vegetables at the condemned. Others murmur prayers or make the sign of the cross, their eyes averted.
+A crowd encircles the pyre, their expressions a mix of morbid fascination, righteous fury, and hesitant pity. Children cling to their mothers['] skirts, staring wide-eyed, while town elders nod solemnly as though approving the grim spectacle. Some townsfolk jeer loudly, throwing small stones or rotten vegetables at the condemned. Others murmur prayers or make the sign of the cross, their eyes averted.
 
 The executioner, clad in a soot-streaked hood and leather apron, steps forward, his torch a blazing beacon in the dreary scene. The flames dance and writhe as he lowers the torch to the base of the pyre, igniting the dry wood with a sudden, hungry roar. A cheer erupts from a faction of the crowd, while others fall into an uneasy silence, watching the fire climb higher.
 
 Thick, acrid smoke begins to rise, curling around the stakes like a living thing. The women cry out—some in curses, others in prayers—and their voices echo across the square, mingling with the crackle of the flames. The heat radiates outward, and even those in the crowd begin to feel its oppressive warmth.
 
-Above, the gray clouds hang low, as if nature itself mourns the scene unfolding below. A raven caws from its perch atop the town's bell tower, its black form stark against the ashen sky. The church bells toll in slow, deliberate cadence, each strike a grim punctuation to the scene.
+Above, the gray clouds hang low, as if nature itself mourns the scene unfolding below. A raven caws from its perch atop the town[']s bell tower, its black form stark against the ashen sky. The church bells toll in slow, deliberate cadence, each strike a grim punctuation to the scene.
 
 As the flames consume the pyre, the crowd remains rooted, some transfixed by the spectacle, others quietly slipping away, their faces pale and drawn. The square, once a place of gatherings and life, is now a stage for death, its air heavy with smoke, ash, and the lingering cries of the condemned.
 
@@ -801,7 +816,7 @@ Prisoners are scattered across the room, each trapped in their own nightmare. A 
 
 The torturer moves about the chamber with practiced efficiency, their face obscured by a hood, their leather apron stained with the evidence of countless victims. They work silently, their movements methodical and devoid of emotion, as if the suffering around them were merely a task to be completed.
 
-Above it all, the dungeon's ceiling is low and oppressive, the occasional scuttling of rats in the shadows serving as a reminder of the filth and decay that permeates the space. The only exit—a heavy, iron-bound door reinforced with rivets—seems more a barrier to hope than a passage to freedom, its small viewing slit barred and shadowed.
+Above it all, the dungeon[']s ceiling is low and oppressive, the occasional scuttling of rats in the shadows serving as a reminder of the filth and decay that permeates the space. The only exit—a heavy, iron-bound door reinforced with rivets—seems more a barrier to hope than a passage to freedom, its small viewing slit barred and shadowed.
 
 This is a place of despair and cruelty, where the line between life and death is blurred, and the only certainty is the inevitability of suffering.
 
@@ -812,7 +827,7 @@ A lone figure stands on the scaffold, their posture slumped under the weight of 
 
 The crowd presses closer, encircling the platform with a mix of emotions etched onto their faces. Some jeer, shouting curses and insults, their voices rising in a cacophony of condemnation. Others watch in heavy silence, their expressions grim and reflective. A few hold children on their shoulders, their young faces filled with curious fascination, unaware of the gravity of what they are about to witness.
 
-At the edge of the platform, a town crier stands with a long scroll in hand, his voice carrying over the murmurs of the crowd:'his man has been found guilty of high treason against the crown. Let his punishment serve as a warning to all who would seek to defy the will of the realm!'
+At the edge of the platform, a town crier stands with a long scroll in hand, his voice carrying over the murmurs of the crowd: 'This man has been found guilty of high treason against the crown. Let his punishment serve as a warning to all who would seek to defy the will of the realm!'
 
 The condemned flinches at the words but remains silent, their face pale and eyes darting nervously. The executioner, a large figure clad in a hooded black robe, stands nearby with arms crossed, their demeanor cold and methodical. A few feet away, the guillotine looms, its blade gleaming dully in the filtered light, ready to deliver the final judgment.
 
@@ -844,7 +859,7 @@ Before going south when the player is in the Ride Entrance:
 
 Section 2 - Stocks Room
 
-The Stocks Room is south of the Ride Entrance. "The public square is an open expanse of cobblestones, surrounded by the weathered facades of timber-framed buildings. The air is heavy with the mingling scents of smoke from distant chimneys, damp earth, and the faint metallic tang of the nearby smithy. At the square's center stand a row of crude wooden stocks, their heavy beams stained from years of weather and use. Iron clasps hold the unfortunate captives by their wrists and necks, their bodies forced into unnatural, humiliating postures.
+The Stocks Room is south of the Ride Entrance. "The public square is an open expanse of cobblestones, surrounded by the weathered facades of timber-framed buildings. The air is heavy with the mingling scents of smoke from distant chimneys, damp earth, and the faint metallic tang of the nearby smithy. At the square[']s center stand a row of crude wooden stocks, their heavy beams stained from years of weather and use. Iron clasps hold the unfortunate captives by their wrists and necks, their bodies forced into unnatural, humiliating postures.
 
 The punished individuals, heads bowed in shame, are caught in an agonizing tableau of disgrace. Their expressions, a mix of resignation and despair, reflect the full weight of their predicaments. Their clothing hangs in tatters, furthering their exposure to the biting wind and the sharp tongues of the gathered crowd.
 
@@ -852,9 +867,9 @@ Around the stocks, the townsfolk revel in their collective cruelty. A wiry man l
 
 The square is alive with noise: the raucous laughter of the crowd, the occasional sharp crack of a thrown object against the wood, and the soft, pained murmurs of the punished. A passing bell tolls faintly in the distance, but here it is drowned out by the cruel symphony of the jeering mob.
 
-Above it all, the gray sky looms, heavy with the promise of rain, as if nature itself disapproves of the spectacle. Yet the crowd pays no mind, delighting in their collective judgment, each jeer a reminder that today’s entertainment is another's living nightmare." 
+Above it all, the gray sky looms, heavy with the promise of rain, as if nature itself disapproves of the spectacle. Yet the crowd pays no mind, delighting in their collective judgment, each jeer a reminder that today’s entertainment is another[']s living nightmare." 
 
-The wooden stocks are here. The wooden stocks are a supporter. The wooden stocks are fixed in place. The description of the wooden stocks is "At the square's center stand a row of crude wooden stocks, their heavy beams stained from years of weather and use. Iron clasps hold the unfortunate captives by their wrists and necks, their bodies forced into unnatural, humiliating postures." 
+The wooden stocks are here. The wooden stocks are a supporter. The wooden stocks are fixed in place. The description of the wooden stocks is "At the square[']s center stand a row of crude wooden stocks, their heavy beams stained from years of weather and use. Iron clasps hold the unfortunate captives by their wrists and necks, their bodies forced into unnatural, humiliating postures." 
 
 The aqua fuse is a colored fuse. The aqua fuse underlies the wooden stocks. The description of the aqua fuse is "This is an electrical fuse. It is aqua colored. The same color as the door where you found it."
 
@@ -869,7 +884,7 @@ Instead of looking under a thing which is underlaid by the aqua fuse when the aq
 	
 Section 3 - Gallows Room
 
-The Gallows Room is south of the Stocks Room.  "The public square lies under a brooding, overcast sky, its cobblestones slick with the morning's drizzle. A grim silence has settled over the gathered crowd, broken only by the occasional murmur or the restless shuffling of feet. At the center of the square, rising like a grim monument to mortality, stands the gallows—a wooden platform, darkened by age and weather, with thick ropes hanging like vipers poised to strike.
+The Gallows Room is south of the Stocks Room.  "The public square lies under a brooding, overcast sky, its cobblestones slick with the morning[']s drizzle. A grim silence has settled over the gathered crowd, broken only by the occasional murmur or the restless shuffling of feet. At the center of the square, rising like a grim monument to mortality, stands the gallows—a wooden platform, darkened by age and weather, with thick ropes hanging like vipers poised to strike.
 
 Atop the gallows, a hooded executioner looms, his imposing frame draped in a black cloak that billows faintly in the wind. His face is obscured by the deep cowl, but his presence radiates cold, methodical purpose. In his gloved hands, he adjusts the noose, its coarse fibers frayed from repeated use, ensuring it is ready for the task at hand.
 
@@ -898,13 +913,13 @@ Section 4 - Stake Room
 
 The Stake Room is south of the Gallows Room. "The public square is a grim tableau, the usual bustle of commerce and chatter replaced with an oppressive silence broken only by the crackling of the flames. At the center, three wooden stakes rise ominously from a circular pyre of logs and kindling, their rough surfaces darkened by smoke from countless such scenes before. Bound tightly to these stakes are three women, their wrists and ankles secured with coarse, heavy ropes. Their faces tell different stories—one of defiance, another of resignation, and the third of pure terror.
 
-A crowd encircles the pyre, their expressions a mix of morbid fascination, righteous fury, and hesitant pity. Children cling to their mothers' skirts, staring wide-eyed, while town elders nod solemnly as though approving the grim spectacle. Some townsfolk jeer loudly, throwing small stones or rotten vegetables at the condemned. Others murmur prayers or make the sign of the cross, their eyes averted.
+A crowd encircles the pyre, their expressions a mix of morbid fascination, righteous fury, and hesitant pity. Children cling to their mothers['] skirts, staring wide-eyed, while town elders nod solemnly as though approving the grim spectacle. Some townsfolk jeer loudly, throwing small stones or rotten vegetables at the condemned. Others murmur prayers or make the sign of the cross, their eyes averted.
 
 The executioner, clad in a soot-streaked hood and leather apron, steps forward, his torch a blazing beacon in the dreary scene. The flames dance and writhe as he lowers the torch to the base of the pyre, igniting the dry wood with a sudden, hungry roar. A cheer erupts from a faction of the crowd, while others fall into an uneasy silence, watching the fire climb higher.
 
 Thick, acrid smoke begins to rise, curling around the stakes like a living thing. The women cry out—some in curses, others in prayers—and their voices echo across the square, mingling with the crackle of the flames. The heat radiates outward, and even those in the crowd begin to feel its oppressive warmth.
 
-Above, the gray clouds hang low, as if nature itself mourns the scene unfolding below. A raven caws from its perch atop the town's bell tower, its black form stark against the ashen sky. The church bells toll in slow, deliberate cadence, each strike a grim punctuation to the scene.
+Above, the gray clouds hang low, as if nature itself mourns the scene unfolding below. A raven caws from its perch atop the town[']s bell tower, its black form stark against the ashen sky. The church bells toll in slow, deliberate cadence, each strike a grim punctuation to the scene.
 
 As the flames consume the pyre, the crowd remains rooted, some transfixed by the spectacle, others quietly slipping away, their faces pale and drawn. The square, once a place of gatherings and life, is now a stage for death, its air heavy with smoke, ash, and the lingering cries of the condemned."
 
@@ -934,7 +949,7 @@ Prisoners are scattered across the room, each trapped in their own nightmare. A 
 
 The torturer moves about the chamber with practiced efficiency, their face obscured by a hood, their leather apron stained with the evidence of countless victims. They work silently, their movements methodical and devoid of emotion, as if the suffering around them were merely a task to be completed.
 
-Above it all, the dungeon's ceiling is low and oppressive, the occasional scuttling of rats in the shadows serving as a reminder of the filth and decay that permeates the space. The only exit—a heavy, iron-bound door reinforced with rivets—seems more a barrier to hope than a passage to freedom, its small viewing slit barred and shadowed.
+Above it all, the dungeon[']s ceiling is low and oppressive, the occasional scuttling of rats in the shadows serving as a reminder of the filth and decay that permeates the space. The only exit—a heavy, iron-bound door reinforced with rivets—seems more a barrier to hope than a passage to freedom, its small viewing slit barred and shadowed.
 
 This is a place of despair and cruelty, where the line between life and death is blurred, and the only certainty is the inevitability of suffering."
 
@@ -959,7 +974,7 @@ A lone figure stands on the scaffold, their posture slumped under the weight of 
 
 The crowd presses closer, encircling the platform with a mix of emotions etched onto their faces. Some jeer, shouting curses and insults, their voices rising in a cacophony of condemnation. Others watch in heavy silence, their expressions grim and reflective. A few hold children on their shoulders, their young faces filled with curious fascination, unaware of the gravity of what they are about to witness.
 
-At the edge of the platform, a town crier stands with a long scroll in hand, his voice carrying over the murmurs of the crowd:'This man has been found guilty of high treason against the crown. Let his punishment serve as a warning to all who would seek to defy the will of the realm!'
+At the edge of the platform, a town crier stands with a long scroll in hand, his voice carrying over the murmurs of the crowd: 'This man has been found guilty of high treason against the crown. Let his punishment serve as a warning to all who would seek to defy the will of the realm!'
 
 The condemned flinches at the words but remains silent, their face pale and eyes darting nervously. The executioner, a large figure clad in a hooded black robe, stands nearby with arms crossed, their demeanor cold and methodical. A few feet away, the guillotine looms, its blade gleaming dully in the filtered light, ready to deliver the final judgment.
 
@@ -1070,11 +1085,11 @@ The desk is in the maintenance office. The desk is a supporter. The desk is fixe
 The radio is a device on the desk. The radio is switched off and fixed in place. "[if switched on]The radio burbles on[otherwise]The radio is off[end if]." 
 
 Every turn when the radio is switched on and the location is Maintenance Office:
-	say "[one of]'The radio plays 'Stairway to Heaven by Led Zeppelin.'[or]'The DJ just cued up Pink Floyd[']s 'Comfortably Numb'.[or]Pharell[']s 'Happy' is playing now.[or]'Folsom Prison Blues' by Johnny Cash is on the air.'[or]'Peace Train' by Cat Stevens can be heard playing on the radio.'[cycling]"
+	say "[one of]'The radio plays 'Stairway to Heaven' by Led Zeppelin.[or]'The DJ just cued up Pink Floyd[']s 'Comfortably Numb'.[or]Pharell[']s 'Happy' is playing now.[or]'Folsom Prison Blues' by Johnny Cash is on the air.[or]'Peace Train' by Cat Stevens can be heard playing on the radio.[cycling]"
 	
 Rule for showing action of the radio:
 	if the radio is switched on, say "Through the static, you pick up hear bits of the latest Taylor Swift song.";
-	otherwise say "The radio is silent. You're saving the batteries."
+	otherwise say "The radio is silent. You[']re saving the batteries."
 
 Instead of listening in the presence of the switched on radio:
 	carry out the showing action activity with the radio instead.
@@ -1207,7 +1222,7 @@ Instead of switching on or pushing Switch Eleven:
 		now Indicator Light Eleven is switched off;
 		stop the action.
 
-Instead of switching on Indicator Light Eleven, say "You can['] turn that on." instead.
+Instead of switching on Indicator Light Eleven, say "You can[']t turn that on." instead.
 
 instead of inserting when the noun is not a colored fuse, say "That won[']t fit in the socket." instead.
 
@@ -1237,7 +1252,7 @@ instead of unlocking when the location is Electrical Closet Eleven:
 	say "Using the screwdriver on the Swiss Army knife, you remove the cover to the electrical panel.";
 	now Electrical Panel Eleven is unlocked.
 
-instead of locking when the location is Electrical Closet Eleven, say "you can['] lock that!" instead.
+instead of locking when the location is Electrical Closet Eleven, say "You can[']t lock that!" instead.
 
 Section 9 - Electrical Closet Nine
 
@@ -1280,7 +1295,7 @@ Instead of switching on or pushing Switch Nine:
 		now Indicator Light Nine is switched off;
 		stop the action.
 
-Instead of switching on Indicator Light Nine, say "You can['] turn that on." instead.
+Instead of switching on Indicator Light Nine, say "You can[']t turn that on." instead.
 
 instead of inserting when the noun is not a colored fuse, say "That won[']t fit in the socket." instead.
 
@@ -1310,7 +1325,7 @@ instead of unlocking when the location is Electrical Closet Nine:
 	say "Using the screwdriver on the Swiss Army knife, you remove the cover to the electrical panel.";
 	now Electrical Panel Nine is unlocked.
 
-instead of locking when the location is Electrical Closet Nine, say "you can['] lock that!" instead.
+instead of locking when the location is Electrical Closet Nine, say "You can[']t lock that!" instead.
 
 Section 10 - Electrical Closet Seven
 
@@ -1353,7 +1368,7 @@ Instead of switching on or pushing Switch Seven:
 		now Indicator Light Seven is switched off;
 		stop the action.
 
-Instead of switching on Indicator Light Seven, say "You can['] turn that on." instead.
+Instead of switching on Indicator Light Seven, say "You can[']t turn that on." instead.
 
 instead of inserting when the noun is not a colored fuse, say "That won[']t fit in the socket." instead.
 
@@ -1383,7 +1398,7 @@ instead of unlocking when the location is Electrical Closet Seven:
 	say "Using the screwdriver on the Swiss Army knife, you remove the cover to the electrical panel.";
 	now Electrical Panel Seven is unlocked.
 
-instead of locking when the location is Electrical Closet Seven, say "you can['] lock that!" instead.
+instead of locking when the location is Electrical Closet Seven, say "You can[']t lock that!" instead.
 
 Section 11 - Electrical Closet Five
 
@@ -1426,7 +1441,7 @@ Instead of switching on or pushing Switch Five:
 		now Indicator Light Five is switched off;
 		stop the action.
 
-Instead of switching on Indicator Light Five, say "You can['] turn that on." instead.
+Instead of switching on Indicator Light Five, say "You can[']t turn that on." instead.
 
 instead of inserting when the noun is not a colored fuse, say "That won[']t fit in the socket." instead.
 
@@ -1456,7 +1471,7 @@ instead of unlocking when the location is Electrical Closet Five:
 	say "Using the screwdriver on the Swiss Army knife, you remove the cover to the electrical panel.";
 	now Electrical Panel Five is unlocked.
 
-instead of locking when the location is Electrical Closet Five, say "you can['] lock that!" instead.
+instead of locking when the location is Electrical Closet Five, say "You can[']t lock that!" instead.
 
 Section 12 - Electrical Closet Three
 
@@ -1499,7 +1514,7 @@ Instead of switching on or pushing Switch Three:
 		now Indicator Light Three is switched off;
 		stop the action.
 
-Instead of switching on Indicator Light Three, say "You can['] turn that on." instead.
+Instead of switching on Indicator Light Three, say "You can[']t turn that on." instead.
 
 instead of inserting when the noun is not a colored fuse, say "That won[']t fit in the socket." instead.
 
@@ -1529,7 +1544,7 @@ instead of unlocking when the location is Electrical Closet Three:
 	say "Using the screwdriver on the Swiss Army knife, you remove the cover to the electrical panel.";
 	now Electrical Panel Three is unlocked.
 
-instead of locking when the location is Electrical Closet Three, say "you can['] lock that!" instead.
+instead of locking when the location is Electrical Closet Three, say "You can[']t lock that!" instead.
 
 Section 13 - Electrical Closet One
 
@@ -1574,7 +1589,7 @@ Instead of switching on or pushing Switch One:
 		now Indicator Light One is switched off;
 		stop the action.
 
-Instead of switching on Indicator Light One, say "You can['] turn that on." instead.
+Instead of switching on Indicator Light One, say "You can[']t turn that on." instead.
 
 instead of inserting when the noun is not a colored fuse, say "That won[']t fit in the socket." instead.
 
@@ -1604,13 +1619,13 @@ instead of unlocking when the location is Electrical Closet One:
 	say "Using the screwdriver on the Swiss Army knife, you remove the cover to the electrical panel.";
 	now Electrical Panel One is unlocked.
 
-instead of locking when the location is Electrical Closet One, say "you can['] lock that!" instead.
+instead of locking when the location is Electrical Closet One, say "You can[']t lock that!" instead.
 	
 The silver key is in the Electrical Closet One. The description of the silver key is "This is a small silver key. I wonder what it unlocks."
 
 Section 14 - Storage Room
 
-The Storage Room is a dark room. The Storage Room is south of the Electrical Room. "The carnival storage room is a chaotic yet oddly functional space, tucked away from the flashing lights and lively crowds. Its walls are made of corrugated metal or weathered wood, with patches of rust and peeling paint revealing the room's age. The faint smell of grease, dust, and damp canvas hangs in the air, mingled with a hint of stale popcorn and cotton candy from the midway outside.
+The Storage Room is a dark room. The Storage Room is south of the Electrical Room. "The carnival storage room is a chaotic yet oddly functional space, tucked away from the flashing lights and lively crowds. Its walls are made of corrugated metal or weathered wood, with patches of rust and peeling paint revealing the room[']s age. The faint smell of grease, dust, and damp canvas hangs in the air, mingled with a hint of stale popcorn and cotton candy from the midway outside.
 
 Shelves line the walls, crammed with a mishmash of supplies. Boxes of lightbulbs, spools of electrical wiring, and stacks of replacement parts for rides and games are piled haphazardly, some labeled in fading marker, others left to mystery. A collection of brightly colored pennant flags and strings of carnival lights dangles from hooks, their wires tangled into an unruly knot.
 
@@ -1706,7 +1721,7 @@ The khaki light is a colored light. It is part of the control panel. The descrip
 
 instead of switching on a colored light, say "You can[']t do that!"
 
-instead of switching off a colored light, say "you can[']t do that!"
+instead of switching off a colored light, say "You can[']t do that!"
 
 [buttons]
 A colored button is a kind of device. A colored button is fixed in place. A colored button is usually switched off.
