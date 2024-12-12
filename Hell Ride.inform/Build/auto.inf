@@ -3553,6 +3553,9 @@ Constant line_ref_U257 = 561;
 Constant line_ref_U258 = 561;
 Constant line_ref_U259 = 561;
 Constant line_ref_U260 = 561;
+Constant line_ref_U261 = 561;
+Constant line_ref_U262 = 561;
+Constant line_ref_U263 = 561;
 Constant KIT_CONFIGURATION_BITMAP = 389;
 Constant KIT_CONFIGURATION_LOOKMODE = 2;
 Constant MAX_FRAME_SIZE_NEEDED = 6;
@@ -4627,7 +4630,7 @@ Constant alphabetised_text_1 = " N = Next";
 Constant alphabetised_text_2 = " P = Previous";
 Constant I7_FULL_VERSION_NUMBER = "10.1.2";
 Constant I7_VERSION_NUMBER = "10.1.2";
-Serial "241211";
+Serial "241212";
 Constant alphabetised_text_3 = ">";
 Constant alphabetised_text_4 = "A car waits to take you through the horror that is Hell Ride.";
 Constant alphabetised_text_5 = "A faux leather seat that looked great when it was new.";
@@ -8178,8 +8181,8 @@ Array bc_U1179 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U449; ];
 Array bc_U1180 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U450; ];
 Array ts_array_U503 --> [ CONSTANT_PACKED_TEXT_STORAGE; call_U2384; ];
 Array bc_U1181 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U451; ];
-Array label_associated_storage_U1665 --> [ 0; 0; ];
-Array label_associated_storage_U1666 --> [ 0; 0; ];
+Array label_associated_storage_U1667 --> [ 0; 0; ];
+Array label_associated_storage_U1668 --> [ 0; 0; ];
 Array bc_U1182 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U452; ];
 Array column_data_U45 table [ column_bits_U45; column_blanks_U44; bc_U1183; bc_U1184; bc_U1185; bc_U1186; ts_array_U504; bc_U1187; ];
 Array bc_U1183 --> [ CONSTANT_PACKED_TEXT_STORAGE; text_U453; ];
@@ -8228,7 +8231,7 @@ Array name_array21 --> [ 'car'; 'seat'; 'supporters//p'; ];
 Array name_array22 --> [ 'coupon'; 'things//p'; ];
 Array name_array23 --> [ 'parking'; 'lot'; 'rooms//p'; ];
 Array name_array24 --> [ 'kiosk'; 'rooms//p'; ];
-Array name_array25 --> [ 'parking'; 'attendant'; 'men//p'; ];
+Array name_array25 --> [ 'parking'; 'attendant'; 'men//p'; 'attendent'; ];
 Array name_array26 --> [ 'parking'; 'ticket'; 'things//p'; ];
 Array name_array27 --> [ 'parking'; 'stub'; 'things//p'; ];
 Array name_array28 --> [ 'beater'; 'car'; 'containers//p'; 'vehicle'; ];
@@ -8252,7 +8255,7 @@ Array name_array45 --> [ 'candy'; 'apple'; 'things//p'; ];
 Array name_array46 --> [ 'cotton'; 'candy'; 'things//p'; ];
 Array name_array47 --> [ 'soft'; 'pretzel'; 'things//p'; ];
 Array name_array48 --> [ 'markings'; 'things//p'; 'marking'; 'sign'; 'signs'; ];
-Array name_array49 --> [ 'strongman'; 'attendant'; 'people//p'; ];
+Array name_array49 --> [ 'strongman'; 'attendant'; 'people//p'; 'attendent'; ];
 Array name_array50 --> [ 'teddy'; 'bear'; 'things//p'; ];
 Array name_array51 --> [ 'swiss'; 'army'; 'knife'; 'containers//p'; ];
 Array name_array52 --> [ 'poster'; 'of'; 'taylor'; 'swift'; 'things//p'; ];
@@ -8271,7 +8274,7 @@ Array name_array64 --> [ 'sheer'; 'veil'; 'things//p'; ];
 Array name_array65 --> [ 'stage'; 'things//p'; ];
 Array name_array66 --> [ 'folding'; 'chair'; 'supporters//p'; ];
 Array name_array67 --> [ 'ride'; 'entrance'; 'rooms//p'; ];
-Array name_array68 --> [ 'ride'; 'attendant'; 'men//p'; ];
+Array name_array68 --> [ 'ride'; 'attendant'; 'men//p'; 'attendent'; ];
 Array name_array69 --> [ 'hell'; 'ride'; 'car'; 'vehicles//p'; ];
 Array name_array70 --> [ 'stocks'; 'room'; 'rooms//p'; ];
 Array name_array71 --> [ 'wooden'; 'stocks'; 'supporters//p'; ];
@@ -9175,7 +9178,8 @@ K10_man -> I_parking_attendant_U1    with short_name bc_U291
     with IK10_Count 0
     with K10_man_Next I_cashier_U1
     with action_bitmap 0 0 0 0 0 0
-    with name 'parking' 'attendant' 'men//p'
+    with parse_name parse_name26
+    with name 'parking' 'attendant' 'men//p' 'attendent'
     with initial bc_U292
     with plural bc_U293
     with article bc_U294
@@ -9426,7 +9430,8 @@ K10_man -> I_ride_attendant_U1    with short_name bc_U538
     with IK10_Count 2
     with K10_man_Next 0
     with action_bitmap 0 0 0 0 0 0
-    with name 'ride' 'attendant' 'men//p'
+    with parse_name parse_name69
+    with name 'ride' 'attendant' 'men//p' 'attendent'
     with initial bc_U540
     with plural bc_U541
     with article bc_U542
@@ -9510,7 +9515,8 @@ K8_person -> I_strongman_attendant_U1    with short_name bc_U424
     with IK8_Count 3
     with K8_person_Next I_little_egypt_U1
     with action_bitmap 0 0 0 0 0 0
-    with name 'strongman' 'attendant' 'people//p'
+    with parse_name parse_name50
+    with name 'strongman' 'attendant' 'people//p' 'attendent'
     with initial bc_U425
     with plural bc_U426
     with article bc_U427
@@ -15516,7 +15522,7 @@ Global max_z_object;
             rtrue;
         }
         if ((R == call_U2397)) {
-            print "After going south when the location is the parking lot and the Kiosk is unvisited and the player carries the parking ticket";
+            print "After going south from the parking lot when the Kiosk is unvisited and the player carries the parking ticket";
             rtrue;
         }
         if ((R == call_U2398)) {
@@ -36387,7 +36393,27 @@ Global max_z_object;
 ];
 [ call_U387 forbid_breaks rv original_deadflag;
     (original_deadflag = deadflag);
+    if ((action == ##Go)) {
+        (rv = (call_U2397)());
+        if (rv) {
+            if ((rv == 2)) {
+                return reason_the_action_failed;
+            }
+            return call_U2397;
+        }
+        ((latest_rule_result-->(0)) = 0);
+    } else {
+        if (say__p) {
+            RulebookParBreak(forbid_breaks);
+        }
+    }
     if ((action == ##A_hitting)) {
+        if ((original_deadflag ~= deadflag)) {
+            rfalse;
+        }
+        if (say__p) {
+            RulebookParBreak(forbid_breaks);
+        }
         (rv = (call_U2408)());
         if (rv) {
             if ((rv == 2)) {
@@ -36416,32 +36442,6 @@ Global max_z_object;
             return call_U2451;
         }
         ((latest_rule_result-->(0)) = 0);
-    } else {
-        if (say__p) {
-            RulebookParBreak(forbid_breaks);
-        }
-    }
-    if ((action == ##Go)) {
-        if ((original_deadflag ~= deadflag)) {
-            rfalse;
-        }
-        if (say__p) {
-            RulebookParBreak(forbid_breaks);
-        }
-        (rv = (call_U2397)());
-        if (rv) {
-            if ((rv == 2)) {
-                return reason_the_action_failed;
-            }
-            return call_U2397;
-        }
-        ((latest_rule_result-->(0)) = 0);
-    } else {
-        if (say__p) {
-            RulebookParBreak(forbid_breaks);
-        }
-    }
-    if ((action == ##Take)) {
         if ((original_deadflag ~= deadflag)) {
             rfalse;
         }
@@ -68547,7 +68547,7 @@ Global max_z_object;
         jump L_Say0;
     }
     ParaContent();
-    print "You head west through the midway, the bright lights of the carnival fading behind you as you approach a wooden booth. A sign above the entrance reads ~Little Egypt Show - A Journey Into the Mysterious and Exotic!~ A rotund attendant, wearing a fez and a dazzling smile, gestures to a small sign beside him that says ~Dime Admission.~";
+    print "You head west through the midway, the bright lights of the carnival fading behind you as you approach a wooden booth. A sign above the entrance reads ~Little Egypt Show - A Journey Into the Mysterious and Exotic!~ A rotund barker, wearing a fez and a dazzling smile, gestures to a small sign beside him that says ~Dime Admission.~";
     .L_Say0;
     ParaContent();
     print "^^You are standing in front of a dark and mysterious tent filled with illusions and exotic performers. Perhaps there's a fortune teller inside, offering cryptic clues about your journey or a hidden artifact that can be collected. There is a stage in front of the tent. The Barker is encouraging you to step up, pay for, and enjoy the Little Egypt Show.";
@@ -72967,7 +72967,7 @@ Global max_z_object;
     ParaContent();
     print "'";
     ParaContent();
-    print "s pretty good.^^I hope you enjoy it. d.";
+    print "s pretty good.^^I hope you enjoy it.^^d.";
     rtrue;
 ];
 [ call_U2385;
@@ -73116,12 +73116,18 @@ Global max_z_object;
             DB_Rule(call_U2393, 950, 0);
         }
         if ((I_parking_attendant_U1 == CarrierOf(I_parking_ticket_U1))) {
-            (say__p = 1);
-            ParaContent();
-            print "Given.";
-            print "^";
             WriteGProperty(OBJECT_TY, I_parking_ticket_U1, A_P_price, 300);
             MoveObject(I_coupon_U1, I_parking_attendant_U1);
+            (say__p = 1);
+            ParaContent();
+            print "Given. The price of a parking ticket is now ";
+            ParaContent();
+            @push self;
+            E6(GProperty(OBJECT_TY, (self = I_parking_ticket_U1), A_P_price));
+            @pull self;
+            ParaContent();
+            print ".";
+            print "^";
         } else {
             if ((player == CarrierOf(I_parking_ticket_U1))) {
                 (say__p = 1);
@@ -73210,12 +73216,17 @@ Global max_z_object;
     rfalse;
 ];
 [ call_U2397;
-    if ((((action == ##Go)) && ((((actor == player)) && ((((noun == I_south_U1)) && (((((self = actor),1)) && ((((real_location == I_parking_lot_U1)) && (((call_U246(I_kiosk_U1)) && ((player == CarrierOf(I_parking_ticket_U1))))))))))))))) {
+    if ((((action == ##Go)) && ((((actor == player)) && ((((((noun == I_south_U1)) && (((((((MStack-->(MstVON(var_id_U42, 0))) == I_parking_lot_U1)) && (((MStack-->(MstVON(var_id_U42, 0))) ofclass K1_room)))) && (((MStack-->(MstVON(var_id_U42, 1))) ~= 0)))))) && (((((self = actor),1)) && (((call_U246(I_kiosk_U1)) && ((player == CarrierOf(I_parking_ticket_U1))))))))))))) {
         (self = noun);
         if (debug_rules) {
             DB_Rule(call_U2397, 954, 0);
         }
         DisplayFigure((ResourceIDsOfFigures-->(I_figure_of_ticketbooth_U1)), 0);
+        (say__p = 1);
+        ParaContent();
+        @push self;
+        TEXT_TY_Say(GProperty(OBJECT_TY, (self = I_parking_lot_U1), A_description));
+        @pull self;
         RulebookSucceeds(0, 0);
         rtrue;
     } else {
@@ -73631,7 +73642,7 @@ Global max_z_object;
         }
         (say__p = 1);
         ParaContent();
-        print "You hand over a dime, and the attendant nods, waving you through. As you step past the entrance, the air feels thicker, almost humid, and the sounds of the carnival fade away. You've entered an entirely different world now-one filled with the scents of incense and exotic spices, and the low, hypnotic music of a faraway land. Before you, a series of dimly lit tents stretch out, their flaps slightly swaying in the breeze. Intrigued, you take your first step into the Little Egypt Show. You can now head west into the show.";
+        print "You hand over a dime, and the barker nods, waving you through. As you step past the entrance, the air feels thicker, almost humid, and the sounds of the carnival fade away. You've entered an entirely different world now-one filled with the scents of incense and exotic spices, and the low, hypnotic music of a faraway land. Before you, a series of dimly lit tents stretch out, their flaps slightly swaying in the breeze. Intrigued, you take your first step into the Little Egypt Show. You can now head west into the show.";
         print "^";
         RulebookSucceeds(0, 0);
         rtrue;
@@ -74357,14 +74368,14 @@ Global max_z_object;
         }
         (say__p = 1);
         ParaContent();
-        if (((label_associated_storage_U1666-->(0)) == 0)) {
-            ((label_associated_storage_U1665-->(0)) = (I7_SOO_CYC)((label_associated_storage_U1665-->(0)),5));
-            ((label_associated_storage_U1666-->(0)) = 1);
+        if (((label_associated_storage_U1668-->(0)) == 0)) {
+            ((label_associated_storage_U1667-->(0)) = (I7_SOO_CYC)((label_associated_storage_U1667-->(0)),5));
+            ((label_associated_storage_U1668-->(0)) = 1);
         }
         if ((say__comp == 0)) {
-            ((label_associated_storage_U1666-->(0)) = 0);
+            ((label_associated_storage_U1668-->(0)) = 0);
         }
-        switch ((((label_associated_storage_U1665-->(0))%(5 + 1)) - 1)) {
+        switch ((((label_associated_storage_U1667-->(0))%(5 + 1)) - 1)) {
             0:
                 ParaContent();
                 print "~The radio plays ~Stairway to Heaven~ by Led Zeppelin.";
@@ -79482,6 +79493,79 @@ Global max_z_object;
     DetectPluralWord(original_wn, n);
     return n;
 ];
+[ parse_name26 original_wn group_wn try_from_wn n f w rv g ss spn pass pass1_n pass2_n;
+    #ifdef DEBUG;
+        if ((parser_trace >= 3)) {
+            print "Parse_name called^";
+        }
+    #endif;
+    if ((parser_action == ##TheSame)) {
+        rfalse;
+    }
+    (original_wn = wn);
+    (pass = 1);
+    while ((pass <= 3)) {
+        (wn = original_wn);
+        (try_from_wn = wn);
+        (f = 0);
+        (n = 0);
+        while (1) {
+            if ((((parser_action ~= ##TheSame)) && ((pass == 1)))) {
+                while (WordInProperty(NextWordStopped(), self, A_name)) {
+                    (f = 1);
+                }
+                (wn)--;
+                (try_from_wn = wn);
+            }
+            if ((((pass == 1)) || ((pass == 2)))) {
+            }
+            if ((((parser_action ~= ##TheSame)) && ((pass == 1)))) {
+                while (WordInProperty(NextWordStopped(), self, A_name)) {
+                    (f = 1);
+                }
+                (wn)--;
+                (try_from_wn = wn);
+            }
+            break;
+        }
+        while (WordInProperty(NextWordStopped(), self, A_name)) {
+            (n)++;
+        }
+        if (((f) || ((n > 0)))) {
+            (n = ((n + try_from_wn) - original_wn));
+        }
+        if ((pass == 1)) {
+            (pass1_n = n);
+        }
+        if ((pass == 2)) {
+            (pass2_n = n);
+        }
+        (pass)++;
+    }
+    #ifdef DEBUG;
+        if ((parser_trace >= 3)) {
+            print "Pass 1: ";
+            print pass1_n;
+            print " Pass 2: ";
+            print pass2_n;
+            print " Pass 3: ";
+            print n;
+            print "^";
+        }
+    #endif;
+    if ((pass1_n > n)) {
+        (n = pass1_n);
+    }
+    if ((pass2_n > n)) {
+        (n = pass2_n);
+    }
+    (wn = (original_wn + n));
+    if ((n == 0)) {
+        return -1;
+    }
+    DetectPluralWord(original_wn, n);
+    return n;
+];
 [ parse_name29 original_wn group_wn try_from_wn n f w rv g ss spn pass pass1_n pass2_n;
     #ifdef DEBUG;
         if ((parser_trace >= 3)) {
@@ -80017,6 +80101,79 @@ Global max_z_object;
     DetectPluralWord(original_wn, n);
     return n;
 ];
+[ parse_name50 original_wn group_wn try_from_wn n f w rv g ss spn pass pass1_n pass2_n;
+    #ifdef DEBUG;
+        if ((parser_trace >= 3)) {
+            print "Parse_name called^";
+        }
+    #endif;
+    if ((parser_action == ##TheSame)) {
+        rfalse;
+    }
+    (original_wn = wn);
+    (pass = 1);
+    while ((pass <= 3)) {
+        (wn = original_wn);
+        (try_from_wn = wn);
+        (f = 0);
+        (n = 0);
+        while (1) {
+            if ((((parser_action ~= ##TheSame)) && ((pass == 1)))) {
+                while (WordInProperty(NextWordStopped(), self, A_name)) {
+                    (f = 1);
+                }
+                (wn)--;
+                (try_from_wn = wn);
+            }
+            if ((((pass == 1)) || ((pass == 2)))) {
+            }
+            if ((((parser_action ~= ##TheSame)) && ((pass == 1)))) {
+                while (WordInProperty(NextWordStopped(), self, A_name)) {
+                    (f = 1);
+                }
+                (wn)--;
+                (try_from_wn = wn);
+            }
+            break;
+        }
+        while (WordInProperty(NextWordStopped(), self, A_name)) {
+            (n)++;
+        }
+        if (((f) || ((n > 0)))) {
+            (n = ((n + try_from_wn) - original_wn));
+        }
+        if ((pass == 1)) {
+            (pass1_n = n);
+        }
+        if ((pass == 2)) {
+            (pass2_n = n);
+        }
+        (pass)++;
+    }
+    #ifdef DEBUG;
+        if ((parser_trace >= 3)) {
+            print "Pass 1: ";
+            print pass1_n;
+            print " Pass 2: ";
+            print pass2_n;
+            print " Pass 3: ";
+            print n;
+            print "^";
+        }
+    #endif;
+    if ((pass1_n > n)) {
+        (n = pass1_n);
+    }
+    if ((pass2_n > n)) {
+        (n = pass2_n);
+    }
+    (wn = (original_wn + n));
+    if ((n == 0)) {
+        return -1;
+    }
+    DetectPluralWord(original_wn, n);
+    return n;
+];
 [ parse_name55 original_wn group_wn try_from_wn n f w rv g ss spn pass pass1_n pass2_n;
     #ifdef DEBUG;
         if ((parser_trace >= 3)) {
@@ -80091,6 +80248,79 @@ Global max_z_object;
     return n;
 ];
 [ parse_name61 original_wn group_wn try_from_wn n f w rv g ss spn pass pass1_n pass2_n;
+    #ifdef DEBUG;
+        if ((parser_trace >= 3)) {
+            print "Parse_name called^";
+        }
+    #endif;
+    if ((parser_action == ##TheSame)) {
+        rfalse;
+    }
+    (original_wn = wn);
+    (pass = 1);
+    while ((pass <= 3)) {
+        (wn = original_wn);
+        (try_from_wn = wn);
+        (f = 0);
+        (n = 0);
+        while (1) {
+            if ((((parser_action ~= ##TheSame)) && ((pass == 1)))) {
+                while (WordInProperty(NextWordStopped(), self, A_name)) {
+                    (f = 1);
+                }
+                (wn)--;
+                (try_from_wn = wn);
+            }
+            if ((((pass == 1)) || ((pass == 2)))) {
+            }
+            if ((((parser_action ~= ##TheSame)) && ((pass == 1)))) {
+                while (WordInProperty(NextWordStopped(), self, A_name)) {
+                    (f = 1);
+                }
+                (wn)--;
+                (try_from_wn = wn);
+            }
+            break;
+        }
+        while (WordInProperty(NextWordStopped(), self, A_name)) {
+            (n)++;
+        }
+        if (((f) || ((n > 0)))) {
+            (n = ((n + try_from_wn) - original_wn));
+        }
+        if ((pass == 1)) {
+            (pass1_n = n);
+        }
+        if ((pass == 2)) {
+            (pass2_n = n);
+        }
+        (pass)++;
+    }
+    #ifdef DEBUG;
+        if ((parser_trace >= 3)) {
+            print "Pass 1: ";
+            print pass1_n;
+            print " Pass 2: ";
+            print pass2_n;
+            print " Pass 3: ";
+            print n;
+            print "^";
+        }
+    #endif;
+    if ((pass1_n > n)) {
+        (n = pass1_n);
+    }
+    if ((pass2_n > n)) {
+        (n = pass2_n);
+    }
+    (wn = (original_wn + n));
+    if ((n == 0)) {
+        return -1;
+    }
+    DetectPluralWord(original_wn, n);
+    return n;
+];
+[ parse_name69 original_wn group_wn try_from_wn n f w rv g ss spn pass pass1_n pass2_n;
     #ifdef DEBUG;
         if ((parser_trace >= 3)) {
             print "Parse_name called^";

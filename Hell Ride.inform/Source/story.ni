@@ -216,7 +216,7 @@ Before printing the name of an unlit lit electric lamp, say "extinguished ".
 
 Section 5 - Grues
 
-Test grues with "test parking / s / buy hell ride ticket / s / give hell ride ticket to ride attendant / s / e / s / s"
+Test grues with "s / buy hell ride ticket / s / give hell ride ticket to ride attendant / s / e / s / s"
 
 The lurking grue is a backdrop. The lurking grue is everywhere. The description of the lurking grue is "The grue is a sinister, lurking presence in the dark places of the earth. Its favorite diet is humans, but its insatiable appetite is tempered by its fear of light. No grue has ever been seen by the light of day, and few have survived its fearsome jaws to tell the tale."
 
@@ -338,7 +338,8 @@ For fun, we reverse engineered parts of Infocom[']s game format. We found the di
 We developed two prototypes: Diner and Hell Ride. Diner was about bank robbers coming into the diner where you are a short order cook and have to save the day. Hell Ride was pretty close to what you find here. I decided to implement it using modern tools. It[']s pretty good.
 
 I hope you enjoy it.
-d."
+
+ d."
 
 Chapter 4- Figures and Sounds
 
@@ -430,7 +431,7 @@ The parking lot, while utilitarian, is alive with anticipation, serving as the g
 
 The midway is to the south. There is a blueberry bush here. [if blueberry bush contains blueberries]There are blueberries on the bush.[otherwise]The bush has been picked clean.[end if][if the dime is in the Parking Lot] You see something shiny on the ground.[end if]"
 
-The Parking Attendant is a man in the the parking lot. The parking attendant carries the parking ticket and the parking stub. The price of the parking ticket is $5.00. The description of Parking Attendant is "This is a bored teenager just trying to earn enough money to take his sweetie to the movies next week.[if the parking attendant carries the parking ticket] He has a parking ticket. The price of a parking ticket is [the price of the parking ticket].[end if]". 
+The Parking Attendant is a man in the the parking lot. Understand "attendent" as attendant. The parking attendant carries the parking ticket and the parking stub. The price of the parking ticket is $5.00. The description of Parking Attendant is "This is a bored teenager just trying to earn enough money to take his sweetie to the movies next week.[if the parking attendant carries the parking ticket] He has a parking ticket. The price of a parking ticket is [the price of the parking ticket].[end if]". 
 
 The beater car is an enterable open container in the parking lot. The beater car is fixed in place. Understand "vehicle" as the beater car. The description of the beater car is "This is your car. It[']s seen better days. You can see the seat, the dashboard, and the glove box."
 
@@ -459,9 +460,9 @@ After taking blueberries:
 	
 instead of giving the coupon to the parking attendant:
 	if the parking attendant carries the parking ticket:
-		say "Given.";
 		now the price of the parking ticket is $3.00;
 		now the parking attendant carries the coupon;	
+		say "Given. The price of a parking ticket is now [the price of the parking ticket].";
 	otherwise if the player carries the parking ticket:
 		say "Given. But you already bought a parking ticket.";
 		now the parking attendant carries the coupon;
@@ -480,8 +481,9 @@ instead of going south when the location is the parking lot and the player is in
 
 Section 2 - Kiosk
 
-After going south when the location is the parking lot and the Kiosk is unvisited and the player carries the parking ticket:
-	display Figure of TicketBooth.
+After going south from the parking lot when the Kiosk is unvisited and the player carries the parking ticket:
+	display Figure of TicketBooth;
+	say "[the description of the parking lot]"..
 	
 Before looking when the location is the Kiosk:
 	display Figure of TicketBooth.
@@ -579,7 +581,7 @@ Spectators gather around, cheering on participants and offering lighthearted jab
 
 The markings are here. The markings are scenery. Understand "marking" and "sign" and "signs" as markings. The description of markings is "There are five levels marked on the pole: Weakling, Getting There, Average, Almost There, and Muscle Man."
 
-The Strongman Attendant is here. The description of the Strongman Attendant is "An Attendant is standing here [if strongman attendant is carrying the mallet]holding a mallet[end if]." 
+The Strongman Attendant is here. Understand "attendent" as attendant. The description of the Strongman Attendant is "An Attendant is standing here [if strongman attendant is carrying the mallet]holding a mallet[end if]." 
 
 The Strongman Attendant carries the teddy bear, a Swiss army knife, and a poster of Taylor Swift, the magenta fuse, and the mallet. 
 
@@ -654,7 +656,7 @@ Before going west when the location is the kiosk and the Show Facade is unvisite
 Before looking when the location is the Show Facade:
 	display Figure of LittleEgyptFacade.
 
-Show Facade is a room. Show Facade is east of Show Tent. Show Facade is outdoors. "[if location is unvisited]You head west through the midway, the bright lights of the carnival fading behind you as you approach a wooden booth. A sign above the entrance reads 'Little Egypt Show – A Journey Into the Mysterious and Exotic!' A rotund attendant, wearing a fez and a dazzling smile, gestures to a small sign beside him that says 'Dime Admission.'[end if] 
+Show Facade is a room. Show Facade is east of Show Tent. Show Facade is outdoors. "[if location is unvisited]You head west through the midway, the bright lights of the carnival fading behind you as you approach a wooden booth. A sign above the entrance reads 'Little Egypt Show – A Journey Into the Mysterious and Exotic!' A rotund barker, wearing a fez and a dazzling smile, gestures to a small sign beside him that says 'Dime Admission.'[end if] 
 
 You are standing in front of a dark and mysterious tent filled with illusions and exotic performers. Perhaps there’s a fortune teller inside, offering cryptic clues about your journey or a hidden artifact that can be collected. There is a stage in front of the tent. The Barker is encouraging you to step up, pay for, and enjoy the Little Egypt Show.[if location is unvisited]The barker cries: 
 
@@ -672,7 +674,7 @@ Check going west when the location is the Show Facade and the barker is carrying
 	Continue the action.
 
 After giving when the noun is dime and the second noun is barker:
-	say "You hand over a dime, and the attendant nods, waving you through. As you step past the entrance, the air feels thicker, almost humid, and the sounds of the carnival fade away. You’ve entered an entirely different world now—one filled with the scents of incense and exotic spices, and the low, hypnotic music of a faraway land. Before you, a series of dimly lit tents stretch out, their flaps slightly swaying in the breeze. Intrigued, you take your first step into the Little Egypt Show. You can now head west into the show."
+	say "You hand over a dime, and the barker nods, waving you through. As you step past the entrance, the air feels thicker, almost humid, and the sounds of the carnival fade away. You’ve entered an entirely different world now—one filled with the scents of incense and exotic spices, and the low, hypnotic music of a faraway land. Before you, a series of dimly lit tents stretch out, their flaps slightly swaying in the breeze. Intrigued, you take your first step into the Little Egypt Show. You can now head west into the show."
 
 Section 6 - Show Tent	
 
@@ -726,7 +728,7 @@ Section 7 - Head of the Line
 
 Head of the Line is a room. Head of the Line is south of Kiosk. Head of the Line is north of Ride Entrance. The Head of the Line is outdoors. "You are standing in front of a ticket taker with his hand open waiting for your ticket. The entrance to the ride is south of here. The ride attendant tells you that you[']re lucky you showed up when you did because this will be the last trip through Hell Ride. You notice that all the other cars are empty."
 
-The Ride Attendant is a man in Head of the Line. The description of the Ride Attendant is "This is another bored teenager. His thoughts are entirely focused on a cheeseburger for lunch.";
+The Ride Attendant is a man in Head of the Line. Understand "attendent" as attendant. The description of the Ride Attendant is "This is another bored teenager. His thoughts are entirely focused on a cheeseburger for lunch.";
 
 Check going south when the location is Head of the Line and the Ride Attendant does not have the hell ride ticket:
 	say "You[']ll need a ticket to go that way.";
