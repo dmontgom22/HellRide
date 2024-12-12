@@ -7,7 +7,7 @@ Using Inform kit 'EnglishLanguageKit' (priority 1).
 Using Inform kit 'WorldModelKit' (priority 2).
 Using Inform kit 'CommandParserKit' (priority 3).
 756 Preform nonterminals read from C:\Program Files\Inform\Internal\Languages\English\Syntax.preform
-I've now read your source text, which is 25289 words long.
+I've now read your source text, which is 21568 words long.
 Included: core, naming, instance counting, interactive fiction, spatial model, backdrops, bibliographic data, chronology, devices, mapping, persons, player, regions, scenes, scoring, timed rules, times of day, actions, going, command, showme, multimedia, figures, sounds, glulx external files
 Excluded: 
 I've also read Basic Inform by Graham Nelson, which is 7691 words long.
@@ -26,6 +26,7 @@ I've also read Basic Screen Effects by Emily Short, which is 2223 words long.
 Phase I ... Dividing source into compilation units
 -----------------------------------------------------
 
+.... Task__write_XML_headings_file() took 1cs
 
 
 -----------------------------------------------------
@@ -49,14 +50,15 @@ Loading kinds definitions from C:\Program Files\Inform\Internal\Inter\CommandPar
 Phase III ... Pre-pass through major nodes
 -----------------------------------------------------
 
-.... MajorNodes__pre_pass() took 8cs
+.... MajorNodes__pre_pass() took 6cs
+.... Task__verify() took 1cs
 
 
 -----------------------------------------------------
 Phase IV ... First pass through major nodes
 -----------------------------------------------------
 
-.... MajorNodes__pass_1() took 7cs
+.... MajorNodes__pass_1() took 6cs
 
 
 -----------------------------------------------------
@@ -76,43 +78,42 @@ Phase VI ... Making the model world
 Phase VII ... Completing the model world
 -----------------------------------------------------
 
+.... World__stages_II_and_III() took 1cs
 
 
 -----------------------------------------------------
 Phase VIII ... Tables and grammar
 -----------------------------------------------------
 
-.... Understand__traverse() took 1cs
 
 
 -----------------------------------------------------
 Phase IX ... Augment model world
 -----------------------------------------------------
 
-.... World__stage_V() took 1cs
+.... World__stage_V() took 2cs
 
 
 -----------------------------------------------------
 Phase X ... Phrases and rules
 -----------------------------------------------------
 
-.... ImperativeDefinitions__assess_all() took 8cs
+.... ImperativeDefinitions__assess_all() took 7cs
 
 
 -----------------------------------------------------
 Phase XI ... Generating inter (1)
 -----------------------------------------------------
 
-.... RTKindConstructors__compile() took 4cs
-.... RTBibliographicData__compile_constants() took 1cs
+.... RTKindConstructors__compile() took 5cs
 
 
 -----------------------------------------------------
 Phase XII ... Generating inter (2)
 -----------------------------------------------------
 
-.... CompletionModule__compile() took 1cs
-.... InferenceSubjects__emit_all() took 1cs
+.... RTKindConstructors__compile_permissions() took 1cs
+.... ImperativeDefinitions__compile_first_block() took 1cs
 
 
 ==== Phase XII.1 ... Slashing command grammar ====
@@ -127,9 +128,8 @@ Phase XII ... Generating inter (2)
 Phase XIII ... Generating inter (3)
 -----------------------------------------------------
 
-.... Sequence__undertake_queued_tasks() took 128cs
-.... Sequence__undertake_queued_tasks() took 1cs
-.... RTPhrasebook__compile_entries() took 1cs
+.... Sequence__undertake_queued_tasks() took 125cs
+.... RTPhrasebook__compile_entries() took 3cs
 
 
 -----------------------------------------------------
@@ -150,7 +150,6 @@ Phase XIV ... Generating inter (4)
 Phase XV ... Generating inter (5)
 -----------------------------------------------------
 
-.... Sequence__undertake_queued_tasks() took 1cs
 Providing for a total heap of 65536, given requirement of 65536
 .... Sequence__lint_inter() took 3cs
 
@@ -165,7 +164,7 @@ Phase XVI ... Bibliographic work
 Phase XVII ... Complete
 -----------------------------------------------------
 
-Compile CPU time: 176 centiseconds
+Compile CPU time: 171 centiseconds
 
 
 ==== Phase XVII.1 ... step 1/15: read <- *memory ====
@@ -210,7 +209,7 @@ Compile CPU time: 176 centiseconds
 
 ==== Phase XVII.11 ... step 11/15: eliminate-redundant-labels ====
 
-2580 redundant label(s) removed
+2572 redundant label(s) removed
 
 
 ==== Phase XVII.12 ... step 12/15: eliminate-redundant-operations ====
