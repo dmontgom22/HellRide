@@ -1,7 +1,8 @@
 # HellRide
  Hell Ride - A Ride to remember...
  
-In the early 1980's, I had an Apple II Plus. And the very first game I ever 
+In the early 1980's, I had an Apple II Plus computer with 64K of RAM, dual 5.25"
+floppy disks, and a color monitor as big as a television. And the very first game I ever 
 bought was Infocom's Zork I: The Great Underground Empire. This was cool. It was all 
 text-based. The game described your surroundings and you interacted with commands that 
 say what you want to do. This "Interactive Fiction" really evoked in a game what I 
@@ -12,7 +13,7 @@ more. I played them all with my best friend Andy.
 Andy and I were software developers at the time and we thought, "We can do this!" So 
 we set out to do this. We developed a game engine with a natural language parser And
 it was pretty good. We could support most of the kinds of things they did, certainly
-less graceful but pretty good. In fact, our parser was better than there's in a case
+less graceful but pretty good. In fact, our parser was better than theirs in a case
 where the sentence was ambiguous. e.g. "Walk into the room with the lamnp." Is the
 player carrying the lamp? Or is the lamp in the room? 
 

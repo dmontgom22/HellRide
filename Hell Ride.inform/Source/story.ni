@@ -329,17 +329,36 @@ When play begins:
 	 choose row 1 in Table of Basic Help Options;
 	 now description entry is "Hell Ride - A Ride to remember...
 
-In the early 1980[']s, I had an Apple II Plus. And the very first game I ever bought was Infocom[']s Zork I: The Great Underground Empire. This was cool. It was all text-based. The game described your surroundings and you interacted with commands that say what you wanted to do. This 'Interactive Fiction' really evoked in a game what I appreciated about reading: rich descriptions, colorful characters, and the like. After Zork I, there was Zork II and III. Enchanter, Moonmist, Suspect, and so many more. I played them all with my best friend Andy.
+In the early 1980's, I had an Apple II Plus computer with 64K of RAM, dual 5.25[quotation mark]
+floppy disks, and a color monitor as big as a television. And the very first game I ever 
+bought was Infocom's Zork I: The Great Underground Empire. This was cool. It was all 
+text-based. The game described your surroundings and you interacted with commands that 
+say what you wanted to do. This 'Interactive Fiction' really evoked in a game what I 
+appreciated most about reading: rich descriptions, colorful characters, and the like. 
+After Zork I, there was Zork II and III. Enchanter, Moonmist, Suspect, and so many 
+more. I played them all with my best friend Andy.
 
-Andy and I were software developers at the time and we thought, 'We can do this!' So we set out to do this. We developed a game engine with a natural language parser And it was pretty good. We could support most of the kinds of things they did, certainly less graceful but pretty good. In fact, our parser was better than theirs in the case where the sentence was ambiguous. e.g. 'Walk into the room with the lamp.' Is the player carrying the lamp? Or is the lamp in the room?
+Andy and I were software developers at the time and we thought, 'We can do this!' So 
+we set out to do this. We developed a game engine with a natural language parser And
+it was pretty good. We could support most of the kinds of things they did, certainly
+less graceful but pretty good. In fact, our parser was better than theirs in a case
+where the sentence was ambiguous. e.g. 'Walk into the room with the lamp.' Is the
+player carrying the lamp? Or is the lamp in the room? 
 
-For fun, we reverse engineered parts of Infocom[']s game format. We found the dictionary, certain text tokens use for text substitution, the game text. We also discovered the first example of compression I had ever seen and it just about made my head explode. They stored all ASCII characters in five bits! Pow! Mind blown. I had never considered anything like that. Just another hook.
+For fun, we reverse engineered parts of Infocom's game format. We found the dictionary,
+certain text tokens use for text substitution, the game text. We also discovered the
+first example of compression I had ever seen and it just about made my head explode.
+They stored all ASCII characters in five bits! Pow! Mind blown. I had never considered
+anything like that. Just another hook.
 
-We developed two prototypes: Diner and Hell Ride. Diner was about bank robbers coming into the diner where you are a short order cook and have to save the day. Hell Ride was pretty close to what you find here. I decided to implement it using modern tools. It[']s pretty good.
+We developed two prototypes: Diner and Hell Ride. Diner was about bank robbers coming 
+into the diner where you are a short order cook and have to save the day. Hell Ride
+was pretty close to what you find here. I decided to implement it using modern tools.
+It's pretty good.
 
-I hope you enjoy it.
+I hope you enjoy it,
 
- d."
+d."
 
 Chapter 4- Figures and Sounds
 
@@ -483,7 +502,7 @@ Section 2 - Kiosk
 
 After going south from the parking lot when the Kiosk is unvisited and the player carries the parking ticket:
 	display Figure of TicketBooth;
-	say "[the description of the parking lot]"..
+	say "[the description of the kiosk]"..
 	
 Before looking when the location is the Kiosk:
 	display Figure of TicketBooth.
