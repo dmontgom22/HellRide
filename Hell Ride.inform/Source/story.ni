@@ -11,7 +11,7 @@ The story title is "Hell Ride".
 The story author is "No Shoes".
 The story headline is "The ride of a lifetime...".
 The story genre is "Horror".
-The release number is 103.
+The release number is 104.
 The story description is "You've decided to stay and enjoy the carnival anyway."
 The story creation year is 2024.
 
@@ -315,14 +315,15 @@ After reading a command:
 		say "Please do not say please.";
 		reject the player's command.
 
+[toad away]
 every turn:
 	if turn count is 100:
-		say "Over the loud speaker, an announcment blares: Attention please. There is a vehicle being towed from the parking lot for parking illegally. The license plate number of the car is '862901'.[run paragraph on]";
-		if the parking stub is on the dashboard, say " You breathe a sigh of relief as you realize that[']s not your plate. I guess it[']s a good thing you remembered to place the parking stub on the dashboard.";
-		if the parking stub is not on the dashboard, say " Your heart sinks as you realize that is your plate.";
-		now the beater car is in the holding room.
-
-
+		say "Over the loud speaker, an announcment blares: Attention please. There is a vehicle being towed from the parking lot for parking illegally. The license plate of the car is '862901'.[run paragraph on]";
+		if the parking stub is on the dashboard:
+			say " You breathe a sigh of relief as you realize that[']s not your plate. I guess it[']s a good thing you remembered to place the parking stub on the dashboard.";
+		if the parking stub is not on the dashboard:
+			say " Your heart sinks as you realize that is your plate. You race to the parking lot in time to see the tow truck pull away with your car in tow";
+			end the story finally saying "You start the long walk home."
 
 Chapter 4- Figures and Sounds
 
@@ -388,11 +389,13 @@ Chapter 1 - The Midway
 
 Section 1 - Parking Lot
 
-Test Live with "brief / Test Parking / Test Egypt / Test Concession / Test Striker / Test Misc / Test Backstage".
+Test Life with "brief / Test Parking / Test Egypt / Test Concession / Test Striker / Test Misc / Test Backstage".
 
-Test Die with "brief / Test Parking / Test Egypt / Test Concession / Test Striker / Test Misc / Test Ride".
+Test Death with "brief / Test Parking / Test Egypt / Test Concession / Test Striker / Test Misc / Test Ride".
 
 Test parking with "brief / get blueberries / give coupon to attendant / buy ticket / get in car / l under seat / open glove box / get gloves / wear gloves / put stub on the dashboard / l at the dashboard / s / exit".
+
+Test ToadAway with "brief / test parking / get parking stub / test striker / test b1 / test b2 / ne / open panel / put aqua in socket / push switch / sw / e / open panel / put crimson in socket / push switch / w / se / open panel / put emerald in socket / push switch / nw / sw"
 
 When play begins:
 	display the figure of Hell Ride;
@@ -412,7 +415,7 @@ The parking lot, while utilitarian, is alive with anticipation, serving as the g
 
 The midway is to the south. There is a blueberry bush here. [if blueberry bush contains blueberries]There are blueberries on the bush.[otherwise]The bush has been picked clean.[end if][if the dime is in the Parking Lot] You see something shiny on the ground.[end if]"
 
-The Parking Attendant is a man in the the parking lot. The parking attendant carries the parking ticket and the parking stub. The price of the parking ticket is $5.00. The description of Parking Attendant is "This is a bored teenager just trying to earn enough money to take his sweetie to the movies next week.[if the parking attendant carries the parking ticket] He has a parking ticket. Parking costs [the price of the parking ticket].[end if]". 
+The Parking Attendant is a man in the the parking lot. The parking attendant carries the parking ticket and the parking stub. The price of the parking ticket is $5.00. The description of Parking Attendant is "This is a bored teenager just trying to earn enough money to take his sweetie to the movies next week.[if the parking attendant carries the parking ticket] He has a parking ticket. The price of a parking ticket is [the price of the parking ticket].[end if]". 
 
 The beater car is an enterable open container in the parking lot. The beater car is fixed in place. Understand "vehicle" as the beater car. The description of the beater car is "This is your car. It[']s seen better days. You can see the seat, the dashboard, and the glove box."
 
@@ -462,7 +465,7 @@ instead of going south when the location is the parking lot and the player is in
 
 Section 2 - Kiosk
 
-After going south when the location is the Kiosk and the Kiosk is unvisited and the player carries the parking ticket:
+After going south when the location is the parking lot and the Kiosk is unvisited and the player carries the parking ticket:
 	display Figure of TicketBooth.
 	
 Before looking when the location is the Kiosk:
