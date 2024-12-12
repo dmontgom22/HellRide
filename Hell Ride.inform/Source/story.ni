@@ -11,7 +11,7 @@ The story title is "Hell Ride".
 The story author is "No Shoes".
 The story headline is "The ride of a lifetime...".
 The story genre is "Horror".
-The release number is 102.
+The release number is 103.
 The story description is "You've decided to stay and enjoy the carnival anyway."
 The story creation year is 2024.
 
@@ -265,7 +265,7 @@ The description of the sky is "[if the location is outdoors]It[']s a beautiful e
 
 The ground is a backdrop. The ground is everywhere. Understand "floor" as the ground.
 
-[new things]
+[new things specific to the game]
 A switch is kind of a device. A switch can be switched on or switched off. The printed name of a switch is "the switch". A switch is usually switched off. A switch is fixed in place.
 
 A socket is a kind of open container. A socket is fixed in place. A socket can be filled or unfilled. A socket is usually unfilled. The printed name of a socket is "the socket".  
@@ -314,6 +314,14 @@ After reading a command:
 	if the player's command includes "please":
 		say "Please do not say please.";
 		reject the player's command.
+
+every turn:
+	if turn count is 100:
+		say "Over the loud speaker, an announcment blares: Attention please. There is a vehicle being towed from the parking lot for parking illegally. The license plate number of the car is '862901'.[run paragraph on]";
+		if the parking stub is on the dashboard, say " You breathe a sigh of relief as you realize that[']s not your plate. I guess it[']s a good thing you remembered to place the parking stub on the dashboard.";
+		if the parking stub is not on the dashboard, say " Your heart sinks as you realize that is your plate.";
+		now the beater car is in the holding room.
+
 
 
 Chapter 4- Figures and Sounds
@@ -404,7 +412,7 @@ The parking lot, while utilitarian, is alive with anticipation, serving as the g
 
 The midway is to the south. There is a blueberry bush here. [if blueberry bush contains blueberries]There are blueberries on the bush.[otherwise]The bush has been picked clean.[end if][if the dime is in the Parking Lot] You see something shiny on the ground.[end if]"
 
-The Parking Attendant is a man in the the parking lot. The parking attendant carries the parking ticket and the parking stub. The price of the parking ticket is $3.00. The description of Parking Attendant is "This is a bored teenager just trying to earn enough money to take his sweetie to the movies next week.". 
+The Parking Attendant is a man in the the parking lot. The parking attendant carries the parking ticket and the parking stub. The price of the parking ticket is $5.00. The description of Parking Attendant is "This is a bored teenager just trying to earn enough money to take his sweetie to the movies next week.[if the parking attendant carries the parking ticket] He has a parking ticket. Parking costs [the price of the parking ticket].[end if]". 
 
 The beater car is an enterable open container in the parking lot. The beater car is fixed in place. Understand "vehicle" as the beater car. The description of the beater car is "This is your car. It[']s seen better days. You can see the seat, the dashboard, and the glove box."
 
@@ -443,7 +451,7 @@ instead of giving the coupon to the parking attendant:
 		say "Danger Will Robinson, this is a bug!"
 		
 before buying the parking ticket:
-	say "The attendant says, 'Don't forget to leave your stub on your dashboard'.";
+	say "The attendant says, 'Don't forget to leave the parking stub on your dashboard'.";
 	now the player carries the parking ticket;
 	now the player carries the parking stub;
 	continue the action.
@@ -474,7 +482,7 @@ The ticket kiosk is more than just a point of entry—it’s the first step into
 
 The midway continues east and west from here. There is a concession stand to the south west. There is a cashier here. [if cashier has the hell ride ticket]The Cashier has a Hell Ride ticket.[end if]."
 
-The Hell Ride ticket is a thing. The price of the Hell Ride ticket is $2.50. The description of the Hell Ride ticket is "This Hell Ride ticket will 'Admit One' to the Hell Ride.[line break]It[']s a real 'E' ticket, baby!"
+The Hell Ride ticket is a thing. The price of the Hell Ride ticket is $3.00. The description of the Hell Ride ticket is "This Hell Ride ticket will 'Admit One' to the Hell Ride.[line break]It[']s a real 'E' ticket, baby!"
 
 The Cashier is a man in the kiosk. The cashier carries the Hell Ride ticket. The description of cashier is "This is a bored teenager hired to sell ride tickets all week at this carnival. He's thinking about having a brewski with his bros after work.". 
 
@@ -511,13 +519,13 @@ There is a menu to the right of the window. You can see the treats inside the st
 treats is here. Treats is scenery. Understand "treat" as treats. The description of treats is "There are a variety of things to eat here."
 
 a menu is here.  Menu is fixed in place. The description of the menu is 
-"[line break]$1.00 Cola
+"[line break]$2.00 Cola
 [line break]$2.50 Popcorn
 [line break]$1.50 Candy Apple
 [line break]$1.50 Cotton Candy
 [line break]$1.50 Soft Pretzel"
 
-a can is here. The price of can is $1.00. The description of the can is "The soda is ice cold."
+a can is here. The price of can is $2.00. The description of the can is "The soda is ice cold."
 
 The can is a fluid container. The liquid of the can is Cola. understand "soda" as cola. The current volume of the can is 8.0 fl oz. Understand "Coke" as the can.
 
@@ -1150,9 +1158,10 @@ Mounted along another wall is an emergency shutdown panel, painted bright red wi
 
 A small fan sits on the workbench, oscillating weakly to counter the oppressive heat radiating from the machinery. The light in the room comes from bare fluorescent tubes overhead, their cold glow flickering slightly, casting sharp shadows that shift with every movement.
 
-Despite its functionality, the electrical room carries a certain unease. The constant hum of electricity, the flicker of lights, and the sharpness of exposed wires hint at the delicate balance of power keeping the carnival alive. It’s a space where the magic of the midway is stripped bare, revealing the raw energy coursing through its veins.
+Despite its functionality, the electrical room carries a certain unease. The constant hum of electricity, the flicker of lights, and the sharpness of exposed wires hint at the delicate balance of power keeping the carnival alive. It’s a space where the magic of the midway is stripped bare, revealing the raw energy coursing through its veins."
 
-This room is oozing with electromagnetic energy. You can feel your hair stand on end and all your nerves twitching. This feels dangerous! There are exits in all directions."
+every turn when the location is the electrical room:
+	say "This room is oozing with electromagnetic energy. You can feel your hair stand on end and all your nerves twitching. This feels dangerous! There are exits in all directions."
 
 Section 8 - Electrical Closet Eleven
 
@@ -1712,7 +1721,7 @@ every turn:
 Instead of switching on or pushing the indigo button: 
 	if the switch count is 6 and the dial count is 6 and the indigo button is switched off
 		begin;
-			say "The monitor flickers for a second and the scene it[']s displaying changes.";
+			say "The monitor flickers for a second and the scene it displays changes to something different.";
 			say "The monitor now shows a tableau of a guillotine. It has stopped rising and falling over the ride exit. The ride is safe again!";
 			say "The indigo indicator is now on.";
 			display the figure of ControlPanelGuillotine;
@@ -1733,7 +1742,7 @@ Instead of switching on or pushing the indigo button:
 Instead of switching on or pushing the aqua button: 
 	if the switch count is 6 and the dial count is 6 and the aqua button is switched off
 		begin;
-			say "The monitor flickers for a second and the scene it[']s displaying changes.";
+			say "The monitor flickers for a second and the scene it displays changes to something different.";
 			say "The monitor now shows a tableau of poor unfortunate townsfolk locked in stocks.";
 			say "The aqua indicator is now on.";
 			now all colored buttons are switched off;
@@ -1750,7 +1759,7 @@ Instead of switching on or pushing the aqua button:
 Instead of switching on or pushing the crimson button: 
 	if the switch count is 6 and the dial count is 6 and the crimson button is switched off
 		begin;
-			say "The monitor flickers for a second and the scene it[']s displaying changes.";
+			say "The monitor flickers for a second and the scene it displays changes to something different.";
 			say "The monitor now shows a scene of someone waiting to be hanged.";
 			say "The crimson indicator is now on.";
 			now all colored buttons are switched off;
@@ -1767,7 +1776,7 @@ Instead of switching on or pushing the crimson button:
 Instead of switching on or pushing the emerald button: 
 	if the switch count is 6 and the dial count is 6 and the emerald button is switched off
 		begin;
-			say "The monitor flickers for a second and the scene it[']s displaying changes.";
+			say "The monitor flickers for a second and the scene it displays changes to something different.";
 			say "The monitor now displays a scene of witches being burned at the stake.";
 			say "The emerald indicator is now on.";
 			now all colored buttons are switched off;
@@ -1784,7 +1793,7 @@ Instead of switching on or pushing the emerald button:
 Instead of switching on or pushing the gray button: 
 	if the switch count is 6 and the dial count is 6 and the gray button is switched off
 		begin;
-			say "The monitor flickers for a second and the scene it[']s displaying changes.";
+			say "The monitor flickers for a second and the scene it displays changes to something different.";
 			say "The monitor now shows the implements of torture in the dungeon.";
 			say "The gray indicator is now on.";
 			now all colored buttons are switched off;
@@ -1801,7 +1810,7 @@ Instead of switching on or pushing the gray button:
 Instead of Switching on or pushing the khaki button: 
 	if the switch count is 6 and the dial count is 6 and the khaki button is switched off
 		begin;
-			say "The monitor flickers for a second and the scene it[']s displaying changes.";
+			say "The monitor flickers for a second and the scene it displays changes to something different.";
 			say "The monitor shows a the gift shop located at the Hell Ride exit.";
 			say "The khaki indicator is now on.";
 			now all colored buttons are switched off;
