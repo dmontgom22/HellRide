@@ -31,12 +31,13 @@ picture 15 "C:\HellRide\Hell Ride.materials\Figures\ControlPanelDungeon.png"
 picture 16 "C:\HellRide\Hell Ride.materials\Figures\ControlPanelGuillotine.png"
 picture 17 "C:\HellRide\Hell Ride.materials\Figures\ControlPanelExit.png"
 picture 18 "C:\HellRide\Hell Ride.materials\Figures\Coupon.png"
-sound 19 "C:\HellRide\Hell Ride.materials\Sounds\StrongmanBell.ogg"
+picture 19 "C:\HellRide\Hell Ride.materials\Figures\MaintenanceOffice.png"
+sound 20 "C:\HellRide\Hell Ride.materials\Sounds\StrongmanBell.ogg"
 
 ! Placeholder variables
 
 placeholder [IFID] = "E0A5AFB9-18BF-4485-B083-426CA51CCE70"
-placeholder [RELEASE] = "105"
+placeholder [RELEASE] = "106"
 placeholder [YEAR] = "2024"
 placeholder [TITLE] = "Hell Ride"
 placeholder [AUTHOR] = "No Shoes"
@@ -44,12 +45,30 @@ placeholder [BLURB] = "You've decided to stay and enjoy the carnival anyway."
 
 ! Other material to release
 
-status instruction ||&nbsp;<a href="source:story.ni#line18"><img border=0 src=inform:/doc_images/Reveal.png></a>||
-status alternative ||Using 'Release along with a website'&nbsp;<a href=inform:/doc403.html><img border=0 src=inform:/doc_images/help.png></a>||
-status alternative ||Using 'Release along with an interpreter', for in-browser play on your website&nbsp;<a href=inform:/doc404.html><img border=0 src=inform:/doc_images/help.png></a>||
+auxiliary "C:\Program Files\Inform\Internal\Miscellany\IntroductionToIF.pdf" "Introduction to IF" "--"
+
+! Website instructions
+
+placeholder [ENCODEDSTORYFILE] = "Hell Ride.gblorb.js"
+template path "C:\HellRide\Hell Ride.materials\Templates"
+template path "C:\HellRide\Hell Ride.materials\Templates"
+template path "C:\Users\danamont\Documents\Inform\Templates"
+template path "C:\Program Files\Inform\Internal\Templates"
+placeholder [INTERPRETERSCRIPTS] = " "
+interpreter "Quixe" "g"
+base64 "C:\HellRide\Hell Ride.inform\Build\output.ulx" to "C:\HellRide\Hell Ride.materials\Release\interpreter\Hell Ride.gblorb.js"
+
+! Website instructions
+
+template path "C:\HellRide\Hell Ride.materials\Templates"
+template path "C:\HellRide\Hell Ride.materials\Templates"
+template path "C:\Users\danamont\Documents\Inform\Templates"
+template path "C:\Program Files\Inform\Internal\Templates"
+css
+website "Standard"
+status instruction ||&nbsp;<a href="source:story.ni#line19"><img border=0 src=inform:/doc_images/Reveal.png></a>||
 status alternative ||Using 'Release along with a file of "Such-and-Such" called "whatever.pdf"', perhaps to add a manual, or a welcoming note&nbsp;<a href=inform:/doc399.html><img border=0 src=inform:/doc_images/help.png></a>||
 status alternative ||Using 'Release along with the source text'&nbsp;<a href=inform:/doc410.html><img border=0 src=inform:/doc_images/help.png></a>||
 status alternative ||Using 'Release along with a solution'&nbsp;<a href=inform:/doc409.html><img border=0 src=inform:/doc_images/help.png></a>||
 status alternative ||Using 'Release along with the library card'&nbsp;<a href=inform:/doc410.html><img border=0 src=inform:/doc_images/help.png></a>||
-status alternative ||Using 'Release along with the introductory booklet'&nbsp;<a href=inform:/doc402.html><img border=0 src=inform:/doc_images/help.png></a>||
 status alternative ||Using 'Release along with the introductory postcard'&nbsp;<a href=inform:/doc402.html><img border=0 src=inform:/doc_images/help.png></a>||

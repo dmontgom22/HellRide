@@ -11,11 +11,12 @@ The story title is "Hell Ride".
 The story author is "No Shoes".
 The story headline is "The ride of a lifetime...".
 The story genre is "Horror".
-The release number is 105.
+The release number is 106.
 The story description is "You've decided to stay and enjoy the carnival anyway."
 The story creation year is 2024.
 
-Release along with cover art.
+[Release along with cover art, a website, an introductory booklet, the "Quixe" interpreter, the source text, and library card].
+Release along with cover art, a website, an introductory booklet, the "Quixe" interpreter.
 
 Include Locksmith by Emily Short.
 
@@ -297,7 +298,7 @@ Casting xyzzy is an action applying to nothing.
 Carry out casting xyzzy:
 	say "A voice nearby says 'Plugh'."
 	
-Chapter 3- The Player
+Chapter 3- The Player, Global Code
 
 The description of the player is "You are despondent given that you and your date just had a huge fight and they stormed off. Maybe visiting the attractions at the carnival will make you feel better." 
 
@@ -314,6 +315,14 @@ After reading a command:
 	if the player's command includes "please":
 		say "Please do not say please.";
 		reject the player's command.
+		
+[fix up the map]
+Index map with title set to "The Carnival".
+Index map with Electrical Closet Eleven mapped northwest of Electrical Room.
+Index map with Electrical Closet Seven mapped southwest of Electrical Room.
+Index map with Guillotine Room mapped west of Generator Room.
+Index map with room-size set to 52
+	and room-size of the Electrical Room set to 74.
 
 [toad away]
 every turn:
@@ -324,7 +333,8 @@ every turn:
 		if the parking stub is not on the dashboard:
 			say " Your heart sinks as you realize that is your plate. You race to the parking lot in time to see the tow truck pull away with your car in tow";
 			end the story finally saying "You start the long walk home."
-			
+
+[Description of Hell Ride]			
 When play begins:
 	 choose row 1 in Table of Basic Help Options;
 	 now description entry is "Hell Ride - A Ride to remember...
@@ -393,6 +403,8 @@ Figure of ControlPanelGuillotine is the file "ControlPanelGuillotine.png".
 Figure of ControlPanelExit is the file "ControlPanelExit.png".
 
 Figure of Coupon is the file "Coupon.png".
+
+Figure of MaintenanceOffice is the file "MaintenanceOffice.png".
 
 Sound of Strongman Bell is the file "StrongmanBell.ogg".
 
@@ -1027,6 +1039,13 @@ after taking the flashlight for the first time:
 
 Section 2 - Maintenance Office
 
+After going south from the dark passage when the Maintenance Office is unvisited:
+	display Figure of MaintenanceOffice;
+	say "[the description of the Maintenance Office]".
+	
+Before looking when the location is the Maintenance Office:
+	display Figure of MaintenanceOffice.
+
 The Maintenance Office is a dark room. The maintenance office is south of the dark passage. "The maintenance office, hidden behind the carnival’s bright facade, is a dim and cluttered space reeking of grease, sweat, and faint traces of popcorn from the midway. The air hangs heavy with oil and stirred-up dust.
 
 The walls are lined with shelves holding tools and parts in disarray—rusty wrenches, screws, and mismatched containers with faded labels. Paint cans and grease jars clutter the workbenches, many left half-open. In the center, a battered desk is strewn with wires, gears, and springs, a bent piece of metal held in a vise. Overhead, a single flickering fluorescent light struggles to illuminate the room.
@@ -1039,9 +1058,11 @@ Despite the mess, the room buzzes with purpose—a hidden hub where the carnival
 
 The desk is in the maintenance office. The desk is a supporter. The desk is fixed in place. A drawer is part of the desk. The drawer is a closed openable container. The drawer is scenery. The description of the desk is "It[']s a desk. There are coffee stains and cigarette burns from years of abuse. The single drawer is [if the drawer is open]open[otherwise]shut[end if]."
 
+Nearness relates a room (called A) to a room (called B) when the number of moves from B to A is less than 2. The verb to be near means the nearness relation.
+
 The radio is a device on the desk. The radio is switched off and fixed in place. "[if switched on]The radio burbles on[otherwise]The radio is off[end if]." 
 
-Every turn when the radio is switched on and the location is Maintenance Office:
+Every turn when the radio is switched on and location is the maintenance office:
 	say "[one of]The radio plays 'Stairway to Heaven' by Led Zeppelin.[or]The DJ just cued up Pink Floyd[']s 'Comfortably Numb'.[or]Pharell[']s 'Happy' is playing now.[or]'Folsom Prison Blues' by Johnny Cash is on the air.[or]'Peace Train' by Cat Stevens can be heard playing on the radio.[cycling]"
 	
 Rule for showing action of the radio:
@@ -1159,7 +1180,7 @@ Instead of switching on or pushing Switch Eleven:
 		now Switch Eleven is switched on;
 		now Indicator Light Eleven is switched on;
 		stop the action;
-	if Switch Eleven is switched off and the Khaki Fuse is in Socket Nine:
+	if Switch Eleven is switched off and the Khaki Fuse is in Socket Eleven:
 		say "The indicator light goes on.";
 		now Switch Eleven is switched on;
 		now Indicator Light Eleven is switched on;
@@ -1305,7 +1326,7 @@ Instead of switching on or pushing Switch Seven:
 		now Switch Seven is switched on;
 		now Indicator Light Seven is switched on;
 		stop the action;
-	if Switch Seven is switched off and the Gray Fuse is in Socket Nine:
+	if Switch Seven is switched off and the Gray Fuse is in Socket Seven:
 		say "The indicator light goes on.";
 		now Switch Seven is switched on;
 		now Indicator Light Seven is switched on;
@@ -1378,7 +1399,7 @@ Instead of switching on or pushing Switch Five:
 		now Switch Five is switched on;
 		now Indicator Light Five is switched on;
 		stop the action;
-	if Switch Five is switched off and the Emerald Fuse is in Socket Nine:
+	if Switch Five is switched off and the Emerald Fuse is in Socket Five:
 		say "The indicator light goes on.";
 		now Switch Five is switched on;
 		now Indicator Light Five is switched on;
@@ -1451,7 +1472,7 @@ Instead of switching on or pushing Switch Three:
 		now Switch Three is switched on;
 		now Indicator Light Three is switched on;
 		stop the action;
-	if Switch Three is switched off and the Crimson Fuse is in Socket Nine:
+	if Switch Three is switched off and the Crimson Fuse is in Socket Three:
 		say "The indicator light goes on.";
 		now Switch Three is switched on;
 		now Indicator Light Three is switched on;
@@ -1524,7 +1545,7 @@ Instead of switching on or pushing Switch One:
 		now Switch One is switched on;
 		now Indicator Light One is switched on;
 		stop the action;
-	if Switch One is switched off and the Aqua Fuse is in Socket Nine:
+	if Switch One is switched off and the Aqua Fuse is in Socket One:
 		say "The indicator light goes on.";
 		now Switch One is switched on;
 		now Indicator Light One is switched on;
@@ -1805,7 +1826,7 @@ Spinning it to is an action applying to one thing and one number. Check spinning
 	otherwise:
 		say "The dial is now set to [the number understood].";
 		now the noun is switched on;
-		now the dial setting of the noun is the number understood;
+		now the dial setting of the noun is the number understood.
 
 Understand "spin [something] to [a number]" as spinning it to. Understand "turn [something] to [a number]" as spinning it to. Understand "set [something] to [a number]" as spinning it to.
 	
