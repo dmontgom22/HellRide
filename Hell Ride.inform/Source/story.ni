@@ -23,9 +23,11 @@ Include Basic Help Menu by Emily Short.
 
 Include Rideable Vehicles by Graham Nelson.
 
-Include Swearing Reloaded by Shin
+Include Swearing Reloaded by Shin.
 
-Include Singing Reloaded by Shin
+Include Singing Reloaded by Shin.
+
+include Modified Exit by Emily Short.
 
 Use scoring.
 Use American Dialect.
@@ -291,7 +293,7 @@ Casting xyzzy is an action applying to nothing.
 Carry out casting xyzzy:
 	say "A voice nearby says 'Plugh'."
 	
-Chapter 3 The Player, Global Code
+Chapter 3 - The Player, Global Code
 
 The player is in the Parking Lot. 
 
@@ -345,7 +347,7 @@ I hope you enjoy it.
 
 d."
 
-Chapter 4 Figures and Sounds
+Chapter 4 - Figures and Sounds
 
 Figure of Hell Ride is the file "HellRide.png".
 
@@ -592,7 +594,7 @@ Definition: a fuse is plugged-in rather than loose if it is contained by a socke
 fuse1 is a fuse. fuse1 underlies the wooden stocks. The fuse id of fuse1 is 1. The color of the fuse1 is aqua. Understand "aqua" as fuse1. 
 fuse3 is a fuse. fuse3 underlies the gallows platform. The fuse id of fuse3 is 3. The color of the fuse3 is crimson. Understand "crimson" as fuse3. 
 fuse5 is a fuse. fuse5 is in the pyre. The fuse id of fuse5 is 5. The color of the fuse5  is emerald. Understand "emerald" as fuse5. 
-fuse7 is a fuse. fuse7 underlies the iron seat. The fuse id of fuse7 is 7. The color of the fuse7 is gray. Understand "gray" as fuse7. 
+fuse7 is a fuse. fuse7 underlies the iron chair. The fuse id of fuse7 is 7. The color of the fuse7 is gray. Understand "gray" as fuse7. 
 fuse9 is a fuse. fuse9 underlies the guillotine platform. The fuse id of fuse9 is 9. The color of the fuse9 is indigo. Understand "indigo" as fuse9. 
 fuse11 is a fuse. fuse11 is in the merchandise stand. The fuse id of fuse11 is 11. The color of the fuse11 is khaki. Understand "khaki" as fuse11. 
 
@@ -802,7 +804,7 @@ The midway is to the south. There is a blueberry bush here. [if blueberry bush c
 
 The Parking Attendant is a man in the the parking lot. Understand "attendent" as attendant. The parking attendant carries the parking ticket and the parking stub. The price of the parking ticket is $5.00. The description of Parking Attendant is "This is a bored teenager just trying to earn enough money to take his sweetie to the movies next week.[if the parking attendant carries the parking ticket] He has a parking ticket. The price of a parking ticket is [the price of the parking ticket].[end if]". 
 
-The beater car is a thing in the parking lot. The beater car is fixed in place. Understand "vehicle" and "car" as the beater car. The Parking Lot is outside from the Car Interior. The description of the beater car is "This is your car. It[']s a 2002 Honda Civic and it[']s seen better days. It has [a list of things which are part of the item described]." 
+The beater car is a thing in the parking lot. The beater car is fixed in place. Understand "vehicle" and "car" as the beater car. The Parking Lot is outside from the Car Interior. The description of the beater car is "This is your car. It[']s a 2002 Honda Civic and it[']s seen better days." 
 
 The blueberry bush is here. the blueberry bush is scenery. the blueberry bush is a container. the blueberry bush is not portable. the blueberry bush contains blueberries. Understand "berries" as blueberries. The blueberries are edible.The description of the blueberries is "The blueberries are ripe and juicy.".
 
@@ -832,23 +834,23 @@ before buying the parking ticket:
 	
 instead of going south when the location is the parking lot and the player does not carry the parking ticket, say "You have to pay to park." instead.
 
-instead of going south when the location is the parking lot and the player is in the beater car, say "You have to exit your car first." instead.
+instead of entering when the noun is the beater car, try going inside instead.
+	
+Understand "exit [a direction]" as a mistake ("Please try 'go [noun]' or just '[noun]' as a direction isn't necessarily an exit here.")
 
 Understand "place [something] on [something]" as putting it on. Understand "set [something] on [something]" as putting it on. 
 
-[Understand "exit [something]" as exiting. ]
-
 Section 2 - Car Interior
 
-The Car Interior is a room. The car interior is inside from the parking lot. "You're sitting inside your car. Even though it[']s old, it feels like an old friend. From the leather seats to the crack in the windshield. It[']s familiar and comforting. There[']s old fast food wrappers on the floor, clothes and text books in the back seat. There is an air freshener hanging from the rear view mirror."
+The Car Interior is a room. The car interior is inside from the parking lot. "You're sitting inside your car. Even though it[']s old, it feels like an old friend. From the faux leather seats to the crack in the windshield. It[']s familiar and comforting. There[']s old fast food wrappers on the floor, clothes and text books in the back seat. There is an air freshener hanging from the rear view mirror."
 
-The car keys underlie the car seat. Understand "car key" and "keys" and "key" as the car keys. The description of the car keys is "These are your car keys. It[']s a wonder you could even find them, your house is such a mess."
+The car keys underlie the seat. Understand "car key" and "keys" and "key" as the car keys. The description of the car keys is "These are your car keys. It[']s a wonder you could even find them, your house is such a mess."
 
 instead of entering car, try going inside.
 
-The air freshener is in the car interior. The air freshener is scenery. The description of the air freshener is "This is one of those air fresheners that are shaped like a pine tree and smell like one too. You bought it the last time you went to the car wash."
+The air freshener is in the car interior. The air freshener is scenery. The air freshener is portable. The description of the air freshener is "This is one of those air fresheners that are shaped like a pine tree and smell like one too. You bought it the last time you went to the car wash."
 
-The car seat is in the car interior. The car seat is a supporter. It is fixed in place. The description of the car seat is "A faux leather seat that looked great when it was new."
+The seat is in the car interior. The seat is a supporter. It is fixed in place. The description of the seat is "A faux leather seat that looked great when it was new."
 
 The dashboard is in the car interior. The dashboard is a supporter. The description of the dashboard is "It looks like you could set something there."
 
@@ -1443,7 +1445,7 @@ Above, rats scuttle in the shadows, and the low ceiling presses down like the we
 
 This is a realm of suffering and hopelessness, where life and death blur, and torment is the only certainty."
 
-The iron seat is scenery in the Dungeon. The iron seat is a supporter. understand "spiked chair" as iron seat. The description of the iron seat is "A spiked chair looms in the corner, its cruel design gleaming faintly in the dim light." 
+The iron chair is scenery in the Dungeon. The iron chair is a supporter. understand "spiked" and "seat" as iron chair. The description of the iron chair is "A spiked chair looms in the corner, its cruel design gleaming faintly in the dim light." 
 
 Instead of looking under a thing which is underlaid by fuse7 when fuse7 is lost:
 	say "You find [the list of things which underlie the noun]!";

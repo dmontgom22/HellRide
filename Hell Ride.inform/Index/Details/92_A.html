@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>Scenes Index</title>
+    <title><Actions</title>
     <style type="text/css">
         <!--
         /* The default font (family) and size */
@@ -862,449 +862,43 @@
         }
 
     </script>
-    <style type="text/css" media="screen, print">
-        #box1_1 {
-            background: #cf0a38;
-        }
-        #minibox1_1 {
-            background: #cf0a38;
-        }
-        #box1_2 {
-            background: #cf0a38;
-        }
-        #minibox1_2 {
-            background: #cf0a38;
-        }
-        #box1_3 {
-            background: #cf0a38;
-        }
-        #minibox1_3 {
-            background: #cf0a38;
-        }
-        #box1_4 {
-            background: #cf0a38;
-        }
-        #minibox1_4 {
-            background: #cf0a38;
-        }
-        #box1_5 {
-            background: #cf0a38;
-        }
-        #minibox1_5 {
-            background: #cf0a38;
-        }
-        #box2_1 {
-            background: #ea5b1f;
-        }
-        #minibox2_1 {
-            background: #ea5b1f;
-        }
-        #box2_2 {
-            background: #ea5b1f;
-        }
-        #minibox2_2 {
-            background: #ea5b1f;
-        }
-        #box2_3 {
-            background: #ea5b1f;
-        }
-        #minibox2_3 {
-            background: #ea5b1f;
-        }
-        #box2_4 {
-            background: #ea5b1f;
-        }
-        #minibox2_4 {
-            background: #ea5b1f;
-        }
-        #box2_5 {
-            background: #ea5b1f;
-        }
-        #minibox2_5 {
-            background: #ea5b1f;
-        }
-        #box3_1 {
-            background: #e9cf08;
-        }
-        #minibox3_1 {
-            background: #e9cf08;
-        }
-        #box3_2 {
-            background: #e9cf08;
-        }
-        #minibox3_2 {
-            background: #e9cf08;
-        }
-        #box3_3 {
-            background: #e9cf08;
-        }
-        #minibox3_3 {
-            background: #e9cf08;
-        }
-        #box4_1 {
-            background: #52992f;
-        }
-        #minibox4_1 {
-            background: #52992f;
-        }
-        #box4_2 {
-            background: #52992f;
-        }
-        #minibox4_2 {
-            background: #52992f;
-        }
-        #box4_3 {
-            background: #52992f;
-        }
-        #minibox4_3 {
-            background: #52992f;
-        }
-        #box4_4 {
-            background: #52992f;
-        }
-        #minibox4_4 {
-            background: #52992f;
-        }
-        #box5_1 {
-            background: #1d31b4;
-        }
-        #minibox5_1 {
-            background: #1d31b4;
-        }
-        #box5_2 {
-            background: #1d31b4;
-        }
-        #minibox5_2 {
-            background: #1d31b4;
-        }
-        #box6_1 {
-            background: #001860;
-        }
-        #minibox6_1 {
-            background: #001860;
-        }
-        #box6_2 {
-            background: #001860;
-        }
-        #minibox6_2 {
-            background: #001860;
-        }
-        #box6_3 {
-            background: #001860;
-        }
-        #minibox6_3 {
-            background: #001860;
-        }
-        #box7_1 {
-            background: #8b58bf;
-        }
-        #minibox7_1 {
-            background: #8b58bf;
-        }
-        #box7_2 {
-            background: #8b58bf;
-        }
-        #minibox7_2 {
-            background: #8b58bf;
-        }
-    </style>
-    <script type="text/javascript">
-        var qq; window.onload = function() {
-            if (location.search.length > 0) {
-                qq = location.search.substring(1, location.search.length);
-                show_only_one_element(qq);
-            }
-        }
-        function click_element_box(id) {
-            if (document.getElementById(id).style.display == 'none') {
-                show_only_one_element(id);
-            } else {
-                var x = 0;
-                if (document.getElementById('segment1').style.display == '') { x++; }
-                if (document.getElementById('segment2').style.display == '') { x++; }
-                if (document.getElementById('segment3').style.display == '') { x++; }
-                if (x == 1) { show_all_elements(); }
-                else { show_only_one_element(id); }
-            }
-        }
-        function click_sidebar() {
-            if (document.getElementById('surround0').style.display == 'none') {
-                enter_periodic_table();
-            } else {
-                show_all_elements();
-            }
-        }
-        function show_all_elements() {
-            show_element('segment1');
-            light_up('segment1');
-            show_element('segment2');
-            light_up('segment2');
-            show_element('segment3');
-            light_up('segment3');
-        	}
-        function show_only_one_element(id) {
-            hide_element('segment1');
-            light_down('segment1');
-            hide_element('segment2');
-            light_down('segment2');
-            hide_element('segment3');
-            light_down('segment3');
-            show_element(id);
-            light_up(id);
-        }
-        function enter_periodic_table() {
-            hide_element('segment1');
-            light_up('segment1');
-            hide_element('segment2');
-            light_up('segment2');
-            hide_element('segment3');
-            light_up('segment3');
-        }
-        function show_element(id) {
-            document.getElementById(id).style.display = '';
-        }
-        function hide_element(id) {
-            document.getElementById(id).style.display = 'none';
-        }
-        function light_up(id) {
-            var ic = 'box6_1';
-            if (id == 'segment2') { ic = 'box6_2';}
-            if (id == 'segment3') { ic = 'box6_3';}
-            document.getElementById(ic).style.background = '#001860';
-        }
-        function light_down(id) {
-            var ic = 'box6_1';
-            if (id == 'segment2') { ic = 'box6_2';}
-            if (id == 'segment3') { ic = 'box6_3';}
-            document.getElementById(ic).style.background = '#cccccc';
-        }
-    </script>
 </head>
 <body>
     <!--CONTENT BEGINS-->
-    <div id="periodictable">
-        <table cellspacing="3" border="0" width="100%">
-        </table>
-        <table cellspacing="3" border="0" width="100%">
-            <tr id="surround6">
-                <td onclick="window.location='Welcome.html'; return false;">
-                    <div class="periodictablesidebar periodictablesidebarcolour">
-                    </div>
+    <table cellspacing="3" border="0" class="elementbanner">
+        <tr>
+            <td valign="top" align="left">
+                <div id="minibox1_1" class="smallelementbox">
+                    <a class="elementlink" title="Details" href="../Actions.html"><span class="elementtext">^</span></a><div class="elementnumber">
+                        <span class="elementnumbertext">1
+                        </span></div>
+                </div>
 
-                </td>
-                <td onclick="click_element_box('segment1'); return false;">
-                    <div id="box6_1" class="elementbox">
-                        <a class="elementlink" title="Plot" href="#"><span class="elementtext">Pl</span></a>
-                        <div class="elementnumber">
-                            <span class="elementnumbertext">1</span></div>
-                        <div class="elementtitle">
-                            <span class="elementtitletext">Plot</span></div>
-                    </div>
+            </td>
+            <td style="width:100%;" align="left" valign="top">
+                <p style="margin-top:0px;padding-top:0px;margin-bottom:0px;padding-bottom:0px;line-height:150%;"><b>Details</b> &mdash; 
+                A single action in detail.<br>
+                <i>About the action rulebooks&nbsp;&nbsp;<a href=inform:/doc176.html><img border=0 src=inform:/doc_images/help.png></a></i></p>
 
-                </td>
-                <td onclick="click_element_box('segment2'); return false;">
-                    <div id="box6_2" class="elementbox">
-                        <a class="elementlink" title="Events" href="#"><span class="elementtext">Ev</span></a>
-                        <div class="elementnumber">
-                            <span class="elementnumbertext">2</span></div>
-                        <div class="elementtitle">
-                            <span class="elementtitletext">Events</span></div>
-                    </div>
+            </td>
+        </tr>
+    </table>
 
-                </td>
-                <td onclick="click_element_box('segment3'); return false;">
-                    <div id="box6_3" class="elementbox">
-                        <a class="elementlink" title="Rules" href="#"><span class="elementtext">RS</span></a>
-                        <div class="elementnumber">
-                            <span class="elementnumbertext">3</span></div>
-                        <div class="elementtitle">
-                            <span class="elementtitletext">Rules</span></div>
-                    </div>
-
-                </td>
-                <td onclick="show_all_elements(); return false;" colspan="3" style="width:100%">
-
-                    <div class="headingpanellayout headingpanel">
-                        <div class="headingtext">
-                            <span class="headingpaneltext">Scenes Index</span></div>
-                        <div class="headingrubric">
-                            <span class="headingpanelrubric">Like scenes in a movie</span></div>
-                    </div>
-
-                </td>
-            </tr>
-        </table>
-    </div>
-    <div id="segment1">
-        <hr>
-        <table cellspacing="3" border="0" class="elementbanner">
-            <tr>
-                <td valign="top" align="left">
-                    <div id="minibox6_1" class="smallelementbox">
-                        <a class="elementlink" title="Plot" href="#" onclick="click_element_box('segment1'); return false;"><span class="elementtext">Pl</span></a><div class="elementnumber">
-                            <span class="elementnumbertext">1
-                            </span></div>
-                    </div>
-
-                </td>
-                <td style="width:100%;" align="left" valign="top">
-                    <p style="margin-top:0px;padding-top:0px;margin-bottom:0px;padding-bottom:0px;line-height:150%;"><b>Plot</b> &mdash; 
-                    A map of how the scenes begin and end<br>
-                    <i>About scenes&nbsp;&nbsp;<a href=inform:/doc148.html><img border=0 src=inform:/doc_images/help.png></a>; How they link together&nbsp;&nbsp;<a href=inform:/doc152.html><img border=0 src=inform:/doc_images/help.png></a></i></p>
-
-                </td>
-            </tr>
-        </table>
-
-        <p class="tightin1"><img border=0 src=inform:/scene_icons/WPB.png>&nbsp;&nbsp;Entire Game&nbsp;<a href=#A0><img border=0 src=inform:/doc_images/Below.png></a>&nbsp;&nbsp;<img border=0 src=inform:/scene_icons/Recurring.png></p>
-        <p class="tightin1"><img border=0 src=inform:/scene_icons/WhenC.png>&nbsp;&nbsp;HellRideAuto&nbsp;<a href=#A1><img border=0 src=inform:/doc_images/Below.png></a></p>
-        <p class="tightin1"><img border=0 src=inform:/scene_icons/WhenC.png>&nbsp;&nbsp;LittleEgyptAuto&nbsp;<a href=#A2><img border=0 src=inform:/doc_images/Below.png></a></p>
-        <p><i>Legend</i>: <img border=0 src=inform:/scene_icons/WPB.png>&nbsp;<i>Begins when play begins</i>; <img border=0 src=inform:/scene_icons/WhenC.png>&nbsp;<i>can begin whenever some condition holds</i>; <img border=0 src=inform:/scene_icons/Segue.png>&nbsp;<i>follows when a previous scene ends</i>; <img border=0 src=inform:/scene_icons/Simul.png>&nbsp;<i>begins simultaneously</i>; <img border=0 src=inform:/scene_icons/WNever.png>&nbsp;<i>never begins</i>; <img border=0 src=inform:/scene_icons/ENever.png>&nbsp;<i>never ends</i>; <img border=0 src=inform:/scene_icons/Recurring.png>&nbsp;<i>recurring (can happen more than once)</i>. <i>Scene names are italicised when and if they appear for a second
-        	or subsequent time because the scene can begin in more than one way.</i></p>
-        <a name=SDETAILS></a><hr>
-        <p class="hangingin1"><a name=A0></a><b>The <i>Entire Game</i> scene</b>&nbsp;&nbsp;<i>recurring</i></p>
-        <p class="tightin1">The Entire Game scene is built-in. It is going on whenever play is going
-        	on. (It is recurring so that if the story ends, but then resumes, it too
-        	will end but then begin again.)</p>
-        <p class="hangingin1"><i>Begins when:</i> the story has not ended</p>
-        <p class="hangingin1"><i>Ends when:</i> the story has ended</p>
-        <hr>
-        <p class="hangingin1"><a name=A1></a><b>The <i>HellRideAuto</i> scene</b>&nbsp;<a href="source:story.ni#line1281"><img border=0 src=inform:/doc_images/Reveal.png></a></p>
-        <p class="hangingin1"><i>Begins when:</i> the player is in the hell ride car&nbsp;<a href="source:story.ni#line1282"><img border=0 src=inform:/doc_images/Reveal.png></a></p>
-        <p class="hangingin1"><i>What happens</i>:</p>
-        <p class="indentin2">&nbsp;&nbsp;&nbsp;&nbsp;(say "The car moves forward and the safety bar begins to lower.")&nbsp;<a href="source:story.ni#line1285"><img border=0 src=inform:/doc_images/Reveal.png></a></p>
-        <p class="hangingin1"><i>During this scene:</i></p>
-        <p class="hangingin2"><i>Every turn rulebook</i></p>
-        <p class="indentin2">&nbsp;&nbsp;&nbsp;&nbsp;<i>during HellRideAuto</i>&nbsp;&nbsp;&nbsp;<a href="source:story.ni#line1291"><img border=0 src=inform:/doc_images/Reveal.png></a></p>
-        <p class="hangingin2"><i>Instead rulebook</i></p>
-        <p class="indentin2">&nbsp;&nbsp;&nbsp;&nbsp;<i>doing something other than waiting, looking, listening or examining</i>&nbsp;&nbsp;<i>during HellRideAuto</i>&nbsp;&nbsp;&nbsp;<a href="source:story.ni#line1363"><img border=0 src=inform:/doc_images/Reveal.png></a><p class="hangingin2"><i>default outcome is failure</i></p>
-        </p>
-        <p class="hangingin1"><i>Ends when:</i> the number of filled rows in the Table of HellRide Events is 0&nbsp;<a href="source:story.ni#line1283"><img border=0 src=inform:/doc_images/Reveal.png></a></p>
-        <p class="hangingin1"><i>What happens</i>:</p>
-        <p class="indentin2">&nbsp;&nbsp;&nbsp;&nbsp;(end the story finally saying "You have died.")&nbsp;<a href="source:story.ni#line1288"><img border=0 src=inform:/doc_images/Reveal.png></a></p>
-        <hr>
-        <p class="hangingin1"><a name=A2></a><b>The <i>LittleEgyptAuto</i> scene</b>&nbsp;<a href="source:story.ni#line1071"><img border=0 src=inform:/doc_images/Reveal.png></a></p>
-        <p class="hangingin1"><i>Begins when:</i> the player is in the show tent&nbsp;<a href="source:story.ni#line1072"><img border=0 src=inform:/doc_images/Reveal.png></a></p>
-        <p class="hangingin1"><i>During this scene:</i></p>
-        <p class="hangingin2"><i>Every turn rulebook</i></p>
-        <p class="indentin2">&nbsp;&nbsp;&nbsp;&nbsp;<i>during LittleEgyptAuto</i>&nbsp;&nbsp;&nbsp;<a href="source:story.ni#line1081"><img border=0 src=inform:/doc_images/Reveal.png></a></p>
-        <p class="hangingin2"><i>Instead rulebook</i></p>
-        <p class="indentin2">&nbsp;&nbsp;&nbsp;&nbsp;<i>doing something other than waiting, looking, listening or examining</i>&nbsp;&nbsp;<i>during LittleEgyptAuto</i>&nbsp;&nbsp;&nbsp;<a href="source:story.ni#line1087"><img border=0 src=inform:/doc_images/Reveal.png></a><p class="hangingin2"><i>default outcome is failure</i></p>
-        </p>
-        <p class="hangingin1"><i>Ends when:</i> the number of filled rows in the Table of LittleEgypt Events is 0&nbsp;<a href="source:story.ni#line531"><img border=0 src=inform:/doc_images/Reveal.png></a></p>
-        <p class="hangingin1"><i>What happens</i>:</p>
-        <p class="indentin2">&nbsp;&nbsp;&nbsp;&nbsp;(say "You applaud until your hands are sore. Did she just wink at me?[paragraph break]As she leaves the stage, Little Egypt tosses one of her veils to you!"; ...)&nbsp;<a href="source:story.ni#line1075"><img border=0 src=inform:/doc_images/Reveal.png></a></p>
-    </div>
-    <div id="segment2">
-        <hr>
-        <table cellspacing="3" border="0" class="elementbanner">
-            <tr>
-                <td valign="top" align="left">
-                    <div id="minibox6_2" class="smallelementbox">
-                        <a class="elementlink" title="Events" href="#" onclick="click_element_box('segment2'); return false;"><span class="elementtext">Ev</span></a><div class="elementnumber">
-                            <span class="elementnumbertext">2
-                            </span></div>
-                    </div>
-
-                </td>
-                <td style="width:100%;" align="left" valign="top">
-                    <p style="margin-top:0px;padding-top:0px;margin-bottom:0px;padding-bottom:0px;line-height:150%;"><b>Events</b> &mdash; 
-                    Timed events, if any<br>
-                    <i>About timed events&nbsp;&nbsp;<a href=inform:/doc143.html><img border=0 src=inform:/doc_images/help.png></a></i></p>
-
-                </td>
-            </tr>
-        </table>
-
-        <p><i>None</i></p>
-    </div>
-    <div id="segment3">
-        <hr>
-        <table cellspacing="3" border="0" class="elementbanner">
-            <tr>
-                <td valign="top" align="left">
-                    <div id="minibox6_3" class="smallelementbox">
-                        <a class="elementlink" title="Rules" href="#" onclick="click_element_box('segment3'); return false;"><span class="elementtext">RS</span></a><div class="elementnumber">
-                            <span class="elementnumbertext">3
-                            </span></div>
-                    </div>
-
-                </td>
-                <td style="width:100%;" align="left" valign="top">
-                    <p style="margin-top:0px;padding-top:0px;margin-bottom:0px;padding-bottom:0px;line-height:150%;"><b>Rules</b> &mdash; 
-                    General rules about scenes</p>
-
-                </td>
-            </tr>
-        </table>
-
-        <p><b>The scene-changing machinery</b></p>
-        <p class="in1"><table width="100%" cellpadding="6" cellspacing="0" border="0" class="indexmorebox">
-            <tr>
-                <td>
-                    <table border="0" cellspacing="4" cellpadding="0" width=100%>
-                        <tr>
-                            <td align="left" valign="top">
-                                <p class="tightin1"><b>scene changing</b> ... Scene changing rulebook</p>
-
-                            </td>
-                            <td align="right" valign="top">
-                                <p class="tightin1"><a href="javascript:pasteCode('scene changing')"><img border=0 src=inform:/doc_images/paste.png></a>&nbsp;<i>name</i></p>
-
-                            </td>
-                        </tr>
-                    </table>
-                    <p class="indentin2">&nbsp;&nbsp;&nbsp;&nbsp;<span class="indexdullred">scene change machinery rule</span>&nbsp;&nbsp;<a href="javascript:pasteCode('scene change machinery rule')"><img border=0 src=inform:/doc_images/paste.png></a>&nbsp;<i>name</i> <a href="javascript:pasteCode('The scene change machinery rule response (Scene changing rulebook) is [=0x0022=]New text.[=0x0022=].')"><img border=0 src=inform:/doc_images/paste.png></a>&nbsp;<i>unlist</i></p>
-
-                </td>
-            </tr>
-        </table>
-        </p>
-        <p><a name=SRULES></a><b>General rules applying to scene changes</b></p>
-        <p class="in1"><table width="100%" cellpadding="6" cellspacing="0" border="0" class="indexmorebox">
-            <tr>
-                <td>
-                    <table border="0" cellspacing="4" cellpadding="0" width=100%>
-                        <tr>
-                            <td align="left" valign="top">
-                                <p class="tightin1"><b>when a scene begins</b> ... When scene begins rulebook</p>
-
-                            </td>
-                            <td align="right" valign="top">
-                                <p class="tightin1"><a href="javascript:pasteCode('when a scene begins')"><img border=0 src=inform:/doc_images/paste.png></a>&nbsp;<i>name</i></p>
-
-                            </td>
-                        </tr>
-                    </table>
-                    <p class="indentin2">&nbsp;&nbsp;&nbsp;&nbsp;<i>a scene (called the event)</i>&nbsp;&nbsp;<span class="indexdullred">scene description text rule</span>&nbsp;&nbsp;<a href="javascript:pasteCode('scene description text rule')"><img border=0 src=inform:/doc_images/paste.png></a>&nbsp;<i>name</i> <a href="javascript:pasteCode('The scene description text rule response (When scene begins rulebook) is [=0x0022=]New text.[=0x0022=].')"><img border=0 src=inform:/doc_images/paste.png></a>&nbsp;<i>unlist</i></p>
-
-                </td>
-            </tr>
-        </table>
-        </p>
-        <p class="in1"><table width="100%" cellpadding="6" cellspacing="0" border="0" class="indexmorebox">
-            <tr>
-                <td>
-                    <table border="0" cellspacing="4" cellpadding="0" width=100%>
-                        <tr>
-                            <td align="left" valign="top">
-                                <p class="tightin1"><b>when a scene ends</b> ... When scene ends rulebook</p>
-
-                            </td>
-                            <td align="right" valign="top">
-                                <p class="tightin1"><a href="javascript:pasteCode('when a scene ends')"><img border=0 src=inform:/doc_images/paste.png></a>&nbsp;<i>name</i></p>
-
-                            </td>
-                        </tr>
-                    </table>
-                    <p class="tightin2">There are no rules in this rulebook.</p>
-
-                </td>
-            </tr>
-        </table>
-        </p>
-    </div>
     <hr>
+    <p><b>Defined in the source - Dials</b><br><b>spinning it to</b></p>
+    <hr>
+    <p><b>Spinning <span class="indexdullblue">something</span> to <span class="indexdullblue">number</span> </b>&nbsp;<a href="source:story.ni#line1562"><img border=0 src=inform:/doc_images/Reveal.png></a> (<i>past tense</i> spun it to): applying to one thing and one number</p>
+    <hr>
+    <p><b>Typed commands leading to this action</b></p>
+    <p>&quot;set [something] to [a number]&quot;&nbsp;<a href="source:story.ni#line1571"><img border=0 src=inform:/doc_images/Reveal.png></a> - <i>spinning it to</i>&nbsp;<a href=Details/92_A.html><img border=0 src=inform:/doc_images/Beneath.png></a><br>
+    &quot;turn [something] to [a number]&quot;&nbsp;<a href="source:story.ni#line1571"><img border=0 src=inform:/doc_images/Reveal.png></a> - <i>spinning it to</i>&nbsp;<a href=Details/92_A.html><img border=0 src=inform:/doc_images/Beneath.png></a><br>
+    &quot;spin [something] to [a number]&quot;&nbsp;<a href="source:story.ni#line1571"><img border=0 src=inform:/doc_images/Reveal.png></a> - <i>spinning it to</i>&nbsp;<a href=Details/92_A.html><img border=0 src=inform:/doc_images/Beneath.png></a><br>
+    </p>
+    <p><b>Rules controlling this action</b></p>
+    <p><p class="indentin2">instead of&nbsp;&nbsp;&nbsp;&nbsp;<i>doing something other than waiting, looking, listening or examining</i>&nbsp;&nbsp;<i>during LittleEgyptAuto</i>&nbsp;&nbsp;&nbsp;<a href="source:story.ni#line1087"><img border=0 src=inform:/doc_images/Reveal.png></a><br>instead of&nbsp;&nbsp;&nbsp;&nbsp;<i>doing something other than waiting, looking, listening or examining</i>&nbsp;&nbsp;<i>during HellRideAuto</i>&nbsp;&nbsp;&nbsp;<a href="source:story.ni#line1363"><img border=0 src=inform:/doc_images/Reveal.png></a></p>
+    <p class="indentin2">check&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="source:story.ni#line1562"><img border=0 src=inform:/doc_images/Reveal.png></a></p>
+    <p class="indentin2">report&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="source:story.ni#line1562"><img border=0 src=inform:/doc_images/Reveal.png></a></p>
+    </p>
 
     <!--CONTENT ENDS-->
 </body>
