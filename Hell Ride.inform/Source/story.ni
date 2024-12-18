@@ -240,7 +240,7 @@ After going:
 	
 Section 6 - Miscellaneous
 
-Test Misc with "brief / get blueberries / xyzzy / hello sailor / please get the dime / i / score".
+Test Misc with "brief / xyzzy / hello sailor / please get the dime / i / score".
 
 [for adaptive text]
 A thing can be broken or unbroken. A thing is usually unbroken.
@@ -301,8 +301,6 @@ The description of the player is "You are despondent given that you and your dat
 Instead of examining the player:
 	say "Oh, stop fussing. You look fine."
 
-The car keys underlie the car seat. Understand "car key" and "keys" and "key" as the car keys. The description of the car keys is "These are your car keys. It[']s a wonder you could even find them, your house is such a mess."
-	
 The coupon is in the wallet. The description of the coupon is "You found this in a stack of coupons on the counter of the gas station."
 
 every turn when examining the coupon, display Figure of Coupon.
@@ -804,9 +802,9 @@ Test Life with "brief / Test Parking / Test Egypt / Test Concession / Test Strik
 
 Test Death with "brief / Test Parking / Test Egypt / Test Concession / Test Striker / Test Misc / Test Ride".
 
-Test parking with "brief / get blueberries / give coupon to attendant / buy ticket / get in car / l under seat / open glove box / get gloves / wear gloves / put stub on the dashboard / l at the dashboard / s / exit".
+Test parking with "brief / get blueberries / eat blueberries / give coupon to attendant / buy ticket / inside / l under seat / open glove box / get gloves / wear gloves / set stub on the dashboard / l at the dashboard / exit".
 
-Test ToadAway with "brief / test parking / get parking stub / test striker / test b1 / test b2 / ne / open panel / put aqua in socket / push switch / sw / e / open panel / put crimson in socket / push switch / w / se / open panel / put emerald in socket / push switch / nw / sw / unlock panel / open panel"
+Test ToadAway with "brief / test parking / inside / get parking stub / exit / test striker / test b1 / test b2 / ne / open panel / put aqua in socket / push switch / sw / e / open panel / put crimson in socket / push switch / w / se / open panel / put emerald in socket / push switch / nw / sw / unlock panel / open panel"
 
 When play begins:
 	display the figure of Hell Ride;
@@ -826,30 +824,16 @@ The midway is to the south. There is a blueberry bush here. [if blueberry bush c
 
 The Parking Attendant is a man in the the parking lot. Understand "attendent" as attendant. The parking attendant carries the parking ticket and the parking stub. The price of the parking ticket is $5.00. The description of Parking Attendant is "This is a bored teenager just trying to earn enough money to take his sweetie to the movies next week.[if the parking attendant carries the parking ticket] He has a parking ticket. The price of a parking ticket is [the price of the parking ticket].[end if]". 
 
-The beater car is a vehicle in the parking lot. The beater car is fixed in place. Understand "vehicle" as the beater car. The description of the beater car is "This is your car. It[']s seen better days. It has [a list of things which are part of the item described]."
-
-The car seat is a part of the car. The car seat is a supporter. It is fixed in place. The description of the car seat is "A faux leather seat that looked great when it was new."
-
-The dashboard is a part of the car. The dashboard is a supporter. The description of the dashboard is "It looks like you could set something there."
-
-The glove box is part of the car. The glove box is a locked openable container. The car keys unlock the glove box. Understand "glove compartment" and "compartment" as the glove box. The gloves are inside the glove box. The gloves are wearable. The description of the gloves is "A nice set of sheepskin gloves. They[']re very warm."
+The beater car is a thing in the parking lot. The beater car is fixed in place. Understand "vehicle" and "car" as the beater car. The Parking Lot is outside from the Car Interior. The description of the beater car is "This is your car. It[']s a 2002 Honda Civic and it[']s seen better days. It has [a list of things which are part of the item described]." 
 
 The blueberry bush is here. the blueberry bush is scenery. the blueberry bush is a container. the blueberry bush is not portable. the blueberry bush contains blueberries. Understand "berries" as blueberries. The blueberries are edible.The description of the blueberries is "The blueberries are ripe and juicy.".
-
-The dime underlies the car seat. Understand "shiny" as dime. The description of the dime is "It[']s a dime. Ten cents. One tenth of a dollar. And very shiny"
-
-Instead of looking under a thing which is underlaid by the dime:
-	say "You find [the list of things which underlie the noun]!";
-	now every thing which underlies the noun is carried by the player;
-	now every thing which underlies the noun does not underlie the noun;
-	say "Taken.";
-	play the sound of Bell;
-	increase score by 5;
 
 After taking blueberries:
 	play the sound of Bell;
 	increase score by 5;
 	say "Good Job!".
+	
+after eating the blueberries, say "The blueberries were delicious. A true taste of summer."
 	
 instead of giving the coupon to the parking attendant:
 	if the parking attendant carries the parking ticket:
@@ -872,19 +856,39 @@ instead of going south when the location is the parking lot and the player does 
 
 instead of going south when the location is the parking lot and the player is in the beater car, say "You have to exit your car first." instead.
 
-Understand "place [something] on [something]" as putting it on. 
+Understand "place [something] on [something]" as putting it on. Understand "set [something] on [something]" as putting it on. 
 
-[placing relates one thing to one thing.
+[Understand "exit [something]" as exiting. ]
 
-the verb to place means the placing relation.
+Section 2 - Car Interior
 
-carry out placing:
-	try putting the noun on the second noun.]
+The Car Interior is a room. The car interior is inside from the parking lot. "You're sitting inside your car. Even though it[']s old, it feels like an old friend. From the leather seats to the crack in the windshield. It[']s familiar and comforting. There[']s old fast food wrappers on the floor, clothes and text books in the back seat. There is an air freshener hanging from the rear view mirror."
 
-instead of exiting when the noun is the beater car:
-	try exiting instead.	
+The car keys underlie the car seat. Understand "car key" and "keys" and "key" as the car keys. The description of the car keys is "These are your car keys. It[']s a wonder you could even find them, your house is such a mess."
+
+instead of entering car, try going inside.
+
+The air freshener is in the car interior. The air freshener is scenery. The description of the air freshener is "This is one of those air fresheners that are shaped like a pine tree and smell like one too. You bought it the last time you went to the car wash."
+
+The car seat is in the car interior. The car seat is a supporter. It is fixed in place. The description of the car seat is "A faux leather seat that looked great when it was new."
+
+The dashboard is in the car interior. The dashboard is a supporter. The description of the dashboard is "It looks like you could set something there."
+
+The glove box is in the car interior. The glove box is a locked openable container. The car keys unlock the glove box. Understand "glove compartment" and "compartment" as the glove box. The gloves are inside the glove box. The gloves are wearable. The description of the gloves is "A nice set of sheepskin gloves. They[']re very warm."
+
+The dime underlies the car seat. Understand "shiny" and "coin" as the dime. The description of the dime is "It[']s a dime. Ten cents. One tenth of a dollar. And very shiny."
+
+Instead of looking under a thing which is underlaid by the dime:
+	say "You find [the list of things which underlie the noun]!";
+	now every thing which underlies the noun is carried by the player;
+	now every thing which underlies the noun does not underlie the noun;
+	say "Taken.";
+	play the sound of Bell;
+	increase score by 5;
 	
-Section 2 - Kiosk
+
+
+Section 3 - Kiosk
 
 After going south from the parking lot when the Kiosk is unvisited and the player carries the parking ticket:
 	display Figure of TicketBooth;
@@ -895,7 +899,7 @@ Before looking when the location is the Kiosk:
 
 The kiosk is a room. The kiosk is north of Head of the Line. The kiosk is east of the Show Facade. The kiosk is outdoors. The kiosk is west of High Striker. The kiosk is northeast of the Concession Stand. The kiosk is south of the Parking Lot. "The ticket kiosk stands at the carnival entrance, a compact booth painted in bright red and yellow stripes with bold letters above the window reading 'Tickets Here!' Twinkling lights outline its edges, blinking rhythmically to draw attention.
 
-A single window serves visitors, where a smiling attendant dispenses colorful tickets from neatly arranged rolls. Beside the tickets, a cash drawer jingles as change is counted, and a digital payment system glows faintly for modern convenience.
+A single window serves visitors, where a smiling attendant dispenses colorful tickets from neatly arranged rolls. Beside the tickets, a cash drawer jingles as change is counted, and a digital payment system glows faintly for modern convenience. Too bad you don[']t have a debit card.
 
 Next to the kiosk, a vibrant signboard lists ticket prices with playful illustrations of rides and treats. Pennant flags flutter from the kiosk’s roof, adding to the festive atmosphere, while the smell of popcorn and fried dough wafts from nearby stalls.
 
@@ -912,9 +916,9 @@ After buying the hell ride ticket:
 	increase score by 5;
 	say "Well done!";
 
-Section 3 - Concession Stand
+Section 4 - Concession Stand
 
-Test Concession with "brief / get blueberries / s / sw / l at treats / read menu / buy cola / buy popcorn / buy candy apple / buy cotton candy / buy pretzel / inventory / drink soda / g / g / g / g / i / ne / n / i / score".
+Test Concession with "brief / s / sw / l at treats / read menu / buy cola / buy popcorn / buy candy apple / buy cotton candy / buy pretzel / inventory / drink soda / g / g / g / g / i / ne / n / i / score".
 
 Before going southwest when the location is the kiosk and the Concession Stand is unvisited:
 	display Figure of ConcessionStand.
@@ -961,9 +965,9 @@ cotton candy is here. Cotton candy is edible. The price of cotton candy is $1.50
 
 A soft pretzel is here. The soft pretzel is edible. The price of the soft pretzel is $1.50. The description of the soft pretzel is "The soft pretzel is sprinkled generously with salt."
 
-Section 4 - High Striker
+Section 5 - High Striker
 
-Test Striker with "brief / get blueberries / s / e / buy mallet / hit lever with mallet / g / g / g / g / 2 / w / n / i / score".
+Test Striker with "brief / s / e / buy mallet / hit lever with mallet / g / g / g / g / 2 / w / n / i / score".
 
 Before going east when the location is the kiosk and the High Striker is unvisited:
 	display Figure of HighStriker.
@@ -1036,7 +1040,7 @@ after Reading a command :
 		now the player carries the fuse13;
 		reject the player's command.
 
-Section 5 - Show Facade
+Section 6 - Show Facade
 
 Before going west when the location is the kiosk and the Show Facade is unvisited:
 	display Figure of LittleEgyptFacade.
@@ -1064,9 +1068,9 @@ Check going west when the location is the Show Facade and the barker is carrying
 After giving when the noun is dime and the second noun is barker:
 	say "You hand over a dime, and the barker nods, waving you through. As you step past the entrance, the air feels thicker, almost humid, and the sounds of the carnival fade away. You’ve entered an entirely different world now—one filled with the scents of incense and exotic spices, and the low, hypnotic music of a faraway land. Before you, a series of dimly lit tents stretch out, their flaps slightly swaying in the breeze. Intrigued, you take your first step into the Little Egypt Show. You can now head west into the show."
 
-Section 6 - Show Tent	
+Section 7 - Show Tent	
 
-Test Egypt with "brief / get blueberries / s / w / l at barker / give dime to barker / w / z / z / n / z / z / z / e / e / n / i / score".
+Test Egypt with "brief / s / w / l at barker / give dime to barker / w / z / z / n / z / z / z / e / e / n / i / score".
 
 Before going west when the location is the Show Facade and the Show Tent is unvisited and barker is carrying the dime:
 	display Figure of LittleEgyptShow.	
@@ -1112,7 +1116,7 @@ event
 "The music alternates between hauntingly slow melodies and rapid, energetic drum beats, creating an emotional arc that keeps you entranced. Little Egypt relies on the music[']s dynamic changes to tell a story with movements reflecting joy, sorrow, seduction, and celebration."
 "The performance concludes with a dramatic flourish of a fast-paced shimmy, a bold spin, and Little Egypt dramatically casts off her veils. The dancer takes a bow to enthusiastic applause, leaving you spellbound by the sensual yet artful display."
 
-Section 7 - Head of the Line
+Section 8 - Head of the Line
 
 Head of the Line is a room. Head of the Line is south of Kiosk. Head of the Line is north of Ride Entrance. The Head of the Line is outdoors. "You are standing in front of a ticket taker with his hand open waiting for your ticket. The entrance to the ride is south of here. The ride attendant tells you that you[']re lucky you showed up when you did because this will be the last trip through Hell Ride. You notice that all the other cars are empty."
 
@@ -1121,9 +1125,6 @@ The Ride Attendant is a man in Head of the Line. Understand "attendent" as atten
 Check going south when the location is Head of the Line and the Ride Attendant does not have the hell ride ticket:
 	say "You[']ll need a ticket to go that way.";
 	stop the action.
-
-
-
 
 Chapter 3 - Backstage
 
@@ -1295,7 +1296,7 @@ Before going south when the location is the kiosk and the Head of the Line is un
 Before looking when the location is the Head of the Line:
 	display Figure of HellRideEntrance.
 
-Test Ride with "brief / get blueberries / s / buy hell ride ticket / s / give hell ride ticket to attendant / s / enter hell ride car / wait / z / z / z / z / z / z / z".
+Test Ride with "brief / s / buy hell ride ticket / s / give hell ride ticket to attendant / s / enter hell ride car / wait / z / z / z / z / z / z / z".
 
 HellRideAuto is a scene. 
 HellRideAuto begins when the player is in the hell ride car for 3 turns.
@@ -1522,20 +1523,27 @@ Instead of taking fuse11 when fuse11 is lost:
 	
 Chapter 5 - Second Floor
 
-Section 1 - Dark Hallway
+Section 1 - Holding Room
+
+The Holding room is a room. "I am a room to hold things."
+
+every turn when the location is the holding room, say "Danger, Will Robinson! This can never happen!"
+
+Section 2 - Dark Hallway
 
 Dark Hallway is a dark room. "This is a poorly lit hallway. Ahead you can see the glow of an open door."
 	
-Section 2 - Control Room
+Section 3 - Control Room
 
-Control Room is a dark room. The Control Room is west of the Dark Hallway. The Control Room is a scored room. "The backstage control room is a plain, functional hub where the carnival’s rides, lights, and attractions are managed. Gray industrial walls, scuffed and greasy, surround rows of monitors streaming live carnival feeds—the Ferris wheel, carousel, and Hell Ride. Beneath them, a control panel with labeled switches and blinking lights oversees the systems.
+Control Room is a dark room. The Control Room is west of the Dark Hallway. The Control Room is a scored room. "The backstage control room is a plain, functional hub where the carnival’s rides, lights, and attractions are managed. Gray industrial walls, scuffed and greasy, surround rows of monitors streaming live carnival feeds—the Ferris Wheel, Carousel, and Hell Ride. Beneath them, a control panel with labeled dials, colored buttons, and lights oversees the systems.
 
 The hum of electronics fills the air, punctuated by the crackle of a radio: 'Maintenance to Tilt-a-Whirl—wrench needed!' The worn floor is scattered with papers, tools, and coffee cups. A cluttered desk holds logs and schedules, while a corkboard above displays charts and red-marked notes like 'Check Zipper circuit breakers.'
 
 A flickering light casts cold shadows as the metallic tang of machinery mixes with dampness. Functional yet essential, this hidden space ensures the carnival’s magic runs seamlessly." 
 
-[buttons]
-The Control Panel is a thing in the Control Room. The Control Panel is a supporter and fixed in place. 
+Section 4 - Buttons
+
+The Control Panel is a thing in the Control Room. The Control Panel is a supporter and fixed in place.
 
 A button is a kind of device. 
 Understand "button" as a button.
@@ -1553,7 +1561,8 @@ The button7 is a button. It is part of the control panel. The color of button7 i
 The button9 is a button. It is part of the control panel. The color of button9 is indigo. Understand "indigo" as button9.
 The button11 is a button. It is part of the control panel. The color of button11 is khaki. Understand "khaki" as button11.
 
-[dials]
+Section 5 - Dials
+
 A dial is a kind of device. 
 Understand "dial" as a dial.
 A dial is fixed in place.
@@ -1591,7 +1600,8 @@ To count the dials:
 	if dial setting of the dial9 is 9, increment the dial count;
 	if dial setting of the dial11 is 11, increment the dial count.
 	
-[lights]
+Section 6 - Lights
+
 A colored light is a kind of device. A colored light is fixed in place. A colored light is usually switched off. Understand "indicator" as colored light.
 A light is a kind of device. 
 Understand "light" as a fuse.
@@ -1612,17 +1622,28 @@ instead of switching on a light, say "You can[']t do that!"
 
 instead of switching off a light, say "You can[']t do that!"
 
-[commands]
+Section 7 - The Monitor
+
+The monitor is part of the control panel. The monitor is fixed in place. Understand "screen" as monitor.
+instead of examining the monitor:
+	if the button1 is switched on, say "The monitor now shows a tableau of poor unfortunate townsfolk locked in stocks.";
+	if the button3 is switched on, say "The monitor now shows a scene of someone waiting to be hanged.";
+	if the button5 is switched on, say "The monitor now displays a scene of witches being burned at the stake.";
+	if the button7 is switched on, say "The monitor now shows the implements of torture in the dungeon.";
+	if the button9 is switched on, say "The monitor now shows a tableau of a guillotine rising and falling over the ride exit.";
+	if the button11 is switched on, say "The monitor shows a the gift shop located at the Hell Ride exit.".
+
+Section 8 - Commands
+
 instead of examining the control panel:
-	say "The control panel is populated with a row of colored lights. From left to right, the colors are aqua, crimson, emerald, gray, indigo, and khaki. Below the lights is a row of similarly colored dials and below that is a row of buttons. (The poorly generated AI & human image is meant for comparison purposes only. LOL) The control panel is [if switch count is 6]lit up like a Christmas tree[otherwise]dark[end if].[line break]".
-[	if switch count is 6 and every button is switched off, display the figure of ControlPanel.
-	if fuse1 is in socket1 and button1 is switched on, display the figure of ControlPanelStocks.
-	if fuse3 is in socket3 and button3 is switched on, display the figure of ControlPanelGallows.
-	if fuse5 is in socket5 and button5 is switched on, display the figure of ControlPanelStake.
-	if fuse7 is in socket7 and button7 is switched on, display the figure of ControlPanelDungeon.
-	if fuse9 is in socket9 and button9 is switched on, display the figure of ControlPanelGuillotine.
+	say "The control panel is populated with a row of colored lights. From left to right, the colors are aqua, crimson, emerald, gray, indigo, and khaki. Below the lights is a row of similarly colored dials and below that is a row of buttons. (The poorly generated AI & human image is meant for comparison purposes only. LOL) The control panel is [if switch count is 6]lit up like a Christmas tree[otherwise]dark[end if].[line break]";
+	if switch count is 6 and every button is switched off, display the figure of ControlPanel;
+	if fuse1 is in socket1 and button1 is switched on, display the figure of ControlPanelStocks;
+	if fuse3 is in socket3 and button3 is switched on, display the figure of ControlPanelGallows;
+	if fuse5 is in socket5 and button5 is switched on, display the figure of ControlPanelStake;
+	if fuse7 is in socket7 and button7 is switched on, display the figure of ControlPanelDungeon;
+	if fuse9 is in socket9 and button9 is switched on, display the figure of ControlPanelGuillotine;
 	if fuse11 is in socket11 and button11 is switched on, display the figure of ControlPanelExit.
-	]
 	
 The switch count is a number that varies. The switch count is 0.
 To count the switches:
@@ -1651,10 +1672,9 @@ every turn when the location is the control room:
 	count the switches;
 	count the dials;
 	[say "switch count: [switch count], dial count: [dial count]."]
-		
 
+Section 9 - Pushing Buttons
 
-[pushing the indigo button is the winning move]
 Instead of switching on or pushing the button9: 
 	if the switch count is 6 and the dial count is 6 and button9 is switched off
 		begin;
@@ -1761,25 +1781,9 @@ Instead of Switching on or pushing button11:
 			now all buttons are switched off;
 		end if.
 
-The monitor is part of the control panel. The monitor is fixed in place. Understand "screen" as monitor.
-instead of examining the monitor:
-	if the button1 is switched on, say "The monitor now shows a tableau of poor unfortunate townsfolk locked in stocks.";
-	if the button3 is switched on, say "The monitor now shows a scene of someone waiting to be hanged.";
-	if the button5 is switched on, say "The monitor now displays a scene of witches being burned at the stake.";
-	if the button7 is switched on, say "The monitor now shows the implements of torture in the dungeon.";
-	if the button9 is switched on, say "The monitor now shows a tableau of a guillotine rising and falling over the ride exit.";
-	if the button11 is switched on, say "The monitor shows a the gift shop located at the Hell Ride exit.".
-	
-Section 3 - Holding Room
-
-The Holding room is a room. "I am a room to hold things."
-
-every turn:
-	if the player is in the holding room, say "Danger, Will Robinson! This can never happen!"
-
 Part 3 - Regions
 
-The Midway is a region. Parking Lot, Kiosk, Concession Stand, High Striker, Show Facade, Show Tent, and Head of the Line are in the Midway. The sky is in the Midway.
+The Midway is a region. Parking Lot, Car Interior, Kiosk, Concession Stand, High Striker, Show Facade, Show Tent, and Head of the Line are in the Midway. The sky is in the Midway.
 
 HellRide is a region. Ride Entrance, Stocks Room, Gallows Room, Stake Room, Dungeon, Guillotine Room, Ride Exit is in HellRide.
 
