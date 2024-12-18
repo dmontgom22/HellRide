@@ -15,8 +15,7 @@ The release number is 110.
 The story description is "You've decided to stay and enjoy the carnival anyway."
 The story creation year is 2024.
 
-[Release along with cover art, a website, an introductory booklet, the "Quixe" interpreter, the source text, and library card].
-Release along with cover art, a website, an introductory booklet, the "Quixe" interpreter.
+Release along with cover art, a website, an introductory booklet, the "Quixe" interpreter, the source text, the solution, and library card.
 
 Include Locksmith by Emily Short.
 
@@ -333,32 +332,14 @@ When play begins:
 	 choose row 1 in Table of Basic Help Options;
 	 now description entry is "Hell Ride - A Ride to remember...
 
-In the early 1980[']s, I had an Apple II Plus computer with 64K of RAM, dual 5.25[quotation mark]
-floppy disks, and a color monitor as big as a television. And the very first game I ever 
-bought was Infocom[']s Zork I: The Great Underground Empire. This was cool. It was all 
-text-based. The game described your surroundings and you interacted with commands that 
-say what you wanted to do. This 'Interactive Fiction' really evoked in a game what I 
-appreciated most about reading: rich descriptions, colorful characters, and the like. 
-After Zork I, there was Zork II and III. Enchanter, Moonmist, Suspect, and so many 
+In the early 1980[']s, I had an Apple II Plus computer with 64K of RAM, dual 5.25[quotation mark] floppy disks, and a color monitor as big as a television. And the very first game I ever bought was Infocom[']s Zork I: The Great Underground Empire. This was cool. It was all text-based. The game described your surroundings and you interacted with commands that say what you wanted to do. This 'Interactive Fiction' really evoked in a game what I appreciated most about reading: rich descriptions, colorful characters, and the like. After Zork I, there was Zork II and III. Enchanter, Moonmist, Suspect, and so many 
 more. I played them all with my best friend Andy.
 
-Andy and I were software developers at the time and we thought, 'We can do this!' So 
-we set out to do this. We developed a game engine with a natural language parser. And
-it was pretty good. We could support most of the kinds of things they did, certainly
-less graceful but pretty good. In fact, our parser was better than theirs in a case
-where the sentence was ambiguous. e.g. 'Walk into the room with the lamp.' Is the
-player carrying the lamp? Or is the lamp in the room? 
+Andy and I were software developers at the time and we thought, 'We can do this!' So we set out to do this. We developed a game engine with a natural language parser. And it was pretty good. We could support most of the kinds of things they did, certainly less graceful but pretty good. In fact, our parser was better than theirs in a case where the sentence was ambiguous. e.g. 'Walk into the room with the lamp.' Is the player carrying the lamp? Or is the lamp in the room? 
 
-For fun, we reverse engineered parts of Infocom[']s game format. We found the dictionary,
-certain text tokens used for text substitution, the game text. We also discovered the
-first example of compression I had ever seen and it just about made my head explode.
-They stored all ASCII characters in five bits! Pow! Mind blown. I had never considered
-anything like that. Just another hook.
+For fun, we reverse engineered parts of Infocom[']s game format. We found the dictionary, certain text tokens used for text substitution, the game text. We also discovered the first example of compression I had ever seen and it just about made my head explode. They stored all ASCII characters in five bits! Pow! Mind blown. I had never considered anything like that. Just another hook.
 
-We developed two prototypes: Diner and Hell Ride. Diner was about bank robbers coming 
-into the diner where you are a short order cook and you have to save the day. Hell Ride
-was pretty close to what you find here. I decided to implement it using modern tools.
-It[']s pretty good.
+We developed two prototypes: Diner and Hell Ride. Diner was about bank robbers coming into the diner where you are a short order cook and you have to save the day. Hell Ride was pretty close to what you find here. I decided to implement it using modern tools. It[']s pretty good.
 
 I hope you enjoy it.
 
@@ -1578,10 +1559,10 @@ dial11 is a dial. dial11 is part of the control panel. The color of dial11 is kh
 
 Spinning it to is an action applying to one thing and one number. Check spinning it to: if the noun is not a dial, say "[The noun] does not spin." instead. Report spinning it to: 
 	if the number understood is less than 0 or the number understood is greater than 11:
-		say "The dial can only be set from 0 to 11.";
+		say "The [color] colored dial can only be set from 0 to 11.";
 		stop the action;
 	otherwise:
-		say "The dial is now set to [the number understood].";
+		say "The [color] colored dial is now set to [the number understood].";
 		now the noun is switched on;
 		now the dial setting of the noun is the number understood.
 
@@ -1699,6 +1680,7 @@ Instead of switching on or pushing the button1:
 			say "The monitor flickers for a second and the scene it displays changes to something different.";
 			say "The monitor now shows a tableau of poor unfortunate townsfolk locked in stocks.";
 			say "The [color] light is now on.";
+			display the figure of ControlPanelStocks;
 			now all buttons are switched off;
 			now all lights are switched off;
 			now button1 is switched on;
@@ -1716,6 +1698,7 @@ Instead of switching on or pushing the button3:
 			say "The monitor flickers for a second and the scene it displays changes to something different.";
 			say "The monitor now shows a scene of someone waiting to be hanged.";
 			say "The [color] light is now on.";
+			display the figure of ControlPanelGallows;
 			now all buttons are switched off;
 			now all lights are switched off;
 			now button3 is switched on;
@@ -1733,6 +1716,7 @@ Instead of switching on or pushing button5:
 			say "The monitor flickers for a second and the scene it displays changes to something different.";
 			say "The monitor now displays a scene of witches being burned at the stake.";
 			say "The [color] light is now on.";
+			display the figure of ControlPanelStake;
 			now all buttons are switched off;
 			now all lights are switched off;
 			now button5 is switched on;
@@ -1750,6 +1734,7 @@ Instead of switching on or pushing button7:
 			say "The monitor flickers for a second and the scene it displays changes to something different.";
 			say "The monitor now shows the implements of torture in the dungeon.";
 			say "The [color] light is now on.";
+			display the figure of ControlPanelDungeon;
 			now all buttons are switched off;
 			now all lights are switched off;
 			now button7 is switched on;
@@ -1767,6 +1752,7 @@ Instead of Switching on or pushing button11:
 			say "The monitor flickers for a second and the scene it displays changes to something different.";
 			say "The monitor shows a the gift shop located at the Hell Ride exit.";
 			say "The [color] light is now on.";
+			display the figure of ControlPanelExit;
 			now all buttons are switched off;
 			now all lights are switched off;
 			now button11 is switched on;

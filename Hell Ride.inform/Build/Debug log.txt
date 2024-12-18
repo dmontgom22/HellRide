@@ -7,7 +7,7 @@ Using Inform kit 'EnglishLanguageKit' (priority 1).
 Using Inform kit 'WorldModelKit' (priority 2).
 Using Inform kit 'CommandParserKit' (priority 3).
 756 Preform nonterminals read from C:\Program Files\Inform\Internal\Languages\English\Syntax.preform
-I've now read your source text, which is 20124 words long.
+I've now read your source text, which is 20179 words long.
 Included: core, naming, instance counting, interactive fiction, spatial model, backdrops, bibliographic data, chronology, devices, mapping, persons, player, regions, scenes, scoring, timed rules, times of day, actions, going, command, showme, multimedia, figures, sounds, glulx external files
 Excluded: 
 I've also read Basic Inform by Graham Nelson, which is 7691 words long.
@@ -43,27 +43,28 @@ Loading kinds definitions from C:\Program Files\Inform\Internal\Inter\WorldModel
 Loading kinds definitions from C:\Program Files\Inform\Internal\Inter\WorldModelKit\kinds\Figures.neptune
 Loading kinds definitions from C:\Program Files\Inform\Internal\Inter\WorldModelKit\kinds\Sounds.neptune
 Loading kinds definitions from C:\Program Files\Inform\Internal\Inter\CommandParserKit\kinds\Parsing.neptune
+.... Task__make_built_in_kind_constructors() took 11cs
 
 
 -----------------------------------------------------
 Phase III ... Pre-pass through major nodes
 -----------------------------------------------------
 
-.... MajorNodes__pre_pass() took 8cs
+.... MajorNodes__pre_pass() took 10cs
 
 
 -----------------------------------------------------
 Phase IV ... First pass through major nodes
 -----------------------------------------------------
 
-.... MajorNodes__pass_1() took 10cs
+.... MajorNodes__pass_1() took 12cs
 
 
 -----------------------------------------------------
 Phase V ... Second pass through major nodes
 -----------------------------------------------------
 
-.... MajorNodes__pass_2() took 2cs
+.... MajorNodes__pass_2() took 3cs
 
 
 -----------------------------------------------------
@@ -89,21 +90,21 @@ Phase VIII ... Tables and grammar
 Phase IX ... Augment model world
 -----------------------------------------------------
 
-.... World__stage_V() took 2cs
+.... World__stage_V() took 3cs
 
 
 -----------------------------------------------------
 Phase X ... Phrases and rules
 -----------------------------------------------------
 
-.... ImperativeDefinitions__assess_all() took 8cs
+.... ImperativeDefinitions__assess_all() took 9cs
 
 
 -----------------------------------------------------
 Phase XI ... Generating inter (1)
 -----------------------------------------------------
 
-.... RTKindConstructors__compile() took 5cs
+.... RTKindConstructors__compile() took 7cs
 
 
 -----------------------------------------------------
@@ -112,7 +113,7 @@ Phase XII ... Generating inter (2)
 
 .... CompletionModule__compile() took 1cs
 .... RTKindConstructors__compile_permissions() took 1cs
-.... ImperativeDefinitions__compile_first_block() took 1cs
+.... InferenceSubjects__emit_all() took 1cs
 
 
 ==== Phase XII.1 ... Slashing command grammar ====
@@ -127,9 +128,9 @@ Phase XII ... Generating inter (2)
 Phase XIII ... Generating inter (3)
 -----------------------------------------------------
 
-.... Sequence__undertake_queued_tasks() took 137cs
+.... Sequence__undertake_queued_tasks() took 160cs
 .... Sequence__undertake_queued_tasks() took 1cs
-.... RTPhrasebook__compile_entries() took 2cs
+.... RTPhrasebook__compile_entries() took 3cs
 
 
 -----------------------------------------------------
@@ -152,21 +153,20 @@ Phase XV ... Generating inter (5)
 
 .... Sequence__undertake_queued_tasks() took 1cs
 Providing for a total heap of 65536, given requirement of 65536
-.... Sequence__lint_inter() took 2cs
+.... Sequence__lint_inter() took 3cs
 
 
 -----------------------------------------------------
 Phase XVI ... Bibliographic work
 -----------------------------------------------------
 
-.... ReleaseInstructions__write_ifiction_and_blurb() took 9cs
 
 
 -----------------------------------------------------
 Phase XVII ... Complete
 -----------------------------------------------------
 
-Compile CPU time: 201 centiseconds
+Compile CPU time: 240 centiseconds
 
 
 ==== Phase XVII.1 ... step 1/15: read <- *memory ====
@@ -7657,7 +7657,7 @@ HTML tag stack:
     52. html (opened at line 236 of 'D:/Programs/Adv/Inform7/Distribution/inweb/foundation-module/Chapter 5/HTML.w')
 
 
-Back end elapsed time: 230cs
+Back end elapsed time: 531cs
 Total of 128 files written as streams.
 Vacant escapes: %: ..CDE.GH..K.M.O.QR.TU...YZab..e..h.jklm.o.qr......yz0123456789
 Vacant escapes: $: .....F...J..........UVW.....................s.u..x.........789
