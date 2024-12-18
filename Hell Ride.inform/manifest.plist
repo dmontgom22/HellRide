@@ -44,7 +44,7 @@
         <key>Sounds</key>
         <dict>
             <key>20</key>
-            <string>Sounds\StrongmanBell.ogg</string>
+            <string>Sounds\Bell.ogg</string>
         </dict>
     </dict>
 </plist>
