@@ -428,7 +428,7 @@ Part 2 - The Game
 
 Chapter 1 - Electrical Room 
 
-Electrical Room is a dark room.  "The electrical room is a small but essential space hidden behind the carnival’s bright attractions. The air vibrates with electric energy, carrying the acrid scent of overheated wires and metal. Metal panels line the walls, some polished, others worn and streaked with grease.
+Electrical Room is a dark room.  The electrical room can be electromagnetic. The electrical room is electromagnetic. "The electrical room is a small but essential space hidden behind the carnival’s bright attractions. The air vibrates with electric energy, carrying the acrid scent of overheated wires and metal. Metal panels line the walls, some polished, others worn and streaked with grease.
 
 A central breaker panel, labeled with destinations like 'Ferris Wheel Lights' and 'Carousel Motors,' dominates one wall. Green, yellow, and red indicator lights blink intermittently, reflecting off steel surfaces. Overhead, thick cable bundles snake across the ceiling, connecting to the carnival’s power network.
 
@@ -436,10 +436,7 @@ In a corner, an open junction box spills wires onto the wall, while a workbench 
 
 An emergency shutdown panel painted bright red stands near a fire extinguisher and a faded safety poster. A small fan on the workbench oscillates weakly, barely cooling the room’s warmth. Flickering fluorescent tubes overhead cast harsh, shifting shadows.
 
-The electrical room is raw and utilitarian, revealing the fragile systems behind the carnival’s magic—a humbling reminder of the power sustaining the midway’s enchantment."
-
-every turn when the location is the electrical room:
-	say "This room is oozing with electromagnetic energy. You can feel your hair stand on end and all your nerves twitching. This feels dangerous! There are exits in all directions."
+The electrical room is raw and utilitarian, revealing the fragile systems behind the carnival’s magic—a humbling reminder of the power sustaining the midway’s enchantment.[if the location is electromagnetic] This room is oozing with electromagnetic energy. You can feel your hair stand on end and all your nerves twitching. This feels dangerous! There are exits in all directions.[end if]".
 
 Electrical Room is south of the Generator Room. 
 Electrical Room is southwest of Electrical Closet One.
