@@ -252,7 +252,7 @@ Carry out examining a thing:
 	now the noun is seen.
 	
 [scored rooms]
-A room can be scored or unscored.
+A room can be scored or unscored. A room is usually unscored.
 
 Carry out going to a unvisited scored room:
 	play the sound of Bell;
@@ -308,7 +308,7 @@ every turn when examining the coupon, display Figure of Coupon.
 
 After reading a command:
 	if the player's command includes "please":
-		say "Please do not say please.";
+		say "Please do not say 'please.'";
 		reject the player's command.
 	
 [fix up the map]
@@ -413,13 +413,21 @@ Chapter 1 - Electrical Room
 
 Electrical Room is a dark room.  The electrical room can be electromagnetic. The electrical room is electromagnetic. "The electrical room is a small but essential space hidden behind the carnival’s bright attractions. The air vibrates with electric energy, carrying the acrid scent of overheated wires and metal. Metal panels line the walls, some polished, others worn and streaked with grease.
 
-A central breaker panel, labeled with destinations like 'Ferris Wheel Lights' and 'Carousel Motors,' dominates one wall. Green, yellow, and red indicator lights blink intermittently, reflecting off steel surfaces. Overhead, thick cable bundles snake across the ceiling, connecting to the carnival’s power network.
+A central breaker panel, labeled with destinations like 'Ferris Wheel Lights' and 'Carousel Motors,' dominates one wall. Colored indicator lights blink intermittently, reflecting off steel surfaces. Overhead, thick cable bundles snake across the ceiling, connecting to the carnival’s power network.
 
 In a corner, an open junction box spills wires onto the wall, while a workbench holds scattered tools and a smudged wiring diagram pinned above. The dirt floor bears scratches, oil stains, and wire clippings. A faint vibration, carried from the generator or nearby rides, pulses through the room.
 
 An emergency shutdown panel painted bright red stands near a fire extinguisher and a faded safety poster. A small fan on the workbench oscillates weakly, barely cooling the room’s warmth. Flickering fluorescent tubes overhead cast harsh, shifting shadows.
 
 The electrical room is raw and utilitarian, revealing the fragile systems behind the carnival’s magic—a humbling reminder of the power sustaining the midway’s enchantment.[if the location is electromagnetic] This room is oozing with electromagnetic energy. You can feel your hair stand on end and all your nerves twitching. This feels dangerous! There are exits in all directions.[end if]".
+
+The breaker panel is here. It is scenery. 
+The junction box is here. It is scenery. 
+The workbench is here. It is scenery.
+The emergency shutdown panel is here. It is scenery.
+A fire extinguisher is here. It is scenery.
+A faded safety poster is here. It is scenery.
+A small fan is here. It is scenery.
 
 Electrical Room is south of the Generator Room. 
 Electrical Room is southwest of Electrical Closet One.
@@ -804,7 +812,7 @@ The midway is to the south. There is a blueberry bush here. [if blueberry bush c
 
 The Parking Attendant is a man in the the parking lot. Understand "attendent" as attendant. The parking attendant carries the parking ticket and the parking stub. The price of the parking ticket is $5.00. The description of Parking Attendant is "This is a bored teenager just trying to earn enough money to take his sweetie to the movies next week.[if the parking attendant carries the parking ticket] He has a parking ticket. The price of a parking ticket is [the price of the parking ticket].[end if]". 
 
-The beater car is an open enterable container in the parking lot. The beater car is scenery. Understand "vehicle" and "car" as the beater car. The Parking Lot is outside from the Car Interior. The description of the beater car is "[if the player is in the beater car][bold type]Car Interior[roman type][line break][end if]This is your car. It[']s a 2002 Honda Civic and it[']s seen better days.[paragraph break][if the player is in the beater car]You're sitting inside your car. [end if]Even though it[']s old, it feels like an old friend. From the faux leather seats to the crack in the windshield. It[']s familiar and comforting. There[']s old fast food wrappers on the floor, clothes and text books in the back seat. There is an air freshener hanging from the rear view mirror. You see [the list of things which are part of the beater car]." 
+The beater car is an open enterable container in the parking lot. The beater car is scenery. Understand "vehicle" and "car" as the beater car. The description of the beater car is "[if the player is in the beater car][bold type]Car Interior[roman type][line break][end if]This is your car. It[']s a 2002 Honda Civic and it[']s seen better days.[paragraph break][if the player is in the beater car]You[']re sitting inside your car. [end if]Even though it[']s old, it feels like an old friend. From the faux leather seats to the crack in the windshield. It[']s familiar and comforting. There[']s old fast food wrappers on the floor, clothes and text books in the back seat. There is an air freshener hanging from the rear view mirror. You see [the list of things which are part of the beater car]." 
 
 instead of looking when the player is in the beater car, try examining the beater car.
 
@@ -847,7 +855,7 @@ every turn when the location is the parking lot:
 every turn when the player is in the beater car:
 	now the left hand status line is "Car Interior".
 
-The air freshener is in the beater car. The description of the air freshener is "This is one of those air fresheners that are shaped like a pine tree and smells like one too. You bought it the last time you went to the car wash."
+The air freshener is in the beater car. The description of the air freshener is "This is one of those air fresheners that are shaped like a pine tree and smell like one too. You bought it the last time you went to the car wash."
 
 The dashboard is part of the beater car. The dashboard is a supporter. The description of the dashboard is "It looks like you could set something there."
 
@@ -867,19 +875,7 @@ Instead of looking under a thing which is underlaid by the dime:
 	play the sound of Bell;
 	increase score by 5;
 
-[instead of looking when the player is in the beater car and the noun is nothing, say "You're sitting inside your car. Even though it[']s old, it feels like an old friend. From the faux leather seats to the crack in the windshield. It[']s familiar and comforting. There[']s old fast food wrappers on the floor, clothes and text books in the back seat. There is an air freshener hanging from the rear view mirror. You see [the list of things which are part of the beater car]." instead.]
-
-[instead of entering when the noun is the beater car:
-	now the player is on the inside car.
-	
-after exiting when the noun is the inside car:
-	now the player is in the parking lot.
-
-instead of exiting:
-	if the noun is the inside car:
-		now the player is in the parking lot.]
-	
-Understand "exit [a direction]" as a mistake ("Please try 'go [noun]' or just '[noun]' as a direction isn't necessarily an exit here.")
+Understand "exit [a direction]" as a mistake ("Please try 'go [noun]' or just '[noun]' as a direction isn[']t necessarily an exit here.")
 
 Understand "place [something] on [something]" as putting it on. Understand "set [something] on [something]" as putting it on. 
 
@@ -900,16 +896,30 @@ Next to the kiosk, a vibrant signboard lists ticket prices with playful illustra
 
 The worn ground around the kiosk shows the passage of eager carnival-goers. Families, couples, and friends form a buzzing line, their excitement building as they approach this first step into the magic of the carnival.
 
-The midway continues east and west from here. There is a concession stand to the south west. There is a cashier here. [if cashier has the hell ride ticket]The Cashier has a Hell Ride ticket. The price of a ticket is [the price of the hell ride ticket].[end if]"
+The midway continues east and west from here. There is a concession stand to the south west. There is a cashier here. The prices of ride tickets are on the signboard. The cashier has [list of things carried by the cashier]."
 
-The Hell Ride ticket is a thing. The price of the Hell Ride ticket is $3.00. The description of the Hell Ride ticket is "This Hell Ride ticket will 'Admit One' to the Hell Ride.[line break]It[']s a real 'E' ticket, baby!"
+The Hell Ride ticket is a thing. The price of the Hell Ride ticket is $3.00. The description of the Hell Ride ticket is "'Admit One' to the Hell Ride.[line break]It[']s a real 'E' ticket, baby!". The cashier carries the Hell Ride ticket.
+The cashier carries the Zipper ticket. The price of the zipper ticket is $2.00. The description of the Zipper ticket is "'Admit One' to the Zipper."
+The cashier carries the Ferris Wheel ticket. The price of the ferris wheel ticket is $2.00. The description of the Ferris Wheel ticket is "'Admit One' to the Ferris Wheel."
+The cashier carries the Tilt-A-Whirl ticket. The price of the tilt-a-whirl ticket is $2.00. The description of the Tilt-A-Whirl ticket is "'Admit One' to the Tilt-A-Whirl."
+The cashier carries the Carousel ticket. The price of the carousel ticket it is $1.00. The description of the Carousel ticket is "'Admit One' to the Carousel."
 
-The Cashier is a man in the kiosk. The cashier carries the Hell Ride ticket. The description of cashier is "This is a bored teenager hired to sell ride tickets all week at this carnival. He[']s thinking about having a brewski with his bros after work.". 
+The Cashier is a man in the kiosk. The description of cashier is "This is a bored teenager hired to sell ride tickets all week at this carnival. He[']s thinking about having a brewski with his bros after work.". 
 
 After buying the hell ride ticket:
 	play the sound of Bell;
 	increase score by 5;
 	say "Well done!";
+	
+There is a signboard in the Kiosk. The signboard is scenery. The description of the signboard is 
+"[line break]$3.00 Hell Ride.
+[line break]$3.00 Zipper.
+[line break]$2.00 Ferris Wheel.
+[line break]$2.00 Tilt-A-Whirl.
+[line break]$1.00 Carousel."
+
+
+
 
 Section 4 - Concession Stand
 
@@ -970,7 +980,7 @@ Before going east when the location is the kiosk and the High Striker is unvisit
 Before looking when the location is the High Striker:
 	display Figure of HighStriker.
 
-The High Striker is a room. The High Striker is outdoors. "This area features a tall, eye-catching machine adorned with bright, colorful lights, typically red, yellow, and blue. A large sign at the top reads 'Test Your Strength!' in bold, playful lettering. The machine’s base is made of polished wood, with a polished, vintage appearance. At the center is a sturdy metal pole, with a large bell hanging at the top, signaling when a successful attempt has been made. Along the length of the pole are markings indicating how strong you are.  A nearby sign says, 'Buy a mallet, strike the bell, win a prize.'[if the strongman attendant contains the mallet] You can see an over-sized mallet here.[end if]
+The High Striker is a room. The High Striker is outdoors. "This area features a tall, eye-catching machine adorned with bright, colorful lights, typically red, yellow, and blue. A large sign at the top reads 'Test Your Strength!' in bold, playful lettering. The machine[’]s base is made of polished wood, with a polished, vintage appearance. At the center is a sturdy metal pole, with a large bell hanging at the top, signaling when a successful attempt has been made. Along the length of the pole are markings indicating how strong you are.  A nearby sign says, 'Buy a mallet, strike the bell, win a prize.'[if the strongman attendant contains the mallet] You can see an over-sized mallet here.[end if]
 
 Spectators gather around, cheering on participants and offering lighthearted jabs and encouragement, creating a lively, competitive atmosphere. The sound of the mallet hitting the target is followed by the resonant clang of the bell (if struck), alongside the buzz of carnival music in the background."
 
@@ -982,13 +992,13 @@ The teddy bear is carried by the Strongman Attendant. The description of the ted
 
 The Swiss Army knife is a thing. The Swiss Army knife is carried by the Strongman Attendant. The screwdriver, awl, fingernail clippers, can opener, and corkscrew are a part of the Swiss Army knife. The description of the Swiss army knife is "This is the standard issue Swiss Army knife. It has [a list of things which are part of the item described]."  The printed name of the Swiss Army knife is "Swiss Army knife".
 
-instead of taking when the noun is in the swiss army knife, say "That[']s part of the Swiss Army knife. You can[']t take that!" instead.
+instead of taking when the noun is part of the swiss army knife, say "That[']s part of the Swiss Army knife. You can[']t take that!" instead.
 	
 The poster of Taylor Swift is carried by the Strongman Attendant. The description of the poster of Taylor Swift is "This is a poster of America[']s sweetheart, Taylor Swift."
 
 fuse13 is a fuse. fuse13 is carried by the Strongman Attendant. The fuse id of fuse13 is 13. The color of the fuse13 is magenta. Understand "magenta" as fuse13. 
 
-The lever is here. The lever is fixed in place. Understand "bullseye" and "target" as lever. The description of the lever is "There is a bullseye on the base. I guess this is where you have to aim the mallet."
+The lever is here. The lever is fixed in place. Understand "bullseye" and "target" as lever. The description of the lever is "There is a bullseye on the base. I guess this is where you have to hit the mallet."
 
 The mallet is carried by the Strongman Attendant.  The Price of the mallet is $2.00. Understand "hammer" as mallet. The description of the mallet is "The mallet is over sized, perhaps to give you an advantage in the Strong Man game."
 
@@ -1049,6 +1059,8 @@ You are standing in front of a dark and mysterious tent filled with illusions an
 
 Ladies and gentlemen, boys and girls, gather [']round! [line break]Step right up and witness the spectacle that[’]s taken the world by storm! [line break]She walks, she talks, she crawls on her belly like a reptile. [line break]Behold the one, the only Little Egypt, performing her legendary Dance of the Pyramids—a dazzling display of mystery, grace, and exotic allure! [line break]For just a dime, a mere one tenth of a dollar, prepare to be transported to the sands of Cairo, where enchantment and wonder await![end if]"
 
+The sign is in the Show Facade. The sign is scenery. The description of the sign is "The sign reads, 'Little Egypt Show – A Journey Into the Mysterious and Exotic!'".
+
 The Barker is a person in Show Facade. The description of the barker is "Here is a man dressed in black pants, a white shirt,a striped vest, a fez, and a dazzling smile. The barker cries:
 
 Ladies and gentlemen, boys and girls, gather [']round! [line break]Step right up and witness the spectacle that[’]s taken the world by storm! [line break]She walks, she talks, she crawls on her belly like a reptile. [line break]Behold the one, the only Little Egypt, performing her legendary Dance of the Pyramids—a dazzling display of mystery, grace, and exotic allure! [line break]For just a dime, a mere one tenth of a dollar, prepare to be transported to the sands of Cairo, where enchantment and wonder await!"
@@ -1065,7 +1077,7 @@ After giving when the noun is dime and the second noun is barker:
 
 Section 7 - Show Tent	
 
-Test Egypt with "brief / s / w / l at barker / give dime to barker / w / z / z / n / z / z / z / e / e / n / i / score".
+Test Egypt with "brief / s / w / l at barker / give dime to barker / w / z / z / n / z / z / z / z / z / e / e / n / i / score".
 
 Before going west when the location is the Show Facade and the Show Tent is unvisited and barker is carrying the dime:
 	display Figure of LittleEgyptShow.	
@@ -1073,7 +1085,7 @@ Before going west when the location is the Show Facade and the Show Tent is unvi
 Before looking when the location is the the Show Tent:
 	display Figure of LittleEgyptShow.		
 
-The Show Tent is a room. The Show Tent is west of Show Facade. "You are inside the Little Egypt Show. The attraction facade is to the east. There folding chairs organized neatly in rows. The show should start soon."
+The Show Tent is a room. The Show Tent is west of Show Facade. "You are inside the Little Egypt Show. The attraction[']s facade is to the east. There are folding chairs organized neatly in rows. The show should start soon."
 
 Little Egypt is a woman. Little Egypt is in the Show Tent. Little Egypt is scenery. The description of Little Egypt is "Little Egypt is an exotic looking, beautiful woman who is draped in flowing silk veils which she skillfully uses as part of the dance. Her attire consists of a sparkling, sequined bodice and a flowing skirt, adorned with jingling coin belts and jewelry that accentuate her movements."
 
@@ -1081,10 +1093,23 @@ The sheer veil is a thing. The description of the Sheer Veil is "This is a sheer
 
 The Stage is here. The Stage is scenery. The description of the Stage is "The stage is decorated to resemble an exotic Middle Eastern market or palace, featuring rich, colorful fabrics, brass ornaments, and lanterns casting a warm, flickering glow. Scents of incense waft through the air, enhancing the atmosphere of mystique. The backdrop displays painted scenes of pyramids, desert landscapes, and domed structures to evoking a sense of being transported to the 'Middle East'."
 
+The wall is a scenery container. The wall is in the Show Tent. 
+
+The lantern is an electric lamp. It is in the wall. The description of the lantern is "This is a highly polished brass lantern."
+
+after taking the lantern for the first time:
+	say "Taken.";
+	if  the flashlight is unseen
+		begin;
+			play the sound of Bell;
+			increase score by 5;
+			now the lantern is seen;
+		end if.
+
 The folding chair is a enterable scenery supporter in Show Tent. The description of the Folding Chair is "This is one of many folding chairs in the tent tonight."
 
 LittleEgyptAuto is a scene. 
-LittleEgyptAuto begins when the player is in the show tent for 2 turns. 
+LittleEgyptAuto begins when the player has been in the show tent for exactly three turns or the player has been on the folding chair for exactly two turns.. 
 LittleEgyptAuto ends when the number of filled rows in the Table of LittleEgypt Events is 0.
 
 When LittleEgyptAuto ends:
@@ -1155,8 +1180,12 @@ after examining when the noun is pile of junk:
 	
 after taking the flashlight for the first time:
 	say "Taken.";
-	play the sound of Bell;
-	increase score by 5.
+	if  the lantern is unseen
+		begin;
+			play the sound of Bell;
+			increase score by 5;
+			now the flashlight is seen;
+		end if.
 
 Section 2 - Maintenance Office
 
@@ -1177,14 +1206,26 @@ The walls display faded safety posters, a corkboard with maintenance schedules a
 
 Despite the mess, the room buzzes with purpose—a hidden hub where the carnival’s magic is sustained through sweat, ingenuity, and the hum of machinery." 
 
+The rusty wrenches are here. They are scenery. 
+The paint cans are here. They are scenery. 
+The grease jars are here. They are scenery. 
+The safety posters are here. They are scenery. 
+The notes are here. They are scenery. 
+The clock is here. They are scenery. 
+The lubricant is here. It is scenery.
+
+The coffee mug is on the desk. The coffee mug is edible. The description of the coffee mug is "Who knows how long this has been sitting here. I wouldn[']t drink it if I were you." 
+
+Instead of drinking the coffee mug: say "That looks nasty. You decide against drinking the coffee." instead.
+
 The desk is in the maintenance office. The desk is a supporter. The desk is fixed in place. A drawer is part of the desk. The drawer is a closed openable container. The drawer is scenery. The description of the desk is "It[']s a desk. There are coffee stains and cigarette burns from years of abuse. The single drawer is [if the drawer is open]open[otherwise]shut[end if]."
 
 Nearness relates a room (called A) to a room (called B) when the number of moves from B to A is less than 2. The verb to be near means the nearness relation.
 
 The radio is a device on the desk. The radio is switched off and fixed in place. "[if switched on]The radio burbles on[otherwise]The radio is off[end if]." 
 
-Every turn when the radio is switched on and location is the maintenance office:
-	say "[one of]The radio plays 'Stairway to Heaven' by Led Zeppelin.[or]The DJ just cued up Pink Floyd[']s 'Comfortably Numb'.[or]Pharell[']s 'Happy' is playing now.[or]'Folsom Prison Blues' by Johnny Cash is on the air.[or]'Peace Train' by Cat Stevens can be heard playing on the radio.[cycling]"
+Every turn when the radio is switched on and location is near the maintenance office:
+	say "[one of]The radio plays 'Stairway to Heaven' by Led Zeppelin.[or]The DJ just cued up Pink Floyd[']s 'Comfortably Numb'.[or]Pharell[']s 'Happy' is playing now.[or]'Folsom Prison Blues' by Johnny Cash is on the air.[or]'Peace Train' by Cat Stevens can be heard playing on the radio.[or]You hear Bob Seger singing 'Old Time Rock[']N[']Roll'.[or]The Eagles['] 'Hotel California' is now playing.[cycling]"
 	
 Rule for showing action of the radio:
 	if the radio is switched on, say "Through the static, you pick up hear bits of the latest Taylor Swift song.";
@@ -1193,7 +1234,10 @@ Rule for showing action of the radio:
 Instead of listening in the presence of the switched on radio:
 	carry out the showing action activity with the radio instead.
 
-The scissors are in the drawer. The description is "This is a sharp pair of office scissors." The stapler is in the drawer. The description is "This is a red stapler." The ballpoint pen is in the drawer. The description is "Your standard ballpoint pen. It says Bic on the side." The pad of paper is in the drawer. The description is "This is a pad of lined paper."
+The scissors are in the drawer. The description is "This is a sharp pair of office scissors." 
+The stapler is in the drawer. The description is "This is a red stapler." 
+The ballpoint pen is in the drawer. The description is "Your standard ballpoint pen. It says Bic on the side." 
+The pad of paper is in the drawer. The description is "This is a pad of lined paper."
 
 [doors]
 A wooden door is a kind of openable lockable door.
@@ -1205,8 +1249,6 @@ The printed name of a wooden door is "[color of the item described] colored door
 
 door1 is a wooden door. The color of door1 is aqua. The description of door1 is "It[']s [printed name of item described]. It has the word 'Stocks' written on it." The silver key unlocks it. 
 door1 is west of the Maintenance Office and east of the Stocks Room. 
-
-The cans of paint, grease, and lubricant are here.
 
 The ladder is up from the Maintenance Office and down from the Dark Hallway. The ladder is an open door. The description of the Ladder is "It[']s a typical 10 foot ladder."
 
@@ -1226,13 +1268,17 @@ Section 4 - Mechanical Room North
 
 The Mechanical Room North is a dark room. The Mechanical Room North is south of the Crawl Space. "The north mechanical room is compact and specialized, housing auxiliary systems that keep the ride running smoothly. A subdued hum of capacitors and relays fills the space, its quiet rhythm broken only by the occasional hiss of hydraulic fluid.
 
-Electrical panels line the walls, labeled for functions like 'Lighting Controls,' 'Brake Systems,' and 'Emergency Shutdown.' Smaller cables and conduits snake along the walls, linking these systems to the main hub. In one corner, a hydraulic pump and reservoir manage lifting arms and rotating platforms, their gauges flickering as they work. Nearby, a dented but functional generator stands ready for power failures.
+Electrical panels line the walls, labeled for functions like 'Lighting Controls,' 'Brake Systems,' and 'Emergency Shutdown.' Smaller cables and conduits snake along the walls, linking these systems to the main hub. In one corner, a hydraulic pump and reservoir manage lifting arms and rotating platforms, their gauges flickering as they work. 
 
 A small workbench against the eastern wall is cluttered with tools and coiled wires, while shelves above hold neatly labeled spare parts—fuses, cables, and hydraulic tubing. A faded ride diagram pinned nearby is marked with red annotations from past repairs.
 
-Dimly lit by a single hanging bulb, the room feels cooler and slightly damp, the metallic tang of machinery mixing with a hint of mildew. Though quieter and less prominent than the south room, this space plays a vital role in supporting the ride’s operation and ensuring its emergency systems are always prepared." 
+Dimly lit by a single hanging bulb, the room feels cooler and slightly damp, the metallic tang of machinery mixing with a hint of mildew. Though quieter and less prominent than the south mechanical room, this space plays a vital role in supporting the ride’s operation and ensuring its emergency systems are always prepared." 
 
-The toolbox is a closed openable container in the Mechanical Room North. The toolbox contains a monkey wrench, a channel locks, pliers, and a hammer.
+The toolbox is a closed openable container in the Mechanical Room North. The toolbox contains a monkey wrench, a channel lock, pliers, and a hammer.
+
+A hydraulic pump is here. It is scenery.
+The gauges are here. They are scenery.
+
 
 door5 is a wooden door. The color of door5 is emerald. The description of door5 is "It[']s [printed name of item described]. It has the word 'Stake' written on it." The silver key unlocks it. door5 is west of the Mechanical Room North and east of the Stake Room. 
 
@@ -1240,7 +1286,7 @@ Section 5 - Mechanical Room South
 
 The Mechanical Room South is a dark room. The Mechanical Room South is south of the Mechanical Room North. "The south mechanical room is the operational core of the carnival ride, a bustling, noisy space dominated by a massive motor. Its steady hum drives the thick belts, pulleys, and gears that work in perfect unison to power the ride.
 
-Heavy-duty electrical panels line the walls, adorned with warning labels like 'High Voltage' and blinking indicator lights in green and red. Overhead, labeled conduits and wires snake across the ceiling, connecting systems with meticulous precision.
+Heavy-duty electrical panels line the walls, adorned with warning labels like 'High Voltage' and blinking indicator lights in an array of colors. Overhead, labeled conduits and wires snake across the ceiling, connecting systems with meticulous precision.
 
 A cluttered workbench holds tools and spare parts—wrenches, bolts, and lubricants—alongside open maintenance logs marked with greasy fingerprints. The air is thick with the smell of oil, metal, and a faint trace of ozone from the electrics.
 
@@ -1255,13 +1301,17 @@ Section 6 - Generator Room
 The Generator Room is a dark room. The Generator Room is south of the Mechanical Room South. "
 The generator room is a compact, utilitarian space where the lifeblood of the carnival’s power is produced. Its reinforced concrete walls bear grime, oil streaks, and faint graffiti from past workers. The air carries a mix of diesel, hot metal, ozone, and damp earth, creating a distinctly industrial scent.
 
-At the center, the main generator hums steadily, its scuffed steel casing evidence of years of service. Thick rubberized cables extend from it like veins, connecting to junction boxes and circuit breakers along the walls. A control panel nearby is cluttered with buttons, switches, and gauges, many with faded labels like 'Fuel Intake' and 'Emergency Shutoff.' A flickering display screen shows power levels and load distribution.
+At the center, the main generator hums steadily, its scuffed steel casing evidence of years of service. Thick rubberized cables extend from it like veins, connecting to junction boxes and circuit breakers along the walls. A large panel nearby is cluttered with buttons, switches, and gauges, many with faded labels like 'Fuel Intake' and 'Emergency Shutoff.' A flickering display screen shows power levels and load distribution.
 
 The rough concrete floor is uneven, marked by small puddles of spilled fuel or condensation. Shelves along the walls hold spare parts—filters, spark plugs, and wire coils—while tools lie scattered on a workbench beside a grease canister and a worn maintenance manual.
 
 A single industrial bulb in a protective cage casts harsh light, leaving deep shadows across the machinery. In the corner, a vent fan whirs faintly, struggling to cool the warm, vibrating air. A row of diesel canisters gleams beneath a faded safety poster that warns, 'Fuel Safely—No Open Flames!'
 
 Though isolated and utilitarian, the generator room is the carnival’s heartbeat, powering its lights, rides, and sounds. Its quiet separation from the carnival’s chaos serves as a stark reminder of the machinery driving the magic." 
+
+The graffiti is here. It is scenery. instead of examining the graffiti, say "The graffiti is varied, from 'Peace, Love, Goodwill on Earth' to 'Anarchy Rules'."
+The junction boxes are here. They are scenery.
+The large panel is here. It is scenery.
 
 door9 is a wooden door. The color of door9 is indigo. The description of door9 is "It[']s [printed name of item described]. It has the word 'Guillotine' written on it." The silver key unlocks it. door9 is west of the Generator Room and east of the Guillotine Room. 
 
@@ -1278,6 +1328,12 @@ Near the entrance, a battered desk is cluttered with maintenance logs, tools, an
 The floor, a rough blend of concrete and dirt, is littered with bolts, screws, and wire scraps. In the dim corners, the scuttle of rats and the glint of cobwebs underline the room[']s gritty nature.
 
 Chaotic yet indispensable, this hidden space powers the carnival’s magic, ensuring every ride and booth runs seamlessly."
+
+The supplies are here. They are scenery.
+The seats are here. They are scenery.
+The booths are here. They are scenery.
+The horse is here. It is scenery.
+The rats are here. The rats are scenery. The description of the rats is "You see rats scurry in all directions fleeing from the light cast by you."
 
 door11 is a wooden door. The color of door11 is khaki. The description of door11 is "It[']s [printed name of item described]. It has the word 'Ride Exit' written on it." The silver key unlocks it. door11 is west of the Storage Room and east of the Ride Exit. 
 	
@@ -1348,7 +1404,7 @@ Gray clouds loom overhead, nature’s somber backdrop to the grim spectacle. A r
 Mist fills the area as you move to the next room."
 "[bold type]The Dungeon[roman type][line break]The dungeon is a dark, suffocating chamber carved into the earth, its stone walls slick with moisture and grime. The air reeks of sweat, blood, mildew, and burning oil from flickering torches mounted on rusted sconces. Shadows twist on the walls, creating grotesque, unsettling shapes in the dim light.
 
-Chains hang from walls and ceilings, their faint clinking blending with the moans and occasional screams of prisoners. Water drips rhythmically from a cracked ceiling, adding to the chamber’s eerie ambiance.
+Chains hang from walls and ceilings, their faint clinking blending with the moans and occasional screams of prisoners. Water drips rhythmically from a cracked ceiling, adding to the chamber[’]s eerie ambiance.
 
 The room is littered with instruments of torment: a splintered rack, a glowing brazier holding bloodstained tools, and a spiked chair gleaming faintly in the light. Prisoners endure their own horrors—one stretched on the rack, another hanging limply from manacles, and a third gasping weakly in the spiked chair.
 
@@ -1371,19 +1427,19 @@ As the condemned approaches the guillotine, a crow caws sharply from a nearby ro
 
 There is just one problem: the guillotine is being raised and lowered by some mechanism. It appears that the timing of the guillotine is off and it is being lowered onto the cars instead of between them. If a person were to be in a car as it passed under the guillotine, they would be decapitated.
 
-Looks like your goose is cooked. Say 'Goodnight, Gracie! 
+Looks like your goose is cooked. Say 'Goodnight, Gracie!' 
 
 You are stupefied as you sit watching guillotine rising and falling, dropping like a stone on the cars in front of you. Thank goodness they are empty. As your turn comes, you raise your hands in a feeble attempt to stop the inevitable."
 
 Instead of doing something other than waiting, looking, listening or examining during HellRideAuto:
 	say "You are having such a good time that you don['] want to do anything but wait and enjoy the ride."
 	
-Ride Entrance is a room. Ride Entrance is south of Head of the Line. "The cars that will take you into the fearsome Hell Ride stop here for you to board.  To the south is the track that will take you into the ride. The safety bar is raised allowing you to enter the car. The darkness looks just a little bit darker."
+Ride Entrance is a room. Ride Entrance is south of Head of the Line. "The cars that will take you into the fearsome Hell Ride stop here for you to board.  To the south is the track that will take you into the ride. The safety bar is raised allowing you to enter the car. To one side the darkness looks just a little bit darker."
 
 The Hell Ride car is a vehicle in the Ride Entrance. The description of the Hell Ride car is "A car waits to take you through the horror that is Hell Ride."
 
 Before going south when the player is in the Ride Entrance:
-	say "You can't go that way." instead;
+	say "You can[']t go that way." instead;
 	continue the action.
 
 Section 2 - Stocks Room
@@ -1462,6 +1518,11 @@ This is a realm of suffering and hopelessness, where life and death blur, and to
 
 The iron chair is scenery in the Dungeon. The iron chair is a supporter. understand "spiked" and "seat" as iron chair. The description of the iron chair is "A spiked chair looms in the corner, its cruel design gleaming faintly in the dim light." 
 
+The chains are here. They are scenery. The description of the chains is "The chains rattle against the walls."
+The rack is here. It is scenery. The description of the rack is "The rack has a prisoner splayed in four directions."
+The brazier is here. It is scenery. The description of the braizier is "It is glowing red with an infernal heat."
+The riveted iron-bound door is here. It is scenery.
+
 Instead of looking under a thing which is underlaid by fuse7 when fuse7 is lost:
 	say "You find [the list of things which underlie the noun]!";
 	now every thing which underlies the noun is carried by the player;
@@ -1535,6 +1596,10 @@ Control Room is a dark room. The Control Room is west of the Dark Hallway. The C
 The hum of electronics fills the air, punctuated by the crackle of a radio: 'Maintenance to Tilt-a-Whirl—wrench needed!' The worn floor is scattered with papers, tools, and coffee cups. A cluttered desk holds logs and schedules, while a corkboard above displays charts and red-marked notes like 'Check Zipper circuit breakers.'
 
 A flickering light casts cold shadows as the metallic tang of machinery mixes with dampness. Functional yet essential, this hidden space ensures the carnival’s magic runs seamlessly." 
+
+The cluttered desk is here. The desk is scenery. 
+A corkboard is here. The corkboard is scenery.
+The charts are here. They are scenery.
 
 Section 4 - Buttons
 
@@ -1783,7 +1848,7 @@ Instead of Switching on or pushing button11:
 
 Part 3 - Regions
 
-The Midway is a region. Parking Lot, Car Interior, Kiosk, Concession Stand, High Striker, Show Facade, Show Tent, and Head of the Line are in the Midway. The sky is in the Midway.
+The Midway is a region. Parking Lot, Kiosk, Concession Stand, High Striker, Show Facade, Show Tent, and Head of the Line are in the Midway. The sky is in the Midway.
 
 HellRide is a region. Ride Entrance, Stocks Room, Gallows Room, Stake Room, Dungeon, Guillotine Room, Ride Exit is in HellRide.
 

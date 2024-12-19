@@ -136,301 +136,301 @@
     </dict>
     <key>19</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.inform\Source\story.ni</string>
-        <key>Line</key><integer>433</integer>
+        <key>Line</key><integer>441</integer>
         <key>Title</key><string>Section 1 - Electrical Closets</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
     <key>20</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.inform\Source\story.ni</string>
-        <key>Line</key><integer>444</integer>
+        <key>Line</key><integer>452</integer>
         <key>Title</key><string>Section 2 - Colors</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
     <key>21</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.inform\Source\story.ni</string>
-        <key>Line</key><integer>450</integer>
+        <key>Line</key><integer>458</integer>
         <key>Title</key><string>Section 3 - Electrical Panels</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
     <key>22</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.inform\Source\story.ni</string>
-        <key>Line</key><integer>521</integer>
+        <key>Line</key><integer>529</integer>
         <key>Title</key><string>Section 4 - Sockets</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
     <key>23</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.inform\Source\story.ni</string>
-        <key>Line</key><integer>561</integer>
+        <key>Line</key><integer>569</integer>
         <key>Title</key><string>Section 5 - Indicators</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
     <key>24</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.inform\Source\story.ni</string>
-        <key>Line</key><integer>582</integer>
+        <key>Line</key><integer>590</integer>
         <key>Title</key><string>Section 6 - Fuses</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
     <key>25</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.inform\Source\story.ni</string>
-        <key>Line</key><integer>664</integer>
+        <key>Line</key><integer>672</integer>
         <key>Title</key><string>Section 7 - Switches</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
     <key>26</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.inform\Source\story.ni</string>
-        <key>Line</key><integer>777</integer>
+        <key>Line</key><integer>785</integer>
         <key>Title</key><string>Chapter 2 - The Midway</string>
         <key>Level</key><integer>4</integer>
         <key>Indentation</key><integer>2</integer>
     </dict>
     <key>27</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.inform\Source\story.ni</string>
-        <key>Line</key><integer>779</integer>
+        <key>Line</key><integer>787</integer>
         <key>Title</key><string>Section 1 - Parking Lot</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
     <key>28</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.inform\Source\story.ni</string>
-        <key>Line</key><integer>842</integer>
+        <key>Line</key><integer>850</integer>
         <key>Title</key><string>Section 2 - Car Interior</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
     <key>29</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.inform\Source\story.ni</string>
-        <key>Line</key><integer>886</integer>
+        <key>Line</key><integer>882</integer>
         <key>Title</key><string>Section 3 - Kiosk</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
     <key>30</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.inform\Source\story.ni</string>
-        <key>Line</key><integer>914</integer>
+        <key>Line</key><integer>924</integer>
         <key>Title</key><string>Section 4 - Concession Stand</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
     <key>31</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.inform\Source\story.ni</string>
-        <key>Line</key><integer>963</integer>
+        <key>Line</key><integer>973</integer>
         <key>Title</key><string>Section 5 - High Striker</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
     <key>32</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.inform\Source\story.ni</string>
-        <key>Line</key><integer>1038</integer>
+        <key>Line</key><integer>1048</integer>
         <key>Title</key><string>Section 6 - Show Facade</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
     <key>33</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.inform\Source\story.ni</string>
-        <key>Line</key><integer>1066</integer>
+        <key>Line</key><integer>1078</integer>
         <key>Title</key><string>Section 7 - Show Tent</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
     <key>34</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.inform\Source\story.ni</string>
-        <key>Line</key><integer>1114</integer>
+        <key>Line</key><integer>1139</integer>
         <key>Title</key><string>Section 8 - Head of the Line</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
     <key>35</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.inform\Source\story.ni</string>
-        <key>Line</key><integer>1124</integer>
+        <key>Line</key><integer>1149</integer>
         <key>Title</key><string>Chapter 3 - Backstage</string>
         <key>Level</key><integer>4</integer>
         <key>Indentation</key><integer>2</integer>
     </dict>
     <key>36</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.inform\Source\story.ni</string>
-        <key>Line</key><integer>1126</integer>
+        <key>Line</key><integer>1151</integer>
         <key>Title</key><string>Section 1 - Dark Passage</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
     <key>37</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.inform\Source\story.ni</string>
-        <key>Line</key><integer>1161</integer>
+        <key>Line</key><integer>1190</integer>
         <key>Title</key><string>Section 2 - Maintenance Office</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
     <key>38</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.inform\Source\story.ni</string>
-        <key>Line</key><integer>1216</integer>
+        <key>Line</key><integer>1258</integer>
         <key>Title</key><string>Section 3 - Crawl Space</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
     <key>39</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.inform\Source\story.ni</string>
-        <key>Line</key><integer>1225</integer>
+        <key>Line</key><integer>1267</integer>
         <key>Title</key><string>Section 4 - Mechanical Room North</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
     <key>40</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.inform\Source\story.ni</string>
-        <key>Line</key><integer>1239</integer>
+        <key>Line</key><integer>1285</integer>
         <key>Title</key><string>Section 5 - Mechanical Room South</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
     <key>41</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.inform\Source\story.ni</string>
-        <key>Line</key><integer>1253</integer>
+        <key>Line</key><integer>1299</integer>
         <key>Title</key><string>Section 6 - Generator Room</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
     <key>42</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.inform\Source\story.ni</string>
-        <key>Line</key><integer>1268</integer>
+        <key>Line</key><integer>1318</integer>
         <key>Title</key><string>Section 7 - Storage Room</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
     <key>43</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.inform\Source\story.ni</string>
-        <key>Line</key><integer>1284</integer>
+        <key>Line</key><integer>1340</integer>
         <key>Title</key><string>Chapter 4 - Hell Ride</string>
         <key>Level</key><integer>4</integer>
         <key>Indentation</key><integer>2</integer>
     </dict>
     <key>44</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.inform\Source\story.ni</string>
-        <key>Line</key><integer>1286</integer>
+        <key>Line</key><integer>1342</integer>
         <key>Title</key><string>Section 1 - Ride Entrance</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
     <key>45</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.inform\Source\story.ni</string>
-        <key>Line</key><integer>1389</integer>
+        <key>Line</key><integer>1445</integer>
         <key>Title</key><string>Section 2 - Stocks Room</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
     <key>46</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.inform\Source\story.ni</string>
-        <key>Line</key><integer>1408</integer>
+        <key>Line</key><integer>1464</integer>
         <key>Title</key><string>Section 3 - Gallows Room</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
     <key>47</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.inform\Source\story.ni</string>
-        <key>Line</key><integer>1429</integer>
+        <key>Line</key><integer>1485</integer>
         <key>Title</key><string>Section 4 - Stake Room</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
     <key>48</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.inform\Source\story.ni</string>
-        <key>Line</key><integer>1449</integer>
+        <key>Line</key><integer>1505</integer>
         <key>Title</key><string>Section 5 - Dungeon</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
     <key>49</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.inform\Source\story.ni</string>
-        <key>Line</key><integer>1474</integer>
+        <key>Line</key><integer>1535</integer>
         <key>Title</key><string>Section 6 - Guillotine Room</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
     <key>50</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.inform\Source\story.ni</string>
-        <key>Line</key><integer>1499</integer>
+        <key>Line</key><integer>1560</integer>
         <key>Title</key><string>Section 7 - Ride Exit</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
     <key>51</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.inform\Source\story.ni</string>
-        <key>Line</key><integer>1519</integer>
+        <key>Line</key><integer>1580</integer>
         <key>Title</key><string>Chapter 5 - Second Floor</string>
         <key>Level</key><integer>4</integer>
         <key>Indentation</key><integer>2</integer>
     </dict>
     <key>52</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.inform\Source\story.ni</string>
-        <key>Line</key><integer>1521</integer>
+        <key>Line</key><integer>1582</integer>
         <key>Title</key><string>Section 1 - Holding Room</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
     <key>53</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.inform\Source\story.ni</string>
-        <key>Line</key><integer>1527</integer>
+        <key>Line</key><integer>1588</integer>
         <key>Title</key><string>Section 2 - Dark Hallway</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
     <key>54</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.inform\Source\story.ni</string>
-        <key>Line</key><integer>1531</integer>
+        <key>Line</key><integer>1592</integer>
         <key>Title</key><string>Section 3 - Control Room</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
     <key>55</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.inform\Source\story.ni</string>
-        <key>Line</key><integer>1539</integer>
+        <key>Line</key><integer>1604</integer>
         <key>Title</key><string>Section 4 - Buttons</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
     <key>56</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.inform\Source\story.ni</string>
-        <key>Line</key><integer>1559</integer>
+        <key>Line</key><integer>1624</integer>
         <key>Title</key><string>Section 5 - Dials</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
     <key>57</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.inform\Source\story.ni</string>
-        <key>Line</key><integer>1598</integer>
+        <key>Line</key><integer>1663</integer>
         <key>Title</key><string>Section 6 - Lights</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
     <key>58</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.inform\Source\story.ni</string>
-        <key>Line</key><integer>1620</integer>
+        <key>Line</key><integer>1685</integer>
         <key>Title</key><string>Section 7 - The Monitor</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
     <key>59</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.inform\Source\story.ni</string>
-        <key>Line</key><integer>1631</integer>
+        <key>Line</key><integer>1696</integer>
         <key>Title</key><string>Section 8 - Commands</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
     <key>60</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.inform\Source\story.ni</string>
-        <key>Line</key><integer>1671</integer>
+        <key>Line</key><integer>1736</integer>
         <key>Title</key><string>Section 9 - Pushing Buttons</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
     <key>61</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.inform\Source\story.ni</string>
-        <key>Line</key><integer>1784</integer>
+        <key>Line</key><integer>1849</integer>
         <key>Title</key><string>Part 3 - Regions</string>
         <key>Level</key><integer>3</integer>
         <key>Indentation</key><integer>1</integer>
