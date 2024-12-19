@@ -504,7 +504,7 @@ carry out unlocking:
 	else if the noun is a panel11 and the second noun is the swiss army knife:
 		say "Using the screwdriver on the Swiss Army knife, you remove the cover to the electrical panel.";
 		now the panel11 is unlocked;
-	else if the noun is the glove box and the second noun is the car keys:
+	else if the noun is the glove box and the second noun is the keys:
 		continue the action;
 	else if the noun is a wooden door and the second noun is the silver key:
 		continue the action;
@@ -782,9 +782,9 @@ Test Life with "brief / Test Parking / Test Egypt / Test Concession / Test Strik
 
 Test Death with "brief / Test Parking / Test Egypt / Test Concession / Test Striker / Test Misc / Test Ride".
 
-Test parking with "brief / get blueberries / eat blueberries / give coupon to attendant / buy ticket / inside / l under seat / open glove box / get gloves / wear gloves / set stub on the dashboard / l at the dashboard / exit".
+Test parking with "brief / get blueberries / eat blueberries / give coupon to attendant / buy ticket / get in car / l at car / l at seat / l under seat / open glove box / get gloves / wear gloves / l at dashboard / set stub on the dashboard / l at the dashboard / exit".
 
-Test ToadAway with "brief / test parking / inside / get parking stub / exit / test striker / test b1 / test b2 / ne / open panel / put aqua in socket / push switch / sw / e / open panel / put crimson in socket / push switch / w / se / open panel / put emerald in socket / push switch / nw / sw / unlock panel / open panel"
+Test ToadAway with "brief / test parking / get in car / get parking stub / exit car / test striker / test b1 / test b2 / ne / open panel / put aqua in socket / push switch / sw / e / open panel / put crimson in socket / push switch / w / se / open panel / put emerald in socket / push switch / nw / sw / unlock panel / open panel"
 
 When play begins:
 	display the figure of Hell Ride;
@@ -800,11 +800,13 @@ Puddles from recent rain shimmer with reflected lights, while patches of mud cli
 
 Alive with anticipation, the parking lot marks the transition from the ordinary to the magic of the carnival.
 
-The midway is to the south. There is a blueberry bush here. [if blueberry bush contains blueberries]There are blueberries on the bush.[otherwise]The bush has been picked clean.[end if][if the dime is in the Parking Lot] You see something shiny on the ground.[end if]"
+The midway is to the south. There is a blueberry bush here. [if blueberry bush contains blueberries]There are blueberries on the bush.[otherwise]The bush has been picked clean.[end if][if the dime is in the Parking Lot] You see something shiny on the ground.[end if] [paragraph break]Your car is here. It[']s a bit of a beater. Inside the car, you can see [the list of things which are part of the beater car]."
 
 The Parking Attendant is a man in the the parking lot. Understand "attendent" as attendant. The parking attendant carries the parking ticket and the parking stub. The price of the parking ticket is $5.00. The description of Parking Attendant is "This is a bored teenager just trying to earn enough money to take his sweetie to the movies next week.[if the parking attendant carries the parking ticket] He has a parking ticket. The price of a parking ticket is [the price of the parking ticket].[end if]". 
 
-The beater car is a thing in the parking lot. The beater car is fixed in place. Understand "vehicle" and "car" as the beater car. The Parking Lot is outside from the Car Interior. The description of the beater car is "This is your car. It[']s a 2002 Honda Civic and it[']s seen better days." 
+The beater car is an open enterable container in the parking lot. The beater car is scenery. Understand "vehicle" and "car" as the beater car. The Parking Lot is outside from the Car Interior. The description of the beater car is "[if the player is in the beater car][bold type]Car Interior[roman type][line break][end if]This is your car. It[']s a 2002 Honda Civic and it[']s seen better days.[paragraph break][if the player is in the beater car]You're sitting inside your car. [end if]Even though it[']s old, it feels like an old friend. From the faux leather seats to the crack in the windshield. It[']s familiar and comforting. There[']s old fast food wrappers on the floor, clothes and text books in the back seat. There is an air freshener hanging from the rear view mirror. You see [the list of things which are part of the beater car]." 
+
+instead of looking when the player is in the beater car, try examining the beater car.
 
 The blueberry bush is here. the blueberry bush is scenery. the blueberry bush is a container. the blueberry bush is not portable. the blueberry bush contains blueberries. Understand "berries" as blueberries. The blueberries are edible.The description of the blueberries is "The blueberries are ripe and juicy.".
 
@@ -826,37 +828,36 @@ instead of giving the coupon to the parking attendant:
 	otherwise:
 		say "Danger, Will Robinson! This should never happen!"
 		
-before buying the parking ticket:
+instead of buying the parking ticket when the player is not in the car:
 	say "The attendant says, 'Don[']t forget to leave the parking stub on your dashboard'.";
 	now the player carries the parking ticket;
 	now the player carries the parking stub;
 	continue the action.
 	
+instead of buying the parking ticket when the player is in the beater car:
+	say "You don[']t see that here." instead.
+
 instead of going south when the location is the parking lot and the player does not carry the parking ticket, say "You have to pay to park." instead.
-
-instead of entering when the noun is the beater car, try going inside instead.
-	
-Understand "exit [a direction]" as a mistake ("Please try 'go [noun]' or just '[noun]' as a direction isn't necessarily an exit here.")
-
-Understand "place [something] on [something]" as putting it on. Understand "set [something] on [something]" as putting it on. 
 
 Section 2 - Car Interior
 
-The Car Interior is a room. The car interior is inside from the parking lot. "You're sitting inside your car. Even though it[']s old, it feels like an old friend. From the faux leather seats to the crack in the windshield. It[']s familiar and comforting. There[']s old fast food wrappers on the floor, clothes and text books in the back seat. There is an air freshener hanging from the rear view mirror."
+every turn when the location is the parking lot:
+	now the left hand status line is "[the player's surroundings]".
+	
+every turn when the player is in the beater car:
+	now the left hand status line is "Car Interior".
 
-The car keys underlie the seat. Understand "car key" and "keys" and "key" as the car keys. The description of the car keys is "These are your car keys. It[']s a wonder you could even find them, your house is such a mess."
+The air freshener is in the beater car. The description of the air freshener is "This is one of those air fresheners that are shaped like a pine tree and smells like one too. You bought it the last time you went to the car wash."
 
-instead of entering car, try going inside.
+The dashboard is part of the beater car. The dashboard is a supporter. The description of the dashboard is "It looks like you could set something there."
 
-The air freshener is in the car interior. The air freshener is scenery. The air freshener is portable. The description of the air freshener is "This is one of those air fresheners that are shaped like a pine tree and smell like one too. You bought it the last time you went to the car wash."
+The seat is part of the beater car. The seat is a supporter. It is fixed in place. The description of the seat is "A faux leather seat that looked great when it was new."
 
-The seat is in the car interior. The seat is a supporter. It is fixed in place. The description of the seat is "A faux leather seat that looked great when it was new."
+Your keys underlie the seat. Understand "car key", "car keys", and "key" as the keys. The description of the keys is "These are your car keys. It[']s a wonder you could even find them, your house is such a mess."
 
-The dashboard is in the car interior. The dashboard is a supporter. The description of the dashboard is "It looks like you could set something there."
+The glove box is part of the beater car. The glove box is a locked openable container. Your keys unlock the glove box. Understand "glove compartment" and "compartment" as the glove box. The gloves are inside the glove box. The gloves are wearable. The description of the gloves is "A nice set of sheepskin gloves. They[']re very warm."
 
-The glove box is in the car interior. The glove box is a locked openable container. The car keys unlock the glove box. Understand "glove compartment" and "compartment" as the glove box. The gloves are inside the glove box. The gloves are wearable. The description of the gloves is "A nice set of sheepskin gloves. They[']re very warm."
-
-The dime underlies the car seat. Understand "shiny" and "coin" as the dime. The description of the dime is "It[']s a dime. Ten cents. One tenth of a dollar. And very shiny."
+The dime underlies the seat. Understand "shiny" and "coin" as the dime. The description of the dime is "It[']s a dime. Ten cents. One tenth of a dollar. And very shiny."
 
 Instead of looking under a thing which is underlaid by the dime:
 	say "You find [the list of things which underlie the noun]!";
@@ -865,8 +866,22 @@ Instead of looking under a thing which is underlaid by the dime:
 	say "Taken.";
 	play the sound of Bell;
 	increase score by 5;
-	
 
+[instead of looking when the player is in the beater car and the noun is nothing, say "You're sitting inside your car. Even though it[']s old, it feels like an old friend. From the faux leather seats to the crack in the windshield. It[']s familiar and comforting. There[']s old fast food wrappers on the floor, clothes and text books in the back seat. There is an air freshener hanging from the rear view mirror. You see [the list of things which are part of the beater car]." instead.]
+
+[instead of entering when the noun is the beater car:
+	now the player is on the inside car.
+	
+after exiting when the noun is the inside car:
+	now the player is in the parking lot.
+
+instead of exiting:
+	if the noun is the inside car:
+		now the player is in the parking lot.]
+	
+Understand "exit [a direction]" as a mistake ("Please try 'go [noun]' or just '[noun]' as a direction isn't necessarily an exit here.")
+
+Understand "place [something] on [something]" as putting it on. Understand "set [something] on [something]" as putting it on. 
 
 Section 3 - Kiosk
 
@@ -1296,9 +1311,9 @@ Every turn during HellRideAuto:
 		
 Table of HellRide Events
 event
-"[bold type]Entrance[roman type][line break]The car moves forward, the safety bar locked in place, as the entrance to Hell Ride looms ahead—a grotesque facade of twisted metal and carved wood, illuminated by flickering blood-red lights. The air carries a faint sulfuric tang mingled with the sweet aroma of carnival popcorn.
+"[bold type]Entrance[roman type][line break]The cars move forward, the safety bar locked in place, as the entrance to Hell Ride looms ahead—a grotesque facade of twisted metal and carved wood, illuminated by flickering blood-red lights. The air carries a faint sulfuric tang mingled with the sweet aroma of carnival popcorn.
 
-A towering archway of flames, spikes, and grinning skulls frames the entrance, crowned by flickering letters that read HELL RIDE, pulsing like a heartbeat. Below, crouching demon sculptures extend clawed hands in a sinister invitation. Frayed curtains sway over the entrance, whispering with faint, menacing chuckles as distorted organ music grows louder, punctuated by shrieks and grinding machinery.
+A towering archway of flames, spikes, and grinning skulls frames the entrance, crowned by flickering letters that read HELL RIDE, pulsing like a heartbeat. Below, crouching demon sculptures extend clawed hands in a sinister invitation. Wooden doors cover the entrance, whispering with faint, menacing chuckles as distorted organ music grows louder, punctuated by shrieks and grinding machinery.
 
 A crooked sign warns, One Ticket Admission: Enter If You Dare! Nearby, a carnival barker with a theatrical, raspy voice calls out, 'Step right up! The gates of hell are open—will you brave the darkness?'
 
