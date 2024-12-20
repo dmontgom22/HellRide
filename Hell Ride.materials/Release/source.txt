@@ -218,7 +218,7 @@ Before printing the name of an unlit lit electric lamp, say "extinguished ".
 
 Section 5 - Grues
 
-Test grues with "s / buy hell ride ticket / s / give hell ride ticket to ride attendant / s / e / s / s"
+Test grues with "s / buy hell ride ticket / s / give hell ride ticket to ride operator / s / e / s / s"
 
 The lurking grue is a backdrop. The lurking grue is everywhere. The description of the lurking grue is "The grue is a sinister, lurking presence in the dark places of the earth. Its favorite diet is humans, but its insatiable appetite is tempered by its fear of light. No grue has ever been seen by the light of day, and few have survived its fearsome jaws to tell the tale."
 
@@ -322,12 +322,21 @@ Index map with room-size set to 52
 [toad away]
 every turn:
 	if turn count is 100:
-		say "Over the loud speaker, an announcment blares: Attention please. There is a vehicle being towed from the parking lot for parking illegally. The license plate of the car is '862901'.[run paragraph on]";
+		say "Over the loud speaker, an announcement blares: Attention please. There is a vehicle being towed from the parking lot for parking illegally. The license plate of the car is '862901'.[run paragraph on]";
 		if the parking stub is on the dashboard:
 			say " You breathe a sigh of relief as you realize that[']s not your license plate. I guess it[']s a good thing you remembered to place the parking stub on the dashboard.";
 		if the parking stub is not on the dashboard:
 			say " Your heart sinks as you realize that is your license plate. You race to the parking lot in time to see the tow truck pull away with your car in tow";
 			end the story finally saying "You start the long walk home."
+			
+Table of Bored Responses
+response
+"He[']s just trying to earn enough money to take his sweetie to the movies next week."
+"He[']s thinking about having a brewski with his bros after work."
+"His mind is completely blank."
+"He[']s wondering if his SAT scores are good enough to get into college."
+"He[']s wondering why he took this stupid job in the first place."
+"His thoughts are entirely focused on a cheeseburger for lunch."
 
 [Description of Hell Ride]			
 When play begins:
@@ -472,20 +481,20 @@ An electrical panel has a number called a panel id. A panel id is usually 0.
 The description of an electrical panel is "Electrical Panel [the panel id] is a standard issue 200 amp electrical panel supplying 220 power throughout the ride. The electrical panel is [if the item described is open]open. Inside the panel you see a switch, a socket, and an indicator light.[otherwise]closed.[end if] [if the item described is locked]There are screws holding it shut.[otherwise]You can see the cover of the panel sitting nearby.[end if]".
 The printed name of an electrical panel is "Electrical Panel [the panel id]".
 
-panel1 is an electrical panel. panel1 is in the electrical closet one. The panel id of panel1 is 1. Understand "panel 1" as panel1. The color of panel1 is aqua. The swiss army knife unlocks panel1.
-panel3 is an electrical panel. panel3 is in the electrical closet three. The panel id of panel3 is 3. Understand "panel 3"as panel3. The color of panel3 is crimson. The swiss army knife unlocks panel3.
-panel5 is an electrical panel. panel5 is in the electrical closet five. The panel id of panel5 is 5. Understand "panel 5"  as panel5. The color of panel5 is emerald. The swiss army knife unlocks panel5.
-panel7 is an electrical panel. panel7 is in the electrical closet seven. The panel id of panel7 is 7. Understand "panel 7" as panel7. The color of panel7 is gray. The swiss army knife unlocks panel7.
-panel9 is an electrical panel. panel9 is in the electrical closet nine. The panel id of panel9 is 9. Understand "panel 9" as panel9. The color of panel9 is indigo. The swiss army knife unlocks panel9.
-panel11 is an electrical panel. panel11 is in the electrical eleven. The panel id of panel11 is 11. Understand "panel 11"  as panel11. The color of panel11 is khaki. The swiss army knife unlocks panel11.
+panel1 is an electrical panel. panel1 is in the electrical closet one. The panel id of panel1 is 1. Understand "panel 1" as panel1. The color of panel1 is aqua. The Swiss army knife unlocks panel1.
+panel3 is an electrical panel. panel3 is in the electrical closet three. The panel id of panel3 is 3. Understand "panel 3"as panel3. The color of panel3 is crimson. The Swiss army knife unlocks panel3.
+panel5 is an electrical panel. panel5 is in the electrical closet five. The panel id of panel5 is 5. Understand "panel 5"  as panel5. The color of panel5 is emerald. The Swiss army knife unlocks panel5.
+panel7 is an electrical panel. panel7 is in the electrical closet seven. The panel id of panel7 is 7. Understand "panel 7" as panel7. The color of panel7 is gray. The Swiss army knife unlocks panel7.
+panel9 is an electrical panel. panel9 is in the electrical closet nine. The panel id of panel9 is 9. Understand "panel 9" as panel9. The color of panel9 is indigo. The Swiss army knife unlocks panel9.
+panel11 is an electrical panel. panel11 is in the electrical eleven. The panel id of panel11 is 11. Understand "panel 11"  as panel11. The color of panel11 is khaki. The Swiss army knife unlocks panel11.
 
 instead of turning when the noun is an electrical panel:
-	if the item described is panel1 and the second noun is the swiss army knife, try unlocking the noun with the second noun instead;
-	if the item described is panel3 and the second noun is the swiss army knife, try unlocking the noun with the second noun instead;
-	if the item described is panel5 and the second noun is the swiss army knife, try unlocking the noun with the second noun instead;
-	if the item described is panel7 and the second noun is the swiss army knife, try unlocking the noun with the second noun instead;
-	if the item described is panel9 and the second noun is the swiss army knife, try unlocking the noun with the second noun instead;
-	if the item described is panel11 and the second noun is the swiss army knife, try unlocking the noun with the second noun instead;
+	if the item described is panel1 and the second noun is the Swiss army knife, try unlocking the noun with the second noun instead;
+	if the item described is panel3 and the second noun is the Swiss army knife, try unlocking the noun with the second noun instead;
+	if the item described is panel5 and the second noun is the Swiss army knife, try unlocking the noun with the second noun instead;
+	if the item described is panel7 and the second noun is the Swiss army knife, try unlocking the noun with the second noun instead;
+	if the item described is panel9 and the second noun is the Swiss army knife, try unlocking the noun with the second noun instead;
+	if the item described is panel11 and the second noun is the Swiss army knife, try unlocking the noun with the second noun instead;
 	otherwise:
 		continue the action.
 	
@@ -500,22 +509,22 @@ instead of locking:
 		say "You can[']t lock that!" instead.
 
 carry out unlocking:
-	if the noun is panel1 and the second noun is the swiss army knife:
+	if the noun is panel1 and the second noun is the  army knife:
 		say "Using the screwdriver on the Swiss Army knife, you remove the cover to the electrical panel.";
 		now panel1 is unlocked;
-	else if the noun is panel3 and the second noun is the swiss army knife:
+	else if the noun is panel3 and the second noun is the Swiss army knife:
 		say "Using the screwdriver on the Swiss Army knife, you remove the cover to the electrical panel.";
 		now panel3 is unlocked;
-	else if the noun is panel5 and the second noun is the swiss army knife:
+	else if the noun is panel5 and the second noun is the Swiss army knife:
 		say "Using the screwdriver on the Swiss Army knife, you remove the cover to the electrical panel.";
 		now panel5 is unlocked;
-	else if the noun is panel7 and the second noun is the swiss army knife:
+	else if the noun is panel7 and the second noun is the Swiss army knife:
 		say "Using the screwdriver on the Swiss Army knife, you remove the cover to the electrical panel.";
 		now the panel7 is unlocked;
-	else if the noun is a panel9 and the second noun is the swiss army knife:
+	else if the noun is a panel9 and the second noun is the Swiss army knife:
 		say "Using the screwdriver on the Swiss Army knife, you remove the cover to the electrical panel.";
 		now the panel9 is unlocked;
-	else if the noun is a panel11 and the second noun is the swiss army knife:
+	else if the noun is a panel11 and the second noun is the Swiss army knife:
 		say "Using the screwdriver on the Swiss Army knife, you remove the cover to the electrical panel.";
 		now the panel11 is unlocked;
 	else if the noun is the glove box and the second noun is the keys:
@@ -796,13 +805,13 @@ Test Life with "brief / Test Parking / Test Striker / Test Attractions / Test Co
 
 Test Death with "brief / Test Parking / Test Attractions / Test Concession / Test Striker / Test Misc / Test Ride".
 
-Test Parking with "brief / get blueberries / eat blueberries / give coupon to attendant / buy ticket / get in car / l at car / l at seat / l under seat / open glove box / get gloves / wear gloves / l at dashboard / set stub on the dashboard / l at the dashboard / exit".
+Test Parking with "brief / get blueberries / eat blueberries / give coupon to operator / buy ticket / get in car / l at car / l at seat / l under seat / open glove box / get gloves / wear gloves / l at dashboard / set stub on the dashboard / l at the dashboard / exit".
 
 Test ToadAway with "brief / test parking / get in car / get parking stub / exit car / test striker / test b1 / test b2 / ne / open panel / put aqua in socket / push switch / sw / e / open panel / put crimson in socket / push switch / w / se / open panel"
 
 Test a1 with "s / buy fortune teller ticket / buy ferris wheel ticket / buy bumper cars ticket / buy carousel ticket / buy hell ride ticket / w / give dime to barker / w /  z / z / z / z / z / z / z / z / get lamp / turn it on"
 
-Test a2 with "e / e / e / e / give ferris wheel ticket to ferris wheel attendant / w / w / ne / give carousel ticket to carousel attendant / sw / se / give fortune teller ticket to mysterious woman / nw / nw / give bumper cars ticket to bumper cars attendant / se / n"
+Test a2 with "e / e / e / e / give ferris wheel ticket to ferris wheel operator / w / w / ne / give carousel ticket to carousel operator / sw / se / give fortune teller ticket to mysterious woman / nw / nw / give bumper cars ticket to bumper cars operator / se / n"
 
 Test Attractions with "test a1 / test a2"
 
@@ -822,7 +831,13 @@ Alive with anticipation, the parking lot marks the transition from the ordinary 
 
 The midway is to the south. There is a blueberry bush here. [if blueberry bush contains blueberries]There are blueberries on the bush.[otherwise]The bush has been picked clean.[end if][if the dime is in the Parking Lot] You see something shiny on the ground.[end if] [paragraph break]Your car is here. It[']s a bit of a beater. Inside the car, you can see [the list of things which are part of the beater car]."
 
-The Parking Attendant is a man in the the parking lot. Understand "attendent" and "operator" as attendant. The parking attendant carries the parking ticket and the parking stub. The price of the parking ticket is $5.00. The description of Parking Attendant is "This is a bored teenager just trying to earn enough money to take his sweetie to the movies next week.[if the parking attendant carries the parking ticket] He has a parking ticket. The price of a parking ticket is [the price of the parking ticket].[end if]". 
+The Parking Attendant is a man in the the parking lot. Understand "attendent" and "operator" as parking attendant. The parking attendant carries the parking ticket and the parking stub. The price of the parking ticket is $5.00. 
+
+instead of examining the parking attendant:
+	choose a random row in Table of Bored Responses;
+	Let A be response entry;
+	say "This is another bored teenager. [A] [if the parking attendant carries the parking ticket] He has a parking ticket. The price of a parking ticket is [the price of the parking ticket].[end if]";
+	stop the action.
 
 The beater car is an open enterable container in the parking lot. The beater car is scenery. Understand "vehicle" and "car" as the beater car. The description of the beater car is "[if the player is in the beater car][bold type]Car Interior[roman type][line break][end if]This is your car. It[']s a 2002 Honda Civic and it[']s seen better days.[paragraph break][if the player is in the beater car]You[']re sitting inside your car. [end if]Even though it[']s old, it feels like an old friend. From the faux leather seats to the crack in the windshield. It[']s familiar and comforting. There[']s old fast food wrappers on the floor, clothes and text books in the back seat. There is an air freshener hanging from the rear view mirror. You see [the list of things which are part of the beater car]." 
 
@@ -849,7 +864,7 @@ instead of giving the coupon to the parking attendant:
 		say "Danger, Will Robinson! This should never happen!"
 		
 instead of buying the parking ticket when the player is not in the car:
-	say "The attendant says, 'Don[']t forget to leave the parking stub on your dashboard'.";
+	say "The attendant says, 'Don[']t forget to leave the stub on your dashboard'.";
 	now the player carries the parking ticket;
 	now the player carries the parking stub;
 	continue the action.
@@ -912,7 +927,7 @@ The Ticket kiosk is west of the High Striker.
 
 The description of the Ticket kiosk is "The ticket kiosk stands at the carnival entrance, a compact booth painted in bright red and yellow stripes with bold letters above the window reading 'Tickets Here!' Twinkling lights outline its edges, blinking rhythmically to draw attention.
 
-A single window serves visitors, where a smiling attendant dispenses colorful tickets from neatly arranged rolls. Beside the tickets, a cash drawer jingles as change is counted, and a digital payment system glows faintly for modern convenience. Too bad you don[']t have a debit card.
+A single window serves visitors, where a smiling cashier dispenses colorful tickets from neatly arranged rolls. Beside the tickets, a cash drawer jingles as change is counted, and a digital payment system glows faintly for modern convenience. Too bad you don[']t have a debit card.
 
 Next to the kiosk, a vibrant signboard lists ticket prices with playful illustrations of rides and treats. Pennant flags flutter from the kiosk’s roof, adding to the festive atmosphere, while the smell of popcorn and fried dough wafts from nearby stalls.
 
@@ -928,7 +943,13 @@ The Ferris Wheel ticket is a ride ticket. The cashier carries the Ferris Wheel t
 The Bumper Cars ticket is a ride ticket. The cashier carries the Bumper Cars ticket. Understand "bumper car ticket" as bumper cars ticket. The price of the bumper cars ticket is $2.00. The description of the bumper cars ticket is "'Admit One' to the Bumper Cars."
 The Carousel ticket is a ride ticket. The cashier carries the Carousel ticket. The price of the carousel ticket is $1.00. The description of the Carousel ticket is "'Admit One' to the Carousel."
 
-The Cashier is a man in the Ticket kiosk. The description of cashier is "This is a bored teenager hired to sell ride tickets all week at this carnival. He[']s thinking about having a brewski with his bros after work.". 
+The Cashier is a man in the Ticket kiosk. 
+
+instead of examining the cashier:
+	choose a random row in Table of Bored Responses;
+	Let A be response entry;
+	say "This is another bored teenager. [A] ";
+	stop the action.
 
 After buying the hell ride ticket:
 	play the sound of Bell;
@@ -1015,7 +1036,7 @@ The teddy bear is carried by the Strongman Attendant. The description of the ted
 
 The Swiss Army knife is a thing. The Swiss Army knife is carried by the Strongman Attendant. The screwdriver, awl, fingernail clippers, can opener, and corkscrew are a part of the Swiss Army knife. The description of the Swiss army knife is "This is the standard issue Swiss Army knife. It has [a list of things which are part of the item described]."  The printed name of the Swiss Army knife is "Swiss Army knife".
 
-instead of taking when the noun is part of the swiss army knife, say "That[']s part of the Swiss Army knife. You can[']t take that!" instead.
+instead of taking when the noun is part of the Swiss army knife, say "That[']s part of the Swiss Army knife. You can[']t take that!" instead.
 	
 The poster of Taylor Swift is carried by the Strongman Attendant. The description of the poster of Taylor Swift is "This is a poster of America[']s sweetheart, Taylor Swift."
 
@@ -1043,25 +1064,25 @@ After hitting the lever when second noun is the mallet 4 times:
 	say "Which prize would you like? 1) a teddy bear, 2) a Swiss Army knife, 3) a poster of Taylor Swift, or 4) a magenta fuse?".
 	
 after Reading a command :
-	if the player's command matches "1" and the location is the high striker and the player is not carrying the teddy bear and the player is not carrying the swiss army knife and the player is not carrying the poster of taylor swift and the player is not carrying the fuse13:
+	if the player's command matches "1" and the location is the high striker and the player is not carrying the teddy bear and the player is not carrying the Swiss army knife and the player is not carrying the poster of Taylor swift and the player is not carrying the fuse13:
 		play the sound of Bell;
 		increase score by 5;
 		say "You are now holding a cute little teddy bear.";
 		now the player carries the teddy bear;
 		reject the player's command;
-	if the player's command matches "2" and the location is the high striker and the player is not carrying the teddy bear and the player is not carrying the swiss army knife and the player is not carrying the poster of taylor swift and the player is not carrying the fuse13:
+	if the player's command matches "2" and the location is the high striker and the player is not carrying the teddy bear and the player is not carrying the Swiss army knife and the player is not carrying the poster of Taylor swift and the player is not carrying the fuse13:
 		say "You are now holding a Swiss Army knife.";
 		play the sound of Bell;
 		increase score by 5;
 		now the player carries the Swiss army knife;
 		reject the player's command;
-	if the player's command matches "3" and the location is the high striker and the player is not carrying the teddy bear and the player is not carrying the swiss army knife and the player is not carrying the poster of taylor swift and the player is not carrying the fuse13:
+	if the player's command matches "3" and the location is the high striker and the player is not carrying the teddy bear and the player is not carrying the Swiss army knife and the player is not carrying the poster of Taylor swift and the player is not carrying the fuse13:
 		say "You are now holding a poster of Taylor Swift.";
 		play the sound of Bell;
 		increase score by 5;
-		now the player carries the poster of taylor swift;
+		now the player carries the poster of Taylor swift;
 		reject the player's command;
-	if the player's command matches "4" and the location is the high striker and the player is not carrying the teddy bear and the player is not carrying the swiss army knife and the player is not carrying the poster of taylor swift and the player is not carrying the fuse13:
+	if the player's command matches "4" and the location is the high striker and the player is not carrying the teddy bear and the player is not carrying the Swiss army knife and the player is not carrying the poster of Taylor swift and the player is not carrying the fuse13:
 		say "You are now holding a magenta colored fuse.";
 		play the sound of Bell;
 		increase score by 5;
@@ -1178,11 +1199,17 @@ The Ferris wheel offers an ever-changing perspective of the carnival below. From
 
 Whether it[']s a romantic ride for couples, a thrilling adventure for friends, or a calming retreat for families, the Ferris wheel captures the spirit of the carnival—an iconic blend of excitement, wonder, and timeless charm."
 
-The Ferris Wheel Attendant is a man in the Ferris Wheel Ride. Understand "attendent" and "operator" as attendant. The description of the Ferris Wheel Attendant is "This is another bored teenager. His mind is completely blank."
+The Ferris Wheel operator is a man in the Ferris Wheel Ride. Understand "attendent" and "attendant" as Ferris Wheel operator. 
 
-instead of giving the ferris wheel ticket to the ferris wheel attendant:
+instead of examining the ferris wheel operator:
+	choose a random row in Table of Bored Responses;
+	Let A be response entry;
+	say "This is another bored teenager. [A]";
+	stop the action.
+
+instead of giving the ferris wheel ticket to the ferris wheel operator:
 	say "You give [the noun] to [the second noun].";
-	now the ferris wheel attendant carries the ferris wheel ticket;
+	now the ferris wheel operator carries the ferris wheel ticket;
 	say "[line break]As you step into the gently swaying gondola, a faint creak accompanies the safety bar locking into place. The Ferris wheel begins its slow ascent, the hum of its machinery blending with the distant sounds of carnival games and laughter below. A soft breeze brushes against your face as the gondola rises higher, offering an ever-expanding view of the fairgrounds.
 
 With each rotation, the world transforms. At the peak, the carnival sprawls beneath you like a miniature village, its vibrant lights twinkling against the twilight sky. The sound of the midway fades into a soft murmur, replaced by the serene quiet of being high above the bustling crowd. Beyond the fair, the horizon stretches endlessly, framed by the glow of distant city lights or rolling countryside.
@@ -1208,11 +1235,17 @@ Overhead, a web of electric poles connects the cars to the ceiling, sparking fai
 
 The bumper cars perfectly captures the playful spirit of the carnival, offering a mix of harmless competition, shared laughter, and nostalgic fun for all ages."
 
-The Bumper Cars Attendant is a man in the Bumper Cars Ride. Understand "attendent" and "operator" as attendant. The description of the Bumper Cars Attendant is "This is another bored teenager. He[']s wondering if his SAT scores are good enough to get into college."
+The Bumper Cars operator is a man in the Bumper Cars Ride. Understand "attendent" and "attendant" as Bumper Cars operator. 
 
-instead of giving the bumper cars ticket to the bumper cars attendant:
+instead of examining the Bumper Cars operator:
+	choose a random row in Table of Bored Responses;
+	Let A be response entry;
+	say "This is another bored teenager. [A] ";
+	stop the action.
+
+instead of giving the bumper cars ticket to the bumper cars operator:
 	say "You give [the noun] to [the second noun].";
-	now the bumper cars attendant carries the bumper cars ticket;
+	now the bumper cars operator carries the bumper cars ticket;
 	say "[line break]Sliding into the snug seat of the bumper car, your hands grip the steering wheel, anticipation buzzing in the air. Around you, the arena is alive with flashing lights, bursts of laughter, and the hum of electric currents running through the overhead poles. A quick glance shows other riders locking eyes, playful grins spreading as everyone braces for the chaos about to unfold.
 
 As the ride starts, your car jolts forward, and you steer into the fray. The slick metal floor beneath makes every turn feel smooth yet unpredictable. Suddenly, bam!—another car collides into you from the side, sending your car into a spin. You laugh, recovering quickly to aim your vehicle at a friend or an unsuspecting rider across the arena.
@@ -1258,11 +1291,17 @@ Rows of hand-carved animals, most often horses with flowing manes, are arranged 
 
 The carousel[’]s warm, playful tunes drift across the midway, inviting riders of all ages to enjoy its simple delight. Children laugh as they choose their favorite animals, while adults savor the nostalgia of the spinning ride. As it rotates, the carousel becomes a moving work of art, blending motion, color, and music into an enchanting centerpiece of the carnival. The Ticket Kiosk is back the way you came."
 
-The Carousel Attendant is a man in the Carousel Ride. Understand "attendent" and "operator" as attendant. The description of the Carousel Attendant is "This is another bored teenager. He[']s wondering why he took this stupid job in the first place."
+The Carousel operator is a man in the Carousel Ride. Understand "attendent" and "attendant" as Carousel operator. 
 
-instead of giving the carousel ticket to the carousel attendant:
+instead of examining the Carousel operator:
+	choose a random row in Table of Bored Responses;
+	Let A be response entry;
+	say "This is another bored teenager. [A] ";
+	stop the action.
+
+instead of giving the carousel ticket to the carousel operator:
 	say "You give [the noun] to [the second noun].";
-	now the carousel attendant carries the carousel ticket;
+	now the carousel operator carries the carousel ticket;
 	say "[line break]Stepping onto the carousel[']s spinning platform, you’re greeted by a kaleidoscope of color—brightly painted horses, glittering lights, and golden trim. The cheerful melody of calliope music fills the air as you choose your mount, perhaps a galloping horse with a flowing mane, a majestic lion, or a whimsical giraffe. Gripping the polished pole, you settle onto the saddle, feeling the smooth rise and fall as the carousel begins to turn.
 
 As the ride picks up speed, the world outside becomes a blur of glowing carnival lights and swirling colors. The gentle up-and-down motion mimics a playful gallop, and the rhythmic whir of the carousel’s machinery adds a soothing backdrop to the cheerful atmosphere. Laughter and the sound of children’s chatter mix with the music, creating a sense of nostalgia and joy.
@@ -1271,11 +1310,17 @@ For a few moments, you’re transported into a magical world, the worries of the
 
 Section 12 - Head of the Line
 
-Head of the Line is a room. Head of the Line is south of Ticket Kiosk. Head of the Line is north of Ride Entrance. The Head of the Line is outdoors. "You are standing in front of a ticket taker with his hand open waiting for your ticket. The entrance to the ride is south of here. The ride attendant tells you that you[']re lucky you showed up when you did because this will be the last trip through Hell Ride. You notice that all the other cars are empty. The Ticket Kiosk is back the way you came."
+Head of the Line is a room. Head of the Line is south of Ticket Kiosk. Head of the Line is north of Ride Entrance. The Head of the Line is outdoors. "You are standing in front of a ticket taker with his hand open waiting for your ticket. The entrance to the ride is south of here. The ride operator tells you that you[']re lucky you showed up when you did because this will be the last trip through Hell Ride. You notice that all the other cars are empty. The Ticket Kiosk is back the way you came."
 
-The Hell Ride Attendant is a man in Head of the Line. Understand "attendent" and "operator" as attendant. The description of the Hell Ride Attendant is "This is another bored teenager. His thoughts are entirely focused on a cheeseburger for lunch.";
+The Hell Ride operator is a man in Head of the Line. Understand "attendent" and "attendant" as Hell Ride operator. 
 
-Check going south when the location is Head of the Line and the Ride Attendant does not have the hell ride ticket:
+instead of examining the Hell Ride operator:
+	choose a random row in Table of Bored Responses;
+	Let A be response entry;
+	say "This is another bored teenager. [A] ";
+	stop the action.
+
+Check going south when the location is Head of the Line and the Ride operator does not have the hell ride ticket:
 	say "You[']ll need a ticket to go that way.";
 	stop the action.
 
@@ -1284,7 +1329,7 @@ Chapter 3 - Backstage
 Section 1 - Dark Passage
 
 [get the key]
-Test b1 with "brief / s / buy hell ride ticket / s / give hell ride ticket to attendant / s / e / l at piles / get flashlight / turn it on / s / turn on radio / l at desk / open drawer / get all from the drawer / s / s / open toolbox / get all from toolbox / s / s / s / ne / get silver key / l at panel / open panel / l at socket / sw / n / n / n / n / n"
+Test b1 with "brief / s / buy hell ride ticket / s / give hell ride ticket to operator / s / e / l at piles / get flashlight / turn it on / s / turn on radio / l at desk / open drawer / get all from the drawer / s / s / open toolbox / get all from toolbox / s / s / s / ne / get silver key / l at panel / open panel / l at socket / sw / n / n / n / n / n"
 
 [get the fuses]
 Test b2 with "w / l under stocks / e / s / w / l under platform / e / s / w / l in pyre / get fuse from pyre / e / s / w / l under seat / e / s / w / l under platform / e / s / s / w / l in stand / get khaki fuse from merchandise stand / e / n"
@@ -1480,7 +1525,7 @@ Before going south when the location is the Ticket kiosk and the Head of the Lin
 Before looking when the location is the Head of the Line:
 	display Figure of HellRideEntrance.
 
-Test Ride with "brief / s / buy hell ride ticket / s / give hell ride ticket to attendant / s / enter hell ride car / wait / z / z / z / z / z / z / z".
+Test Ride with "brief / s / buy hell ride ticket / s / give hell ride ticket to operator / s / enter hell ride car / wait / z / z / z / z / z / z / z".
 
 HellRideAuto is a scene. 
 HellRideAuto begins when the player is in the hell ride car for 3 turns.
@@ -1653,7 +1698,7 @@ The iron chair is scenery in the Dungeon. The iron chair is a supporter. underst
 
 The chains are here. They are scenery. The description of the chains is "The chains rattle against the walls."
 The rack is here. It is scenery. The description of the rack is "The rack has a prisoner splayed in four directions."
-The brazier is here. It is scenery. The description of the braizier is "It is glowing red with an infernal heat."
+The brazier is here. It is scenery. The description of the brazier is "It is glowing red with an infernal heat."
 The riveted iron-bound door is here. It is scenery.
 
 Instead of looking under a thing which is underlaid by fuse7 when fuse7 is lost:
