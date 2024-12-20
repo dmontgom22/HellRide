@@ -11,11 +11,13 @@ The story title is "Hell Ride".
 The story author is "No Shoes".
 The story headline is "The ride of a lifetime...".
 The story genre is "Horror".
-The release number is 110.
+The release number is 111.
 The story description is "You've decided to stay and enjoy the carnival anyway."
 The story creation year is 2024.
 
 Release along with cover art, a website, an introductory booklet, the "Quixe" interpreter, the source text, the solution, and library card.
+
+include Modified Exit by Emily Short.
 
 Include Locksmith by Emily Short.
 
@@ -26,8 +28,6 @@ Include Rideable Vehicles by Graham Nelson.
 Include Swearing Reloaded by Shin.
 
 Include Singing Reloaded by Shin.
-
-include Modified Exit by Emily Short.
 
 Use scoring.
 Use American Dialect.
@@ -69,7 +69,7 @@ The player carries a wallet. The wallet contains money. The printed name of the 
 Instead of taking the money:
 	say "Best to leave it alone until you need to buy something."
 
-Instead of buying something free:
+Instead of buying something free when the player carries the noun:
 	say "[The noun] is yours already."
 
 Instead of buying the money:
@@ -304,7 +304,7 @@ Instead of examining the player:
 
 The coupon is in the wallet. The description of the coupon is "You found this in a stack of coupons on the counter of the gas station."
 
-every turn when examining the coupon, display Figure of Coupon.
+before examining the coupon, display Figure of Coupon.
 
 After reading a command:
 	if the player's command includes "please":
@@ -351,8 +351,6 @@ Chapter 4 - Figures and Sounds
 
 Figure of Hell Ride is the file "HellRide.png".
 
-Figure of Midway is the file "Midway.png".
-
 Figure of TicketBooth is the file "TicketBooth.png".
 
 Figure of ConcessionStand is the file "ConcessionStand.png".
@@ -383,6 +381,14 @@ Figure of Coupon is the file "Coupon.png".
 
 Figure of MaintenanceOffice is the file "MaintenanceOffice.png".
 
+Figure of FerrisWheel is the file "FerrisWheel.png".
+
+Figure of BumperCars is the file "BumperCars.png".
+
+Figure of FortuneTeller is the file "FortuneTeller.png".
+
+Figure of Carousel is the file "Carousel.png".
+
 Sound of Bell is the file "Bell.ogg".
 
 Chapter 5 - Testing For Empty Descriptions - Not for release
@@ -395,7 +401,7 @@ Chapter 5 - Testing For Empty Descriptions - Not for release
 When play begins:
 	seed the random-number generator with 1234.
 	
-The price of the money is $20.00. 
+The price of the money is $30.00. 
 			
 Chapter 6 - Randomized Rooms, etc - For Release Only
 
@@ -786,19 +792,25 @@ Chapter 2 - The Midway
 
 Section 1 - Parking Lot
 
-Test Life with "brief / Test Parking / Test Egypt / Test Concession / Test Striker / Test Misc / Test Backstage".
+Test Life with "brief / Test Parking / Test Striker / Test Attractions / Test Concession / Test Misc / Test Backstage".
 
-Test Death with "brief / Test Parking / Test Egypt / Test Concession / Test Striker / Test Misc / Test Ride".
+Test Death with "brief / Test Parking / Test Attractions / Test Concession / Test Striker / Test Misc / Test Ride".
 
-Test parking with "brief / get blueberries / eat blueberries / give coupon to attendant / buy ticket / get in car / l at car / l at seat / l under seat / open glove box / get gloves / wear gloves / l at dashboard / set stub on the dashboard / l at the dashboard / exit".
+Test Parking with "brief / get blueberries / eat blueberries / give coupon to attendant / buy ticket / get in car / l at car / l at seat / l under seat / open glove box / get gloves / wear gloves / l at dashboard / set stub on the dashboard / l at the dashboard / exit".
 
-Test ToadAway with "brief / test parking / get in car / get parking stub / exit car / test striker / test b1 / test b2 / ne / open panel / put aqua in socket / push switch / sw / e / open panel / put crimson in socket / push switch / w / se / open panel / put emerald in socket / push switch / nw / sw / unlock panel / open panel"
+Test ToadAway with "brief / test parking / get in car / get parking stub / exit car / test striker / test b1 / test b2 / ne / open panel / put aqua in socket / push switch / sw / e / open panel / put crimson in socket / push switch / w / se / open panel"
+
+Test a1 with "s / buy fortune teller ticket / buy ferris wheel ticket / buy bumper cars ticket / buy carousel ticket / buy hell ride ticket / w / give dime to barker / w /  z / z / z / z / z / z / z / z / get lamp / turn it on"
+
+Test a2 with "e / e / e / e / give ferris wheel ticket to ferris wheel attendant / w / w / ne / give carousel ticket to carousel attendant / sw / se / give fortune teller ticket to mysterious woman / nw / nw / give bumper cars ticket to bumper cars attendant / se / n"
+
+Test Attractions with "test a1 / test a2"
 
 When play begins:
 	display the figure of Hell Ride;
 	say "The carnival is in town and you and your sweetie had a date to visit it. After dinner and just as you arrive at the carnival, you and your date have a terrible fight. They storm off leaving you alone at the carnival. You decide to stay at the carnival anyway."
 
-The Parking Lot is a room. The parking lot is north of the Kiosk. The parking lot is outdoors. "The carnival parking lot stretches across an open field, its gravel crunching under arriving cars. Temporary floodlights and the carnival'[s] colorful glow light the area, while distant laughter, music, and the hum of rides fill the air.
+The Parking Lot is a room. The parking lot is north of the Ticket Kiosk. The parking lot is outdoors. "The carnival parking lot stretches across an open field, its gravel crunching under arriving cars. Temporary floodlights and the carnival[']s colorful glow light the area, while distant laughter, music, and the hum of rides fill the air.
 
 Cars park haphazardly, guided by makeshift signs and fluttering flags. Families unload strollers and blankets, their chatter mixing with the carnival sounds. Others linger in vehicles, preparing for the chilly evening.
 
@@ -810,7 +822,7 @@ Alive with anticipation, the parking lot marks the transition from the ordinary 
 
 The midway is to the south. There is a blueberry bush here. [if blueberry bush contains blueberries]There are blueberries on the bush.[otherwise]The bush has been picked clean.[end if][if the dime is in the Parking Lot] You see something shiny on the ground.[end if] [paragraph break]Your car is here. It[']s a bit of a beater. Inside the car, you can see [the list of things which are part of the beater car]."
 
-The Parking Attendant is a man in the the parking lot. Understand "attendent" as attendant. The parking attendant carries the parking ticket and the parking stub. The price of the parking ticket is $5.00. The description of Parking Attendant is "This is a bored teenager just trying to earn enough money to take his sweetie to the movies next week.[if the parking attendant carries the parking ticket] He has a parking ticket. The price of a parking ticket is [the price of the parking ticket].[end if]". 
+The Parking Attendant is a man in the the parking lot. Understand "attendent" and "operator" as attendant. The parking attendant carries the parking ticket and the parking stub. The price of the parking ticket is $5.00. The description of Parking Attendant is "This is a bored teenager just trying to earn enough money to take his sweetie to the movies next week.[if the parking attendant carries the parking ticket] He has a parking ticket. The price of a parking ticket is [the price of the parking ticket].[end if]". 
 
 The beater car is an open enterable container in the parking lot. The beater car is scenery. Understand "vehicle" and "car" as the beater car. The description of the beater car is "[if the player is in the beater car][bold type]Car Interior[roman type][line break][end if]This is your car. It[']s a 2002 Honda Civic and it[']s seen better days.[paragraph break][if the player is in the beater car]You[']re sitting inside your car. [end if]Even though it[']s old, it feels like an old friend. From the faux leather seats to the crack in the windshield. It[']s familiar and comforting. There[']s old fast food wrappers on the floor, clothes and text books in the back seat. There is an air freshener hanging from the rear view mirror. You see [the list of things which are part of the beater car]." 
 
@@ -879,16 +891,26 @@ Understand "exit [a direction]" as a mistake ("Please try 'go [noun]' or just '[
 
 Understand "place [something] on [something]" as putting it on. Understand "set [something] on [something]" as putting it on. 
 
-Section 3 - Kiosk
+Section 3 - Ticket Kiosk
 
-After going south from the parking lot when the Kiosk is unvisited and the player carries the parking ticket:
+After going south from the parking lot when the Ticket Kiosk is unvisited and the player carries the parking ticket:
 	display Figure of TicketBooth;
-	say "[the description of the kiosk]"..
+	say "[bold type]Ticket Kiosk[roman type][line break][description of the ticket kiosk][line break]".
 	
-Before looking when the location is the Kiosk:
+Before looking when the location is the Ticket Kiosk:
 	display Figure of TicketBooth.
 
-The kiosk is a room. The kiosk is north of Head of the Line. The kiosk is east of the Show Facade. The kiosk is outdoors. The kiosk is west of High Striker. The kiosk is northeast of the Concession Stand. The kiosk is south of the Parking Lot. "The ticket kiosk stands at the carnival entrance, a compact booth painted in bright red and yellow stripes with bold letters above the window reading 'Tickets Here!' Twinkling lights outline its edges, blinking rhythmically to draw attention.
+The Ticket kiosk is a room. The Ticket kiosk is outdoors. 
+The Ticket kiosk is northwest of the Fortune Teller Room.
+The Ticket kiosk is north of Head of the Line. 
+The Ticket kiosk is northeast of the Concession Stand. 
+The Ticket kiosk is east of the Show Facade. 
+The Ticket kiosk is southwest of the Carousel Ride.
+The Ticket kiosk is south of the Parking Lot. 
+The Ticket kiosk is southeast of the Bumper Cars Ride.
+The Ticket kiosk is west of the High Striker. 
+
+The description of the Ticket kiosk is "The ticket kiosk stands at the carnival entrance, a compact booth painted in bright red and yellow stripes with bold letters above the window reading 'Tickets Here!' Twinkling lights outline its edges, blinking rhythmically to draw attention.
 
 A single window serves visitors, where a smiling attendant dispenses colorful tickets from neatly arranged rolls. Beside the tickets, a cash drawer jingles as change is counted, and a digital payment system glows faintly for modern convenience. Too bad you don[']t have a debit card.
 
@@ -896,36 +918,35 @@ Next to the kiosk, a vibrant signboard lists ticket prices with playful illustra
 
 The worn ground around the kiosk shows the passage of eager carnival-goers. Families, couples, and friends form a buzzing line, their excitement building as they approach this first step into the magic of the carnival.
 
-The midway continues east and west from here. There is a concession stand to the south west. There is a cashier here. The prices of ride tickets are on the signboard. The cashier has [list of things carried by the cashier]."
+The midway continues in all directions from here. There is a cashier here. The prices of ride tickets are on the signboard. The cashier has [list of things carried by the cashier]."
 
-The Hell Ride ticket is a thing. The price of the Hell Ride ticket is $3.00. The description of the Hell Ride ticket is "'Admit One' to the Hell Ride.[line break]It[']s a real 'E' ticket, baby!". The cashier carries the Hell Ride ticket.
-The cashier carries the Zipper ticket. The price of the zipper ticket is $2.00. The description of the Zipper ticket is "'Admit One' to the Zipper."
-The cashier carries the Ferris Wheel ticket. The price of the ferris wheel ticket is $2.00. The description of the Ferris Wheel ticket is "'Admit One' to the Ferris Wheel."
-The cashier carries the Tilt-A-Whirl ticket. The price of the tilt-a-whirl ticket is $2.00. The description of the Tilt-A-Whirl ticket is "'Admit One' to the Tilt-A-Whirl."
-The cashier carries the Carousel ticket. The price of the carousel ticket it is $1.00. The description of the Carousel ticket is "'Admit One' to the Carousel."
+A ride ticket is a kind of thing. A ticket has a price.
 
-The Cashier is a man in the kiosk. The description of cashier is "This is a bored teenager hired to sell ride tickets all week at this carnival. He[']s thinking about having a brewski with his bros after work.". 
+The Hell Ride ticket is a ride ticket. The cashier carries the Hell Ride ticket. The price of the Hell Ride ticket is $3.00. The description of the Hell Ride ticket is "'Admit One' to the Hell Ride.[line break]It[']s a real 'E' ticket, baby!". 
+The Fortune Teller ticket is a ride ticket. The cashier carries the Fortune teller ticket. The price of the fortune teller ticket is $3.00. The description of the fortune teller ticket is "'Admit One' Have your fortune told."
+The Ferris Wheel ticket is a ride ticket. The cashier carries the Ferris Wheel ticket. The price of the ferris wheel ticket is $2.00. The description of the Ferris Wheel ticket is "'Admit One' to the Ferris Wheel."
+The Bumper Cars ticket is a ride ticket. The cashier carries the Bumper Cars ticket. Understand "bumper car ticket" as bumper cars ticket. The price of the bumper cars ticket is $2.00. The description of the bumper cars ticket is "'Admit One' to the Bumper Cars."
+The Carousel ticket is a ride ticket. The cashier carries the Carousel ticket. The price of the carousel ticket is $1.00. The description of the Carousel ticket is "'Admit One' to the Carousel."
+
+The Cashier is a man in the Ticket kiosk. The description of cashier is "This is a bored teenager hired to sell ride tickets all week at this carnival. He[']s thinking about having a brewski with his bros after work.". 
 
 After buying the hell ride ticket:
 	play the sound of Bell;
 	increase score by 5;
 	say "Well done!";
 	
-There is a signboard in the Kiosk. The signboard is scenery. The description of the signboard is 
+There is a signboard in the Ticket Kiosk. The signboard is scenery. Understand "sign" as signboard. The description of the signboard is 
 "[line break]$3.00 Hell Ride.
-[line break]$3.00 Zipper.
+[line break]$3.00 Fortune Teller.
 [line break]$2.00 Ferris Wheel.
-[line break]$2.00 Tilt-A-Whirl.
+[line break]$2.00 Bumper Cars.
 [line break]$1.00 Carousel."
-
-
-
 
 Section 4 - Concession Stand
 
 Test Concession with "brief / s / sw / l at treats / read menu / buy cola / buy popcorn / buy candy apple / buy cotton candy / buy pretzel / inventory / drink soda / g / g / g / g / i / ne / n / i / score".
 
-Before going southwest when the location is the kiosk and the Concession Stand is unvisited:
+Before going southwest when the location is the Ticket kiosk and the Concession Stand is unvisited:
 	display Figure of ConcessionStand.
 	
 Before looking when the location is the Concession Stand:
@@ -974,19 +995,21 @@ Section 5 - High Striker
 
 Test Striker with "brief / s / e / buy mallet / hit lever with mallet / g / g / g / g / 2 / w / n / i / score".
 
-Before going east when the location is the kiosk and the High Striker is unvisited:
+Before going east when the location is the Ticket kiosk and the High Striker is unvisited:
 	display Figure of HighStriker.
 	
 Before looking when the location is the High Striker:
 	display Figure of HighStriker.
 
-The High Striker is a room. The High Striker is outdoors. "This area features a tall, eye-catching machine adorned with bright, colorful lights, typically red, yellow, and blue. A large sign at the top reads 'Test Your Strength!' in bold, playful lettering. The machine[’]s base is made of polished wood, with a polished, vintage appearance. At the center is a sturdy metal pole, with a large bell hanging at the top, signaling when a successful attempt has been made. Along the length of the pole are markings indicating how strong you are.  A nearby sign says, 'Buy a mallet, strike the bell, win a prize.'[if the strongman attendant contains the mallet] You can see an over-sized mallet here.[end if]
+The dollar bill is a thing. The description of the dollar bill is "It has a picture of George Washington on it."
 
-Spectators gather around, cheering on participants and offering lighthearted jabs and encouragement, creating a lively, competitive atmosphere. The sound of the mallet hitting the target is followed by the resonant clang of the bell (if struck), alongside the buzz of carnival music in the background."
+The High Striker is a room. The High Striker is west of the Ferris Wheel Ride. The High Striker is outdoors. "This area features a tall, eye-catching machine adorned with bright, colorful lights, typically red, yellow, and blue. A large sign at the top reads 'Test Your Strength!' in bold, playful lettering. The machine[’]s base is made of polished wood, with a polished, vintage appearance. At the center is a sturdy metal pole, with a large bell hanging at the top, signaling when a successful attempt has been made. Along the length of the pole are markings indicating how strong you are.  A nearby sign says, 'Buy a mallet, strike the bell, win a prize.'[if the strongman attendant contains the mallet] You can see an over-sized mallet here.[end if]
+
+Spectators gather around, cheering on participants and offering lighthearted jabs and encouragement, creating a lively, competitive atmosphere. The sound of the mallet hitting the target is followed by the resonant clang of the bell (if struck), alongside the buzz of carnival music in the background. The Ticket Kiosk is back the way you came."
 
 The markings are here. The markings are scenery. Understand "marking" and "sign" and "signs" as markings. The description of markings is "There are five levels marked on the pole: Weakling, Getting There, Average, Almost There, and Muscle Man."
 
-The Strongman Attendant is here. Understand "attendent" as attendant. The description of the Strongman Attendant is "An Attendant is standing here [if strongman attendant is carrying the mallet]holding a mallet[end if]." 
+The Strongman Attendant is here. Understand "attendent" and "operator" as attendant. The description of the Strongman Attendant is "An Attendant is standing here [if strongman attendant is carrying the mallet]holding a mallet[end if]." 
 
 The teddy bear is carried by the Strongman Attendant. The description of the teddy bear is "This is a teddy bear like you had when you were a kid. Right down to the red bow around its neck." 
 
@@ -1014,7 +1037,7 @@ Check hitting:
 Carry out hitting when the player is carrying the mallet:
 	say "You lift the mallet high and bring it down on the lever with all your might! The striker rises towards the bell stopping at '[a random strength pattern between weakling and almost there]'.  C[']mon! You can do better than that!";
 	
-After hitting the lever when second noun is the mallet 4 times :
+After hitting the lever when second noun is the mallet 4 times:
 	play the sound of Bell;
 	say "You swing the mallet one more time. The bell rings as the striker reaches the top of the pole. The attendant says, 'You[']re a Muscle Man. Here[']s a prize for you.'";
 	say "Which prize would you like? 1) a teddy bear, 2) a Swiss Army knife, 3) a poster of Taylor Swift, or 4) a magenta fuse?".
@@ -1047,13 +1070,13 @@ after Reading a command :
 
 Section 6 - Show Facade
 
-Before going west when the location is the kiosk and the Show Facade is unvisited:
+Before going west when the location is the Ticket kiosk and the Show Facade is unvisited:
 	display Figure of LittleEgyptFacade.
 	
 Before looking when the location is the Show Facade:
 	display Figure of LittleEgyptFacade.
 
-Show Facade is a room. Show Facade is east of Show Tent. Show Facade is outdoors. "[if location is unvisited]You head west through the midway, the bright lights of the carnival fading behind you as you approach a wooden booth. A sign above the entrance reads 'Little Egypt Show – A Journey Into the Mysterious and Exotic!' A rotund barker, wearing a fez and a dazzling smile, gestures to a small sign beside him that says 'Dime Admission.'[end if] 
+Show Facade is a room. Show Facade is east of Show Tent. Show Facade is outdoors. "You head west through the midway, the bright lights of the carnival fading behind you as you approach a wooden booth. A sign above the entrance reads 'Little Egypt Show – A Journey Into the Mysterious and Exotic!' A rotund barker, wearing a fez and a dazzling smile, gestures to a small sign beside him that says 'Dime Admission.'  The Ticket Kiosk is back the way you came.
 
 You are standing in front of a dark and mysterious tent filled with illusions and exotic performers. Perhaps there’s a fortune teller inside, offering cryptic clues about your journey or a hidden artifact that can be collected. There is a stage in front of the tent. The Barker is encouraging you to step up, pay for, and enjoy the Little Egypt Show.[if location is unvisited]The barker cries: 
 
@@ -1095,7 +1118,7 @@ The Stage is here. The Stage is scenery. The description of the Stage is "The st
 
 The wall is a scenery container. The wall is in the Show Tent. 
 
-The lantern is an electric lamp. It is in the wall. The description of the lantern is "This is a highly polished brass lantern."
+The lantern is an electric lamp. It is in the wall. Understand "lamp" as the lantern. The description of the lantern is "This is a highly polished brass lantern."
 
 after taking the lantern for the first time:
 	say "Taken.";
@@ -1136,11 +1159,121 @@ event
 "The music alternates between hauntingly slow melodies and rapid, energetic drum beats, creating an emotional arc that keeps you entranced. Little Egypt relies on the music[']s dynamic changes to tell a story with movements reflecting joy, sorrow, seduction, and celebration."
 "The performance concludes with a dramatic flourish of a fast-paced shimmy, a bold spin, and Little Egypt dramatically casts off her veils. The dancer takes a bow to enthusiastic applause, leaving you spellbound by the sensual yet artful display."
 
-Section 8 - Head of the Line
+Section 8 - Ferris Wheel
 
-Head of the Line is a room. Head of the Line is south of Kiosk. Head of the Line is north of Ride Entrance. The Head of the Line is outdoors. "You are standing in front of a ticket taker with his hand open waiting for your ticket. The entrance to the ride is south of here. The ride attendant tells you that you[']re lucky you showed up when you did because this will be the last trip through Hell Ride. You notice that all the other cars are empty."
+After going east from the high striker when the ferris wheel ride is unvisited:
+	display Figure of FerrisWheel;
+	say "[bold type]Ferris Wheel[roman type][line break][description of the ferris wheel ride][line break]".
+	
+Before looking when the location is the Ferris Wheel Ride:
+	display Figure of FerrisWheel.
 
-The Ride Attendant is a man in Head of the Line. Understand "attendent" as attendant. The description of the Ride Attendant is "This is another bored teenager. His thoughts are entirely focused on a cheeseburger for lunch.";
+Ferris Wheel Ride is a room. The Ferris Wheel Ride is outdoors. The Ferris Wheel Ride is east of the High Striker. "The Ferris wheel is the towering centerpiece of the carnival, its vibrant lights and graceful rotations drawing the attention of visitors from every corner of the fairgrounds. The wheel[']s massive steel frame arches high into the sky, its intricate network of beams glinting under the colorful glow of bulbs strung along its circumference. Each gondola, painted in bright hues like red, yellow, and blue, dangles from the wheel, swaying gently as it turns.
+
+At night, the Ferris wheel transforms into a dazzling spectacle, with hundreds of synchronized lights creating patterns and ripples that pulse outward like waves. The bulbs flash in bursts of red, green, and white, casting playful reflections on nearby attractions and the surrounding crowd.
+
+The air around the wheel is filled with a mix of excited chatter, the hum of its motor, and the occasional squeal of laughter or nervousness from riders high above. The ride operator, standing in a small booth at the base, keeps a steady rhythm of loading and unloading passengers, their voice occasionally calling out, 'Step right up! The best view of the carnival awaits!'
+
+The Ferris wheel offers an ever-changing perspective of the carnival below. From its peak, riders can see the entire fairground: the spinning lights of the rides, the colorful stripes of game booths, and the winding paths of visitors navigating the midway. Beyond the carnival, the view stretches to the horizon, with city lights or rolling countryside adding to the magical experience.
+
+Whether it[']s a romantic ride for couples, a thrilling adventure for friends, or a calming retreat for families, the Ferris wheel captures the spirit of the carnival—an iconic blend of excitement, wonder, and timeless charm."
+
+The Ferris Wheel Attendant is a man in the Ferris Wheel Ride. Understand "attendent" and "operator" as attendant. The description of the Ferris Wheel Attendant is "This is another bored teenager. His mind is completely blank."
+
+instead of giving the ferris wheel ticket to the ferris wheel attendant:
+	say "You give [the noun] to [the second noun].";
+	now the ferris wheel attendant carries the ferris wheel ticket;
+	say "[line break]As you step into the gently swaying gondola, a faint creak accompanies the safety bar locking into place. The Ferris wheel begins its slow ascent, the hum of its machinery blending with the distant sounds of carnival games and laughter below. A soft breeze brushes against your face as the gondola rises higher, offering an ever-expanding view of the fairgrounds.
+
+With each rotation, the world transforms. At the peak, the carnival sprawls beneath you like a miniature village, its vibrant lights twinkling against the twilight sky. The sound of the midway fades into a soft murmur, replaced by the serene quiet of being high above the bustling crowd. Beyond the fair, the horizon stretches endlessly, framed by the glow of distant city lights or rolling countryside.
+
+The gondola sways gently, adding a hint of thrill to the tranquil ride. You exchange smiles with your companions, pointing out tiny figures darting between booths or the dizzying motion of other rides below. The Ferris wheel begins its descent, and the lively carnival sounds grow louder once again, bringing you back into the heart of the action.
+
+Whether you’re seeking a moment of calm, a romantic view, or the sheer wonder of seeing the world from above, the Ferris wheel delivers an unforgettable ride that captures the magic of the carnival."
+
+Section 9 - Bumper Cars
+
+After going northwest from the ticket kiosk when the bumper cars ride is unvisited:
+	display Figure of BumperCars;
+	say "[bold type]Bumper Cars Ride[roman type][line break][description of the Bumper Cars Ride][line break]".
+	
+Before looking when the location is the Bumper Cars Ride:
+	display Figure of BumperCars.
+	
+The Bumper Cars Ride is a room. The Bumper Cars Ride is northwest of the Ticket Kiosk. The Bumper Cars Ride is outdoors. "The bumper cars is a bustling hub of excitement and laughter, set beneath a canopy of flashing lights and colorful decorations. The rectangular arena is surrounded by padded barriers, ensuring a safe yet thrilling experience for riders. The floor, slick and metallic, allows the brightly colored cars—painted in shades of red, blue, yellow, and green—to glide effortlessly in all directions.
+
+Each car is equipped with a steering wheel and a padded bumper, designed to absorb the impact of playful collisions. As the ride begins, drivers of all ages eagerly maneuver their cars, aiming for friends, family, or strangers with mischievous grins. The air is filled with the sound of bumpers colliding, laughter, and the occasional squeal of surprise.
+
+Overhead, a web of electric poles connects the cars to the ceiling, sparking faintly as they supply power to the vehicles. The ride operator watches from a booth, ensuring everyone enjoys the chaos safely. Surrounding the bumper cars are cheering onlookers, carnival lights, and the lively hum of the fairground.
+
+The bumper cars perfectly captures the playful spirit of the carnival, offering a mix of harmless competition, shared laughter, and nostalgic fun for all ages."
+
+The Bumper Cars Attendant is a man in the Bumper Cars Ride. Understand "attendent" and "operator" as attendant. The description of the Bumper Cars Attendant is "This is another bored teenager. He[']s wondering if his SAT scores are good enough to get into college."
+
+instead of giving the bumper cars ticket to the bumper cars attendant:
+	say "You give [the noun] to [the second noun].";
+	now the bumper cars attendant carries the bumper cars ticket;
+	say "[line break]Sliding into the snug seat of the bumper car, your hands grip the steering wheel, anticipation buzzing in the air. Around you, the arena is alive with flashing lights, bursts of laughter, and the hum of electric currents running through the overhead poles. A quick glance shows other riders locking eyes, playful grins spreading as everyone braces for the chaos about to unfold.
+
+As the ride starts, your car jolts forward, and you steer into the fray. The slick metal floor beneath makes every turn feel smooth yet unpredictable. Suddenly, bam!—another car collides into you from the side, sending your car into a spin. You laugh, recovering quickly to aim your vehicle at a friend or an unsuspecting rider across the arena.
+
+The thrill of the bumper cars is in the collisions—every thud and jolt accompanied by squeals of delight or mock indignation. The impact is cushioned by the padded bumpers, keeping the fun safe but exhilarating. You swerve, dodge, and sometimes reverse in a desperate attempt to avoid being cornered, all while plotting your next playful crash.
+
+The ride is a whirlwind of laughter, harmless competition, and shared joy. As the music fades and the cars slow to a stop, you climb out with a wide grin, already looking forward to your next turn in the driver’s seat."
+
+Section 10 - Fortune Teller
+
+After going southeast from the ticket kiosk when the fortune teller room is unvisited:
+	display Figure of FortuneTeller;
+	say "[bold type]Fortune Teller Room[roman type][line break][description of the Fortune Teller Room][line break]".
+	
+Before looking when the location is the Fortune Teller Room:
+	display Figure of FortuneTeller.
+	
+The Fortune Teller Room is a room. The Fortune Teller Room is outdoors. The fortune teller room is southeast of the Ticket Kiosk. "Approaching the fortune teller[’]s booth, you’re drawn in by its mysterious allure. Draped in deep purple curtains adorned with golden moons and stars, the booth glows with the soft, inviting light of lanterns. The air is heavy with the scent of incense, mingling with the sweet aroma of carnival treats. A sign reading 'Fortunes Told—What Does Your Future Hold?' sways slightly in the evening breeze."
+
+The Mysterious Woman is a woman in the fortune teller room. The description of the Mysterious Woman is "The fortune teller sits in a dimly lit booth, draped in rich fabrics of deep purple and gold, adorned with celestial patterns of stars and moons. Their appearance is enigmatic, with piercing eyes that seem to look right through you and a knowing smile that hints at secrets yet untold. They wear flowing robes embellished with shimmering beads, and a jeweled headpiece catches the flickering light of nearby candles."
+
+instead of giving the fortune teller ticket to the Mysterious Woman:
+	say "You give [the noun] to [the second noun].";
+	now the Mysterious Woman carries the fortune teller ticket;
+	say "[line break]Stepping inside, you’re greeted by the fortune teller, a figure cloaked in flowing robes with a jeweled headpiece catching the flickering light. Their piercing eyes seem to look right through you as they gesture for you to sit at a small round table covered in an ornate cloth. At its center rests a glowing crystal ball, surrounded by tarot cards and mysterious trinkets.
+
+The fortune teller[’]s voice is low and melodic, weaving an air of intrigue as they ask you to focus on a question or offer your palm for a reading. The room seems to shrink, the bustling carnival outside fading into the background as they reveal your fate. Each card turned or line traced feels significant, as though unlocking a secret you didn’t know you carried.
+
+As the reading concludes, the fortune teller gazes into your eyes with a cryptic smile and delivers their final words of wisdom. Whether you leave with a sense of wonder, excitement, or unease, the encounter lingers with you—a touch of magic amid the carnival’s chaos, as if you’ve glimpsed something beyond the ordinary."
+
+Section 11 - Carousel
+
+After going northeast from the ticket kiosk when the carousel ride is unvisited:
+	display Figure of Carousel;
+	say "[bold type]Carousel Ride[roman type][line break][description of the Carousel Ride][line break]".
+	
+Before looking when the location is the Carousel Ride:
+	display Figure of Carousel.
+
+The Carousel Ride is a room. The Carousel Ride is outdoors. The Carousel Ride is northeast of the Ticket Kiosk. "The carousel is a timeless carnival attraction, radiating charm and nostalgia with its brightly painted horses, vibrant lights, and cheerful music. The circular platform is adorned with a canopy of swirling colors, gold trim, and decorative mirrors that reflect the flickering bulbs lining its edges.
+
+Rows of hand-carved animals, most often horses with flowing manes, are arranged in a circle. Each is painted in vivid colors, detailed with golden saddles and ribbons. Some carousels also feature exotic creatures like lions, tigers, or sea dragons, adding whimsy to the ride. The animals rise and fall gently as the carousel spins, mimicking a galloping motion.
+
+The carousel[’]s warm, playful tunes drift across the midway, inviting riders of all ages to enjoy its simple delight. Children laugh as they choose their favorite animals, while adults savor the nostalgia of the spinning ride. As it rotates, the carousel becomes a moving work of art, blending motion, color, and music into an enchanting centerpiece of the carnival. The Ticket Kiosk is back the way you came."
+
+The Carousel Attendant is a man in the Carousel Ride. Understand "attendent" and "operator" as attendant. The description of the Carousel Attendant is "This is another bored teenager. He[']s wondering why he took this stupid job in the first place."
+
+instead of giving the carousel ticket to the carousel attendant:
+	say "You give [the noun] to [the second noun].";
+	now the carousel attendant carries the carousel ticket;
+	say "[line break]Stepping onto the carousel[']s spinning platform, you’re greeted by a kaleidoscope of color—brightly painted horses, glittering lights, and golden trim. The cheerful melody of calliope music fills the air as you choose your mount, perhaps a galloping horse with a flowing mane, a majestic lion, or a whimsical giraffe. Gripping the polished pole, you settle onto the saddle, feeling the smooth rise and fall as the carousel begins to turn.
+
+As the ride picks up speed, the world outside becomes a blur of glowing carnival lights and swirling colors. The gentle up-and-down motion mimics a playful gallop, and the rhythmic whir of the carousel’s machinery adds a soothing backdrop to the cheerful atmosphere. Laughter and the sound of children’s chatter mix with the music, creating a sense of nostalgia and joy.
+
+For a few moments, you’re transported into a magical world, the worries of the day fading away with each graceful rotation. Whether you’re enjoying the ride alone, with friends, or sharing a special moment with family, the carousel[’]s charm captures a timeless blend of whimsy and wonder. As it slows to a stop, you step off with a smile, the music lingering in your ears as you rejoin the bustling carnival."
+
+Section 12 - Head of the Line
+
+Head of the Line is a room. Head of the Line is south of Ticket Kiosk. Head of the Line is north of Ride Entrance. The Head of the Line is outdoors. "You are standing in front of a ticket taker with his hand open waiting for your ticket. The entrance to the ride is south of here. The ride attendant tells you that you[']re lucky you showed up when you did because this will be the last trip through Hell Ride. You notice that all the other cars are empty. The Ticket Kiosk is back the way you came."
+
+The Hell Ride Attendant is a man in Head of the Line. Understand "attendent" and "operator" as attendant. The description of the Hell Ride Attendant is "This is another bored teenager. His thoughts are entirely focused on a cheeseburger for lunch.";
 
 Check going south when the location is Head of the Line and the Ride Attendant does not have the hell ride ticket:
 	say "You[']ll need a ticket to go that way.";
@@ -1189,11 +1322,11 @@ after taking the flashlight for the first time:
 
 Section 2 - Maintenance Office
 
-After going south from the dark passage when the Maintenance Office is unvisited and the Maintenance Office is lighted:
+After going south from the dark passage when the Maintenance Office is unvisited and the the player carries a lit electric lamp:
 	display Figure of MaintenanceOffice;
-	say "[the description of the Maintenance Office]".
-	
-Before looking when the location is the Maintenance Office and the Maintenance Office is lighted:
+	say "[bold type]Maintenance Office[roman type][line break][description of the Maintenance Office][line break][line break]".
+			
+Before looking when the location is the Maintenance Office and the the player carries a lit electric lamp:
 	display Figure of MaintenanceOffice.
 
 The Maintenance Office is a dark room. The maintenance office is south of the dark passage. "The maintenance office, hidden behind the carnival’s bright facade, is a dim and cluttered space reeking of grease, sweat, and faint traces of popcorn from the midway. The air hangs heavy with oil and stirred-up dust.
@@ -1214,7 +1347,7 @@ The notes are here. They are scenery.
 The clock is here. They are scenery. 
 The lubricant is here. It is scenery.
 
-The coffee mug is on the desk. The coffee mug is edible. The description of the coffee mug is "Who knows how long this has been sitting here. I wouldn[']t drink it if I were you." 
+The coffee mug is on the desk. The coffee mug is edible. Understand "coffee" as the coffee mug. The description of the coffee mug is "Who knows how long this has been sitting here. I wouldn[']t drink it if I were you." 
 
 Instead of drinking the coffee mug: say "That looks nasty. You decide against drinking the coffee." instead.
 
@@ -1341,7 +1474,7 @@ Chapter 4 - Hell Ride
 
 Section 1 - Ride Entrance
 
-Before going south when the location is the kiosk and the Head of the Line is unvisited:
+Before going south when the location is the Ticket kiosk and the Head of the Line is unvisited:
 	display Figure of HellRideEntrance.
 	
 Before looking when the location is the Head of the Line:
@@ -1369,9 +1502,9 @@ Table of HellRide Events
 event
 "[bold type]Entrance[roman type][line break]The cars move forward, the safety bar locked in place, as the entrance to Hell Ride looms ahead—a grotesque facade of twisted metal and carved wood, illuminated by flickering blood-red lights. The air carries a faint sulfuric tang mingled with the sweet aroma of carnival popcorn.
 
-A towering archway of flames, spikes, and grinning skulls frames the entrance, crowned by flickering letters that read HELL RIDE, pulsing like a heartbeat. Below, crouching demon sculptures extend clawed hands in a sinister invitation. Wooden doors cover the entrance, whispering with faint, menacing chuckles as distorted organ music grows louder, punctuated by shrieks and grinding machinery.
+A towering archway of flames, spikes, and grinning skulls frames the entrance, crowned by flickering letters that read 'HELL RIDE', pulsing like a heartbeat. Below, crouching demon sculptures extend clawed hands in a sinister invitation. Wooden doors cover the entrance, whispering with faint, menacing chuckles as distorted organ music grows louder, punctuated by shrieks and grinding machinery.
 
-A crooked sign warns, One Ticket Admission: Enter If You Dare! Nearby, a carnival barker with a theatrical, raspy voice calls out, 'Step right up! The gates of hell are open—will you brave the darkness?'
+A crooked sign warns, 'One Ticket Admission: Enter If You Dare!' Nearby, a carnival barker with a theatrical, raspy voice calls out, 'Step right up! The gates of hell are open—will you brave the darkness?'
 
 Inside, near-total darkness is broken by flashes of sickly green light revealing twisted paths and grotesque shapes. Beyond the threshold lies only uncertainty and terror."
 "[bold type]Hallway[roman type][line break]The doors open and your car passes through into the darkness.
@@ -1581,7 +1714,7 @@ Chapter 5 - Second Floor
 
 Section 1 - Holding Room
 
-The Holding room is a room. "I am a room to hold things."
+The Holding Room is a room. "I am a room to hold things."
 
 every turn when the location is the holding room, say "Danger, Will Robinson! This can never happen!"
 
@@ -1593,7 +1726,7 @@ Section 3 - Control Room
 
 Control Room is a dark room. The Control Room is west of the Dark Hallway. The Control Room is a scored room. "The backstage control room is a plain, functional hub where the carnival’s rides, lights, and attractions are managed. Gray industrial walls, scuffed and greasy, surround rows of monitors streaming live carnival feeds—the Ferris Wheel, Carousel, and Hell Ride. Beneath them, a control panel with labeled dials, colored buttons, and lights oversees the systems.
 
-The hum of electronics fills the air, punctuated by the crackle of a radio: 'Maintenance to Tilt-a-Whirl—wrench needed!' The worn floor is scattered with papers, tools, and coffee cups. A cluttered desk holds logs and schedules, while a corkboard above displays charts and red-marked notes like 'Check Zipper circuit breakers.'
+The hum of electronics fills the air, punctuated by the crackle of a radio: 'Maintenance to Bumper Cars—wrench needed!' The worn floor is scattered with papers, tools, and coffee cups. A cluttered desk holds logs and schedules, while a corkboard above displays charts and red-marked notes like 'Check Zipper circuit breakers.'
 
 A flickering light casts cold shadows as the metallic tang of machinery mixes with dampness. Functional yet essential, this hidden space ensures the carnival’s magic runs seamlessly." 
 
@@ -1848,7 +1981,8 @@ Instead of Switching on or pushing button11:
 
 Part 3 - Regions
 
-The Midway is a region. Parking Lot, Kiosk, Concession Stand, High Striker, Show Facade, Show Tent, and Head of the Line are in the Midway. The sky is in the Midway.
+The Midway is a region. Parking Lot, Ticket Kiosk, Concession Stand, High Striker, Show Facade, Show Tent, Head of the Line,
+Ferris Wheel Ride, Bumper Cars Ride, Fortune Teller, and Carousel Ride are in the Midway. The sky is in the Midway.
 
 HellRide is a region. Ride Entrance, Stocks Room, Gallows Room, Stake Room, Dungeon, Guillotine Room, Ride Exit is in HellRide.
 

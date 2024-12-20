@@ -9,41 +9,47 @@
             <key>3</key>
             <string>Figures\HellRide.png</string>
             <key>4</key>
-            <string>Figures\Midway.png</string>
-            <key>5</key>
             <string>Figures\TicketBooth.png</string>
-            <key>6</key>
+            <key>5</key>
             <string>Figures\ConcessionStand.png</string>
-            <key>7</key>
+            <key>6</key>
             <string>Figures\LittleEgyptFacade.png</string>
-            <key>8</key>
+            <key>7</key>
             <string>Figures\LittleEgyptShow.png</string>
-            <key>9</key>
+            <key>8</key>
             <string>Figures\HighStriker.png</string>
-            <key>10</key>
+            <key>9</key>
             <string>Figures\RideEntrance.png</string>
-            <key>11</key>
+            <key>10</key>
             <string>Figures\ControlPanel.png</string>
-            <key>12</key>
+            <key>11</key>
             <string>Figures\ControlPanelStocks.png</string>
-            <key>13</key>
+            <key>12</key>
             <string>Figures\ControlPanelGallows.png</string>
-            <key>14</key>
+            <key>13</key>
             <string>Figures\ControlPanelStake.png</string>
-            <key>15</key>
+            <key>14</key>
             <string>Figures\ControlPanelDungeon.png</string>
-            <key>16</key>
+            <key>15</key>
             <string>Figures\ControlPanelGuillotine.png</string>
-            <key>17</key>
+            <key>16</key>
             <string>Figures\ControlPanelExit.png</string>
-            <key>18</key>
+            <key>17</key>
             <string>Figures\Coupon.png</string>
-            <key>19</key>
+            <key>18</key>
             <string>Figures\MaintenanceOffice.png</string>
+            <key>19</key>
+            <string>Figures\FerrisWheel.png</string>
+            <key>20</key>
+            <string>Figures\BumperCars.png</string>
+            <key>21</key>
+            <string>Figures\FortuneTeller.png</string>
+            <key>22</key>
+            <string>Figures\Carousel.png</string>
         </dict>
         <key>Sounds</key>
         <dict>
-            <key>20</key>
+            <key>23</key>
             <string>Sounds\Bell.ogg</string>
         </dict>
     </dict>
