@@ -27,7 +27,6 @@ I've also read Basic Screen Effects by Emily Short, which is 2223 words long.
 Phase I ... Dividing source into compilation units
 -----------------------------------------------------
 
-.... Hierarchy__establish() took 1cs
 
 
 -----------------------------------------------------
@@ -45,21 +44,21 @@ Loading kinds definitions from C:\Program Files\Inform\Internal\Inter\WorldModel
 Loading kinds definitions from C:\Program Files\Inform\Internal\Inter\WorldModelKit\kinds\Figures.neptune
 Loading kinds definitions from C:\Program Files\Inform\Internal\Inter\WorldModelKit\kinds\Sounds.neptune
 Loading kinds definitions from C:\Program Files\Inform\Internal\Inter\CommandParserKit\kinds\Parsing.neptune
-.... BinaryPredicateFamilies__first_stock() took 1cs
+.... Task__make_built_in_kind_constructors() took 11cs
 
 
 -----------------------------------------------------
 Phase III ... Pre-pass through major nodes
 -----------------------------------------------------
 
-.... MajorNodes__pre_pass() took 8cs
+.... MajorNodes__pre_pass() took 7cs
 
 
 -----------------------------------------------------
 Phase IV ... First pass through major nodes
 -----------------------------------------------------
 
-.... MajorNodes__pass_1() took 9cs
+.... MajorNodes__pass_1() took 11cs
 
 
 -----------------------------------------------------
@@ -80,42 +79,42 @@ Phase VII ... Completing the model world
 -----------------------------------------------------
 
 .... World__stages_II_and_III() took 1cs
-.... World__stage_IV() took 1cs
 
 
 -----------------------------------------------------
 Phase VIII ... Tables and grammar
 -----------------------------------------------------
 
+.... Understand__traverse() took 1cs
 
 
 -----------------------------------------------------
 Phase IX ... Augment model world
 -----------------------------------------------------
 
-.... World__stage_V() took 2cs
+.... World__stage_V() took 1cs
 
 
 -----------------------------------------------------
 Phase X ... Phrases and rules
 -----------------------------------------------------
 
-.... ImperativeDefinitions__assess_all() took 6cs
+.... ImperativeDefinitions__assess_all() took 7cs
 
 
 -----------------------------------------------------
 Phase XI ... Generating inter (1)
 -----------------------------------------------------
 
-.... RTKindConstructors__compile() took 6cs
+.... RTKindConstructors__compile() took 4cs
+.... RTBibliographicData__compile_constants() took 2cs
 
 
 -----------------------------------------------------
 Phase XII ... Generating inter (2)
 -----------------------------------------------------
 
-.... CompletionModule__compile() took 1cs
-.... RTKindConstructors__compile_permissions() took 1cs
+.... InferenceSubjects__emit_all() took 1cs
 .... ImperativeDefinitions__compile_first_block() took 1cs
 
 
@@ -131,8 +130,9 @@ Phase XII ... Generating inter (2)
 Phase XIII ... Generating inter (3)
 -----------------------------------------------------
 
-.... Sequence__undertake_queued_tasks() took 124cs
-.... RTPhrasebook__compile_entries() took 2cs
+.... Sequence__undertake_queued_tasks() took 132cs
+.... Sequence__undertake_queued_tasks() took 1cs
+.... RTPhrasebook__compile_entries() took 6cs
 
 
 -----------------------------------------------------
@@ -155,21 +155,20 @@ Phase XV ... Generating inter (5)
 
 .... Sequence__undertake_queued_tasks() took 1cs
 Providing for a total heap of 65536, given requirement of 65536
-.... Sequence__lint_inter() took 1cs
+.... Sequence__lint_inter() took 3cs
 
 
 -----------------------------------------------------
 Phase XVI ... Bibliographic work
 -----------------------------------------------------
 
-.... ReleaseInstructions__write_ifiction_and_blurb() took 3cs
 
 
 -----------------------------------------------------
 Phase XVII ... Complete
 -----------------------------------------------------
 
-Compile CPU time: 180 centiseconds
+Compile CPU time: 203 centiseconds
 
 
 ==== Phase XVII.1 ... step 1/15: read <- *memory ====
@@ -7908,7 +7907,7 @@ HTML tag stack:
     52. html (opened at line 236 of 'D:/Programs/Adv/Inform7/Distribution/inweb/foundation-module/Chapter 5/HTML.w')
 
 
-Back end elapsed time: 224cs
+Back end elapsed time: 372cs
 Total of 130 files written as streams.
 Vacant escapes: %: ..CDE.GH..K.M.O.QR.TU...YZab..e..h.jklm.o.qr......yz0123456789
 Vacant escapes: $: .....F...J..........UVW.....................s.u..x.........789
