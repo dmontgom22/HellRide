@@ -11,7 +11,7 @@ The story title is "Hell Ride".
 The story author is "No Shoes".
 The story headline is "The ride of a lifetime...".
 The story genre is "Horror".
-The release number is 111.
+The release number is 112.
 The story description is "You've decided to stay and enjoy the carnival anyway."
 The story creation year is 2024.
 
@@ -207,10 +207,8 @@ Rule for showing action of an electric lamp (called item):
 	
 Carry out switching on an electric lamp: now the noun is lit. Carry out switching off an electric lamp: now the noun is unlit.
 
-The flashlight is an electric lamp. understand "light" as flashlight. The description of the flashlight is "This is a flashlight. It[']s a nice one."
-
-Rule for showing action of the flashlight:
-	if the flashlight is switched on, say "A strong, narrow beam of light shines from the flashlight.";
+Rule for showing action of the noun:
+	if the noun is switched on, say "A strong, narrow beam of light shines from the flashlight.";
 	otherwise say "It is currently switched off."
 		
 Before printing the name of a lit electric lamp, say "lit ".
@@ -328,15 +326,18 @@ every turn:
 		if the parking stub is not on the dashboard:
 			say " Your heart sinks as you realize that is your license plate. You race to the parking lot in time to see the tow truck pull away with your car in tow";
 			end the story finally saying "You start the long walk home."
-			
+
+[Bored Responses]
 Table of Bored Responses
 response
 "He[']s just trying to earn enough money to take his sweetie to the movies next week."
 "He[']s thinking about having a brewski with his bros after work."
 "His mind is completely blank."
+"He[']s thinking about the big game on Friday night."
 "He[']s wondering if his SAT scores are good enough to get into college."
 "He[']s wondering why he took this stupid job in the first place."
 "His thoughts are entirely focused on a cheeseburger for lunch."
+"He wonders how is he supposed to look cool dressed in this awful uniform."
 
 [Description of Hell Ride]			
 When play begins:
@@ -609,7 +610,7 @@ Understand "fuse" as a fuse.
 A fuse can be lost or found. A fuse is usually lost. 
 A fuse has a color. A fuse is usually nondescript. 
 A fuse has a number called fuse id. A fuse id is usually 0.
-The description of a fuse is "This is a [color] colored electrical fuse." 
+The description of a fuse is "This is [color] colored electrical fuse." 
 The printed name of a fuse is "[color] colored fuse".
 
 Definition: a fuse is plugged-in rather than loose if it is contained by a socket.
@@ -910,13 +911,13 @@ Section 3 - Ticket Kiosk
 
 After going south from the parking lot when the Ticket Kiosk is unvisited and the player carries the parking ticket:
 	display Figure of TicketBooth;
-	say "[bold type]Ticket Kiosk[roman type][line break][description of the ticket kiosk][line break]".
+	continue the action.
 	
 Before looking when the location is the Ticket Kiosk:
 	display Figure of TicketBooth.
 
 The Ticket kiosk is a room. The Ticket kiosk is outdoors. 
-The Ticket kiosk is northwest of the Fortune Teller Room.
+The Ticket kiosk is northwest of the Fortune Teller Booth.
 The Ticket kiosk is north of Head of the Line. 
 The Ticket kiosk is northeast of the Concession Stand. 
 The Ticket kiosk is east of the Show Facade. 
@@ -968,7 +969,8 @@ Section 4 - Concession Stand
 Test Concession with "brief / s / sw / l at treats / read menu / buy cola / buy popcorn / buy candy apple / buy cotton candy / buy pretzel / inventory / drink soda / g / g / g / g / i / ne / n / i / score".
 
 Before going southwest when the location is the Ticket kiosk and the Concession Stand is unvisited:
-	display Figure of ConcessionStand.
+	display Figure of ConcessionStand;
+	continue the action.
 	
 Before looking when the location is the Concession Stand:
 	display Figure of ConcessionStand.
@@ -1014,15 +1016,22 @@ A soft pretzel is here. The soft pretzel is edible. The price of the soft pretze
 
 Section 5 - High Striker
 
-Test Striker with "brief / s / e / buy mallet / hit lever with mallet / g / g / g / g / 2 / w / n / i / score".
+Test Striker with "brief / s / e / l at two dollar bill / get two dollar bill / buy mallet / hit lever with mallet / g / g / g / g / 2 / w / n / i / score".
 
 Before going east when the location is the Ticket kiosk and the High Striker is unvisited:
-	display Figure of HighStriker.
+	display Figure of HighStriker;
+	continue the action.
 	
 Before looking when the location is the High Striker:
 	display Figure of HighStriker.
 
-The dollar bill is a thing. The description of the dollar bill is "It has a picture of George Washington on it."
+The two dollar bill is a thing. The two dollar bill is in the High Striker. The price of the two dollar bill is $2.00. Understand "bill" as the two dollar bill. The description of the two dollar bill is "It has a picture of Thomas Jefferson on it."
+
+instead of taking the two dollar bill:
+	say "Taken.[paragraph break]";
+	increase the price of the money by the price of the dollar bill;
+	say "You now have [the price of the money].";
+	now the two dollar bill is nowhere.
 
 The High Striker is a room. The High Striker is west of the Ferris Wheel Ride. The High Striker is outdoors. "This area features a tall, eye-catching machine adorned with bright, colorful lights, typically red, yellow, and blue. A large sign at the top reads 'Test Your Strength!' in bold, playful lettering. The machine[’]s base is made of polished wood, with a polished, vintage appearance. At the center is a sturdy metal pole, with a large bell hanging at the top, signaling when a successful attempt has been made. Along the length of the pole are markings indicating how strong you are.  A nearby sign says, 'Buy a mallet, strike the bell, win a prize.'[if the strongman attendant contains the mallet] You can see an over-sized mallet here.[end if]
 
@@ -1034,7 +1043,13 @@ The Strongman Attendant is here. Understand "attendent" and "operator" as attend
 
 The teddy bear is carried by the Strongman Attendant. The description of the teddy bear is "This is a teddy bear like you had when you were a kid. Right down to the red bow around its neck." 
 
-The Swiss Army knife is a thing. The Swiss Army knife is carried by the Strongman Attendant. The screwdriver, awl, fingernail clippers, can opener, and corkscrew are a part of the Swiss Army knife. The description of the Swiss army knife is "This is the standard issue Swiss Army knife. It has [a list of things which are part of the item described]."  The printed name of the Swiss Army knife is "Swiss Army knife".
+The Swiss Army knife is a thing. The Swiss Army knife is carried by the Strongman Attendant. The description of the Swiss army knife is "This is the standard issue Swiss Army knife. It has [a list of things which are part of the item described]."  The printed name of the Swiss Army knife is "Swiss Army knife". 
+
+The screwdriver is part of the swiss army knife. The description of the screwdriver is "It[']s a handy tool that[']s part of the Swiss Army knife."
+The awl is part of the swiss army knife. The description of the awl is "It[']s a handy tool that[']s part of the Swiss Army knife."
+The fingernail clippers is part of the swiss army knife. The description of the fingernail clippers is "It[']s a handy tool that[']s part of the Swiss Army knife."
+The can opener is part of the swiss army knife. The description of the can opener is "It[']s a handy tool that[']s part of the Swiss Army knife."
+The corkscrew is part of the swiss army knife. The description of the corkscrew is "It[']s a handy tool that[']s part of the Swiss Army knife."
 
 instead of taking when the noun is part of the Swiss army knife, say "That[']s part of the Swiss Army knife. You can[']t take that!" instead.
 	
@@ -1092,7 +1107,8 @@ after Reading a command :
 Section 6 - Show Facade
 
 Before going west when the location is the Ticket kiosk and the Show Facade is unvisited:
-	display Figure of LittleEgyptFacade.
+	display Figure of LittleEgyptFacade;
+	continue the action.
 	
 Before looking when the location is the Show Facade:
 	display Figure of LittleEgyptFacade.
@@ -1124,7 +1140,8 @@ Section 7 - Show Tent
 Test Egypt with "brief / s / w / l at barker / give dime to barker / w / z / z / n / z / z / z / z / z / e / e / n / i / score".
 
 Before going west when the location is the Show Facade and the Show Tent is unvisited and barker is carrying the dime:
-	display Figure of LittleEgyptShow.	
+	display Figure of LittleEgyptShow;
+	continue the action.
 	
 Before looking when the location is the the Show Tent:
 	display Figure of LittleEgyptShow.		
@@ -1184,7 +1201,7 @@ Section 8 - Ferris Wheel
 
 After going east from the high striker when the ferris wheel ride is unvisited:
 	display Figure of FerrisWheel;
-	say "[bold type]Ferris Wheel[roman type][line break][description of the ferris wheel ride][line break]".
+	continue the action.
 	
 Before looking when the location is the Ferris Wheel Ride:
 	display Figure of FerrisWheel.
@@ -1222,7 +1239,7 @@ Section 9 - Bumper Cars
 
 After going northwest from the ticket kiosk when the bumper cars ride is unvisited:
 	display Figure of BumperCars;
-	say "[bold type]Bumper Cars Ride[roman type][line break][description of the Bumper Cars Ride][line break]".
+	continue the action.
 	
 Before looking when the location is the Bumper Cars Ride:
 	display Figure of BumperCars.
@@ -1256,16 +1273,16 @@ The ride is a whirlwind of laughter, harmless competition, and shared joy. As th
 
 Section 10 - Fortune Teller
 
-After going southeast from the ticket kiosk when the fortune teller room is unvisited:
+After going southeast from the ticket kiosk when the fortune teller booth is unvisited:
 	display Figure of FortuneTeller;
-	say "[bold type]Fortune Teller Room[roman type][line break][description of the Fortune Teller Room][line break]".
+	continue the action.
 	
-Before looking when the location is the Fortune Teller Room:
+Before looking when the location is the Fortune Teller Booth:
 	display Figure of FortuneTeller.
 	
-The Fortune Teller Room is a room. The Fortune Teller Room is outdoors. The fortune teller room is southeast of the Ticket Kiosk. "Approaching the fortune teller[’]s booth, you’re drawn in by its mysterious allure. Draped in deep purple curtains adorned with golden moons and stars, the booth glows with the soft, inviting light of lanterns. The air is heavy with the scent of incense, mingling with the sweet aroma of carnival treats. A sign reading 'Fortunes Told—What Does Your Future Hold?' sways slightly in the evening breeze."
+The Fortune Teller Booth is a room. The Fortune Teller Booth is outdoors. The fortune teller booth is southeast of the Ticket Kiosk. "Approaching the fortune teller[’]s booth, you’re drawn in by its mysterious allure. Draped in deep purple curtains adorned with golden moons and stars, the booth glows with the soft, inviting light of lanterns. The air is heavy with the scent of incense, mingling with the sweet aroma of carnival treats. A sign reading 'Fortunes Told—What Does Your Future Hold?' sways slightly in the evening breeze."
 
-The Mysterious Woman is a woman in the fortune teller room. The description of the Mysterious Woman is "The fortune teller sits in a dimly lit booth, draped in rich fabrics of deep purple and gold, adorned with celestial patterns of stars and moons. Their appearance is enigmatic, with piercing eyes that seem to look right through you and a knowing smile that hints at secrets yet untold. They wear flowing robes embellished with shimmering beads, and a jeweled headpiece catches the flickering light of nearby candles."
+The Mysterious Woman is a woman in the fortune teller booth. The description of the Mysterious Woman is "The fortune teller sits in a dimly lit booth, draped in rich fabrics of deep purple and gold, adorned with celestial patterns of stars and moons. Their appearance is enigmatic, with piercing eyes that seem to look right through you and a knowing smile that hints at secrets yet untold. They wear flowing robes embellished with shimmering beads, and a jeweled headpiece catches the flickering light of nearby candles."
 
 instead of giving the fortune teller ticket to the Mysterious Woman:
 	say "You give [the noun] to [the second noun].";
@@ -1280,7 +1297,7 @@ Section 11 - Carousel
 
 After going northeast from the ticket kiosk when the carousel ride is unvisited:
 	display Figure of Carousel;
-	say "[bold type]Carousel Ride[roman type][line break][description of the Carousel Ride][line break]".
+	continue the action.
 	
 Before looking when the location is the Carousel Ride:
 	display Figure of Carousel.
@@ -1351,6 +1368,8 @@ The bags of trash are scenery. The bags of trash are here. Understand "bags" and
 instead of looking under when the noun is the pile of junk:
 	try examining the junk instead. 
 
+The flashlight is an electric lamp. understand "light" as flashlight. The description of the flashlight is "This is a flashlight. It[']s a nice one."
+
 The pile of junk is a scenery container. The pile of junk is in the dark passage. The pile of junk contains the flashlight. Understand "piles" and "junk" as pile of junk. 
 
 after examining when the noun is pile of junk:
@@ -1369,7 +1388,7 @@ Section 2 - Maintenance Office
 
 After going south from the dark passage when the Maintenance Office is unvisited and the the player carries a lit electric lamp:
 	display Figure of MaintenanceOffice;
-	say "[bold type]Maintenance Office[roman type][line break][description of the Maintenance Office][line break][line break]".
+	continue the action.
 			
 Before looking when the location is the Maintenance Office and the the player carries a lit electric lamp:
 	display Figure of MaintenanceOffice.
@@ -1400,10 +1419,25 @@ The desk is in the maintenance office. The desk is a supporter. The desk is fixe
 
 Nearness relates a room (called A) to a room (called B) when the number of moves from B to A is less than 2. The verb to be near means the nearness relation.
 
-The radio is a device on the desk. The radio is switched off and fixed in place. "[if switched on]The radio burbles on[otherwise]The radio is off[end if]." 
+The radio is a device on the desk. The radio is switched off and fixed in place. The description of the radio is "[if switched on]The radio burbles on[otherwise]The radio is off[end if]." 
 
 Every turn when the radio is switched on and location is near the maintenance office:
-	say "[one of]The radio plays 'Stairway to Heaven' by Led Zeppelin.[or]The DJ just cued up Pink Floyd[']s 'Comfortably Numb'.[or]Pharell[']s 'Happy' is playing now.[or]'Folsom Prison Blues' by Johnny Cash is on the air.[or]'Peace Train' by Cat Stevens can be heard playing on the radio.[or]You hear Bob Seger singing 'Old Time Rock[']N[']Roll'.[or]The Eagles['] 'Hotel California' is now playing.[cycling]"
+	choose a random row in Table of Songs;
+	Let A be song entry;
+	say "[one of]You hear [A] playing on the radio.[or][A] plays on the radio.[or]You sing along to [A].[or]The DJ announces the next song will be [A].[at random]";
+
+Table of Songs
+song
+"'Stairway to Heaven' by Led Zeppelin"
+"Pink Floyd[']s 'Comfortably Numb'"
+"Pharell[']s 'Happy'"
+"'Folsom Prison Blues' by Johnny Cash"
+"'Peace Train' by Cat Stevens"
+"Bob Seger[']s 'Old Time Rock[']N[']Roll'"
+"The Eagles['] 'Hotel California'"
+"'Sultans of Swing' by Dire Straits"
+"The B-52[']s 'Rock Lobster'"
+"'Born To Run' by Bruce Springsteen"
 	
 Rule for showing action of the radio:
 	if the radio is switched on, say "Through the static, you pick up hear bits of the latest Taylor Swift song.";
@@ -1520,7 +1554,8 @@ Chapter 4 - Hell Ride
 Section 1 - Ride Entrance
 
 Before going south when the location is the Ticket kiosk and the Head of the Line is unvisited:
-	display Figure of HellRideEntrance.
+	display Figure of HellRideEntrance;
+	continue the action.
 	
 Before looking when the location is the Head of the Line:
 	display Figure of HellRideEntrance.
@@ -1789,15 +1824,15 @@ A button is usually switched off.
 A button is fixed in place.
 A button has a color. A button is usually nondescript. 
 A button has a number called button id. A button id is usually 0.
-The description of a button is "This is [color] colored button.".
+The description of a button is "This is [a color] colored button.".
 The printed name of a button is "[color] colored button".
 
-The button1 is a button. It is part of the control panel. The color of button1 is aqua. Understand "aqua" as button1.
-The button3 is a button. It is part of the control panel. The color of button3 is crimson. Understand "crimson" as button3.
-The button5 is a button. It is part of the control panel. The color of button5 is emerald. Understand "emerald" as button5.
-The button7 is a button. It is part of the control panel. The color of button7 is gray. Understand "gray" as button7.
-The button9 is a button. It is part of the control panel. The color of button9 is indigo. Understand "indigo" as button9.
-The button11 is a button. It is part of the control panel. The color of button11 is khaki. Understand "khaki" as button11.
+The button1 is a button. It is part of the control panel. The button id of button1 is 1. The color of button1 is aqua. Understand "aqua" as button1.
+The button3 is a button. It is part of the control panel. The button id of button3 is 3. The color of button3 is crimson. Understand "crimson" as button3.
+The button5 is a button. It is part of the control panel. The button id of button5 is 5. The color of button5 is emerald. Understand "emerald" as button5.
+The button7 is a button. It is part of the control panel. The button id of button7 is 7. The color of button7 is gray. Understand "gray" as button7.
+The button9 is a button. It is part of the control panel. The button id of button9 is 9. The color of button9 is indigo. Understand "indigo" as button9.
+The button11 is a button. It is part of the control panel. The button id of button11 is 11. The color of button11 is khaki. Understand "khaki" as button11.
 
 Section 5 - Dials
 
@@ -1807,15 +1842,15 @@ A dial is fixed in place.
 A dial has a color. A dial is usually nondescript. 
 A dial has a number called dial id. A dial id is usually 0.
 A dial has a number called a dial setting. A dial setting is usually 0.
-The description of a dial is "This is [color] colored dial. It is currently set to [dial setting]. I bet you could spin it.".
+The description of a dial is "This is [a color] colored dial. It is currently set to [dial setting]. I bet you could spin it.".
 The printed name of a dial is "[color] colored dial".
 
-dial1 is a dial. dial1 is part of the control panel. The color of dial1 is aqua. Understand "aqua" as dial1.
-dial3 is a dial. dial3 is part of the control panel. The color of dial3 is crimson. Understand "crimson" as dial3.
-dial5 is a dial. dial5 is part of the control panel. The color of dial5 is emerald. Understand "emerald" as dial5.
-dial7 is a dial. dial7 is part of the control panel. The color of dial7 is gray. Understand "gray" as dial7.
-dial9 is a dial. dial9 is part of the control panel. The color of dial9 is indigo. Understand "indigo" as dial9.
-dial11 is a dial. dial11 is part of the control panel. The color of dial11 is khaki. Understand "khaki" as dial11.
+dial1 is a dial. dial1 is part of the control panel. The dial id of dial1 is 1. The color of dial1 is aqua. Understand "aqua" as dial1.
+dial3 is a dial. dial3 is part of the control panel. The dial id of dial3 is 3. The color of dial3 is crimson. Understand "crimson" as dial3.
+dial5 is a dial. dial5 is part of the control panel. The dial id of dial5 is 5. The color of dial5 is emerald. Understand "emerald" as dial5.
+dial7 is a dial. dial7 is part of the control panel. The dial id of dial7 is 7. The color of dial7 is gray. Understand "gray" as dial7.
+dial9 is a dial. dial9 is part of the control panel. The dial id of dial9 is 9. The color of dial9 is indigo. Understand "indigo" as dial9.
+dial11 is a dial. dial11 is part of the control panel. The dial id of dial11 is 11. The color of dial11 is khaki. Understand "khaki" as dial11.
 
 Spinning it to is an action applying to one thing and one number. Check spinning it to: if the noun is not a dial, say "[The noun] does not spin." instead. Report spinning it to: 
 	if the number understood is less than 0 or the number understood is greater than 11:
@@ -1845,16 +1880,16 @@ A light is a kind of device.
 Understand "light" as a fuse.
 A light is fixed in place.
 A light has a color. A light is usually nondescript. 
-The description of a light is "This is [color] colored light.".
-The description of a light is "This is [printed name]. The light is [if the light is switched on]on[otherwise]off[end if]."
+A light has a number called light id. A light id is usually 0.
+The description of a light is "This is [a printed name of the item described]. The light is [if the light is switched on]on[otherwise]off[end if]."
 The printed name of a light is "[color] colored light".
 
-light1 is a light. It is part of the control panel.
-light3 is a light. It is part of the control panel. 
-light5 is a light. It is part of the control panel. 
-light7 is a light. It is part of the control panel. 
-light9 is a light. It is part of the control panel. 
-light11 is a light. It is part of the control panel. 
+light1 is a light. The light id of light1 is 1. The color of light1 is aqua. It is part of the control panel.
+light3 is a light. The light id of light3 is 3. The color of light3 is crimson. It is part of the control panel. 
+light5 is a light. The light id of light5 is 5. The color of light5 is emerald. It is part of the control panel. 
+light7 is a light. The light id of light7 is 7. The color of light7 is gray. It is part of the control panel. 
+light9 is a light. The light id of light9 is 9. The color of light9 is indigo. It is part of the control panel. 
+light11 is a light. The light id of light11 is 11. The color of light11 is khaki. It is part of the control panel. 
 
 instead of switching on a light, say "You can[']t do that!"
 
@@ -1894,6 +1929,8 @@ To count the switches:
 	if switch11 is switched on, increment the switch count.
 		
 every turn when the location is the Control Room:
+	count the switches;
+	count the dials;
 	if switch count is not 6:
 		now all lights are switched off;
 		now all dials are switched off;
@@ -1904,12 +1941,6 @@ every turn when the location is the Control Room:
 		now the dial setting of dial7 is 0;
 		now the dial setting of dial9 is 0;	
 		now the dial setting of dial11 is 0;
-	
-[BUGBUG remove debug output]
-every turn when the location is the control room:
-	count the switches;
-	count the dials;
-	[say "switch count: [switch count], dial count: [dial count]."]
 
 Section 9 - Pushing Buttons
 
