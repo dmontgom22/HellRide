@@ -23,6 +23,8 @@ Include Locksmith by Emily Short.
 
 Include Basic Help Menu by Emily Short.
 
+Include Basic Screen Effects by Emily Short.
+
 Include Rideable Vehicles by Graham Nelson.
 
 Include Swearing Reloaded by Shin.
@@ -194,7 +196,7 @@ This is the new described devices rule:
 		carry out the showing action activity with the noun;
 		now examine text printed is true.
 
-Report switching on something:
+Report switching on an electric lamp:
 	say "You flip a switch. ";
 	carry out the showing action activity with the noun instead;
 	continue the action.
@@ -208,8 +210,12 @@ Rule for showing action of an electric lamp (called item):
 Carry out switching on an electric lamp: now the noun is lit. Carry out switching off an electric lamp: now the noun is unlit.
 
 Rule for showing action of the noun:
-	if the noun is switched on, say "A strong, narrow beam of light shines from the flashlight.";
-	otherwise say "It is currently switched off."
+	if the noun is switched on, and the noun is an electric lamp:
+		say "A strong, narrow beam of light shines from the flashlight.";
+	else if the noun is switched on and the noun is not an electric lamp:
+		say "It is currently switched on.";
+	otherwise:
+		say "It is currently switched off."
 		
 Before printing the name of a lit electric lamp, say "lit ".
 Before printing the name of an unlit lit electric lamp, say "extinguished ".
@@ -239,7 +245,7 @@ After going:
 	
 Section 6 - Miscellaneous
 
-Test Misc with "brief / xyzzy / hello sailor / please get the dime / i / score".
+Test Misc with "brief / xyzzy / plugh / hello sailor / please get the dime / i / score".
 
 [for adaptive text]
 A thing can be broken or unbroken. A thing is usually unbroken.
@@ -289,7 +295,14 @@ Understand "xyzzy" or "say xyzzy" or "cast xyzzy" as casting xyzzy.
 Casting xyzzy is an action applying to nothing.
 
 Carry out casting xyzzy:
-	say "A voice nearby says 'Plugh'."
+	say "A  hollow voice says 'Plugh'."
+	
+Understand "plugh" or "say plugh" or "cast plugh" as casting plugh.
+
+Casting plugh is an action applying to nothing.
+
+Carry out casting plugh:
+	say "Nothing happens."
 	
 Chapter 3 - The Player, Global Code
 
@@ -318,6 +331,7 @@ Index map with room-size set to 52
 	and room-size of the Electrical Room set to 74.
 
 [toad away]
+toadaway is a truth state that varies. toadaway is false.
 every turn:
 	if turn count is 100:
 		say "Over the loud speaker, an announcement blares: Attention please. There is a vehicle being towed from the parking lot for parking illegally. The license plate of the car is '862901'.[run paragraph on]";
@@ -325,7 +339,14 @@ every turn:
 			say " You breathe a sigh of relief as you realize that[']s not your license plate. I guess it[']s a good thing you remembered to place the parking stub on the dashboard.";
 		if the parking stub is not on the dashboard:
 			say " Your heart sinks as you realize that is your license plate. You race to the parking lot in time to see the tow truck pull away with your car in tow";
-			end the story finally saying "You start the long walk home."
+			now toadaway is true;
+			end the story finally.
+			
+[Graphics window]
+[When Play begins:
+	open the other window;]
+
+Chapter 4 - Tables
 
 [Bored Responses]
 Table of Bored Responses
@@ -338,6 +359,20 @@ response
 "He[']s wondering why he took this stupid job in the first place."
 "His thoughts are entirely focused on a cheeseburger for lunch."
 "He wonders how is he supposed to look cool dressed in this awful uniform."
+
+[Table of Songs]
+Table of Songs
+song
+"'Stairway to Heaven' by Led Zeppelin"
+"Pink Floyd[']s 'Comfortably Numb'"
+"Pharell[']s 'Happy'"
+"'Folsom Prison Blues' by Johnny Cash"
+"'Peace Train' by Cat Stevens"
+"Bob Seger[']s 'Old Time Rock[']N[']Roll'"
+"The Eagles['] 'Hotel California'"
+"'Sultans of Swing' by Dire Straits"
+"The B-52[']s 'Rock Lobster'"
+"'Born To Run' by Bruce Springsteen"
 
 [Description of Hell Ride]			
 When play begins:
@@ -357,7 +392,7 @@ I hope you enjoy it.
 
 d."
 
-Chapter 4 - Figures and Sounds
+Chapter 5 - Figures and Sounds
 
 Figure of Hell Ride is the file "HellRide.png".
 
@@ -401,7 +436,7 @@ Figure of Carousel is the file "Carousel.png".
 
 Sound of Bell is the file "Bell.ogg".
 
-Chapter 5 - Testing For Empty Descriptions - Not for release
+Chapter 6 - Testing For Empty Descriptions - Not for release
 
 [When play begins (this is the run property checks at the start of play rule):
 	repeat with item running through things:
@@ -413,7 +448,7 @@ When play begins:
 	
 The price of the money is $30.00. 
 			
-Chapter 6 - Randomized Rooms, etc - For Release Only
+Chapter 7 - Randomized Rooms, etc - For Release Only
 
 When play begins:
 	seed the random-number generator with 0.
@@ -421,11 +456,182 @@ When play begins:
 Instead of going from the Electrical Room:
 	move the player to a random adjacent room.
 	
-The price of the money is $10.00. 
+The price of the money is $20.00. 
 	
 Part 2 - The Game
 
-Chapter 1 - Electrical Room 
+Chapter 1 - Electrical Area
+
+
+Section 1 - Colors
+
+Color is a kind of value. The colors are nondescript, aqua, crimson, emerald, gray, indigo, khaki, and magenta. 
+
+Understand "grey" as gray. 
+
+Section 2 - Electrical Closets
+
+An electrical closet is a kind of room. 
+
+Electrical Closet One is a dark electrical closet. It is northeast of the Electrical Room. "This is Electrical Closet One. There[']s an electrical panel here and an exit to the south west." 
+Electrical Closet Three is a dark electrical closet east of the electrical room. "This is Electrical Closet Three. There[']s an electrical panel here and an exit to the west."
+Electrical Closet Five is a dark electrical closet southeast of the electrical room. "This is Electrical Closet Five. There[']s an electrical panel here and an exit to the north west."
+Electrical Closet Seven is a dark electrical closet southwest of the electrical room. "This is Electrical Closet Seven. There[']s an electrical panel here and an exit to the north east."
+Electrical Closet Nine is a dark electrical closet west of the electrical room. "This is Electrical Closet Nine. There[']s an electrical panel here and an exit to the east."
+Electrical Closet Eleven is a dark electrical closet northwest of the electrical room. "This is Electrical Closet Eleven. There[']s an electrical panel here and an exit to the south east."
+
+A silver key is in the Electrical Closet One. The description of the silver key is "This is a small silver key. I wonder what it unlocks."
+
+Section 3 - Electrical Panels
+
+An electrical panel is a kind of openable lockable container. 
+Understand "panel" as an electrical panel. Understand "screws" as the electrical panel.
+An electrical panel is usually closed, locked, scenery.
+An electrical panel has a color. 
+An electrical panel has a number called a panel id.
+
+The description of an electrical panel is "Electrical Panel [the panel id] is a standard issue 200 amp electrical panel supplying 220 power throughout the ride. The electrical panel is [if the item described is open]open. Inside the panel you see a switch, a socket, and an indicator light.[otherwise]closed.[end if] [if the item described is locked]There are screws holding it shut.[otherwise]The screws for the door are gone.[end if]".
+
+The printed name of an electrical panel is "Electrical Panel [the panel id]".
+
+every electrical panel is unlocked by the Swiss Army knife.
+
+Definition: A thing is panel-fitted if it is incorporated by an electrical panel.
+
+[The following won't actually give all the panel's components a color property matching the panel, but it will allow us to refer to a "shared color" of these components and get the desired result.]
+To decide what color is --/the shared color of --/a/the (PT - a panel-fitted thing):
+	decide on the color of the holder of PT.
+
+After unlocking an electrical panel with something (this is the report unlocking an electrical panel rule):
+	say "Using the screwdriver on the Swiss Army knife, you remove the screws to the cover of the electrical panel.".
+
+Every electrical closet contains an electrical panel (called its electrical panel).
+The panel id of Electrical Closet One's electrical panel is 1. The color of Electrical Closet One's electrical panel is aqua.
+The panel id of Electrical Closet Three's electrical panel is 3. The color of Electrical Closet Three's electrical panel is crimson.
+The panel id of Electrical Closet Five's electrical panel is 5. The color of Electrical Closet Five's electrical panel is emerald.
+The panel id of Electrical Closet Seven's electrical panel is 7. The color of Electrical Closet Seven's electrical panel is gray.
+The panel id of Electrical Closet Nine's electrical panel is 9. The color of Electrical Closet Nine's electrical panel is indigo.
+The panel id of Electrical Closet Eleven's electrical panel is 11. The color of Electrical Closet Eleven's electrical panel is khaki.
+
+Section 4 - Sockets
+
+A socket is a kind of open container. A socket is part of every electrical panel.
+A socket is always fixed in place.
+The carrying capacity of a socket is always 1. 
+
+The description of a socket is usually "Socket [the panel id of the holder of the the item described] is part of electrical panel [the panel id of the holder of the item described]. [if unfilled]A fuse probably goes in here.[end if]".
+
+The printed name of a socket is "Socket [the panel id of the holder of the item described]".
+
+Definition: a socket is filled rather than unfilled if it contains a fuse.
+
+To decide what number is --/the socket id of (S - a socket):
+	decide on the panel id of the holder of S.
+
+Check inserting something into a socket (this is the can only insert fuses into sockets rule):
+	if the noun is not a fuse, say "That won[']t fit in the socket." instead.
+	
+After inserting a fuse into a socket when the color of the noun is the shared color of the second noun (this is the matching fuse snick rule):
+	say "You hear a satisfying snick as the [color of the noun] fuse slides into place.".
+	
+Understand "socket [something related by reversed incorporation]" as a socket.
+Understand "[something related by reversed incorporation] socket" as a socket.
+
+[This will allow us to refer to the "corresponding" socket, switch, or indicator; i.e. the one from the same panel. This particular phrase works because there is only ever one each of these in a panel. If we decide later to have, say, three sockets per panel, only this phrase will have to be changed -- using more complex logic -- but the rest of the code could be left as-is.]
+To decide what thing is --/the corresponding (name of kind of value K) of --/the (PT - a panel-fitted thing):
+	let H be the holder of PT;
+	decide on a random K that is part of H.[<- there will only ever be one of these]
+	
+Section 5 - Indicators
+ 
+An indicator is a kind of thing. An indicator is part of every electrical panel.
+An indicator is fixed in place.
+
+The description of an indicator is "The indicator [if the Corresponding switch of the noun is switched on]is glowing [color of the holder of the item described] and [end if]is currently [if the Corresponding switch of the noun is switched on]indicating something[otherwise]indicating nothing[end if]."
+
+The printed name of an indicator is "[Color of the holder of the item described] indicator". 
+
+To decide what number is --/the indicator id of (I - an indicator):
+	decide on the panel id of the holder of I.
+	
+Understand "indicator [something related by reversed incorporation]" as an indicator.
+Understand "[something related by reversed incorporation] indicator" as an indicator.
+
+Section 6 - Fuses
+
+A fuse is a kind of thing. 
+Understand "fuse" as a fuse.
+A fuse can be lost or found. A fuse is usually lost. 
+A fuse has a color. Understand the color property as describing a fuse.
+A fuse has a number called fuse id. Understand the fuse id property as describing a fuse.
+The description of a fuse is "This is [color] colored electrical fuse." 
+The printed name of a fuse is "[color] colored fuse".
+
+Definition: a fuse is plugged-in rather than loose if it is contained by a socket.
+
+An aqua fuse called an fuse1 underlies the wooden stocks. The fuse id of fuse1 is 1.The color of the fuse1 is aqua. 
+A crimson fuse called a fuse3 underlies the gallows platform. The fuse id of fuse3 is 3. The color of the fuse3 is crimson. 
+An emerald fuse called an fuse5 is in the pyre. The fuse id of fuse5 is 5. The color of the fuse5  is emerald. 
+A gray fuse called a fuse7 underlies the iron chair. The fuse id of fuse7 is 7. The color of the fuse7 is gray. 
+An indigo fuse called an fuse9 underlies the guillotine platform. The fuse id of fuse9 is 9. The color of the fuse9 is indigo. 
+A Khaki fuse called a fuse11 is in the merchandise stand. The fuse id of fuse11 is 11. The color of the fuse11 is khaki. 
+
+The taking action has an object called the object taken from.
+
+Setting action variables for taking (this is the set object taken from rule):
+	now the object taken from is the holder of the noun.
+
+After taking a fuse when the object taken from is a socket (this is the check switch after removing fuses rule):
+	say "Taken.";
+	if the corresponding switch of the object taken from is switched on:
+		now the corresponding switch of the object taken from is switched off;
+		say "[Corresponding indicator of the object taken from] just went out.".
+		
+Section 7 - Switches
+
+A switch is a kind of device. A switch is part of every electrical panel.
+A switch is fixed in place. 
+A switch can be switched on or switched off. A switch is usually switched off.
+A switch has a truth state called points awarded. points awarded is usually false.
+
+The description is "Switch [switch id of the item described] is part of Electrical Panel [the panel id of the holder of the item described]. It[']s a big switch. You could probably turn it [if the item described is switched off]on[otherwise]off[end if] if you wanted to."
+
+The printed name of a switch is "Switch [the switch id of the item described]"
+
+To decide what number is --/the switch id of (S - a switch):
+	decide on the panel id of the holder of S.
+	
+Understand "switch [something related by reversed incorporation]" as a switch.
+Understand "[something related by reversed incorporation] switch" as a switch.
+
+Instead of pushing a switched off switch (this is the redirect push to switch on rule):
+	try switching on the noun.
+
+Instead of pushing a switched on switch (this is the redirect push to switch off rule):
+	try switching off the noun.
+
+To decide if (S - a socket) is properly fused:
+	if S is filled:
+		let F be a random fuse in S;[<- can only be 1]
+		if the color of F is the shared color of S:
+			decide yes;
+	decide no.
+	
+Check switching on a switched off switch (this is the nothing happens unless socket is properly fused rule):
+	unless the corresponding socket of the noun is properly fused:
+		say "Nothing obvious happens." instead.
+
+Last report switching on a switch (this is the final report switching on a switch rule):
+	say "The [corresponding indicator of the noun]'s light goes on.";
+	if points awarded of the noun is false:
+		play the sound of Bell;
+		increase score by 5;
+		now points awarded of the noun is true.
+
+Last report switching off a switch (this is the final report switching off a switch rule):		
+	say "The [corresponding indicator of the noun]'s light turns off.".
+	
+Section 8 - Electrical Room
 
 Electrical Room is a dark room.  The electrical room can be electromagnetic. The electrical room is electromagnetic. "The electrical room is a small but essential space hidden behind the carnival’s bright attractions. The air vibrates with electric energy, carrying the acrid scent of overheated wires and metal. Metal panels line the walls, some polished, others worn and streaked with grease.
 
@@ -453,350 +659,6 @@ Electrical Room is northeast of Electrical Closet Seven.
 Electrical Room is east of Electrical Closet Nine.
 Electrical Room is southeast of Electrical Closet Eleven.
 Electrical Room is north of the Storage Room. 
-
-Section 1 - Electrical Closets
-
-Electrical Closet One is a dark room northeast of the electrical room. "This is Electrical Closet One. There[']s an electrical panel here and an exit to the south west."
-Electrical Closet Three is a dark room east of the electrical room. "This is Electrical Closet Three. There[']s an electrical panel here and an exit to the west."
-Electrical Closet Five is a dark room southeast of the electrical room. "This is Electrical Closet Five. There[']s an electrical panel here and an exit to the north west."
-Electrical Closet Seven is a dark room southwest of the electrical room. "This is Electrical Closet Seven. There[']s an electrical panel here and an exit to the north east."
-Electrical Closet Nine is a dark room west of the electrical room. "This is Electrical Closet Nine. There[']s an electrical panel here and an exit to the east."
-Electrical Closet Eleven is a dark room northwest of the electrical room. "This is Electrical Closet Eleven. There[']s an electrical panel here and an exit to the south east."
-
-The silver key is in the Electrical Closet One. The description of the silver key is "This is a small silver key. I wonder what it unlocks."
-
-Section 2 - Colors
-
-Color is a kind of value. The colors are aqua, crimson, emerald, gray, indigo, khaki, magenta, and nondescript. 
-
-Understand "grey" as gray. 
-
-Section 3 - Electrical Panels
-
-An electrical panel is a kind of openable lockable container. 
-Understand "panel" as an electrical panel. Understand "screws" as the electrical panel.
-An electrical panel is usually closed. An electrical panel is usually locked. 
-An electrical panel is scenery.
-An electrical panel has a color. An electrical panel is usually nondescript.
-An electrical panel has a number called a panel id. A panel id is usually 0.
-The description of an electrical panel is "Electrical Panel [the panel id] is a standard issue 200 amp electrical panel supplying 220 power throughout the ride. The electrical panel is [if the item described is open]open. Inside the panel you see a switch, a socket, and an indicator light.[otherwise]closed.[end if] [if the item described is locked]There are screws holding it shut.[otherwise]You can see the cover of the panel sitting nearby.[end if]".
-The printed name of an electrical panel is "Electrical Panel [the panel id]".
-
-panel1 is an electrical panel. panel1 is in the electrical closet one. The panel id of panel1 is 1. Understand "panel 1" as panel1. The color of panel1 is aqua. The Swiss army knife unlocks panel1.
-panel3 is an electrical panel. panel3 is in the electrical closet three. The panel id of panel3 is 3. Understand "panel 3"as panel3. The color of panel3 is crimson. The Swiss army knife unlocks panel3.
-panel5 is an electrical panel. panel5 is in the electrical closet five. The panel id of panel5 is 5. Understand "panel 5"  as panel5. The color of panel5 is emerald. The Swiss army knife unlocks panel5.
-panel7 is an electrical panel. panel7 is in the electrical closet seven. The panel id of panel7 is 7. Understand "panel 7" as panel7. The color of panel7 is gray. The Swiss army knife unlocks panel7.
-panel9 is an electrical panel. panel9 is in the electrical closet nine. The panel id of panel9 is 9. Understand "panel 9" as panel9. The color of panel9 is indigo. The Swiss army knife unlocks panel9.
-panel11 is an electrical panel. panel11 is in the electrical eleven. The panel id of panel11 is 11. Understand "panel 11"  as panel11. The color of panel11 is khaki. The Swiss army knife unlocks panel11.
-
-instead of turning when the noun is an electrical panel:
-	if the item described is panel1 and the second noun is the Swiss army knife, try unlocking the noun with the second noun instead;
-	if the item described is panel3 and the second noun is the Swiss army knife, try unlocking the noun with the second noun instead;
-	if the item described is panel5 and the second noun is the Swiss army knife, try unlocking the noun with the second noun instead;
-	if the item described is panel7 and the second noun is the Swiss army knife, try unlocking the noun with the second noun instead;
-	if the item described is panel9 and the second noun is the Swiss army knife, try unlocking the noun with the second noun instead;
-	if the item described is panel11 and the second noun is the Swiss army knife, try unlocking the noun with the second noun instead;
-	otherwise:
-		continue the action.
-	
-instead of locking:
-	if the item described is panel1, continue the action;
-	if the item described is panel3, continue the action;
-	if the item described is panel5, continue the action;
-	if the item described is panel7, continue the action;
-	if the item described is panel9, continue the action;
-	if the item described is panel11, continue the action;
-	otherwise:
-		say "You can[']t lock that!" instead.
-
-carry out unlocking:
-	if the noun is panel1 and the second noun is the  army knife:
-		say "Using the screwdriver on the Swiss Army knife, you remove the cover to the electrical panel.";
-		now panel1 is unlocked;
-	else if the noun is panel3 and the second noun is the Swiss army knife:
-		say "Using the screwdriver on the Swiss Army knife, you remove the cover to the electrical panel.";
-		now panel3 is unlocked;
-	else if the noun is panel5 and the second noun is the Swiss army knife:
-		say "Using the screwdriver on the Swiss Army knife, you remove the cover to the electrical panel.";
-		now panel5 is unlocked;
-	else if the noun is panel7 and the second noun is the Swiss army knife:
-		say "Using the screwdriver on the Swiss Army knife, you remove the cover to the electrical panel.";
-		now the panel7 is unlocked;
-	else if the noun is a panel9 and the second noun is the Swiss army knife:
-		say "Using the screwdriver on the Swiss Army knife, you remove the cover to the electrical panel.";
-		now the panel9 is unlocked;
-	else if the noun is a panel11 and the second noun is the Swiss army knife:
-		say "Using the screwdriver on the Swiss Army knife, you remove the cover to the electrical panel.";
-		now the panel11 is unlocked;
-	else if the noun is the glove box and the second noun is the keys:
-		continue the action;
-	else if the noun is a wooden door and the second noun is the silver key:
-		continue the action;
-	otherwise:
-		say "You can't unlock the [noun] with the [second noun]."
-		
-[Understand "unscrew [something]" as unlocking.
-
-Understand screw something as locking.]
-
-[instead of screwing the panel1:
-	try locking the panel1.]
-
-Section 4 - Sockets
-
-A socket is a kind of open container. 
-Understand "socket" as a socket.
-A socket is fixed in place. 
-A socket has a color. A socket is usually nondescript. 
-A socket has a number called socket id. a socket id is usually 0.
-The description of a socket is "Socket [the socket id] is part of electrical panel [the socket id]. A fuse probably goes in here."
-The printed name of a socket is "Socket [the socket id]".
-
-Definition: a socket is filled rather than unfilled if it contains a fuse.
-
-socket1 is a socket. socket1 is part of panel1. The socket id of socket1 is 1. Understand "socket 1" as socket1. The color of socket1 is aqua.
-socket3 is a socket. socket3 is part of panel3. The socket id of socket3 is 3. Understand "socket 3" as socket3. The color of socket3 is crimson. 
-socket5 is a socket. socket5 is part of panel5. The socket id of socket5 is 5. Understand "socket 5" as socket5. The color of socket5 is emerald.
-socket7 is a socket. socket7 is part of panel7. The socket id of socket7 is 7. Understand "socket 7" as socket7. The color of socket7 is gray. 
-socket9 is a socket. socket9 is part of panel9. The socket id of socket9 is 9. Understand "socket 9" as socket9. The color of socket9 is indigo. 
-socket11 is a socket. socket11 is part of panel11. The socket id of socket11 is 11. Understand "socket 11" as socket11. The color of socket11 is khaki. 
-
-check inserting something into a socket:
-	if the noun is not a fuse, say "That won[']t fit in the socket." instead.
-	
-check inserting a fuse (called the fuse) into a socket (called the socket):
-	if the second noun is filled:
-		say "But Socket [socket id of the second noun] is already full." instead.
-
-check inserting the fuse (called the fuse) into the socket (called the socket) when the color of the fuse is not the color of the socket and the socket is unfilled:
-	say "You put the [color of the fuse] fuse into the socket.";
-	now the fuse is in the socket;
-	stop the action.
-	
-check inserting the fuse (called the fuse) into the socket (called the socket) when the color of the fuse is the color of the socket and the socket is unfilled:
-	say "You hear a satisfying snick as the [the color of the fuse] fuse slides into place.";
-	now the fuse is in the socket;
-	stop the action.
-
-instead of examining a socket (called the socket) when the socket is unfilled, say "Socket [socket id] is empty. A fuse probably goes in here." instead.
-
-instead of examining a socket (called the socket) when the socket is filled, say "Socket [socket id] contains [list of things in the noun]." instead.
-	
-Section 5 - Indicators
-
-An indicator is a kind of device. 
-Understand "indicator" as an indicator.
-An indicator is usually switched off.
-An indicator is fixed in place.
-An indicator has a color. An indicator is usually nondescript.
-An indicator has a number called an indicator id. an indicator id is usually 0.
-The description of an indicator is "Indicator [the indicator id] [if the item described is switched on]is glowing [color of the item described] and [end if]is currently [if the indicator is switched on]indicating something[otherwise]indicating nothing[end if]."
-The printed name of an indicator is "Indicator [the indicator id]". 
-
-indicator1 is an indicator. indicator1 is part of panel1. The indicator id of indicator1 is 1. Understand "indicator 1" as indicator1. The color of indicator1 is aqua.
-indicator3 is an indicator. indicator3 is part of panel3. The indicator id of indicator3 is 3. Understand "indicator 3" as indicator3. The color of indicator3 is crimson.
-indicator5 is an indicator. indicator5 is part of panel5. The indicator id of indicator5 is 5. Understand "indicator 5" as indicator5. The color of indicator5 is emerald.
-indicator7 is an indicator. indicator7 is part of panel7. The indicator id of indicator7 is 7. Understand "indicator 7" as indicator7. The color of indicator7 is gray.
-indicator9 is an indicator. indicator9 is part of panel9. The indicator id of indicator9 is 9. Understand "indicator 9"  as indicator9. The color of indicator9 is indigo.
-indicator11 is an indicator. indicator11 is part of panel11. The indicator id of indicator11 is 11. Understand "indicator 11"as indicator11. The color of indicator11 is khaki.
-
-Instead of switching on an indicator, say "You can[']t turn that on." instead.
-Instead of switching off an indicator, say "You can[']t turn that off." instead.
-
-Section 6 - Fuses
-
-A fuse is a kind of thing. 
-Understand "fuse" as a fuse.
-A fuse can be lost or found. A fuse is usually lost. 
-A fuse has a color. A fuse is usually nondescript. 
-A fuse has a number called fuse id. A fuse id is usually 0.
-The description of a fuse is "This is [color] colored electrical fuse." 
-The printed name of a fuse is "[color] colored fuse".
-
-Definition: a fuse is plugged-in rather than loose if it is contained by a socket.
-
-fuse1 is a fuse. fuse1 underlies the wooden stocks. The fuse id of fuse1 is 1. The color of the fuse1 is aqua. Understand "aqua" as fuse1. 
-fuse3 is a fuse. fuse3 underlies the gallows platform. The fuse id of fuse3 is 3. The color of the fuse3 is crimson. Understand "crimson" as fuse3. 
-fuse5 is a fuse. fuse5 is in the pyre. The fuse id of fuse5 is 5. The color of the fuse5  is emerald. Understand "emerald" as fuse5. 
-fuse7 is a fuse. fuse7 underlies the iron chair. The fuse id of fuse7 is 7. The color of the fuse7 is gray. Understand "gray" as fuse7. 
-fuse9 is a fuse. fuse9 underlies the guillotine platform. The fuse id of fuse9 is 9. The color of the fuse9 is indigo. Understand "indigo" as fuse9. 
-fuse11 is a fuse. fuse11 is in the merchandise stand. The fuse id of fuse11 is 11. The color of the fuse11 is khaki. Understand "khaki" as fuse11. 
-
-instead of taking when the noun is a fuse:
-	if the location is electrical closet one and socket1 is filled
-	begin;
-		say "Taken.";
-		now the noun is in the player;
-		now indicator1 is switched off;
-		now switch1 is switched off;
-		stop the action;
-	end if;
-	if the location is electrical closet three and socket3 is filled
-	begin;
-		say "Taken.";
-		now the noun is in the player;
-		now indicator3 is switched off;
-		now switch3 is switched off;
-		stop the action;
-	end if;
-	if the location is electrical closet five and socket5 is filled
-	begin;
-		say "Taken.";
-		now the noun is in the player;
-		now indicator5 is switched off;
-		now switch5 is switched off;
-		stop the action;
-	end if;
-	if the location is electrical closet seven and socket7 is filled
-	begin;
-		say "Taken.";
-		now the noun is in the player;
-		now indicator7 is switched off;
-		now switch7 is switched off;
-		stop the action;
-	end if;
-	if the location is electrical closet nine and socket9 is filled
-	begin;
-		say "Taken.";
-		now the noun is in the player;
-		now indicator9 is switched off;
-		now switch9 is switched off;
-		stop the action;
-	end if;
-	if the location is electrical closet eleven and socket11 is filled
-	begin;
-		say "Taken.";
-		now the noun is in the player;
-		now indicator11 is switched off;
-		now switch11 is switched off;
-		stop the action;
-	end if;
-	if the location is the stake room and the noun is fuse5
-		begin;
-			say "Taken.";
-			now the noun is in the player;
-			stop the action;
-		end if;
-	if the location is the ride exit and the noun is fuse11
-		begin;
-			say "Taken.";
-			now the noun is in the player;
-			stop the action;
-		end if;
-	continue the action.
-
-Section 7 - Switches
-
-A switch is a kind of device. 
-Understand "switch" as a switch.
-A switch is fixed in place. 
-A switch can be switched on or switched off. A switch is usually switched off.
-A switch has a color. A switch is usually nondescript.
-A switch has a number called switch id. a switch id is usually 0.
-A switch has a truth state called points awarded. points awarded is usually false.
-The description of a switch is "Switch [switch id] is part of electrical panel [the switch id]."
-The description is "Switch [switch id] is part of Electrical Panel [switch id]. It[']s a big switch. You could probably turn it [if the item described is switched off]on[otherwise]off[end if] if you wanted to."
-The printed name of a switch is "Switch [the switch id]"
-
-switch1 is a switch. switch1 is part of panel1. The switch id of switch1 is 1. Understand "switch 1" as switch1. The color of switch1 is aqua.
-switch3 is a switch. switch3 is part of panel3. The switch id of switch3 is 3. Understand "switch 3" as switch3. The color of switch3 is crimson.
-switch5 is a switch. switch5 is part of panel5. The switch id of switch5 is 5. Understand "switch 5" as switch5. The color of switch5 is emerald.
-switch7 is a switch. switch7 is part of panel7. The switch id of switch7 is 7. Understand "switch 7" as switch7. The color of switch7 is gray.
-switch9 is a switch. switch9 is part of panel9. The switch id of switch9 is 9. Understand "switch 9" as switch9. The color of switch9 is indigo.
-switch11 is a switch. switch11 is part of panel11. The switch id of switch11 is 11. Understand "switch 11" as switch11. The color of switch11 is khaki.
-
-switch0 is a switch that varies. socket0 is a socket that varies. indicator0 is an indicator that varies. fuse0 is a fuse that varies.
-
-instead of switching on or pushing a switch:
-	if the noun is switch1
-		begin;
-			now switch0 is switch1;
-			now socket0 is socket1;
-			now indicator0 is indicator1;
-			now fuse0 is fuse1;
-			handle the switches;
-		end if;
-	if the noun is switch3
-		begin;
-			now switch0 is switch3;
-			now socket0 is socket3;
-			now indicator0 is indicator3;
-			now fuse0 is fuse3;
-			handle the switches;
-		end if;
-	if the noun is switch5
-		begin;
-			now switch0 is switch5;
-			now socket0 is socket5;
-			now indicator0 is indicator5;
-			now fuse0 is fuse5;
-			handle the switches;
-		end if;
-	if the noun is switch7
-		begin;
-			now switch0 is switch7;
-			now socket0 is socket7;
-			now indicator0 is indicator7;
-			now fuse0 is fuse7;
-			handle the switches;
-		end if;
-	if the noun is switch9
-		begin;
-			now switch0 is switch9;
-			now socket0 is socket9;
-			now indicator0 is indicator9;
-			now fuse0 is fuse9;
-			handle the switches;
-		end if;
-	if the noun is switch11
-		begin;
-			now switch0 is switch11;
-			now socket0 is socket11;
-			now indicator0 is indicator11;
-			now fuse0 is fuse11;
-			handle the switches;
-		end if.
-		
-to handle the switches:
-	if switch0 is switched off and fuse0 is not in socket0 and socket0 is filled
-		begin;
-			now switch0 is switched on;
-			now indicator0 is switched off;
-			say "You push the switch.[line break]Nothing obvious happens." instead;
-			stop the action;
-		end if;
-	if switch0 is switched off and fuse0 is in socket0 and the points awarded of switch0 is false
-		begin;
-			say "The indicator light goes on.";
-			now switch0 is switched on;
-			now indicator0 is switched on;
-			play the sound of Bell;
-			increase score by 5;
-			now points awarded of switch0 is true;
-			stop the action;
-		end if;
-	if switch0 is switched off and fuse0 is in socket0 and the points awarded of switch0 is true
-		begin;
-			say "The indicator light goes on.";
-			now switch0 is switched on;
-			now indicator0 is switched on;
-			stop the action;
-		end if;
-	if socket0 is unfilled
-		begin;
-			say "Nothing happens.";
-			now switch0 is switched off;
-			now indicator0 is switched off;
-			stop the action;
-		end if;
-	if switch0 is switched on and a fuse is in socket0
-		begin;
-			say "The indicator light goes off.";
-			now switch0 is switched off;
-			now indicator0 is switched off;
-			stop the action;
-		end if;
-	say "Danger, Will Robinson. This should never happen!"
 
 Chapter 2 - The Midway
 
@@ -1025,7 +887,7 @@ Before going east when the location is the Ticket kiosk and the High Striker is 
 Before looking when the location is the High Striker:
 	display Figure of HighStriker.
 
-The two dollar bill is a thing. The two dollar bill is in the High Striker. The price of the two dollar bill is $2.00. Understand "bill" as the two dollar bill. The description of the two dollar bill is "It has a picture of Thomas Jefferson on it."
+The two dollar bill is a thing. The two dollar bill is in the High Striker. The price of the two dollar bill is $2.00. Understand "bill" as the two dollar bill. "Hey! Is that a two dollar bill on the ground?" The description of the two dollar bill is "It has a picture of Thomas Jefferson on it."
 
 instead of taking the two dollar bill:
 	say "Taken.[paragraph break]";
@@ -1059,12 +921,13 @@ fuse13 is a fuse. fuse13 is carried by the Strongman Attendant. The fuse id of f
 
 The lever is here. The lever is fixed in place. Understand "bullseye" and "target" as lever. The description of the lever is "There is a bullseye on the base. I guess this is where you have to hit the mallet."
 
-The mallet is carried by the Strongman Attendant.  The Price of the mallet is $2.00. Understand "hammer" as mallet. The description of the mallet is "The mallet is over sized, perhaps to give you an advantage in the Strong Man game."
+The mallet is carried by the Strongman Attendant.  The price of the mallet is $2.00. Understand "hammer" as mallet. The description of the mallet is "The mallet is over sized, perhaps to give you an advantage in the Strong Man game."
 
 A strength pattern is a kind of value. The strength patterns are Weakling, Getting Stronger, Average, Almost There, Muscle Man.
 
 Hitting is an action applying to two visible things. Understand "hit [something]" as hitting. Understand "hit [something] with [something preferably held]" as hitting.
-
+Understand "swing [something preferably held] at [something]" as hitting (with nouns reversed). 
+ 
 Check hitting:
 	if noun is not lever, say "Nothing happens." instead;
 	if the second noun is not mallet, say "You can[']t hit [the noun] with that!" instead;
@@ -1368,7 +1231,7 @@ The bags of trash are scenery. The bags of trash are here. Understand "bags" and
 instead of looking under when the noun is the pile of junk:
 	try examining the junk instead. 
 
-The flashlight is an electric lamp. understand "light" as flashlight. The description of the flashlight is "This is a flashlight. It[']s a nice one."
+The flashlight is an electric lamp. [understand "light" as flashlight.] The description of the flashlight is "This is a flashlight. It[']s a nice one."
 
 The pile of junk is a scenery container. The pile of junk is in the dark passage. The pile of junk contains the flashlight. Understand "piles" and "junk" as pile of junk. 
 
@@ -1417,7 +1280,7 @@ Instead of drinking the coffee mug: say "That looks nasty. You decide against dr
 
 The desk is in the maintenance office. The desk is a supporter. The desk is fixed in place. A drawer is part of the desk. The drawer is a closed openable container. The drawer is scenery. The description of the desk is "It[']s a desk. There are coffee stains and cigarette burns from years of abuse. The single drawer is [if the drawer is open]open[otherwise]shut[end if]."
 
-Nearness relates a room (called A) to a room (called B) when the number of moves from B to A is less than 2. The verb to be near means the nearness relation.
+Nearness relates a room (called A) to a room (called B) when the number of moves from B to A is less than 1. The verb to be near means the nearness relation.
 
 The radio is a device on the desk. The radio is switched off and fixed in place. The description of the radio is "[if switched on]The radio burbles on[otherwise]The radio is off[end if]." 
 
@@ -1426,21 +1289,8 @@ Every turn when the radio is switched on and location is near the maintenance of
 	Let A be song entry;
 	say "[one of]You hear [A] playing on the radio.[or][A] plays on the radio.[or]You sing along to [A].[or]The DJ announces the next song will be [A].[at random]";
 
-Table of Songs
-song
-"'Stairway to Heaven' by Led Zeppelin"
-"Pink Floyd[']s 'Comfortably Numb'"
-"Pharell[']s 'Happy'"
-"'Folsom Prison Blues' by Johnny Cash"
-"'Peace Train' by Cat Stevens"
-"Bob Seger[']s 'Old Time Rock[']N[']Roll'"
-"The Eagles['] 'Hotel California'"
-"'Sultans of Swing' by Dire Straits"
-"The B-52[']s 'Rock Lobster'"
-"'Born To Run' by Bruce Springsteen"
-	
 Rule for showing action of the radio:
-	if the radio is switched on, say "Through the static, you pick up hear bits of the latest Taylor Swift song.";
+	if the radio is switched on, say "Through the static, you pick up hear bits of the latest number one hit.";
 	otherwise say "The radio is silent. You[']re saving the batteries."
 
 Instead of listening in the presence of the switched on radio:
@@ -1672,7 +1522,7 @@ Instead of looking under a thing which is underlaid by fuse1 when fuse1 is lost:
 	say "Taken.";
 	play the sound of Bell;
 	increase score by 5;
-	now the fuse1 is found.
+	now fuse1 is found.
 	
 Section 3 - Gallows Room
 
@@ -1693,7 +1543,7 @@ Instead of looking under a thing which is underlaid by fuse3 when fuse3 is lost:
 	say "Taken.";
 	play the sound of Bell;
 	increase score by 5;
-	now the fuse3 is found.
+	now fuse3 is found.
 
 Section 4 - Stake Room
 
@@ -1713,7 +1563,7 @@ Instead of taking fuse5 when fuse5 is lost:
 	say "Taken.";
 	play the sound of Bell;
 	increase score by 5;
-	now the fuse5 is found.
+	now fuse5 is found.
 
 Section 5 - Dungeon
 
@@ -1743,7 +1593,7 @@ Instead of looking under a thing which is underlaid by fuse7 when fuse7 is lost:
 	say "Taken.";
 	play the sound of Bell;
 	increase score by 5;
-	now the fuse7 is found.
+	now fuse7 is found.
 	
 Section 6 - Guillotine Room
 
@@ -1768,7 +1618,7 @@ Instead of looking under a thing which is underlaid by fuse9 when fuse9 is lost:
 	say "Taken.";
 	play the sound of Bell;
 	increase score by 5;
-	now the fuse9 is found.
+	now fuse9 is found.
 	
 Section 7 - Ride Exit
 
@@ -1788,7 +1638,7 @@ Instead of taking fuse11 when fuse11 is lost:
 	say "Taken.";
 	play the sound of Bell;
 	increase score by 5;
-	now the fuse11 is found.
+	now fuse11 is found.
 	
 Chapter 5 - Second Floor
 
@@ -1822,37 +1672,39 @@ A button is a kind of device.
 Understand "button" as a button.
 A button is usually switched off.
 A button is fixed in place.
-A button has a color. A button is usually nondescript. 
-A button has a number called button id. A button id is usually 0.
+A button has a color. Understand the color property as describing a button.
+A button has a number called button id. Understand the button id property as describing a button.
 The description of a button is "This is [a color] colored button.".
 The printed name of a button is "[color] colored button".
 
-The button1 is a button. It is part of the control panel. The button id of button1 is 1. The color of button1 is aqua. Understand "aqua" as button1.
-The button3 is a button. It is part of the control panel. The button id of button3 is 3. The color of button3 is crimson. Understand "crimson" as button3.
-The button5 is a button. It is part of the control panel. The button id of button5 is 5. The color of button5 is emerald. Understand "emerald" as button5.
-The button7 is a button. It is part of the control panel. The button id of button7 is 7. The color of button7 is gray. Understand "gray" as button7.
-The button9 is a button. It is part of the control panel. The button id of button9 is 9. The color of button9 is indigo. Understand "indigo" as button9.
-The button11 is a button. It is part of the control panel. The button id of button11 is 11. The color of button11 is khaki. Understand "khaki" as button11.
+An aqua button called an button1 is part of the control panel. The button id of button1 is 1. The color of button1 is aqua. 
+A crimson button called a button3 is part of the control panel. The button id of button3 is 3. The color of button3 is crimson. 
+An emerald button called an button5 is part of the control panel. The button id of button5 is 5. The color of button5 is emerald. 
+A gray button called a button7 is part of the control panel. The button id of button7 is 7. The color of button7 is gray. 
+An indigo button called button9 is part of the control panel. The button id of button9 is 9. The color of button9 is indigo. 
+A khaki button called a button11 is part of the control panel. The button id of button11 is 11. The color of button11 is khaki. 
 
 Section 5 - Dials
 
 A dial is a kind of device. 
 Understand "dial" as a dial.
 A dial is fixed in place.
-A dial has a color. A dial is usually nondescript. 
-A dial has a number called dial id. A dial id is usually 0.
+A dial has a color. Understand the color property as describing a dial.
+A dial has a number called dial id. Understand the dial id property as describing a dial.
 A dial has a number called a dial setting. A dial setting is usually 0.
 The description of a dial is "This is [a color] colored dial. It is currently set to [dial setting]. I bet you could spin it.".
 The printed name of a dial is "[color] colored dial".
 
-dial1 is a dial. dial1 is part of the control panel. The dial id of dial1 is 1. The color of dial1 is aqua. Understand "aqua" as dial1.
-dial3 is a dial. dial3 is part of the control panel. The dial id of dial3 is 3. The color of dial3 is crimson. Understand "crimson" as dial3.
-dial5 is a dial. dial5 is part of the control panel. The dial id of dial5 is 5. The color of dial5 is emerald. Understand "emerald" as dial5.
-dial7 is a dial. dial7 is part of the control panel. The dial id of dial7 is 7. The color of dial7 is gray. Understand "gray" as dial7.
-dial9 is a dial. dial9 is part of the control panel. The dial id of dial9 is 9. The color of dial9 is indigo. Understand "indigo" as dial9.
-dial11 is a dial. dial11 is part of the control panel. The dial id of dial11 is 11. The color of dial11 is khaki. Understand "khaki" as dial11.
+An aqua dial called an dial1 is part of the control panel. The dial id of dial1 is 1. The color of dial1 is aqua. 
+A crimson dial called a dial3 is part of the control panel. The dial id of dial3 is 3. The color of dial3 is crimson. 
+An emerald dial called an dial5 is part of the control panel. The dial id of dial5 is 5. The color of dial5 is emerald. 
+A gray dial called a dial7 is part of the control panel. The dial id of dial7 is 7. The color of dial7 is gray. 
+An indigo dial called an dial9 is part of the control panel. The dial id of dial9 is 9. The color of dial9 is indigo. 
+A khaki dial called a dial11 is part of the control panel. The dial id of dial11 is 11. The color of dial11 is khaki. 
 
-Spinning it to is an action applying to one thing and one number. Check spinning it to: if the noun is not a dial, say "[The noun] does not spin." instead. Report spinning it to: 
+Spinning it to is an action applying to one thing and one number. 
+Check spinning it to: if the noun is not a dial, say "[The noun] does not spin." instead. 
+Report spinning it to: 
 	if the number understood is less than 0 or the number understood is greater than 11:
 		say "The [color] colored dial can only be set from 0 to 11.";
 		stop the action;
@@ -1875,7 +1727,7 @@ To count the dials:
 	
 Section 6 - Lights
 
-A colored light is a kind of device. A colored light is fixed in place. A colored light is usually switched off. Understand "indicator" as colored light.
+A colored light is a kind of thing. A colored light is fixed in place. Understand "indicator" as colored light.
 A light is a kind of device. 
 Understand "light" as a fuse.
 A light is fixed in place.
@@ -1884,12 +1736,12 @@ A light has a number called light id. A light id is usually 0.
 The description of a light is "This is [a printed name of the item described]. The light is [if the light is switched on]on[otherwise]off[end if]."
 The printed name of a light is "[color] colored light".
 
-light1 is a light. The light id of light1 is 1. The color of light1 is aqua. It is part of the control panel.
-light3 is a light. The light id of light3 is 3. The color of light3 is crimson. It is part of the control panel. 
-light5 is a light. The light id of light5 is 5. The color of light5 is emerald. It is part of the control panel. 
-light7 is a light. The light id of light7 is 7. The color of light7 is gray. It is part of the control panel. 
-light9 is a light. The light id of light9 is 9. The color of light9 is indigo. It is part of the control panel. 
-light11 is a light. The light id of light11 is 11. The color of light11 is khaki. It is part of the control panel. 
+An aqua light called an light1 is part of the control panel. The light id of light1 is 1. The color of light1 is aqua. 
+A crimson light called a light3 is part of the control panel. . The light id of light3 is 3. The color of light3 is crimson. 
+An emerald light called an light5 is part of the control panel. . The light id of light5 is 5. The color of light5 is emerald.
+A gray light called a light7 is part of the control panel. . The light id of light7 is 7. The color of light7 is gray. 
+An indigo light called an light9 is part of the control panel. . The light id of light9 is 9. The color of light9 is indigo.
+A khaki light called a light11 is part of the control panel. . The light id of light11 is 11. The color of light11 is khaki. 
 
 instead of switching on a light, say "You can[']t do that!"
 
@@ -1910,27 +1762,28 @@ Section 8 - Commands
 
 instead of examining the control panel:
 	say "The control panel is populated with a row of colored lights. From left to right, the colors are aqua, crimson, emerald, gray, indigo, and khaki. Below the lights is a row of similarly colored dials and below that is a row of buttons. (The poorly generated AI & human image is meant for comparison purposes only. LOL) The control panel is [if switch count is 6]lit up like a Christmas tree[otherwise]dark[end if].[line break]";
-	if switch count is 6 and every button is switched off, display the figure of ControlPanel;
+	[if switch count is 6 and every button is switched off, display the figure of ControlPanel;
 	if fuse1 is in socket1 and button1 is switched on, display the figure of ControlPanelStocks;
 	if fuse3 is in socket3 and button3 is switched on, display the figure of ControlPanelGallows;
 	if fuse5 is in socket5 and button5 is switched on, display the figure of ControlPanelStake;
 	if fuse7 is in socket7 and button7 is switched on, display the figure of ControlPanelDungeon;
 	if fuse9 is in socket9 and button9 is switched on, display the figure of ControlPanelGuillotine;
-	if fuse11 is in socket11 and button11 is switched on, display the figure of ControlPanelExit.
+	if fuse11 is in socket11 and button11 is switched on, display the figure of ControlPanelExit.]
 	
 The switch count is a number that varies. The switch count is 0.
 To count the switches:
 	now the switch count is 0;
-	if switch1 is switched on, increment the switch count;
-	if switch3 is switched on, increment the switch count;
-	if switch5 is switched on, increment the switch count;
-	if switch7 is switched on, increment the switch count;
-	if switch9 is switched on, increment the switch count;
-	if switch11 is switched on, increment the switch count.
+	if Electrical Closet One's electrical panel's switch is switched on, increment the switch count;
+	if Electrical Closet Three's electrical panel's switch is switched on, increment the switch count;
+	if Electrical Closet Five's electrical panel's switch is switched on, increment the switch count;
+	if Electrical Closet Seven's electrical panel's switch is switched on, increment the switch count;
+	if Electrical Closet Nine's electrical panel's switch is switched on, increment the switch count;
+	if Electrical Closet Eleven's electrical panel's switch is switched on, increment the switch count;
 		
 every turn when the location is the Control Room:
 	count the switches;
 	count the dials;
+	[say "switch count: [switch count], dial count: [dial count].";]
 	if switch count is not 6:
 		now all lights are switched off;
 		now all dials are switched off;
@@ -1939,9 +1792,9 @@ every turn when the location is the Control Room:
 		now the dial setting of dial3 is 0;
 		now the dial setting of dial5 is 0;
 		now the dial setting of dial7 is 0;
-		now the dial setting of dial9 is 0;	
-		now the dial setting of dial11 is 0;
-
+		now the dial setting of dial9 is 0;
+		now the dial setting of dial11 is 0.
+		
 Section 9 - Pushing Buttons
 
 Instead of switching on or pushing the button9: 
@@ -1957,13 +1810,34 @@ Instead of switching on or pushing the button9:
 			now light9 is switched on;
 			play the sound of Bell;
 			increase score by 5;
-			end the story finally saying "You have won!";
+			end the story finally;
 		else;
 			say "The monitor turns off and the screen goes black.";
 			say "The [color] light is now off.";
 			now all lights are switched off;
 			now all buttons are switched off;
 		end if.
+
+Rule for printing the player's obituary:
+	if indigo button is switched on and the location is the Control Room:
+		say paragraph break;
+		center "As you look into the monitor on the control panel, ";
+		center "you can see that the guillotine has stopped rising";
+		center "and falling over the cars. You have saved the day,";
+		center "not to mention lives![line break]";
+		center "*** You have won! ***";
+		say paragraph break;
+		rule succeeds;
+	[else if the location is in darkness and the dark terminus count is 2:
+		say "[Line break]Oh no! You walked directly into the slavering fangs of a lurking grue!";
+		say "[paragraph break]*** You have died! ***";
+		say paragraph break;]
+	else if toadaway is true:
+		say "[line break]*** You start the long walk home. ***";
+	otherwise:
+		say "[line break]*** You have died! ***"
+		
+After printing the player's obituary: say "[paragraph break]Wow, you achieved a whole [score] point[s] out of a possible [maximum score] in [turn count] moves! I'm very proud of you. This was a triumph. I'm being so sincere right now."
 		
 Instead of switching on or pushing the button1: 
 	if the switch count is 6 and the dial count is 6 and button1 is switched off
@@ -2062,7 +1936,9 @@ Ferris Wheel Ride, Bumper Cars Ride, Fortune Teller, and Carousel Ride are in th
 
 HellRide is a region. Ride Entrance, Stocks Room, Gallows Room, Stake Room, Dungeon, Guillotine Room, Ride Exit is in HellRide.
 
-Backstage is a region. Passage, Maintenance Office, Crawl Space, Mechanical Room North, Mechanical Room South, Generator Room, Electrical Room, Electrical Closet One, Electrical Closet Three, Electrical Closet Five, Electrical Closet Seven, Electrical Closet Nine, Electrical Closet Eleven, Storage Room are in Backstage.
+Electrical Area is a region. Electrical Room, Electrical Closet One, Electrical Closet Three, Electrical Closet Five, Electrical Closet Seven, Electrical Closet Nine, and Electrical Closet Eleven are in the Electrical Area.
+
+Backstage is a region. Dark Passage, Maintenance Office, Crawl Space, Mechanical Room North, Mechanical Room South, Generator Room, Storage Room are in Backstage.
 
 Second Floor is a region. Dark Hallway, Control Room, and Holding Room are in the Second Floor.
 
