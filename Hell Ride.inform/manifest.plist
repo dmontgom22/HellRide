@@ -50,7 +50,7 @@
         <key>Sounds</key>
         <dict>
             <key>23</key>
-            <string>Sounds\Bell.ogg</string>
+            <string>Sounds\Silence.ogg</string>
         </dict>
     </dict>
 </plist>

@@ -11,7 +11,7 @@ The story title is "Hell Ride".
 The story author is "No Shoes".
 The story headline is "The ride of a lifetime...".
 The story genre is "Horror".
-The release number is 112.
+The release number is 113.
 The story description is "You've decided to stay and enjoy the carnival anyway."
 The story creation year is 2024.
 
@@ -222,27 +222,32 @@ Before printing the name of an unlit lit electric lamp, say "extinguished ".
 
 Section 5 - Grues
 
-Test grues with "s / buy hell ride ticket / s / give hell ride ticket to ride operator / s / e / s / s"
+Test grues with "s / buy hell ride ticket / s / give hell ride ticket to ride operator / s / e / s / s / s"
 
 The lurking grue is a backdrop. The lurking grue is everywhere. The description of the lurking grue is "The grue is a sinister, lurking presence in the dark places of the earth. Its favorite diet is humans, but its insatiable appetite is tempered by its fear of light. No grue has ever been seen by the light of day, and few have survived its fearsome jaws to tell the tale."
 
 Rule for printing the description of a dark room: say "It is pitch black.  You are likely to be eaten by a grue." instead. 
 Rule for printing a refusal to act in the dark: say "It is too dark in here to see." instead.
 
-The going action has a number called the dark terminus count. 
+[The going action has a number called the dark terminus count. 
 Setting action variables for going: 
 	now the dark terminus count is 0; 
-	if in darkness, increase the dark terminus count by 1. 
+	if in darkness,increment the dark terminus count. 
 The last carry out going rule: 
-	if in darkness, increase the dark terminus count by 1.
+	if in darkness, increment the dark terminus count.
 	
-After going:
-	if the dark terminus count is 2:
-		say "Oh no! You walked directly into the slavering fangs of a lurking grue!";
-		end the story finally saying "You have died!";
-	if the dark terminus count is not 2:
-		continue the action.
-	
+After going when the location is dark:
+	if the dark terminus count is 3:
+		end the story finally;
+	otherwise:
+		continue the action.]
+
+The dark terminous count is a number that varies.	
+every turn when in darkness:
+	increment the dark terminous count;
+	if the dark terminous count is 3, end the story finally.
+every turn when not in darkness, now dark terminous count is 0.
+
 Section 6 - Miscellaneous
 
 Test Misc with "brief / xyzzy / plugh / hello sailor / please get the dime / i / score".
@@ -321,6 +326,25 @@ After reading a command:
 	if the player's command includes "please":
 		say "Please do not say 'please.'";
 		reject the player's command.
+		
+
+Rule for printing the player's obituary:
+	if Control Panel Nine's button is switched on:
+		say paragraph break;
+		say "As you look into the monitor on the control panel you can see that the guillotine has stopped rising and falling over the cars. You have saved the day, not to mention lives![paragraph break]";
+		say "*** You have won! ***";
+		say paragraph break;
+		rule succeeds;
+	else if toadaway is true:
+		say "[paragraph break]*** You start the long walk home. ***";
+	else if the location is dark:
+		say "[Line break]Oh no! You walked directly into the slavering fangs of a lurking grue!";
+		say "[paragraph break]*** You have died! ***";
+		say paragraph break;
+	otherwise:
+		say "[paragraph break]*** You have died! ***"
+		
+After printing the player's obituary: say "[paragraph break]Wow, you achieved a whole [score] point[s] out of a possible [maximum score] in [turn count] moves! I'm very proud of you. This was a triumph. I'm being so sincere right now."
 	
 [fix up the map]
 Index map with title set to "The Carnival".
@@ -434,7 +458,7 @@ Figure of FortuneTeller is the file "FortuneTeller.png".
 
 Figure of Carousel is the file "Carousel.png".
 
-Sound of Bell is the file "Bell.ogg".
+
 
 Chapter 6 - Testing For Empty Descriptions - Not for release
 
@@ -447,6 +471,8 @@ When play begins:
 	seed the random-number generator with 1234.
 	
 The price of the money is $30.00. 
+
+Sound of Bell is the file "Silence.ogg".
 			
 Chapter 7 - Randomized Rooms, etc - For Release Only
 
@@ -457,6 +483,8 @@ Instead of going from the Electrical Room:
 	move the player to a random adjacent room.
 	
 The price of the money is $20.00. 
+
+Sound of Bell is the file "Bell.ogg".
 	
 Part 2 - The Game
 
@@ -487,8 +515,8 @@ Section 3 - Electrical Panels
 An electrical panel is a kind of openable lockable container. 
 Understand "panel" as an electrical panel. Understand "screws" as the electrical panel.
 An electrical panel is usually closed, locked, scenery.
-An electrical panel has a color. 
-An electrical panel has a number called a panel id.
+An electrical panel has a color. Understand the color property as describing an electrical panel.
+An electrical panel has a number called a panel id. Understand the panel id property as describing an electrical panel.
 
 The description of an electrical panel is "Electrical Panel [the panel id] is a standard issue 200 amp electrical panel supplying 220 power throughout the ride. The electrical panel is [if the item described is open]open. Inside the panel you see a switch, a socket, and an indicator light.[otherwise]closed.[end if] [if the item described is locked]There are screws holding it shut.[otherwise]The screws for the door are gone.[end if]".
 
@@ -497,6 +525,11 @@ The printed name of an electrical panel is "Electrical Panel [the panel id]".
 every electrical panel is unlocked by the Swiss Army knife.
 
 Definition: A thing is panel-fitted if it is incorporated by an electrical panel.
+
+[This will allow us to refer to the "corresponding" socket, switch, or indicator; i.e. the one from the same panel. This particular phrase works because there is only ever one each of these in a panel. If we decide later to have, say, three sockets per panel, only this phrase will have to be changed -- using more complex logic -- but the rest of the code could be left as-is.]
+To decide what thing is --/the corresponding (name of kind of value K) of --/the (PT - a panel-fitted thing):
+	let H be the holder of PT;
+	decide on a random K that is part of H.[<- there will only ever be one of these]
 
 [The following won't actually give all the panel's components a color property matching the panel, but it will allow us to refer to a "shared color" of these components and get the desired result.]
 To decide what color is --/the shared color of --/a/the (PT - a panel-fitted thing):
@@ -521,12 +554,15 @@ The carrying capacity of a socket is always 1.
 
 The description of a socket is usually "Socket [the panel id of the holder of the the item described] is part of electrical panel [the panel id of the holder of the item described]. [if unfilled]A fuse probably goes in here.[end if]".
 
-The printed name of a socket is "Socket [the panel id of the holder of the item described]".
+The printed name of a socket is "socket [Panel id of the holder of the item described]". 
 
 Definition: a socket is filled rather than unfilled if it contains a fuse.
 
 To decide what number is --/the socket id of (S - a socket):
 	decide on the panel id of the holder of S.
+	
+To decide what color is --/the color of (S - a socket):
+	decide on the color of the holder of S.
 
 Check inserting something into a socket (this is the can only insert fuses into sockets rule):
 	if the noun is not a fuse, say "That won[']t fit in the socket." instead.
@@ -537,11 +573,6 @@ After inserting a fuse into a socket when the color of the noun is the shared co
 Understand "socket [something related by reversed incorporation]" as a socket.
 Understand "[something related by reversed incorporation] socket" as a socket.
 
-[This will allow us to refer to the "corresponding" socket, switch, or indicator; i.e. the one from the same panel. This particular phrase works because there is only ever one each of these in a panel. If we decide later to have, say, three sockets per panel, only this phrase will have to be changed -- using more complex logic -- but the rest of the code could be left as-is.]
-To decide what thing is --/the corresponding (name of kind of value K) of --/the (PT - a panel-fitted thing):
-	let H be the holder of PT;
-	decide on a random K that is part of H.[<- there will only ever be one of these]
-	
 Section 5 - Indicators
  
 An indicator is a kind of thing. An indicator is part of every electrical panel.
@@ -554,6 +585,9 @@ The printed name of an indicator is "[Color of the holder of the item described]
 To decide what number is --/the indicator id of (I - an indicator):
 	decide on the panel id of the holder of I.
 	
+To decide what color is --/the color of (I - an indicator):
+	decide on the color of the holder of I.
+	
 Understand "indicator [something related by reversed incorporation]" as an indicator.
 Understand "[something related by reversed incorporation] indicator" as an indicator.
 
@@ -564,17 +598,19 @@ Understand "fuse" as a fuse.
 A fuse can be lost or found. A fuse is usually lost. 
 A fuse has a color. Understand the color property as describing a fuse.
 A fuse has a number called fuse id. Understand the fuse id property as describing a fuse.
+
 The description of a fuse is "This is [color] colored electrical fuse." 
+
 The printed name of a fuse is "[color] colored fuse".
 
 Definition: a fuse is plugged-in rather than loose if it is contained by a socket.
 
-An aqua fuse called an fuse1 underlies the wooden stocks. The fuse id of fuse1 is 1.The color of the fuse1 is aqua. 
-A crimson fuse called a fuse3 underlies the gallows platform. The fuse id of fuse3 is 3. The color of the fuse3 is crimson. 
-An emerald fuse called an fuse5 is in the pyre. The fuse id of fuse5 is 5. The color of the fuse5  is emerald. 
-A gray fuse called a fuse7 underlies the iron chair. The fuse id of fuse7 is 7. The color of the fuse7 is gray. 
-An indigo fuse called an fuse9 underlies the guillotine platform. The fuse id of fuse9 is 9. The color of the fuse9 is indigo. 
-A Khaki fuse called a fuse11 is in the merchandise stand. The fuse id of fuse11 is 11. The color of the fuse11 is khaki. 
+An aqua fuse called an fuse1 underlies the wooden stocks. The fuse id of fuse1 is 1.The color of fuse1 is aqua. 
+A crimson fuse called a fuse3 underlies the gallows platform. The fuse id of fuse3 is 3. The color of fuse3 is crimson. 
+An emerald fuse called an fuse5 is in the pyre. The fuse id of fuse5 is 5. The color of fuse5  is emerald. 
+A gray fuse called a fuse7 underlies the iron chair. The fuse id of fuse7 is 7. The color of fuse7 is gray. 
+An indigo fuse called an fuse9 underlies the guillotine platform. The fuse id of fuse9 is 9. The color of fuse9 is indigo. 
+A Khaki fuse called a fuse11 is in the merchandise stand. The fuse id of fuse11 is 11. The color of fuse11 is khaki. 
 
 The taking action has an object called the object taken from.
 
@@ -585,7 +621,7 @@ After taking a fuse when the object taken from is a socket (this is the check sw
 	say "Taken.";
 	if the corresponding switch of the object taken from is switched on:
 		now the corresponding switch of the object taken from is switched off;
-		say "[Corresponding indicator of the object taken from] just went out.".
+		say "The [Corresponding indicator of the object taken from] just went out.".
 		
 Section 7 - Switches
 
@@ -596,10 +632,13 @@ A switch has a truth state called points awarded. points awarded is usually fals
 
 The description is "Switch [switch id of the item described] is part of Electrical Panel [the panel id of the holder of the item described]. It[']s a big switch. You could probably turn it [if the item described is switched off]on[otherwise]off[end if] if you wanted to."
 
-The printed name of a switch is "Switch [the switch id of the item described]"
+The printed name of a switch is "switch [panel id of the holder of the item described]"
 
 To decide what number is --/the switch id of (S - a switch):
 	decide on the panel id of the holder of S.
+	
+To decide what color is --/the color of (S - a switch):
+	decide on the color of the holder of S.
 	
 Understand "switch [something related by reversed incorporation]" as a switch.
 Understand "[something related by reversed incorporation] switch" as a switch.
@@ -1286,8 +1325,8 @@ The radio is a device on the desk. The radio is switched off and fixed in place.
 
 Every turn when the radio is switched on and location is near the maintenance office:
 	choose a random row in Table of Songs;
-	Let A be song entry;
-	say "[one of]You hear [A] playing on the radio.[or][A] plays on the radio.[or]You sing along to [A].[or]The DJ announces the next song will be [A].[at random]";
+	Let S be song entry;
+	say "[one of]You hear [S] playing on the radio.[or][S] plays on the radio.[or]You sing along to [S].[or]The DJ announces that [S] will be up next.[at random]";
 
 Rule for showing action of the radio:
 	if the radio is switched on, say "Through the static, you pick up hear bits of the latest number one hit.";
@@ -1654,7 +1693,7 @@ Dark Hallway is a dark room. "This is a poorly lit hallway. Ahead you can see th
 	
 Section 3 - Control Room
 
-Control Room is a dark room. The Control Room is west of the Dark Hallway. The Control Room is a scored room. "The backstage control room is a plain, functional hub where the carnival’s rides, lights, and attractions are managed. Gray industrial walls, scuffed and greasy, surround rows of monitors streaming live carnival feeds—the Ferris Wheel, Carousel, and Hell Ride. Beneath them, a control panel with labeled dials, colored buttons, and lights oversees the systems.
+Control Room is a dark room. The Control Room is west of the Dark Hallway. The Control Room is a scored room. "The backstage control room is a plain, functional hub where the carnival’s rides, lights, and attractions are managed. Gray industrial walls, scuffed and greasy, surround rows of monitors streaming live carnival feeds—the Ferris Wheel, Carousel, and Hell Ride. Beneath them, control panels with labeled dials, colored buttons, and lights oversee the systems scattered about the room.
 
 The hum of electronics fills the air, punctuated by the crackle of a radio: 'Maintenance to Bumper Cars—wrench needed!' The worn floor is scattered with papers, tools, and coffee cups. A cluttered desk holds logs and schedules, while a corkboard above displays charts and red-marked notes like 'Check Zipper circuit breakers.'
 
@@ -1664,53 +1703,89 @@ The cluttered desk is here. The desk is scenery.
 A corkboard is here. The corkboard is scenery.
 The charts are here. They are scenery.
 
+Section 3 - Control Panels
+
+A control panel is a kind of open container. 
+Understand "control" and "panel" as a control panel.
+A control panel is scenery.
+A control panel has a color. Understand the color property as describing a control panel.
+A control panel has a number called a panel id. Understand the panel id property as describing a control panel.
+
+Control Panel One is a control panel in the Control Room. The panel id of Control Panel One is 1. The color of Control Panel One is aqua.
+Control Panel Three is a control panel in the Control Room. The panel id of Control Panel Three is 3. The color of Control Panel Three is crimson.
+Control Panel Five is a control panel in the Control Room. The panel id of Control Panel Five is 5. The color of Control Panel Five is emerald.
+Control Panel Seven is a control panel in the Control Room. The panel id of Control Panel Seven is 7. The color of Control Panel Seven is gray.
+Control Panel Nine is a control panel in the Control Room. The panel id of Control Panel Nine is 9. The color of Control Panel Nine is indigo.
+Control Panel Eleven is a control panel in the Control Room. The panel id of Control Panel Eleven is 11. The color of Control Panel Eleven is khaki.
+
+Definition: A thing is control-fitted if it is incorporated by a control panel.
+
+[This will allow us to refer to the "corresponding" socket, switch, or indicator; i.e. the one from the same panel. This particular phrase works because there is only ever one each of these in a panel. If we decide later to have, say, three sockets per panel, only this phrase will have to be changed -- using more complex logic -- but the rest of the code could be left as-is.]
+To decide what thing is --/the corresponding (name of kind of value K) of --/the (CT - a control-fitted thing):
+	let H be the holder of CT;
+	decide on a random K that is part of H.[<- there will only ever be one of these]
+	
+[The following won't actually give all the panel's components a color property matching the panel, but it will allow us to refer to a "shared color" of these components and get the desired result.]
+To decide what color is --/the shared color of --/a/the (CT - a control-fitted thing):
+	decide on the color of the holder of CT.
+
 Section 4 - Buttons
 
-The Control Panel is a thing in the Control Room. The Control Panel is a supporter and fixed in place.
-
-A button is a kind of device. 
-Understand "button" as a button.
+A button is a kind of device.  A button is part of every control panel. 
 A button is usually switched off.
-A button is fixed in place.
-A button has a color. Understand the color property as describing a button.
-A button has a number called button id. Understand the button id property as describing a button.
-The description of a button is "This is [a color] colored button.".
-The printed name of a button is "[color] colored button".
+A button is always fixed in place.
 
-An aqua button called an button1 is part of the control panel. The button id of button1 is 1. The color of button1 is aqua. 
-A crimson button called a button3 is part of the control panel. The button id of button3 is 3. The color of button3 is crimson. 
-An emerald button called an button5 is part of the control panel. The button id of button5 is 5. The color of button5 is emerald. 
-A gray button called a button7 is part of the control panel. The button id of button7 is 7. The color of button7 is gray. 
-An indigo button called button9 is part of the control panel. The button id of button9 is 9. The color of button9 is indigo. 
-A khaki button called a button11 is part of the control panel. The button id of button11 is 11. The color of button11 is khaki. 
+The description of a button is "This is a [color of the holder of the item described] colored button.".
+
+The printed name of a button is "a [color of the holder of the item described] button".
+
+To decide what number is --/the button id of (B - a button):
+	decide on the button id of the holder of B.
+	
+To decide what color is --/the color of (B - a button):
+	decide on the color of the holder of B.
+
+Understand "button [something related by reversed incorporation]" as a button.
+Understand "[something related by reversed incorporation] button" as a button.
+
+Instead of pushing a switched off button (this is the redirect push to button on rule):
+	try switching on the noun.
+
+Instead of pushing a switched on button (this is the redirect push to button off rule):
+	try switching off the noun.
 
 Section 5 - Dials
 
-A dial is a kind of device. 
-Understand "dial" as a dial.
+A dial is a kind of device. A dial is part of every control panel.
 A dial is fixed in place.
-A dial has a color. Understand the color property as describing a dial.
-A dial has a number called dial id. Understand the dial id property as describing a dial.
-A dial has a number called a dial setting. A dial setting is usually 0.
-The description of a dial is "This is [a color] colored dial. It is currently set to [dial setting]. I bet you could spin it.".
-The printed name of a dial is "[color] colored dial".
+A dial has a number called a dial setting. 
 
-An aqua dial called an dial1 is part of the control panel. The dial id of dial1 is 1. The color of dial1 is aqua. 
-A crimson dial called a dial3 is part of the control panel. The dial id of dial3 is 3. The color of dial3 is crimson. 
-An emerald dial called an dial5 is part of the control panel. The dial id of dial5 is 5. The color of dial5 is emerald. 
-A gray dial called a dial7 is part of the control panel. The dial id of dial7 is 7. The color of dial7 is gray. 
-An indigo dial called an dial9 is part of the control panel. The dial id of dial9 is 9. The color of dial9 is indigo. 
-A khaki dial called a dial11 is part of the control panel. The dial id of dial11 is 11. The color of dial11 is khaki. 
+The description of a dial is "This is [color of the holder of the item described] colored dial. It is currently set to [dial setting of the item described]. I bet you could spin it.".
+
+The printed name of a dial is "[color of the holder of the item described] dial".
+
+To decide if (D - a dial) is properly set:
+	if the panel id of the holder of D is the dial setting of D :
+		decide yes;
+	decide no.
+	
+To decide what number is --/the dial id of (D - a dial):
+	decide on the dial id of the holder of D.
+	
+To decide what color is --/the color of (D - a dial):
+	decide on the color of the holder of D.
+
+Understand "dial [something related by reversed incorporation]" as a dial.
+Understand "[something related by reversed incorporation] dial" as a dial.
 
 Spinning it to is an action applying to one thing and one number. 
 Check spinning it to: if the noun is not a dial, say "[The noun] does not spin." instead. 
 Report spinning it to: 
 	if the number understood is less than 0 or the number understood is greater than 11:
-		say "The [color] colored dial can only be set from 0 to 11.";
+		say "The [color of the holder of the noun] colored dial can only be set from 0 to 11.";
 		stop the action;
 	otherwise:
-		say "The [color] colored dial is now set to [the number understood].";
-		now the noun is switched on;
+		say "The [color of the holder of the noun] colored dial is now set to [the number understood].";
 		now the dial setting of the noun is the number understood.
 
 Understand "spin [something] to [a number]" as spinning it to. Understand "turn [something] to [a number]" as spinning it to. Understand "set [something] to [a number]" as spinning it to.
@@ -1718,216 +1793,130 @@ Understand "spin [something] to [a number]" as spinning it to. Understand "turn 
 The dial count is a number that varies. The dial count is 0.
 To count the dials:
 	now the dial count is 0;
-	if dial setting of the dial1 is 1, increment the dial count;
-	if dial setting of the dial3 is 3, increment the dial count;
-	if dial setting of the dial5 is 5, increment the dial count;
-	if dial setting of the dial7 is 7, increment the dial count;
-	if dial setting of the dial9 is 9, increment the dial count;
-	if dial setting of the dial11 is 11, increment the dial count.
-	
+	if control panel one's dial is properly set, increment the dial count;
+	if control panel three's dial is properly set, increment the dial count;
+	if control panel five's dial is properly set, increment the dial count;
+	if control panel seven's dial is properly set, increment the dial count;
+	if control panel nine's dial is properly set, increment the dial count;
+	if control panel eleven's dial is properly set, increment the dial count.
+
 Section 6 - Lights
 
-A colored light is a kind of thing. A colored light is fixed in place. Understand "indicator" as colored light.
-A light is a kind of device. 
-Understand "light" as a fuse.
+A light is a kind of thing. A light is part of every control panel.
 A light is fixed in place.
-A light has a color. A light is usually nondescript. 
-A light has a number called light id. A light id is usually 0.
-The description of a light is "This is [a printed name of the item described]. The light is [if the light is switched on]on[otherwise]off[end if]."
-The printed name of a light is "[color] colored light".
 
-An aqua light called an light1 is part of the control panel. The light id of light1 is 1. The color of light1 is aqua. 
-A crimson light called a light3 is part of the control panel. . The light id of light3 is 3. The color of light3 is crimson. 
-An emerald light called an light5 is part of the control panel. . The light id of light5 is 5. The color of light5 is emerald.
-A gray light called a light7 is part of the control panel. . The light id of light7 is 7. The color of light7 is gray. 
-An indigo light called an light9 is part of the control panel. . The light id of light9 is 9. The color of light9 is indigo.
-A khaki light called a light11 is part of the control panel. . The light id of light11 is 11. The color of light11 is khaki. 
+The description of a light is "This is [a printed name of the item described]. The light is [if the corresponding button of the item described is switched on]on[otherwise]off[end if]."
 
-instead of switching on a light, say "You can[']t do that!"
+The printed name of a light is "a [color of the holder of the item described] colored light".
 
-instead of switching off a light, say "You can[']t do that!"
+To decide what number is --/the socket id of (L - a light):
+	decide on the panel id of the holder of L.
+	
+To decide what color is --/the color of (L - a light):
+	decide on the color of the holder of L.
+	
+Understand "light [something related by reversed incorporation]" as a light.
+Understand "[something related by reversed incorporation] light" as a light.
 
 Section 7 - The Monitor
 
+Table of Monitor Descriptions
+link number	figure text		description
+1	"Figure of ControlPanelStocks"		"The monitor now shows a tableau of poor unfortunate townsfolk locked in stocks."
+3	"Figure of ControlPanelGallows"		"The monitor now shows a scene of someone waiting to be hanged."
+5	"Figure of ControlPanelStake"		"The monitor now displays a scene of witches being burned at the stake."
+7	"Figure of ControlPanelDungeon"	"The monitor now shows the implements of torture in the dungeon."
+9	"Figure of ControlPanelGuillotine"	"The monitor now shows a tableau of a guillotine rising and falling over the ride exit."
+11	"Figure of ControlPanelExit"		"The monitor shows a the gift shop located at the Hell Ride exit."
+
 The monitor is part of the control panel. The monitor is fixed in place. Understand "screen" as monitor.
 instead of examining the monitor:
-	if the button1 is switched on, say "The monitor now shows a tableau of poor unfortunate townsfolk locked in stocks.";
-	if the button3 is switched on, say "The monitor now shows a scene of someone waiting to be hanged.";
-	if the button5 is switched on, say "The monitor now displays a scene of witches being burned at the stake.";
-	if the button7 is switched on, say "The monitor now shows the implements of torture in the dungeon.";
-	if the button9 is switched on, say "The monitor now shows a tableau of a guillotine rising and falling over the ride exit.";
-	if the button11 is switched on, say "The monitor shows a the gift shop located at the Hell Ride exit.".
+	if Control Panel One's button is switched on and Control Panel One's dial is properly set:
+		let F be the figure text corresponding to a link number of 1 in the Table of Monitor Descriptions;
+		let D be the description corresponding to a link number of 1 in the Table of Monitor Descriptions;
+		say "[D]";
+	if Control Panel Three's button is switched on and Control Panel Three's dial is properly set:
+		let F be the figure text corresponding to a link number of 3 in the Table of Monitor Descriptions;
+		let D be the description corresponding to a link number of 3 in the Table of Monitor Descriptions;
+		say "[D]";
+	if Control Panel Five's button is switched on and Control Panel Five's dial is properly set:
+		let F be the figure text corresponding to a link number of 5 in the Table of Monitor Descriptions;
+		let D be the description corresponding to a link number of 5 in the Table of Monitor Descriptions;
+		say "[D]";
+	if Control Panel Seven's button is switched on and Control Panel Seven's dial is properly set:
+		let F be the figure text corresponding to a link number of 7 in the Table of Monitor Descriptions;
+		let D be the description corresponding to a link number of 7 in the Table of Monitor Descriptions;
+		say "[D]";
+	if Control Panel Nine's button is switched on and Control Panel Nine's dial is properly set:
+		let F be the figure text corresponding to a link number of 9 in the Table of Monitor Descriptions;
+		let D be the description corresponding to a link number of 9 in the Table of Monitor Descriptions;
+		say "[D]";
+	if Control Panel Eleven's button is switched on and Control Panel Eleven's dial is properly set:
+		let F be the figure text corresponding to a link number of 11 in the Table of Monitor Descriptions;
+		let D be the description corresponding to a link number of 11 in the Table of Monitor Descriptions;
+		say "[D]";
+
 
 Section 8 - Commands
 
-instead of examining the control panel:
-	say "The control panel is populated with a row of colored lights. From left to right, the colors are aqua, crimson, emerald, gray, indigo, and khaki. Below the lights is a row of similarly colored dials and below that is a row of buttons. (The poorly generated AI & human image is meant for comparison purposes only. LOL) The control panel is [if switch count is 6]lit up like a Christmas tree[otherwise]dark[end if].[line break]";
-	[if switch count is 6 and every button is switched off, display the figure of ControlPanel;
-	if fuse1 is in socket1 and button1 is switched on, display the figure of ControlPanelStocks;
-	if fuse3 is in socket3 and button3 is switched on, display the figure of ControlPanelGallows;
-	if fuse5 is in socket5 and button5 is switched on, display the figure of ControlPanelStake;
-	if fuse7 is in socket7 and button7 is switched on, display the figure of ControlPanelDungeon;
-	if fuse9 is in socket9 and button9 is switched on, display the figure of ControlPanelGuillotine;
-	if fuse11 is in socket11 and button11 is switched on, display the figure of ControlPanelExit.]
+instead of examining a control panel:
+	say "Each control panel is populated with a dial, a button, and a light. From left to right, the colors are aqua, crimson, emerald, gray, indigo, and khaki. Below the lights is a row of similarly colored dials and below that is a row of buttons. (The poorly generated AI & human image is meant for comparison purposes only. LOL) The control panels are [if switch count is 6]lit up like a Christmas tree[otherwise]dark[end if].[line break]";
+	if switch count is 6 and every button is switched off, display the figure of ControlPanel;
+	if Electrical Closet One's electrical panel's socket is properly fused and Control Panel One's button is switched on, display the figure of ControlPanelStocks;
+	if Electrical Closet Three's electrical panel's socket is properly fused and Control Panel Three's button is switched on, display the figure of ControlPanelGallows;
+	if Electrical Closet Five's electrical panel's socket is properly fused and  Control Panel Five's button is switched on, display the figure of ControlPanelStake;
+	if Electrical Closet Seven's electrical panel's socket is properly fused and Control Panel Seven's button is switched on, display the figure of ControlPanelDungeon;
+	if Electrical Closet Nine's electrical panel's socket is properly fused and Control Panel Nine's button is switched on, display the figure of ControlPanelGuillotine;
+	if Electrical Closet Eleven's electrical panel's socket is properly fused and Control Panel Eleven's button is switched on, display the figure of ControlPanelExit.
 	
 The switch count is a number that varies. The switch count is 0.
 To count the switches:
 	now the switch count is 0;
-	if Electrical Closet One's electrical panel's switch is switched on, increment the switch count;
-	if Electrical Closet Three's electrical panel's switch is switched on, increment the switch count;
-	if Electrical Closet Five's electrical panel's switch is switched on, increment the switch count;
-	if Electrical Closet Seven's electrical panel's switch is switched on, increment the switch count;
-	if Electrical Closet Nine's electrical panel's switch is switched on, increment the switch count;
-	if Electrical Closet Eleven's electrical panel's switch is switched on, increment the switch count;
+	if Electrical Closet One's electrical panel's switch is switched on and the Electrical Closet One's electrical panel's socket is properly fused, increment the switch count;
+	if Electrical Closet Three's electrical panel's switch is switched on and the Electrical Closet Three's electrical panel's socket is properly fused, increment the switch count;
+	if Electrical Closet Five's electrical panel's switch is switched on and the Electrical Closet Five's electrical panel's socket is properly fused, increment the switch count;
+	if Electrical Closet Seven's electrical panel's switch is switched on and the Electrical Closet Seven's electrical panel's socket is properly fused, increment the switch count;
+	if Electrical Closet Nine's electrical panel's switch is switched on and the Electrical Closet Nine's electrical panel's socket is properly fused, increment the switch count;
+	if Electrical Closet Eleven's electrical panel's switch is switched on and the Electrical Closet Eleven's electrical panel's socket is properly fused, increment the switch count;
 		
 every turn when the location is the Control Room:
 	count the switches;
 	count the dials;
 	[say "switch count: [switch count], dial count: [dial count].";]
 	if switch count is not 6:
-		now all lights are switched off;
 		now all dials are switched off;
 		now all buttons are switched off;
-		now the dial setting of dial1 is 0;
-		now the dial setting of dial3 is 0;
-		now the dial setting of dial5 is 0;
-		now the dial setting of dial7 is 0;
-		now the dial setting of dial9 is 0;
-		now the dial setting of dial11 is 0.
+		now the dial setting of Control Panel One's dial is 0;
+		now the dial setting of Control Panel Three's dial is 0;
+		now the dial setting of Control Panel Five's dial is 0;
+		now the dial setting of Control Panel Seven's dial is 0;
+		now the dial setting of Control Panel Nine's dial is 0;
+		now the dial setting of Control Panel Eleven's dial is 0.
 		
 Section 9 - Pushing Buttons
 
-Instead of switching on or pushing the button9: 
-	if the switch count is 6 and the dial count is 6 and button9 is switched off
-		begin;
-			say "The monitor flickers for a second and the scene it displays changes to something different.";
-			say "The monitor now shows a tableau of a guillotine. It has stopped rising and falling over the ride exit. The ride is safe again!";
-			say "The [color] light is now on.";
-			display the figure of ControlPanelGuillotine;
-			now all buttons are switched off;
-			now all lights are switched off;
-			now button9 is switched on;
-			now light9 is switched on;
-			play the sound of Bell;
-			increase score by 5;
-			end the story finally;
-		else;
-			say "The monitor turns off and the screen goes black.";
-			say "The [color] light is now off.";
-			now all lights are switched off;
-			now all buttons are switched off;
-		end if.
+ControlPanelImage is a figure name that varies. ControlPanelImage is Figure of ControlPanel.
 
-Rule for printing the player's obituary:
-	if indigo button is switched on and the location is the Control Room:
-		say paragraph break;
-		center "As you look into the monitor on the control panel, ";
-		center "you can see that the guillotine has stopped rising";
-		center "and falling over the cars. You have saved the day,";
-		center "not to mention lives![line break]";
-		center "*** You have won! ***";
-		say paragraph break;
-		rule succeeds;
-	[else if the location is in darkness and the dark terminus count is 2:
-		say "[Line break]Oh no! You walked directly into the slavering fangs of a lurking grue!";
-		say "[paragraph break]*** You have died! ***";
-		say paragraph break;]
-	else if toadaway is true:
-		say "[line break]*** You start the long walk home. ***";
-	otherwise:
-		say "[line break]*** You have died! ***"
-		
-After printing the player's obituary: say "[paragraph break]Wow, you achieved a whole [score] point[s] out of a possible [maximum score] in [turn count] moves! I'm very proud of you. This was a triumph. I'm being so sincere right now."
-		
-Instead of switching on or pushing the button1: 
-	if the switch count is 6 and the dial count is 6 and button1 is switched off
-		begin;
-			say "The monitor flickers for a second and the scene it displays changes to something different.";
-			say "The monitor now shows a tableau of poor unfortunate townsfolk locked in stocks.";
-			say "The [color] light is now on.";
-			display the figure of ControlPanelStocks;
-			now all buttons are switched off;
-			now all lights are switched off;
-			now button1 is switched on;
-			now light1 is switched on;
-		else;
-			say "The monitor turns off and the screen goes black.";
-			say "The [color] light is now off.";
-			now all lights are switched off;
-			now all buttons are switched off;
-		end if.
-		
-Instead of switching on or pushing the button3: 
-	if the switch count is 6 and the dial count is 6 and button3 is switched off
-		begin;
-			say "The monitor flickers for a second and the scene it displays changes to something different.";
-			say "The monitor now shows a scene of someone waiting to be hanged.";
-			say "The [color] light is now on.";
-			display the figure of ControlPanelGallows;
-			now all buttons are switched off;
-			now all lights are switched off;
-			now button3 is switched on;
-			now light3 is switched on;
-		else;
-			say "The monitor turns off and the screen goes black.";
-			say "The [color] light is now off.";
-			now all lights are switched off;
-			now all buttons are switched off;
-		end if.
-		
-Instead of switching on or pushing button5: 
-	if the switch count is 6 and the dial count is 6 and button5 is switched off
-		begin;
-			say "The monitor flickers for a second and the scene it displays changes to something different.";
-			say "The monitor now displays a scene of witches being burned at the stake.";
-			say "The [color] light is now on.";
-			display the figure of ControlPanelStake;
-			now all buttons are switched off;
-			now all lights are switched off;
-			now button5 is switched on;
-			now light5 is switched on;
-		else;
-			say "The monitor turns off and the screen goes black.";
-			say "The [color] light is now off.";
-			now all lights are switched off;
-			now all buttons are switched off;
-		end if;
-		
-Instead of switching on or pushing button7: 
-	if the switch count is 6 and the dial count is 6 and button7 is switched off
-		begin;
-			say "The monitor flickers for a second and the scene it displays changes to something different.";
-			say "The monitor now shows the implements of torture in the dungeon.";
-			say "The [color] light is now on.";
-			display the figure of ControlPanelDungeon;
-			now all buttons are switched off;
-			now all lights are switched off;
-			now button7 is switched on;
-			now light7 is switched on;
-		else;
-			say "The monitor turns off and the screen goes black.";
-			say "The [color] light is now off.";
-			now all lights are switched off;
-			now all buttons are switched off;
-		end if;
+Last report switching on a button when the switch count is 6 and the dial count is 6 (this is the final report switching on a button rule):
+	let a figure name that varies called ControlPanelImage be the figure text corresponding to the link number of the panel id of the holder of the noun in the Table of Monitor Descriptions;
+	say "[ControlPanelImage][line break]";
+	let D be the description corresponding to the link number of the panel id of the holder of the noun in the Table of Monitor Descriptions;
+	say "The monitor flickers for a second and the scene it displays changes to something different.";
+	say "[D][line break]";
+	say "The [color of the holder of the noun] light is now on.";
+	display ControlPanelImage;
+	now all buttons are switched off;
+	now the noun is switched on;
+	if the color of the holder of the noun is indigo:
+		play the sound of Bell;
+		increase score by 5;
+		end the story finally;
 
-Instead of Switching on or pushing button11: 
-	if the switch count is 6 and the dial count is 6 and button11 is switched off
-		begin;
-			say "The monitor flickers for a second and the scene it displays changes to something different.";
-			say "The monitor shows a the gift shop located at the Hell Ride exit.";
-			say "The [color] light is now on.";
-			display the figure of ControlPanelExit;
-			now all buttons are switched off;
-			now all lights are switched off;
-			now button11 is switched on;
-			now light11 is switched on;
-		else;
-			say "The monitor turns off and the screen goes black.";
-			say "The [color] light is now off.";
-			now all lights are switched off;
-			now all buttons are switched off;
-		end if.
+Last report switching off a button (this is the final report switching off a button rule):		
+	say "The monitor turns off and the screen goes black.";
+	say "The [color of the holder of the noun] light is now off.";
+	now all buttons are switched off;
+
 
 Part 3 - Regions
 

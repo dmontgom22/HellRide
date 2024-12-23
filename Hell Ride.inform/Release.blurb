@@ -35,12 +35,12 @@ picture 19 "C:\HellRide\Hell Ride.materials\Figures\FerrisWheel.png"
 picture 20 "C:\HellRide\Hell Ride.materials\Figures\BumperCars.png"
 picture 21 "C:\HellRide\Hell Ride.materials\Figures\FortuneTeller.png"
 picture 22 "C:\HellRide\Hell Ride.materials\Figures\Carousel.png"
-sound 23 "C:\HellRide\Hell Ride.materials\Sounds\Bell.ogg"
+sound 23 "C:\HellRide\Hell Ride.materials\Sounds\Silence.ogg"
 
 ! Placeholder variables
 
 placeholder [IFID] = "E0A5AFB9-18BF-4485-B083-426CA51CCE70"
-placeholder [RELEASE] = "112"
+placeholder [RELEASE] = "113"
 placeholder [YEAR] = "2024"
 placeholder [TITLE] = "Hell Ride"
 placeholder [AUTHOR] = "No Shoes"
