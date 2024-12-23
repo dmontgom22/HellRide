@@ -1821,40 +1821,37 @@ Understand "[something related by reversed incorporation] light" as a light.
 Section 7 - The Monitor
 
 Table of Monitor Descriptions
-link number	figure text		description
-1	"Figure of ControlPanelStocks"		"The monitor now shows a tableau of poor unfortunate townsfolk locked in stocks."
-3	"Figure of ControlPanelGallows"		"The monitor now shows a scene of someone waiting to be hanged."
-5	"Figure of ControlPanelStake"		"The monitor now displays a scene of witches being burned at the stake."
-7	"Figure of ControlPanelDungeon"	"The monitor now shows the implements of torture in the dungeon."
-9	"Figure of ControlPanelGuillotine"	"The monitor now shows a tableau of a guillotine rising and falling over the ride exit."
-11	"Figure of ControlPanelExit"		"The monitor shows a the gift shop located at the Hell Ride exit."
+link number	figure choice		description
+0	Figure of ControlPanel		"The monitor now shows a nothing but snow."
+1	Figure of ControlPanelStocks		"The monitor now shows a tableau of poor unfortunate townsfolk locked in stocks."
+3	Figure of ControlPanelGallows		"The monitor now shows a scene of someone waiting to be hanged."
+5	Figure of ControlPanelStake		"The monitor now displays a scene of witches being burned at the stake."
+7	Figure of ControlPanelDungeon		"The monitor now shows the implements of torture in the dungeon."
+9	Figure of ControlPanelGuillotine		"The monitor now shows a tableau of a guillotine rising and falling over the ride exit."
+11	Figure of ControlPanelExit		"The monitor shows a the gift shop located at the Hell Ride exit."
 
-The monitor is part of the control panel. The monitor is fixed in place. Understand "screen" as monitor.
+ControlPanelImage is a figure name that varies. ControlPanelImage is Figure of ControlPanel.
+
+The monitor is in the Control Room. The monitor is scenery. Understand "screen" as monitor.
 instead of examining the monitor:
 	if Control Panel One's button is switched on and Control Panel One's dial is properly set:
-		let F be the figure text corresponding to a link number of 1 in the Table of Monitor Descriptions;
-		let D be the description corresponding to a link number of 1 in the Table of Monitor Descriptions;
-		say "[D]";
-	if Control Panel Three's button is switched on and Control Panel Three's dial is properly set:
-		let F be the figure text corresponding to a link number of 3 in the Table of Monitor Descriptions;
-		let D be the description corresponding to a link number of 3 in the Table of Monitor Descriptions;
-		say "[D]";
-	if Control Panel Five's button is switched on and Control Panel Five's dial is properly set:
-		let F be the figure text corresponding to a link number of 5 in the Table of Monitor Descriptions;
-		let D be the description corresponding to a link number of 5 in the Table of Monitor Descriptions;
-		say "[D]";
-	if Control Panel Seven's button is switched on and Control Panel Seven's dial is properly set:
-		let F be the figure text corresponding to a link number of 7 in the Table of Monitor Descriptions;
-		let D be the description corresponding to a link number of 7 in the Table of Monitor Descriptions;
-		say "[D]";
-	if Control Panel Nine's button is switched on and Control Panel Nine's dial is properly set:
-		let F be the figure text corresponding to a link number of 9 in the Table of Monitor Descriptions;
-		let D be the description corresponding to a link number of 9 in the Table of Monitor Descriptions;
-		say "[D]";
-	if Control Panel Eleven's button is switched on and Control Panel Eleven's dial is properly set:
-		let F be the figure text corresponding to a link number of 11 in the Table of Monitor Descriptions;
-		let D be the description corresponding to a link number of 11 in the Table of Monitor Descriptions;
-		say "[D]";
+		choose a row with a link number of 1 in the table of monitor descriptions;
+	else if Control Panel Three's button is switched on and Control Panel Three's dial is properly set:
+		choose a row with a link number of 3 in the table of monitor descriptions;
+	else if Control Panel Five's button is switched on and Control Panel Five's dial is properly set:
+		choose a row with a link number of 5 in the table of monitor descriptions;
+	else if Control Panel Seven's button is switched on and Control Panel Seven's dial is properly set:
+		choose a row with a link number of 7 in the table of monitor descriptions;
+	else if Control Panel Nine's button is switched on and Control Panel Nine's dial is properly set:
+		choose a row with a link number of 9 in the table of monitor descriptions;
+	else if Control Panel Eleven's button is switched on and Control Panel Eleven's dial is properly set:
+		choose a row with a link number of 11 in the table of monitor descriptions;
+	otherwise:
+		choose a row with a link number of 0 in the table of monitor descriptions;
+	say "The monitor flickers for a second and the scene it displays changes to something different.";
+	say "[description entry][line break]";
+	now ControlPanelImage is figure choice entry;
+	display ControlPanelImage;
 
 
 Section 8 - Commands
@@ -1895,14 +1892,12 @@ every turn when the location is the Control Room:
 		
 Section 9 - Pushing Buttons
 
-ControlPanelImage is a figure name that varies. ControlPanelImage is Figure of ControlPanel.
-
 Last report switching on a button when the switch count is 6 and the dial count is 6 (this is the final report switching on a button rule):
-	let a figure name that varies called ControlPanelImage be the figure text corresponding to the link number of the panel id of the holder of the noun in the Table of Monitor Descriptions;
-	say "[ControlPanelImage][line break]";
-	let D be the description corresponding to the link number of the panel id of the holder of the noun in the Table of Monitor Descriptions;
+	let N be the panel id of the holder of the noun;
+	choose a row with a link number of N in the table of monitor descriptions;
+	now ControlPanelImage is figure choice entry;
 	say "The monitor flickers for a second and the scene it displays changes to something different.";
-	say "[D][line break]";
+	say "[description entry][line break]";
 	say "The [color of the holder of the noun] light is now on.";
 	display ControlPanelImage;
 	now all buttons are switched off;
@@ -1912,12 +1907,15 @@ Last report switching on a button when the switch count is 6 and the dial count 
 		increase score by 5;
 		end the story finally;
 
-Last report switching off a button (this is the final report switching off a button rule):		
+Last report switching off a button (this is the final report switching off a button rule):	
+	choose a row with a link number of 0 in the table of monitor descriptions;
+	now ControlPanelImage is figure choice entry;
 	say "The monitor turns off and the screen goes black.";
+	say "[description entry][line break]";
 	say "The [color of the holder of the noun] light is now off.";
+	display ControlPanelImage;	
 	now all buttons are switched off;
-
-
+	
 Part 3 - Regions
 
 The Midway is a region. Parking Lot, Ticket Kiosk, Concession Stand, High Striker, Show Facade, Show Tent, Head of the Line,

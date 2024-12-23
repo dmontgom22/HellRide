@@ -465,21 +465,21 @@
     </dict>
     <key>66</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.inform\Source\story.ni</string>
-        <key>Line</key><integer>1860</integer>
+        <key>Line</key><integer>1857</integer>
         <key>Title</key><string>Section 8 - Commands</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
     <key>67</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.inform\Source\story.ni</string>
-        <key>Line</key><integer>1896</integer>
+        <key>Line</key><integer>1893</integer>
         <key>Title</key><string>Section 9 - Pushing Buttons</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
     <key>68</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.inform\Source\story.ni</string>
-        <key>Line</key><integer>1921</integer>
+        <key>Line</key><integer>1919</integer>
         <key>Title</key><string>Part 3 - Regions</string>
         <key>Level</key><integer>3</integer>
         <key>Indentation</key><integer>1</integer>
