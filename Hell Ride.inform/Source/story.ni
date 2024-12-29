@@ -327,6 +327,9 @@ Rule for printing the player's obituary:
 		rule succeeds;
 	else if toadaway is true:
 		say "[paragraph break]*** You start the long walk home. ***";
+	else if electrocuted is true:
+		say "[line break]The sparks arc onto your hands electrocuting you on the spot.";
+		say "[paragraph break]*** You have died! ***";
 	else if the location is dark:
 		say "[Line break]Oh no! You walked directly into the slavering fangs of a lurking grue!";
 		say "[paragraph break]*** You have died! ***";
@@ -443,7 +446,7 @@ I hope you enjoy it.
 
 d."
 
-Chapter 5 - Figures and Sounds
+Chapter 5 - Figures
 
 Figure of Hell Ride is the file "HellRide.png".
 
@@ -489,6 +492,18 @@ Figure of DimeToss is the file "DimeToss.png".
 
 Figure of MilkBottles is the file "MilkBottles.png".
 
+Figure of RideStocks is the file "RideStocks.png".
+
+Figure of RideGallows is the file "RideGallows.png".
+
+Figure of RideStake is the file "RideStake.png".
+
+Figure of RideDungeon is the file "RideDungeon.png".
+
+Figure of RideGuillotine is the file "RideGuillotine.png".
+
+Figure of RideExit is the file "RideExit.png".
+
 
 Chapter 6 - Testing For Empty Descriptions - Not for release
 
@@ -504,8 +519,7 @@ The price of the money is $30.00.
 
 Sound of Bell is the file "Silence.ogg".
 
-a dime is a kind of thing. the player carries three dimes. Understand "shiny" and "coin" as the dime. The description of a dime is "It[']s a dime. Ten cents. One tenth of a dollar. And very shiny."
-
+a dime is a kind of thing. the player carries five dimes. Understand "shiny" and "coin" as the dime. The description of a dime is "It[']s a dime. Ten cents. One tenth of a dollar. And very shiny."
 
 			
 Chapter 7 - Randomized Rooms, etc - For Release Only
@@ -513,9 +527,6 @@ Chapter 7 - Randomized Rooms, etc - For Release Only
 When play begins:
 	seed the random-number generator with 0.
 
-Instead of going from the Electrical Room:
-	move the player to a random adjacent room.
-	
 The price of the money is $20.00. 
 
 Sound of Bell is the file "Bell.ogg".
@@ -527,7 +538,6 @@ The dime underlies the seat. Understand "shiny" and "coin" as the dime. The desc
 Part 2 - The Game
 
 Chapter 1 - Electrical Area
-
 
 Section 1 - Colors
 
@@ -718,7 +728,15 @@ In a corner, an open junction box spills wires onto the wall, while a workbench 
 
 An emergency shutdown panel painted bright red stands near a fire extinguisher and a faded safety poster. A small fan on the workbench oscillates weakly, barely cooling the room’s warmth. Flickering fluorescent tubes overhead cast harsh, shifting shadows.
 
-The electrical room is raw and utilitarian, revealing the fragile systems behind the carnival’s magic—a humbling reminder of the power sustaining the midway’s enchantment.[if the location is electromagnetic] This room is oozing with electromagnetic energy. You can feel your hair stand on end and all your nerves twitching. This feels dangerous! There are exits in all directions.[end if]".
+The electrical room is raw and utilitarian, revealing the fragile systems behind the carnival’s magic—a humbling reminder of the power sustaining the midway’s enchantment.
+
+[if the location is electromagnetic]This room is oozing with electromagnetic energy. You can feel your hair stand on end and all your nerves twitching. This feels dangerous! There are exits in all directions.[otherwise]You no longer feel your hair standing on end.[end if]".
+
+Instead of going from the Electrical Room:
+	if the big switch is switched on:
+		move the player to a random adjacent room;
+	otherwise:
+		continue the action.
 
 The breaker panel is here. It is scenery. 
 The junction box is here. It is scenery. 
@@ -747,7 +765,7 @@ Test Death with "brief / Test Parking / Test Games / Test Attractions / Test Con
 
 Test Parking with "brief / get blueberries / eat blueberries / give coupon to operator / buy ticket / get in car / l at car / l at seat / l under seat / open glove box / get gloves / wear gloves / l at dashboard / set stub on the dashboard / l at the dashboard / exit".
 
-Test ToadAway with "brief / test parking / get in car / get parking stub / exit car / test games / test b1 / w / l under stocks / e / s / w / l under platform / e / s / w / l in pyre"
+Test ToadAway with "brief / test parking / get in car / get parking stub / exit car / test games / test b1 / w / l under stocks / e / s / w"
 
 Test a1 with "s / buy fortune teller ticket / buy ferris wheel ticket / buy bumper cars ticket / buy carousel ticket / buy hell ride ticket / w / give dime to barker"
 
@@ -1112,15 +1130,13 @@ Before going southeast when the location is the High Striker and the Pitcher's M
 Before looking when the location is the Pitcher's Mound:
 	display Figure of MilkBottles.
 
-The Pitcher's Mound is a room southeast of the high striker. "
+The Pitcher's Mound is a room southeast of the high striker. "The milk bottle ball toss is a classic carnival game that combines skill, strength, and a bit of luck. The setup features a pyramid of brightly colored milk bottles stacked on a sturdy platform—three on the bottom, two in the middle, and one on top. Players stand behind a marked line and toss baseballs, aiming to knock down as many bottles as possible. Clearing the entire stack wins the grand prize, while partial knockdowns can earn smaller rewards.
 
-The dart game is framed by a vibrant backdrop of colorful balloons, neatly arranged in rows on the target wall. Reds, blues, yellows, and greens create a striking rainbow of colors. Large plush toys, oversized teddy bears, and quirky trinkets are prominently displayed above and around the booth. These prizes sway slightly in the breeze, tempting passersby. Twinkling strings of  lights illuminate the area, drawing attention even from a distance.
-
-The sharp, satisfying pop of balloons bursting punctuates the air, often followed by cheers of delight or groans of near-misses. The game operator enthusiastically calls out, 'Step right up! Pop three balloons, win a prize!'  Their voice cuts through the carnival noise, inviting new players to join. Players laugh, cheer, or gasp as they throw, with spectators adding to the energy by shouting encouragement like, 'You got this!' or 'One more to win the bear!'"
+The booth buzzes with energy, its colorful banners and flashing lights drawing a lively crowd. The satisfying clatter of falling bottles mixes with cheers and groans from players and spectators. A carnival barker calls out, 'Step right up and test your aim!' Prizes—ranging from small toys to giant stuffed animals—hang prominently, enticing players to take a shot. With every toss, the game delivers moments of suspense, joy, and fun, making it a favorite at the carnival."
 
 The small plush donkey is carried by the Pitcher's Mound Attendant. Understand "stuffie" and "stuffed" as donkey. The description of the donkey is "You feel rather underwhelmed as you look at the small plush donkey on a keychain."
 
-a baseball is a kind of thing. The Pitcher's Mound Attendant carries three baseballs.
+a baseball is a kind of thing. The Pitcher's Mound Attendant carries five baseballs.
 
 the milk bottles are scenery in the Pitcher's Mound. Understand "bottle" as milk bottles.
 
@@ -1407,7 +1423,7 @@ Chapter 3 - Backstage
 Section 1 - Dark Passage
 
 [get the key]
-Test b1 with "brief / s / buy hell ride ticket / s / give hell ride ticket to operator / s / e / l at piles / get flashlight / turn it on / s / turn on radio / l at desk / open drawer / get all from the drawer / s / s / open toolbox / get all from toolbox / s / s / s / ne / get silver key / l at panel / open panel / l at socket / sw / n / n / n / n / n"
+Test b1 with "brief / s / buy hell ride ticket / s / give hell ride ticket to operator / s / e / l at piles / get flashlight / turn it on / s / turn on radio / u / w / switch off big switch / e / d / l at desk / open drawer / get all from the drawer / s / s / open toolbox / get all from toolbox / s / s / s / ne / get silver key / l at panel / open panel / l at socket / sw / n / n / n / n / n"
 
 [get the fuses]
 Test b2 with "w / l under stocks / e / s / w / l under platform / e / s / w / l in pyre / get fuse from pyre / e / s / w / l under seat / e / s / w / l under platform / e / s / s / w / l in stand / get khaki fuse from merchandise stand / e / n"
@@ -1694,7 +1710,7 @@ Looks like your goose is cooked. Say 'Goodnight, Gracie!'
 You are stupefied as you sit watching guillotine rising and falling, dropping like a stone on the cars in front of you. Thank goodness they are empty. As your turn comes, you raise your hands in a feeble attempt to stop the inevitable."
 
 Instead of doing something other than waiting, looking, listening or examining during HellRideAuto:
-	say "You are having such a good time that you don['] want to do anything but wait and enjoy the ride."
+	say "You are having such a good time that you don['] want to do anything but sit and enjoy the ride."
 	
 Ride Entrance is a room. Ride Entrance is south of Head of the Line. "The cars that will take you into the fearsome Hell Ride stop here for you to board.  To the south is the track that will take you into the ride. The safety bar is raised allowing you to enter the car. To one side the darkness looks just a little bit darker."
 
@@ -1705,6 +1721,13 @@ Before going south when the player is in the Ride Entrance:
 	continue the action.
 
 Section 2 - Stocks Room
+
+After going when the location is the Stocks Room and the Stocks Room is unvisited:
+	display Figure of RideStocks;
+	continue the action.
+	
+Before looking when the location is the Stocks Room:
+	display Figure of RideStocks.
 
 The Stocks Room is south of the Ride Entrance. "The public square is a cobblestone expanse bordered by weathered timber-framed buildings. The air carries the mingling scents of chimney smoke, damp earth, and the faint tang of a nearby smithy. At its center, crude wooden stocks stand as a grim focal point, their beams weathered and stained from years of use. Iron clasps lock captives in degrading postures, their tattered clothing offering little protection from the biting wind.
 
@@ -1724,6 +1747,13 @@ Instead of looking under a thing which is underlaid by the aqua fuse when the fu
 	now the fuse1 is found.
 	
 Section 3 - Gallows Room
+
+After going when the location is the Gallows Room and the Gallows Room is unvisited:
+	display Figure of RideGallows;
+	continue the action.
+	
+Before looking when the location is the Gallows Room:
+	display Figure of RideGallows.
 
 The Gallows Room is south of the Stocks Room.  "The public square, slick with morning drizzle, lies under a brooding, overcast sky. At its center looms the gallows, a weathered wooden platform with thick ropes swaying ominously. The crowd stands in somber silence, broken by the shuffle of feet or faint murmurs, their eyes fixed on the grim scene.
 
@@ -1746,6 +1776,13 @@ Instead of looking under a thing which is underlaid by crimson fuse when fuse3 i
 
 Section 4 - Stake Room
 
+After going when the location is the Stake Room and the Stake Room is unvisited:
+	display Figure of RideStake;
+	continue the action.
+	
+Before looking when the location is the Stake Room:
+	display Figure of RideStake.
+
 The Stake Room is south of the Gallows Room. "The public square is steeped in grim silence, broken only by the crackling of flames. At its center, three wooden stakes rise from a pyre of logs and kindling, darkened by smoke from past executions. Bound to the stakes are three women, their faces reflecting defiance, resignation, and terror.
 
 A crowd encircles the scene, expressions ranging from morbid fascination to righteous fury. Children cling to their mothers, while elders nod solemnly. Some jeer and throw stones; others murmur prayers or avert their gaze.
@@ -1757,7 +1794,7 @@ Gray clouds loom overhead, nature’s somber backdrop to the grim spectacle. A r
 The pyre is scenery in the Stake Room. The pyre is a container. understand "bonfire", "fire", "stake", "stakes", "flame", and "flames" as the pyre. The description of the pyre is "At the center, three wooden stakes rise ominously from a circular pyre of logs and kindling, their rough surfaces darkened by smoke from countless such scenes before. Bound tightly to these stakes are three women, their wrists and ankles secured with coarse, heavy ropes. Their faces tell different stories—one of defiance, another of resignation, and the third of pure terror." 
 
 Instead of taking the emerald fuse when fuse5 is lost:
-	say "You find [the list of things which contain the noun]!";
+	say "You find [the noun]!";
 	now the noun is in the player;
 	say "Taken.";
 	play the sound of Bell;
@@ -1766,6 +1803,13 @@ Instead of taking the emerald fuse when fuse5 is lost:
 
 Section 5 - Dungeon
 
+After going when the location is the Dungeon and the Dungeon is unvisited:
+	display Figure of RideDungeon;
+	continue the action.
+	
+Before looking when the location is the Dungeon:
+	display Figure of RideDungeon.
+	
 The Dungeon is south of the Stake Room. "The dungeon is a dark, suffocating chamber carved into the earth, its stone walls slick with moisture and grime. The air reeks of sweat, blood, mildew, and burning oil from flickering torches mounted on rusted sconces. Shadows twist on the walls, creating grotesque, unsettling shapes in the dim light.
 
 Chains hang from walls and ceilings, their faint clinking blending with the moans and occasional screams of prisoners. Water drips rhythmically from a cracked ceiling, adding to the chamber’s eerie ambiance.
@@ -1796,6 +1840,13 @@ Instead of looking under a thing which is underlaid by the gray fuse when fuse7 
 	
 Section 6 - Guillotine Room
 
+After going when the location is the Guillotine Room and the Guillotine Room is unvisited:
+	display Figure of RideGuillotine;
+	continue the action.
+	
+Before looking when the location is the Guillotine Room:
+	display Figure of RideGuillotine.
+
 The Guillotine Room is south of the Dungeon. "The public square buzzes with tense anticipation, a crowd gathered under gray skies that cast a somber light on the cobblestones. At the center, a stark wooden platform looms, its purpose grim and unavoidable.
 
 A lone figure stands on the scaffold, bound hands behind their back and head bowed low, avoiding the crowd’s gaze. Their tattered clothing, once fine, reflects the fall that led them to this moment.
@@ -1821,6 +1872,13 @@ Instead of looking under a thing which is underlaid by the indigo fuse when fuse
 	
 Section 7 - Ride Exit
 
+After going when the location is the Ride Exit and the Ride Exit is unvisited:
+	display Figure of RideExit;
+	continue the action.
+	
+Before looking when the location is the Ride Exit:
+	display Figure of RideExit.
+
 The Ride Exit is south of the Guillotine Room. "The exit of Hell Ride is designed to leave riders with lingering unease. Emerging from a dark corridor with peeling black and red-streaked walls, flickering lights cast erratic shadows on the uneven floor. The air is cool and damp, carrying a faint metallic tang, while faint whispers and distant screams echo softly in the background.
 
 Riders step into a small courtyard enclosed by jagged, rusted fencing draped with cobwebs and plastic bones. Overhead, a weathered sign reads, 'You[’]ve Survived… For Now.' Nearby, carnival workers in tattered costumes watch silently, occasionally muttering cryptic remarks like, 'Not everyone makes it out.'
@@ -1832,7 +1890,7 @@ The exit ensures Hell Ride isn’t just an experience—it lingers, blurring the
 The merchandise stand is scenery in the Ride Exit. The merchandise stand is a container. Understand "stand" as merchandise. The description of the merchandise is "The stand is bathed in red light, adding to the ominous mood." 
 
 Instead of taking the khaki fuse when the fuse11 is lost:
-	say "You find [the list of things which underlie the noun]!";
+	say "You find [the noun]!";
 	now the noun is carried by the player;
 	say "Taken.";
 	play the sound of Bell;
@@ -1857,7 +1915,23 @@ Control Room is a dark room. The Control Room is west of the Dark Hallway. The C
 
 The hum of electronics fills the air, punctuated by the crackle of a radio: 'Maintenance to Bumper Cars—wrench needed!' The worn floor is scattered with papers, tools, and coffee cups. A cluttered desk holds logs and schedules, while a corkboard above displays charts and red-marked notes like 'Check Zipper circuit breakers.'
 
-A flickering light casts cold shadows as the metallic tang of machinery mixes with dampness. Functional yet essential, this hidden space ensures the carnival’s magic runs seamlessly." 
+A flickering light casts cold shadows as the metallic tang of machinery mixes with dampness. Functional yet essential, this hidden space ensures the carnival’s magic runs seamlessly. On one wall is a large switch[if the big switch is switched on] with sparks arcing out from it[end if]." 
+
+The big switch is a device in the control room. The big switch is fixed in place. The big switch is switched on. The description of the big switch is "This is a large switch. It[']s the kind Dr. Frankenstein might pull to route the lightning to his creature.[if the big switch is switched on] Currently there are sparks arcing out from the switch.[end if]"
+
+electrocuted is a truth state that varies. electrocuted is false.
+
+instead of switching off the big switch:
+	if the player is wearing the gloves:
+		now the electrical room is not electromagnetic;
+		continue the action;
+	otherwise:
+		now electrocuted is true;
+		end the story finally.
+
+instead of switching on the big switch:
+	now the electrical room is electromagnetic;
+	continue the action.
 
 The cluttered desk is here. The desk is scenery. 
 A corkboard is here. The corkboard is scenery.

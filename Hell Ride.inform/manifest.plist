@@ -50,10 +50,22 @@
             <string>Figures\DimeToss.png</string>
             <key>24</key>
             <string>Figures\MilkBottles.png</string>
+            <key>25</key>
+            <string>Figures\RideStocks.png</string>
+            <key>26</key>
+            <string>Figures\RideGallows.png</string>
+            <key>27</key>
+            <string>Figures\RideStake.png</string>
+            <key>28</key>
+            <string>Figures\RideDungeon.png</string>
+            <key>29</key>
+            <string>Figures\RideGuillotine.png</string>
+            <key>30</key>
+            <string>Figures\RideExit.png</string>
         </dict>
         <key>Sounds</key>
         <dict>
-            <key>25</key>
+            <key>31</key>
             <string>Sounds\Silence.ogg</string>
         </dict>
     </dict>
