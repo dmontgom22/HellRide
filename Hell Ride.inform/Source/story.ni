@@ -328,7 +328,7 @@ Rule for printing the player's obituary:
 	else if toadaway is true:
 		say "[paragraph break]*** You start the long walk home. ***";
 	else if electrocuted is true:
-		say "[line break]The sparks arc onto your hands electrocuting you on the spot.";
+		say "[line break]The sparks arc onto your unprotected hands electrocuting you on the spot.";
 		say "[paragraph break]*** You have died! ***";
 	else if the location is dark:
 		say "[Line break]Oh no! You walked directly into the slavering fangs of a lurking grue!";
@@ -505,7 +505,7 @@ Figure of RideGuillotine is the file "RideGuillotine.png".
 Figure of RideExit is the file "RideExit.png".
 
 
-Chapter 6 - Testing For Empty Descriptions - Not for release
+Chapter 6 - RNG Seed, Money, Dimes, Sounds - Not for release
 
 [When play begins (this is the run property checks at the start of play rule):
 	repeat with item running through things:
@@ -519,10 +519,10 @@ The price of the money is $30.00.
 
 Sound of Bell is the file "Silence.ogg".
 
-a dime is a kind of thing. the player carries five dimes. Understand "shiny" and "coin" as the dime. The description of a dime is "It[']s a dime. Ten cents. One tenth of a dollar. And very shiny."
+a dime is a kind of thing. five dimes underlie the seat. Understand "shiny" and "coin" as a dime. The description of a dime is "It[']s a dime. Ten cents. One tenth of a dollar. And very shiny."
 
 			
-Chapter 7 - Randomized Rooms, etc - For Release Only
+Chapter 7 - RNG Seed, Money, Dimes, Sounds - For Release Only
 
 When play begins:
 	seed the random-number generator with 0.
@@ -531,7 +531,7 @@ The price of the money is $20.00.
 
 Sound of Bell is the file "Bell.ogg".
 
-The dime underlies the seat. Understand "shiny" and "coin" as the dime. The description of the dime is "It[']s a dime. Ten cents. One tenth of a dollar. And very shiny."
+one dime underlies the seat. Understand "shiny" and "coin" as a dime. The description of a dime is "It[']s a dime. Ten cents. One tenth of a dollar. And very shiny."
 
 
 	
@@ -780,6 +780,8 @@ Test g2 with "s / e / l at two dollar bill / get two dollar bill / buy mallet / 
 Test g3 with "s / e  / ne / toss dime on plate / sw / se / give dime to attendant / throw baseball at bottles / nw / w / n"
 
 Test Games with "Test g1 / test g2 / test g3".
+
+Test Electrocution with "s / buy hell ride ticket / s / give hell ride ticket / s / e / l under junk / get flashlight / turn it on / s / u / w / remove gloves / switch the big switch off"
 
 When play begins:
 	display the figure of Hell Ride;
