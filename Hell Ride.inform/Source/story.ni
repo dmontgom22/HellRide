@@ -1,21 +1,31 @@
 Part 1 - World Model
 
-Chapter 1 - Inform Settings, Biblio Card, and Extensions
+Chapter 1 - Inform Settings
+
+Release along with cover art, a website, an introductory booklet, the "Quixe" interpreter, the source text, the solution, and library card.
 
 Use maximum things understood at once of at least 200.
 Use dynamic memory allocation of at least 65536.
 Use maximum text length of at least 4096.
 Use DICT_WORD_SIZE of 15.
 
+Use scoring.
+Use American Dialect.
+Use serial comma.
+The maximum score is 100.
+The block giving rule is not listed in the check giving it to rules.
+
+Chapter 2 - Biblio Card Settings
+
 The story title is "Hell Ride".
 The story author is "No Shoes".
 The story headline is "The ride of a lifetime...".
 The story genre is "Horror".
-The release number is 113.
+The release number is 114.
 The story description is "You've decided to stay and enjoy the carnival anyway."
 The story creation year is 2024.
 
-Release along with cover art, a website, an introductory booklet, the "Quixe" interpreter, the source text, the solution, and library card.
+Chapter 3 - Extensions
 
 include Modified Exit by Emily Short.
 
@@ -25,21 +35,15 @@ Include Basic Help Menu by Emily Short.
 
 Include Basic Screen Effects by Emily Short.
 
-Include Rideable Vehicles by Graham Nelson.
-
 Include Swearing Reloaded by Shin.
 
 Include Singing Reloaded by Shin.
 
-Use scoring.
-Use American Dialect.
-Use serial comma.
-The maximum score is 100.
-The block giving rule is not listed in the check giving it to rules.
+
 
 Chapter 2 - New Mechanics, Actions, Phrases
 
-Section 1 Money Mechanics
+Section 1 - Money Mechanics
 
 Price is a kind of value. $10.99 specifies a price. A thing has a price. The price of a thing is usually $0.00. After examining something for sale, say "It can be yours for [the price of the noun]."
 
@@ -77,7 +81,7 @@ Instead of buying something free when the player carries the noun:
 Instead of buying the money:
 	say "The money belongs to you; you buy things with it."
 	
-Section 2 Drink Mechanics
+Section 2 - Drink Mechanics
 
 A volume is a kind of value. 15.9 fl oz specifies a volume with parts ounces and tenths (optional, preamble optional).
 
@@ -211,7 +215,7 @@ Carry out switching on an electric lamp: now the noun is lit. Carry out switchin
 
 Rule for showing action of the noun:
 	if the noun is switched on, and the noun is an electric lamp:
-		say "A strong, narrow beam of light shines from the flashlight.";
+		say "A strong, narrow beam of light shines from [the item described].";
 	else if the noun is switched on and the noun is not an electric lamp:
 		say "It is currently switched on.";
 	otherwise:
@@ -229,19 +233,6 @@ The lurking grue is a backdrop. The lurking grue is everywhere. The description 
 Rule for printing the description of a dark room: say "It is pitch black.  You are likely to be eaten by a grue." instead. 
 Rule for printing a refusal to act in the dark: say "It is too dark in here to see." instead.
 
-[The going action has a number called the dark terminus count. 
-Setting action variables for going: 
-	now the dark terminus count is 0; 
-	if in darkness,increment the dark terminus count. 
-The last carry out going rule: 
-	if in darkness, increment the dark terminus count.
-	
-After going when the location is dark:
-	if the dark terminus count is 3:
-		end the story finally;
-	otherwise:
-		continue the action.]
-
 The dark terminous count is a number that varies.	
 every turn when in darkness:
 	increment the dark terminous count;
@@ -257,8 +248,7 @@ A thing can be broken or unbroken. A thing is usually unbroken.
 
 A thing can be seen or unseen. A thing is usually unseen.
 
-Carry out examining a thing:
-	now the noun is seen.
+Carry out examining a thing, now the noun is seen.
 	
 [scored rooms]
 A room can be scored or unscored. A room is usually unscored.
@@ -365,10 +355,6 @@ every turn:
 			say " Your heart sinks as you realize that is your license plate. You race to the parking lot in time to see the tow truck pull away with your car in tow";
 			now toadaway is true;
 			end the story finally.
-			
-[Graphics window]
-[When Play begins:
-	open the other window;]
 
 Chapter 4 - Tables
 
@@ -384,19 +370,60 @@ response
 "His thoughts are entirely focused on a cheeseburger for lunch."
 "He wonders how is he supposed to look cool dressed in this awful uniform."
 
-[Table of Songs]
+[Songs]
 Table of Songs
-song
-"'Stairway to Heaven' by Led Zeppelin"
-"Pink Floyd[']s 'Comfortably Numb'"
-"Pharell[']s 'Happy'"
-"'Folsom Prison Blues' by Johnny Cash"
-"'Peace Train' by Cat Stevens"
-"Bob Seger[']s 'Old Time Rock[']N[']Roll'"
-"The Eagles['] 'Hotel California'"
-"'Sultans of Swing' by Dire Straits"
-"The B-52[']s 'Rock Lobster'"
-"'Born To Run' by Bruce Springsteen"
+artist	song
+"Led Zeppelin"	"Stairway to Heaven"
+"Pink Floyd"	"Comfortably Numb"
+"Aaretha Franklin"	"Respect"
+"Steely Dan"	"Aja"
+"Taylor Swift"	"Shake It Off"
+"Pharell"	"Happy"
+"Dolly Parton"	"Jolene"
+"Van Morrison"	"Brown Eyed Girl"
+"Weezer"	"Africa"
+"Johnny Cash"	"Folsom Prison Blues"
+"Cat Stevens"	"Peace Train"
+"Lou Reed"	"Sweet Jane"
+"Queen"	"Bohemian Rhapsody"
+"Bob Seger"	"Old Time Rock[']N[']Roll"
+"Boston"	"More That A Feeling"
+"Roger Miller"	"King of the Road"
+"Elvis Presley"	"Suspicious Minds"
+"Jimmy Buffet"	"Margaritaville"
+"The Cure"	"Friday I'm In Love"
+"Dave Edmunds"	"I Hear You Knocking"
+"Bruddah Iz"	"Over The Rainbow"
+"Aerosmith"	"Dream On"
+"Pau Simon"	"Kodachrome"
+"R.E.M."	"Losing My Religion"
+"Modern English"	"Melt With You"
+"Rick Astley"	"Never Gonna Give You Up"
+"Bob Marley"	"No Woman, No Cry"
+"Smokey Robinson"	"Tracks Of My Tears"
+"Billy Joel"	"Piano Man"
+"Warren Zevon"	"Werewolves Of London"
+"Dusty Springield"	"Son Of A Preacher Man"
+"Kermit the Frog"	"Rainbow Connection"
+"David Bowie"	"Young Americans"
+"Ben E. King"	"Stand By Me"
+"Blondie"	"Heart Of Glass"
+"Neil Diamond"	"Sweet Caroline"
+"The Grateful Dead"	"Ripple"
+"Bruce Springsteen"	"Born To Run"
+"The Talking Heads"	"Psycho Killer"
+"The Village People"	"YMCA"
+
+[Monitor Descriptions]
+Table of Monitor Descriptions
+link number	figure choice		description
+0	Figure of ControlPanel		"The monitor now shows a nothing but snow."
+1	Figure of ControlPanelStocks		"The monitor now shows a tableau of poor unfortunate townsfolk locked in stocks."
+3	Figure of ControlPanelGallows		"The monitor now shows a scene of someone waiting to be hanged."
+5	Figure of ControlPanelStake		"The monitor now displays a scene of witches being burned at the stake."
+7	Figure of ControlPanelDungeon		"The monitor now shows the implements of torture in the dungeon."
+9	Figure of ControlPanelGuillotine		"The monitor now shows a tableau of a guillotine rising and falling over the ride exit."
+11	Figure of ControlPanelExit		"The monitor shows a the gift shop located at the Hell Ride exit."
 
 [Description of Hell Ride]			
 When play begins:
@@ -458,6 +485,9 @@ Figure of FortuneTeller is the file "FortuneTeller.png".
 
 Figure of Carousel is the file "Carousel.png".
 
+Figure of DimeToss is the file "DimeToss.png".
+
+Figure of MilkBottles is the file "MilkBottles.png".
 
 
 Chapter 6 - Testing For Empty Descriptions - Not for release
@@ -473,6 +503,10 @@ When play begins:
 The price of the money is $30.00. 
 
 Sound of Bell is the file "Silence.ogg".
+
+a dime is a kind of thing. the player carries three dimes. Understand "shiny" and "coin" as the dime. The description of a dime is "It[']s a dime. Ten cents. One tenth of a dollar. And very shiny."
+
+
 			
 Chapter 7 - Randomized Rooms, etc - For Release Only
 
@@ -485,6 +519,10 @@ Instead of going from the Electrical Room:
 The price of the money is $20.00. 
 
 Sound of Bell is the file "Bell.ogg".
+
+The dime underlies the seat. Understand "shiny" and "coin" as the dime. The description of the dime is "It[']s a dime. Ten cents. One tenth of a dollar. And very shiny."
+
+
 	
 Part 2 - The Game
 
@@ -599,9 +637,9 @@ A fuse can be lost or found. A fuse is usually lost.
 A fuse has a color. Understand the color property as describing a fuse.
 A fuse has a number called fuse id. Understand the fuse id property as describing a fuse.
 
-The description of a fuse is "This is [color] colored electrical fuse." 
+The description of a fuse is "This is [color of the item described] colored electrical fuse." 
 
-The printed name of a fuse is "[color] colored fuse".
+The printed name of a fuse is "[color of the item described] colored fuse".
 
 Definition: a fuse is plugged-in rather than loose if it is contained by a socket.
 
@@ -610,7 +648,7 @@ A crimson fuse called a fuse3 underlies the gallows platform. The fuse id of fus
 An emerald fuse called an fuse5 is in the pyre. The fuse id of fuse5 is 5. The color of fuse5  is emerald. 
 A gray fuse called a fuse7 underlies the iron chair. The fuse id of fuse7 is 7. The color of fuse7 is gray. 
 An indigo fuse called an fuse9 underlies the guillotine platform. The fuse id of fuse9 is 9. The color of fuse9 is indigo. 
-A Khaki fuse called a fuse11 is in the merchandise stand. The fuse id of fuse11 is 11. The color of fuse11 is khaki. 
+A khaki fuse called a fuse11 is in the merchandise stand. The fuse id of fuse11 is 11. The color of fuse11 is khaki. 
 
 The taking action has an object called the object taken from.
 
@@ -703,23 +741,31 @@ Chapter 2 - The Midway
 
 Section 1 - Parking Lot
 
-Test Life with "brief / Test Parking / Test Striker / Test Attractions / Test Concession / Test Misc / Test Backstage".
+Test Life with "brief / Test Parking / Test Games / Test Attractions / Test Concession / Test Misc / Test Backstage".
 
-Test Death with "brief / Test Parking / Test Attractions / Test Concession / Test Striker / Test Misc / Test Ride".
+Test Death with "brief / Test Parking / Test Games / Test Attractions / Test Concession / Test Misc / Test Ride".
 
 Test Parking with "brief / get blueberries / eat blueberries / give coupon to operator / buy ticket / get in car / l at car / l at seat / l under seat / open glove box / get gloves / wear gloves / l at dashboard / set stub on the dashboard / l at the dashboard / exit".
 
-Test ToadAway with "brief / test parking / get in car / get parking stub / exit car / test striker / test b1 / test b2 / ne / open panel / put aqua in socket / push switch / sw / e / open panel / put crimson in socket / push switch / w / se / open panel"
+Test ToadAway with "brief / test parking / get in car / get parking stub / exit car / test games / test b1 / w / l under stocks / e / s / w / l under platform / e / s / w / l in pyre"
 
-Test a1 with "s / buy fortune teller ticket / buy ferris wheel ticket / buy bumper cars ticket / buy carousel ticket / buy hell ride ticket / w / give dime to barker / w /  z / z / z / z / z / z / z / z / get lamp / turn it on"
+Test a1 with "s / buy fortune teller ticket / buy ferris wheel ticket / buy bumper cars ticket / buy carousel ticket / buy hell ride ticket / w / give dime to barker"
 
 Test a2 with "e / e / e / e / give ferris wheel ticket to ferris wheel operator / w / w / ne / give carousel ticket to carousel operator / sw / se / give fortune teller ticket to mysterious woman / nw / nw / give bumper cars ticket to bumper cars operator / se / n"
 
 Test Attractions with "test a1 / test a2"
 
+Test g1 with "brief / s / w / give dime to barker / w /  z / z / z / z / z / z / z / z / get lamp / turn it on / e / e / n"
+
+Test g2 with "s / e / l at two dollar bill / get two dollar bill / buy mallet / hit lever with mallet / g / g / g / g / 2 / w / n".
+
+Test g3 with "s / e  / ne / toss dime on plate / sw / se / give dime to attendant / throw baseball at bottles / nw / w / n"
+
+Test Games with "Test g1 / test g2 / test g3".
+
 When play begins:
 	display the figure of Hell Ride;
-	say "The carnival is in town and you and your sweetie had a date to visit it. After dinner and just as you arrive at the carnival, you and your date have a terrible fight. They storm off leaving you alone at the carnival. You decide to stay at the carnival anyway."
+	say "The carnival is in town and you and your sweetie had a date to visit it. After dinner and just as you arrive at the carnival, you and your date have a terrible fight. They storm off leaving you alone. You decide to stay at the carnival anyway."
 
 The Parking Lot is a room. The parking lot is north of the Ticket Kiosk. The parking lot is outdoors. "The carnival parking lot stretches across an open field, its gravel crunching under arriving cars. Temporary floodlights and the carnival[']s colorful glow light the area, while distant laughter, music, and the hum of rides fill the air.
 
@@ -731,14 +777,14 @@ Puddles from recent rain shimmer with reflected lights, while patches of mud cli
 
 Alive with anticipation, the parking lot marks the transition from the ordinary to the magic of the carnival.
 
-The midway is to the south. There is a blueberry bush here. [if blueberry bush contains blueberries]There are blueberries on the bush.[otherwise]The bush has been picked clean.[end if][if the dime is in the Parking Lot] You see something shiny on the ground.[end if] [paragraph break]Your car is here. It[']s a bit of a beater. Inside the car, you can see [the list of things which are part of the beater car]."
+The midway is to the south. There is a blueberry bush here. [if blueberry bush contains blueberries]There are blueberries on the bush.[otherwise]The bush has been picked clean.[end if][paragraph break]Your car is here. It[']s a bit of a beater. Inside the car, you can see [the list of things which are part of the beater car]."
 
 The Parking Attendant is a man in the the parking lot. Understand "attendent" and "operator" as parking attendant. The parking attendant carries the parking ticket and the parking stub. The price of the parking ticket is $5.00. 
 
 instead of examining the parking attendant:
 	choose a random row in Table of Bored Responses;
 	Let A be response entry;
-	say "This is another bored teenager. [A] [if the parking attendant carries the parking ticket] He has a parking ticket. The price of a parking ticket is [the price of the parking ticket].[end if]";
+	say "This is another bored teenager. [A] [if the parking attendant carries the parking ticket] He has a parking ticket. The price of a parking ticket is [the price of the parking ticket].[end if][line break]";
 	stop the action.
 
 The beater car is an open enterable container in the parking lot. The beater car is scenery. Understand "vehicle" and "car" as the beater car. The description of the beater car is "[if the player is in the beater car][bold type]Car Interior[roman type][line break][end if]This is your car. It[']s a 2002 Honda Civic and it[']s seen better days.[paragraph break][if the player is in the beater car]You[']re sitting inside your car. [end if]Even though it[']s old, it feels like an old friend. From the faux leather seats to the crack in the windshield. It[']s familiar and comforting. There[']s old fast food wrappers on the floor, clothes and text books in the back seat. There is an air freshener hanging from the rear view mirror. You see [the list of things which are part of the beater car]." 
@@ -792,11 +838,9 @@ The seat is part of the beater car. The seat is a supporter. It is fixed in plac
 
 Your keys underlie the seat. Understand "car key", "car keys", and "key" as the keys. The description of the keys is "These are your car keys. It[']s a wonder you could even find them, your house is such a mess."
 
-The glove box is part of the beater car. The glove box is a locked openable container. Your keys unlock the glove box. Understand "glove compartment" and "compartment" as the glove box. The gloves are inside the glove box. The gloves are wearable. The description of the gloves is "A nice set of sheepskin gloves. They[']re very warm."
+The glove box is part of the beater car. The glove box is a locked openable container. Your keys unlock the glove box. Understand "glove compartment" and "compartment" as the glove box. The gloves are inside the glove box. The gloves are wearable. The description of the gloves is "A nice set of leather gloves. They[']re very warm."
 
-The dime underlies the seat. Understand "shiny" and "coin" as the dime. The description of the dime is "It[']s a dime. Ten cents. One tenth of a dollar. And very shiny."
-
-Instead of looking under a thing which is underlaid by the dime:
+Instead of looking under a thing which is underlaid by something:
 	say "You find [the list of things which underlie the noun]!";
 	now every thing which underlies the noun is carried by the player;
 	now every thing which underlies the noun does not underlie the noun;
@@ -850,7 +894,7 @@ The Cashier is a man in the Ticket kiosk.
 instead of examining the cashier:
 	choose a random row in Table of Bored Responses;
 	Let A be response entry;
-	say "This is another bored teenager. [A] ";
+	say "This is another bored teenager. [A][line break]";
 	stop the action.
 
 After buying the hell ride ticket:
@@ -917,8 +961,6 @@ A soft pretzel is here. The soft pretzel is edible. The price of the soft pretze
 
 Section 5 - High Striker
 
-Test Striker with "brief / s / e / l at two dollar bill / get two dollar bill / buy mallet / hit lever with mallet / g / g / g / g / 2 / w / n / i / score".
-
 Before going east when the location is the Ticket kiosk and the High Striker is unvisited:
 	display Figure of HighStriker;
 	continue the action.
@@ -926,17 +968,17 @@ Before going east when the location is the Ticket kiosk and the High Striker is 
 Before looking when the location is the High Striker:
 	display Figure of HighStriker.
 
-The two dollar bill is a thing. The two dollar bill is in the High Striker. The price of the two dollar bill is $2.00. Understand "bill" as the two dollar bill. "Hey! Is that a two dollar bill on the ground?" The description of the two dollar bill is "It has a picture of Thomas Jefferson on it."
+The two dollar bill is a thing. The two dollar bill is in the High Striker. Understand "bill" as the two dollar bill. "Hey! Is that a two dollar bill on the ground?" The description of the two dollar bill is "It has a picture of Thomas Jefferson on it."
 
 instead of taking the two dollar bill:
 	say "Taken.[paragraph break]";
-	increase the price of the money by the price of the dollar bill;
+	increase the price of the money by $2.00;
 	say "You now have [the price of the money].";
 	now the two dollar bill is nowhere.
 
-The High Striker is a room. The High Striker is west of the Ferris Wheel Ride. The High Striker is outdoors. "This area features a tall, eye-catching machine adorned with bright, colorful lights, typically red, yellow, and blue. A large sign at the top reads 'Test Your Strength!' in bold, playful lettering. The machine[’]s base is made of polished wood, with a polished, vintage appearance. At the center is a sturdy metal pole, with a large bell hanging at the top, signaling when a successful attempt has been made. Along the length of the pole are markings indicating how strong you are.  A nearby sign says, 'Buy a mallet, strike the bell, win a prize.'[if the strongman attendant contains the mallet] You can see an over-sized mallet here.[end if]
+The High Striker is a room. The High Striker is west of the Ferris Wheel Ride, southwest of the Toss a Dime Game, and northwest of the Pitcher's Mound. The High Striker is outdoors. "This area features a tall, eye-catching machine adorned with bright, colorful lights, typically red, yellow, and blue. A large sign at the top reads 'Test Your Strength!' in bold, playful lettering. The machine[’]s base is made of polished wood, with a polished, vintage appearance. At the center is a sturdy metal pole, with a large bell hanging at the top, signaling when a successful attempt has been made. Along the length of the pole are markings indicating how strong you are.  A nearby sign says, 'Buy a mallet, strike the bell, win a prize.'[if the strongman attendant contains the mallet] You can see an over-sized mallet here.[end if]
 
-Spectators gather around, cheering on participants and offering lighthearted jabs and encouragement, creating a lively, competitive atmosphere. The sound of the mallet hitting the target is followed by the resonant clang of the bell (if struck), alongside the buzz of carnival music in the background. The Ticket Kiosk is back the way you came."
+Spectators gather around, cheering on participants and offering lighthearted jabs and encouragement, creating a lively, competitive atmosphere. The sound of the mallet hitting the target is followed by the resonant clang of the bell (if struck), alongside the buzz of carnival music in the background. The Ticket Kiosk is back the way you came and other games are northeast and northwest of here."
 
 The markings are here. The markings are scenery. Understand "marking" and "sign" and "signs" as markings. The description of markings is "There are five levels marked on the pole: Weakling, Getting There, Average, Almost There, and Muscle Man."
 
@@ -956,7 +998,7 @@ instead of taking when the noun is part of the Swiss army knife, say "That[']s p
 	
 The poster of Taylor Swift is carried by the Strongman Attendant. The description of the poster of Taylor Swift is "This is a poster of America[']s sweetheart, Taylor Swift."
 
-fuse13 is a fuse. fuse13 is carried by the Strongman Attendant. The fuse id of fuse13 is 13. The color of the fuse13 is magenta. Understand "magenta" as fuse13. 
+A magenta fuse called a fuse13 is carried by the Strongman Attendant. The fuse id of fuse13 is 13. The color of fuse13 is magenta. 
 
 The lever is here. The lever is fixed in place. Understand "bullseye" and "target" as lever. The description of the lever is "There is a bullseye on the base. I guess this is where you have to hit the mallet."
 
@@ -1005,8 +1047,125 @@ after Reading a command :
 		increase score by 5;
 		now the player carries the fuse13;
 		reject the player's command.
+		
+Section 6 - Toss A Dime
 
-Section 6 - Show Facade
+Before going northeast when the location is the High Striker and the Toss a Dime Game is unvisited:
+	display Figure of DimeToss;
+	continue the action.
+	
+Before looking when the location is the Toss a Dime Game:
+	display Figure of DimeToss.
+
+The Toss a Dime Game is northeast of the high striker. "The game booth is adorned with vibrant colors—red-and-white striped awnings, twinkling lights, and eye-catching signage that reads 'TOSS A DIME – WIN A PRIZE!'. You can see prizes of all shapes and sizes hang around the booth, from stuffed animals and novelty toys to shiny trinkets and quirky collectibles. The larger prizes are prominently displayed to entice passersby. Rows of gleaming plates sparkle under overhead lights, their glass surfaces reflecting the surrounding glow.
+
+The distinctive 'ping' of dimes hitting plates creates a rhythmic soundtrack, punctuated by the occasional satisfying 'plop' when a dime lands perfectly. Victorious shouts mix with playful groans of near-misses, creating a symphony of excitement. Nearby, the hum of other booths, upbeat carnival music, and the distant laughter of children add to the lively backdrop. The booth operator calls out enthusiastically, 'Step right up! Test your skill! Win big!' Their energetic pitch draws in curious onlookers."
+
+Tossing relates one thing to another.
+The verb to toss means the tossing relation.
+
+Tossing is an action applying to two things.
+Understand "toss [something preferably held] at/on [something]" as tossing.
+
+[Understand "throwing" as tossing.]
+		
+instead of tossing a dime when the location is the Toss a Dime Game:
+	if the second noun is the plate and the player carries a dime:
+		show dime toss results;
+		rule succeeds;
+	otherwise:
+		say "That seems futile to me.";
+		rule fails.
+
+The small plush monkey is carried by the Toss a Dime Attendant. Understand "stuffie" and "stuffed" as monkey. The description of the monkey is "You feel rather underwhelmed as you look at the small plush monkey on a keychain."
+			
+To show dime toss results:
+	say "You toss the dime. [run paragraph on]";
+	if a random chance of 3 in 5 succeeds:
+		say "The dime hits the plate, starts to spins, and lands in the center of the plate.";
+		say "The attendant shouts out, 'Winner! Winner! He hands you a a small stuffed monkey.";
+		now the small plush monkey is carried by the player;
+		now the noun is nowhere;
+	otherwise:	
+		let N be a random number between 1 and 3;
+		if N is:
+			-- 1: say "The dime hits the plate and bounces straight off.";
+			-- 2: say "Like skipping a stone in water, the dime skitters off the plate.";
+			-- 3: say "The dime lands on the edge of the plate. You watch in antipation until the dime falls off the plate.";
+		now the noun is nowhere;
+	
+The plate is a supporter. The plate is scenery in the Toss a Dime Game. Understand "plates" as plate. The description of the plate is "This is a small, flat plate, almost a saucer. You are meant to toss a dime on this plate to win a prize!"
+
+The Toss A Dime Attendant is a man in the the Toss a Dime Game. Understand "attendent" and "operator" as the Toss a Dime attendant. 
+
+instead of examining the toss a dime attendant:
+	choose a random row in Table of Bored Responses;
+	Let A be response entry;
+	say "This is another bored teenager. [A][line break]";
+
+Section 7 - Pitcher's Mound
+
+Before going southeast when the location is the High Striker and the Pitcher's Mound is unvisited:
+	display Figure of MilkBottles;
+	continue the action.
+	
+Before looking when the location is the Pitcher's Mound:
+	display Figure of MilkBottles.
+
+The Pitcher's Mound is a room southeast of the high striker. "
+
+The dart game is framed by a vibrant backdrop of colorful balloons, neatly arranged in rows on the target wall. Reds, blues, yellows, and greens create a striking rainbow of colors. Large plush toys, oversized teddy bears, and quirky trinkets are prominently displayed above and around the booth. These prizes sway slightly in the breeze, tempting passersby. Twinkling strings of  lights illuminate the area, drawing attention even from a distance.
+
+The sharp, satisfying pop of balloons bursting punctuates the air, often followed by cheers of delight or groans of near-misses. The game operator enthusiastically calls out, 'Step right up! Pop three balloons, win a prize!'  Their voice cuts through the carnival noise, inviting new players to join. Players laugh, cheer, or gasp as they throw, with spectators adding to the energy by shouting encouragement like, 'You got this!' or 'One more to win the bear!'"
+
+The small plush donkey is carried by the Pitcher's Mound Attendant. Understand "stuffie" and "stuffed" as donkey. The description of the donkey is "You feel rather underwhelmed as you look at the small plush donkey on a keychain."
+
+a baseball is a kind of thing. The Pitcher's Mound Attendant carries three baseballs.
+
+the milk bottles are scenery in the Pitcher's Mound. Understand "bottle" as milk bottles.
+
+Throwing is an action applying to two things.
+Understand "throw [something preferably held] at/on [something]" as throwing.
+
+instead of giving a dime to the pitcher's mound attendant:
+	say "The attendant gives you three baseballs in return.";
+	now the pitcher's mound attendant carries the noun;
+	now the player carries all baseballs;
+	stop the action.
+
+instead of throwing a baseball at the milk bottles:
+	if the second noun is the bottles and the player carries any baseball:
+		show pitcher's mound results;
+		rule succeeds;
+	otherwise:
+		say "That seems futile to me.";
+		rule fails.
+		
+To show pitcher's mound results:
+	say "You wind up and throw the baseball at the milk bottles. [run paragraph on]";
+	if a random chance of 2 in 5 succeeds:
+		say "The ball hits the bottles in the sweet spot and they go flying off the platform.";
+		say "The attendant shouts out, 'Winner! Winner! He hands you a a small stuffed donkey.";
+		now the small plush donkey is carried by the player;
+		now all baseballs are carried by the Toss a Dime Attendant;
+	otherwise:
+		now the noun is nowhere;
+		let N be a random number between 1 and 5;
+		if N is:
+			-- 1: say "You knocked over one bottles. You can do better than that.";
+			-- 2: say "You knocked over two bottles. Too bad.";
+			-- 3: say "You knocked over three bottles. So close.";
+			-- 4: say "You knocked over four bottles. Too bad.";
+			-- 5: say "You knocked over five bottles. Better luck next time."
+
+The Pitcher's Mound Attendant is a man in the the Pitcher's Mound. Understand "attendent" and "operator" as the Pitcher's Mound attendant. 
+
+instead of examining the pitcher's mound attendant:
+	choose a random row in Table of Bored Responses;
+	Let A be response entry;
+	say "This is another bored teenager. [A][line break]";
+
+Section 8 - Show Facade
 
 Before going west when the location is the Ticket kiosk and the Show Facade is unvisited:
 	display Figure of LittleEgyptFacade;
@@ -1027,21 +1186,21 @@ The Barker is a person in Show Facade. The description of the barker is "Here is
 
 Ladies and gentlemen, boys and girls, gather [']round! [line break]Step right up and witness the spectacle that[’]s taken the world by storm! [line break]She walks, she talks, she crawls on her belly like a reptile. [line break]Behold the one, the only Little Egypt, performing her legendary Dance of the Pyramids—a dazzling display of mystery, grace, and exotic allure! [line break]For just a dime, a mere one tenth of a dollar, prepare to be transported to the sands of Cairo, where enchantment and wonder await!"
 
-Check going west when the location is the Show Facade and the barker is not carrying the dime:
+Check going west when the location is the Show Facade and the barker is not carrying a dime:
 	say "It[']ll cost you a dime to go that way.";
 	stop the action.
 	
-Check going west when the location is the Show Facade and the barker is carrying the dime:
+Check going west when the location is the Show Facade and the barker is carrying a dime:
 	Continue the action.
 
 After giving when the noun is dime and the second noun is barker:
 	say "You hand over a dime, and the barker nods, waving you through. As you step past the entrance, the air feels thicker, almost humid, and the sounds of the carnival fade away. You’ve entered an entirely different world now—one filled with the scents of incense and exotic spices, and the low, hypnotic music of a faraway land. Before you, a series of dimly lit tents stretch out, their flaps slightly swaying in the breeze. Intrigued, you take your first step into the Little Egypt Show. You can now head west into the show."
 
-Section 7 - Show Tent	
+Section 9 - Show Tent	
 
 Test Egypt with "brief / s / w / l at barker / give dime to barker / w / z / z / n / z / z / z / z / z / e / e / n / i / score".
 
-Before going west when the location is the Show Facade and the Show Tent is unvisited and barker is carrying the dime:
+Before going west when the location is the Show Facade and the Show Tent is unvisited and barker is carrying a dime:
 	display Figure of LittleEgyptShow;
 	continue the action.
 	
@@ -1062,14 +1221,14 @@ The lantern is an electric lamp. It is in the wall. Understand "lamp" as the lan
 
 after taking the lantern for the first time:
 	say "Taken.";
-	if  the flashlight is unseen
+	if  the player does not carry the flashlight
 		begin;
 			play the sound of Bell;
 			increase score by 5;
-			now the lantern is seen;
 		end if.
+	now the lantern is seen;
 
-The folding chair is a enterable scenery supporter in Show Tent. The description of the Folding Chair is "This is one of many folding chairs in the tent tonight."
+The folding chair is a enterable scenery supporter in the Show Tent. The description of the Folding Chair is "This is one of many folding chairs in the tent tonight."
 
 LittleEgyptAuto is a scene. 
 LittleEgyptAuto begins when the player has been in the show tent for exactly three turns or the player has been on the folding chair for exactly two turns.. 
@@ -1088,7 +1247,7 @@ Every turn during LittleEgyptAuto:
 		rule succeeds.
 
 Instead of doing something other than waiting, looking, listening or examining during LittleEgyptAuto:
-	say "You[']re much too entranced to do anything other than watch the show. You are riveted[if the player is in the folding chair] to your seat[end if]!".
+	say "You[']re much too entranced by the show to do anything other than watch the show. You are riveted[if the player is in the folding chair] to your seat[end if]!".
 
 Table of LittleEgypt Events
 event
@@ -1099,7 +1258,7 @@ event
 "The music alternates between hauntingly slow melodies and rapid, energetic drum beats, creating an emotional arc that keeps you entranced. Little Egypt relies on the music[']s dynamic changes to tell a story with movements reflecting joy, sorrow, seduction, and celebration."
 "The performance concludes with a dramatic flourish of a fast-paced shimmy, a bold spin, and Little Egypt dramatically casts off her veils. The dancer takes a bow to enthusiastic applause, leaving you spellbound by the sensual yet artful display."
 
-Section 8 - Ferris Wheel
+Section 10 - Ferris Wheel
 
 After going east from the high striker when the ferris wheel ride is unvisited:
 	display Figure of FerrisWheel;
@@ -1123,7 +1282,7 @@ The Ferris Wheel operator is a man in the Ferris Wheel Ride. Understand "attende
 instead of examining the ferris wheel operator:
 	choose a random row in Table of Bored Responses;
 	Let A be response entry;
-	say "This is another bored teenager. [A]";
+	say "This is another bored teenager. [A][line break]";
 	stop the action.
 
 instead of giving the ferris wheel ticket to the ferris wheel operator:
@@ -1131,13 +1290,13 @@ instead of giving the ferris wheel ticket to the ferris wheel operator:
 	now the ferris wheel operator carries the ferris wheel ticket;
 	say "[line break]As you step into the gently swaying gondola, a faint creak accompanies the safety bar locking into place. The Ferris wheel begins its slow ascent, the hum of its machinery blending with the distant sounds of carnival games and laughter below. A soft breeze brushes against your face as the gondola rises higher, offering an ever-expanding view of the fairgrounds.
 
-With each rotation, the world transforms. At the peak, the carnival sprawls beneath you like a miniature village, its vibrant lights twinkling against the twilight sky. The sound of the midway fades into a soft murmur, replaced by the serene quiet of being high above the bustling crowd. Beyond the fair, the horizon stretches endlessly, framed by the glow of distant city lights or rolling countryside.
+With each rotation, the world transforms. At the peak, the carnival sprawls beneath you like a miniature village, its vibrant lights twinkling against the twilight sky. The sound of the midway fades into a soft murmur, replaced by the serene quiet of being high above the bustling crowd. Beyond the fair, the horizon stretches endlessly, framed by the glow of distant city lights.
 
 The gondola sways gently, adding a hint of thrill to the tranquil ride. You exchange smiles with your companions, pointing out tiny figures darting between booths or the dizzying motion of other rides below. The Ferris wheel begins its descent, and the lively carnival sounds grow louder once again, bringing you back into the heart of the action.
 
 Whether you’re seeking a moment of calm, a romantic view, or the sheer wonder of seeing the world from above, the Ferris wheel delivers an unforgettable ride that captures the magic of the carnival."
 
-Section 9 - Bumper Cars
+Section 11 - Bumper Cars
 
 After going northwest from the ticket kiosk when the bumper cars ride is unvisited:
 	display Figure of BumperCars;
@@ -1159,7 +1318,7 @@ The Bumper Cars operator is a man in the Bumper Cars Ride. Understand "attendent
 instead of examining the Bumper Cars operator:
 	choose a random row in Table of Bored Responses;
 	Let A be response entry;
-	say "This is another bored teenager. [A] ";
+	say "This is another bored teenager. [A][line break]";
 	stop the action.
 
 instead of giving the bumper cars ticket to the bumper cars operator:
@@ -1173,7 +1332,7 @@ The thrill of the bumper cars is in the collisions—every thud and jolt accompa
 
 The ride is a whirlwind of laughter, harmless competition, and shared joy. As the music fades and the cars slow to a stop, you climb out with a wide grin, already looking forward to your next turn in the driver’s seat."
 
-Section 10 - Fortune Teller
+Section 12 - Fortune Teller
 
 After going southeast from the ticket kiosk when the fortune teller booth is unvisited:
 	display Figure of FortuneTeller;
@@ -1195,7 +1354,7 @@ The fortune teller[’]s voice is low and melodic, weaving an air of intrigue as
 
 As the reading concludes, the fortune teller gazes into your eyes with a cryptic smile and delivers their final words of wisdom. Whether you leave with a sense of wonder, excitement, or unease, the encounter lingers with you—a touch of magic amid the carnival’s chaos, as if you’ve glimpsed something beyond the ordinary."
 
-Section 11 - Carousel
+Section 13 - Carousel
 
 After going northeast from the ticket kiosk when the carousel ride is unvisited:
 	display Figure of Carousel;
@@ -1206,7 +1365,7 @@ Before looking when the location is the Carousel Ride:
 
 The Carousel Ride is a room. The Carousel Ride is outdoors. The Carousel Ride is northeast of the Ticket Kiosk. "The carousel is a timeless carnival attraction, radiating charm and nostalgia with its brightly painted horses, vibrant lights, and cheerful music. The circular platform is adorned with a canopy of swirling colors, gold trim, and decorative mirrors that reflect the flickering bulbs lining its edges.
 
-Rows of hand-carved animals, most often horses with flowing manes, are arranged in a circle. Each is painted in vivid colors, detailed with golden saddles and ribbons. Some carousels also feature exotic creatures like lions, tigers, or sea dragons, adding whimsy to the ride. The animals rise and fall gently as the carousel spins, mimicking a galloping motion.
+Rows of hand-carved animals, most often horses with flowing manes, are arranged in a circle. Each is painted in vivid colors, detailed with golden saddles and ribbons. It also features exotic creatures like lions, tigers, and sea dragons, adding whimsy to the ride. The animals rise and fall gently as the carousel spins, mimicking a galloping motion.
 
 The carousel[’]s warm, playful tunes drift across the midway, inviting riders of all ages to enjoy its simple delight. Children laugh as they choose their favorite animals, while adults savor the nostalgia of the spinning ride. As it rotates, the carousel becomes a moving work of art, blending motion, color, and music into an enchanting centerpiece of the carnival. The Ticket Kiosk is back the way you came."
 
@@ -1215,7 +1374,7 @@ The Carousel operator is a man in the Carousel Ride. Understand "attendent" and 
 instead of examining the Carousel operator:
 	choose a random row in Table of Bored Responses;
 	Let A be response entry;
-	say "This is another bored teenager. [A] ";
+	say "This is another bored teenager. [A][line break]";
 	stop the action.
 
 instead of giving the carousel ticket to the carousel operator:
@@ -1227,7 +1386,7 @@ As the ride picks up speed, the world outside becomes a blur of glowing carnival
 
 For a few moments, you’re transported into a magical world, the worries of the day fading away with each graceful rotation. Whether you’re enjoying the ride alone, with friends, or sharing a special moment with family, the carousel[’]s charm captures a timeless blend of whimsy and wonder. As it slows to a stop, you step off with a smile, the music lingering in your ears as you rejoin the bustling carnival."
 
-Section 12 - Head of the Line
+Section 14 - Head of the Line
 
 Head of the Line is a room. Head of the Line is south of Ticket Kiosk. Head of the Line is north of Ride Entrance. The Head of the Line is outdoors. "You are standing in front of a ticket taker with his hand open waiting for your ticket. The entrance to the ride is south of here. The ride operator tells you that you[']re lucky you showed up when you did because this will be the last trip through Hell Ride. You notice that all the other cars are empty. The Ticket Kiosk is back the way you came."
 
@@ -1236,7 +1395,7 @@ The Hell Ride operator is a man in Head of the Line. Understand "attendent" and 
 instead of examining the Hell Ride operator:
 	choose a random row in Table of Bored Responses;
 	Let A be response entry;
-	say "This is another bored teenager. [A] ";
+	say "This is another bored teenager. [A][line break]";
 	stop the action.
 
 Check going south when the location is Head of the Line and the Ride operator does not have the hell ride ticket:
@@ -1279,12 +1438,12 @@ after examining when the noun is pile of junk:
 	
 after taking the flashlight for the first time:
 	say "Taken.";
-	if  the lantern is unseen
+	if  the player does not carry the lantern
 		begin;
 			play the sound of Bell;
 			increase score by 5;
-			now the flashlight is seen;
 		end if.
+	now the flashlight is seen;
 
 Section 2 - Maintenance Office
 
@@ -1319,14 +1478,15 @@ Instead of drinking the coffee mug: say "That looks nasty. You decide against dr
 
 The desk is in the maintenance office. The desk is a supporter. The desk is fixed in place. A drawer is part of the desk. The drawer is a closed openable container. The drawer is scenery. The description of the desk is "It[']s a desk. There are coffee stains and cigarette burns from years of abuse. The single drawer is [if the drawer is open]open[otherwise]shut[end if]."
 
-Nearness relates a room (called A) to a room (called B) when the number of moves from B to A is less than 1. The verb to be near means the nearness relation.
+Nearness relates a room (called A) to a room (called B) when the number of moves from B to A is less than 2. The verb to be near means the nearness relation.
 
 The radio is a device on the desk. The radio is switched off and fixed in place. The description of the radio is "[if switched on]The radio burbles on[otherwise]The radio is off[end if]." 
 
 Every turn when the radio is switched on and location is near the maintenance office:
 	choose a random row in Table of Songs;
-	Let S be song entry;
-	say "[one of]You hear [S] playing on the radio.[or][S] plays on the radio.[or]You sing along to [S].[or]The DJ announces that [S] will be up next.[at random]";
+	let A be the artist entry;
+	Let S be the song entry;
+	say "[one of]You hear [A][']s '[S]' playing on the radio.[or]'[S]' by [A] plays on the radio.[or]You sing along to [A][']s '[S]'.[or]The DJ announces that '[S]' by [A] will be up next.[at random]";
 
 Rule for showing action of the radio:
 	if the radio is switched on, say "Through the static, you pick up hear bits of the latest number one hit.";
@@ -1554,14 +1714,14 @@ The square hums with noise: the crowd’s taunts, the crack of objects hitting w
 
 The wooden stocks are here. The wooden stocks are a supporter. The wooden stocks are fixed in place. The description of the wooden stocks is "At the square[']s center stand a row of crude wooden stocks, their heavy beams stained from years of weather and use. Iron clasps hold the unfortunate captives by their wrists and necks, their bodies forced into unnatural, humiliating postures." 
 
-Instead of looking under a thing which is underlaid by fuse1 when fuse1 is lost:
+Instead of looking under a thing which is underlaid by the aqua fuse when the fuse1 is lost:
 	say "You find [the list of things which underlie the noun]!";
 	now every thing which underlies the noun is carried by the player;
 	now every thing which underlies the noun does not underlie the noun;
 	say "Taken.";
 	play the sound of Bell;
 	increase score by 5;
-	now fuse1 is found.
+	now the fuse1 is found.
 	
 Section 3 - Gallows Room
 
@@ -1575,7 +1735,7 @@ As the executioner adjusts the noose around the man’s neck, the crowd falls si
 
 The gallows platform is here. The gallows platform is a supporter. The gallows platform is fixed in place. Understand "gallows" as gallows platform. The description of the gallows platform is "At the center of the square, rising like a grim monument to mortality, stands the gallows—a wooden platform, darkened by age and weather, with thick ropes hanging like vipers poised to strike." 
 
-Instead of looking under a thing which is underlaid by fuse3 when fuse3 is lost:
+Instead of looking under a thing which is underlaid by crimson fuse when fuse3 is lost:
 	say "You find [the list of things which underlie the noun]!";
 	now every thing which underlies the noun is carried by the player;
 	now every thing which underlies the noun does not underlie the noun;
@@ -1596,7 +1756,7 @@ Gray clouds loom overhead, nature’s somber backdrop to the grim spectacle. A r
 
 The pyre is scenery in the Stake Room. The pyre is a container. understand "bonfire", "fire", "stake", "stakes", "flame", and "flames" as the pyre. The description of the pyre is "At the center, three wooden stakes rise ominously from a circular pyre of logs and kindling, their rough surfaces darkened by smoke from countless such scenes before. Bound tightly to these stakes are three women, their wrists and ankles secured with coarse, heavy ropes. Their faces tell different stories—one of defiance, another of resignation, and the third of pure terror." 
 
-Instead of taking fuse5 when fuse5 is lost:
+Instead of taking the emerald fuse when fuse5 is lost:
 	say "You find [the list of things which contain the noun]!";
 	now the noun is in the player;
 	say "Taken.";
@@ -1625,7 +1785,7 @@ The rack is here. It is scenery. The description of the rack is "The rack has a 
 The brazier is here. It is scenery. The description of the brazier is "It is glowing red with an infernal heat."
 The riveted iron-bound door is here. It is scenery.
 
-Instead of looking under a thing which is underlaid by fuse7 when fuse7 is lost:
+Instead of looking under a thing which is underlaid by the gray fuse when fuse7 is lost:
 	say "You find [the list of things which underlie the noun]!";
 	now every thing which underlies the noun is carried by the player;
 	now every thing which underlies the noun does not underlie the noun;
@@ -1650,7 +1810,7 @@ There is just lone problem: the guillotine is being raised and lowered by some m
 
 The guillotine platform is here. The guillotine platform is a supporter. Understand "scaffold" as guillotine platform. The description of the guillotine platform is "At the center of the square stands a raised wooden platform, stark and imposing, where the grim sentence is to be carried out." 
 
-Instead of looking under a thing which is underlaid by fuse9 when fuse9 is lost:
+Instead of looking under a thing which is underlaid by the indigo fuse when fuse9 is lost:
 	say "You find [the list of things which underlie the noun]!";
 	now every thing which underlies the noun is carried by the player;
 	now every thing which underlies the noun does not underlie the noun;
@@ -1671,7 +1831,7 @@ The exit ensures Hell Ride isn’t just an experience—it lingers, blurring the
 
 The merchandise stand is scenery in the Ride Exit. The merchandise stand is a container. Understand "stand" as merchandise. The description of the merchandise is "The stand is bathed in red light, adding to the ominous mood." 
 
-Instead of taking fuse11 when fuse11 is lost:
+Instead of taking the khaki fuse when the fuse11 is lost:
 	say "You find [the list of things which underlie the noun]!";
 	now the noun is carried by the player;
 	say "Taken.";
@@ -1740,7 +1900,7 @@ The description of a button is "This is a [color of the holder of the item descr
 The printed name of a button is "a [color of the holder of the item described] button".
 
 To decide what number is --/the button id of (B - a button):
-	decide on the button id of the holder of B.
+	decide on the panel id of the holder of B.
 	
 To decide what color is --/the color of (B - a button):
 	decide on the color of the holder of B.
@@ -1770,7 +1930,7 @@ To decide if (D - a dial) is properly set:
 	decide no.
 	
 To decide what number is --/the dial id of (D - a dial):
-	decide on the dial id of the holder of D.
+	decide on the panel id of the holder of D.
 	
 To decide what color is --/the color of (D - a dial):
 	decide on the color of the holder of D.
@@ -1819,16 +1979,6 @@ Understand "light [something related by reversed incorporation]" as a light.
 Understand "[something related by reversed incorporation] light" as a light.
 
 Section 7 - The Monitor
-
-Table of Monitor Descriptions
-link number	figure choice		description
-0	Figure of ControlPanel		"The monitor now shows a nothing but snow."
-1	Figure of ControlPanelStocks		"The monitor now shows a tableau of poor unfortunate townsfolk locked in stocks."
-3	Figure of ControlPanelGallows		"The monitor now shows a scene of someone waiting to be hanged."
-5	Figure of ControlPanelStake		"The monitor now displays a scene of witches being burned at the stake."
-7	Figure of ControlPanelDungeon		"The monitor now shows the implements of torture in the dungeon."
-9	Figure of ControlPanelGuillotine		"The monitor now shows a tableau of a guillotine rising and falling over the ride exit."
-11	Figure of ControlPanelExit		"The monitor shows a the gift shop located at the Hell Ride exit."
 
 ControlPanelImage is a figure name that varies. ControlPanelImage is Figure of ControlPanel.
 
@@ -1919,7 +2069,7 @@ Last report switching off a button (this is the final report switching off a but
 Part 3 - Regions
 
 The Midway is a region. Parking Lot, Ticket Kiosk, Concession Stand, High Striker, Show Facade, Show Tent, Head of the Line,
-Ferris Wheel Ride, Bumper Cars Ride, Fortune Teller, and Carousel Ride are in the Midway. The sky is in the Midway.
+Ferris Wheel Ride, Bumper Cars Ride, Fortune Teller, Carousel Ride, Toss a Dime Game, and the Pitcher's Mound are in the Midway. The sky is in the Midway.
 
 HellRide is a region. Ride Entrance, Stocks Room, Gallows Room, Stake Room, Dungeon, Guillotine Room, Ride Exit is in HellRide.
 

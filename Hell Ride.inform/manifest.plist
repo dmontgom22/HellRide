@@ -46,11 +46,15 @@
             <string>Figures\FortuneTeller.png</string>
             <key>22</key>
             <string>Figures\Carousel.png</string>
+            <key>23</key>
+            <string>Figures\DimeToss.png</string>
+            <key>24</key>
+            <string>Figures\MilkBottles.png</string>
         </dict>
         <key>Sounds</key>
         <dict>
-            <key>23</key>
-            <string>Sounds\Bell.ogg</string>
+            <key>25</key>
+            <string>Sounds\Silence.ogg</string>
         </dict>
     </dict>
 </plist>

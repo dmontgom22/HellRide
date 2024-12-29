@@ -35,12 +35,14 @@ picture 19 "C:\HellRide\Hell Ride.materials\Figures\FerrisWheel.png"
 picture 20 "C:\HellRide\Hell Ride.materials\Figures\BumperCars.png"
 picture 21 "C:\HellRide\Hell Ride.materials\Figures\FortuneTeller.png"
 picture 22 "C:\HellRide\Hell Ride.materials\Figures\Carousel.png"
-sound 23 "C:\HellRide\Hell Ride.materials\Sounds\Bell.ogg"
+picture 23 "C:\HellRide\Hell Ride.materials\Figures\DimeToss.png"
+picture 24 "C:\HellRide\Hell Ride.materials\Figures\MilkBottles.png"
+sound 25 "C:\HellRide\Hell Ride.materials\Sounds\Silence.ogg"
 
 ! Placeholder variables
 
 placeholder [IFID] = "E0A5AFB9-18BF-4485-B083-426CA51CCE70"
-placeholder [RELEASE] = "113"
+placeholder [RELEASE] = "114"
 placeholder [YEAR] = "2024"
 placeholder [TITLE] = "Hell Ride"
 placeholder [AUTHOR] = "No Shoes"
@@ -72,6 +74,6 @@ template path "C:\Users\danamont\Documents\Inform\Templates"
 template path "C:\Program Files\Inform\Internal\Templates"
 css
 website "Standard"
-status instruction ||&nbsp;<a href="source:story.ni#line18"><img border=0 src=inform:/doc_images/Reveal.png></a>||
+status instruction ||&nbsp;<a href="source:story.ni#line5"><img border=0 src=inform:/doc_images/Reveal.png></a>||
 status alternative ||Using 'Release along with a file of "Such-and-Such" called "whatever.pdf"', perhaps to add a manual, or a welcoming note&nbsp;<a href=inform:/doc399.html><img border=0 src=inform:/doc_images/help.png></a>||
 status alternative ||Using 'Release along with the introductory postcard'&nbsp;<a href=inform:/doc402.html><img border=0 src=inform:/doc_images/help.png></a>||
