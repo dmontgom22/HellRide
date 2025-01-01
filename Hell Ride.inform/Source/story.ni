@@ -21,7 +21,7 @@ The story title is "Hell Ride".
 The story author is "No Shoes".
 The story headline is "The ride of a lifetime...".
 The story genre is "Horror".
-The release number is 114.
+The release number is 115.
 The story description is "You've decided to stay and enjoy the carnival anyway."
 The story creation year is 2024.
 
@@ -541,7 +541,7 @@ Chapter 1 - Electrical Area
 
 Section 1 - Colors
 
-Color is a kind of value. The colors are nondescript, aqua, crimson, emerald, gray, indigo, khaki, and magenta. 
+Color is a kind of value. The colors are nondescript, aqua, crimson, emerald, gray, indigo, khaki, magenta, orange, and quartz. 
 
 Understand "grey" as gray. 
 
@@ -584,7 +584,7 @@ To decide what color is --/the shared color of --/a/the (PT - a panel-fitted thi
 	decide on the color of the holder of PT.
 
 After unlocking an electrical panel with something (this is the report unlocking an electrical panel rule):
-	say "Using the screwdriver on the Swiss Army knife, you remove the screws to the cover of the electrical panel.".
+	say "Using the screwdriver on the Swiss Army knife, you remove the screws holding the electrical panel shut.".
 
 Every electrical closet contains an electrical panel (called its electrical panel).
 The panel id of Electrical Closet One's electrical panel is 1. The color of Electrical Closet One's electrical panel is aqua.
@@ -612,10 +612,13 @@ To decide what number is --/the socket id of (S - a socket):
 To decide what color is --/the color of (S - a socket):
 	decide on the color of the holder of S.
 
+Check inserting something into a socket when the holder of the second noun is not open:
+	say "You should probably open the electrical panel first." instead.
+
 Check inserting something into a socket (this is the can only insert fuses into sockets rule):
 	if the noun is not a fuse, say "That won[']t fit in the socket." instead.
 	
-After inserting a fuse into a socket when the color of the noun is the shared color of the second noun (this is the matching fuse snick rule):
+After inserting a fuse into a socket when the color of the noun is the shared color of the second noun and the holder of the second noun is open (this is the matching fuse snick rule):
 	say "You hear a satisfying snick as the [color of the noun] fuse slides into place.".
 	
 Understand "socket [something related by reversed incorporation]" as a socket.
@@ -704,6 +707,9 @@ To decide if (S - a socket) is properly fused:
 			decide yes;
 	decide no.
 	
+check switching on a switched off switch when the holder of the noun is not open:
+	say "You should probably open the electrical panel first." instead.
+
 Check switching on a switched off switch (this is the nothing happens unless socket is properly fused rule):
 	unless the corresponding socket of the noun is properly fused:
 		say "Nothing obvious happens." instead.
@@ -777,7 +783,7 @@ Test g1 with "brief / s / w / give dime to barker / w /  z / z / z / z / z / z /
 
 Test g2 with "s / e / l at two dollar bill / get two dollar bill / buy mallet / hit lever with mallet / g / g / g / g / 2 / w / n".
 
-Test g3 with "s / e  / ne / toss dime on plate / sw / se / give dime to attendant / throw baseball at bottles / nw / w / n"
+Test g3 with "s / e  / ne / toss dime on plate / sw / se / give dime to attendant / throw baseball at bottles / throw baseball at bottles / throw baseball at bottles / throw baseball at bottles / nw / w / n"
 
 Test Games with "Test g1 / test g2 / test g3".
 
@@ -858,7 +864,9 @@ The seat is part of the beater car. The seat is a supporter. It is fixed in plac
 
 Your keys underlie the seat. Understand "car key", "car keys", and "key" as the keys. The description of the keys is "These are your car keys. It[']s a wonder you could even find them, your house is such a mess."
 
-The glove box is part of the beater car. The glove box is a locked openable container. Your keys unlock the glove box. Understand "glove compartment" and "compartment" as the glove box. The gloves are inside the glove box. The gloves are wearable. The description of the gloves is "A nice set of leather gloves. They[']re very warm."
+The glove box is part of the beater car. The glove box is a locked openable container. Your keys unlock the glove box. Understand "glove compartment" and "compartment" as the glove box. 
+
+The gloves are inside the glove box. The gloves are wearable. The description of the gloves is "A nice set of fur-lined leather gloves. They[']re very warm." The printed name of the gloves is "gloves".
 
 Instead of looking under a thing which is underlaid by something:
 	say "You find [the list of things which underlie the noun]!";
@@ -1042,26 +1050,26 @@ After hitting the lever when second noun is the mallet 4 times:
 	say "You swing the mallet one more time. The bell rings as the striker reaches the top of the pole. The attendant says, 'You[']re a Muscle Man. Here[']s a prize for you.'";
 	say "Which prize would you like? 1) a teddy bear, 2) a Swiss Army knife, 3) a poster of Taylor Swift, or 4) a magenta fuse?".
 	
-after Reading a command :
-	if the player's command matches "1" and the location is the high striker and the player is not carrying the teddy bear and the player is not carrying the Swiss army knife and the player is not carrying the poster of Taylor swift and the player is not carrying the fuse13:
+after Reading a command when the location is the high striker:
+	if the player's command matches "1" and the player is not carrying the teddy bear and the player is not carrying the Swiss army knife and the player is not carrying the poster of Taylor swift and the player is not carrying the fuse13:
 		play the sound of Bell;
 		increase score by 5;
 		say "You are now holding a cute little teddy bear.";
 		now the player carries the teddy bear;
 		reject the player's command;
-	if the player's command matches "2" and the location is the high striker and the player is not carrying the teddy bear and the player is not carrying the Swiss army knife and the player is not carrying the poster of Taylor swift and the player is not carrying the fuse13:
+	if the player's command matches "2" and the player is not carrying the teddy bear and the player is not carrying the Swiss army knife and the player is not carrying the poster of Taylor swift and the player is not carrying the fuse13:
 		say "You are now holding a Swiss Army knife.";
 		play the sound of Bell;
 		increase score by 5;
 		now the player carries the Swiss army knife;
 		reject the player's command;
-	if the player's command matches "3" and the location is the high striker and the player is not carrying the teddy bear and the player is not carrying the Swiss army knife and the player is not carrying the poster of Taylor swift and the player is not carrying the fuse13:
+	if the player's command matches "3" and the player is not carrying the teddy bear and the player is not carrying the Swiss army knife and the player is not carrying the poster of Taylor swift and the player is not carrying the fuse13:
 		say "You are now holding a poster of Taylor Swift.";
 		play the sound of Bell;
 		increase score by 5;
 		now the player carries the poster of Taylor swift;
 		reject the player's command;
-	if the player's command matches "4" and the location is the high striker and the player is not carrying the teddy bear and the player is not carrying the Swiss army knife and the player is not carrying the poster of Taylor swift and the player is not carrying the fuse13:
+	if the player's command matches "4" and the player is not carrying the teddy bear and the player is not carrying the Swiss army knife and the player is not carrying the poster of Taylor swift and the player is not carrying the fuse13:
 		say "You are now holding a magenta colored fuse.";
 		play the sound of Bell;
 		increase score by 5;
@@ -1079,7 +1087,9 @@ Before looking when the location is the Toss a Dime Game:
 
 The Toss a Dime Game is northeast of the high striker. "The game booth is adorned with vibrant colors—red-and-white striped awnings, twinkling lights, and eye-catching signage that reads 'TOSS A DIME – WIN A PRIZE!'. You can see prizes of all shapes and sizes hang around the booth, from stuffed animals and novelty toys to shiny trinkets and quirky collectibles. The larger prizes are prominently displayed to entice passersby. Rows of gleaming plates sparkle under overhead lights, their glass surfaces reflecting the surrounding glow.
 
-The distinctive 'ping' of dimes hitting plates creates a rhythmic soundtrack, punctuated by the occasional satisfying 'plop' when a dime lands perfectly. Victorious shouts mix with playful groans of near-misses, creating a symphony of excitement. Nearby, the hum of other booths, upbeat carnival music, and the distant laughter of children add to the lively backdrop. The booth operator calls out enthusiastically, 'Step right up! Test your skill! Win big!' Their energetic pitch draws in curious onlookers."
+The distinctive 'ping' of dimes hitting plates creates a rhythmic soundtrack, punctuated by the occasional satisfying 'plop' when a dime lands perfectly. Victorious shouts mix with playful groans of near-misses, creating a symphony of excitement. Nearby, the hum of other booths, upbeat carnival music, and the distant laughter of children add to the lively backdrop. The booth operator calls out enthusiastically, 'Step right up! Test your skill! Win big!' Their energetic pitch draws in curious onlookers.
+
+This game costs, surprisingly, a dime."
 
 Tossing relates one thing to another.
 The verb to toss means the tossing relation.
@@ -1098,22 +1108,36 @@ instead of tossing a dime when the location is the Toss a Dime Game:
 		rule fails.
 
 The small plush monkey is carried by the Toss a Dime Attendant. Understand "stuffie" and "stuffed" as monkey. The description of the monkey is "You feel rather underwhelmed as you look at the small plush monkey on a keychain."
+
+An orange fuse called a fuse15 is carried by the Toss a Dime Attendant. The fuse id of fuse15 is 15. The color of fuse15 is orange. 
+
+The large stuffed giraffe is carried by the Toss a Dime Attendant. Understand "plush" or "stuffie" as giraffe. The description of the giraffe is "This is a large stuffed giraffe. Large does not mean nice."
 			
 To show dime toss results:
 	say "You toss the dime. [run paragraph on]";
 	if a random chance of 3 in 5 succeeds:
 		say "The dime hits the plate, starts to spins, and lands in the center of the plate.";
-		say "The attendant shouts out, 'Winner! Winner! He hands you a a small stuffed monkey.";
-		now the small plush monkey is carried by the player;
+		say "The attendant shouts out, 'Winner! Winner! [run paragraph on]";
+		let N be a random number between 1 and 3;
+		if N is:
+			-- 1: 
+				say "He hands you a an orange fuse."; 
+				now the fuse15 is carried by the player;
+			-- 2: 
+				say "He hands you a small stuffed monkey."; 
+				now the small plush monkey is carried by the player;
+			-- 3: 
+				say "He hands you a large stuffed giraffe."; 
+				now the large stuffed giraffe is carried by the player;
 		now the noun is nowhere;
-	otherwise:	
+	otherwise:
 		let N be a random number between 1 and 3;
 		if N is:
 			-- 1: say "The dime hits the plate and bounces straight off.";
 			-- 2: say "Like skipping a stone in water, the dime skitters off the plate.";
 			-- 3: say "The dime lands on the edge of the plate. You watch in antipation until the dime falls off the plate.";
 		now the noun is nowhere;
-	
+
 The plate is a supporter. The plate is scenery in the Toss a Dime Game. Understand "plates" as plate. The description of the plate is "This is a small, flat plate, almost a saucer. You are meant to toss a dime on this plate to win a prize!"
 
 The Toss A Dime Attendant is a man in the the Toss a Dime Game. Understand "attendent" and "operator" as the Toss a Dime attendant. 
@@ -1134,9 +1158,13 @@ Before looking when the location is the Pitcher's Mound:
 
 The Pitcher's Mound is a room southeast of the high striker. "The milk bottle ball toss is a classic carnival game that combines skill, strength, and a bit of luck. The setup features a pyramid of brightly colored milk bottles stacked on a sturdy platform—three on the bottom, two in the middle, and one on top. Players stand behind a marked line and toss baseballs, aiming to knock down as many bottles as possible. Clearing the entire stack wins the grand prize, while partial knockdowns can earn smaller rewards.
 
-The booth buzzes with energy, its colorful banners and flashing lights drawing a lively crowd. The satisfying clatter of falling bottles mixes with cheers and groans from players and spectators. A carnival barker calls out, 'Step right up and test your aim!' Prizes—ranging from small toys to giant stuffed animals—hang prominently, enticing players to take a shot. With every toss, the game delivers moments of suspense, joy, and fun, making it a favorite at the carnival."
+The booth buzzes with energy, its colorful banners and flashing lights drawing a lively crowd. The satisfying clatter of falling bottles mixes with cheers and groans from players and spectators. A carnival barker calls out, 'Step right up and test your aim! Three balls for just a dime.' Prizes—ranging from small toys to giant stuffed animals—hang prominently, enticing players to take a shot. With every toss, the game delivers moments of suspense, joy, and fun, making it a favorite at the carnival."
 
 The small plush donkey is carried by the Pitcher's Mound Attendant. Understand "stuffie" and "stuffed" as donkey. The description of the donkey is "You feel rather underwhelmed as you look at the small plush donkey on a keychain."
+
+An quartz fuse called a fuse17 is carried by the Pitcher's Mound Attendant. The fuse id of fuse17 is 17. The color of fuse17 is quartz. 
+
+The large stuffed elephant is carried by the Pitcher's Mound Attendant. Understand "plush" or "stuffie" as elephant. The description of the elephant is "This is a large stuffed elephant. Large does not mean nice."
 
 a baseball is a kind of thing. The Pitcher's Mound Attendant carries five baseballs.
 
@@ -1164,8 +1192,18 @@ To show pitcher's mound results:
 	if a random chance of 2 in 5 succeeds:
 		say "The ball hits the bottles in the sweet spot and they go flying off the platform.";
 		say "The attendant shouts out, 'Winner! Winner! He hands you a a small stuffed donkey.";
-		now the small plush donkey is carried by the player;
-		now all baseballs are carried by the Toss a Dime Attendant;
+		let N be a random number between 1 and 3;
+		if N is:
+			-- 1: 
+				say "He hands you a an quartz fuse."; 
+				now the fuse17 is carried by the player;
+			-- 2: 
+				say "He hands you a small stuffed donkey."; 
+				now the small plush donkey is carried by the player;
+			-- 3: 
+				say "He hands you a large stuffed elephant."; 
+				now the large stuffed elephant is carried by the player;
+		now all baseballs are carried by the Pitcher's Mound Attendant;
 	otherwise:
 		now the noun is nowhere;
 		let N be a random number between 1 and 5;
@@ -1173,9 +1211,9 @@ To show pitcher's mound results:
 			-- 1: say "You knocked over one bottles. You can do better than that.";
 			-- 2: say "You knocked over two bottles. Too bad.";
 			-- 3: say "You knocked over three bottles. So close.";
-			-- 4: say "You knocked over four bottles. Too bad.";
+			-- 4: say "You knocked over four bottles. So sad.";
 			-- 5: say "You knocked over five bottles. Better luck next time."
-
+			
 The Pitcher's Mound Attendant is a man in the the Pitcher's Mound. Understand "attendent" and "operator" as the Pitcher's Mound attendant. 
 
 instead of examining the pitcher's mound attendant:
