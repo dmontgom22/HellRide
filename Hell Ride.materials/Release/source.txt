@@ -8,6 +8,10 @@ Use maximum things understood at once of at least 200.
 Use dynamic memory allocation of at least 65536.
 Use maximum text length of at least 4096.
 Use DICT_WORD_SIZE of 15.
+use MAX_STATIC_DATA of 300000.
+use MAX_ACTIONS of 280.
+use MAX_VERBS of 350.
+use MAX_SYMBOLS of 28000.
 
 Use scoring.
 Use American Dialect.
@@ -21,7 +25,7 @@ The story title is "Hell Ride".
 The story author is "No Shoes".
 The story headline is "The ride of a lifetime...".
 The story genre is "Horror".
-The release number is 114.
+The release number is 115.
 The story description is "You've decided to stay and enjoy the carnival anyway."
 The story creation year is 2024.
 
@@ -249,6 +253,8 @@ A thing can be broken or unbroken. A thing is usually unbroken.
 A thing can be seen or unseen. A thing is usually unseen.
 
 Carry out examining a thing, now the noun is seen.
+
+a dime is a kind of thing. Understand "shiny" and "coin" as a dime. The description of a dime is "It[']s a dime. Ten cents. One tenth of a dollar. And very shiny."
 	
 [scored rooms]
 A room can be scored or unscored. A room is usually unscored.
@@ -316,7 +322,6 @@ After reading a command:
 	if the player's command includes "please":
 		say "Please do not say 'please.'";
 		reject the player's command.
-		
 
 Rule for printing the player's obituary:
 	if Control Panel Nine's button is switched on:
@@ -375,47 +380,47 @@ response
 
 [Songs]
 Table of Songs
-artist	song
-"Led Zeppelin"	"Stairway to Heaven"
-"Pink Floyd"	"Comfortably Numb"
-"Aaretha Franklin"	"Respect"
-"Steely Dan"	"Aja"
-"Taylor Swift"	"Shake It Off"
-"Pharell"	"Happy"
-"Dolly Parton"	"Jolene"
-"Van Morrison"	"Brown Eyed Girl"
-"Weezer"	"Africa"
-"Johnny Cash"	"Folsom Prison Blues"
-"Cat Stevens"	"Peace Train"
-"Lou Reed"	"Sweet Jane"
-"Queen"	"Bohemian Rhapsody"
-"Bob Seger"	"Old Time Rock[']N[']Roll"
-"Boston"	"More That A Feeling"
-"Roger Miller"	"King of the Road"
-"Elvis Presley"	"Suspicious Minds"
-"Jimmy Buffet"	"Margaritaville"
-"The Cure"	"Friday I'm In Love"
-"Dave Edmunds"	"I Hear You Knocking"
-"Bruddah Iz"	"Over The Rainbow"
-"Aerosmith"	"Dream On"
-"Pau Simon"	"Kodachrome"
-"R.E.M."	"Losing My Religion"
-"Modern English"	"Melt With You"
-"Rick Astley"	"Never Gonna Give You Up"
-"Bob Marley"	"No Woman, No Cry"
-"Smokey Robinson"	"Tracks Of My Tears"
-"Billy Joel"	"Piano Man"
-"Warren Zevon"	"Werewolves Of London"
-"Dusty Springield"	"Son Of A Preacher Man"
-"Kermit the Frog"	"Rainbow Connection"
-"David Bowie"	"Young Americans"
-"Ben E. King"	"Stand By Me"
-"Blondie"	"Heart Of Glass"
-"Neil Diamond"	"Sweet Caroline"
-"The Grateful Dead"	"Ripple"
-"Bruce Springsteen"	"Born To Run"
-"The Talking Heads"	"Psycho Killer"
-"The Village People"	"YMCA"
+artist	song	rickroll
+"Led Zeppelin"	"Stairway to Heaven"	false
+"Pink Floyd"	"Comfortably Numb"	false
+"Aaretha Franklin"	"Respect"	false
+"Steely Dan"	"Aja"	false
+"Taylor Swift"	"Shake It Off"	false
+"Pharell"	"Happy"	false
+"Dolly Parton"	"Jolene"	false
+"Van Morrison"	"Brown Eyed Girl"	false
+"Weezer"	"Africa"	false
+"Johnny Cash"	"Folsom Prison Blues"	false
+"Cat Stevens"	"Peace Train"	false
+"Lou Reed"	"Sweet Jane"	false
+"Queen"	"Bohemian Rhapsody"	false
+"Bob Seger"	"Old Time Rock[']N[']Roll"	false
+"Boston"	"More That A Feeling"	false
+"Roger Miller"	"King of the Road"	false
+"Elvis Presley"	"Suspicious Minds"	false
+"Jimmy Buffet"	"Margaritaville"	false
+"The Cure"	"Friday I'm In Love"	false
+"Dave Edmunds"	"I Hear You Knocking"	false
+"Bruddah Iz"	"Over The Rainbow"	false
+"Aerosmith"	"Dream On"	false
+"Paul Simon"	"Kodachrome"	false
+"R.E.M."	"Losing My Religion"	false
+"Modern English"	"Melt With You"	false
+"Rick Astley"	"Never Gonna Give You Up"	true
+"Bob Marley"	"No Woman, No Cry"	false
+"Smokey Robinson"	"Tracks Of My Tears"	false
+"Billy Joel"	"Piano Man"	false
+"Warren Zevon"	"Werewolves Of London"	false
+"Dusty Springield"	"Son Of A Preacher Man"	false
+"Kermit the Frog"	"Rainbow Connection"	false
+"David Bowie"	"Young Americans"	false
+"Ben E. King"	"Stand By Me"	false
+"Blondie"	"Heart Of Glass"	false
+"Neil Diamond"	"Sweet Caroline"	false
+"The Grateful Dead"	"Ripple"	false
+"Bruce Springsteen"	"Born To Run"	false
+"The Talking Heads"	"Psycho Killer"	false
+"The Village People"	"YMCA"	false
 
 [Monitor Descriptions]
 Table of Monitor Descriptions
@@ -427,6 +432,28 @@ link number	figure choice		description
 7	Figure of ControlPanelDungeon		"The monitor now shows the implements of torture in the dungeon."
 9	Figure of ControlPanelGuillotine		"The monitor now shows a tableau of a guillotine rising and falling over the ride exit."
 11	Figure of ControlPanelExit		"The monitor shows a the gift shop located at the Hell Ride exit."
+
+[prizes]
+Table of High Striker Prizes
+index	object	description
+"1"	teddy bear	"a teddy bear"
+"2"	swiss army knife	"a Swiss Army knife"
+"3"	poster of taylor swift	"a poster of Taylor Swift"
+"4"	fuse13	"a magenta fuse"
+
+Table of Toss a Dime Prizes
+index	object	description
+"1"	small plush monkey	"a stuffed monkey"
+"2"	fuse15	"a orange fuse"
+"3"	poster of billie eilish	"a poster of Billie Eilish"
+"4"	pocket mirror	"a small pocket mirror"
+
+Table of Pitcher's Mound Prizes
+index	object	description
+"1"	fuse17	"a quartz fuse"
+"2"	small plush donkey	"a plush donkey"
+"3"	goldfish	"a goldfish in a bowl"
+"4"	poster of lourde	"a poster of Lourde"
 
 [Description of Hell Ride]			
 When play begins:
@@ -519,7 +546,7 @@ The price of the money is $30.00.
 
 Sound of Bell is the file "Silence.ogg".
 
-a dime is a kind of thing. five dimes underlie the seat. Understand "shiny" and "coin" as a dime. The description of a dime is "It[']s a dime. Ten cents. One tenth of a dollar. And very shiny."
+five dimes underlie the seat. 
 
 			
 Chapter 7 - RNG Seed, Money, Dimes, Sounds - For Release Only
@@ -531,8 +558,7 @@ The price of the money is $20.00.
 
 Sound of Bell is the file "Bell.ogg".
 
-one dime underlies the seat. Understand "shiny" and "coin" as a dime. The description of a dime is "It[']s a dime. Ten cents. One tenth of a dollar. And very shiny."
-
+two dimes underlie the seat.
 
 	
 Part 2 - The Game
@@ -541,7 +567,8 @@ Chapter 1 - Electrical Area
 
 Section 1 - Colors
 
-Color is a kind of value. The colors are nondescript, aqua, crimson, emerald, gray, indigo, khaki, and magenta. 
+[the colors values are #00FFFF, #E32636, #00C957, #6F00FF, #6F00FF, #BDB76B. none harvested for magenta, orange, and quartz]
+Color is a kind of value. The colors are nondescript, aqua, crimson, emerald, gray, indigo, khaki, magenta, orange, and quartz. 
 
 Understand "grey" as gray. 
 
@@ -584,7 +611,7 @@ To decide what color is --/the shared color of --/a/the (PT - a panel-fitted thi
 	decide on the color of the holder of PT.
 
 After unlocking an electrical panel with something (this is the report unlocking an electrical panel rule):
-	say "Using the screwdriver on the Swiss Army knife, you remove the screws to the cover of the electrical panel.".
+	say "Using the screwdriver on the Swiss Army knife, you remove the screws holding the electrical panel shut.".
 
 Every electrical closet contains an electrical panel (called its electrical panel).
 The panel id of Electrical Closet One's electrical panel is 1. The color of Electrical Closet One's electrical panel is aqua.
@@ -612,10 +639,13 @@ To decide what number is --/the socket id of (S - a socket):
 To decide what color is --/the color of (S - a socket):
 	decide on the color of the holder of S.
 
+Check inserting something into a socket when the holder of the second noun is not open:
+	say "You should probably open the electrical panel first." instead.
+
 Check inserting something into a socket (this is the can only insert fuses into sockets rule):
 	if the noun is not a fuse, say "That won[']t fit in the socket." instead.
 	
-After inserting a fuse into a socket when the color of the noun is the shared color of the second noun (this is the matching fuse snick rule):
+After inserting a fuse into a socket when the color of the noun is the shared color of the second noun and the holder of the second noun is open (this is the matching fuse snick rule):
 	say "You hear a satisfying snick as the [color of the noun] fuse slides into place.".
 	
 Understand "socket [something related by reversed incorporation]" as a socket.
@@ -704,6 +734,9 @@ To decide if (S - a socket) is properly fused:
 			decide yes;
 	decide no.
 	
+check switching on a switched off switch when the holder of the noun is not open:
+	say "You should probably open the electrical panel first." instead.
+
 Check switching on a switched off switch (this is the nothing happens unless socket is properly fused rule):
 	unless the corresponding socket of the noun is properly fused:
 		say "Nothing obvious happens." instead.
@@ -777,7 +810,7 @@ Test g1 with "brief / s / w / give dime to barker / w /  z / z / z / z / z / z /
 
 Test g2 with "s / e / l at two dollar bill / get two dollar bill / buy mallet / hit lever with mallet / g / g / g / g / 2 / w / n".
 
-Test g3 with "s / e  / ne / toss dime on plate / sw / se / give dime to attendant / throw baseball at bottles / nw / w / n"
+Test g3 with "s / e  / ne / toss dime on plate / 3 / sw / se / give dime to attendant / throw baseball at bottles / 3 / nw / w / n"
 
 Test Games with "Test g1 / test g2 / test g3".
 
@@ -858,7 +891,9 @@ The seat is part of the beater car. The seat is a supporter. It is fixed in plac
 
 Your keys underlie the seat. Understand "car key", "car keys", and "key" as the keys. The description of the keys is "These are your car keys. It[']s a wonder you could even find them, your house is such a mess."
 
-The glove box is part of the beater car. The glove box is a locked openable container. Your keys unlock the glove box. Understand "glove compartment" and "compartment" as the glove box. The gloves are inside the glove box. The gloves are wearable. The description of the gloves is "A nice set of leather gloves. They[']re very warm."
+The glove box is part of the beater car. The glove box is a locked openable container. Your keys unlock the glove box. Understand "glove compartment" and "compartment" as the glove box. 
+
+The gloves are inside the glove box. The gloves are wearable. The description of the gloves is "A nice set of fur-lined leather gloves. They[']re very warm." The printed name of the gloves is "gloves".
 
 Instead of looking under a thing which is underlaid by something:
 	say "You find [the list of things which underlie the noun]!";
@@ -1006,7 +1041,7 @@ The Strongman Attendant is here. Understand "attendent" and "operator" as attend
 
 The teddy bear is carried by the Strongman Attendant. The description of the teddy bear is "This is a teddy bear like you had when you were a kid. Right down to the red bow around its neck." 
 
-The Swiss Army knife is a thing. The Swiss Army knife is carried by the Strongman Attendant. The description of the Swiss army knife is "This is the standard issue Swiss Army knife. It has [a list of things which are part of the item described]."  The printed name of the Swiss Army knife is "Swiss Army knife". 
+The Swiss Army knife is carried by the Strongman Attendant. The description of the Swiss army knife is "This is the standard issue Swiss Army knife. It has [a list of things which are part of the item described]."  The printed name of the Swiss Army knife is "Swiss Army knife". 
 
 The screwdriver is part of the swiss army knife. The description of the screwdriver is "It[']s a handy tool that[']s part of the Swiss Army knife."
 The awl is part of the swiss army knife. The description of the awl is "It[']s a handy tool that[']s part of the Swiss Army knife."
@@ -1037,36 +1072,27 @@ Check hitting:
 Carry out hitting when the player is carrying the mallet:
 	say "You lift the mallet high and bring it down on the lever with all your might! The striker rises towards the bell stopping at '[a random strength pattern between weakling and almost there]'.  C[']mon! You can do better than that!";
 	
+HighStrikerWin is a truth state that varies. HighStrikerWin is false.
 After hitting the lever when second noun is the mallet 4 times:
 	play the sound of Bell;
+	now HighStrikerWin is true;
 	say "You swing the mallet one more time. The bell rings as the striker reaches the top of the pole. The attendant says, 'You[']re a Muscle Man. Here[']s a prize for you.'";
-	say "Which prize would you like? 1) a teddy bear, 2) a Swiss Army knife, 3) a poster of Taylor Swift, or 4) a magenta fuse?".
+	say "Which prize would you like? [run paragraph on]";
+	repeat with N running from 1 to the number of rows in the Table of High Striker Prizes:
+		say "[index in row N of the Table of High Striker Prizes]) [description in row N of the Table of High Striker Prizes][if N < number of rows in the Table of High Striker Prizes], [otherwise]?[end if]".
 	
-after Reading a command :
-	if the player's command matches "1" and the location is the high striker and the player is not carrying the teddy bear and the player is not carrying the Swiss army knife and the player is not carrying the poster of Taylor swift and the player is not carrying the fuse13:
+after reading a command when the location is the high striker and HighStrikerWin is true:
+	let C be "[the player's command]";
+	if there is an index of C in the Table of High Striker Prizes:
+		choose a row with an index of C in the Table of High Striker Prizes;
 		play the sound of Bell;
-		increase score by 5;
-		say "You are now holding a cute little teddy bear.";
-		now the player carries the teddy bear;
+		increase the score by 5;
+		say "You are now holding [description entry].";
+		now the player carries the object entry;
+		now HighStrikerWin is false;
 		reject the player's command;
-	if the player's command matches "2" and the location is the high striker and the player is not carrying the teddy bear and the player is not carrying the Swiss army knife and the player is not carrying the poster of Taylor swift and the player is not carrying the fuse13:
-		say "You are now holding a Swiss Army knife.";
-		play the sound of Bell;
-		increase score by 5;
-		now the player carries the Swiss army knife;
-		reject the player's command;
-	if the player's command matches "3" and the location is the high striker and the player is not carrying the teddy bear and the player is not carrying the Swiss army knife and the player is not carrying the poster of Taylor swift and the player is not carrying the fuse13:
-		say "You are now holding a poster of Taylor Swift.";
-		play the sound of Bell;
-		increase score by 5;
-		now the player carries the poster of Taylor swift;
-		reject the player's command;
-	if the player's command matches "4" and the location is the high striker and the player is not carrying the teddy bear and the player is not carrying the Swiss army knife and the player is not carrying the poster of Taylor swift and the player is not carrying the fuse13:
-		say "You are now holding a magenta colored fuse.";
-		play the sound of Bell;
-		increase score by 5;
-		now the player carries the fuse13;
-		reject the player's command.
+	otherwise:
+		continue the action.
 		
 Section 6 - Toss A Dime
 
@@ -1079,41 +1105,63 @@ Before looking when the location is the Toss a Dime Game:
 
 The Toss a Dime Game is northeast of the high striker. "The game booth is adorned with vibrant colors—red-and-white striped awnings, twinkling lights, and eye-catching signage that reads 'TOSS A DIME – WIN A PRIZE!'. You can see prizes of all shapes and sizes hang around the booth, from stuffed animals and novelty toys to shiny trinkets and quirky collectibles. The larger prizes are prominently displayed to entice passersby. Rows of gleaming plates sparkle under overhead lights, their glass surfaces reflecting the surrounding glow.
 
-The distinctive 'ping' of dimes hitting plates creates a rhythmic soundtrack, punctuated by the occasional satisfying 'plop' when a dime lands perfectly. Victorious shouts mix with playful groans of near-misses, creating a symphony of excitement. Nearby, the hum of other booths, upbeat carnival music, and the distant laughter of children add to the lively backdrop. The booth operator calls out enthusiastically, 'Step right up! Test your skill! Win big!' Their energetic pitch draws in curious onlookers."
+The distinctive 'ping' of dimes hitting plates creates a rhythmic soundtrack, punctuated by the occasional satisfying 'plop' when a dime lands perfectly. Victorious shouts mix with playful groans of near-misses, creating a symphony of excitement. Nearby, the hum of other booths, upbeat carnival music, and the distant laughter of children add to the lively backdrop. The booth operator calls out enthusiastically, 'Step right up! Test your skill! Win big!' Their energetic pitch draws in curious onlookers.
+
+This game costs, surprisingly, a dime."
 
 Tossing relates one thing to another.
 The verb to toss means the tossing relation.
 
 Tossing is an action applying to two things.
 Understand "toss [something preferably held] at/on [something]" as tossing.
-
-[Understand "throwing" as tossing.]
 		
-instead of tossing a dime when the location is the Toss a Dime Game:
-	if the second noun is the plate and the player carries a dime:
-		show dime toss results;
-		rule succeeds;
+check tossing a dime when the location is the Toss a Dime Game:
+	if the player carries a dime:
+		continue the action;
 	otherwise:
 		say "That seems futile to me.";
 		rule fails.
 
 The small plush monkey is carried by the Toss a Dime Attendant. Understand "stuffie" and "stuffed" as monkey. The description of the monkey is "You feel rather underwhelmed as you look at the small plush monkey on a keychain."
-			
-To show dime toss results:
+
+An orange fuse called a fuse15 is carried by the Toss a Dime Attendant. The fuse id of fuse15 is 15. The color of fuse15 is orange. 
+
+The poster of Billie Eilish is carried by the Toss a Dime Attendant. The description of the poster is "This is a poster of Billie Eilish. Doesn[']t your sweetie like them?"
+
+The small pocket mirror is carried by the Toss a Dime Attendant. The description of the small pocket mirror is "This is a small pocket mirror. You could use it to check your hair."
+
+[instead of tossing a dime when the second noun is nothing, try tossing the noun on the plate instead.]
+
+TossADimeWin is a truth state that varies. TossADimeWin is false.
+instead of tossing a dime when the second noun is the plate:
 	say "You toss the dime. [run paragraph on]";
 	if a random chance of 3 in 5 succeeds:
-		say "The dime hits the plate, starts to spins, and lands in the center of the plate.";
-		say "The attendant shouts out, 'Winner! Winner! He hands you a a small stuffed monkey.";
-		now the small plush monkey is carried by the player;
-		now the noun is nowhere;
-	otherwise:	
+		now TossADimeWin is true;
+		say "The dime hits the plate, starts to spins, and lands in the center of the plate. The attendant shouts out, 'Winner! Winner! [run paragraph on]";
+		say "Which prize would you like? [run paragraph on]";
+		repeat with N running from 1 to the number of rows in the Table of Toss a Dime Prizes:
+			say "[index in row N of the Table of Toss a Dime Prizes]) [description in row N of the Table of Toss A Dime Prizes][if N < number of rows in the Table of Toss A Dime Prizes], [otherwise]?[end if]";
+	otherwise:
 		let N be a random number between 1 and 3;
 		if N is:
 			-- 1: say "The dime hits the plate and bounces straight off.";
 			-- 2: say "Like skipping a stone in water, the dime skitters off the plate.";
 			-- 3: say "The dime lands on the edge of the plate. You watch in antipation until the dime falls off the plate.";
-		now the noun is nowhere;
-	
+		now the noun is nowhere.
+
+after reading a command when the location is the Toss a Dime Game and TossADimeWin is true:
+	let C be "[the player's command]";
+	if there is an index of C in the Table of Toss a Dime Prizes:
+		choose a row with an index of C in the Table of Toss a Dime Prizes;
+		play the sound of Bell;
+		increase the score by 5;
+		say "You are now holding [description entry].";
+		now the player carries the object entry;
+		now TossADimeWin is false;
+		reject the player's command;
+	otherwise:
+		continue the action.
+			
 The plate is a supporter. The plate is scenery in the Toss a Dime Game. Understand "plates" as plate. The description of the plate is "This is a small, flat plate, almost a saucer. You are meant to toss a dime on this plate to win a prize!"
 
 The Toss A Dime Attendant is a man in the the Toss a Dime Game. Understand "attendent" and "operator" as the Toss a Dime attendant. 
@@ -1134,11 +1182,17 @@ Before looking when the location is the Pitcher's Mound:
 
 The Pitcher's Mound is a room southeast of the high striker. "The milk bottle ball toss is a classic carnival game that combines skill, strength, and a bit of luck. The setup features a pyramid of brightly colored milk bottles stacked on a sturdy platform—three on the bottom, two in the middle, and one on top. Players stand behind a marked line and toss baseballs, aiming to knock down as many bottles as possible. Clearing the entire stack wins the grand prize, while partial knockdowns can earn smaller rewards.
 
-The booth buzzes with energy, its colorful banners and flashing lights drawing a lively crowd. The satisfying clatter of falling bottles mixes with cheers and groans from players and spectators. A carnival barker calls out, 'Step right up and test your aim!' Prizes—ranging from small toys to giant stuffed animals—hang prominently, enticing players to take a shot. With every toss, the game delivers moments of suspense, joy, and fun, making it a favorite at the carnival."
+The booth buzzes with energy, its colorful banners and flashing lights drawing a lively crowd. The satisfying clatter of falling bottles mixes with cheers and groans from players and spectators. A carnival barker calls out, 'Step right up and test your aim! Three balls for just a dime.' Prizes—ranging from small toys to giant stuffed animals—hang prominently, enticing players to take a shot. With every toss, the game delivers moments of suspense, joy, and fun, making it a favorite at the carnival."
 
 The small plush donkey is carried by the Pitcher's Mound Attendant. Understand "stuffie" and "stuffed" as donkey. The description of the donkey is "You feel rather underwhelmed as you look at the small plush donkey on a keychain."
 
-a baseball is a kind of thing. The Pitcher's Mound Attendant carries five baseballs.
+An quartz fuse called a fuse17 is carried by the Pitcher's Mound Attendant. The fuse id of fuse17 is 17. The color of fuse17 is quartz. 
+
+The poster of Lourde is carried by the Pitcher's Mound Attendant. The description of the poster of Lourde is "This is a poster of Lourde. You love her singing."
+
+The goldfish is carried by the Pitcher's Mound Attendant. Understand "bowl" as goldfish. The description of the goldfish is "This is a small goldfish in a bowl. A pet is just what you need."
+
+a baseball is a kind of thing. Understand "ball" as baseball.The Pitcher's Mound Attendant carries five baseballs.
 
 the milk bottles are scenery in the Pitcher's Mound. Understand "bottle" as milk bottles.
 
@@ -1152,30 +1206,44 @@ instead of giving a dime to the pitcher's mound attendant:
 	stop the action.
 
 instead of throwing a baseball at the milk bottles:
-	if the second noun is the bottles and the player carries any baseball:
-		show pitcher's mound results;
-		rule succeeds;
+	if the player carries a baseball:
+		continue the action;
 	otherwise:
 		say "That seems futile to me.";
 		rule fails.
 		
-To show pitcher's mound results:
+PitchersMoundWin is a truth state that varies. PitchersMoundWin is false.
+instead of throwing a baseball at the milk bottles:
 	say "You wind up and throw the baseball at the milk bottles. [run paragraph on]";
-	if a random chance of 2 in 5 succeeds:
-		say "The ball hits the bottles in the sweet spot and they go flying off the platform.";
-		say "The attendant shouts out, 'Winner! Winner! He hands you a a small stuffed donkey.";
-		now the small plush donkey is carried by the player;
-		now all baseballs are carried by the Toss a Dime Attendant;
+	if a random chance of 3 in 5 succeeds:
+		now PitchersMoundWin is true;
+		say "The ball hits the bottles in the sweet spot and they go flying off the platform. The attendant shouts out, 'Winner! Winner! [run paragraph on]";
+		say "Which prize would you like? [run paragraph on]";
+		repeat with N running from 1 to the number of rows in the Table of Pitcher's Mound Prizes:
+			say "[index in row N of the Table of Pitcher's Mound Prizes]) [description in row N of the Table of Pitcher's Mound Prizes][if N < number of rows in the Table of Pitcher's Mound Prizes], [otherwise]?[end if]";
 	otherwise:
-		now the noun is nowhere;
 		let N be a random number between 1 and 5;
 		if N is:
-			-- 1: say "You knocked over one bottles. You can do better than that.";
+			-- 1: say "You knocked over one bottle. You can do better than that.";
 			-- 2: say "You knocked over two bottles. Too bad.";
 			-- 3: say "You knocked over three bottles. So close.";
-			-- 4: say "You knocked over four bottles. Too bad.";
-			-- 5: say "You knocked over five bottles. Better luck next time."
+			-- 4: say "You knocked over four bottles. So sad.";
+			-- 5: say "You knocked over five bottles. Better luck next time.";
+		now the noun is nowhere.
 
+after reading a command when the location is the Pitcher's Mound and PitchersMoundWin is true:
+	let C be "[the player's command]";
+	if there is an index of C in the Table of Pitcher's Mound Prizes:
+		choose a row with an index of C in the Table of Pitcher's Mound Prizes;
+		play the sound of Bell;
+		increase the score by 5;
+		say "You are now holding [description entry].";
+		now the player carries the object entry;
+		now PitchersMoundWin is false;
+		reject the player's command;
+	otherwise:
+		continue the action.
+			
 The Pitcher's Mound Attendant is a man in the the Pitcher's Mound. Understand "attendent" and "operator" as the Pitcher's Mound attendant. 
 
 instead of examining the pitcher's mound attendant:
@@ -1504,7 +1572,8 @@ Every turn when the radio is switched on and location is near the maintenance of
 	choose a random row in Table of Songs;
 	let A be the artist entry;
 	Let S be the song entry;
-	say "[one of]You hear [A][']s '[S]' playing on the radio.[or]'[S]' by [A] plays on the radio.[or]You sing along to [A][']s '[S]'.[or]The DJ announces that '[S]' by [A] will be up next.[at random]";
+	Let R be the rickroll entry;
+	say "[one of]You hear [A][']s '[S]' playing on the radio.[or]'[S]' by [A] plays on the radio.[or]You sing along to [A][']s '[S]'.[or]The DJ announces that '[S]' by [A] will be up next.[at random][if R is true] Yes, you have been Rick Rolled![end if]";
 
 Rule for showing action of the radio:
 	if the radio is switched on, say "Through the static, you pick up hear bits of the latest number one hit.";
