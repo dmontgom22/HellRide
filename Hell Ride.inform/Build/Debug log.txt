@@ -1,5 +1,5 @@
 Debugging log of inform7
-inform7 was called as: C:\Program Files\Inform\Compilers\inform7 -internal C:\Program Files\Inform\Internal -external C:\Users\danamont\Documents\Inform -project C:\HellRide\Hell Ride.inform -format=Inform6/32d
+inform7 was called as: C:\Program Files\Inform\Compilers\inform7 -release -internal C:\Program Files\Inform\Internal -external C:\Users\danamont\Documents\Inform -project C:\HellRide\Hell Ride.inform -format=Inform6/32
 Reading further switches from file: <no file>
 Completed expert settings file
 Using Inform kit 'BasicInformKit' (priority 0).
@@ -50,15 +50,14 @@ Loading kinds definitions from C:\Program Files\Inform\Internal\Inter\CommandPar
 Phase III ... Pre-pass through major nodes
 -----------------------------------------------------
 
-.... MajorNodes__pre_pass() took 7cs
-.... Task__verify() took 1cs
+.... MajorNodes__pre_pass() took 9cs
 
 
 -----------------------------------------------------
 Phase IV ... First pass through major nodes
 -----------------------------------------------------
 
-.... MajorNodes__pass_1() took 7cs
+.... MajorNodes__pass_1() took 10cs
 
 
 -----------------------------------------------------
@@ -72,13 +71,14 @@ Phase V ... Second pass through major nodes
 Phase VI ... Making the model world
 -----------------------------------------------------
 
+.... RTKindDeclarations__declare_base_kinds() took 1cs
 
 
 -----------------------------------------------------
 Phase VII ... Completing the model world
 -----------------------------------------------------
 
-.... World__stages_II_and_III() took 1cs
+.... World__stages_II_and_III() took 3cs
 
 
 -----------------------------------------------------
@@ -105,15 +105,16 @@ Phase X ... Phrases and rules
 Phase XI ... Generating inter (1)
 -----------------------------------------------------
 
-.... RTKindConstructors__compile() took 7cs
+.... RTKindConstructors__compile() took 6cs
 
 
 -----------------------------------------------------
 Phase XII ... Generating inter (2)
 -----------------------------------------------------
 
+.... CompletionModule__compile() took 1cs
 .... RTKindConstructors__compile_permissions() took 1cs
-.... ImperativeDefinitions__compile_first_block() took 7cs
+.... ImperativeDefinitions__compile_first_block() took 8cs
 
 
 ==== Phase XII.1 ... Slashing command grammar ====
@@ -132,9 +133,9 @@ Switch val is LOCAL_VARIABLE_NT'n' {local: LV"n"-number number}
  for kind number pointery 0
 Switch val is LOCAL_VARIABLE_NT'n' {local: LV"n"-number number}
  for kind number pointery 0
-.... Sequence__undertake_queued_tasks() took 128cs
-.... Sequence__undertake_queued_tasks() took 1cs
-.... RTPhrasebook__compile_entries() took 3cs
+.... Sequence__undertake_queued_tasks() took 148cs
+.... Sequence__undertake_queued_tasks() took 3cs
+.... RTPhrasebook__compile_entries() took 2cs
 
 
 -----------------------------------------------------
@@ -157,21 +158,20 @@ Phase XV ... Generating inter (5)
 
 .... Sequence__undertake_queued_tasks() took 1cs
 Providing for a total heap of 65536, given requirement of 65536
-.... Sequence__lint_inter() took 1cs
+.... Sequence__lint_inter() took 2cs
 
 
 -----------------------------------------------------
 Phase XVI ... Bibliographic work
 -----------------------------------------------------
 
-.... ReleaseInstructions__write_ifiction_and_blurb() took 18cs
 
 
 -----------------------------------------------------
 Phase XVII ... Complete
 -----------------------------------------------------
 
-Compile CPU time: 211 centiseconds
+Compile CPU time: 224 centiseconds
 
 
 ==== Phase XVII.1 ... step 1/15: read <- *memory ====
@@ -216,7 +216,7 @@ Compile CPU time: 211 centiseconds
 
 ==== Phase XVII.11 ... step 11/15: eliminate-redundant-labels ====
 
-2752 redundant label(s) removed
+2738 redundant label(s) removed
 
 
 ==== Phase XVII.12 ... step 12/15: eliminate-redundant-operations ====
@@ -7654,8 +7654,8 @@ HTML tag stack:
     47. html (opened at line 236 of 'D:/Programs/Adv/Inform7/Distribution/inweb/foundation-module/Chapter 5/HTML.w')
 
 
-Back end elapsed time: 465cs
-Total of 130 files written as streams.
+Back end elapsed time: 406cs
+Total of 129 files written as streams.
 Vacant escapes: %: ..CDE.GH..K.M.O.QR.TU...YZab..e..h.jklm.o.qr......yz0123456789
 Vacant escapes: $: .....F...J..........UVW.....................s.u..x.........789
 
