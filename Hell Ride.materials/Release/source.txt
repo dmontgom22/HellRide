@@ -4,7 +4,7 @@ Chapter 1 - Inform Settings
 
 Release along with cover art, a website, an introductory booklet, the "Quixe" interpreter, the source text, the solution, and library card.
 
-Use maximum things understood at once of at least 200.
+Use maximum things understood at once of at least 100.
 Use dynamic memory allocation of at least 65536.
 Use maximum text length of at least 4096.
 Use DICT_WORD_SIZE of 15.
@@ -25,7 +25,7 @@ The story title is "Hell Ride".
 The story author is "No Shoes".
 The story headline is "The ride of a lifetime...".
 The story genre is "Horror".
-The release number is 115.
+The release number is 116.
 The story description is "You've decided to stay and enjoy the carnival anyway."
 The story creation year is 2024.
 
@@ -254,8 +254,12 @@ A thing can be seen or unseen. A thing is usually unseen.
 
 Carry out examining a thing, now the noun is seen.
 
+a coin is a kind of thing.
+
 a dime is a kind of thing. Understand "shiny" and "coin" as a dime. The description of a dime is "It[']s a dime. Ten cents. One tenth of a dollar. And very shiny."
-	
+
+a quarter is a kind of thing. Understand "shiny" and "coin" as a quarter. The description of a quarter is "It[']s a quarter. Two bits. And very shiny."
+
 [scored rooms]
 A room can be scored or unscored. A room is usually unscored.
 
@@ -271,7 +275,6 @@ The sky is a backdrop. The sky is everywhere.
 The description of the sky is "[if the location is outdoors]It[']s a beautiful evening. Not a cloud in the sky. The moon is out and there are so many stars to see. A shooting star streaks across the sky.[otherwise]You[']re indoors. You can[']t see the sky here."
 
 The ground is a backdrop. The ground is everywhere. Understand "floor" as the ground.
-
 
 Section 7 - Hello Sailor
 
@@ -381,9 +384,9 @@ response
 [Songs]
 Table of Songs
 artist	song	rickroll
-"Led Zeppelin"	"Stairway to Heaven"	false
+"Led Zeppelin"	"Fool In The Rain"	false
 "Pink Floyd"	"Comfortably Numb"	false
-"Aaretha Franklin"	"Respect"	false
+"Aretha Franklin"	"Respect"	false
 "Steely Dan"	"Aja"	false
 "Taylor Swift"	"Shake It Off"	false
 "Pharell"	"Happy"	false
@@ -444,7 +447,7 @@ index	object	description
 Table of Toss a Dime Prizes
 index	object	description
 "1"	small plush monkey	"a stuffed monkey"
-"2"	fuse15	"a orange fuse"
+"2"	fuse15	"an orange fuse"
 "3"	poster of billie eilish	"a poster of Billie Eilish"
 "4"	pocket mirror	"a small pocket mirror"
 
@@ -540,7 +543,7 @@ Chapter 6 - RNG Seed, Money, Dimes, Sounds - Not for release
 			say "[item] has no description."]
 			
 When play begins:
-	seed the random-number generator with 1234.
+	seed the random-number generator with 4321.
 	
 The price of the money is $30.00. 
 
@@ -567,7 +570,7 @@ Chapter 1 - Electrical Area
 
 Section 1 - Colors
 
-[the colors values are #00FFFF, #E32636, #00C957, #6F00FF, #6F00FF, #BDB76B. none harvested for magenta, orange, and quartz]
+[the colors values are #00FFFF, #E32636, #00C957, #6F00FF, #6F00FF, #BDB76B, #FF00FF, #FFA500, and #E7BFB3]
 Color is a kind of value. The colors are nondescript, aqua, crimson, emerald, gray, indigo, khaki, magenta, orange, and quartz. 
 
 Understand "grey" as gray. 
@@ -751,6 +754,17 @@ Last report switching on a switch (this is the final report switching on a switc
 Last report switching off a switch (this is the final report switching off a switch rule):		
 	say "The [corresponding indicator of the noun]'s light turns off.".
 	
+The switch count is a number that varies. The switch count is 0.
+To count the switches:
+	now the switch count is 0;
+	if Electrical Closet One's electrical panel's switch is switched on and the Electrical Closet One's electrical panel's socket is properly fused, increment the switch count;
+	if Electrical Closet Three's electrical panel's switch is switched on and the Electrical Closet Three's electrical panel's socket is properly fused, increment the switch count;
+	if Electrical Closet Five's electrical panel's switch is switched on and the Electrical Closet Five's electrical panel's socket is properly fused, increment the switch count;
+	if Electrical Closet Seven's electrical panel's switch is switched on and the Electrical Closet Seven's electrical panel's socket is properly fused, increment the switch count;
+	if Electrical Closet Nine's electrical panel's switch is switched on and the Electrical Closet Nine's electrical panel's socket is properly fused, increment the switch count;
+	if Electrical Closet Eleven's electrical panel's switch is switched on and the Electrical Closet Eleven's electrical panel's socket is properly fused, increment the switch count;
+		
+	
 Section 8 - Electrical Room
 
 Electrical Room is a dark room.  The electrical room can be electromagnetic. The electrical room is electromagnetic. "The electrical room is a small but essential space hidden behind the carnival’s bright attractions. The air vibrates with electric energy, carrying the acrid scent of overheated wires and metal. Metal panels line the walls, some polished, others worn and streaked with grease.
@@ -800,9 +814,9 @@ Test Parking with "brief / get blueberries / eat blueberries / give coupon to op
 
 Test ToadAway with "brief / test parking / get in car / get parking stub / exit car / test games / test b1 / w / l under stocks / e / s / w"
 
-Test a1 with "s / buy fortune teller ticket / buy ferris wheel ticket / buy bumper cars ticket / buy carousel ticket / buy hell ride ticket / w / give dime to barker"
+Test a1 with "s / buy fortune teller ticket / buy ferris wheel ticket / buy bumper cars ticket / buy carousel ticket / buy hell ride ticket"
 
-Test a2 with "e / e / e / e / give ferris wheel ticket to ferris wheel operator / w / w / ne / give carousel ticket to carousel operator / sw / se / give fortune teller ticket to mysterious woman / nw / nw / give bumper cars ticket to bumper cars operator / se / n"
+Test a2 with "e / e / e / give ferris wheel ticket to ferris wheel operator / w / w / ne / give carousel ticket to carousel operator / sw / se / give fortune teller ticket to mysterious woman / nw / nw / give bumper cars ticket to bumper cars operator / se / n"
 
 Test Attractions with "test a1 / test a2"
 
@@ -810,7 +824,7 @@ Test g1 with "brief / s / w / give dime to barker / w /  z / z / z / z / z / z /
 
 Test g2 with "s / e / l at two dollar bill / get two dollar bill / buy mallet / hit lever with mallet / g / g / g / g / 2 / w / n".
 
-Test g3 with "s / e  / ne / toss dime on plate / 3 / sw / se / give dime to attendant / throw baseball at bottles / 3 / nw / w / n"
+Test g3 with "s / e  / ne / l at booth / l under booth / toss dime on plate / mercury / 3 / sw / se / give dime to attendant / throw baseball at bottles / 3 / nw / w / n"
 
 Test Games with "Test g1 / test g2 / test g3".
 
@@ -836,11 +850,15 @@ The Parking Attendant is a man in the the parking lot. Understand "attendent" an
 
 instead of examining the parking attendant:
 	choose a random row in Table of Bored Responses;
-	Let A be response entry;
-	say "This is another bored teenager. [A] [if the parking attendant carries the parking ticket] He has a parking ticket. The price of a parking ticket is [the price of the parking ticket].[end if][line break]";
+	Let R be response entry;
+	say "This is another bored teenager. [R] [if the parking attendant carries the parking ticket] He has a parking ticket. The price of a parking ticket is [the price of the parking ticket].[end if][line break]";
 	stop the action.
 
 The beater car is an open enterable container in the parking lot. The beater car is scenery. Understand "vehicle" and "car" as the beater car. The description of the beater car is "[if the player is in the beater car][bold type]Car Interior[roman type][line break][end if]This is your car. It[']s a 2002 Honda Civic and it[']s seen better days.[paragraph break][if the player is in the beater car]You[']re sitting inside your car. [end if]Even though it[']s old, it feels like an old friend. From the faux leather seats to the crack in the windshield. It[']s familiar and comforting. There[']s old fast food wrappers on the floor, clothes and text books in the back seat. There is an air freshener hanging from the rear view mirror. You see [the list of things which are part of the beater car]." 
+
+The text books are here. They are scenery. The description of the text books is "You see Introduction to Calculus, Statistics, and Heart of Darkness here."
+
+The clothes are here. They are scenery. The description of the clothes is "Your dirty clothes are strewn about. You really meant to do laundry before this."
 
 instead of looking when the player is in the beater car, try examining the beater car.
 
@@ -853,16 +871,16 @@ After taking blueberries:
 	
 after eating the blueberries, say "The blueberries were delicious. A true taste of summer."
 	
-instead of giving the coupon to the parking attendant:
+check giving the coupon to the parking attendant:
 	if the parking attendant carries the parking ticket:
 		now the price of the parking ticket is $3.00;
 		now the parking attendant carries the coupon;	
 		say "Given. The price of a parking ticket is now [the price of the parking ticket].";
+		stop the action;
 	otherwise if the player carries the parking ticket:
 		say "Given. But you already bought a parking ticket.";
 		now the parking attendant carries the coupon;
-	otherwise:
-		say "Danger, Will Robinson! This should never happen!"
+		stop the action.
 		
 instead of buying the parking ticket when the player is not in the car:
 	say "The attendant says, 'Don[']t forget to leave the stub on your dashboard'.";
@@ -890,6 +908,8 @@ The dashboard is part of the beater car. The dashboard is a supporter. The descr
 The seat is part of the beater car. The seat is a supporter. It is fixed in place. The description of the seat is "A faux leather seat that looked great when it was new."
 
 Your keys underlie the seat. Understand "car key", "car keys", and "key" as the keys. The description of the keys is "These are your car keys. It[']s a wonder you could even find them, your house is such a mess."
+
+three quarters underlie the seat.
 
 The glove box is part of the beater car. The glove box is a locked openable container. Your keys unlock the glove box. Understand "glove compartment" and "compartment" as the glove box. 
 
@@ -948,8 +968,8 @@ The Cashier is a man in the Ticket kiosk.
 
 instead of examining the cashier:
 	choose a random row in Table of Bored Responses;
-	Let A be response entry;
-	say "This is another bored teenager. [A][line break]";
+	Let R be response entry;
+	say "This is another bored teenager. [R][line break]";
 	stop the action.
 
 After buying the hell ride ticket:
@@ -992,9 +1012,10 @@ a menu is here.  Menu is fixed in place. The description of the menu is
 [line break]$2.50 Popcorn
 [line break]$1.50 Candy Apple
 [line break]$1.50 Cotton Candy
-[line break]$1.50 Soft Pretzel"
+[line break]$1.50 Soft Pretzel
+[line break]$1.00 Bubblegum"
 
-a can is here. The price of can is $2.00. The description of the can is "The soda is ice cold."
+a can is here. The price of can is $2.00. The description of the can is "This soda is ice cold."
 
 The can is a fluid container. The liquid of the can is Cola. understand "soda" as cola. The current volume of the can is 8.0 fl oz. Understand "Coke" as the can.
 
@@ -1006,13 +1027,15 @@ Instead of player drinking a fluid container:
 		if the current volume of the noun is less than 0.0 fl oz, now the current volume of the noun is 0.0 fl oz;
 		say "[The person asked] gulp down some [liquid of the noun]."
 
-A bucket of popcorn is here. The bucket of popcorn is edible. The price of popcorn is $2.50. The description of the popcorn is "The bucket of popcorn looks enormous!"
+bubblegum is here. bubblegum is edible. The price of bubblegum is $1.00. The description of the bubblegum is "This is a square of Bazooka Joe Bubblegum. Really now, is there any other?"
 
-A candy apple is here. The candy apple is edible. The price of a candy apple is $1.50. The description of the candy apple is "The candy apple is your typical caramel covered apple. It looks like it would get stuck in your teeth."
+a bucket of popcorn is here. The bucket of popcorn is edible. The price of popcorn is $2.50. The description of the popcorn is "The bucket of popcorn looks enormous!"
+
+a candy apple is here. The candy apple is edible. The price of a candy apple is $1.50. The description of the candy apple is "The candy apple is your typical caramel covered apple. It looks like it would get stuck in your teeth."
 
 cotton candy is here. Cotton candy is edible. The price of cotton candy is $1.50. The description of cotton candy is "The cotton candy is a mixture of pink and blue floss."
 
-A soft pretzel is here. The soft pretzel is edible. The price of the soft pretzel is $1.50. The description of the soft pretzel is "The soft pretzel is sprinkled generously with salt."
+a soft pretzel is here. The soft pretzel is edible. The price of the soft pretzel is $1.50. The description of the soft pretzel is "The soft pretzel is generously sprinkled with salt."
 
 Section 5 - High Striker
 
@@ -1031,7 +1054,7 @@ instead of taking the two dollar bill:
 	say "You now have [the price of the money].";
 	now the two dollar bill is nowhere.
 
-The High Striker is a room. The High Striker is west of the Ferris Wheel Ride, southwest of the Toss a Dime Game, and northwest of the Pitcher's Mound. The High Striker is outdoors. "This area features a tall, eye-catching machine adorned with bright, colorful lights, typically red, yellow, and blue. A large sign at the top reads 'Test Your Strength!' in bold, playful lettering. The machine[’]s base is made of polished wood, with a polished, vintage appearance. At the center is a sturdy metal pole, with a large bell hanging at the top, signaling when a successful attempt has been made. Along the length of the pole are markings indicating how strong you are.  A nearby sign says, 'Buy a mallet, strike the bell, win a prize.'[if the strongman attendant contains the mallet] You can see an over-sized mallet here.[end if]
+The High Striker is a room. The High Striker is west of the Ferris Wheel Ride, southwest of the Flip a Coin Game, and northwest of the Pitcher's Mound. The High Striker is outdoors. "This area features a tall, eye-catching machine adorned with bright, colorful lights, typically red, yellow, and blue. A large sign at the top reads 'Test Your Strength!' in bold, playful lettering. The machine[’]s base is made of polished wood, with a polished, vintage appearance. At the center is a sturdy metal pole, with a large bell hanging at the top, signaling when a successful attempt has been made. Along the length of the pole are markings indicating how strong you are.  A nearby sign says, 'Buy a mallet, strike the bell, win a prize.'[if the strongman attendant contains the mallet] You can see an over-sized mallet here.[end if]
 
 Spectators gather around, cheering on participants and offering lighthearted jabs and encouragement, creating a lively, competitive atmosphere. The sound of the mallet hitting the target is followed by the resonant clang of the bell (if struck), alongside the buzz of carnival music in the background. The Ticket Kiosk is back the way you came and other games are northeast and northwest of here."
 
@@ -1094,49 +1117,55 @@ after reading a command when the location is the high striker and HighStrikerWin
 	otherwise:
 		continue the action.
 		
-Section 6 - Toss A Dime
+Section 6 - Flip a Coin
 
-Before going northeast when the location is the High Striker and the Toss a Dime Game is unvisited:
+Before going northeast when the location is the High Striker and the Flip a Coin Game is unvisited:
 	display Figure of DimeToss;
 	continue the action.
 	
-Before looking when the location is the Toss a Dime Game:
+Before looking when the location is the Flip a Coin Game:
 	display Figure of DimeToss.
 
-The Toss a Dime Game is northeast of the high striker. "The game booth is adorned with vibrant colors—red-and-white striped awnings, twinkling lights, and eye-catching signage that reads 'TOSS A DIME – WIN A PRIZE!'. You can see prizes of all shapes and sizes hang around the booth, from stuffed animals and novelty toys to shiny trinkets and quirky collectibles. The larger prizes are prominently displayed to entice passersby. Rows of gleaming plates sparkle under overhead lights, their glass surfaces reflecting the surrounding glow.
+The Flip a Coin Game is northeast of the high striker. "The game booth is adorned with vibrant colors—red-and-white striped awnings, twinkling lights, and eye-catching signage that reads 'TOSS A DIME – WIN A PRIZE!'. You can see prizes of all shapes and sizes hang around the booth, from stuffed animals and novelty toys to shiny trinkets and quirky collectibles. The larger prizes are prominently displayed to entice passersby. Rows of gleaming plates sparkle under overhead lights, their glass surfaces reflecting the surrounding glow.
 
-The distinctive 'ping' of dimes hitting plates creates a rhythmic soundtrack, punctuated by the occasional satisfying 'plop' when a dime lands perfectly. Victorious shouts mix with playful groans of near-misses, creating a symphony of excitement. Nearby, the hum of other booths, upbeat carnival music, and the distant laughter of children add to the lively backdrop. The booth operator calls out enthusiastically, 'Step right up! Test your skill! Win big!' Their energetic pitch draws in curious onlookers.
+The distinctive 'ping' of dimes hitting plates creates a rhythmic soundtrack, punctuated by the occasional satisfying 'plop' when a dime lands perfectly. Victorious shouts mix with playful groans of near-misses, creating a symphony of excitement. Nearby, the hum of other booths, upbeat carnival music, and the distant laughter of children add to the lively backdrop. The booth operator calls out enthusiastically, 'Step right up! Test your skill! Win big!' Their energetic pitch draws in curious onlookers.[if a dime underlies the Flip a Coin booth] You thought you caught a flash of something coming from the area of the booth.[end if]
 
-This game costs, surprisingly, a dime."
+You[']re surprised to see that this game only costs a dime."
+
+The Flip a Coin booth is here. the Flip a Coin booth is scenery. The description of the Flip a Coin booth is "The game booth is adorned with vibrant colors—red-and-white striped awnings, twinkling lights, and eye-catching signage. [if a dime underlies the Flip a Coin booth] You can see something shiny on the ground under the booth.[end if]"
+
+a mercury dime is a dime. it underlies the Flip a Coin booth.
 
 Tossing relates one thing to another.
 The verb to toss means the tossing relation.
 
 Tossing is an action applying to two things.
 Understand "toss [something preferably held] at/on [something]" as tossing.
+Understand "flip [something preferably held] at/on [something]" as tossing.
 		
-check tossing a dime when the location is the Toss a Dime Game:
+check tossing a dime when the location is the Flip a Coin Game:
 	if the player carries a dime:
 		continue the action;
 	otherwise:
 		say "That seems futile to me.";
 		rule fails.
 
-The small plush monkey is carried by the Toss a Dime Attendant. Understand "stuffie" and "stuffed" as monkey. The description of the monkey is "You feel rather underwhelmed as you look at the small plush monkey on a keychain."
+The small plush monkey is carried by the Game Attendant. Understand "stuffie" and "stuffed" as monkey. The description of the monkey is "You feel rather underwhelmed as you look at the small plush monkey on a keychain."
 
-An orange fuse called a fuse15 is carried by the Toss a Dime Attendant. The fuse id of fuse15 is 15. The color of fuse15 is orange. 
+An orange fuse called a fuse15 is carried by the Game Attendant. The fuse id of fuse15 is 15. The color of fuse15 is orange. 
 
-The poster of Billie Eilish is carried by the Toss a Dime Attendant. The description of the poster is "This is a poster of Billie Eilish. Doesn[']t your sweetie like them?"
+The poster of Billie Eilish is carried by the Game Attendant. The description of the poster is "This is a poster of Billie Eilish. Doesn[']t your sweetie like them?"
 
-The small pocket mirror is carried by the Toss a Dime Attendant. The description of the small pocket mirror is "This is a small pocket mirror. You could use it to check your hair."
+The small pocket mirror is carried by the Game Attendant. The description of the small pocket mirror is "This is a small pocket mirror. You could use it to check your hair."
 
 [instead of tossing a dime when the second noun is nothing, try tossing the noun on the plate instead.]
 
 TossADimeWin is a truth state that varies. TossADimeWin is false.
-instead of tossing a dime when the second noun is the plate:
+instead of tossing a dime when the second noun is the plate and the player carries the noun:
 	say "You toss the dime. [run paragraph on]";
 	if a random chance of 3 in 5 succeeds:
 		now TossADimeWin is true;
+		now noun is nowhere;
 		say "The dime hits the plate, starts to spins, and lands in the center of the plate. The attendant shouts out, 'Winner! Winner! [run paragraph on]";
 		say "Which prize would you like? [run paragraph on]";
 		repeat with N running from 1 to the number of rows in the Table of Toss a Dime Prizes:
@@ -1149,7 +1178,7 @@ instead of tossing a dime when the second noun is the plate:
 			-- 3: say "The dime lands on the edge of the plate. You watch in antipation until the dime falls off the plate.";
 		now the noun is nowhere.
 
-after reading a command when the location is the Toss a Dime Game and TossADimeWin is true:
+after reading a command when the location is the Flip a Coin Game and TossADimeWin is true:
 	let C be "[the player's command]";
 	if there is an index of C in the Table of Toss a Dime Prizes:
 		choose a row with an index of C in the Table of Toss a Dime Prizes;
@@ -1162,14 +1191,14 @@ after reading a command when the location is the Toss a Dime Game and TossADimeW
 	otherwise:
 		continue the action.
 			
-The plate is a supporter. The plate is scenery in the Toss a Dime Game. Understand "plates" as plate. The description of the plate is "This is a small, flat plate, almost a saucer. You are meant to toss a dime on this plate to win a prize!"
+The plate is a supporter. The plate is scenery in the Flip a Coin Game. Understand "plates" as plate. The description of the plate is "This is a small, flat plate, almost a saucer. You are meant to toss a dime on this plate to win a prize!"
 
-The Toss A Dime Attendant is a man in the the Toss a Dime Game. Understand "attendent" and "operator" as the Toss a Dime attendant. 
+The Game Attendant is a man in the the Flip a Coin Game. Understand "attendent" and "operator" as the Game attendant. 
 
-instead of examining the toss a dime attendant:
+instead of examining the game attendant:
 	choose a random row in Table of Bored Responses;
-	Let A be response entry;
-	say "This is another bored teenager. [A][line break]";
+	Let R be response entry;
+	say "This is another bored teenager. [R][line break]";
 
 Section 7 - Pitcher's Mound
 
@@ -1182,7 +1211,9 @@ Before looking when the location is the Pitcher's Mound:
 
 The Pitcher's Mound is a room southeast of the high striker. "The milk bottle ball toss is a classic carnival game that combines skill, strength, and a bit of luck. The setup features a pyramid of brightly colored milk bottles stacked on a sturdy platform—three on the bottom, two in the middle, and one on top. Players stand behind a marked line and toss baseballs, aiming to knock down as many bottles as possible. Clearing the entire stack wins the grand prize, while partial knockdowns can earn smaller rewards.
 
-The booth buzzes with energy, its colorful banners and flashing lights drawing a lively crowd. The satisfying clatter of falling bottles mixes with cheers and groans from players and spectators. A carnival barker calls out, 'Step right up and test your aim! Three balls for just a dime.' Prizes—ranging from small toys to giant stuffed animals—hang prominently, enticing players to take a shot. With every toss, the game delivers moments of suspense, joy, and fun, making it a favorite at the carnival."
+The booth buzzes with energy, its colorful banners and flashing lights drawing a lively crowd. The satisfying clatter of falling bottles mixes with cheers and groans from players and spectators. A carnival barker calls out, 'Step right up and test your aim! Three balls for just a dime.' Prizes—ranging from small toys to giant stuffed animals—hang prominently, enticing players to take a shot. With every toss, the game delivers moments of suspense, joy, and fun, making it a favorite at the carnival.
+
+You[']re surprised to see that this game only costs a dime."
 
 The small plush donkey is carried by the Pitcher's Mound Attendant. Understand "stuffie" and "stuffed" as donkey. The description of the donkey is "You feel rather underwhelmed as you look at the small plush donkey on a keychain."
 
@@ -1192,7 +1223,7 @@ The poster of Lourde is carried by the Pitcher's Mound Attendant. The descriptio
 
 The goldfish is carried by the Pitcher's Mound Attendant. Understand "bowl" as goldfish. The description of the goldfish is "This is a small goldfish in a bowl. A pet is just what you need."
 
-a baseball is a kind of thing. Understand "ball" as baseball.The Pitcher's Mound Attendant carries five baseballs.
+a baseball is a kind of thing. Understand "ball" as baseball.The Pitcher's Mound Attendant carries three baseballs.
 
 the milk bottles are scenery in the Pitcher's Mound. Understand "bottle" as milk bottles.
 
@@ -1213,7 +1244,7 @@ instead of throwing a baseball at the milk bottles:
 		rule fails.
 		
 PitchersMoundWin is a truth state that varies. PitchersMoundWin is false.
-instead of throwing a baseball at the milk bottles:
+instead of throwing a baseball at the milk bottles when the player carries the noun:
 	say "You wind up and throw the baseball at the milk bottles. [run paragraph on]";
 	if a random chance of 3 in 5 succeeds:
 		now PitchersMoundWin is true;
@@ -1221,6 +1252,7 @@ instead of throwing a baseball at the milk bottles:
 		say "Which prize would you like? [run paragraph on]";
 		repeat with N running from 1 to the number of rows in the Table of Pitcher's Mound Prizes:
 			say "[index in row N of the Table of Pitcher's Mound Prizes]) [description in row N of the Table of Pitcher's Mound Prizes][if N < number of rows in the Table of Pitcher's Mound Prizes], [otherwise]?[end if]";
+			now the noun is nowhere;
 	otherwise:
 		let N be a random number between 1 and 5;
 		if N is:
@@ -1248,8 +1280,8 @@ The Pitcher's Mound Attendant is a man in the the Pitcher's Mound. Understand "a
 
 instead of examining the pitcher's mound attendant:
 	choose a random row in Table of Bored Responses;
-	Let A be response entry;
-	say "This is another bored teenager. [A][line break]";
+	Let R be response entry;
+	say "This is another bored teenager. [R][line break]";
 
 Section 8 - Show Facade
 
@@ -1268,7 +1300,7 @@ Ladies and gentlemen, boys and girls, gather [']round! [line break]Step right up
 
 The sign is in the Show Facade. The sign is scenery. The description of the sign is "The sign reads, 'Little Egypt Show – A Journey Into the Mysterious and Exotic!'".
 
-The Barker is a person in Show Facade. The description of the barker is "Here is a man dressed in black pants, a white shirt,a striped vest, a fez, and a dazzling smile. The barker cries:
+The Barker is a person in Show Facade. Understand "attendant", "attendent", and "operator" as the Barker. The description of the barker is "Here is a man dressed in black pants, a white shirt,a striped vest, a fez, and a dazzling smile. The barker cries:
 
 Ladies and gentlemen, boys and girls, gather [']round! [line break]Step right up and witness the spectacle that[’]s taken the world by storm! [line break]She walks, she talks, she crawls on her belly like a reptile. [line break]Behold the one, the only Little Egypt, performing her legendary Dance of the Pyramids—a dazzling display of mystery, grace, and exotic allure! [line break]For just a dime, a mere one tenth of a dollar, prepare to be transported to the sands of Cairo, where enchantment and wonder await!"
 
@@ -1321,7 +1353,7 @@ LittleEgyptAuto begins when the player has been in the show tent for exactly thr
 LittleEgyptAuto ends when the number of filled rows in the Table of LittleEgypt Events is 0.
 
 When LittleEgyptAuto ends:
-	say "You applaud until your hands are sore. Did she just wink at me?[paragraph break]As she leaves the stage, Little Egypt tosses one of her veils to you!";
+	say "You applaud until your hands are sore. Did she just wink at you?[paragraph break]As she leaves the stage, Little Egypt tosses one of her veils to you!";
 	play the sound of Bell;
 	increase score by 5;
 	now the player carries the Sheer Veil.
@@ -1367,8 +1399,8 @@ The Ferris Wheel operator is a man in the Ferris Wheel Ride. Understand "attende
 
 instead of examining the ferris wheel operator:
 	choose a random row in Table of Bored Responses;
-	Let A be response entry;
-	say "This is another bored teenager. [A][line break]";
+	Let R be response entry;
+	say "This is another bored teenager. [R][line break]";
 	stop the action.
 
 instead of giving the ferris wheel ticket to the ferris wheel operator:
@@ -1403,8 +1435,8 @@ The Bumper Cars operator is a man in the Bumper Cars Ride. Understand "attendent
 
 instead of examining the Bumper Cars operator:
 	choose a random row in Table of Bored Responses;
-	Let A be response entry;
-	say "This is another bored teenager. [A][line break]";
+	Let R be response entry;
+	say "This is another bored teenager. [R][line break]";
 	stop the action.
 
 instead of giving the bumper cars ticket to the bumper cars operator:
@@ -1459,8 +1491,8 @@ The Carousel operator is a man in the Carousel Ride. Understand "attendent" and 
 
 instead of examining the Carousel operator:
 	choose a random row in Table of Bored Responses;
-	Let A be response entry;
-	say "This is another bored teenager. [A][line break]";
+	Let R be response entry;
+	say "This is another bored teenager. [R][line break]";
 	stop the action.
 
 instead of giving the carousel ticket to the carousel operator:
@@ -1480,8 +1512,8 @@ The Hell Ride operator is a man in Head of the Line. Understand "attendent" and 
 
 instead of examining the Hell Ride operator:
 	choose a random row in Table of Bored Responses;
-	Let A be response entry;
-	say "This is another bored teenager. [A][line break]";
+	Let R be response entry;
+	say "This is another bored teenager. [R][line break]";
 	stop the action.
 
 Check going south when the location is Head of the Line and the Ride operator does not have the hell ride ticket:
@@ -1502,7 +1534,7 @@ Test b2 with "w / l under stocks / e / s / w / l under platform / e / s / w / l 
 Test b3 with "ne / open panel / put aqua in socket  / push switch / sw / e / open panel / put crimson in socket / push switch / w / se / open panel / put emerald in socket / push switch / nw / sw / open panel / put gray in socket / push switch / ne / w / open panel / put indigo in socket / push switch / e / nw / l at panel / unlock panel with knife / l at panel / open  panel / l at panel / l at switch. / l at indicator / l at socket / put khaki in socket / push switch / l at socket / se"
 
 [turn the dials]
-test b4 with "n / n / n / n / n / climb ladder / w / l at control panel / turn aqua dial to 1 / turn crimson dial to three / turn emerald dial to 5 / turn gray dial to seven / turn indigo dial to 9 / turn khaki dial to eleven / push aqua button / l at panel / push crimson button / l at panel  / push emerald button / l at panel / push gray button / l at panel / push khaki button"
+test b4 with "n / n / n / n / n / climb ladder / w / l at control panel 1 / turn aqua dial to 1 / turn crimson dial to three / turn emerald dial to 5 / turn gray dial to seven / turn indigo dial to 9 / turn khaki dial to eleven / push aqua button / l at control panel 1 / push crimson button / l at control panel  3 / push emerald button / l at control panel 5 / push gray button / l at control panel 11 / push khaki button"
 
 Test Backstage with "test b1 / test b2 / test b3 / test b4"
 
@@ -1995,6 +2027,8 @@ electrocuted is a truth state that varies. electrocuted is false.
 instead of switching off the big switch:
 	if the player is wearing the gloves:
 		now the electrical room is not electromagnetic;
+		play sound of Bell;
+		increase the score by 5;
 		continue the action;
 	otherwise:
 		now electrocuted is true;
@@ -2007,6 +2041,20 @@ instead of switching on the big switch:
 The cluttered desk is here. The desk is scenery. 
 A corkboard is here. The corkboard is scenery.
 The charts are here. They are scenery.
+
+every turn when the location is the Control Room:
+	count the switches;
+	count the dials;
+	[say "switch count: [switch count], dial count: [dial count].";]
+	if switch count is not 6:
+		now all dials are switched off;
+		now all buttons are switched off;
+		now the dial setting of Control Panel One's dial is 0;
+		now the dial setting of Control Panel Three's dial is 0;
+		now the dial setting of Control Panel Five's dial is 0;
+		now the dial setting of Control Panel Seven's dial is 0;
+		now the dial setting of Control Panel Nine's dial is 0;
+		now the dial setting of Control Panel Eleven's dial is 0.
 
 Section 3 - Control Panels
 
@@ -2023,12 +2071,26 @@ Control Panel Seven is a control panel in the Control Room. The panel id of Cont
 Control Panel Nine is a control panel in the Control Room. The panel id of Control Panel Nine is 9. The color of Control Panel Nine is indigo.
 Control Panel Eleven is a control panel in the Control Room. The panel id of Control Panel Eleven is 11. The color of Control Panel Eleven is khaki.
 
+instead of examining a control panel:
+	say "Each control panel is populated with a dial, a button, and a light. From left to right, the colors are aqua, crimson, emerald, gray, indigo, and khaki. Below the lights is a row of similarly colored dials and below that is a row of buttons. (The poorly generated AI & human image is meant for comparison purposes only. LOL) The control panels are [if switch count is 6]lit up like a Christmas tree[otherwise]dark[end if].[paragraph break]";
+	say "[Noun] is [if switch count is 6]lit[otherwise]dark[end if]. The [color of the noun] dial is set to [the dial setting of the corresponding dial of the noun]. The [color of the noun] light is now [if the corresponding button of the noun is switched on]on[otherwise]off[end if].";
+	if switch count is 6 and every button is switched off, display the figure of ControlPanel instead;
+	let N be the panel id of the noun;
+	now the figure id of the monitor is N;
+	choose a row with a link number of N in the table of monitor descriptions;
+	now ControlPanelImage is figure choice entry;
+	if the corresponding dial of the noun is properly set and the corresponding button of the noun is switched on:
+		display figure choice entry.
+	
 Definition: A thing is control-fitted if it is incorporated by a control panel.
 
 [This will allow us to refer to the "corresponding" socket, switch, or indicator; i.e. the one from the same panel. This particular phrase works because there is only ever one each of these in a panel. If we decide later to have, say, three sockets per panel, only this phrase will have to be changed -- using more complex logic -- but the rest of the code could be left as-is.]
 To decide what thing is --/the corresponding (name of kind of value K) of --/the (CT - a control-fitted thing):
 	let H be the holder of CT;
 	decide on a random K that is part of H.[<- there will only ever be one of these]
+	
+To decide what thing is --/the corresponding (name of kind of value K) of --/the (T - a thing):
+	decide on a random K that is part of T.[<- there will only ever be one of these]
 	
 [The following won't actually give all the panel's components a color property matching the panel, but it will allow us to refer to a "shared color" of these components and get the desired result.]
 To decide what color is --/the shared color of --/a/the (CT - a control-fitted thing):
@@ -2058,6 +2120,32 @@ Instead of pushing a switched off button (this is the redirect push to button on
 
 Instead of pushing a switched on button (this is the redirect push to button off rule):
 	try switching off the noun.
+	
+Last report switching on a button when the switch count is 6 and the dial count is 6 (this is the final report switching on a button rule):
+	let N be the panel id of the holder of the noun;
+	choose a row with a link number of N in the table of monitor descriptions;
+	now ControlPanelImage is figure choice entry;
+	say "The monitor flickers for a second and the scene it displays changes to something different.";
+	say "[description entry][line break]";
+	say "The [color of the holder of the noun] light is now on.";
+	display ControlPanelImage;
+	now all buttons are switched off;
+	now the noun is switched on;
+	now the figure id of the monitor is N;
+	if the color of the holder of the noun is indigo:
+		play the sound of Bell;
+		increase score by 5;
+		end the story finally;
+
+Last report switching off a button (this is the final report switching off a button rule):	
+	choose a row with a link number of 0 in the table of monitor descriptions;
+	now ControlPanelImage is figure choice entry;
+	say "The monitor turns off and the screen goes black.";
+	say "[description entry][line break]";
+	say "The [color of the holder of the noun] light is now off.";
+	display ControlPanelImage;
+	now the figure id of the monitor is 0;
+	now all buttons are switched off.
 
 Section 5 - Dials
 
@@ -2065,7 +2153,7 @@ A dial is a kind of device. A dial is part of every control panel.
 A dial is fixed in place.
 A dial has a number called a dial setting. 
 
-The description of a dial is "This is [color of the holder of the item described] colored dial. It is currently set to [dial setting of the item described]. I bet you could spin it.".
+The description of a dial is "This is [color of the holder of the item described] colored dial. It is currently set to [dial setting of the item described]. I bet you could SPIN it.".
 
 The printed name of a dial is "[color of the holder of the item described] dial".
 
@@ -2079,6 +2167,9 @@ To decide what number is --/the dial id of (D - a dial):
 	
 To decide what color is --/the color of (D - a dial):
 	decide on the color of the holder of D.
+	
+To decide what number is --/the dial setting of (D - a dial):
+	decide on the dial setting of D.
 
 Understand "dial [something related by reversed incorporation]" as a dial.
 Understand "[something related by reversed incorporation] dial" as a dial.
@@ -2112,7 +2203,7 @@ A light is fixed in place.
 
 The description of a light is "This is [a printed name of the item described]. The light is [if the corresponding button of the item described is switched on]on[otherwise]off[end if]."
 
-The printed name of a light is "a [color of the holder of the item described] colored light".
+The printed name of a light is "[a color of the holder of the item described] colored light".
 
 To decide what number is --/the socket id of (L - a light):
 	decide on the panel id of the holder of L.
@@ -2127,94 +2218,20 @@ Section 7 - The Monitor
 
 ControlPanelImage is a figure name that varies. ControlPanelImage is Figure of ControlPanel.
 
-The monitor is in the Control Room. The monitor is scenery. Understand "screen" as monitor.
+The monitor is in the Control Room. The monitor is scenery. Understand "screen" as monitor. The monitor has a number called the figure id. The figure id is 0.
+
 instead of examining the monitor:
-	if Control Panel One's button is switched on and Control Panel One's dial is properly set:
-		choose a row with a link number of 1 in the table of monitor descriptions;
-	else if Control Panel Three's button is switched on and Control Panel Three's dial is properly set:
-		choose a row with a link number of 3 in the table of monitor descriptions;
-	else if Control Panel Five's button is switched on and Control Panel Five's dial is properly set:
-		choose a row with a link number of 5 in the table of monitor descriptions;
-	else if Control Panel Seven's button is switched on and Control Panel Seven's dial is properly set:
-		choose a row with a link number of 7 in the table of monitor descriptions;
-	else if Control Panel Nine's button is switched on and Control Panel Nine's dial is properly set:
-		choose a row with a link number of 9 in the table of monitor descriptions;
-	else if Control Panel Eleven's button is switched on and Control Panel Eleven's dial is properly set:
-		choose a row with a link number of 11 in the table of monitor descriptions;
-	otherwise:
-		choose a row with a link number of 0 in the table of monitor descriptions;
-	say "The monitor flickers for a second and the scene it displays changes to something different.";
-	say "[description entry][line break]";
-	now ControlPanelImage is figure choice entry;
-	display ControlPanelImage;
-
-
-Section 8 - Commands
-
-instead of examining a control panel:
-	say "Each control panel is populated with a dial, a button, and a light. From left to right, the colors are aqua, crimson, emerald, gray, indigo, and khaki. Below the lights is a row of similarly colored dials and below that is a row of buttons. (The poorly generated AI & human image is meant for comparison purposes only. LOL) The control panels are [if switch count is 6]lit up like a Christmas tree[otherwise]dark[end if].[line break]";
-	if switch count is 6 and every button is switched off, display the figure of ControlPanel;
-	if Electrical Closet One's electrical panel's socket is properly fused and Control Panel One's button is switched on, display the figure of ControlPanelStocks;
-	if Electrical Closet Three's electrical panel's socket is properly fused and Control Panel Three's button is switched on, display the figure of ControlPanelGallows;
-	if Electrical Closet Five's electrical panel's socket is properly fused and  Control Panel Five's button is switched on, display the figure of ControlPanelStake;
-	if Electrical Closet Seven's electrical panel's socket is properly fused and Control Panel Seven's button is switched on, display the figure of ControlPanelDungeon;
-	if Electrical Closet Nine's electrical panel's socket is properly fused and Control Panel Nine's button is switched on, display the figure of ControlPanelGuillotine;
-	if Electrical Closet Eleven's electrical panel's socket is properly fused and Control Panel Eleven's button is switched on, display the figure of ControlPanelExit.
-	
-The switch count is a number that varies. The switch count is 0.
-To count the switches:
-	now the switch count is 0;
-	if Electrical Closet One's electrical panel's switch is switched on and the Electrical Closet One's electrical panel's socket is properly fused, increment the switch count;
-	if Electrical Closet Three's electrical panel's switch is switched on and the Electrical Closet Three's electrical panel's socket is properly fused, increment the switch count;
-	if Electrical Closet Five's electrical panel's switch is switched on and the Electrical Closet Five's electrical panel's socket is properly fused, increment the switch count;
-	if Electrical Closet Seven's electrical panel's switch is switched on and the Electrical Closet Seven's electrical panel's socket is properly fused, increment the switch count;
-	if Electrical Closet Nine's electrical panel's switch is switched on and the Electrical Closet Nine's electrical panel's socket is properly fused, increment the switch count;
-	if Electrical Closet Eleven's electrical panel's switch is switched on and the Electrical Closet Eleven's electrical panel's socket is properly fused, increment the switch count;
-		
-every turn when the location is the Control Room:
-	count the switches;
-	count the dials;
-	[say "switch count: [switch count], dial count: [dial count].";]
-	if switch count is not 6:
-		now all dials are switched off;
-		now all buttons are switched off;
-		now the dial setting of Control Panel One's dial is 0;
-		now the dial setting of Control Panel Three's dial is 0;
-		now the dial setting of Control Panel Five's dial is 0;
-		now the dial setting of Control Panel Seven's dial is 0;
-		now the dial setting of Control Panel Nine's dial is 0;
-		now the dial setting of Control Panel Eleven's dial is 0.
-		
-Section 9 - Pushing Buttons
-
-Last report switching on a button when the switch count is 6 and the dial count is 6 (this is the final report switching on a button rule):
-	let N be the panel id of the holder of the noun;
+	let N be the figure id of the monitor;
 	choose a row with a link number of N in the table of monitor descriptions;
-	now ControlPanelImage is figure choice entry;
 	say "The monitor flickers for a second and the scene it displays changes to something different.";
 	say "[description entry][line break]";
-	say "The [color of the holder of the noun] light is now on.";
-	display ControlPanelImage;
-	now all buttons are switched off;
-	now the noun is switched on;
-	if the color of the holder of the noun is indigo:
-		play the sound of Bell;
-		increase score by 5;
-		end the story finally;
-
-Last report switching off a button (this is the final report switching off a button rule):	
-	choose a row with a link number of 0 in the table of monitor descriptions;
 	now ControlPanelImage is figure choice entry;
-	say "The monitor turns off and the screen goes black.";
-	say "[description entry][line break]";
-	say "The [color of the holder of the noun] light is now off.";
-	display ControlPanelImage;	
-	now all buttons are switched off;
+	display ControlPanelImage.
 	
 Part 3 - Regions
 
 The Midway is a region. Parking Lot, Ticket Kiosk, Concession Stand, High Striker, Show Facade, Show Tent, Head of the Line,
-Ferris Wheel Ride, Bumper Cars Ride, Fortune Teller, Carousel Ride, Toss a Dime Game, and the Pitcher's Mound are in the Midway. The sky is in the Midway.
+Ferris Wheel Ride, Bumper Cars Ride, Fortune Teller, Carousel Ride, Flip a Coin Game, and the Pitcher's Mound are in the Midway. The sky is in the Midway.
 
 HellRide is a region. Ride Entrance, Stocks Room, Gallows Room, Stake Room, Dungeon, Guillotine Room, Ride Exit is in HellRide.
 
