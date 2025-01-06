@@ -1,5 +1,5 @@
 Debugging log of inform7
-inform7 was called as: C:\Program Files\Inform\Compilers\inform7 -internal C:\Program Files\Inform\Internal -external C:\Users\danamont\Documents\Inform -project C:\HellRide\Hell Ride.inform -format=Inform6/32d
+inform7 was called as: C:\Program Files\Inform\Compilers\inform7 -release -internal C:\Program Files\Inform\Internal -external C:\Users\danamont\Documents\Inform -project C:\HellRide\Hell Ride.inform -format=Inform6/32
 Reading further switches from file: <no file>
 Completed expert settings file
 Using Inform kit 'BasicInformKit' (priority 0).
@@ -7,7 +7,7 @@ Using Inform kit 'EnglishLanguageKit' (priority 1).
 Using Inform kit 'WorldModelKit' (priority 2).
 Using Inform kit 'CommandParserKit' (priority 3).
 756 Preform nonterminals read from C:\Program Files\Inform\Internal\Languages\English\Syntax.preform
-I've now read your source text, which is 25611 words long.
+I've now read your source text, which is 25922 words long.
 Included: core, naming, instance counting, interactive fiction, spatial model, backdrops, bibliographic data, chronology, devices, mapping, persons, player, regions, scenes, scoring, timed rules, times of day, actions, going, command, showme, multimedia, figures, sounds, glulx external files
 Excluded: 
 I've also read Basic Inform by Graham Nelson, which is 7691 words long.
@@ -26,7 +26,6 @@ I've also read Menus by Emily Short, which is 2001 words long.
 Phase I ... Dividing source into compilation units
 -----------------------------------------------------
 
-.... Task__write_XML_headings_file() took 1cs
 
 
 -----------------------------------------------------
@@ -44,8 +43,6 @@ Loading kinds definitions from C:\Program Files\Inform\Internal\Inter\WorldModel
 Loading kinds definitions from C:\Program Files\Inform\Internal\Inter\WorldModelKit\kinds\Figures.neptune
 Loading kinds definitions from C:\Program Files\Inform\Internal\Inter\WorldModelKit\kinds\Sounds.neptune
 Loading kinds definitions from C:\Program Files\Inform\Internal\Inter\CommandParserKit\kinds\Parsing.neptune
-.... Task__make_built_in_kind_constructors() took 23cs
-.... BinaryPredicateFamilies__first_stock() took 1cs
 
 
 -----------------------------------------------------
@@ -66,7 +63,7 @@ Phase IV ... First pass through major nodes
 Phase V ... Second pass through major nodes
 -----------------------------------------------------
 
-.... MajorNodes__pass_2() took 2cs
+.... MajorNodes__pass_2() took 3cs
 
 
 -----------------------------------------------------
@@ -87,6 +84,7 @@ Phase VII ... Completing the model world
 Phase VIII ... Tables and grammar
 -----------------------------------------------------
 
+.... BinaryPredicateFamilies__second_stock() took 1cs
 
 
 -----------------------------------------------------
@@ -115,9 +113,9 @@ Phase XI ... Generating inter (1)
 Phase XII ... Generating inter (2)
 -----------------------------------------------------
 
-.... CompletionModule__compile() took 1cs
 .... RTKindConstructors__compile_permissions() took 1cs
-.... ImperativeDefinitions__compile_first_block() took 7cs
+.... InferenceSubjects__emit_all() took 6cs
+.... ImperativeDefinitions__compile_first_block() took 3cs
 
 
 ==== Phase XII.1 ... Slashing command grammar ====
@@ -136,9 +134,10 @@ Switch val is LOCAL_VARIABLE_NT'n' {local: LV"n"-number number}
  for kind number pointery 0
 Switch val is LOCAL_VARIABLE_NT'n' {local: LV"n"-number number}
  for kind number pointery 0
-.... Sequence__undertake_queued_tasks() took 165cs
-.... Sequence__undertake_queued_tasks() took 1cs
-.... RTPhrasebook__compile_entries() took 6cs
+.... Sequence__undertake_queued_tasks() took 133cs
+.... Sequence__undertake_queued_tasks() took 3cs
+.... RTPhrasebook__compile_entries() took 4cs
+.... RTMappingHints__compile() took 1cs
 
 
 -----------------------------------------------------
@@ -153,16 +152,15 @@ Phase XIV ... Generating inter (4)
 
 ==== Phase XIV.2 ... Determining command grammar ====
 
-.... RTCommandGrammars__compile_all() took 1cs
 
 
 -----------------------------------------------------
 Phase XV ... Generating inter (5)
 -----------------------------------------------------
 
-.... Sequence__undertake_queued_tasks() took 1cs
+.... Sequence__undertake_queued_tasks() took 3cs
 Providing for a total heap of 65536, given requirement of 65536
-.... Sequence__lint_inter() took 1cs
+.... Sequence__lint_inter() took 3cs
 
 
 -----------------------------------------------------
@@ -176,7 +174,7 @@ Phase XVI ... Bibliographic work
 Phase XVII ... Complete
 -----------------------------------------------------
 
-Compile CPU time: 266 centiseconds
+Compile CPU time: 212 centiseconds
 
 
 ==== Phase XVII.1 ... step 1/15: read <- *memory ====
@@ -221,12 +219,12 @@ Compile CPU time: 266 centiseconds
 
 ==== Phase XVII.11 ... step 11/15: eliminate-redundant-labels ====
 
-2747 redundant label(s) removed
+2725 redundant label(s) removed
 
 
 ==== Phase XVII.12 ... step 12/15: eliminate-redundant-operations ====
 
-756 redundant operation(s) removed
+745 redundant operation(s) removed
 
 
 ==== Phase XVII.13 ... step 13/15: optionally-generate text ->  ====
@@ -7659,8 +7657,8 @@ HTML tag stack:
     47. html (opened at line 236 of 'D:/Programs/Adv/Inform7/Distribution/inweb/foundation-module/Chapter 5/HTML.w')
 
 
-Back end elapsed time: 670cs
-Total of 130 files written as streams.
+Back end elapsed time: 277cs
+Total of 129 files written as streams.
 Vacant escapes: %: ..CDE.GH..K.M.O.QR.TU...YZab..e..h.jklm.o.qr......yz0123456789
 Vacant escapes: $: .....F...J..........UVW.....................s.u..x.........789
 

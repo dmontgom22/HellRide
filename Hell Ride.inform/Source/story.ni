@@ -23,7 +23,7 @@ use MAX_SYMBOLS of 28000.
 Use scoring.
 Use American Dialect.
 Use serial comma.
-The maximum score is 120.
+The maximum score is 125.
 The block giving rule is not listed in the check giving it to rules.
 
 Chapter 2 - Biblio Card Settings
@@ -74,6 +74,9 @@ Before buying something for sale when the price of the money is less than the pr
 Before buying something free, say "That[']s not for sale." instead.
 
 Instead of buying something:
+	if the noun is the hell ride ticket or the noun is the khaki fuse:
+		play the sound of Bell;
+		increase score by 5;
 	decrease the price of the money by the price of the noun;
 	say "You fork over [the price of the noun] for [the noun], leaving yourself with [the price of the money].";
 	if the money is free:
@@ -314,6 +317,16 @@ Casting plugh is an action applying to nothing.
 
 Carry out casting plugh:
 	say "Nothing happens."
+	
+Section 9 - Attendants
+
+An Attendant is a kind of male person. Understand "attendent" and "operator" as an attendant. 
+
+instead of examining an attendant:
+	choose a random row in Table of Bored Responses;
+	Let R be response entry;
+	say "This is another bored teenager. [R]";
+	stop the action.
 	
 Chapter 5 - The Player, Global Code
 
@@ -674,6 +687,7 @@ Section 5 - Indicators
  
 An indicator is a kind of thing. An indicator is part of every electrical panel.
 An indicator is fixed in place.
+Understand "light" and "indicator light" as indicator.
 
 The description of an indicator is "The indicator [if the Corresponding switch of the noun is switched on]is glowing [color of the holder of the item described] and [end if]is currently [if the Corresponding switch of the noun is switched on]indicating something[otherwise]indicating nothing[end if]."
 
@@ -707,7 +721,7 @@ A crimson fuse called a fuse3 underlies the gallows platform. The fuse id of fus
 An emerald fuse called an fuse5 is in the pyre. The fuse id of fuse5 is 5. The color of fuse5  is emerald. 
 A gray fuse called a fuse7 underlies the iron chair. The fuse id of fuse7 is 7. The color of fuse7 is gray. 
 An indigo fuse called an fuse9 underlies the guillotine platform. The fuse id of fuse9 is 9. The color of fuse9 is indigo. 
-A khaki fuse called a fuse11 is in the merchandise stand. The fuse id of fuse11 is 11. The color of fuse11 is khaki. 
+A khaki fuse called a fuse11 is in the merchandise stand. The fuse id of fuse11 is 11. The color of fuse11 is khaki. The price of fuse11 is $3.50.
 A magenta fuse called a fuse13 is carried by the Strongman Attendant. The fuse id of fuse13 is 13. The color of fuse13 is magenta. 
 An orange fuse called an fuse15 is carried by the Flip a Coin Attendant. The fuse id of fuse15 is 15. The color of fuse15 is orange. 
 A quartz fuse called a fuse17 is carried by the Pitcher's Mound Attendant. The fuse id of fuse17 is 17. The color of fuse17 is quartz. 
@@ -829,7 +843,7 @@ Test Life with "brief / Test Parking / Test Games / Test Attractions / Test Conc
 
 Test Death with "brief / Test Parking / Test Games / Test Attractions / Test Concession / Test Misc / Test Ride".
 
-Test Parking with "brief / get blueberries / eat blueberries / give coupon to operator / buy ticket / get in car / l at car / l at seat / l under seat / open glove box / get gloves / wear gloves / l at dashboard / set stub on the dashboard / l at the dashboard / exit".
+Test Parking with "brief / get blueberries / eat blueberries / give coupon to operator / buy ticket / get in car / look / l at seat / l under seat / open glove box / get gloves / wear gloves / set stub on the dashboard / l at the dashboard / get air freshener / look at it / put keys in ignition / turn keys / exit".
 
 Test ToadAway with "brief / test parking / get in car / get parking stub / exit car / test games / test b1 / w / l under stocks / e / s / w"
 
@@ -865,19 +879,18 @@ Alive with anticipation, the parking lot marks the transition from the ordinary 
 
 The midway is to the south. There is a blueberry bush here. [if blueberry bush contains blueberries]There are blueberries on the bush.[otherwise]The bush has been picked clean.[end if][paragraph break]Your car is here. It[']s a bit of a beater. Inside the car, you can see [the list of things which are part of the beater car]."
 
-The Parking Attendant is a man in the the parking lot. Understand "attendent" and "operator" as parking attendant. The parking attendant carries the parking ticket and the parking stub. The price of the parking ticket is $5.00. 
+The Parking Attendant is an attendant in the the parking lot. The parking attendant carries the parking ticket and the parking stub. The price of the parking ticket is $5.00. 
 
-instead of examining the parking attendant:
-	choose a random row in Table of Bored Responses;
-	Let R be response entry;
-	say "This is another bored teenager. [R] [if the parking attendant carries the parking ticket] He has a parking ticket. The price of a parking ticket is [the price of the parking ticket].[end if][line break]";
-	stop the action.
+after looking when the location is the parking lot:
+	say "[if the parking attendant carries the parking ticket]The attendant has a parking ticket. The price of a parking ticket is [the price of the parking ticket].[end if]";
 
 The beater car is an open enterable container in the parking lot. The beater car is scenery. Understand "vehicle" and "car" as the beater car. The description of the beater car is "[if the player is in the beater car][bold type]Car Interior[roman type][line break][end if]This is your car. It[']s a 2002 Honda Civic and it[']s seen better days.[paragraph break][if the player is in the beater car]You[']re sitting inside your car. [end if]Even though it[']s old, it feels like an old friend. From the faux leather seats to the crack in the windshield. It[']s familiar and comforting. There[']s old fast food wrappers on the floor, clothes and text books in the back seat. There is an air freshener hanging from the rear view mirror. You see [the list of things which are part of the beater car]." 
 
-The text books are here. They are scenery. The description of the text books is "You see Introduction to Calculus, Statistics, and Heart of Darkness here."
+The wrappers are here. The wrappers are scenery. The description of the wrappers is "McDonald's, Burger King, Jack In The Box, Taco Bell, Carls, Jr., Five Guys... You[']re a regular equal opportunity garbage gut."
 
-The clothes are here. They are scenery. The description of the clothes is "Your dirty clothes are strewn about. You really meant to do laundry before this."
+The text books are here. The text books are scenery. Understand "books" as text books. The description of the text books is "The titles you see are Introduction to Calculus, Statistics, and Heart of Darkness here."
+
+The clothes are here. The clothes are scenery. The description of the clothes is "Your dirty clothes are strewn about. You really meant to do laundry days ago."
 
 instead of looking when the player is in the beater car, try examining the beater car.
 
@@ -928,7 +941,9 @@ The dashboard is part of the beater car. The dashboard is a supporter. Understan
 
 The seat is part of the beater car. The seat is a supporter. It is fixed in place. The description of the seat is "A faux leather seat that looked great when it was new."
 
-Your keys underlie the seat. Understand "car key", "car keys", and "key" as the keys. The description of the keys is "These are your car keys. It[']s a wonder you could even find them, your house is such a mess."
+Your keys underlie the seat. Understand "car key", "car keys", and "key" as your keys. The description of the your is "These are your car keys. It[']s a wonder you could even find them, your house is such a mess."
+
+instead of turning your keys when the player is in the beater car, say "If you left now you would just end up in a bar, crying over a beer about your fight. You decide to stay and enjoy the carnival after all." instead.
 
 three quarters underlie the seat.
 
@@ -936,15 +951,14 @@ The glove box is part of the beater car. The glove box is a locked openable cont
 
 the pair of gloves are a thing. The pair of gloves are inside the glove box. The pair of gloves is wearable. The description of the pair of gloves is "A nice set of fur-lined leather gloves. They[']re very warm." The printed name of the pair of gloves is "pair of gloves".
 
-[instead of inserting  when the noun is the car keys and the second noun is the ignition, say "The key slides into the ignition with a satisfying snick."]
-
 Instead of looking under a thing which is underlaid by something:
 	say "You find [the list of things which underlie the noun]!";
 	now every thing which underlies the noun is carried by the player;
 	now every thing which underlies the noun does not underlie the noun;
 	say "Taken.";
-	play the sound of Bell;
-	increase score by 5;
+	if the noun is the flip a coin booth or the noun is the seat:
+		play the sound of Bell;
+		increase score by 5;
 
 Understand "exit [a direction]" as a mistake ("Please try 'go [noun]' or just '[noun]' as a direction isn[']t necessarily an exit here.")
 
@@ -973,21 +987,15 @@ The description of the Ticket Booth is "The ticket kiosk stands at the carnival 
 
 A single window serves visitors, where a smiling cashier dispenses colorful tickets from neatly arranged rolls. Beside the tickets, a cash drawer jingles as change is counted, and a digital payment system glows faintly for modern convenience. Too bad you don[']t have a debit card.
 
-Next to the kiosk, a vibrant signboard lists ticket prices with playful illustrations of rides and treats. Pennant flags flutter from the kiosk’s roof, adding to the festive atmosphere, while the smell of popcorn and fried dough wafts from nearby stalls.
+Next to the kiosk, a vibrant signboard lists ticket prices with playful illustrations of rides and treats. Pennant flags flutter from the kiosk’s roof, adding to the festive atmosphere, while the smell of popcorn and fried dough wafts from the southwest.
 
 The worn ground around the kiosk shows the passage of eager carnival-goers. Families, couples, and friends form a buzzing line, their excitement building as they approach this first step into the magic of the carnival.
 
 The midway continues in all directions from here. There is a cashier here. The prices of ride tickets are on the signboard. The cashier has [list of things carried by the cashier]."
 
-The ticket kiosk is a thing. It is in the ticket booth. Understand "booth" as the ticket kiosk. The description of the ticket kiosk is "The ticket kiosk stands at the carnival entrance, a compact booth painted in bright red and yellow stripes with bold letters above the window reading 'Tickets Here!' Twinkling lights outline its edges, blinking rhythmically to draw attention.
+The ticket kiosk is a thing. It is in the ticket booth. Understand "booth" as the ticket kiosk. The description of the ticket kiosk is "A single window serves visitors, where a smiling cashier dispenses colorful tickets from neatly arranged rolls. Beside the tickets, a cash drawer jingles as change is counted, and a digital payment system glows faintly for modern convenience. Too bad you don[']t have a debit card.
 
-A single window serves visitors, where a smiling cashier dispenses colorful tickets from neatly arranged rolls. Beside the tickets, a cash drawer jingles as change is counted, and a digital payment system glows faintly for modern convenience. Too bad you don[']t have a debit card.
-
-Next to the kiosk, a vibrant signboard lists ticket prices with playful illustrations of rides and treats. Pennant flags flutter from the kiosk’s roof, adding to the festive atmosphere, while the smell of popcorn and fried dough wafts from nearby stalls.
-
-The worn ground around the kiosk shows the passage of eager carnival-goers. Families, couples, and friends form a buzzing line, their excitement building as they approach this first step into the magic of the carnival.
-
-The midway continues in all directions from here. There is a cashier here. The prices of ride tickets are on the signboard. The cashier has [list of things carried by the cashier]."
+Next to the kiosk, a vibrant signboard lists ticket prices with playful illustrations of rides and treats."
 
 A ride ticket is a kind of thing. A ride ticket has a price.
 
@@ -1001,25 +1009,14 @@ The Bumper Cars ticket is a ride ticket. The cashier carries the Bumper Cars tic
 
 The Carousel ticket is a ride ticket. The cashier carries the Carousel ticket. The price of the carousel ticket is $1.00. The description of the Carousel ticket is "'Admit One' to the Carousel."
 
-The Cashier is a man in the Ticket Booth. 
-
-instead of examining the cashier:
-	choose a random row in Table of Bored Responses;
-	Let R be response entry;
-	say "This is another bored teenager. [R][line break]";
-	stop the action.
-
-After buying the hell ride ticket:
-	play the sound of Bell;
-	increase score by 5;
-	say "Well done!";
+The Cashier is an attendant in the Ticket Booth. 
 	
 There is a signboard in the Ticket Booth. The signboard is scenery. Understand "sign" as signboard. The description of the signboard is 
-"[line break]$3.00 Hell Ride.
-[line break]$3.00 Fortune Teller.
-[line break]$2.00 Ferris Wheel.
-[line break]$2.00 Bumper Cars.
-[line break]$1.00 Carousel."
+"[line break]$3.00 Hell Ride
+[line break]$3.00 Fortune Teller
+[line break]$2.00 Ferris Wheel
+[line break]$2.00 Bumper Cars
+[line break]$1.00 Carousel"
 
 Section 4 - Concession Stand
 
@@ -1044,7 +1041,7 @@ There is a menu to the right of the window. You can see the treats inside the st
 
 treats is here. Treats is scenery. Understand "treat" as treats. The description of treats is "There are a variety of things to eat here."
 
-a menu is here.  Menu is fixed in place. The description of the menu is 
+a menu is here.  Understand "sign" as menu. the Menu is fixed in place. The description of the menu is 
 "[line break]$2.00 Cola
 [line break]$2.50 Popcorn
 [line break]$1.50 Candy Apple
@@ -1088,11 +1085,14 @@ A room called the Pitcher's Mound is southeast of the high striker.
 
 The High Striker is a room. The High Striker is west of the Ferris Wheel Ride, southwest of the Flip a Coin Game, and northwest of the Pitcher's Mound. The High Striker is outdoors. "This area features a tall, eye-catching machine adorned with bright, colorful lights, typically red, yellow, and blue. A large sign at the top reads 'Test Your Strength!' in bold, playful lettering. The machine[’]s base is made of polished wood, with a polished, vintage appearance. At the center is a sturdy metal pole, with a large bell hanging at the top, signaling when a successful attempt has been made. Along the length of the pole are markings indicating how strong you are.  A nearby sign says, 'Buy a mallet, strike the bell, win a prize.'[if the strongman attendant contains the mallet] You can see an over-sized mallet here.[end if]
 
-Spectators gather around, cheering on participants and offering lighthearted jabs and encouragement, creating a lively, competitive atmosphere. The sound of the mallet hitting the target is followed by the resonant clang of the bell (if struck), alongside the buzz of carnival music in the background. The Ticket Kiosk is back the way you came and other games are northeast and northwest of here."
+Spectators gather around, cheering on participants and offering lighthearted jabs and encouragement, creating a lively, competitive atmosphere. The sound of the mallet hitting the target is followed by the resonant clang of the bell (if struck), alongside the buzz of carnival music in the background. The Ticket Kiosk is back the way you came and other games are northeast and northwest of here. The Ferris Wheel lies to the east."
 
 The markings are here. The markings are scenery. Understand "marking" and "sign" and "signs" as markings. The description of markings is "There are five levels marked on the pole: Weakling, Getting There, Average, Almost There, and Muscle Man."
 
-The Strongman Attendant is here. Understand "attendent" and "operator" as attendant. The description of the Strongman Attendant is "An Attendant is standing here [if strongman attendant is carrying the mallet]holding a mallet[end if]."
+The Strongman Attendant is an attendant in the High Striker. 
+
+after looking when the location is the high striker:
+	say "[if the strongman attendant carries the mallet]The attendant is holding a mallet.[end if]";
 
 after examining the strongman attendant:
 	if HighStrikerWin is true, show the high striker prizes. 
@@ -1137,6 +1137,8 @@ To show the High Striker prizes:
 
 Carry out hitting when the player is carrying the mallet:
 	say "You lift the mallet high and bring it down on the lever with all your might! The striker rises towards the bell stopping at '[a random strength pattern between weakling and almost there]'.  C[']mon! You can do better than that!";
+	
+The bell is here. The bell is scenery. The description of the bell is "This is the bell that will ring out when you prove to everyone that you[']re a 'Muscle Man'."
 	
 HighStrikerWin is a truth state that varies. HighStrikerWin is false.
 After hitting the lever when second noun is the mallet 4 times:
@@ -1233,18 +1235,13 @@ after reading a command when the location is the Flip a Coin Game and TossADimeW
 			
 The plate is a supporter. The plate is scenery in the Flip a Coin Game. Understand "plates" as plate. The description of the plate is "This is a small, flat plate, almost a saucer. You are meant to toss a dime on this plate to win a prize!"
 
-The Flip a Coin Attendant is a man in the the Flip a Coin Game. Understand "attendent" and "operator" as the Flip a Coin attendant. 
+The Flip a Coin Attendant is an attendant in the the Flip a Coin Game. 
 
 after examining the flip a coin attendant:
 	if TossADimeWin is true, show the toss a dime prizes. 
 	
 after looking when the TossADimeWin is true and the location is the Flip a Coin Game:
 	show the Toss A Dime prizes.
-
-instead of examining the flip a coin attendant:
-	choose a random row in Table of Bored Responses;
-	Let R be response entry;
-	say "This is another bored teenager. [R][line break]";
 
 Section 7 - Pitcher's Mound
 
@@ -1323,7 +1320,7 @@ after reading a command when the location is the Pitcher's Mound and PitchersMou
 	otherwise:
 		continue the action.
 			
-The Pitcher's Mound Attendant is a man in the the Pitcher's Mound. Understand "attendent" and "operator" as the Pitcher's mound attendant. 
+The Pitcher's Mound Attendant is an attendant in the Pitcher's Mound. 
 
 after examining the pitcher's mound attendant:
 	if PitchersMoundWin is true, show the pitcher's mound prizes. 
@@ -1331,38 +1328,32 @@ after examining the pitcher's mound attendant:
 after looking when the PitchersMoundWin is true and the location is the Pitcher's Mound:
 	show the Pitcher's Mound prizes.
 
-instead of examining the pitcher's mound attendant:
-	choose a random row in Table of Bored Responses;
-	Let R be response entry;
-	say "This is another bored teenager. [R][line break]";
-
 Section 8 - Show Facade
 
-Before going west when the location is the Ticket Booth and the Show Facade is unvisited:
-	display Figure of LittleEgyptFacade;
-	continue the action.
-	
 Before looking when the location is the Show Facade:
 	display Figure of LittleEgyptFacade.
 
 Show Facade is a room. Show Facade is east of Show Tent. Show Facade is outdoors. "You head west through the midway, the bright lights of the carnival fading behind you as you approach a wooden booth. A sign above the entrance reads 'Little Egypt Show – A Journey Into the Mysterious and Exotic!' A rotund barker, wearing a fez and a dazzling smile, gestures to a small sign beside him that says 'Dime Admission.'  The Ticket Kiosk is back the way you came.
 
-You are standing in front of a dark and mysterious tent filled with illusions and exotic performers. Perhaps there’s a fortune teller inside, offering cryptic clues about your journey or a hidden artifact that can be collected. There is a stage in front of the tent. The Barker is encouraging you to step up, pay for, and enjoy the Little Egypt Show.[if location is unvisited]The barker cries: 
+You are standing in front of a dark and mysterious tent filled with illusions and exotic performers. Perhaps there’s a fortune teller inside, offering cryptic clues about your journey or a hidden artifact that can be collected. There is a stage in front of the tent. The Barker is encouraging you to step up, pay for, and enjoy the Little Egypt Show."
 
-Ladies and gentlemen, boys and girls, gather [']round! [line break]Step right up and witness the spectacle that[’]s taken the world by storm! [line break]She walks, she talks, she crawls on her belly like a reptile. [line break]Behold the one, the only Little Egypt, performing her legendary Dance of the Pyramids—a dazzling display of mystery, grace, and exotic allure! [line break]For just a dime, a mere one tenth of a dollar, prepare to be transported to the sands of Cairo, where enchantment and wonder await![end if]"
+To show the barker's cry:
+	say "The barker cries:[paragraph break]Ladies and gentlemen, boys and girls, gather [']round! [line break]Step right up and witness the spectacle that[’]s taken the world by storm! [line break]She walks, she talks, she crawls on her belly like a reptile. [line break]Behold the one, the only Little Egypt, performing her legendary Dance of the Pyramids—a dazzling display of mystery, grace, and exotic allure! [line break]For just a dime, a mere one tenth of a dollar, prepare to be transported to the sands of Cairo, where enchantment and wonder await!"
+
+report going west when the location is the Show Facade and the location is unvisited:
+	try looking;
+	show the barker's cry;
+	stop the action.
 
 The sign is in the Show Facade. The sign is scenery. The description of the sign is "The sign reads, 'Little Egypt Show – A Journey Into the Mysterious and Exotic!'".
 
-The Barker is a person in Show Facade. Understand "attendant", "attendent", and "operator" as the Barker. The description of the barker is "Here is a man dressed in black pants, a white shirt,a striped vest, a fez, and a dazzling smile. The barker cries:
+The Barker is a person in Show Facade. Understand "attendant", "attendent", and "operator" as the Barker. The description of the barker is "Here is a man dressed in black pants, a white shirt,a striped vest, a fez, and a dazzling smile."
 
-Ladies and gentlemen, boys and girls, gather [']round! [line break]Step right up and witness the spectacle that[’]s taken the world by storm! [line break]She walks, she talks, she crawls on her belly like a reptile. [line break]Behold the one, the only Little Egypt, performing her legendary Dance of the Pyramids—a dazzling display of mystery, grace, and exotic allure! [line break]For just a dime, a mere one tenth of a dollar, prepare to be transported to the sands of Cairo, where enchantment and wonder await!"
+after examining the barker, show the barker's cry.
 
 Check going west when the location is the Show Facade and the barker is not carrying a dime:
 	say "It[']ll cost you a dime to go that way.";
 	stop the action.
-	
-Check going west when the location is the Show Facade and the barker is carrying a dime:
-	Continue the action.
 
 After giving when the noun is dime and the second noun is barker:
 	say "You hand over a dime, and the barker nods, waving you through. As you step past the entrance, the air feels thicker, almost humid, and the sounds of the carnival fade away. You’ve entered an entirely different world now—one filled with the scents of incense and exotic spices, and the low, hypnotic music of a faraway land. Before you, a series of dimly lit tents stretch out, their flaps slightly swaying in the breeze. Intrigued, you take your first step into the Little Egypt Show. You can now head west into the show."
@@ -1383,6 +1374,8 @@ The Show Tent is a room. The Show Tent is west of Show Facade. "You are inside t
 Little Egypt is a woman. Little Egypt is in the Show Tent. Little Egypt is scenery. The description of Little Egypt is "Little Egypt is an exotic looking, beautiful woman who is draped in flowing silk veils which she skillfully uses as part of the dance. Her attire consists of a sparkling, sequined bodice and a flowing skirt, adorned with jingling coin belts and jewelry that accentuate her movements."
 
 The sheer veil is a wearable thing. The description of the Sheer Veil is "This is a sheer gold veil that Little Egypt wore (and removed) during her show. Your head swims as you smell the scent of her perfume on her veil: patchouli."
+
+after wearing the veil, say "You wrap the veil around your head, shrouding your eyes. The world is a lovely color pink as you look through the veil while her perfume assaults your nose in the most delightful way."
 
 The Stage is here. The Stage is scenery. The description of the Stage is "The stage is decorated to resemble an exotic Middle Eastern market or palace, featuring rich, colorful fabrics, brass ornaments, and lanterns casting a warm, flickering glow. Scents of incense waft through the air, enhancing the atmosphere of mystique. The backdrop displays painted scenes of pyramids, desert landscapes, and domed structures to evoking a sense of being transported to the 'Middle East'."
 
@@ -1422,7 +1415,7 @@ Instead of doing something other than waiting, looking, listening or examining d
 
 Table of LittleEgypt Events
 event
-"As you enter the dimly lit tent, you see that the stage is decorated to resemble an exotic Middle Eastern market or palace, featuring rich, colorful fabrics, brass ornaments, and lanterns casting a warm, flickering glow. Scents of incense waft through the air, enhancing the atmosphere of mystique. The backdrop displays painted scenes of pyramids, desert landscapes, and domed structures to evoking a sense of being transported to the 'Middle East'. "
+"In the dimly lit tent, you see that the stage is decorated to resemble an exotic Middle Eastern market or palace, featuring rich, colorful fabrics, brass ornaments, and lanterns casting a warm, flickering glow. Scents of incense waft through the air, enhancing the atmosphere of mystique. The backdrop displays painted scenes of pyramids, desert landscapes, and domed structures evoking a sense of being transported to the 'Middle East'. "
 "Little Egypt emerges draped in flowing silk veils which she skillfully uses as part of the dance. Her attire consists of a sparkling, sequined bodice and a flowing skirt, adorned with jingling coin belts and jewelry that accentuate her movements."
 "The performance begins with slow, undulating movements, drawing you into the rhythm of exotic live music played on traditional instruments like the oud, darbuka, or zurna. As the tempo builds, her hips, torso, and hands move in intricate, mesmerizing patterns, demonstrating remarkable control and fluidity. She incorporates dramatic spins, drops, and shimmies, often accentuating the beat of the music with a quick jingle of her coin belt."
 "Little Egypt makes eye contact with you and smiles enigmatically. During her performance she balances a sword on her head and accents her dance with finger cymbals."
@@ -1444,26 +1437,20 @@ At night, the Ferris wheel transforms into a dazzling spectacle, with hundreds o
 
 The air around the wheel is filled with a mix of excited chatter, the hum of its motor, and the occasional squeal of laughter or nervousness from riders high above. The ride operator, standing in a small booth at the base, keeps a steady rhythm of loading and unloading passengers, their voice occasionally calling out, 'Step right up! The best view of the carnival awaits!'
 
-The Ferris wheel offers an ever-changing perspective of the carnival below. From its peak, riders can see the entire fairground: the spinning lights of the rides, the colorful stripes of game booths, and the winding paths of visitors navigating the midway. Beyond the carnival, the view stretches to the horizon, with city lights or rolling countryside adding to the magical experience.
+The Ferris wheel offers an ever-changing perspective of the carnival below. From its peak, riders can see the entire fairground: the spinning lights of the rides, the colorful stripes of game booths, and the winding paths of visitors navigating the midway. Beyond the carnival, the view stretches to the horizon, with city lights adding to the magical experience.
 
 Whether it[']s a romantic ride for couples, a thrilling adventure for friends, or a calming retreat for families, the Ferris wheel captures the spirit of the carnival—an iconic blend of excitement, wonder, and timeless charm."
 
-The Ferris Wheel operator is a man in the Ferris Wheel Ride. Understand "attendent" and "attendant" as Ferris Wheel operator. 
+The Ferris Wheel attendant is an attendant in the Ferris Wheel Ride. 
 
-instead of examining the ferris wheel operator:
-	choose a random row in Table of Bored Responses;
-	Let R be response entry;
-	say "This is another bored teenager. [R][line break]";
-	stop the action.
-
-instead of giving the ferris wheel ticket to the ferris wheel operator:
+instead of giving the ferris wheel ticket to the ferris wheel attendant:
 	say "You give [the noun] to [the second noun].";
-	now the ferris wheel operator carries the ferris wheel ticket;
+	now the ferris wheel attendant carries the ferris wheel ticket;
 	say "[line break]As you step into the gently swaying gondola, a faint creak accompanies the safety bar locking into place. The Ferris wheel begins its slow ascent, the hum of its machinery blending with the distant sounds of carnival games and laughter below. A soft breeze brushes against your face as the gondola rises higher, offering an ever-expanding view of the fairgrounds.
 
 With each rotation, the world transforms. At the peak, the carnival sprawls beneath you like a miniature village, its vibrant lights twinkling against the twilight sky. The sound of the midway fades into a soft murmur, replaced by the serene quiet of being high above the bustling crowd. Beyond the fair, the horizon stretches endlessly, framed by the glow of distant city lights.
 
-The gondola sways gently, adding a hint of thrill to the tranquil ride. You exchange smiles with your companions, pointing out tiny figures darting between booths or the dizzying motion of other rides below. The Ferris wheel begins its descent, and the lively carnival sounds grow louder once again, bringing you back into the heart of the action.
+The gondola sways gently, adding a hint of thrill to the tranquil ride. You exchange smiles with your companions, pointing out tiny figures darting between booths and the dizzying motion of other rides below. The Ferris wheel begins its descent, and the lively carnival sounds grow louder once again, bringing you back into the heart of the action.
 
 Whether you’re seeking a moment of calm, a romantic view, or the sheer wonder of seeing the world from above, the Ferris wheel delivers an unforgettable ride that captures the magic of the carnival."
 
@@ -1482,22 +1469,16 @@ Each car is equipped with a steering wheel and a padded bumper, designed to abso
 
 Overhead, a web of electric poles connects the cars to the ceiling, sparking faintly as they supply power to the vehicles. The ride operator watches from a booth, ensuring everyone enjoys the chaos safely. Surrounding the bumper cars are cheering onlookers, carnival lights, and the lively hum of the fairground.
 
-The bumper cars perfectly captures the playful spirit of the carnival, offering a mix of harmless competition, shared laughter, and nostalgic fun for all ages."
+The bumper cars perfectly captures the playful spirit of the carnival, offering a mix of harmless competition, shared laughter, and nostalgic fun for all ages. The Ticket Kiosk is southeast of here."
 
-The Bumper Cars operator is a man in the Bumper Cars Ride. Understand "attendent" and "attendant" as Bumper Cars operator. 
+The Bumper Cars attendant is an attendant in the Bumper Cars Ride. 
 
-instead of examining the Bumper Cars operator:
-	choose a random row in Table of Bored Responses;
-	Let R be response entry;
-	say "This is another bored teenager. [R][line break]";
-	stop the action.
-
-instead of giving the bumper cars ticket to the bumper cars operator:
+instead of giving the bumper cars ticket to the bumper cars attendant:
 	say "You give [the noun] to [the second noun].";
-	now the bumper cars operator carries the bumper cars ticket;
+	now the bumper cars attendant carries the bumper cars ticket;
 	say "[line break]Sliding into the snug seat of the bumper car, your hands grip the steering wheel, anticipation buzzing in the air. Around you, the arena is alive with flashing lights, bursts of laughter, and the hum of electric currents running through the overhead poles. A quick glance shows other riders locking eyes, playful grins spreading as everyone braces for the chaos about to unfold.
 
-As the ride starts, your car jolts forward, and you steer into the fray. The slick metal floor beneath makes every turn feel smooth yet unpredictable. Suddenly, bam!—another car collides into you from the side, sending your car into a spin. You laugh, recovering quickly to aim your vehicle at a friend or an unsuspecting rider across the arena.
+As the ride starts, your car jolts forward, and you steer into the fray. The slick metal floor beneath makes every turn feel smooth yet unpredictable. Suddenly, bam!—another car collides into you from the side, sending your car into a spin. You laugh, recovering quickly to aim your vehicle at a friend across the arena.
 
 The thrill of the bumper cars is in the collisions—every thud and jolt accompanied by squeals of delight or mock indignation. The impact is cushioned by the padded bumpers, keeping the fun safe but exhilarating. You swerve, dodge, and sometimes reverse in a desperate attempt to avoid being cornered, all while plotting your next playful crash.
 
@@ -1547,20 +1528,14 @@ The Carousel Ride is a room. The Carousel Ride is outdoors. The Carousel Ride is
 
 Rows of hand-carved animals, most often horses with flowing manes, are arranged in a circle. Each is painted in vivid colors, detailed with golden saddles and ribbons. It also features exotic creatures like lions, tigers, and sea dragons, adding whimsy to the ride. The animals rise and fall gently as the carousel spins, mimicking a galloping motion.
 
-The carousel[’]s warm, playful tunes drift across the midway, inviting riders of all ages to enjoy its simple delight. Children laugh as they choose their favorite animals, while adults savor the nostalgia of the spinning ride. As it rotates, the carousel becomes a moving work of art, blending motion, color, and music into an enchanting centerpiece of the carnival. The Ticket Kiosk is back the way you came."
+The carousel[’]s warm, playful tunes drift across the midway, inviting riders of all ages to enjoy its simple delight. Children laugh as they choose their favorite animals, while adults savor the nostalgia of the spinning ride. As it rotates, the carousel becomes a moving work of art, blending motion, color, and music into an enchanting centerpiece of the carnival. The Ticket Kiosk is back to the southwest; the way you came."
 
-The Carousel operator is a man in the Carousel Ride. Understand "attendent" and "attendant" as Carousel operator. 
+The Carousel attendant is an attendant in the Carousel Ride. 
 
-instead of examining the Carousel operator:
-	choose a random row in Table of Bored Responses;
-	Let R be response entry;
-	say "This is another bored teenager. [R][line break]";
-	stop the action.
-
-instead of giving the carousel ticket to the carousel operator:
+instead of giving the carousel ticket to the carousel attendant:
 	say "You give [the noun] to [the second noun].";
-	now the carousel operator carries the carousel ticket;
-	say "[line break]Stepping onto the carousel[']s spinning platform, you’re greeted by a kaleidoscope of color—brightly painted horses, glittering lights, and golden trim. The cheerful melody of calliope music fills the air as you choose your mount, perhaps a galloping horse with a flowing mane, a majestic lion, or a whimsical giraffe. Gripping the polished pole, you settle onto the saddle, feeling the smooth rise and fall as the carousel begins to turn.
+	now the carousel attendant carries the carousel ticket;
+	say "[line break]Stepping onto the carousel[']s spinning platform, you’re greeted by a kaleidoscope of color—brightly painted horses, glittering lights, and golden trim. The cheerful melody of calliope music fills the air. What will you choose as your mount, perhaps a galloping horse with a flowing mane, a majestic lion, or a whimsical giraffe. Gripping the polished pole, you settle onto the saddle, feeling the smooth rise and fall as the carousel begins to turn.
 
 As the ride picks up speed, the world outside becomes a blur of glowing carnival lights and swirling colors. The gentle up-and-down motion mimics a playful gallop, and the rhythmic whir of the carousel’s machinery adds a soothing backdrop to the cheerful atmosphere. Laughter and the sound of children’s chatter mix with the music, creating a sense of nostalgia and joy.
 
@@ -1568,17 +1543,11 @@ For a few moments, you’re transported into a magical world, the worries of the
 
 Section 14 - Head of the Line
 
-Head of the Line is a room. Head of the Line is south of Ticket Booth. Head of the Line is north of Ride Entrance. The Head of the Line is outdoors. "You are standing in front of a ticket taker with his hand open waiting for your ticket. The entrance to the ride is south of here. The ride operator tells you that you[']re lucky you showed up when you did because this will be the last trip through Hell Ride. You notice that all the other cars are empty. The Ticket Kiosk is back the way you came."
+Head of the Line is a room. Head of the Line is south of Ticket Booth. Head of the Line is north of Ride Entrance. The Head of the Line is outdoors. "You are standing in front of a ticket taker with his hand open waiting for your ticket. The entrance to the ride is south of here. The ride operator tells you that you[']re lucky you showed up when you did because this will be the last trip through Hell Ride for the night. You notice that all the other cars are empty. The Ticket Kiosk is back the way you came."
 
-The Hell Ride operator is a man in Head of the Line. Understand "attendent" and "attendant" as Hell Ride operator. 
+The Hell Ride attendant is an attendant in Head of the Line. 
 
-instead of examining the Hell Ride operator:
-	choose a random row in Table of Bored Responses;
-	Let R be response entry;
-	say "This is another bored teenager. [R][line break]";
-	stop the action.
-
-Check going south when the location is Head of the Line and the Ride operator does not have the hell ride ticket:
+Check going south when the location is Head of the Line and the Hell Ride attendant does not have the hell ride ticket:
 	say "You[']ll need a ticket to go that way.";
 	stop the action.
 
@@ -1590,7 +1559,7 @@ Section 1 - Dark Passage
 Test b1 with "brief / s / buy hell ride ticket / s / give hell ride ticket to operator / s / e / l at piles / get flashlight / turn it on / s / turn on radio / u / w / switch off big switch / e / d / l at desk / open drawer / get all from the drawer / s / s / open toolbox / get all from toolbox / s / s / s / ne / get silver key / l at panel / open panel / l at socket / sw / n / n / n / n / n"
 
 [get the fuses]
-Test b2 with "w / l under stocks / e / s / w / l under platform / e / s / w / l in pyre / get fuse from pyre / e / s / w / l under seat / e / s / w / l under platform / e / s / s / w / l in stand / get khaki fuse from merchandise stand / e / n"
+Test b2 with "w / l under stocks / e / s / w / l under platform / e / s / w / l in pyre / get fuse from pyre / e / s / w / l under seat / e / s / w / l under platform / e / s / s / w / l in stand / buy khaki fuse / e / n"
 
 [fill the sockets]
 Test b3 with "ne / open panel / put aqua in socket  / push switch / sw / e / open panel / put crimson in socket / push switch / w / se / open panel / put emerald in socket / push switch / nw / sw / open panel / put gray in socket / push switch / ne / w / open panel / put indigo in socket / push switch / e / nw / l at panel / unlock panel with knife / l at panel / open  panel / l at panel / l at switch. / l at indicator / l at socket / put khaki in socket / push switch / l at socket / se"
@@ -1642,15 +1611,23 @@ In one corner, a disassembled ride mechanism lies exposed, chains and pulleys da
 
 The walls display faded safety posters, a corkboard with maintenance schedules and notes, and a worn photo of the carnival in its prime. A clock ticks faintly, its hands out of sync with reality. The floor, gritty with dust and scattered nails, adds to the room’s chaotic charm.
 
-Despite the mess, the room buzzes with purpose—a hidden hub where the carnival’s magic is sustained through sweat, ingenuity, and the hum of machinery." 
+Despite the mess, the room buzzes with purpose—a hidden hub where the carnival’s magic is sustained through sweat, ingenuity, and the hum of machinery.
+
+Exits lead north and south. There is a door to the west." 
 
 The rusty wrenches are here. They are scenery. 
 The paint cans are here. They are scenery. 
 The grease jars are here. They are scenery. 
+The vise is here. It is scenery.
+The bent piece of metal is here. It is scenery.
 The safety posters are here. They are scenery. 
 The notes are here. They are scenery. 
-The clock is here. They are scenery. 
+The clock is here. It is scenery. 
 The lubricant is here. It is scenery.
+The manual is here. It is scenery. The description of the manual is "The manual is titled: 'Fixing Your Ferris Wheel. It[']s Easier Than You Think!'" 
+The stool is here. It is a supporter. It is scenery. 
+
+The worn photo is here. Understand "picture" as the worn photo. The description of the worn photo is "This is a photo of the carnival in its heyday! A ragtag bunch of people are featured in the picture. On the back reads a date: 'May, 1962'."
 
 The coffee mug is on the desk. The coffee mug is edible. Understand "coffee" as the coffee mug. The description of the coffee mug is "Who knows how long this has been sitting here. I wouldn[']t drink it if I were you." 
 
@@ -1662,7 +1639,7 @@ Nearness relates a room (called A) to a room (called B) when the number of moves
 
 The radio is a device on the desk. The radio is switched off and fixed in place. The description of the radio is "[if switched on]The radio burbles on[otherwise]The radio is off[end if]." 
 
-Every turn when the radio is switched on and location is near the maintenance office:
+Every turn when the radio is switched on and the location is near the maintenance office:
 	choose a random row in Table of Songs;
 	let A be the artist entry;
 	Let S be the song entry;
@@ -1686,7 +1663,7 @@ A wooden door is a kind of openable lockable door.
 A wooden door is usually closed. 
 A wooden door is usually locked.
 A wooden door has a color. A wooden door is usually nondescript. 
-The description of a wooden door is "The [color of the item described] door is [if the item described is open]open[otherwise]locked[end if]."
+The description of a wooden door is "The [color of the item described] door is [if the item described is open]open[otherwise]closed[end if]. It is [if the item described is locked]locked[otherwise]unloacked[end if]."
 The printed name of a wooden door is "[color of the item described] colored door".
 
 door1 is a wooden door. The color of door1 is aqua. The description of door1 is "It[']s [printed name of item described]. It has the word 'Stocks' written on it." The silver key unlocks it. 
@@ -1701,7 +1678,9 @@ Section 3 - Crawl Space
 
 The Crawl Space is a dark room. The Crawl Space is south of Maintenance Office. "The crawl space beneath the carnival ride is a tight, claustrophobic tunnel shrouded in darkness and filled with the hum of machinery above. The air is stale and heavy, carrying the sharp metallic scent of oil and the faint tang of rust. Every sound is amplified in the confined space—the groaning of steel beams, the clanking of chains, and the rhythmic thrum of motors driving the ride above.
 
-The ground is uneven, a mix of packed dirt and loose gravel scattered with forgotten tools, scraps of metal, and tangled wires. Overhead, a network of pipes and cables crisscross the space, some wrapped in fraying insulation that crackles faintly as you crawl past. Small puddles of murky water collect in dips on the floor, their surfaces rippling with vibrations from the ride’s movement."
+The ground is uneven, a mix of packed dirt and loose gravel scattered with forgotten tools, scraps of metal, and tangled wires. Overhead, a network of pipes and cables crisscross the space, some wrapped in fraying insulation that crackles faintly as you crawl past. Small puddles of murky water collect in dips on the floor, their surfaces rippling with vibrations from the ride’s movement.
+
+The backstage area continues north and south. There is a door to the west."
 
 door3 is a wooden door. The color of door3 is crimson. The description of door3 is "It[']s [printed name of item described]. It has the word 'Gallows' written on it." The silver key unlocks it. door3 is west of the Crawl Space and east of the Gallows Room. 
 
@@ -1712,14 +1691,22 @@ The Mechanical Room North is a dark room. The Mechanical Room North is south of 
 
 Electrical panels line the walls, labeled for functions like 'Lighting Controls,' 'Brake Systems,' and 'Emergency Shutdown.' Smaller cables and conduits snake along the walls, linking these systems to the main hub. In one corner, a hydraulic pump and reservoir manage lifting arms and rotating platforms, their gauges flickering as they work. 
 
-A small workbench against the eastern wall is cluttered with tools and coiled wires, while shelves above hold neatly labeled spare parts—fuses, cables, and hydraulic tubing. A faded ride diagram pinned nearby is marked with red annotations from past repairs.
+A small workbench against the eastern wall is cluttered with tools and coiled wires, while shelves above hold neatly labeled spare parts—cables, and hydraulic tubing. A faded ride diagram pinned nearby is marked with red annotations from past repairs.
 
-Dimly lit by a single hanging bulb, the room feels cooler and slightly damp, the metallic tang of machinery mixing with a hint of mildew. Though quieter and less prominent than the south mechanical room, this space plays a vital role in supporting the ride’s operation and ensuring its emergency systems are always prepared." 
+Dimly lit by a single hanging bulb, the room feels cooler and slightly damp, the metallic tang of machinery mixing with a hint of mildew. Though quieter and less prominent than the south mechanical room, this space plays a vital role in supporting the ride’s operation and ensuring its emergency systems are always prepared.
+
+There are exists north and south. There is a wooden door to the west." 
 
 The toolbox is a closed openable container in the Mechanical Room North. The toolbox contains a monkey wrench, a channel lock, pliers, and a hammer.
 
 A hydraulic pump is here. It is scenery.
 The gauges are here. They are scenery.
+The tools are here. They are scenery.
+The bench is here. It is scenery. Understand "workbench" as the bench. The description is "The workbench is covered in all manner of things."
+The wires are here. They are scenery.
+The spare parts are here. They are scenery.
+The hydraulic tubing is here. It is scenery.
+The diagram is here. It is scenery.
 
 door5 is a wooden door. The color of door5 is emerald. The description of door5 is "It[']s [printed name of item described]. It has the word 'Stake' written on it." The silver key unlocks it. door5 is west of the Mechanical Room North and east of the Stake Room. 
 
@@ -1729,11 +1716,24 @@ The Mechanical Room South is a dark room. The Mechanical Room South is south of 
 
 Heavy-duty electrical panels line the walls, adorned with warning labels like 'High Voltage' and blinking indicator lights in an array of colors. Overhead, labeled conduits and wires snake across the ceiling, connecting systems with meticulous precision.
 
-A cluttered workbench holds tools and spare parts—wrenches, bolts, and lubricants—alongside open maintenance logs marked with greasy fingerprints. The air is thick with the smell of oil, metal, and a faint trace of ozone from the electrics.
+A cluttered table holds tools and spare parts—wrenches, bolts, and lubricants—alongside open maintenance logs marked with greasy fingerprints. The air is thick with the smell of oil, metal, and a faint trace of ozone from the electrics.
 
 A cooling fan spins in the corner, barely cutting through the room’s warmth. The hum of machinery is occasionally punctuated by clinking chains and the sharp hiss of hydraulic fluid. The floor, a mix of metal grates and worn concrete, reflects years of use and maintenance.
 
-Bright fluorescent lights in wire cages illuminate the space, highlighting the intricate systems at work. The south mechanical room is the ride’s powerhouse, where every movement is controlled with precision to deliver its thrilling experience." 
+Bright fluorescent lights in wire cages illuminate the space, highlighting the intricate systems at work. The south mechanical room is the ride’s powerhouse, where every movement is controlled with precision to deliver its thrilling experience.
+
+You can travel north and south from here. There is a door to the west." 
+
+The lights are here. They are scenery.
+The thick belts are here. They are scenery.
+The pulleys are here. They are scenery.
+The gears are here. They are scenery.
+The table is here. It is scenery.
+The bolts are here. They are scenery.
+The lubricants are here. They are scenery.
+The cooling fan is here. It is scenery.
+
+The grate is an openable lockable door. The grate is locked. The grate is up from the Holding Room. The description is "This grate leads down into the darkness. Too bad it[']s locked."
 
 door7 is a wooden door. The color of door7 is gray. The description of door7 is "It[']s [printed name of item described]. It has the word 'Dungeon' written on it." The silver key unlocks it. door7 is west of the Mechanical Room South and east of the Dungeon. 
 
@@ -1748,10 +1748,20 @@ The rough concrete floor is uneven, marked by small puddles of spilled fuel or c
 
 A single industrial bulb in a protective cage casts harsh light, leaving deep shadows across the machinery. In the corner, a vent fan whirs faintly, struggling to cool the warm, vibrating air. A row of diesel canisters gleams beneath a faded safety poster that warns, 'Fuel Safely—No Open Flames!'
 
-Though isolated and utilitarian, the generator room is the carnival’s heartbeat, powering its lights, rides, and sounds. Its quiet separation from the carnival’s chaos serves as a stark reminder of the machinery driving the magic." 
+Though isolated and utilitarian, the generator room is the carnival’s heartbeat, powering its lights, rides, and sounds. Its quiet separation from the carnival’s chaos serves as a stark reminder of the machinery driving the magic.
+
+The backstage area continues north and south of here. There is a wooden door to the west." 
 
 The graffiti is here. It is scenery. instead of examining the graffiti, say "The graffiti is varied, from 'Peace, Love, Goodwill on Earth' to 'Anarchy Rules'."
 The junction boxes are here. They are scenery.
+The cables are here. They are scenery.
+The circuit breakers are here. They are scenery.
+The filters are here. They are scenery.
+The spark plugs are here. They are scenery.
+The wire coils are here. They are scenery.
+The grease canister is here. It is scenery.
+The diesel canisters are here. They are scenery.
+The maintenance manual is here. It is scenery. The description is "The cover reads, 'Put The Bump In Your Bumper Cars'."
 The large panel is here. It is scenery.
 
 door9 is a wooden door. The color of door9 is indigo. The description of door9 is "It[']s [printed name of item described]. It has the word 'Guillotine' written on it." The silver key unlocks it. door9 is west of the Generator Room and east of the Guillotine Room. 
@@ -1768,12 +1778,20 @@ Near the entrance, a battered desk is cluttered with maintenance logs, tools, an
 
 The floor, a rough blend of concrete and dirt, is littered with bolts, screws, and wire scraps. In the dim corners, the scuttle of rats and the glint of cobwebs underline the room[']s gritty nature.
 
-Chaotic yet indispensable, this hidden space powers the carnival’s magic, ensuring every ride and booth runs seamlessly."
+Chaotic yet indispensable, this hidden space powers the carnival’s magic, ensuring every ride and booth runs seamlessly.
+
+There is an exit to the north and a door to the west."
 
 The supplies are here. They are scenery.
+The boxes of lightbulbs are here. They are scenery.
+The spools of wire are here. They are scenery.
+The ride parts are here. They are scenery.
+The flags are here. They are scenery.
 The seats are here. They are scenery.
 The booths are here. They are scenery.
 The horse is here. It is scenery.
+The screws are here. They are scenery.
+The wire scraps are here. They are scenery.
 The rats are here. The rats are scenery. The description of the rats is "You see rats scurry in all directions fleeing from the light cast by you."
 
 door11 is a wooden door. The color of door11 is khaki. The description of door11 is "It[']s [printed name of item described]. It has the word 'Ride Exit' written on it." The silver key unlocks it. door11 is west of the Storage Room and east of the Ride Exit. 
@@ -1803,40 +1821,39 @@ When HellRideAuto ends:
 	
 Every turn during HellRideAuto:
 	repeat through Table of HellRide Events:
+		display figure entry;
 		say "[bold type][locale entry][roman type][line break][event entry][paragraph break]Mist fills the area as you move to the next room...
 [paragraph break]";
 		blank out the whole row;
 		rule succeeds.
 		
 Table of HellRide Events
-locale	event
-"Ride Entrance"	"The cars move forward, the safety bar locked in place, as the entrance to Hell Ride looms ahead—a grotesque facade of twisted metal and carved wood, illuminated by flickering blood-red lights. The air carries a faint sulfuric tang mingled with the sweet aroma of carnival popcorn.
+locale	figure	event
+"Ride Entrance"	figure of HellRideEntrance	"The cars move forward, the safety bar locked in place, as the entrance to Hell Ride looms ahead—a grotesque facade of twisted metal and carved wood, illuminated by flickering blood-red lights. The air carries a faint sulfuric tang mingled with the sweet aroma of carnival popcorn.
 
 A towering archway of flames, spikes, and grinning skulls frames the entrance, crowned by flickering letters that read 'HELL RIDE', pulsing like a heartbeat. Below, crouching demon sculptures extend clawed hands in a sinister invitation. Wooden doors cover the entrance, whispering with faint, menacing chuckles as distorted organ music grows louder, punctuated by shrieks and grinding machinery.
 
-A crooked sign warns, 'One Ticket Admission: Enter If You Dare!' Nearby, a carnival barker with a theatrical, raspy voice calls out, 'Step right up! The gates of hell are open—will you brave the darkness?'
-
 Inside, near-total darkness is broken by flashes of sickly green light revealing twisted paths and grotesque shapes. Beyond the threshold lies only uncertainty and terror."
-"The Stocks"	"The public square is a cobblestone expanse bordered by weathered timber-framed buildings. The air carries the mingling scents of chimney smoke, damp earth, and the faint tang of a nearby smithy. At its center, crude wooden stocks stand as a grim focal point, their beams weathered and stained from years of use. Iron clasps lock captives in degrading postures, their tattered clothing offering little protection from the biting wind.
+"The Stocks"		figure of RideStocks	"The public square is a cobblestone expanse bordered by weathered timber-framed buildings. The air carries the mingling scents of chimney smoke, damp earth, and the faint tang of a nearby smithy. At its center, crude wooden stocks stand as a grim focal point, their beams weathered and stained from years of use. Iron clasps lock captives in degrading postures, their tattered clothing offering little protection from the biting wind.
 
 The punished individuals hang their heads in shame, their faces etched with despair. Around them, the crowd revels in cruelty—a wiry man spits insults with gleeful laughter, while a stout woman throws overripe vegetables, each impact sparking jeers. Even children join in, pointing and mocking with mischievous delight.
 
 The square hums with noise: the crowd’s taunts, the crack of objects hitting wood, and the quiet murmurs of the suffering captives. Overhead, a gray sky threatens rain, indifferent to the spectacle below. The jeering mob ignores its ominous weight, too engrossed in their shared cruelty to notice nature’s disapproval."
-"The Gallows"	"The public square, slick with morning drizzle, lies under a brooding, overcast sky. At its center looms the gallows, a weathered wooden platform with thick ropes swaying ominously. The crowd stands in somber silence, broken by the shuffle of feet or faint murmurs, their eyes fixed on the grim scene.
+"The Gallows"	figure of RideGallows	"The public square, slick with morning drizzle, lies under a brooding, overcast sky. At its center looms the gallows, a weathered wooden platform with thick ropes swaying ominously. The crowd stands in somber silence, broken by the shuffle of feet or faint murmurs, their eyes fixed on the grim scene.
 
-A hooded executioner, cloaked in black, adjusts the frayed noose with practiced precision, his cold presence exuding purpose. Beside him stands the condemned man, pale and trembling, his bound hands behind him. Beads of sweat mix with rain on his haunted face as his darting eyes search the indifferent crowd. Each shallow breath forms a fleeting cloud in the chilly air—a fragile reminder of his fleeting life.
+A hooded executioner, cloaked in black, adjusts the frayed noose with practiced precision, his cold presence exuding purpose. In front of him stands the condemned man, pale and trembling, his bound hands behind him. Beads of sweat mix with rain on his haunted face as his darting eyes search the indifferent crowd. Each shallow breath forms a fleeting cloud in the chilly air—a fragile reminder of his fleeting life.
 
 Vendors hawk bread and cider, while children strain for a better view. An old man clutches a rosary, whispering prayers, as others smirk and place bets. Above, the bell tower tolls, its mournful chime marking the passage of the man’s final moments. A raven perches on the gallows’ beam, its unblinking gaze fixed on the scene below.
 
 As the executioner adjusts the noose around the man’s neck, the crowd falls silent, the air thick with dread. Distant thunder rumbles faintly, as if the heavens themselves await the inevitable."
-"The Stake"	"The public square is steeped in grim silence, broken only by the crackling of flames. At its center, three wooden stakes rise from a pyre of logs and kindling, darkened by smoke from past executions. Bound to the stakes are three women, their faces reflecting defiance, resignation, and terror.
+"The Stake"	figure of RideStake	"The public square is steeped in grim silence, broken only by the crackling of flames. At its center, three wooden stakes rise from a pyre of logs and kindling, darkened by smoke from past executions. Bound to the stakes are three women, their faces reflecting defiance, resignation, and terror.
 
 A crowd encircles the scene, expressions ranging from morbid fascination to righteous fury. Children cling to their mothers, while elders nod solemnly. Some jeer and throw stones; others murmur prayers or avert their gaze.
 
 The executioner, hooded and clad in a leather apron, steps forward with a blazing torch, igniting the pyre in a sudden roar. Flames climb rapidly as thick smoke coils upward. The condemned cry out, their voices mingling with the crackle of fire. The oppressive heat radiates outward, pressing against the silent, uneasy crowd.
 
 Gray clouds loom overhead, nature’s somber backdrop to the grim spectacle. A raven caws from the bell tower as slow church bells toll, each strike punctuating the tragedy. As the pyre burns, some onlookers remain transfixed while others quietly slip away, the square heavy with ash, smoke, and the echoes of the condemned."
-"The Dungeon"	"The dungeon is a dark, suffocating chamber carved into the earth, its stone walls slick with moisture and grime. The air reeks of sweat, blood, mildew, and burning oil from flickering torches mounted on rusted sconces. Shadows twist on the walls, creating grotesque, unsettling shapes in the dim light.
+"The Dungeon"		figure of RideDungeon	"The dungeon is a dark, suffocating chamber carved into the earth, its stone walls slick with moisture and grime. The air reeks of sweat, blood, mildew, and burning oil from flickering torches mounted on rusted sconces. Shadows twist on the walls, creating grotesque, unsettling shapes in the dim light.
 
 Chains hang from walls and ceilings, their faint clinking blending with the moans and occasional screams of prisoners. Water drips rhythmically from a cracked ceiling, adding to the chamber[’]s eerie ambiance.
 
@@ -1847,7 +1864,7 @@ The hooded torturer moves with detached precision, their leather apron stained w
 Above, rats scuttle in the shadows, and the low ceiling presses down like the weight of despair. The sole exit, a riveted iron-bound door, feels more like a barrier to hope than a path to freedom.
 
 This is a realm of suffering and hopelessness, where life and death blur, and torment is the only certainty."
-"The Guillotine"	"The public square buzzes with tense anticipation, a crowd gathered under gray skies that cast a somber light on the cobblestones. At the center, a stark wooden platform looms, its purpose grim and unavoidable.
+"The Guillotine"		figure of RideGuillotine	"The public square buzzes with tense anticipation, a crowd gathered under gray skies that cast a somber light on the cobblestones. At the center, a stark wooden platform looms, its purpose grim and unavoidable.
 
 A lone figure stands on the scaffold, bound hands behind their back and head bowed low, avoiding the crowd’s gaze. Their tattered clothing, once fine, reflects the fall that led them to this moment.
 
@@ -1866,7 +1883,9 @@ You are stupefied as you sit watching guillotine rising and falling, dropping li
 Instead of doing something other than waiting, looking, listening or examining during HellRideAuto:
 	say "You are having such a good time that you don['] want to do anything but sit and enjoy the ride."
 	
-Ride Entrance is a room. Ride Entrance is south of Head of the Line. "The cars that will take you into the fearsome Hell Ride stop here for you to board.  To the south is the track that will take you into the ride. The safety bars lower as the cars move into the darkness. To one side, the darkness looks just a little bit darker."
+Ride Entrance is a room. Ride Entrance is south of Head of the Line. "A crooked sign warns, 'One Ticket Admission: Enter If You Dare!' Nearby, a carnival barker with a theatrical, raspy voice calls out, 'Step right up! The gates of hell are open—will you brave the darkness?'
+
+The cars that will take you into the fearsome Hell Ride stop here for you to board.  To the south is the track that will take you into the ride. The safety bars lower as the cars move into the darkness. To one side, the darkness looks just a little bit darker."
 
 The Hell Ride car is a vehicle in the Ride Entrance. The description of the Hell Ride car is "A car waits to take you through the horror that is Hell Ride."
 
@@ -1911,7 +1930,7 @@ Before looking when the location is the Gallows Room:
 
 The Gallows Room is south of the Stocks Room.  "The public square, slick with morning drizzle, lies under a brooding, overcast sky. At its center looms the gallows, a weathered wooden platform with thick ropes swaying ominously. The crowd stands in somber silence, broken by the shuffle of feet or faint murmurs, their eyes fixed on the grim scene.
 
-A hooded executioner, cloaked in black, adjusts the frayed noose with practiced precision, his cold presence exuding purpose. Beside him stands the condemned man, pale and trembling, his bound hands behind him. Beads of sweat mix with rain on his haunted face as his darting eyes search the indifferent crowd. Each shallow breath forms a fleeting cloud in the chilly air—a fragile reminder of his fleeting life.
+A hooded executioner, cloaked in black, adjusts the frayed noose with practiced precision, his cold presence exuding purpose. In front of him stands the condemned man, pale and trembling, his bound hands behind him. Beads of sweat mix with rain on his haunted face as his darting eyes search the indifferent crowd. Each shallow breath forms a fleeting cloud in the chilly air—a fragile reminder of his fleeting life.
 
 Vendors hawk bread and cider, while children strain for a better view. An old man clutches a rosary, whispering prayers, as others smirk and place bets. Above, the bell tower tolls, its mournful chime marking the passage of the man’s final moments. A raven perches on the gallows’ beam, its unblinking gaze fixed on the scene below.
 
@@ -2037,19 +2056,21 @@ The Ride Exit is south of the Guillotine Room. "The exit of Hell Ride is designe
 
 Riders step into a small courtyard enclosed by jagged, rusted fencing draped with cobwebs and plastic bones. Overhead, a weathered sign reads, 'You[’]ve Survived… For Now.' Nearby, carnival workers in tattered costumes watch silently, occasionally muttering cryptic remarks like, 'Not everyone makes it out.'
 
-A merchandise stand glows red, selling items like Hell Ride Survivor shirts and devil horns. Beyond the fencing, the cheerful carnival lights and sounds feel jarring, contrasting sharply with the ride’s oppressive atmosphere.
+A merchandise stand glows red, selling items like Hell Ride Survivor t-shirts and devil horns. Beyond the fencing, the cheerful carnival lights and sounds feel jarring, contrasting sharply with the ride’s oppressive atmosphere.
 
 The exit ensures Hell Ride isn’t just an experience—it lingers, blurring the line between thrill and fear."
 
-The merchandise stand is scenery in the Ride Exit. The merchandise stand is a container. Understand "stand" as merchandise. The description of the merchandise is "The stand is bathed in red light, adding to the ominous mood." 
+The merchandise stand is scenery in the Ride Exit. The merchandise stand is a container. Understand "stand" as merchandise stand. The description of the merchandise stand is "The stand is bathed in red light, adding to the ominous mood." 
 
-Instead of taking the khaki fuse when the fuse11 is lost:
-	say "You find [the noun]!";
-	now the noun is carried by the player;
-	say "Taken.";
+The plastic bones are in the merchandise stand. The price of the plastic bones is $1.00. The description is "This is a collection of plastic bones meant to decorate your yard."
+
+The devil horns are in the merchandise stand. The price of the devil horns is $2.00. The description is "The devil horns tie to your head."
+
+The t-shirt is in the merchandise stand. The price of the t-shirt is $7.50. Understand "t-shirts" as t-shirt. The description is "This is a black t-shirt with the caption 'I Survived Hell Ride!"
+
+After buying the khaki fuse:
 	play the sound of Bell;
-	increase score by 5;
-	now fuse11 is found.
+	increase score by 5.
 	
 Chapter 5 - Second Floor
 
