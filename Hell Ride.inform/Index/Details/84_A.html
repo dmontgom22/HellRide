@@ -885,23 +885,22 @@
     </table>
 
     <hr>
-    <p><b>Defined in the source - Drink Mechanics</b><br><b>pouring it into</b></p>
+    <p><b>From the extension Singing Reloaded by Shin - Miscellaneous</b><br><b>singing</b></p>
     <hr>
-    <p><b>Pouring <span class="indexdullblue">something</span> into <span class="indexdullblue">something</span> </b>&nbsp;<a href="source:story.ni#line156"><img border=0 src=inform:/doc_images/Reveal.png></a> (<i>past tense</i> poured it into): applying to two things</p>
+    <p><b>Singing </b>&nbsp;<a href='inform://Extensions/Extensions/Shin/Singing%20Reloaded.html' title="Singing Reloaded by Shin" style="text-decoration: none"><img border=0 src=inform:/doc_images/Revealext.png></a> (<i>past tense</i> sung): applying to nothing</p>
+    <p>The Standard Rules define this action in only a minimal way, blocking it
+    with a check rule which stops it in all cases. It exists so that before
+    or instead rules can be written to make it do interesting things in special
+    cases. (Or to reconstruct the action as something more substantial, unlist
+    the block rule and supply carry out and report rules, together perhaps
+    with some further check rules.)</p>
     <hr>
     <p><b>Typed commands leading to this action</b></p>
-    <p>&quot;pour [fluid container] in/into/on/onto [fluid container]&quot;&nbsp;<a href="source:story.ni#line152"><img border=0 src=inform:/doc_images/Reveal.png></a> - <i>pouring it into</i>&nbsp;<a href=Details/84_A.html><img border=0 src=inform:/doc_images/Beneath.png></a><br>
-    &quot;pour [something] in/into/on/onto [something]&quot;&nbsp;<a href="source:story.ni#line154"><img border=0 src=inform:/doc_images/Reveal.png></a> - <i>pouring it into</i>&nbsp;<a href=Details/84_A.html><img border=0 src=inform:/doc_images/Beneath.png></a><br>
-    &quot;empty [fluid container] into [fluid container]&quot;&nbsp;<a href="source:story.ni#line152"><img border=0 src=inform:/doc_images/Reveal.png></a> - <i>pouring it into</i>&nbsp;<a href=Details/84_A.html><img border=0 src=inform:/doc_images/Beneath.png></a><br>
-    &quot;empty [something] into [something]&quot;&nbsp;<a href="source:story.ni#line154"><img border=0 src=inform:/doc_images/Reveal.png></a> - <i>pouring it into</i>&nbsp;<a href=Details/84_A.html><img border=0 src=inform:/doc_images/Beneath.png></a><br>
-    &quot;fill [fluid container] with/from [fluid container]&quot;&nbsp;<a href="source:story.ni#line152"><img border=0 src=inform:/doc_images/Reveal.png></a> - <i>pouring it into</i>&nbsp;<a href=Details/84_A.html><img border=0 src=inform:/doc_images/Beneath.png></a> <i>reversed</i><br>
-    &quot;fill [something] with/from [something]&quot;&nbsp;<a href="source:story.ni#line154"><img border=0 src=inform:/doc_images/Reveal.png></a> - <i>pouring it into</i>&nbsp;<a href=Details/84_A.html><img border=0 src=inform:/doc_images/Beneath.png></a> <i>reversed</i><br>
+    <p>&quot;sing&quot;&nbsp;<a href='inform://Extensions/Extensions/Shin/Singing%20Reloaded.html' title="Singing Reloaded by Shin" style="text-decoration: none"><img border=0 src=inform:/doc_images/Revealext.png></a> - <i>singing</i>&nbsp;<a href=Details/84_A.html><img border=0 src=inform:/doc_images/Beneath.png></a><br>
     </p>
     <p><b>Rules controlling this action</b></p>
-    <p><p class="indentin2">instead of&nbsp;&nbsp;&nbsp;&nbsp;<i>doing something other than waiting, looking, listening or examining</i>&nbsp;&nbsp;<i>during LittleEgyptAuto</i>&nbsp;&nbsp;&nbsp;<a href="source:story.ni#line1413"><img border=0 src=inform:/doc_images/Reveal.png></a><br>instead of&nbsp;&nbsp;&nbsp;&nbsp;<i>doing something other than waiting, looking, listening or examining</i>&nbsp;&nbsp;<i>during HellRideAuto</i>&nbsp;&nbsp;&nbsp;<a href="source:story.ni#line1883"><img border=0 src=inform:/doc_images/Reveal.png></a></p>
-    <p class="indentin2">check&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="source:story.ni#line158"><img border=0 src=inform:/doc_images/Reveal.png></a></p>
-    <p class="indentin2">carry out&nbsp;&nbsp;&nbsp;&nbsp;(let available capacity be the fluid capacity of the second noun minus the current volume of the second noun; ...)&nbsp;<a href="source:story.ni#line168"><img border=0 src=inform:/doc_images/Reveal.png></a></p>
-    <p class="indentin2">report&nbsp;&nbsp;&nbsp;&nbsp;(say "[if the noun is empty][The noun] is now empty;[otherwise][The noun] now contains [current volume of the noun in rough terms] of [liquid of the noun]; [end if]"; ...)&nbsp;<a href="source:story.ni#line174"><img border=0 src=inform:/doc_images/Reveal.png></a></p>
+    <p><p class="indentin2">instead of&nbsp;&nbsp;&nbsp;&nbsp;<i>doing something other than waiting, looking, listening or examining</i>&nbsp;&nbsp;<i>during LittleEgyptAuto</i>&nbsp;&nbsp;&nbsp;<a href="source:story.ni#line1482"><img border=0 src=inform:/doc_images/Reveal.png></a><br>instead of&nbsp;&nbsp;&nbsp;&nbsp;<i>doing something other than waiting, looking, listening or examining</i>&nbsp;&nbsp;<i>during HellRideAuto</i>&nbsp;&nbsp;&nbsp;<a href="source:story.ni#line1906"><img border=0 src=inform:/doc_images/Reveal.png></a></p>
+    <p class="indentin2">check&nbsp;&nbsp;&nbsp;&nbsp;<i>an actor singing</i>&nbsp;&nbsp;<span class="indexdullred">block singing rule</span>&nbsp;&nbsp;<a href="javascript:pasteCode('block singing rule')"><img border=0 src=inform:/doc_images/paste.png></a>&nbsp;<i>name</i> <a href="javascript:pasteCode('The block singing rule response (check singing rulebook) is [=0x0022=]New text.[=0x0022=].')"><img border=0 src=inform:/doc_images/paste.png></a>&nbsp;<i>unlist</i>&nbsp;<a href='inform://Extensions/Extensions/Shin/Singing%20Reloaded.html' title="Singing Reloaded by Shin" style="text-decoration: none"><img border=0 src=inform:/doc_images/Revealext.png></a></p>
     </p>
 
     <!--CONTENT ENDS-->
