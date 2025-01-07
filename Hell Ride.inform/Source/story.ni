@@ -32,9 +32,9 @@ The story title is "Hell Ride".
 The story author is "No Shoes".
 The story headline is "The ride of a lifetime...".
 The story genre is "Horror".
-The release number is 118.
 The story description is "You've decided to stay and enjoy the carnival anyway."
-The story creation year is 2024.
+The story creation year is 2025.
+The release number is 118.
 
 Chapter 3 - Extensions
 
@@ -180,11 +180,13 @@ Section 3 - Underlying Mechanics
 
 Underlying relates various things to one thing. The verb to underlie means the underlying relation. The verb to be under means the underlying relation. The verb to be beneath means the underlying relation.
 	
-[This must be duplicated for each fuse in order to work properly]
-[Instead of looking under a thing which is underlaid by something (called the lost object):
+To look under something:
 	say "You find [the list of things which underlie the noun]!";
 	now every thing which underlies the noun is carried by the player;
-	now every thing which underlies the noun does not underlie the noun.]
+	now every thing which underlies the noun does not underlie the noun;
+	say "Taken.";
+	play the sound of Bell;
+	increase score by 5.
 	
 Hiding it under is an action applying to one carried thing and one thing. Understand "put [something preferably held] under [something]" as hiding it under. Understand "hide [something preferably held] under [something]" as hiding it under. Understand the commands "shove" and "conceal" and "stick" as "hide".
 
@@ -237,7 +239,20 @@ Rule for showing action of the noun:
 Before printing the name of a lit electric lamp, say "lit ".
 Before printing the name of an unlit lit electric lamp, say "extinguished ".
 
-Section 5 - Grues
+Section 5 - Toad Away
+
+toadaway is a truth state that varies. toadaway is false.
+every turn:
+	if turn count is 100:
+		say "Over the loud speaker, an announcement blares: Attention please. There is a vehicle being towed from the parking lot for parking illegally. The license plate of the car is '862901'.[run paragraph on]";
+		if the parking stub is on the dashboard:
+			say " You breathe a sigh of relief as you realize that[']s not your license plate. I guess it[']s a good thing you remembered to place the parking stub on the dashboard.";
+		if the parking stub is not on the dashboard:
+			say " Your heart sinks as you realize that is your license plate. You race to the parking lot in time to see the tow truck pull away with your car in tow";
+			now toadaway is true;
+			end the story finally.
+
+Section 6 - Grues
 
 Test grues with "s / buy hell ride ticket / s / give hell ride ticket to ride operator / s / e / s / s / s"
 
@@ -251,37 +266,6 @@ every turn when in darkness:
 	increment the dark terminous count;
 	if the dark terminous count is 3, end the story finally.
 every turn when not in darkness, now dark terminous count is 0.
-
-Section 6 - Miscellaneous
-
-Test Misc with "brief / xyzzy / plugh / hello sailor / please get the dime / i / score".
-
-[for adaptive text]
-A thing can be seen or unseen. A thing is usually unseen.
-
-Carry out examining a thing, now the noun is seen.
-
-a coin is a kind of thing.
-
-a dime is a kind of thing. Understand "shiny" and "coin" as a dime. The description of a dime is "It[']s a dime. Ten cents. One tenth of a dollar. And very shiny."
-
-a quarter is a kind of thing. Understand "shiny" and "coin" as a quarter. The description of a quarter is "It[']s a quarter. Two bits. And very shiny."
-
-[scored rooms]
-A room can be scored or unscored. A room is usually unscored.
-
-Carry out going to a unvisited scored room:
-	play the sound of Bell;
-	increase the score by 5.
-	
-[heaven and earth]
-A room can be indoors or outdoors. A room is usually indoors. 
-
-The sky is a backdrop. The sky is everywhere.
-
-The description of the sky is "[if the location is outdoors]It[']s a beautiful evening. Not a cloud in the sky. The moon is out and there are so many stars to see. A shooting star streaks across the sky.[otherwise]You[']re indoors. You can[']t see the sky here."
-
-The ground is a backdrop. The ground is everywhere. Understand "floor" as the ground.
 
 Section 7 - Hello Sailor
 
@@ -324,76 +308,39 @@ instead of examining an attendant:
 	Let R be response entry;
 	say "This is another bored teenager. [R]";
 	stop the action.
-
-Chapter 5 - The Player, Global Code
-
-The player is in the Parking Lot. 
-
-The description of the player is "You are despondent given that you and your date just had a huge fight and they stormed off. Maybe visiting the attractions at the carnival will make you feel better." 
-
-Instead of examining the player:
-	say "Oh, stop fussing. You look fine."
-
-The coupon is in the wallet. The description of the coupon is "You found this in a stack of coupons on the counter of the gas station."
-
-before examining the coupon, display Figure of Coupon.
-
-After reading a command:
-	if the player's command includes "please":
-		say "Please do not say 'please.'";
-		reject the player's command.
-
-after reading a command:
-	if the player's command matches "load", try restoring the game instead.
 	
-[obituary]
-Rule for printing the player's obituary:
-	[winning move]
-	if Control Panel Nine's button is switched on and Control Panel Nine's dial is properly set:
-		say paragraph break;
-		say "As you look into the monitor on the control panel you can see that the guillotine has stopped rising and falling over the cars. You have saved the day, not to mention lives![paragraph break]";
-		say "*** You have won! ***";
-		say paragraph break;
-		rule succeeds;
-	[car was toad away]
-	else if toadaway is true:
-		say "[paragraph break]*** You start the long walk home. ***";
-	[electrocuted by big switch]
-	else if electrocuted is true:
-		say "[line break]The sparks arc onto your unprotected hands electrocuting you on the spot.";
-		say "[paragraph break]*** You have died! ***";
-	[grues]
-	else if the location is dark:
-		say "[Line break]Oh no! You walked directly into the slavering fangs of a lurking grue!";
-		say "[paragraph break]*** You have died! ***";
-		say paragraph break;
-	[some other way to die]
-	otherwise:
-		say "[paragraph break]*** You have died! ***"
-		
-After printing the player's obituary: say "[paragraph break]Wow, you achieved a whole [score] point[s] out of a possible [maximum score] in [turn count] moves! I'm very proud of you. This was a triumph. I'm being so sincere right now."
+Section 10 - Miscellaneous
+
+Test Misc with "brief / xyzzy / plugh / hello sailor / please get the dime / i / score".
+
+[for adaptive text]
+A thing can be seen or unseen. A thing is usually unseen.
+
+Carry out examining a thing, now the noun is seen.
+
+a coin is a kind of thing.
+
+a dime is a kind of thing. Understand "shiny" and "coin" as a dime. The description of a dime is "It[']s a dime. Ten cents. One tenth of a dollar. And very shiny."
+
+a quarter is a kind of thing. Understand "shiny" and "coin" as a quarter. The description of a quarter is "It[']s a quarter. Two bits. And very shiny."
+
+[scored rooms]
+A room can be scored or unscored. A room is usually unscored.
+
+Carry out going to a unvisited scored room:
+	play the sound of Bell;
+	increase the score by 5.
 	
-[fix up the map]
-Index map with title set to "The Carnival".
-Index map with Electrical Closet Eleven mapped northwest of Electrical Room.
-Index map with Electrical Closet Seven mapped southwest of Electrical Room.
-Index map with Guillotine Room mapped west of Generator Room.
-Index map with room-size set to 52
-	and room-size of the Electrical Room set to 74.
+[heaven and earth]
+A room can be indoors or outdoors. A room is usually indoors. 
 
-[toad away]
-toadaway is a truth state that varies. toadaway is false.
-every turn:
-	if turn count is 100:
-		say "Over the loud speaker, an announcement blares: Attention please. There is a vehicle being towed from the parking lot for parking illegally. The license plate of the car is '862901'.[run paragraph on]";
-		if the parking stub is on the dashboard:
-			say " You breathe a sigh of relief as you realize that[']s not your license plate. I guess it[']s a good thing you remembered to place the parking stub on the dashboard.";
-		if the parking stub is not on the dashboard:
-			say " Your heart sinks as you realize that is your license plate. You race to the parking lot in time to see the tow truck pull away with your car in tow";
-			now toadaway is true;
-			end the story finally.
+The sky is a backdrop. The sky is everywhere.
 
-Chapter 6 - Tables
+The description of the sky is "[if the location is outdoors]It[']s a beautiful evening. Not a cloud in the sky. The moon is out and there are so many stars to see. A shooting star streaks across the sky.[otherwise]You[']re indoors. You can[']t see the sky here."
+
+The ground is a backdrop. The ground is everywhere. Understand "floor" as the ground.
+
+Chapter 5 - Tables
 
 Section 1 - Table of Bored Responses
 
@@ -585,7 +532,7 @@ I hope you enjoy it.
 
 d."
 
-Chapter 7 - Figures
+Chapter 6 - Figures
 
 Figure of Hell Ride is the file "HellRide.png".
 
@@ -642,6 +589,62 @@ Figure of RideDungeon is the file "RideDungeon.png".
 Figure of RideGuillotine is the file "RideGuillotine.png".
 
 Figure of RideExit is the file "RideExit.png".
+
+Chapter 7 - The Player, Global Code
+
+The player is in the Parking Lot. 
+
+The description of the player is "You are despondent given that you and your date just had a huge fight and they stormed off. Maybe visiting the attractions at the carnival will make you feel better." 
+
+Instead of examining the player:
+	say "Oh, stop fussing. You look fine."
+
+The coupon is in the wallet. The description of the coupon is "You found this in a stack of coupons on the counter of the gas station."
+
+before examining the coupon, display Figure of Coupon.
+
+After reading a command:
+	if the player's command includes "please":
+		say "Please do not say 'please.'";
+		reject the player's command.
+
+after reading a command:
+	if the player's command matches "load", try restoring the game instead.
+	
+[obituary]
+Rule for printing the player's obituary:
+	[winning move]
+	if Control Panel Nine's button is switched on and Control Panel Nine's dial is properly set:
+		say paragraph break;
+		say "As you look into the monitor on the control panel you can see that the guillotine has stopped rising and falling over the cars. You have saved the day, not to mention lives![paragraph break]";
+		say "*** You have won! ***";
+		say paragraph break;
+		rule succeeds;
+	[car was toad away]
+	else if toadaway is true:
+		say "[paragraph break]*** You start the long walk home. ***";
+	[electrocuted by big switch]
+	else if electrocuted is true:
+		say "[line break]The sparks arc onto your unprotected hands electrocuting you on the spot.";
+		say "[paragraph break]*** You have died! ***";
+	[grues]
+	else if the location is dark:
+		say "[Line break]Oh no! You walked directly into the slavering fangs of a lurking grue!";
+		say "[paragraph break]*** You have died! ***";
+		say paragraph break;
+	[some other way to die]
+	otherwise:
+		say "[paragraph break]*** You have died! ***"
+		
+After printing the player's obituary: say "[paragraph break]Wow, you achieved a whole [score] point[s] out of a possible [maximum score] in [turn count] moves! I'm very proud of you. This was a triumph. I'm being so sincere right now."
+	
+[fix up the map]
+Index map with title set to "The Carnival".
+Index map with Electrical Closet Eleven mapped northwest of Electrical Room.
+Index map with Electrical Closet Seven mapped southwest of Electrical Room.
+Index map with Guillotine Room mapped west of Generator Room.
+Index map with room-size set to 52
+	and room-size of the Electrical Room set to 74.
 
 
 Chapter 8 - RNG Seed, Money, Dimes, Sounds - Not for release
@@ -925,7 +928,7 @@ Test Death with "brief / Test Parking / Test Games / Test Attractions / Test Con
 
 Test Parking with "brief / get blueberries / eat blueberries / give coupon to operator / buy ticket / get in car / look / l at seat / l under seat / open glove box / get gloves / wear gloves / set stub on the dashboard / l at the dashboard / get air freshener / look at it / put keys in ignition / turn keys / exit".
 
-Test ToadAway with "brief / test parking / get in car / get parking stub / exit car / test games / test b1 / w / l under stocks / e / s / w"
+Test ToadAway with "brief / test parking / get in car / get parking stub / exit car / test games / test b1 / w / l under stocks"
 
 Test a1 with "s / buy fortune teller ticket / buy ferris wheel ticket / buy bumper cars ticket / buy carousel ticket / buy hell ride ticket"
 
@@ -1886,35 +1889,22 @@ Every turn during HellRideAuto:
 		blank out the whole row;
 		rule succeeds.
 		
-Section 2 - Look Logic (To show the room description)
 
-To show the room description:
-	choose a row with a locale of location in the table of Hell Ride Events;
-	display figure entry;
-	say "[bold type][locale text entry][roman type][line break][description entry][paragraph break]";
-	let L1 be the list of described things that are in the location; sort L1;
-	let L2 be the list of described things that are scenery; sort L2;
-	remove L2 from L1, if present;
-	let L3 be the list of described things in something in the location; sort L3;
-	remove L3 from L1, if present; sort L1;
-	say "You can see [L1] here.[paragraph break]".
+Section 2 - Ride Entrance
 
-Section 3 - Ride Entrance
-
-After going when the location is the Ride Entrance:
-	try looking;
-	stop the action.
+After going south from the Head of Line when the Ride Entrance is unvisited:
+	display Figure of Hell Ride;
+	continue the action.
 	
-instead of looking when the location is the Ride Entrance:
-	show the room description;
-	stop the action;
+Before looking when the location is the Ride Entrance:
+	display Figure of Hell Ride.
 	
 Test Ride with "brief / s / buy hell ride ticket / s / give hell ride ticket to operator / s / enter hell ride car / wait / z / z / z / z / z / z".
 
 Instead of doing something other than waiting, looking, listening or examining during HellRideAuto:
 	say "You are having such a good time that you don[']t want to do anything but sit and enjoy the ride."
 	
-Ride Entrance is a room. Ride Entrance is south of Head of the Line.
+Ride Entrance is a room. Ride Entrance is south of Head of the Line. "[description corresponding to the locale of Ride Entrance in the Table of Hell Ride Events]"
 
 The Hell Ride car is a vehicle in the Ride Entrance. The description of the Hell Ride car is "A car waits to take you through the horror that is Hell Ride."
 
@@ -1922,65 +1912,52 @@ Before going south when the player is in the Ride Entrance:
 	say "You can[']t go that way." instead;
 	continue the action.
 
-Section 4 - Stocks Room
+Section 3 - Stocks Room
 
-After going when the location is the Stocks Room:
-	try looking;
-	stop the action.
+After going south from the Ride Entrance when the Stocks Room is unvisited:
+	display Figure of RideStocks;
+	continue the action.
 	
-instead of looking when the location is the Stocks Room:
-	show the room description;
-	stop the action;
+Before looking when the location is the Stocks Room:
+	display Figure of RideStocks.
 
-Stocks Room is south of the Ride Entrance. 
+Stocks Room is south of the Ride Entrance. "[description corresponding to the locale of Stocks Room in the Table of Hell Ride Events]"
 
 The wooden stocks are a supporter in the Stocks Room. The wooden stocks are fixed in place. The description of the wooden stocks is "At the square[']s center stand a row of crude wooden stocks, their heavy beams stained from years of weather and use. Iron clasps hold the unfortunate captives by their wrists and necks, their bodies forced into unnatural, humiliating postures." 
 
 Instead of looking under a thing which is underlaid by the aqua fuse when the fuse1 is lost:
-	say "You find [the list of things which underlie the noun]!";
-	now every thing which underlies the noun is carried by the player;
-	now every thing which underlies the noun does not underlie the noun;
-	say "Taken.";
-	play the sound of Bell;
-	increase score by 5;
-	now the fuse1 is found.
+	look under something;
+	now the fuse1 is found.	
 	
-Section 5 - Gallows Room
+Section 4 - Gallows Room
 
-After going when the location is the Gallows Room:
-	try looking;
-	stop the action.
+After going south from the Stocks Room when the Gallows Room is unvisited:
+	display Figure of RideGallows;
+	continue the action.
 	
-instead of looking when the location is the Gallows Room:
-	show the room description;
-	stop the action;
+Before looking when the location is the Gallows Room:
+	display Figure of RideGallows.
 	
-The Gallows Room is south of the Stocks Room.  
+The Gallows Room is south of the Stocks Room.  "[description corresponding to the locale of Gallows Room in the Table of Hell Ride Events]"
 
 The gallows platform is here. The gallows platform is a supporter. The gallows platform is fixed in place. Understand "gallows" as gallows platform. The description of the gallows platform is "At the center of the square, rising like a grim monument to mortality, stands the gallows—a wooden platform, darkened by age and weather, with thick ropes hanging like vipers poised to strike." 
 
 Instead of looking under a thing which is underlaid by crimson fuse when fuse3 is lost:
-	say "You find [the list of things which underlie the noun]!";
-	now every thing which underlies the noun is carried by the player;
-	now every thing which underlies the noun does not underlie the noun;
-	say "Taken.";
-	play the sound of Bell;
-	increase score by 5;
+	look under something;
 	now fuse3 is found.
 
-Section 6 - Stake Room
+Section 5 - Stake Room
 
-After going when the location is the Stake Room:
-	try looking;
-	stop the action.
+After going south from the Gallows Room when the Stake Room is unvisited:
+	display Figure of RideStake;
+	continue the action.
 	
-instead of looking when the location is the Stake Room:
-	show the room description;
-	stop the action;
+Before looking when the location is the Stake Room:
+	display Figure of RideStake.
 
-The Stake Room is south of the Gallows Room. 
+The Stake Room is south of the Gallows Room. "[description corresponding to the locale of Stake Room in the Table of Hell Ride Events]"
 
-The pyre is an open container in the Stake Room. Understand "fire" as pyre. The description is "The flames burn ever higher." The printed name of the pyre is "a pyre". 
+The pyre is an open unopenable container in the Stake Room. Understand "fire" as pyre. The description is "The flames burn ever higher." The printed name of the pyre is "a pyre". 
 
 Instead of taking the emerald fuse when fuse5 is lost:
 	say "You find [the noun]!";
@@ -1990,20 +1967,22 @@ Instead of taking the emerald fuse when fuse5 is lost:
 	increase score by 5;
 	now fuse5 is found.
 	
+After printing the name of the pyre:
+	omit contents in listing.
+	
 After printing the name of a closed unopenable container:
 	omit contents in listing.
 
-Section 7 - Dungeon
+Section 6 - Dungeon
 
-After going when the location is the Dungeon :
-	try looking;
-	stop the action.
+After going south from the Stake Room when the Dungeon is unvisited:
+	display Figure of RideDungeon;
+	continue the action.
 	
-instead of looking when the location is the Dungeon:
-	show the room description;
-	stop the action;
+Before looking when the location is the Dungeon:
+	display Figure of RideDungeon.
 	
-The Dungeon is south of the Stake Room. 
+The Dungeon is south of the Stake Room. "[description corresponding to the locale of Dungeon in the Table of Hell Ride Events]"
 
 The iron chair is scenery in the Dungeon. The iron chair is a supporter. understand "spiked" and "seat" as iron chair. The description of the iron chair is "A spiked chair looms in the corner, its cruel design gleaming faintly in the dim light." 
 
@@ -2013,48 +1992,36 @@ The brazier is here. It is scenery. The description of the brazier is "It is glo
 The riveted iron-bound door is here. It is scenery.
 
 Instead of looking under a thing which is underlaid by the gray fuse when fuse7 is lost:
-	say "You find [the list of things which underlie the noun]!";
-	now every thing which underlies the noun is carried by the player;
-	now every thing which underlies the noun does not underlie the noun;
-	say "Taken.";
-	play the sound of Bell;
-	increase score by 5;
+	look under something;
 	now fuse7 is found.
 	
-Section 8 - Guillotine Room
+Section 7 - Guillotine Room
 
-After going when the location is the Guillotine Room:
-	try looking;
-	stop the action.
+After going south from the Dungeon when the Guillotine Room is unvisited:
+	display Figure of RideGuillotine;
+	continue the action.
 	
-instead of looking when the location is the Guillotine Room:
-	show the room description;
-	stop the action;
+Before looking when the location is the Guillotine Room:
+	display Figure of RideGuillotine.
 
-The Guillotine Room is south of the Dungeon. 
+The Guillotine Room is south of the Dungeon. "[description corresponding to the locale of Guillotine Room in the Table of Hell Ride Events]"
 
 The guillotine platform is here. The guillotine platform is a supporter. Understand "scaffold" as guillotine platform. The description of the guillotine platform is "At the center of the square stands a raised wooden platform, stark and imposing, where the grim sentence is to be carried out." 
 
 Instead of looking under a thing which is underlaid by the indigo fuse when fuse9 is lost:
-	say "You find [the list of things which underlie the noun]!";
-	now every thing which underlies the noun is carried by the player;
-	now every thing which underlies the noun does not underlie the noun;
-	say "Taken.";
-	play the sound of Bell;
-	increase score by 5;
+	look under something;
 	now fuse9 is found.
 	
-Section 9 - Ride Exit
+Section 8 - Ride Exit
 
-After going when the location is the Ride Exit:
-	try looking;
-	stop the action.
+After going south from the Guillotine Room when the Ride Exit is unvisited:
+	display Figure of RideExit;
+	continue the action.
 	
-instead of looking when the location is the Ride Exit:
-	show the room description;
-	stop the action.
+Before looking when the location is the Ride Exit:
+	display Figure of RideExit.
 
-The Ride Exit is south of the Guillotine Room. 
+The Ride Exit is south of the Guillotine Room. "[description corresponding to the locale of Ride Exit in the Table of Hell Ride Events]"
 
 The merchandise stand is scenery in the Ride Exit. The merchandise stand is a container. Understand "stand" as merchandise stand. The description of the merchandise stand is "The stand is bathed in red light, adding to the ominous mood." 
 
