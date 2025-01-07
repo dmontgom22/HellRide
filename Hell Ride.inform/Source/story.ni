@@ -11,8 +11,8 @@ Release along with
 	the solution, 
 	and library card.
 
-Use maximum things understood at once of at least 100.
-Use dynamic memory allocation of at least 65536.
+Use maximum things understood at once of at least 300.
+Use dynamic memory allocation of at least 131072.
 Use maximum text length of at least 4096.
 Use DICT_WORD_SIZE of 25.
 use MAX_STATIC_DATA of 300000.
@@ -21,9 +21,9 @@ use MAX_VERBS of 350.
 use MAX_SYMBOLS of 28000.
 
 Use scoring.
+The maximum score is 125.
 Use American Dialect.
 Use serial comma.
-The maximum score is 125.
 The block giving rule is not listed in the check giving it to rules.
 
 Chapter 2 - Biblio Card Settings
@@ -32,13 +32,41 @@ The story title is "Hell Ride".
 The story author is "No Shoes".
 The story headline is "The ride of a lifetime...".
 The story genre is "Horror".
-The release number is 117.
 The story description is "You've decided to stay and enjoy the carnival anyway."
-The story creation year is 2024.
+The story creation year is 2025.
+The release number is 118.
 
+[	Points
+	-------------------------------
+	Taking blueberries
+	Finding dimes/keys
+	Buying the Hell Ride ticket
+	Receiving the veil
+	Taking lantern/flashlight
+	Taking Mercury dime
+	High Striker
+	Toss a dime
+	Pitcher's Mound
+	Finding Dark Passage
+	Finding the Control Room
+	Turning off the big switch
+	Aqua find
+	Crimson find
+	Emerald find
+	Gray find
+	Indigo find
+	Khaki buy
+	Aqua push
+	Crimson push
+	Emerald push
+	Gray push
+	Indigo push
+	Khaki push
+	Indigo button push  ]
+	
 Chapter 3 - Extensions
 
-include Modified Exit by Emily Short.
+Include Modified Exit by Emily Short.
 
 Include Locksmith by Emily Short.
 
@@ -79,11 +107,10 @@ Instead of buying something:
 		increase score by 5;
 	decrease the price of the money by the price of the noun;
 	say "You fork over [the price of the noun] for [the noun], leaving yourself with [the price of the money].";
-	if the money is free:
-		now the money is nowhere;
+	if the money is free, now the money is nowhere;
 	now the price of the noun is $0.00;
 	now the player is carrying the noun.
-	
+			
 The player carries a wallet. The wallet contains money. The printed name of the money is "[price of the money] in cash". Understand "cash" as the money.
 
 Instead of taking the money:
@@ -181,11 +208,13 @@ Section 3 - Underlying Mechanics
 
 Underlying relates various things to one thing. The verb to underlie means the underlying relation. The verb to be under means the underlying relation. The verb to be beneath means the underlying relation.
 	
-[This must be duplicated for each fuse in order to work properly]
-[Instead of looking under a thing which is underlaid by something (called the lost object):
+To look under something:
 	say "You find [the list of things which underlie the noun]!";
 	now every thing which underlies the noun is carried by the player;
-	now every thing which underlies the noun does not underlie the noun.]
+	now every thing which underlies the noun does not underlie the noun;
+	say "Taken.";
+	play the sound of Bell;
+	increase score by 5.
 	
 Hiding it under is an action applying to one carried thing and one thing. Understand "put [something preferably held] under [something]" as hiding it under. Understand "hide [something preferably held] under [something]" as hiding it under. Understand the commands "shove" and "conceal" and "stick" as "hide".
 
@@ -238,7 +267,20 @@ Rule for showing action of the noun:
 Before printing the name of a lit electric lamp, say "lit ".
 Before printing the name of an unlit lit electric lamp, say "extinguished ".
 
-Section 5 - Grues
+Section 5 - Toad Away
+
+toadaway is a truth state that varies. toadaway is false.
+every turn:
+	if turn count is 100:
+		say "Over the loud speaker, an announcement blares: Attention please. There is a vehicle being towed from the parking lot for parking illegally. The license plate of the car is '862901'.[run paragraph on]";
+		if the parking stub is on the dashboard:
+			say " You breathe a sigh of relief as you realize that[']s not your license plate. I guess it[']s a good thing you remembered to place the parking stub on the dashboard.";
+		if the parking stub is not on the dashboard:
+			say " Your heart sinks as you realize that is your license plate. You race to the parking lot in time to see the tow truck pull away with your car in tow";
+			now toadaway is true;
+			end the story finally.
+
+Section 6 - Grues
 
 Test grues with "s / buy hell ride ticket / s / give hell ride ticket to ride operator / s / e / s / s / s"
 
@@ -252,39 +294,6 @@ every turn when in darkness:
 	increment the dark terminous count;
 	if the dark terminous count is 3, end the story finally.
 every turn when not in darkness, now dark terminous count is 0.
-
-Section 6 - Miscellaneous
-
-Test Misc with "brief / xyzzy / plugh / hello sailor / please get the dime / i / score".
-
-[for adaptive text]
-A thing can be broken or unbroken. A thing is usually unbroken.
-
-A thing can be seen or unseen. A thing is usually unseen.
-
-Carry out examining a thing, now the noun is seen.
-
-a coin is a kind of thing.
-
-a dime is a kind of thing. Understand "shiny" and "coin" as a dime. The description of a dime is "It[']s a dime. Ten cents. One tenth of a dollar. And very shiny."
-
-a quarter is a kind of thing. Understand "shiny" and "coin" as a quarter. The description of a quarter is "It[']s a quarter. Two bits. And very shiny."
-
-[scored rooms]
-A room can be scored or unscored. A room is usually unscored.
-
-Carry out going to a unvisited scored room:
-	play the sound of Bell;
-	increase the score by 5.
-	
-[heaven and earth]
-A room can be indoors or outdoors. A room is usually indoors. 
-
-The sky is a backdrop. The sky is everywhere.
-
-The description of the sky is "[if the location is outdoors]It[']s a beautiful evening. Not a cloud in the sky. The moon is out and there are so many stars to see. A shooting star streaks across the sky.[otherwise]You[']re indoors. You can[']t see the sky here."
-
-The ground is a backdrop. The ground is everywhere. Understand "floor" as the ground.
 
 Section 7 - Hello Sailor
 
@@ -320,7 +329,7 @@ Carry out casting plugh:
 	
 Section 9 - Attendants
 
-An Attendant is a kind of male person. Understand "attendent" and "operator" as an attendant. 
+An Attendant is a kind of male person. Understand "attendent", "operator", "teen", "teenager", and "bored" as an attendant. 
 
 instead of examining an attendant:
 	choose a random row in Table of Bored Responses;
@@ -328,77 +337,47 @@ instead of examining an attendant:
 	say "This is another bored teenager. [R]";
 	stop the action.
 	
-Chapter 5 - The Player, Global Code
-
-The player is in the Parking Lot. 
-
-The description of the player is "You are despondent given that you and your date just had a huge fight and they stormed off. Maybe visiting the attractions at the carnival will make you feel better." 
-
-Instead of examining the player:
-	say "Oh, stop fussing. You look fine."
-
-The coupon is in the wallet. The description of the coupon is "You found this in a stack of coupons on the counter of the gas station."
-
-before examining the coupon, display Figure of Coupon.
-
-After reading a command:
-	if the player's command includes "please":
-		say "Please do not say 'please.'";
-		reject the player's command.
-
-after reading a command:
-	if the player's command matches "load", try restoring the game instead.
+Instead of asking an attendant about something:
+	say "'[one of]Sorry,[or]I'm afraid[or]Hm,[at random] [one of]I don't know much about that[or]you've got me there[or]I haven't the faintest[at random],' the teen [one of]drawls[or]replies[or]comments[or]exclaims[at random].";
 	
-[obituary]
-Rule for printing the player's obituary:
-	[winning move]
-	if Control Panel Nine's button is switched on and Control Panel Nine's dial is properly set:
-		say paragraph break;
-		say "As you look into the monitor on the control panel you can see that the guillotine has stopped rising and falling over the cars. You have saved the day, not to mention lives![paragraph break]";
-		say "*** You have won! ***";
-		say paragraph break;
-		rule succeeds;
-	[car was toad away]
-	else if toadaway is true:
-		say "[paragraph break]*** You start the long walk home. ***";
-	[electrocuted by big switch]
-	else if electrocuted is true:
-		say "[line break]The sparks arc onto your unprotected hands electrocuting you on the spot.";
-		say "[paragraph break]*** You have died! ***";
-	[grues]
-	else if the location is dark:
-		say "[Line break]Oh no! You walked directly into the slavering fangs of a lurking grue!";
-		say "[paragraph break]*** You have died! ***";
-		say paragraph break;
-	[some other way to die]
-	otherwise:
-		say "[paragraph break]*** You have died! ***"
-		
-After printing the player's obituary: say "[paragraph break]Wow, you achieved a whole [score] point[s] out of a possible [maximum score] in [turn count] moves! I'm very proud of you. This was a triumph. I'm being so sincere right now."
+Instead of telling an attendant about something:
+	say "The attendant looks [one of]surprised[or]intrigued[or]nonplussed[at random]. '[one of]You don't say[or]That's very interesting[or]Do go on[or]I wish I'd known that sooner[at random]!'".
+
+Section 10 - Miscellaneous
+
+Test Misc with "brief / xyzzy / plugh / hello sailor / please get the dime / i / score".
+
+[for adaptive text]
+A thing can be seen or unseen. A thing is usually unseen.
+
+Carry out examining a thing, now the noun is seen.
+
+a coin is a kind of thing.
+
+a dime is a kind of thing. Understand "shiny" and "coin" as a dime. The description of a dime is "It[']s a dime. Ten cents. One tenth of a dollar. And very shiny."
+
+a quarter is a kind of thing. Understand "shiny" and "coin" as a quarter. The description of a quarter is "It[']s a quarter. Two bits. And very shiny."
+
+[scored rooms]
+A room can be scored or unscored. A room is usually unscored.
+
+Carry out going to a unvisited scored room:
+	play the sound of Bell;
+	increase the score by 5.
 	
-[fix up the map]
-Index map with title set to "The Carnival".
-Index map with Electrical Closet Eleven mapped northwest of Electrical Room.
-Index map with Electrical Closet Seven mapped southwest of Electrical Room.
-Index map with Guillotine Room mapped west of Generator Room.
-Index map with room-size set to 52
-	and room-size of the Electrical Room set to 74.
+[heaven and earth]
+A room can be indoors or outdoors. A room is usually indoors. 
 
-[toad away]
-toadaway is a truth state that varies. toadaway is false.
-every turn:
-	if turn count is 100:
-		say "Over the loud speaker, an announcement blares: Attention please. There is a vehicle being towed from the parking lot for parking illegally. The license plate of the car is '862901'.[run paragraph on]";
-		if the parking stub is on the dashboard:
-			say " You breathe a sigh of relief as you realize that[']s not your license plate. I guess it[']s a good thing you remembered to place the parking stub on the dashboard.";
-		if the parking stub is not on the dashboard:
-			say " Your heart sinks as you realize that is your license plate. You race to the parking lot in time to see the tow truck pull away with your car in tow";
-			now toadaway is true;
-			end the story finally.
+The sky is a backdrop. The sky is everywhere.
 
-Chapter 6 - Tables
+The description of the sky is "[if the location is outdoors]It[']s a beautiful evening. Not a cloud in the sky. The moon is out and there are so many stars to see. A shooting star streaks across the sky.[otherwise]You[']re indoors. You can[']t see the sky here."
 
-[Bored Responses]
+The ground is a backdrop. The ground is everywhere. Understand "floor" as the ground.
+
+Chapter 5 - Tables
+
+Section 1 - Table of Bored Responses
+
 Table of Bored Responses
 response
 "He[']s just trying to earn enough money to take his sweetie to the movies next week."
@@ -410,7 +389,8 @@ response
 "His thoughts are entirely focused on a cheeseburger for lunch."
 "He wonders how is he supposed to look cool dressed in this awful uniform."
 
-[Songs]
+Section 2 - Table of Songs
+
 Table of Songs
 artist	song	rickroll
 "Led Zeppelin"	"Fool In The Rain"	false
@@ -454,7 +434,8 @@ artist	song	rickroll
 "The Talking Heads"	"Psycho Killer"	false
 "The Village People"	"YMCA"	false
 
-[Monitor Descriptions]
+Section 3 - Table of Monitor Descriptions
+
 Table of Monitor Descriptions
 link number	figure choice		description
 0	Figure of ControlPanel		"The monitor now shows a nothing but snow."
@@ -465,13 +446,16 @@ link number	figure choice		description
 9	Figure of ControlPanelGuillotine		"The monitor now shows a tableau of a guillotine rising and falling over the ride exit."
 11	Figure of ControlPanelExit		"The monitor shows a the gift shop located at the Hell Ride exit."
 
-[prizes]
+Section 4 - Table of High Striker Prizes
+
 Table of High Striker Prizes
 index	object	description
 "1"	teddy bear	"a teddy bear"
 "2"	swiss army knife	"a Swiss Army knife"
 "3"	poster of taylor swift	"a poster of Taylor Swift"
 "4"	fuse13	"a magenta fuse"
+
+Section 5 - Table of Flip a Coin Prizes
 
 Table of Flip a Coin Prizes
 index	object	description
@@ -480,6 +464,8 @@ index	object	description
 "3"	poster of billie eilish	"a poster of Billie Eilish"
 "4"	pocket mirror	"a small pocket mirror"
 
+Section 6 - Table of Pitcher's Mound Prizes
+
 Table of Pitcher's Mound Prizes
 index	object	description
 "1"	fuse17	"a quartz fuse"
@@ -487,7 +473,82 @@ index	object	description
 "3"	goldfish	"a goldfish in a bowl"
 "4"	poster of lourde	"a poster of Lourde"
 
-[Description of Hell Ride]			
+Section 7 - Table of Hell Ride Events
+
+Table of Hell Ride Events
+locale	locale text	figure	description
+Ride Entrance	"Ride Entrance"	figure of HellRideEntrance	"The cars that will take you into the fearsome Hell Ride stop here for you to board and then move forward, the safety bar locked in place, as the entrance to Hell Ride looms ahead—a grotesque facade of twisted metal and carved wood, illuminated by flickering blood-red lights. The air carries a faint sulfuric tang mingled with the sweet aroma of carnival popcorn.
+
+A towering archway of flames, spikes, and grinning skulls frames the entrance, crowned by flickering letters that read 'HELL RIDE', pulsing like a heartbeat. Below, crouching demon sculptures extend clawed hands in a sinister invitation. Wooden doors cover the entrance, whispering with faint, menacing chuckles as distorted organ music grows louder, punctuated by shrieks and grinding machinery.
+
+Inside, near-total darkness is broken by flashes of sickly green light revealing twisted paths and grotesque shapes. Beyond the threshold lies only uncertainty and terror."
+Stocks Room	"Stocks Room"		figure of RideStocks	"The public square is a cobblestone expanse bordered by weathered timber-framed buildings. The air carries the mingling scents of chimney smoke, damp earth, and the faint tang of a nearby smithy. At its center, crude wooden stocks stand as a grim focal point, their beams weathered and stained from years of use. Iron clasps lock captives in degrading postures, their tattered clothing offering little protection from the biting wind.
+
+The punished individuals hang their heads in shame, their faces etched with despair. Around them, the crowd revels in cruelty—a wiry man spits insults with gleeful laughter, while a stout woman throws overripe vegetables, each impact sparking jeers. Even children join in, pointing and mocking with mischievous delight.
+
+The square hums with noise: the crowd’s taunts, the crack of objects hitting wood, and the quiet murmurs of the suffering captives. Overhead, a gray sky threatens rain, indifferent to the spectacle below. The jeering mob ignores its ominous weight, too engrossed in their shared cruelty to notice nature’s disapproval."
+Gallows Room	"Gallows Room"	figure of RideGallows	"The public square, slick with morning drizzle, lies under a brooding, overcast sky. At its center looms the gallows, a weathered wooden platform with thick ropes swaying ominously. The crowd stands in somber silence, broken by the shuffle of feet or faint murmurs, their eyes fixed on the grim scene.
+
+A hooded executioner, cloaked in black, adjusts the frayed noose with practiced precision, his cold presence exuding purpose. In front of him stands the condemned man, pale and trembling, his bound hands behind him. Beads of sweat mix with rain on his haunted face as his darting eyes search the indifferent crowd. Each shallow breath forms a fleeting cloud in the chilly air—a fragile reminder of his fleeting life.
+
+Vendors hawk bread and cider, while children strain for a better view. An old man clutches a rosary, whispering prayers, as others smirk and place bets. Above, the bell tower tolls, its mournful chime marking the passage of the man’s final moments. A raven perches on the gallows’ beam, its unblinking gaze fixed on the scene below.
+
+As the executioner adjusts the noose around the man’s neck, the crowd falls silent, the air thick with dread. Distant thunder rumbles faintly, as if the heavens themselves await the inevitable."
+Stake Room	"Stake Room"	figure of RideStake	"The public square is steeped in grim silence, broken only by the crackling of flames. At its center, three wooden stakes rise from a pyre of logs and kindling, darkened by smoke from past executions. Bound to the stakes are three women, their faces reflecting defiance, resignation, and terror.
+
+A crowd encircles the scene, expressions ranging from morbid fascination to righteous fury. Children cling to their mothers, while elders nod solemnly. Some jeer and throw stones; others murmur prayers or avert their gaze.
+
+The executioner, hooded and clad in a leather apron, steps forward with a blazing torch, igniting the pyre in a sudden roar. Flames climb rapidly as thick smoke coils upward. The condemned cry out, their voices mingling with the crackle of fire. The oppressive heat radiates outward, pressing against the silent, uneasy crowd.
+
+Gray clouds loom overhead, nature’s somber backdrop to the grim spectacle. A raven caws from the bell tower as slow church bells toll, each strike punctuating the tragedy. As the pyre burns, some onlookers remain transfixed while others quietly slip away, the square heavy with ash, smoke, and the echoes of the condemned."
+Dungeon	"Dungeon"		figure of RideDungeon	"The dungeon is a dark, suffocating chamber carved into the earth, its stone walls slick with moisture and grime. The air reeks of sweat, blood, mildew, and burning oil from flickering torches mounted on rusted sconces. Shadows twist on the walls, creating grotesque, unsettling shapes in the dim light.
+
+Chains hang from walls and ceilings, their faint clinking blending with the moans and occasional screams of prisoners. Water drips rhythmically from a cracked ceiling, adding to the chamber[’]s eerie ambiance.
+
+The room is littered with instruments of torment: a splintered rack, a glowing brazier holding bloodstained tools, and a spiked chair gleaming faintly in the light. Prisoners endure their own horrors—one stretched on the rack, another hanging limply from manacles, and a third gasping weakly in the spiked chair.
+
+The hooded torturer moves with detached precision, their leather apron stained with the evidence of countless victims. They work silently, indifferent to the agony surrounding them.
+
+Above, rats scuttle in the shadows, and the low ceiling presses down like the weight of despair. The sole exit, a riveted iron-bound door, feels more like a barrier to hope than a path to freedom.
+
+This is a realm of suffering and hopelessness, where life and death blur, and torment is the only certainty."
+Guillotine Room	"Guillotine Room"		figure of RideGuillotine	"The public square buzzes with tense anticipation, a crowd gathered under gray skies that cast a somber light on the cobblestones. At the center, a stark wooden platform looms, its purpose grim and unavoidable.
+
+A lone figure stands on the scaffold, bound hands behind their back and head bowed low, avoiding the crowd’s gaze. Their tattered clothing, once fine, reflects the fall that led them to this moment.
+
+The crowd encircles the platform, emotions ranging from jeers and curses to silent, grim observation. Children sit on shoulders, their curious eyes unaware of the event’s gravity. Near the edge of the platform, the town crier proclaims the crime: 'High treason against the crown. Let this be a warning to all who defy the realm!'
+
+The condemned flinches but remains silent as the executioner—a hooded figure in black—stands ready beside the guillotine, its blade gleaming faintly in the dim light. The murmurs of the crowd fall into silence at the executioner’s signal, leaving only the rustle of wind and the creak of the scaffold.
+
+As the condemned approaches the guillotine, a crow caws sharply from a nearby rooftop, its cry echoing through the square like an omen. The crowd leans forward, breath held, as justice and mortality converge on the scene.
+
+There is just one problem: the guillotine is being raised and lowered by some mechanism. It appears that the timing of the guillotine is off and it is being lowered onto the cars instead of between them. If a person were to be in a car as it passed under the guillotine, they would be decapitated.
+[if the player is in the hell ride car]
+
+Looks like your goose is cooked. Say 'Goodnight, Gracie!' 
+
+You are stupefied as you sit watching guillotine rising and falling, dropping like a stone on the cars in front of you. Thank goodness they are empty. As your turn comes, you raise your hands in a feeble attempt to stop the inevitable.[end if]"
+Ride Exit	"Ride Exit"	figure of RideExit	"The exit of Hell Ride is designed to leave riders with lingering unease. Emerging from a dark corridor with peeling black and red-streaked walls, flickering lights cast erratic shadows on the uneven floor. The air is cool and damp, carrying a faint metallic tang, while faint whispers and distant screams echo softly in the background.
+
+Riders step into a small courtyard enclosed by jagged, rusted fencing draped with cobwebs and plastic bones. Overhead, a weathered sign reads, 'You[’]ve Survived… For Now.' Nearby, carnival workers in tattered costumes watch silently, occasionally muttering cryptic remarks like, 'Not everyone makes it out.'
+
+A merchandise stand glows red, selling items like Hell Ride Survivor t-shirts and devil horns. Beyond the fencing, the cheerful carnival lights and sounds feel jarring, contrasting sharply with the ride’s oppressive atmosphere.
+
+The exit ensures Hell Ride isn’t just an experience—it lingers, blurring the line between thrill and fear."
+
+Section 8 - Table of Little Egypt Events
+
+Table of Little Egypt Events
+description
+"In the dimly lit tent, you see that the stage is decorated to resemble an exotic Middle Eastern market or palace, featuring rich, colorful fabrics, brass ornaments, and lanterns casting a warm, flickering glow. Scents of incense waft through the air, enhancing the atmosphere of mystique. The backdrop displays painted scenes of pyramids, desert landscapes, and domed structures evoking a sense of being transported to the 'Middle East'. "
+"Little Egypt emerges draped in flowing silk veils which she skillfully uses as part of the dance. Her attire consists of a sparkling, sequined bodice and a flowing skirt, adorned with jingling coin belts and jewelry that accentuate her movements."
+"The performance begins with slow, undulating movements, drawing you into the rhythm of exotic live music played on traditional instruments like the oud, darbuka, or zurna. As the tempo builds, her hips, torso, and hands move in intricate, mesmerizing patterns, demonstrating remarkable control and fluidity. She incorporates dramatic spins, drops, and shimmies, often accentuating the beat of the music with a quick jingle of her coin belt."
+"Little Egypt makes eye contact with you and smiles enigmatically. During her performance she balances a sword on her head and accents her dance with finger cymbals."
+"The music alternates between hauntingly slow melodies and rapid, energetic drum beats, creating an emotional arc that keeps you entranced. Little Egypt relies on the music[']s dynamic changes to tell a story with movements reflecting joy, sorrow, seduction, and celebration."
+"The performance concludes with a dramatic flourish of a fast-paced shimmy, a bold spin, and Little Egypt dramatically casts off her veils. The dancer takes a bow to enthusiastic applause, leaving you spellbound by the sensual yet artful display."
+
+Section 9 - Description of Hell Ride
+
 When play begins:
 	 choose row 1 in Table of Basic Help Options;
 	 now description entry is "Hell Ride - A Ride to remember...
@@ -504,6 +565,24 @@ We developed two prototypes: Diner and Hell Ride. Diner was about bank robbers c
 I hope you enjoy it.
 
 d."
+
+Chapter 6 - Hint Tables
+
+Table of Basic Help Options (continued)
+title	subtable	description
+"Contacting the author"	--	"If you have any difficulties with [story title], please contact me at dmontgom22@gmail.com"
+"Hints"	Table of Hints	--
+"Settings"	Table of Setting Options	--
+
+Table of Hints
+title    	subtable    	description    	toggle
+"What do I do with the string?"    	Table of String Hints    	""    	hint toggle rule
+
+Table of String Hints
+hint	used
+"Remember that you know how to macrame."	a number
+"Isn't macrame the art of tying?"
+"Oh, come now, isn't it obvious?"
 
 Chapter 7 - Figures
 
@@ -563,13 +642,64 @@ Figure of RideGuillotine is the file "RideGuillotine.png".
 
 Figure of RideExit is the file "RideExit.png".
 
+Chapter 8 - The Player, Global Code
 
-Chapter 8 - RNG Seed, Money, Dimes, Sounds - Not for release
+The player is in the Parking Lot. 
 
-[When play begins (this is the run property checks at the start of play rule):
-	repeat with item running through things:
-		if description of the item is "":
-			say "[item] has no description."]
+The description of the player is "You are despondent given that you and your date just had a huge fight and they stormed off. Maybe visiting the attractions at the carnival will make you feel better." 
+
+Instead of examining the player:
+	say "Oh, stop fussing. You look fine."
+
+The coupon is in the wallet. The description of the coupon is "You found this in a stack of coupons on the counter of the gas station."
+
+before examining the coupon, display Figure of Coupon.
+
+After reading a command:
+	if the player's command includes "please":
+		say "Please do not say 'please.'";
+		reject the player's command.
+
+after reading a command:
+	if the player's command matches "load", try restoring the game instead.
+	
+[obituary]
+Rule for printing the player's obituary:
+	[winning move]
+	if Control Panel Nine's button is switched on and Control Panel Nine's dial is properly set:
+		say paragraph break;
+		say "As you look into the monitor on the control panel you can see that the guillotine has stopped rising and falling over the cars. You have saved the day, not to mention lives![paragraph break]";
+		say "*** You have won! ***";
+		say paragraph break;
+		rule succeeds;
+	[car was toad away]
+	else if toadaway is true:
+		say "[paragraph break]*** You start the long walk home. ***";
+	[electrocuted by big switch]
+	else if electrocuted is true:
+		say "[line break]The sparks arc onto your unprotected hands electrocuting you on the spot.";
+		say "[paragraph break]*** You have died! ***";
+	[grues]
+	else if the location is dark:
+		say "[Line break]Oh no! You walked directly into the slavering fangs of a lurking grue!";
+		say "[paragraph break]*** You have died! ***";
+		say paragraph break;
+	[some other way to die]
+	otherwise:
+		say "[paragraph break]*** You have died! ***"
+		
+After printing the player's obituary: say "[paragraph break]Wow, you achieved a whole [score] point[s] out of a possible [maximum score] in [turn count] moves! I'm very proud of you. This was a triumph. I'm being so sincere right now."
+	
+[fix up the map]
+Index map with title set to "The Carnival".
+Index map with Electrical Closet Eleven mapped northwest of Electrical Room.
+Index map with Electrical Closet Seven mapped southwest of Electrical Room.
+Index map with Guillotine Room mapped west of Generator Room.
+Index map with room-size set to 52
+	and room-size of the Electrical Room set to 74.
+
+
+Chapter 9 - RNG Seed, Money, Dimes, Sounds - Not for release
 			
 When play begins:
 	seed the random-number generator with 4321.
@@ -581,7 +711,7 @@ Sound of Bell is the file "Silence.ogg".
 five dimes underlie the seat. 
 
 			
-Chapter 9 - RNG Seed, Money, Dimes, Sounds - For Release Only
+Chapter 10 - RNG Seed, Money, Dimes, Sounds - For Release Only
 
 When play begins:
 	seed the random-number generator with 0.
@@ -620,7 +750,7 @@ A silver key is in the Electrical Closet One. The description of the silver key 
 Section 3 - Electrical Panels
 
 An electrical panel is a kind of openable lockable container. 
-Understand "panel" as an electrical panel. Understand "screws" as the electrical panel.
+Understand "panel" as an electrical panel. Understand "screws" as an electrical panel.
 An electrical panel is usually closed, locked, scenery.
 An electrical panel has a color. Understand the color property as describing an electrical panel.
 An electrical panel has a number called a panel id. Understand the panel id property as describing an electrical panel.
@@ -629,7 +759,7 @@ The description of an electrical panel is "Electrical Panel [the panel id] is a 
 
 The printed name of an electrical panel is "Electrical Panel [the panel id]".
 
-every electrical panel is unlocked by the Swiss Army knife.
+every electrical panel is unlocked by the Swiss Army knife. understand "screwdriver" as Swiss Army knife.
 
 Definition: A thing is panel-fitted if it is incorporated by an electrical panel.
 
@@ -796,7 +926,6 @@ To count the switches:
 	if Electrical Closet Seven's electrical panel's switch is switched on and the Electrical Closet Seven's electrical panel's socket is properly fused, increment the switch count;
 	if Electrical Closet Nine's electrical panel's switch is switched on and the Electrical Closet Nine's electrical panel's socket is properly fused, increment the switch count;
 	if Electrical Closet Eleven's electrical panel's switch is switched on and the Electrical Closet Eleven's electrical panel's socket is properly fused, increment the switch count;
-		
 	
 Section 8 - Electrical Room
 
@@ -818,10 +947,10 @@ Instead of going from the Electrical Room:
 	otherwise:
 		continue the action.
 
-The breaker panel is here. It is scenery. 
-The junction box is here. It is scenery. 
-The workbench is here. It is scenery.
-The emergency shutdown panel is here. It is scenery.
+a breaker panel is here. It is scenery. 
+a junction box is here. It is scenery. 
+a workbench is here. It is scenery.
+an emergency shutdown panel is here. It is scenery.
 A fire extinguisher is here. It is scenery.
 A faded safety poster is here. It is scenery.
 A small fan is here. It is scenery.
@@ -843,9 +972,9 @@ Test Life with "brief / Test Parking / Test Games / Test Attractions / Test Conc
 
 Test Death with "brief / Test Parking / Test Games / Test Attractions / Test Concession / Test Misc / Test Ride".
 
-Test Parking with "brief / get blueberries / eat blueberries / give coupon to operator / buy ticket / get in car / look / l at seat / l under seat / open glove box / get gloves / wear gloves / set stub on the dashboard / l at the dashboard / get air freshener / look at it / put keys in ignition / turn keys / exit".
+Test Parking with "brief / get blueberries / eat blueberries / give coupon to operator / buy ticket / ask attendant about the ticket stub/ get in car / look / l at seat / l under seat / open glove box / get gloves / wear gloves / set stub on the dashboard / l at the dashboard / get air freshener / look at it / put keys in ignition / turn keys / exit".
 
-Test ToadAway with "brief / test parking / get in car / get parking stub / exit car / test games / test b1 / w / l under stocks / e / s / w"
+Test ToadAway with "brief / test parking / get in car / get parking stub / exit car / test games / test b1 / w"
 
 Test a1 with "s / buy fortune teller ticket / buy ferris wheel ticket / buy bumper cars ticket / buy carousel ticket / buy hell ride ticket"
 
@@ -879,29 +1008,29 @@ Alive with anticipation, the parking lot marks the transition from the ordinary 
 
 The midway is to the south. There is a blueberry bush here. [if blueberry bush contains blueberries]There are blueberries on the bush.[otherwise]The bush has been picked clean.[end if][paragraph break]Your car is here. It[']s a bit of a beater. Inside the car, you can see [the list of things which are part of the beater car]."
 
-The Parking Attendant is an attendant in the the parking lot. The parking attendant carries the parking ticket and the parking stub. The price of the parking ticket is $5.00. 
+The Parking Attendant is an attendant in the the parking lot. The parking attendant carries a parking ticket and a parking stub. The price of the parking ticket is $5.00. 
+understand "the stub" or "ticket stub" or "the ticket stub" as the parking stub.
 
 after looking when the location is the parking lot:
 	say "[if the parking attendant carries the parking ticket]The attendant has a parking ticket. The price of a parking ticket is [the price of the parking ticket].[end if]";
 
-The beater car is an open enterable container in the parking lot. The beater car is scenery. Understand "vehicle" and "car" as the beater car. The description of the beater car is "[if the player is in the beater car][bold type]Car Interior[roman type][line break][end if]This is your car. It[']s a 2002 Honda Civic and it[']s seen better days.[paragraph break][if the player is in the beater car]You[']re sitting inside your car. [end if]Even though it[']s old, it feels like an old friend. From the faux leather seats to the crack in the windshield. It[']s familiar and comforting. There[']s old fast food wrappers on the floor, clothes and text books in the back seat. There is an air freshener hanging from the rear view mirror. You see [the list of things which are part of the beater car]." 
+The beater car is an open enterable unopenable container in the parking lot. The beater car is scenery. Understand "vehicle" and "car" as the beater car. The description of the beater car is "[if the player is in the beater car][bold type]Car Interior[roman type][line break][end if]This is your car. It[']s a 2002 Honda Civic and it[']s seen better days.[paragraph break][if the player is in the beater car]You[']re sitting inside your car. [end if]Even though it[']s old, it feels like an old friend. From the faux leather seats to the crack in the windshield. It[']s familiar and comforting. There[']s old fast food wrappers on the floor, dirty clothes and text books in the back seat. There is an air freshener hanging from the rear view mirror. You see [the list of things which are part of the beater car]." 
 
 The wrappers are here. The wrappers are scenery. The description of the wrappers is "McDonald's, Burger King, Jack In The Box, Taco Bell, Carls, Jr., Five Guys... You[']re a regular equal opportunity garbage gut."
 
 The text books are here. The text books are scenery. Understand "books" as text books. The description of the text books is "The titles you see are Introduction to Calculus, Statistics, and Heart of Darkness here."
 
-The clothes are here. The clothes are scenery. The description of the clothes is "Your dirty clothes are strewn about. You really meant to do laundry days ago."
+Your dirty clothes are here. The clothes are scenery. The description is "Your dirty clothes are strewn about. You really meant to do laundry days ago."
 
 instead of looking when the player is in the beater car, try examining the beater car.
 
-The blueberry bush is here. the blueberry bush is scenery. the blueberry bush is a container. the blueberry bush is not portable. the blueberry bush contains blueberries. Understand "berries" as blueberries. The blueberries are edible.The description of the blueberries is "The blueberries are ripe and juicy.".
+A blueberry bush is here. the blueberry bush is scenery. the blueberry bush is a container. the blueberry bush is not portable. the blueberry bush contains blueberries. Understand "berries" as blueberries. The blueberries are edible.The description of the blueberries is "The blueberries are ripe and juicy.".
 
 After taking blueberries:
 	play the sound of Bell;
 	increase score by 5;
-	say "Good Job!".
 	
-after eating the blueberries, say "The blueberries were delicious. A true taste of summer."
+after eating the blueberries, say "The blueberries were delicious. A true taste of summer!"
 	
 check giving the coupon to the parking attendant:
 	if the parking attendant carries the parking ticket:
@@ -915,13 +1044,21 @@ check giving the coupon to the parking attendant:
 		stop the action.
 		
 instead of buying the parking ticket when the player is not in the car:
-	say "The attendant says, 'Don[']t forget to leave the stub on your dashboard'.";
+	say "The attendant mumbles something about the stub.";
 	now the player carries the parking ticket;
 	now the player carries the parking stub;
 	continue the action.
 	
-instead of buying the parking ticket when the player is in the beater car:
+instead of buying something when the player is in the beater car:
 	say "You don[']t see that here." instead.
+	
+understand "stub" or "the stub" or "ticket stub" or "the ticket stub" as "[stub]".
+
+instead of showing the parking stub to the parking attendant:
+	say "He replies, 'Put the ticket stub on your dashboard or your car will get towed.'"
+
+instead of asking the parking attendant about "[stub]":
+	say "He replies, 'Put the ticket stub on your dashboard or your car will get towed.'"
 
 instead of going south when the location is the parking lot and the player does not carry the parking ticket, say "You need a parking ticket to leave your car here." instead.
 
@@ -933,7 +1070,7 @@ every turn when the location is the parking lot:
 every turn when the player is in the beater car:
 	now the left hand status line is "Car Interior".
 
-The air freshener is in the beater car. The description of the air freshener is "This is one of those air fresheners that are shaped like a pine tree and smell like one too. You bought it the last time you went to the car wash."
+An air freshener is in the beater car. The description of the air freshener is "This is one of those air fresheners that are shaped like a pine tree and smell like one too. You bought it the last time you went to the car wash."
 
 The ignition is part of the beater car. The ignition is a scenery container. 
 
@@ -949,7 +1086,7 @@ three quarters underlie the seat.
 
 The glove box is part of the beater car. The glove box is a locked openable container. Your keys unlock the glove box. Understand "glove compartment" and "compartment" as the glove box.
 
-the pair of gloves are a thing. The pair of gloves are inside the glove box. The pair of gloves is wearable. The description of the pair of gloves is "A nice set of fur-lined leather gloves. They[']re very warm." The printed name of the pair of gloves is "pair of gloves".
+A pair of gloves are a thing. The pair of gloves are inside the glove box. The pair of gloves is wearable. The description of the pair of gloves is "A nice set of fur-lined leather gloves. They[']re very warm." The printed name of the pair of gloves is "pair of gloves".
 
 Instead of looking under a thing which is underlaid by something:
 	say "You find [the list of things which underlie the noun]!";
@@ -1039,7 +1176,7 @@ In front of the stand, kids tug at their parents, teens share pretzels, and the 
 
 There is a menu to the right of the window. You can see the treats inside the stand. There is an exit to the northeast."
 
-treats is here. Treats is scenery. Understand "treat" as treats. The description of treats is "There are a variety of things to eat here."
+treats are here. Treats are scenery. Understand "treat" as treats. The description of treats is "There are a variety of things to eat here."
 
 a menu is here.  Understand "sign" as menu. the Menu is fixed in place. The description of the menu is 
 "[line break]$2.00 Cola
@@ -1049,7 +1186,7 @@ a menu is here.  Understand "sign" as menu. the Menu is fixed in place. The desc
 [line break]$1.50 Soft Pretzel
 [line break]$1.00 Bubblegum"
 
-a can is here. The price of can is $2.00. The description of the can is "This soda is ice cold."
+a can is here. The price of a can is $2.00. The description of the can is "This soda is ice cold."
 
 The can is a fluid container. The liquid of the can is Cola. understand "soda" as cola. The current volume of the can is 8.0 fl oz. Understand "Coke" as the can.
 
@@ -1100,23 +1237,23 @@ after examining the strongman attendant:
 after looking when the HighStrikerWin is true and the location is the High Striker:
 	show the high striker prizes.
 	
-The teddy bear is carried by the Strongman Attendant. The description of the teddy bear is "This is a teddy bear like you had when you were a kid. Right down to the red bow around its neck." 
+A teddy bear is carried by the Strongman Attendant. The description of the teddy bear is "This is a teddy bear like you had when you were a kid. Right down to the red bow around its neck." 
 
-The Swiss Army knife is carried by the Strongman Attendant. The description of the Swiss army knife is "This is the standard issue Swiss Army knife. It has [a list of things which are part of the item described]."  The printed name of the Swiss Army knife is "Swiss Army knife". 
+A Swiss Army knife is carried by the Strongman Attendant. The description of the Swiss army knife is "This is the standard issue Swiss Army knife. It has [a list of things which are part of the item described]."  The printed name of the Swiss Army knife is "Swiss Army knife". 
 
-The screwdriver is part of the swiss army knife. The description of the screwdriver is "It[']s a handy tool that[']s part of the Swiss Army knife."
-The awl is part of the swiss army knife. The description of the awl is "It[']s a handy tool that[']s part of the Swiss Army knife."
-The fingernail clippers is part of the swiss army knife. The description of the fingernail clippers is "It[']s a handy tool that[']s part of the Swiss Army knife."
-The can opener is part of the swiss army knife. The description of the can opener is "It[']s a handy tool that[']s part of the Swiss Army knife."
-The corkscrew is part of the swiss army knife. The description of the corkscrew is "It[']s a handy tool that[']s part of the Swiss Army knife."
+A screwdriver is part of the swiss army knife. The description of the screwdriver is "It[']s a handy tool that[']s part of the Swiss Army knife."
+An awl is part of the swiss army knife. The description of the awl is "It[']s a handy tool that[']s part of the Swiss Army knife."
+A fingernail clippers is part of the swiss army knife. The description of the fingernail clippers is "It[']s a handy tool that[']s part of the Swiss Army knife."
+A can opener is part of the swiss army knife. The description of the can opener is "It[']s a handy tool that[']s part of the Swiss Army knife."
+A corkscrew is part of the swiss army knife. The description of the corkscrew is "It[']s a handy tool that[']s part of the Swiss Army knife."
 
 instead of taking when the noun is part of the Swiss army knife, say "That[']s part of the Swiss Army knife. You can[']t take that!" instead.
 	
-The poster of Taylor Swift is carried by the Strongman Attendant. The description of the poster of Taylor Swift is "This is a poster of America[']s sweetheart, Taylor Swift."
+A poster of Taylor Swift is carried by the Strongman Attendant. The description of the poster of Taylor Swift is "This is a poster of America[']s sweetheart, Taylor Swift."
 
-The lever is here. The lever is fixed in place. Understand "bullseye", "striker", and "target" as lever. The description of the lever is "There is a bullseye on the base of the lever. I guess this is where you have to hit the mallet."
+A lever is here. The lever is fixed in place. Understand "bullseye", "striker", and "target" as lever. The description of the lever is "There is a bullseye on the base of the lever. I guess this is where you have to hit the mallet."
 
-The mallet is carried by the Strongman Attendant.  The price of the mallet is $2.00. Understand "hammer" as mallet. The description of the mallet is "The mallet is over sized, perhaps to give you an advantage in the Strong Man game."
+A mallet is carried by the Strongman Attendant.  The price of the mallet is $2.00. Understand "hammer" as mallet. The description of the mallet is "The mallet is over sized, perhaps to give you an advantage in the Strong Man game."
 
 A strength pattern is a kind of value. The strength patterns are Weakling, Getting Stronger, Average, Almost There, Muscle Man.
 
@@ -1151,11 +1288,11 @@ after reading a command when the location is the high striker and HighStrikerWin
 	let C be "[the player's command]";
 	if there is an index of C in the Table of High Striker Prizes:
 		choose a row with an index of C in the Table of High Striker Prizes;
-		play the sound of Bell;
-		increase the score by 5;
 		say "You are now holding [description entry].";
 		now the player carries the object entry;
 		now HighStrikerWin is false;
+		play the sound of Bell;
+		increase the score by 5;
 		reject the player's command;
 	otherwise:
 		continue the action.
@@ -1193,11 +1330,11 @@ check tossing a dime when the location is the Flip a Coin Game:
 		say "That seems futile to me.";
 		rule fails.
 
-The small plush monkey is carried by the Flip a Coin Attendant. Understand "stuffie" and "stuffed" as monkey. The description of the monkey is "You feel rather underwhelmed as you look at the small plush monkey on a keychain."
+A small plush monkey is carried by the Flip a Coin Attendant. Understand "stuffie" and "stuffed" as monkey. The description of the monkey is "You feel rather underwhelmed as you look at the small plush monkey on a keychain."
 
-The poster of Billie Eilish is carried by the Flip a Coin Attendant. The description of the poster is "This is a poster of Billie Eilish. Doesn[']t your sweetie like them?"
+A poster of Billie Eilish is carried by the Flip a Coin Attendant. The description of the poster is "This is a poster of Billie Eilish. Doesn[']t your sweetie like them?"
 
-The small pocket mirror is carried by the Flip a Coin Attendant. The description of the small pocket mirror is "This is a small pocket mirror. You could use it to check your hair."
+A small pocket mirror is carried by the Flip a Coin Attendant. The description of the small pocket mirror is "This is a small pocket mirror. You could use it to check your hair."
 
 To show the Toss A Dime prizes:
 	say "Which prize would you like? [run paragraph on]";
@@ -1224,11 +1361,11 @@ after reading a command when the location is the Flip a Coin Game and TossADimeW
 	let C be "[the player's command]";
 	if there is an index of C in the Table of Flip a Coin Prizes:
 		choose a row with an index of C in the Table of Flip a Coin Prizes;
-		play the sound of Bell;
-		increase the score by 5;
 		say "You are now holding [description entry].";
 		now the player carries the object entry;
 		now TossADimeWin is false;
+		play the sound of Bell;
+		increase the score by 5;
 		reject the player's command;
 	otherwise:
 		continue the action.
@@ -1258,11 +1395,11 @@ The booth buzzes with energy, its colorful banners and flashing lights drawing a
 
 You[']re surprised to see that this game only costs a dime."
 
-The small plush donkey is carried by the Pitcher's Mound Attendant. Understand "stuffie" and "stuffed" as donkey. The description of the donkey is "You feel rather underwhelmed as you look at the small plush donkey on a keychain."
+A small plush donkey is carried by the Pitcher's Mound Attendant. Understand "stuffie" and "stuffed" as donkey. The description of the donkey is "You feel rather underwhelmed as you look at the small plush donkey on a keychain."
 
-The poster of Lourde is carried by the Pitcher's Mound Attendant. The description of the poster of Lourde is "This is a poster of Lourde. You love her singing."
+A poster of Lourde is carried by the Pitcher's Mound Attendant. The description of the poster of Lourde is "This is a poster of Lourde. You love her singing."
 
-The goldfish is carried by the Pitcher's Mound Attendant. Understand "bowl" as goldfish. The description of the goldfish is "This is a small goldfish in a bowl. A pet is just what you need."
+A goldfish is carried by the Pitcher's Mound Attendant. Understand "bowl" as goldfish. The description of the goldfish is "This is a small goldfish in a bowl. A pet is just what you need."
 
 a baseball is a kind of thing. Understand "ball" as baseball.The Pitcher's Mound Attendant carries three baseballs.
 
@@ -1311,11 +1448,11 @@ after reading a command when the location is the Pitcher's Mound and PitchersMou
 	let C be "[the player's command]";
 	if there is an index of C in the Table of Pitcher's Mound Prizes:
 		choose a row with an index of C in the Table of Pitcher's Mound Prizes;
-		play the sound of Bell;
-		increase the score by 5;
 		say "You are now holding [description entry].";
 		now the player carries the object entry;
 		now PitchersMoundWin is false;
+		play the sound of Bell;
+		increase the score by 5;
 		reject the player's command;
 	otherwise:
 		continue the action.
@@ -1345,7 +1482,7 @@ report going west when the location is the Show Facade and the location is unvis
 	show the barker's cry;
 	stop the action.
 
-The sign is in the Show Facade. The sign is scenery. The description of the sign is "The sign reads, 'Little Egypt Show – A Journey Into the Mysterious and Exotic!'".
+A sign is in the Show Facade. The sign is scenery. The description of the sign is "The sign reads, 'Little Egypt Show – A Journey Into the Mysterious and Exotic!'".
 
 The Barker is a person in Show Facade. Understand "attendant", "attendent", and "operator" as the Barker. The description of the barker is "Here is a man dressed in black pants, a white shirt,a striped vest, a fez, and a dazzling smile."
 
@@ -1373,7 +1510,7 @@ The Show Tent is a room. The Show Tent is west of Show Facade. "You are inside t
 
 Little Egypt is a woman. Little Egypt is in the Show Tent. Little Egypt is scenery. The description of Little Egypt is "Little Egypt is an exotic looking, beautiful woman who is draped in flowing silk veils which she skillfully uses as part of the dance. Her attire consists of a sparkling, sequined bodice and a flowing skirt, adorned with jingling coin belts and jewelry that accentuate her movements."
 
-The sheer veil is a wearable thing. The description of the Sheer Veil is "This is a sheer gold veil that Little Egypt wore (and removed) during her show. Your head swims as you smell the scent of her perfume on her veil: patchouli."
+A sheer veil is a wearable thing. The description of the Sheer Veil is "This is a sheer gold veil that Little Egypt wore (and removed) during her show. Your head swims as you smell the scent of her perfume on her veil: patchouli."
 
 after wearing the veil, say "You wrap the veil around your head, shrouding your eyes. The world is a lovely color pink as you look through the veil while her perfume assaults your nose in the most delightful way."
 
@@ -1381,7 +1518,7 @@ The Stage is here. The Stage is scenery. The description of the Stage is "The st
 
 The wall is a scenery container. The wall is in the Show Tent. 
 
-The lantern is an electric lamp. It is in the wall. Understand "lamp" as the lantern. The description of the lantern is "This is a highly polished brass lantern."
+A lantern is an electric lamp. It is in the wall. Understand "lamp" as the lantern. The description of the lantern is "This is a highly polished brass lantern."
 
 after taking the lantern for the first time:
 	say "Taken.";
@@ -1396,7 +1533,7 @@ The folding chair is a enterable scenery supporter in the Show Tent. The descrip
 
 LittleEgyptAuto is a scene. 
 LittleEgyptAuto begins when the player has been in the show tent for exactly three turns or the player has been on the folding chair for exactly two turns.. 
-LittleEgyptAuto ends when the number of filled rows in the Table of LittleEgypt Events is 0.
+LittleEgyptAuto ends when the number of filled rows in the Table of Little Egypt Events is 0.
 
 When LittleEgyptAuto ends:
 	say "You applaud until your hands are sore. Did she just wink at you?[paragraph break]As she leaves the stage, Little Egypt tosses one of her veils to you!";
@@ -1405,22 +1542,13 @@ When LittleEgyptAuto ends:
 	now the player carries the Sheer Veil.
 	
 Every turn during LittleEgyptAuto:
-	repeat through Table of LittleEgypt Events:
-		say "[event entry][paragraph break]";
+	repeat through Table of Little Egypt Events:
+		say "[description entry][paragraph break]";
 		blank out the whole row;
 		rule succeeds.
 
 Instead of doing something other than waiting, looking, listening or examining during LittleEgyptAuto:
 	say "You[']re much too entranced by the show to do anything other than watch the show. You are riveted[if the player is in the folding chair] to your seat[end if]!".
-
-Table of LittleEgypt Events
-event
-"In the dimly lit tent, you see that the stage is decorated to resemble an exotic Middle Eastern market or palace, featuring rich, colorful fabrics, brass ornaments, and lanterns casting a warm, flickering glow. Scents of incense waft through the air, enhancing the atmosphere of mystique. The backdrop displays painted scenes of pyramids, desert landscapes, and domed structures evoking a sense of being transported to the 'Middle East'. "
-"Little Egypt emerges draped in flowing silk veils which she skillfully uses as part of the dance. Her attire consists of a sparkling, sequined bodice and a flowing skirt, adorned with jingling coin belts and jewelry that accentuate her movements."
-"The performance begins with slow, undulating movements, drawing you into the rhythm of exotic live music played on traditional instruments like the oud, darbuka, or zurna. As the tempo builds, her hips, torso, and hands move in intricate, mesmerizing patterns, demonstrating remarkable control and fluidity. She incorporates dramatic spins, drops, and shimmies, often accentuating the beat of the music with a quick jingle of her coin belt."
-"Little Egypt makes eye contact with you and smiles enigmatically. During her performance she balances a sword on her head and accents her dance with finger cymbals."
-"The music alternates between hauntingly slow melodies and rapid, energetic drum beats, creating an emotional arc that keeps you entranced. Little Egypt relies on the music[']s dynamic changes to tell a story with movements reflecting joy, sorrow, seduction, and celebration."
-"The performance concludes with a dramatic flourish of a fast-paced shimmy, a bold spin, and Little Egypt dramatically casts off her veils. The dancer takes a bow to enthusiastic applause, leaving you spellbound by the sensual yet artful display."
 
 Section 10 - Ferris Wheel Ride
 
@@ -1484,7 +1612,7 @@ The thrill of the bumper cars is in the collisions—every thud and jolt accompa
 
 The ride is a whirlwind of laughter, harmless competition, and shared joy. As the music fades and the cars slow to a stop, you climb out with a wide grin, already looking forward to your next turn in the driver’s seat."
 
-The two dollar bill is a thing. The two dollar bill is in the Bumper Cars Ride. Understand "bill" as the two dollar bill. "Hey! Is that a two dollar bill on the ground?" The description of the two dollar bill is "It has a picture of Thomas Jefferson on it."
+A two dollar bill is a thing. The two dollar bill is in the Bumper Cars Ride. Understand "bill" as the two dollar bill. "Hey! Is that a two dollar bill on the ground?" The description of the two dollar bill is "It has a picture of Thomas Jefferson on it."
 
 instead of taking the two dollar bill:
 	say "Taken.[paragraph break]";
@@ -1571,16 +1699,16 @@ Test Backstage with "test b1 / test b2 / test b3 / test b4"
 
 Dark Passage is a room. Dark Passage is east of the Ride Entrance. The dark passage is scored. "This room is backstage at the Hell Ride attraction. The room is littered with bags of trash, piles of junk, and dust bunnies so large they should be paying rent. West is back the way you came from. There an exit to the south."
 
-The dust bunnies are scenery. The dust bunnies are here. Understand "bunnies" as dust bunnies.
+dust bunnies are scenery. The dust bunnies are here. Understand "bunnies" as dust bunnies.
 
-The bags of trash are scenery. The bags of trash are here. Understand "bags" and "trash" as bags of trash.
+bags of trash are scenery. The bags of trash are here. Understand "bags" and "trash" as bags of trash.
+
+A pile of junk is a scenery container. The pile of junk is in the dark passage. The pile of junk contains the flashlight. Understand "piles" and "junk" as pile of junk. 
 
 instead of looking under when the noun is the pile of junk:
 	try examining the junk instead. 
 
 The flashlight is an electric lamp. The description of the flashlight is "This is a flashlight. It[']s a nice one."
-
-The pile of junk is a scenery container. The pile of junk is in the dark passage. The pile of junk contains the flashlight. Understand "piles" and "junk" as pile of junk. 
 
 after examining when the noun is pile of junk and the flashlight is in the pile of junk:
 	say "You find a flashlight here.".
@@ -1615,17 +1743,17 @@ Despite the mess, the room buzzes with purpose—a hidden hub where the carnival
 
 Exits lead north and south. There is a door to the west." 
 
-The rusty wrenches are here. They are scenery. 
-The paint cans are here. They are scenery. 
-The grease jars are here. They are scenery. 
-The vise is here. It is scenery.
-The bent piece of metal is here. It is scenery.
-The safety posters are here. They are scenery. 
-The notes are here. They are scenery. 
-The clock is here. It is scenery. 
-The lubricant is here. It is scenery.
-The manual is here. It is scenery. The description of the manual is "The manual is titled: 'Fixing Your Ferris Wheel. It[']s Easier Than You Think!'" 
-The stool is here. It is a supporter. It is scenery. 
+rusty wrenches are here. They are scenery. 
+paint cans are here. They are scenery. 
+grease jars are here. They are scenery. 
+A vise is here. It is scenery.
+A bent piece of metal is here. It is scenery.
+safety posters are here. They are scenery. 
+notes are here. They are scenery. 
+A clock is here. It is scenery. 
+A lubricant is here. It is scenery.
+A manual is here. It is scenery. The description of the manual is "The manual is titled: 'Fixing Your Ferris Wheel. It[']s Easier Than You Think!'" 
+A stool is here. It is a supporter. It is scenery. 
 
 The worn photo is here. Understand "picture" as the worn photo. The description of the worn photo is "This is a photo of the carnival in its heyday! A ragtag bunch of people are featured in the picture. On the back reads a date: 'May, 1962'."
 
@@ -1633,7 +1761,7 @@ The coffee mug is on the desk. The coffee mug is edible. Understand "coffee" as 
 
 Instead of drinking the coffee mug: say "That looks nasty. You decide against drinking the coffee." instead.
 
-The desk is in the maintenance office. The desk is a supporter. The desk is fixed in place. A drawer is part of the desk. The drawer is a closed openable container. The drawer is scenery. The description of the desk is "It[']s a desk. There are coffee stains and cigarette burns from years of abuse. The single drawer is [if the drawer is open]open[otherwise]shut[end if]."
+A desk is in the maintenance office. The desk is a supporter. The desk is fixed in place. A drawer is part of the desk. The drawer is a closed openable container. The drawer is scenery. The description of the desk is "It[']s a desk. There are coffee stains and cigarette burns from years of abuse. The single drawer is [if the drawer is open]open[otherwise]shut[end if]."
 
 Nearness relates a room (called A) to a room (called B) when the number of moves from B to A is less than 2. The verb to be near means the nearness relation.
 
@@ -1653,23 +1781,23 @@ Rule for showing action of the radio:
 Instead of listening in the presence of the switched on radio:
 	carry out the showing action activity with the radio instead.
 
-The scissors are in the drawer. The description is "This is a sharp pair of office scissors." 
-The stapler is in the drawer. The description is "This is a red stapler." 
-The ballpoint pen is in the drawer. The description is "Your standard ballpoint pen. It says Bic on the side." 
-The pad of paper is in the drawer. The description is "This is a pad of lined paper."
+scissors are in the drawer. The description is "This is a sharp pair of office scissors." 
+A stapler is in the drawer. The description is "This is a red stapler." 
+A ballpoint pen is in the drawer. The description is "Your standard ballpoint pen. It says Bic on the side." 
+A pad of paper is in the drawer. The description is "This is a pad of lined paper."
 
 [doors]
 A wooden door is a kind of openable lockable door.
 A wooden door is usually closed. 
 A wooden door is usually locked.
 A wooden door has a color. A wooden door is usually nondescript. 
-The description of a wooden door is "The [color of the item described] door is [if the item described is open]open[otherwise]closed[end if]. It is [if the item described is locked]locked[otherwise]unloacked[end if]."
+The description of a wooden door is "The [color of the item described] door is [if the item described is open]open[otherwise]closed[end if]. It is [if the item described is locked]locked[otherwise]unlocked[end if]."
 The printed name of a wooden door is "[color of the item described] colored door".
 
 door1 is a wooden door. The color of door1 is aqua. The description of door1 is "It[']s [printed name of item described]. It has the word 'Stocks' written on it." The silver key unlocks it. 
 door1 is west of the Maintenance Office and east of the Stocks Room. 
 
-The ladder is up from the Maintenance Office and down from the Dark Hallway. The ladder is an open door. The description of the Ladder is "It[']s a typical 10 foot ladder."
+A ladder is up from the Maintenance Office and down from the Dark Hallway. The ladder is an open door. The description of the Ladder is "It[']s a typical 10 foot ladder."
 
 Instead of climbing a ladder:
 	try entering the noun.
@@ -1700,13 +1828,13 @@ There are exists north and south. There is a wooden door to the west."
 The toolbox is a closed openable container in the Mechanical Room North. The toolbox contains a monkey wrench, a channel lock, pliers, and a hammer.
 
 A hydraulic pump is here. It is scenery.
-The gauges are here. They are scenery.
-The tools are here. They are scenery.
-The bench is here. It is scenery. Understand "workbench" as the bench. The description is "The workbench is covered in all manner of things."
-The wires are here. They are scenery.
-The spare parts are here. They are scenery.
-The hydraulic tubing is here. It is scenery.
-The diagram is here. It is scenery.
+gauges are here. They are scenery.
+tools are here. They are scenery.
+A bench is here. It is scenery. Understand "workbench" as the bench. The description is "The workbench is covered in all manner of things.".
+wires are here. They are scenery.
+spare parts are here. They are scenery.
+hydraulic tubing is here. It is scenery.
+A diagram is here. It is scenery.
 
 door5 is a wooden door. The color of door5 is emerald. The description of door5 is "It[']s [printed name of item described]. It has the word 'Stake' written on it." The silver key unlocks it. door5 is west of the Mechanical Room North and east of the Stake Room. 
 
@@ -1724,16 +1852,16 @@ Bright fluorescent lights in wire cages illuminate the space, highlighting the i
 
 You can travel north and south from here. There is a door to the west." 
 
-The lights are here. They are scenery.
-The thick belts are here. They are scenery.
-The pulleys are here. They are scenery.
-The gears are here. They are scenery.
-The table is here. It is scenery.
-The bolts are here. They are scenery.
-The lubricants are here. They are scenery.
-The cooling fan is here. It is scenery.
+lights are here. They are scenery.
+thick belts are here. They are scenery.
+pulleys are here. They are scenery.
+gears are here. They are scenery.
+A table is here. It is scenery.
+bolts are here. They are scenery.
+lubricants are here. They are scenery.
+A cooling fan is here. It is scenery.
 
-The grate is an openable lockable door. The grate is locked. The grate is up from the Holding Room. The description is "This grate leads down into the darkness. Too bad it[']s locked."
+A grate is an openable lockable door. The grate is locked. The grate is up from the Holding Room. The description is "This grate leads down into the darkness. Too bad it[']s locked."
 
 door7 is a wooden door. The color of door7 is gray. The description of door7 is "It[']s [printed name of item described]. It has the word 'Dungeon' written on it." The silver key unlocks it. door7 is west of the Mechanical Room South and east of the Dungeon. 
 
@@ -1752,17 +1880,17 @@ Though isolated and utilitarian, the generator room is the carnival’s heartbea
 
 The backstage area continues north and south of here. There is a wooden door to the west." 
 
-The graffiti is here. It is scenery. instead of examining the graffiti, say "The graffiti is varied, from 'Peace, Love, Goodwill on Earth' to 'Anarchy Rules'."
-The junction boxes are here. They are scenery.
-The cables are here. They are scenery.
-The circuit breakers are here. They are scenery.
-The filters are here. They are scenery.
-The spark plugs are here. They are scenery.
-The wire coils are here. They are scenery.
-The grease canister is here. It is scenery.
-The diesel canisters are here. They are scenery.
-The maintenance manual is here. It is scenery. The description is "The cover reads, 'Put The Bump In Your Bumper Cars'."
-The large panel is here. It is scenery.
+graffiti is here. It is scenery. instead of examining the graffiti, say "The graffiti is varied, from 'Peace, Love, Goodwill on Earth' to 'Anarchy Rules'.".
+junction boxes are here. They are scenery.
+cables are here. They are scenery.
+circuit breakers are here. They are scenery.
+filters are here. They are scenery.
+spark plugs are here. They are scenery.
+wire coils are here. They are scenery.
+A grease canister is here. It is scenery.
+diesel canisters are here. They are scenery.
+A maintenance manual is here. It is scenery. The description is "The cover reads, 'Put The Bump In Your Bumper Cars'."
+A large panel is here. It is scenery.
 
 door9 is a wooden door. The color of door9 is indigo. The description of door9 is "It[']s [printed name of item described]. It has the word 'Guillotine' written on it." The silver key unlocks it. door9 is west of the Generator Room and east of the Guillotine Room. 
 
@@ -1782,110 +1910,55 @@ Chaotic yet indispensable, this hidden space powers the carnival’s magic, ensu
 
 There is an exit to the north and a door to the west."
 
-The supplies are here. They are scenery.
-The boxes of lightbulbs are here. They are scenery.
-The spools of wire are here. They are scenery.
-The ride parts are here. They are scenery.
-The flags are here. They are scenery.
-The seats are here. They are scenery.
-The booths are here. They are scenery.
-The horse is here. It is scenery.
-The screws are here. They are scenery.
-The wire scraps are here. They are scenery.
-The rats are here. The rats are scenery. The description of the rats is "You see rats scurry in all directions fleeing from the light cast by you."
+supplies are here. They are scenery.
+boxes of lightbulbs are here. They are scenery.
+spools of wire are here. They are scenery.
+ride parts are here. They are scenery.
+flags are here. They are scenery.
+seats are here. They are scenery.
+booths are here. They are scenery.
+A horse is here. It is scenery.
+screws are here. They are scenery.
+wire scraps are here. They are scenery.
+rats are here. The rats are scenery. The description of the rats is "You see rats scurry in all directions fleeing from the light cast by you."
 
 door11 is a wooden door. The color of door11 is khaki. The description of door11 is "It[']s [printed name of item described]. It has the word 'Ride Exit' written on it." The silver key unlocks it. door11 is west of the Storage Room and east of the Ride Exit. 
 	
 Chapter 4 - Hell Ride
 
-Section 1 - Ride Entrance
-
-Before going south when the location is the Ticket Booth and the Head of the Line is unvisited:
-	display Figure of HellRideEntrance;
-	continue the action.
-	
-Before looking when the location is the Head of the Line:
-	display Figure of HellRideEntrance.
-
-Test Ride with "brief / s / buy hell ride ticket / s / give hell ride ticket to operator / s / enter hell ride car / wait / z / z / z / z / z / z".
+Section 1 - Automated Hell Ride
 
 HellRideAuto is a scene. 
 HellRideAuto begins when the player is in the hell ride car for 3 turns.
-HellRideAuto ends when the number of filled rows in the Table of HellRide Events is 0.
-
-When HellRideAuto begins:
-	say "The car moves forward and the safety bar begins to lower."
+HellRideAuto ends when the number of filled rows in the Table of Hell Ride Events is 1.
 	
 When HellRideAuto ends:
 	end the story finally saying "You have died.".
 	
 Every turn during HellRideAuto:
-	repeat through Table of HellRide Events:
+	repeat through Table of Hell Ride Events:
 		display figure entry;
-		say "[bold type][locale entry][roman type][line break][event entry][paragraph break]Mist fills the area as you move to the next room...
+		say "[bold type][locale text entry][roman type][line break][description entry][paragraph break]Mist fills the area as you move to the next room...
 [paragraph break]";
 		blank out the whole row;
 		rule succeeds.
 		
-Table of HellRide Events
-locale	figure	event
-"Ride Entrance"	figure of HellRideEntrance	"The cars move forward, the safety bar locked in place, as the entrance to Hell Ride looms ahead—a grotesque facade of twisted metal and carved wood, illuminated by flickering blood-red lights. The air carries a faint sulfuric tang mingled with the sweet aroma of carnival popcorn.
 
-A towering archway of flames, spikes, and grinning skulls frames the entrance, crowned by flickering letters that read 'HELL RIDE', pulsing like a heartbeat. Below, crouching demon sculptures extend clawed hands in a sinister invitation. Wooden doors cover the entrance, whispering with faint, menacing chuckles as distorted organ music grows louder, punctuated by shrieks and grinding machinery.
+Section 2 - Ride Entrance
 
-Inside, near-total darkness is broken by flashes of sickly green light revealing twisted paths and grotesque shapes. Beyond the threshold lies only uncertainty and terror."
-"The Stocks"		figure of RideStocks	"The public square is a cobblestone expanse bordered by weathered timber-framed buildings. The air carries the mingling scents of chimney smoke, damp earth, and the faint tang of a nearby smithy. At its center, crude wooden stocks stand as a grim focal point, their beams weathered and stained from years of use. Iron clasps lock captives in degrading postures, their tattered clothing offering little protection from the biting wind.
-
-The punished individuals hang their heads in shame, their faces etched with despair. Around them, the crowd revels in cruelty—a wiry man spits insults with gleeful laughter, while a stout woman throws overripe vegetables, each impact sparking jeers. Even children join in, pointing and mocking with mischievous delight.
-
-The square hums with noise: the crowd’s taunts, the crack of objects hitting wood, and the quiet murmurs of the suffering captives. Overhead, a gray sky threatens rain, indifferent to the spectacle below. The jeering mob ignores its ominous weight, too engrossed in their shared cruelty to notice nature’s disapproval."
-"The Gallows"	figure of RideGallows	"The public square, slick with morning drizzle, lies under a brooding, overcast sky. At its center looms the gallows, a weathered wooden platform with thick ropes swaying ominously. The crowd stands in somber silence, broken by the shuffle of feet or faint murmurs, their eyes fixed on the grim scene.
-
-A hooded executioner, cloaked in black, adjusts the frayed noose with practiced precision, his cold presence exuding purpose. In front of him stands the condemned man, pale and trembling, his bound hands behind him. Beads of sweat mix with rain on his haunted face as his darting eyes search the indifferent crowd. Each shallow breath forms a fleeting cloud in the chilly air—a fragile reminder of his fleeting life.
-
-Vendors hawk bread and cider, while children strain for a better view. An old man clutches a rosary, whispering prayers, as others smirk and place bets. Above, the bell tower tolls, its mournful chime marking the passage of the man’s final moments. A raven perches on the gallows’ beam, its unblinking gaze fixed on the scene below.
-
-As the executioner adjusts the noose around the man’s neck, the crowd falls silent, the air thick with dread. Distant thunder rumbles faintly, as if the heavens themselves await the inevitable."
-"The Stake"	figure of RideStake	"The public square is steeped in grim silence, broken only by the crackling of flames. At its center, three wooden stakes rise from a pyre of logs and kindling, darkened by smoke from past executions. Bound to the stakes are three women, their faces reflecting defiance, resignation, and terror.
-
-A crowd encircles the scene, expressions ranging from morbid fascination to righteous fury. Children cling to their mothers, while elders nod solemnly. Some jeer and throw stones; others murmur prayers or avert their gaze.
-
-The executioner, hooded and clad in a leather apron, steps forward with a blazing torch, igniting the pyre in a sudden roar. Flames climb rapidly as thick smoke coils upward. The condemned cry out, their voices mingling with the crackle of fire. The oppressive heat radiates outward, pressing against the silent, uneasy crowd.
-
-Gray clouds loom overhead, nature’s somber backdrop to the grim spectacle. A raven caws from the bell tower as slow church bells toll, each strike punctuating the tragedy. As the pyre burns, some onlookers remain transfixed while others quietly slip away, the square heavy with ash, smoke, and the echoes of the condemned."
-"The Dungeon"		figure of RideDungeon	"The dungeon is a dark, suffocating chamber carved into the earth, its stone walls slick with moisture and grime. The air reeks of sweat, blood, mildew, and burning oil from flickering torches mounted on rusted sconces. Shadows twist on the walls, creating grotesque, unsettling shapes in the dim light.
-
-Chains hang from walls and ceilings, their faint clinking blending with the moans and occasional screams of prisoners. Water drips rhythmically from a cracked ceiling, adding to the chamber[’]s eerie ambiance.
-
-The room is littered with instruments of torment: a splintered rack, a glowing brazier holding bloodstained tools, and a spiked chair gleaming faintly in the light. Prisoners endure their own horrors—one stretched on the rack, another hanging limply from manacles, and a third gasping weakly in the spiked chair.
-
-The hooded torturer moves with detached precision, their leather apron stained with the evidence of countless victims. They work silently, indifferent to the agony surrounding them.
-
-Above, rats scuttle in the shadows, and the low ceiling presses down like the weight of despair. The sole exit, a riveted iron-bound door, feels more like a barrier to hope than a path to freedom.
-
-This is a realm of suffering and hopelessness, where life and death blur, and torment is the only certainty."
-"The Guillotine"		figure of RideGuillotine	"The public square buzzes with tense anticipation, a crowd gathered under gray skies that cast a somber light on the cobblestones. At the center, a stark wooden platform looms, its purpose grim and unavoidable.
-
-A lone figure stands on the scaffold, bound hands behind their back and head bowed low, avoiding the crowd’s gaze. Their tattered clothing, once fine, reflects the fall that led them to this moment.
-
-The crowd encircles the platform, emotions ranging from jeers and curses to silent, grim observation. Children sit on shoulders, their curious eyes unaware of the event’s gravity. Near the edge of the platform, the town crier proclaims the crime: 'High treason against the crown. Let this be a warning to all who defy the realm!'
-
-The condemned flinches but remains silent as the executioner—a hooded figure in black—stands ready beside the guillotine, its blade gleaming faintly in the dim light. The murmurs of the crowd fall into silence at the executioner’s signal, leaving only the rustle of wind and the creak of the scaffold.
-
-As the condemned approaches the guillotine, a crow caws sharply from a nearby rooftop, its cry echoing through the square like an omen. The crowd leans forward, breath held, as justice and mortality converge on the scene.
-
-There is just one problem: the guillotine is being raised and lowered by some mechanism. It appears that the timing of the guillotine is off and it is being lowered onto the cars instead of between them. If a person were to be in a car as it passed under the guillotine, they would be decapitated.
-
-Looks like your goose is cooked. Say 'Goodnight, Gracie!' 
-
-You are stupefied as you sit watching guillotine rising and falling, dropping like a stone on the cars in front of you. Thank goodness they are empty. As your turn comes, you raise your hands in a feeble attempt to stop the inevitable."
+After going south from the Head of Line when the Ride Entrance is unvisited:
+	display Figure of Hell Ride;
+	continue the action.
+	
+Before looking when the location is the Ride Entrance:
+	display Figure of Hell Ride.
+	
+Test Ride with "brief / s / buy hell ride ticket / s / give hell ride ticket to operator / s / enter hell ride car / wait / z / z / z / z / z / z".
 
 Instead of doing something other than waiting, looking, listening or examining during HellRideAuto:
-	say "You are having such a good time that you don['] want to do anything but sit and enjoy the ride."
+	say "You are having such a good time that you don[']t want to do anything but sit and enjoy the ride."
 	
-Ride Entrance is a room. Ride Entrance is south of Head of the Line. "A crooked sign warns, 'One Ticket Admission: Enter If You Dare!' Nearby, a carnival barker with a theatrical, raspy voice calls out, 'Step right up! The gates of hell are open—will you brave the darkness?'
-
-The cars that will take you into the fearsome Hell Ride stop here for you to board.  To the south is the track that will take you into the ride. The safety bars lower as the cars move into the darkness. To one side, the darkness looks just a little bit darker."
+Ride Entrance is a room. Ride Entrance is south of Head of the Line. "[description corresponding to the locale of Ride Entrance in the Table of Hell Ride Events]"
 
 The Hell Ride car is a vehicle in the Ride Entrance. The description of the Hell Ride car is "A car waits to take you through the horror that is Hell Ride."
 
@@ -1893,78 +1966,54 @@ Before going south when the player is in the Ride Entrance:
 	say "You can[']t go that way." instead;
 	continue the action.
 
-Section 2 - Stocks Room
+Section 3 - Stocks Room
 
-After going when the location is the Stocks Room and the Stocks Room is unvisited:
+After going south from the Ride Entrance when the Stocks Room is unvisited:
 	display Figure of RideStocks;
 	continue the action.
 	
 Before looking when the location is the Stocks Room:
 	display Figure of RideStocks.
 
-The Stocks Room is south of the Ride Entrance. "The public square is a cobblestone expanse bordered by weathered timber-framed buildings. The air carries the mingling scents of chimney smoke, damp earth, and the faint tang of a nearby smithy. At its center, crude wooden stocks stand as a grim focal point, their beams weathered and stained from years of use. Iron clasps lock captives in degrading postures, their tattered clothing offering little protection from the biting wind.
+Stocks Room is south of the Ride Entrance. "[description corresponding to the locale of Stocks Room in the Table of Hell Ride Events]"
 
-The punished individuals hang their heads in shame, their faces etched with despair. Around them, the crowd revels in cruelty—a wiry man spits insults with gleeful laughter, while a stout woman throws overripe vegetables, each impact sparking jeers. Even children join in, pointing and mocking with mischievous delight.
-
-The square hums with noise: the crowd’s taunts, the crack of objects hitting wood, and the quiet murmurs of the suffering captives. Overhead, a gray sky threatens rain, indifferent to the spectacle below. The jeering mob ignores its ominous weight, too engrossed in their shared cruelty to notice nature’s disapproval." 
-
-The wooden stocks are here. The wooden stocks are a supporter. The wooden stocks are fixed in place. The description of the wooden stocks is "At the square[']s center stand a row of crude wooden stocks, their heavy beams stained from years of weather and use. Iron clasps hold the unfortunate captives by their wrists and necks, their bodies forced into unnatural, humiliating postures." 
+wooden stocks are a supporter in the Stocks Room. The wooden stocks are fixed in place. The description of the wooden stocks is "At the square[']s center stand a row of crude wooden stocks, their heavy beams stained from years of weather and use. Iron clasps hold the unfortunate captives by their wrists and necks, their bodies forced into unnatural, humiliating postures." 
 
 Instead of looking under a thing which is underlaid by the aqua fuse when the fuse1 is lost:
-	say "You find [the list of things which underlie the noun]!";
-	now every thing which underlies the noun is carried by the player;
-	now every thing which underlies the noun does not underlie the noun;
-	say "Taken.";
-	play the sound of Bell;
-	increase score by 5;
-	now the fuse1 is found.
+	look under something;
+	now the fuse1 is found.	
 	
-Section 3 - Gallows Room
+Section 4 - Gallows Room
 
-After going when the location is the Gallows Room and the Gallows Room is unvisited:
+After going south from the Stocks Room when the Gallows Room is unvisited:
 	display Figure of RideGallows;
 	continue the action.
 	
 Before looking when the location is the Gallows Room:
 	display Figure of RideGallows.
-
-The Gallows Room is south of the Stocks Room.  "The public square, slick with morning drizzle, lies under a brooding, overcast sky. At its center looms the gallows, a weathered wooden platform with thick ropes swaying ominously. The crowd stands in somber silence, broken by the shuffle of feet or faint murmurs, their eyes fixed on the grim scene.
-
-A hooded executioner, cloaked in black, adjusts the frayed noose with practiced precision, his cold presence exuding purpose. In front of him stands the condemned man, pale and trembling, his bound hands behind him. Beads of sweat mix with rain on his haunted face as his darting eyes search the indifferent crowd. Each shallow breath forms a fleeting cloud in the chilly air—a fragile reminder of his fleeting life.
-
-Vendors hawk bread and cider, while children strain for a better view. An old man clutches a rosary, whispering prayers, as others smirk and place bets. Above, the bell tower tolls, its mournful chime marking the passage of the man’s final moments. A raven perches on the gallows’ beam, its unblinking gaze fixed on the scene below.
-
-As the executioner adjusts the noose around the man’s neck, the crowd falls silent, the air thick with dread. Distant thunder rumbles faintly, as if the heavens themselves await the inevitable."
+	
+The Gallows Room is south of the Stocks Room.  "[description corresponding to the locale of Gallows Room in the Table of Hell Ride Events]"
 
 The gallows platform is here. The gallows platform is a supporter. The gallows platform is fixed in place. Understand "gallows" as gallows platform. The description of the gallows platform is "At the center of the square, rising like a grim monument to mortality, stands the gallows—a wooden platform, darkened by age and weather, with thick ropes hanging like vipers poised to strike." 
 
 Instead of looking under a thing which is underlaid by crimson fuse when fuse3 is lost:
-	say "You find [the list of things which underlie the noun]!";
-	now every thing which underlies the noun is carried by the player;
-	now every thing which underlies the noun does not underlie the noun;
-	say "Taken.";
-	play the sound of Bell;
-	increase score by 5;
+	look under something;
 	now fuse3 is found.
 
-Section 4 - Stake Room
+Section 5 - Stake Room
 
-After going when the location is the Stake Room and the Stake Room is unvisited:
+After going south from the Gallows Room when the Stake Room is unvisited:
 	display Figure of RideStake;
 	continue the action.
 	
 Before looking when the location is the Stake Room:
 	display Figure of RideStake.
 
-The Stake Room is south of the Gallows Room. "The public square is steeped in grim silence, broken only by the crackling of flames. At its center, three wooden stakes rise from a pyre of logs and kindling, darkened by smoke from past executions. Bound to the stakes are three women, their faces reflecting defiance, resignation, and terror.
+The Stake Room is south of the Gallows Room. "[description corresponding to the locale of Stake Room in the Table of Hell Ride Events]"
 
-A crowd encircles the scene, expressions ranging from morbid fascination to righteous fury. Children cling to their mothers, while elders nod solemnly. Some jeer and throw stones; others murmur prayers or avert their gaze.
+stakes are in the Stake Room. It is scenery. The description is "Three wooden stakes rise from a pyre. Bound to the stakes are three women."
 
-The executioner, hooded and clad in a leather apron, steps forward with a blazing torch, igniting the pyre in a sudden roar. Flames climb rapidly as thick smoke coils upward. The condemned cry out, their voices mingling with the crackle of fire. The oppressive heat radiates outward, pressing against the silent, uneasy crowd.
-
-Gray clouds loom overhead, nature’s somber backdrop to the grim spectacle. A raven caws from the bell tower as slow church bells toll, each strike punctuating the tragedy. As the pyre burns, some onlookers remain transfixed while others quietly slip away, the square heavy with ash, smoke, and the echoes of the condemned."
-
-The pyre is scenery in the Stake Room. The pyre is a container. understand "bonfire", "fire", "stake", "stakes", "flame", and "flames" as the pyre. The description of the pyre is "At the center, three wooden stakes rise ominously from a circular pyre of logs and kindling, their rough surfaces darkened by smoke from countless such scenes before. Bound tightly to these stakes are three women, their wrists and ankles secured with coarse, heavy ropes. Their faces tell different stories—one of defiance, another of resignation, and the third of pure terror." 
+A pyre is an open unopenable container in the Stake Room. Understand "fire" as pyre. The description is "The flames burn ever higher." 
 
 Instead of taking the emerald fuse when fuse5 is lost:
 	say "You find [the noun]!";
@@ -1973,100 +2022,70 @@ Instead of taking the emerald fuse when fuse5 is lost:
 	play the sound of Bell;
 	increase score by 5;
 	now fuse5 is found.
+	
+After printing the name of the pyre:
+	omit contents in listing.
+	
+After printing the name of a closed unopenable container:
+	omit contents in listing.
 
-Section 5 - Dungeon
+Section 6 - Dungeon
 
-After going when the location is the Dungeon and the Dungeon is unvisited:
+After going south from the Stake Room when the Dungeon is unvisited:
 	display Figure of RideDungeon;
 	continue the action.
 	
 Before looking when the location is the Dungeon:
 	display Figure of RideDungeon.
 	
-The Dungeon is south of the Stake Room. "The dungeon is a dark, suffocating chamber carved into the earth, its stone walls slick with moisture and grime. The air reeks of sweat, blood, mildew, and burning oil from flickering torches mounted on rusted sconces. Shadows twist on the walls, creating grotesque, unsettling shapes in the dim light.
+The Dungeon is south of the Stake Room. "[description corresponding to the locale of Dungeon in the Table of Hell Ride Events]"
 
-Chains hang from walls and ceilings, their faint clinking blending with the moans and occasional screams of prisoners. Water drips rhythmically from a cracked ceiling, adding to the chamber’s eerie ambiance.
+An iron chair is scenery in the Dungeon. The iron chair is a supporter. understand "spiked" and "seat" as iron chair. The description of the iron chair is "A spiked chair looms in the corner, its cruel design gleaming faintly in the dim light." 
 
-The room is littered with instruments of torment: a splintered rack, a glowing brazier holding bloodstained tools, and a spiked chair gleaming faintly in the light. Prisoners endure their own horrors—one stretched on the rack, another hanging limply from manacles, and a third gasping weakly in the spiked chair.
-
-The hooded torturer moves with detached precision, their leather apron stained with the evidence of countless victims. They work silently, indifferent to the agony surrounding them.
-
-Above, rats scuttle in the shadows, and the low ceiling presses down like the weight of despair. The sole exit, a riveted iron-bound door, feels more like a barrier to hope than a path to freedom.
-
-This is a realm of suffering and hopelessness, where life and death blur, and torment is the only certainty."
-
-The iron chair is scenery in the Dungeon. The iron chair is a supporter. understand "spiked" and "seat" as iron chair. The description of the iron chair is "A spiked chair looms in the corner, its cruel design gleaming faintly in the dim light." 
-
-The chains are here. They are scenery. The description of the chains is "The chains rattle against the walls."
-The rack is here. It is scenery. The description of the rack is "The rack has a prisoner splayed in four directions."
-The brazier is here. It is scenery. The description of the brazier is "It is glowing red with an infernal heat."
-The riveted iron-bound door is here. It is scenery.
+chains are here. They are scenery. The description of the chains is "The chains rattle against the walls."
+A rack is here. It is scenery. The description of the rack is "The rack has a prisoner splayed in four directions."
+A brazier is here. It is scenery. The description of the brazier is "It is glowing red with an infernal heat."
+A riveted iron-bound door is here. It is scenery.
 
 Instead of looking under a thing which is underlaid by the gray fuse when fuse7 is lost:
-	say "You find [the list of things which underlie the noun]!";
-	now every thing which underlies the noun is carried by the player;
-	now every thing which underlies the noun does not underlie the noun;
-	say "Taken.";
-	play the sound of Bell;
-	increase score by 5;
+	look under something;
 	now fuse7 is found.
 	
-Section 6 - Guillotine Room
+Section 7 - Guillotine Room
 
-After going when the location is the Guillotine Room and the Guillotine Room is unvisited:
+After going south from the Dungeon when the Guillotine Room is unvisited:
 	display Figure of RideGuillotine;
 	continue the action.
 	
 Before looking when the location is the Guillotine Room:
 	display Figure of RideGuillotine.
 
-The Guillotine Room is south of the Dungeon. "The public square buzzes with tense anticipation, a crowd gathered under gray skies that cast a somber light on the cobblestones. At the center, a stark wooden platform looms, its purpose grim and unavoidable.
-
-A lone figure stands on the scaffold, bound hands behind their back and head bowed low, avoiding the crowd’s gaze. Their tattered clothing, once fine, reflects the fall that led them to this moment.
-
-The crowd encircles the platform, emotions ranging from jeers and curses to silent, grim observation. Children sit on shoulders, their curious eyes unaware of the event’s gravity. Near the edge of the platform, the town crier proclaims the crime: 'High treason against the crown. Let this be a warning to all who defy the realm!'
-
-The condemned flinches but remains silent as the executioner—a hooded figure in black—stands ready beside the guillotine, its blade gleaming faintly in the dim light. The murmurs of the crowd fall into silence at the executioner’s signal, leaving only the rustle of wind and the creak of the scaffold.
-
-As the condemned approaches the guillotine, a crow caws sharply from a nearby rooftop, its cry echoing through the square like an omen. The crowd leans forward, breath held, as justice and mortality converge on the scene.
-
-There is just lone problem: the guillotine is being raised and lowered by some mechanism. It appears that the timing of the guillotine is off and it is being lowered onto the cars instead of between them. If a person were to be in a car as it passed under the guillotine, they would be decapitated."
+The Guillotine Room is south of the Dungeon. "[description corresponding to the locale of Guillotine Room in the Table of Hell Ride Events]"
 
 The guillotine platform is here. The guillotine platform is a supporter. Understand "scaffold" as guillotine platform. The description of the guillotine platform is "At the center of the square stands a raised wooden platform, stark and imposing, where the grim sentence is to be carried out." 
 
 Instead of looking under a thing which is underlaid by the indigo fuse when fuse9 is lost:
-	say "You find [the list of things which underlie the noun]!";
-	now every thing which underlies the noun is carried by the player;
-	now every thing which underlies the noun does not underlie the noun;
-	say "Taken.";
-	play the sound of Bell;
-	increase score by 5;
+	look under something;
 	now fuse9 is found.
 	
-Section 7 - Ride Exit
+Section 8 - Ride Exit
 
-After going when the location is the Ride Exit and the Ride Exit is unvisited:
+After going south from the Guillotine Room when the Ride Exit is unvisited:
 	display Figure of RideExit;
 	continue the action.
 	
 Before looking when the location is the Ride Exit:
 	display Figure of RideExit.
 
-The Ride Exit is south of the Guillotine Room. "The exit of Hell Ride is designed to leave riders with lingering unease. Emerging from a dark corridor with peeling black and red-streaked walls, flickering lights cast erratic shadows on the uneven floor. The air is cool and damp, carrying a faint metallic tang, while faint whispers and distant screams echo softly in the background.
-
-Riders step into a small courtyard enclosed by jagged, rusted fencing draped with cobwebs and plastic bones. Overhead, a weathered sign reads, 'You[’]ve Survived… For Now.' Nearby, carnival workers in tattered costumes watch silently, occasionally muttering cryptic remarks like, 'Not everyone makes it out.'
-
-A merchandise stand glows red, selling items like Hell Ride Survivor t-shirts and devil horns. Beyond the fencing, the cheerful carnival lights and sounds feel jarring, contrasting sharply with the ride’s oppressive atmosphere.
-
-The exit ensures Hell Ride isn’t just an experience—it lingers, blurring the line between thrill and fear."
+The Ride Exit is south of the Guillotine Room. "[description corresponding to the locale of Ride Exit in the Table of Hell Ride Events]"
 
 The merchandise stand is scenery in the Ride Exit. The merchandise stand is a container. Understand "stand" as merchandise stand. The description of the merchandise stand is "The stand is bathed in red light, adding to the ominous mood." 
 
-The plastic bones are in the merchandise stand. The price of the plastic bones is $1.00. The description is "This is a collection of plastic bones meant to decorate your yard."
+plastic bones are in the merchandise stand. The price of the plastic bones is $1.00. The description is "This is a collection of plastic bones meant to decorate your yard."
 
-The devil horns are in the merchandise stand. The price of the devil horns is $2.00. The description is "The devil horns tie to your head."
+devil horns are in the merchandise stand. The price of the devil horns is $2.00. The description is "The devil horns tie to your head."
 
-The t-shirt is in the merchandise stand. The price of the t-shirt is $7.50. Understand "t-shirts" as t-shirt. The description is "This is a black t-shirt with the caption 'I Survived Hell Ride!"
+A t-shirt is in the merchandise stand. The price of the t-shirt is $7.50. Understand "t-shirts" as t-shirt. The description is "This is a black t-shirt with the caption 'I Survived Hell Ride!"
 
 After buying the khaki fuse:
 	play the sound of Bell;
@@ -2094,7 +2113,7 @@ A flickering light casts cold shadows as the metallic tang of machinery mixes wi
 
 A dark hallway lies to the east." 
 
-The big switch is a device in the control room. The big switch is fixed in place. The big switch is switched on. The description of the big switch is "This is a large switch. It[']s the kind Dr. Frankenstein might pull to route the lightning to his creature.[if the big switch is switched on] Currently there are sparks arcing out from the switch.[end if]"
+A big switch is a device in the control room. The big switch is fixed in place. The big switch is switched on. The description of the big switch is "This is a large switch. It[']s the kind Dr. Frankenstein might pull to route the lightning to his creature.[if the big switch is switched on] Currently there are sparks arcing out from the switch.[end if]"
 
 electrocuted is a truth state that varies. electrocuted is false.
 instead of switching off the big switch:
@@ -2111,9 +2130,9 @@ instead of switching on the big switch:
 	now the electrical room is electromagnetic;
 	continue the action.
 
-The cluttered desk is here. The desk is scenery. 
+A cluttered desk is here. The desk is scenery. 
 A corkboard is here. The corkboard is scenery.
-The charts are here. They are scenery.
+charts are here. They are scenery.
 
 every turn when the location is the Control Room:
 	count the switches;
