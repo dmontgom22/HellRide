@@ -2815,6 +2815,7 @@
     <changed>NO</changed>
     <children>
       <child nodeId="node-237"/>
+      <child nodeId="node-692"/>
     </children>
   </item>
   <item nodeId="node-237">
@@ -4970,6 +4971,174 @@
     <command xml:space="preserve">push indigo button</command>
     <result xml:space="preserve">You switch the indigo button on.&#x000A;&#x000A;The monitor flickers for a second and the scene it displays changes to something different.&#x000A;The monitor now shows a tableau of a guillotine rising and falling over the ride exit.&#x000A;The indigo light is now on.&#x000A;&#x000A;&#x000A;&#x000A;As you push the indigo button, the monitor switches to a view of the guillotine room. You can still see the blade rising and falling over the cars. Suddenly, you see the blade slowing down, taking longer and longer to fall. Until it finally comes to a complete rest.&#x000A;&#x000A;The room is heavy with uneasy silence. The Hell Ride, once a thrilling spectacle, now looms motionless, as the guillotine blade is frozen halfway down its track. Moments ago, chaos erupted as the malfunctioning mechanism sent the blade crashing unpredictably, ripping through the roofs of cars on the track.&#x000A;&#x000A;A single car, its roof gashed open, sits under the still blade - a grim reminder of the disaster narrowly averted. Above, a black crow lands on the guillotine's frame, its sharp caw cutting through the murmurs of anger and fear.&#x000A;&#x000A;Two mechanics climb the scaffolding with tools in hand, their appearance met with wary hope. The crowd watches, holding their breath, as the cursed ride's fate hangs in the balance.&#x000A;&#x000A;As you exit the ride, the carnival owner and the mayor are present and extending their undying gratitude for saving the day, not to mention lives!&#x000A;&#x000A;*** You have won! ***&#x000A;&#x000A;Wow, you've received 150 points out of a possible 150 in 131 moves! I'm very proud of you. This was a triumph. I'm being so sincere right now.&#x000A;&#x000A;You have received points for the following: &#x000A;&#x000A;&#x2022;  Finding coins and keys: 5 points.&#x000A;&#x2022;  Taking the blueberries: 5 points.&#x000A;&#x2022;  Eating the blueberries: 5 points.&#x000A;&#x2022;  Winning at the High Striker: 10 points.&#x000A;&#x2022;  Taking the Mercury dime: 5 points.&#x000A;&#x2022;  Winning at the Dime Toss Game: 5 points.&#x000A;&#x2022;  Winning at the Pitcher's Mound: 10 points.&#x000A;&#x2022;  Wearing the sheer veil: 5 points.&#x000A;&#x2022;  Taking the lantern: 10 points.&#x000A;&#x2022;  Buying the Hell Ride ticket: 10 points.&#x000A;&#x2022;  Finding the Dark Passage: 5 points.&#x000A;&#x2022;  Finding the Control Room: 5 points.&#x000A;&#x2022;  Turning off the big switch: 15 points.&#x000A;&#x2022;  Acquiring the Aqua fuse: 5 points.&#x000A;&#x2022;  Acquiring the Gray fuse: 5 points.&#x000A;&#x2022;  Acquiring the Indigo fuse: 5 points.&#x000A;&#x2022;  Acquiring the Khaki fuse: 5 points.&#x000A;&#x2022;  Acquiring the Emerald fuse: 5 points.&#x000A;&#x2022;  Flipping the Aqua switch: 5 points.&#x000A;&#x2022;  Flipping the Crimson switch: 5 points.&#x000A;&#x2022;  Flipping the Emerald switch: 5 points.&#x000A;&#x2022;  Flipping the Gray switch: 5 points.&#x000A;&#x2022;  Flipping the Indigo switch: 5 points.&#x000A;&#x2022;  Flipping the Khaki switch: 5 points.&#x000A;&#x000A;&#x000A;&#x000A;Would you like to RESTART, RESTORE a saved game, QUIT, or UNDO the last command?&#x000A;&gt;</result>
     <commentary xml:space="preserve">You switch the indigo button on.&#x000A;&#x000A;The monitor flickers for a second and the scene it displays changes to something different.&#x000A;The monitor now shows a tableau of a guillotine rising and falling over the ride exit.&#x000A;The indigo light is now on.&#x000A;&#x000A;&#x000A;&#x000A;As you push the indigo button, the monitor switches to a view of the guillotine room. You can still see the blade rising and falling over the cars. Suddenly, you see the blade slowing down, taking longer and longer to fall. Until it finally comes to a complete rest.&#x000A;&#x000A;The room is heavy with uneasy silence. The Hell Ride, once a thrilling spectacle, now looms motionless, as the guillotine blade is frozen halfway down its track. Moments ago, chaos erupted as the malfunctioning mechanism sent the blade crashing unpredictably, ripping through the roofs of cars on the track.&#x000A;&#x000A;A single car, its roof gashed open, sits under the still blade - a grim reminder of the disaster narrowly averted. Above, a black crow lands on the guillotine's frame, its sharp caw cutting through the murmurs of anger and fear.&#x000A;&#x000A;Two mechanics climb the scaffolding with tools in hand, their appearance met with wary hope. The crowd watches, holding their breath, as the cursed ride's fate hangs in the balance.&#x000A;&#x000A;As you exit the ride, the carnival owner and the mayor are present and extending their undying gratitude for saving the day, not to mention lives!&#x000A;&#x000A;*** You have won! ***&#x000A;&#x000A;Wow, you've received 150 points out of a possible 150 in 131 moves! I'm very proud of you. This was a triumph. I'm being so sincere right now.&#x000A;&#x000A;You have received points for the following: &#x000A;&#x000A;&#x2022;  Finding coins and keys: 5 points.&#x000A;&#x2022;  Taking the blueberries: 5 points.&#x000A;&#x2022;  Eating the blueberries: 5 points.&#x000A;&#x2022;  Winning at the High Striker: 10 points.&#x000A;&#x2022;  Taking the Mercury dime: 5 points.&#x000A;&#x2022;  Winning at the Dime Toss Game: 5 points.&#x000A;&#x2022;  Winning at the Pitcher's Mound: 10 points.&#x000A;&#x2022;  Wearing the sheer veil: 5 points.&#x000A;&#x2022;  Taking the lantern: 10 points.&#x000A;&#x2022;  Buying the Hell Ride ticket: 10 points.&#x000A;&#x2022;  Finding the Dark Passage: 5 points.&#x000A;&#x2022;  Finding the Control Room: 5 points.&#x000A;&#x2022;  Turning off the big switch: 15 points.&#x000A;&#x2022;  Acquiring the Aqua fuse: 5 points.&#x000A;&#x2022;  Acquiring the Gray fuse: 5 points.&#x000A;&#x2022;  Acquiring the Indigo fuse: 5 points.&#x000A;&#x2022;  Acquiring the Khaki fuse: 5 points.&#x000A;&#x2022;  Acquiring the Emerald fuse: 5 points.&#x000A;&#x2022;  Flipping the Aqua switch: 5 points.&#x000A;&#x2022;  Flipping the Crimson switch: 5 points.&#x000A;&#x2022;  Flipping the Emerald switch: 5 points.&#x000A;&#x2022;  Flipping the Gray switch: 5 points.&#x000A;&#x2022;  Flipping the Indigo switch: 5 points.&#x000A;&#x2022;  Flipping the Khaki switch: 5 points.&#x000A;&#x000A;&#x000A;&#x000A;Would you like to RESTART, RESTORE a saved game, QUIT, or UNDO the last command?&#x000A;&gt;</commentary>
+    <changed>NO</changed>
+  </item>
+  <item nodeId="node-692">
+    <command xml:space="preserve">get dimes, keys</command>
+    <result xml:space="preserve">dime: Taken.&#x000A;dime: Taken.&#x000A;dime: Taken.&#x000A;dime: Taken.&#x000A;dime: Taken.&#x000A;your keys: Taken.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-693"/>
+    </children>
+  </item>
+  <item nodeId="node-693">
+    <command xml:space="preserve">open box. get gloves. wear gloves</command>
+    <result xml:space="preserve">(first unlocking the glove box)&#x000A;(with your keys)&#x000A;You open the glove box, revealing a pair of gloves.&#x000A;&#x000A;Taken.&#x000A;&#x000A;You put on the pair of gloves.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-694"/>
+    </children>
+  </item>
+  <item nodeId="node-694">
+    <command xml:space="preserve">give coupon. buy ticket</command>
+    <result xml:space="preserve">You can only do that to something animate.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-695"/>
+    </children>
+  </item>
+  <item nodeId="node-695">
+    <command xml:space="preserve">ask attendant abou tstub</command>
+    <result xml:space="preserve">I didn't understand that sentence.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-696"/>
+    </children>
+  </item>
+  <item nodeId="node-696">
+    <command xml:space="preserve">put stub on dash</command>
+    <result xml:space="preserve">(first taking the parking stub)&#x000A;That seems to belong to the parking attendant.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-697"/>
+    </children>
+  </item>
+  <item nodeId="node-697">
+    <command xml:space="preserve">s</command>
+    <result xml:space="preserve">You need a parking ticket to leave your car here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-698"/>
+    </children>
+  </item>
+  <item nodeId="node-698">
+    <command xml:space="preserve">e</command>
+    <result xml:space="preserve">You can't go that way.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-699"/>
+    </children>
+  </item>
+  <item nodeId="node-699">
+    <command xml:space="preserve">ask attendant abou tstub'</command>
+    <result xml:space="preserve">I didn't understand that sentence.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-700"/>
+    </children>
+  </item>
+  <item nodeId="node-700">
+    <command xml:space="preserve">ask attendant about stub</command>
+    <result xml:space="preserve">He replies, "Put the ticket stub on your dashboard or your car will get towed."&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-701"/>
+    </children>
+  </item>
+  <item nodeId="node-701">
+    <command xml:space="preserve">s</command>
+    <result xml:space="preserve">You need a parking ticket to leave your car here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-702"/>
+    </children>
+  </item>
+  <item nodeId="node-702">
+    <command xml:space="preserve">buy ticket</command>
+    <result xml:space="preserve">The attendant mumbles something about the stub.&#x000A;&#x000A;You fork over $5.00 for the parking ticket, leaving yourself with $25.00.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-703"/>
+    </children>
+  </item>
+  <item nodeId="node-703">
+    <command xml:space="preserve">s</command>
+    <result xml:space="preserve">Ticket Booth&#x000A;The ticket kiosk stands at the carnival entrance, a compact booth painted in bright red and yellow stripes with bold letters above the window reading "Tickets Here!" Twinkling lights outline its edges, blinking rhythmically to draw attention.&#x000A;&#x000A;A single window serves visitors, where a smiling cashier dispenses colorful tickets from neatly arranged rolls. Beside the tickets, a cash drawer jingles as change is counted, and a digital payment system glows faintly for modern convenience. Too bad you don't have a debit card.&#x000A;&#x000A;Next to the kiosk, a vibrant signboard lists ticket prices with playful illustrations of rides and treats. Pennant flags flutter from the kiosk's roof, adding to the festive atmosphere, while the smell of popcorn and fried dough wafts from the southwest.&#x000A;&#x000A;The worn ground around the kiosk shows the passage of eager carnival-goers. Families, couples, and friends form a buzzing line, their excitement building as they approach this first step into the magic of the carnival.&#x000A;&#x000A;The midway continues in all directions from here. There is a cashier here. The prices of ride tickets are on the signboard. The cashier has Hell Ride ticket, Fortune Teller ticket, Ferris Wheel ticket, Bumper Cars ticket, and Carousel ticket.&#x000A;&#x000A;You can see a ticket kiosk and a cashier here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-704"/>
+    </children>
+  </item>
+  <item nodeId="node-704">
+    <command xml:space="preserve">e</command>
+    <result xml:space="preserve">High Striker&#x000A;This area features a tall, eye-catching machine adorned with bright, colorful lights, typically red, yellow, and blue. A large sign at the top reads "Test Your Strength!" in bold, playful lettering. The machine's base is made of polished wood, with a polished, vintage appearance. At the center is a sturdy metal pole, with a large bell hanging at the top, signaling when a successful attempt has been made. Along the length of the pole are markings indicating how strong you are.  A nearby sign says, "Buy a mallet, strike the bell, win a prize."&#x000A;&#x000A;Spectators gather around, cheering on participants and offering lighthearted jabs and encouragement, creating a lively, competitive atmosphere. The sound of the mallet hitting the target is followed by the resonant clang of the bell (if struck), alongside the buzz of carnival music in the background. The Ticket Kiosk is back the way you came and other games are northeast and northwest of here. The Ferris Wheel lies to the east.&#x000A;&#x000A;You can see a Strongman attendant and a lever here.&#x000A;&#x000A;The attendant is holding a mallet.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-705"/>
+    </children>
+  </item>
+  <item nodeId="node-705">
+    <command xml:space="preserve">ne</command>
+    <result xml:space="preserve">Dime Toss Game&#x000A;The game booth is adorned with vibrant colors - red-and-white striped awnings, twinkling lights, and eye-catching signage that reads "TOSS A DIME - WIN A PRIZE!". You can see prizes of all shapes and sizes hang around the booth, from stuffed animals and novelty toys to shiny trinkets and quirky collectibles. The larger prizes are prominently displayed to entice passersby. Rows of gleaming plates sparkle under overhead lights, their glass surfaces reflecting the surrounding glow.&#x000A;&#x000A;The distinctive "ping" of dimes hitting plates creates a rhythmic soundtrack, punctuated by the occasional satisfying "plop" when a dime lands perfectly. Victorious shouts mix with playful groans of near-misses, creating a symphony of excitement. Nearby, the hum of other booths, upbeat carnival music, and the distant laughter of children add to the lively backdrop. The booth operator calls out enthusiastically, "Step right up! Test your skill! Win big!" Their energetic pitch draws in curious onlookers. You thought you caught a flash of something coming from the area of the booth.&#x000A;&#x000A;You're surprised to see that this game only costs a dime.&#x000A;&#x000A;You can see a Dime Toss attendant and a plate here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-706"/>
+    </children>
+  </item>
+  <item nodeId="node-706">
+    <command xml:space="preserve">l under booth</command>
+    <result xml:space="preserve">You find the mercury dime!&#x000A;&#x000A;[Your score has just gone up by five points.]&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-707"/>
+    </children>
+  </item>
+  <item nodeId="node-707">
+    <command xml:space="preserve">get dime</command>
+    <result xml:space="preserve">Which do you mean, the mercury dime, the Dime Toss attendant, the Dime Toss booth, or a dime?&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-708"/>
+    </children>
+  </item>
+  <item nodeId="node-708">
+    <command xml:space="preserve">x it</command>
+    <result xml:space="preserve">The game booth is adorned with vibrant colors - red-and-white striped awnings, twinkling lights, and eye-catching signage. &#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-709"/>
+    </children>
+  </item>
+  <item nodeId="node-709">
+    <command xml:space="preserve">get mercury</command>
+    <result xml:space="preserve">Taken.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-710"/>
+    </children>
+  </item>
+  <item nodeId="node-710">
+    <command xml:space="preserve">examine it</command>
+    <result xml:space="preserve">It's a dime. Ten cents. One tenth of a dollar. And very shiny.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
   </item>
   <item nodeId="node-477">
