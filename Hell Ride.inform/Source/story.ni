@@ -293,30 +293,53 @@ Carry out casting plugh:
 	
 Section 9 - Attendants
 
-An Attendant is a kind of male person. Understand "attendent", "operator", "teen", "teenager", and "bored" as an attendant. 
+An attendant is a kind of male person. Understand "attendent", "operator", "teen", "teenager", and "bored" as an attendant. 
 
-instead of examining an attendant:
-	choose a random row in Table of Bored Responses;
-	Let R be response entry;
-	say "This is another bored teenager. [R]";
-	stop the action.
-	
-Instead of asking an attendant about something:
-	say "'[one of]Sorry,[or]I'm afraid[or]Hmm,[at random] [one of]I don't know much about that[or]you've got me there[or]I haven't the faintest[at random],' [the noun] [one of]drawls[or]replies[or]comments[or]exclaims[at random].";
-	
-Instead of telling an attendant about something:
-	say "[The noun] looks [one of]surprised[or]intrigued[or]nonplussed[at random]. '[one of]You don't say[or]That's very interesting[or]Do go on[or]I wish I'd known that sooner[at random]!'".
-
-Understand "talk about [text]" as talking randomly about. Talking randomly about is an action applying to one topic. 
-instead of talking randomly about:
-	say "No one wants to hear you prattle on about [the noun]."
-	
+Understand "talk about [text]" as talking randomly about. Talking randomly about is an action applying to one topic.
+instead of talking randomly about, say "No one wants to hear you prattle on about [the noun]."
+		
 Understand "talk about [something]" as talking about. Talking about is an action applying to one visible thing.
 instead of talking about something :
 	say "No one wants to hear you prattle on about [the noun]."
 
-Understand "talk to [someone]" as a mistake ("To start a conversation, try to ASK [the noun] ABOUT something or TELL [the noun] ABOUT something.").
 Understand "talk to [someone] about [something]" as a mistake ("To start a conversation, try to ASK [the noun] ABOUT something or TELL [the noun] ABOUT something.").
+Understand "talk to [someone]" as a mistake ("To start a conversation, try to ASK [the noun] ABOUT something or TELL [the noun] ABOUT something.").
+
+instead of kissing an attendant, say "Oh, my! Why would you want to kiss [the noun]? Your sweetie wouldn't like that!".
+
+To say the hell ride response: 
+	say "[one of]That ride is scary. You won[']t catch me on it![or]Last time I rode Hell Ride I heard strange noises.[or]Hell ride is so old that It's falling apart. I wouldn[']t ride it.[or]Hell Ride is behind on it[']s maintenance schedule. Might want to skip that one.[at random]".
+
+instead of asking an attendant about "hell", say the hell ride response.
+instead of asking an attendant about "hell ride", say the hell ride response.
+Instead of asking an attendant about something:
+	say "'[one of]Sorry,[or]I'm afraid[or]Hmm,[at random] [one of]I don't know much about that[or]you've got me there[or]I haven't the faintest[at random],' [the noun] [one of]drawls[or]replies[or]comments[or]exclaims[at random].";
+	
+Instead of showing an something to an attendant:
+	say "'[one of]Sorry,[or]I'm afraid[or]Hmm,[at random] [one of]I don't know much about that[or]you've got me there[or]I haven't the faintest[at random],' [the noun] [one of]drawls[or]replies[or]comments[or]exclaims[at random].";
+	
+instead of telling an attendant about "hell", say the hell ride response.
+instead of telling an attendant about "hell ride", say the hell ride response.
+Instead of telling an attendant about something:
+	say "[The noun] looks [one of]surprised[or]intrigued[or]nonplussed[at random]. '[one of]You don't say[or]That's very interesting[or]Do go on[or]I wish I'd known that sooner[at random]!'".
+
+Persuasion rule for asking an attendant to try going:
+	say "[The actor] says, 'I can't leave my post or I[']ll get fired!";
+	persuasion fails.
+	
+instead of examining an attendant:
+	choose a random row in Table of Bored Responses;
+	Let R be response entry;
+	say "This is another bored teenager. [R]." instead;
+	
+instead of smelling someone, say "You get close to[the noun]. They smell like angst and regret.".
+
+instead of listening to someone, say "All you can hear is [the noun] whining about working at the carnival.".
+
+instead of touching someone, say "Touching [the noun] without consent is likely to get you a punch in the face! Better not.".
+
+instead of tasting someone, say "Ew! You[']re weird!".
+instead of tasting something, say "Ew! You[']re weird!".
 
 Section 10 - Scoring
 
@@ -365,13 +388,12 @@ Carry out requesting the complete score:
 	say line break.
 
 [normal actions that can be uniquely described]
-Every turn:
+every turn:
 	repeat through Table of Valuable Actions:
 		if the current action is the relevant action entry and turn stamp entry is less than 0:
 			now the turn stamp entry is the turn count;
 			increase the score by the point value entry;
-			play the Sound of Bell;
-	continue the action.
+			play the Sound of Bell;	continue the action.
 	
 [taking prize winnings]	
 the prize table is a table name that varies. The prize table is Table of High Striker Prizes.
@@ -390,7 +412,6 @@ To receive a prize:
 			if D is L and turn stamp entry is less than 0:
 				now the turn stamp entry is the turn count;
 				now the point value entry is P;
-				[increase the score by the point value entry;]
 				play the Sound of Bell;
 				reject the player's command;
 	otherwise:
@@ -430,6 +451,14 @@ The sky is a backdrop. The sky is everywhere.
 The description of the sky is "[if the location is outdoors]It[']s a beautiful evening. Not a cloud in the sky. The moon is out and there are so many stars to see. A shooting star streaks across the sky.[otherwise]You[']re indoors. You can[']t see the sky here."
 
 The ground is a backdrop. The ground is everywhere. Understand "floor" as the ground.
+
+Hell Ride is a backdrop. it is everywhere.
+
+carry out examining hell ride:
+	if the location is in the midway:
+		say "Through the lights and excitement of the carnival, you can see the facade for Hell Ride looming ominously over the midway." instead;
+	otherwise:
+		say "You can['] see that here."
 
 Chapter 5 - Tables
 
@@ -495,13 +524,13 @@ Section 3 - Table of Monitor Descriptions
 
 Table of Monitor Descriptions
 link number	figure choice		description
-0	Figure of ControlPanel		"The monitor now shows a nothing but snow."
+0	Figure of ControlPanel		"The monitor now shows nothing but snow."
 1	Figure of ControlPanelStocks		"The monitor now shows a tableau of poor unfortunate townsfolk locked in stocks."
 3	Figure of ControlPanelGallows		"The monitor now shows a scene of someone waiting to be hanged."
-5	Figure of ControlPanelStake		"The monitor now displays a scene of witches being burned at the stake."
+5	Figure of ControlPanelStake		"The monitor now displays a scene of three women being burned at the stake."
 7	Figure of ControlPanelDungeon		"The monitor now shows the implements of torture in the dungeon."
 9	Figure of ControlPanelGuillotine		"The monitor now shows a tableau of a guillotine rising and falling over the ride exit."
-11	Figure of ControlPanelExit		"The monitor shows a the gift shop located at the Hell Ride exit."
+11	Figure of ControlPanelExit		"The monitor shows the gift shop located at the Hell Ride exit."
 
 Section 4 - Table of High Striker Prizes
 
@@ -540,6 +569,8 @@ A towering archway of flames, spikes, and grinning skulls frames the entrance, c
 
 Inside, near-total darkness is broken by flashes of sickly green light revealing twisted paths and grotesque shapes. Beyond the threshold lies only uncertainty and terror."
 Stocks Room	"Stocks Room"		figure of RideStocks	"The public square is a cobblestone expanse bordered by weathered timber-framed buildings. The air carries the mingling scents of chimney smoke, damp earth, and the faint tang of a nearby smithy. At its center, crude wooden stocks stand as a grim focal point, their beams weathered and stained from years of use. Iron clasps lock captives in degrading postures, their tattered clothing offering little protection from the biting wind.
+
+The animatronics and wax figures are extremely life like. Hell Ride sure lives up to its name.
 
 The punished individuals hang their heads in shame, their faces etched with despair. Around them, the crowd revels in cruelty — a wiry man spits insults with gleeful laughter, while a stout woman throws overripe vegetables, each impact sparking jeers. Even children join in, pointing and mocking with mischievous delight.
 
@@ -613,11 +644,11 @@ When play begins:
 In the early 1980[']s, I had an Apple II Plus computer with 64K of RAM, dual 5.25[quotation mark] floppy disks, and a color monitor as big as a television. And the very first game I ever bought was Infocom[']s Zork I: The Great Underground Empire. This was cool. It was all text-based. The game described your surroundings and you interacted with commands that say what you wanted to do. This 'Interactive Fiction' really evoked in a game what I appreciated most about reading: rich descriptions, colorful characters, and the like. After Zork I, there was Zork II and III. Enchanter, Moonmist, Suspect, and so many 
 more. I played them all with my best friend Andy.
 
-Andy and I were software developers at the time and we thought, 'We can do this!' So we set out to do this. We developed a game engine with a natural language parser. And it was pretty good. We could support most of the kinds of things they did, certainly less graceful but pretty good. In fact, our parser was better than theirs in a case where the sentence was ambiguous. e.g. 'Walk into the room with the lamp.' Is the player carrying the lamp? Or is the lamp in the room? 
+Andy and I were software developers at the time and we thought, 'We can do this!' So we set out to do this. We developed a game engine with a natural language parser. And it was pretty good. We could support most of the kinds of things they did, certainly less graceful but pretty good. In fact, our parser was better than Infocom[']s in one case where the sentence was ambiguous. e.g. 'Walk into the room with the lamp.' Is the player carrying the lamp? Or is the lamp in the room? 
 
 For fun, we reverse engineered parts of Infocom[']s game format. We found the dictionary, certain text tokens used for text substitution, the game text. We also discovered the first example of compression I had ever seen and it just about made my head explode. They stored all ASCII characters in five bits! Pow! Mind blown. I had never considered anything like that. Just another hook.
 
-We developed two prototypes: Diner and Hell Ride. Diner was about bank robbers coming into the diner where you are a short order cook and you have to save the day. Hell Ride was pretty close to what you find here. I decided to implement it using modern tools. It[']s pretty good.
+We developed two prototypes: Diner and Hell Ride. Diner was about bank robbers coming into the diner where you are a short order cook and you have to save the day. Hell Ride was pretty close to what you find here. I decided to implement it using modern tools. It[']s pretty good. Maybe.
 
 I hope you enjoy it.
 
@@ -681,6 +712,8 @@ Figure of RideGuillotine is the file "RideGuillotine.png".
 
 Figure of RideExit is the file "RideExit.png".
 
+Figure of MercuryDime is the file "MercuryDime.png"
+
 Chapter 7 - The Player, Global Code
 
 The player is in the Parking Lot. 
@@ -694,7 +727,7 @@ The coupon is in the wallet. The description of the coupon is "You found this in
 
 before examining the coupon, display Figure of Coupon.
 
-After reading a command:
+after reading a command:
 	if the player's command includes "please":
 		say "Please do not say 'please.'";
 		reject the player's command.
@@ -791,6 +824,7 @@ title	subtable	description
 "Contacting the author"	--	"If you have any difficulties with [story title], please contact me at dmontgom22@gmail.com"
 "Parking Lot Hints"	Table of Parking Lot Hints	--
 "Attraction Hints"	Table of Attractions Hints	--
+"Games Hints"	Table of Games Hints	--
 "Settings"	Table of Setting Options	--
 
 Chapter 3 - Hint Categories
@@ -852,14 +886,15 @@ Table of Attractions Hints
 title	subtable	description	toggle
 "Can I ride the rides?"	Table of Ride the Ride Hints	""	hint toggle rule
 "Why are tickets so expensive?"	Table of Ticket Price Hints	""	hint toggle rule
+"The rides are boring."	Table of Boring Ride Hints	""	hint toggle rule
 
 Section 1 - Ride the Ride Hints
 
 Table of Ride the Ride Hints
 hint	used
 "You[']ll need a ticket."	a number
-"Tickets are expensive though"
-"You can buy tickets at the Ticket Kiosk"
+"Tickets are expensive though."
+"You can buy tickets at the Ticket Kiosk."
 
 Section 2 - Table of Ticket Price Hints
 
@@ -868,7 +903,30 @@ hint	used
 "What? You were expecting wrist bands?"	a number
 "To remind you to spend your money wisely."
 
+Section 3 - Boring Ride Hints
 
+Table of Boring Ride Hints
+hint	used
+"Surely not ALL the rides are boring."	a number
+"Have you ridden Hell Ride?"
+"It[']s a small carnival, what do you expect?"
+
+Chapter 6 - Games Hints
+
+Table of Games Hints
+title	subtable	description	toggle
+"Are the prizes important?"	--	"I don[']t know. Is there somewhere you could use them?"	--
+"Why do the games only cost a dime?"	-- 	"What? You want them to cost a quarter?"	--
+"I[']ve found a Mercury dime. What is it?"	Table of Mercury Hints	""	hint toggle rule
+
+Section 1 - Mercury Dime
+
+Table of Mercury Hints
+hint	used
+"It[']s a dime."	a number
+"It[']s a Mercury Dime."	
+"Have you looked at it?"	
+"It[']s a dime. Geez."	
 
 Part 3 - The Game
 
@@ -993,13 +1051,13 @@ The printed name of a fuse is "[color of the item described] colored fuse".
 Definition: a fuse is plugged-in rather than loose if it is contained by a socket.
 
 An aqua fuse called an fuse1 is in the merchandise stand. The fuse id of fuse1 is 1.The color of fuse1 is aqua. The price of fuse1 is $3.50.
-A crimson fuse called a fuse3 is carried by the Pitcher's Mound Attendant. The fuse id of fuse3 is 3. The color of fuse3 is crimson. 
+A crimson fuse called a fuse3 is carried by the Pitcher's Mound attendant. The fuse id of fuse3 is 3. The color of fuse3 is crimson. 
 An emerald fuse called an fuse5 underlies the wooden stocks. The fuse id of fuse5 is 5. The color of fuse5  is emerald. 
 A gray fuse called a fuse7 underlies the guillotine platform. The fuse id of fuse7 is 7. The color of fuse7 is gray. 
 An indigo fuse called an fuse9 underlies the iron chair. The fuse id of fuse9 is 9. The color of fuse9 is indigo. 
 A khaki fuse called a fuse11 underlies the gallows platform. The fuse id of fuse11 is 11. The color of fuse11 is khaki. 
-A magenta fuse called a fuse13 is carried by the Strongman Attendant. The fuse id of fuse13 is 13. The color of fuse13 is magenta. 
-An orange fuse called an fuse15 is carried by the Dime Toss Attendant. The fuse id of fuse15 is 15. The color of fuse15 is orange. 
+A magenta fuse called a fuse13 is carried by the Strongman attendant. The fuse id of fuse13 is 13. The color of fuse13 is magenta. 
+An orange fuse called an fuse15 is carried by the Dime Toss attendant. The fuse id of fuse15 is 15. The color of fuse15 is orange. 
 A quartz fuse called a fuse17 is in the pyre. The fuse id of fuse17 is 17. The color of fuse17 is quartz. 
 
 The taking action has an object called the object taken from.
@@ -1124,7 +1182,7 @@ Alive with anticipation, the parking lot marks the transition from the ordinary 
 
 The midway is to the south. There is a blueberry bush here. [if blueberry bush contains blueberries]There are blueberries on the bush.[otherwise]The bush has been picked clean.[end if][paragraph break]Your car is here. It[']s a bit of a beater. Inside the car, you can see [the list of things which are part of the beater car]."
 
-The Parking Attendant is an attendant in the the parking lot. The parking attendant carries a parking ticket and a parking stub. The price of the parking ticket is $5.00. 
+The parking attendant is an attendant in the the parking lot. The parking attendant carries a parking ticket and a parking stub. The price of the parking ticket is $5.00. 
 understand "the stub" or "ticket stub" or "the ticket stub" as the parking stub.
 
 after looking when the location is the parking lot:
@@ -1335,7 +1393,7 @@ Spectators gather around, cheering on participants and offering lighthearted jab
 
 The markings are here. The markings are scenery. Understand "marking" and "sign" and "signs" as markings. The description of markings is "There are five levels marked on the pole: Weakling, Getting There, Average, Almost There, and Muscle Man."
 
-The Strongman Attendant is an attendant in the High Striker. 
+The Strongman attendant is an attendant in the High Striker. 
 
 after looking when the location is the high striker:
 	say "[if the strongman attendant carries the mallet]The attendant is holding a mallet.[end if]";
@@ -1346,9 +1404,9 @@ after examining the strongman attendant:
 after looking when the HighStrikerWin is true and the location is the High Striker:
 	show the high striker prizes.
 	
-A teddy bear is carried by the Strongman Attendant. The description of the teddy bear is "This is a teddy bear like you had when you were a kid. Right down to the red bow around its neck." 
+A teddy bear is carried by the Strongman attendant. The description of the teddy bear is "This is a teddy bear like you had when you were a kid. Right down to the red bow around its neck." 
 
-A Swiss Army knife is carried by the Strongman Attendant. The description of the Swiss army knife is "This is the standard issue Swiss Army knife. It has [a list of things which are part of the item described]."  The printed name of the Swiss Army knife is "Swiss Army knife". 
+A Swiss Army knife is carried by the Strongman attendant. The description of the Swiss army knife is "This is the standard issue Swiss Army knife. It has [a list of things which are part of the item described]."  The printed name of the Swiss Army knife is "Swiss Army knife". 
 
 A screwdriver is part of the Swiss army knife. The description of the screwdriver is "It[']s a handy tool that[']s part of the Swiss Army knife."
 An awl is part of the Swiss army knife. The description of the awl is "It[']s a handy tool that[']s part of the Swiss Army knife."
@@ -1358,11 +1416,11 @@ A corkscrew is part of the Swiss army knife. The description of the corkscrew is
 
 instead of taking when the noun is part of the Swiss army knife, say "That[']s part of the Swiss Army knife. You can[']t take that!" instead.
 	
-A poster of Taylor Swift is carried by the Strongman Attendant. The description of the poster of Taylor Swift is "This is a poster of America[']s sweetheart, Taylor Swift."
+A poster of Taylor Swift is carried by the Strongman attendant. The description of the poster of Taylor Swift is "This is a poster of America[']s sweetheart, Taylor Swift."
 
 A lever is here. The lever is fixed in place. Understand "bullseye", "striker", and "target" as lever. The description of the lever is "There is a bullseye on the base of the lever. I guess this is where you have to hit the mallet."
 
-A mallet is carried by the Strongman Attendant.  The price of the mallet is $2.00. Understand "hammer" as mallet. The description of the mallet is "The mallet is over sized, perhaps to give you an advantage in the Strong Man game."
+A mallet is carried by the Strongman attendant.  The price of the mallet is $2.00. Understand "hammer" as mallet. The description of the mallet is "The mallet is over sized, perhaps to give you an advantage in the Strong Man game."
 
 A strength pattern is a kind of value. The strength patterns are Weakling, Getting Stronger, Average, Almost There, Muscle Man.
 
@@ -1418,6 +1476,8 @@ the Dime Toss booth is a thing in the Dime Toss Game. the Dime Toss booth is sce
 
 a mercury dime is a dime. it underlies the Dime Toss booth.
 
+before examining the mercury dime, display Figure of MercuryDime.
+
 Tossing relates one thing to another.
 The verb to toss means the tossing relation.
 
@@ -1432,11 +1492,11 @@ check tossing a dime when the location is the Dime Toss Game:
 		say "That seems futile to me.";
 		rule fails.
 
-A small plush monkey is carried by the Dime Toss Attendant. Understand "stuffie" and "stuffed" as monkey. The description of the monkey is "You feel rather underwhelmed as you look at the small plush monkey on a key chain."
+A small plush monkey is carried by the Dime Toss attendant. Understand "stuffie" and "stuffed" as monkey. The description of the monkey is "You feel rather underwhelmed as you look at the small plush monkey on a key chain."
 
-A poster of Billie Eilish is carried by the Dime Toss Attendant. The description of the poster is "This is a poster of Billie Eilish. Doesn[']t your sweetie like them?"
+A poster of Billie Eilish is carried by the Dime Toss attendant. The description of the poster is "This is a poster of Billie Eilish. Doesn[']t your sweetie like them?"
 
-A small pocket mirror is carried by the Dime Toss Attendant. The description of the small pocket mirror is "This is a small pocket mirror. You could use it to check your hair."
+A small pocket mirror is carried by the Dime Toss attendant. The description of the small pocket mirror is "This is a small pocket mirror. You could use it to check your hair."
 
 To show the Toss A Dime prizes:
 	say "Which prize would you like? [run paragraph on]";
@@ -1467,7 +1527,7 @@ after reading a command when the location is the Dime Toss Game and TossADimeWin
 			
 The plate is a supporter in the Dime Toss Game. Understand "plates" as plate. The description of the plate is "This is a small, flat plate, almost a saucer. You are meant to toss a dime on this plate to win a prize!"
 
-The Dime Toss Attendant is an attendant in the the Dime Toss Game. 
+The Dime Toss attendant is an attendant in the the Dime Toss Game. 
 
 after examining the Dime Toss attendant:
 	if TossADimeWin is true, show the toss a dime prizes. 
@@ -1490,13 +1550,13 @@ The booth buzzes with energy, its colorful banners and flashing lights drawing a
 
 You[']re surprised to see that this game only costs a dime."
 
-A small plush donkey is carried by the Pitcher's Mound Attendant. Understand "stuffie" and "stuffed" as donkey. The description of the donkey is "You feel rather underwhelmed as you look at the small plush donkey on a key chain."
+A small plush donkey is carried by the Pitcher's Mound attendant. Understand "stuffie" and "stuffed" as donkey. The description of the donkey is "You feel rather underwhelmed as you look at the small plush donkey on a key chain."
 
-A poster of Lourde is carried by the Pitcher's Mound Attendant. The description of the poster of Lourde is "This is a poster of Lourde. You love her singing."
+A poster of Lourde is carried by the Pitcher's Mound attendant. The description of the poster of Lourde is "This is a poster of Lourde. You love her singing."
 
-A goldfish is carried by the Pitcher's Mound Attendant. Understand "bowl" as goldfish. The description of the goldfish is "This is a small goldfish in a bowl. A pet is just what you need."
+A goldfish is carried by the Pitcher's Mound attendant. Understand "bowl" as goldfish. The description of the goldfish is "This is a small goldfish in a bowl. A pet is just what you need."
 
-a baseball is a kind of thing. Understand "ball" as baseball.The Pitcher's Mound Attendant carries three baseballs.
+a baseball is a kind of thing. Understand "ball" as baseball.The Pitcher's Mound attendant carries three baseballs.
 
 the milk bottles are scenery in the Pitcher's Mound. Understand "bottle" as milk bottles.
 
@@ -1545,7 +1605,7 @@ after reading a command when the location is the Pitcher's Mound and PitchersMou
 	now PitchersMoundWin is false;
 	stop the action.
 			
-The Pitcher's Mound Attendant is an attendant in the Pitcher's Mound. 
+The Pitcher's Mound attendant is an attendant in the Pitcher's Mound. 
 
 after examining the pitcher's mound attendant:
 	if PitchersMoundWin is true, show the pitcher's mound prizes. 
@@ -1624,7 +1684,7 @@ When LittleEgyptAuto ends:
 	say "You applaud until your hands are sore. Did she just wink at you?[paragraph break]As she leaves the stage, Little Egypt tosses one of her veils to you!";
 	now the player carries the Sheer Veil.
 	
-Every turn during LittleEgyptAuto:
+every turn during LittleEgyptAuto:
 	repeat through Table of Little Egypt Events:
 		say "[description entry][paragraph break]";
 		blank out the whole row;
@@ -1846,7 +1906,7 @@ Nearness relates a room (called A) to a room (called B) when the number of moves
 
 The radio is a device on the desk. The radio is switched off and fixed in place. The description of the radio is "[if switched on]The radio burbles on[otherwise]The radio is off[end if]." 
 
-Every turn when the radio is switched on and the location is near the maintenance office:
+every turn when the radio is switched on and the location is near the maintenance office:
 	choose a random row in Table of Songs;
 	let A be the artist entry;
 	Let S be the song entry;
@@ -1896,7 +1956,7 @@ Dimly lit by a single hanging bulb, the room feels cooler and slightly damp, the
 
 There are exists north and south. There is a wooden door to the west." 
 
-The toolbox is a closed openable container in the Mechanical Room North. The toolbox contains a monkey wrench, a channel lock, pliers, and a hammer.
+The toolbox is a closed openable container in the Mechanical Room North. The toolbox is fixed in place. The toolbox contains a monkey wrench, a channel lock, pliers, and a hammer.
 
 A hydraulic pump is here. It is scenery.
 gauges are here. They are scenery.
@@ -2006,7 +2066,7 @@ HellRideAuto ends when the number of filled rows in the Table of Hell Ride Event
 When HellRideAuto ends:
 	end the story finally.
 	
-Every turn during HellRideAuto:
+every turn during HellRideAuto:
 	repeat through Table of Hell Ride Events:
 		display figure entry;
 		say "[bold type][locale text entry][roman type][line break][description entry][paragraph break]Mist fills the area as you move to the next room...
