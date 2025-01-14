@@ -34,7 +34,7 @@ The story headline is "The ride of a lifetime...".
 The story genre is "Horror".
 The story description is "You've decided to stay and enjoy the carnival anyway."
 The story creation year is 2025.
-The release number is 120.
+The release number is 121.
 	
 Chapter 3 - Extensions
 
@@ -45,8 +45,6 @@ Include Locksmith by Emily Short.
 Include Basic Help Menu by Emily Short.
 
 Include Basic Screen Effects by Emily Short.
-
-Include Swearing Reloaded by Shin.
 
 Include Singing Reloaded by Shin.
 
@@ -176,8 +174,11 @@ Understand the liquid property as describing a fluid container. Understand "of" 
 Section 3 - Underlying Mechanics
 
 Underlying relates various things to one thing. The verb to underlie means the underlying relation. The verb to be under means the underlying relation. The verb to be beneath means the underlying relation.
+
+Understand "look under/underneath/beneath [something]" as looking under.
+Understand "examine under/underneath/beneath [something]" as looking under.
 	
-To look under something:
+Instead of looking under a thing which is underlaid by something:
 	say "You find [the list of things which underlie the noun]!";
 	now every thing which underlies the noun is in the location;
 	now every thing which underlies the noun does not underlie the noun.
@@ -330,13 +331,13 @@ Persuasion rule for asking an attendant to try going:
 instead of examining an attendant:
 	choose a random row in Table of Bored Responses;
 	Let R be response entry;
-	say "This is another bored teenager. [R]." instead;
+	say "This is another bored teenager. [R]" instead;
 	
-instead of smelling someone, say "You get close to[the noun]. They smell like angst and regret.".
+instead of smelling an attendant, say "You get close to [the noun]. They smell like angst and regret.".
 
-instead of listening to someone, say "All you can hear is [the noun] whining about working at the carnival.".
+instead of listening to an attendant, say "All you can hear is [the noun] whining about working at the carnival.".
 
-instead of touching someone, say "Touching [the noun] without consent is likely to get you a punch in the face! Better not.".
+instead of touching an attendant, say "Touching [the noun] without consent is likely to get you punched in the face! Better not.".
 
 instead of tasting someone, say "Ew! You[']re weird!".
 instead of tasting something, say "Ew! You[']re weird!".
@@ -386,6 +387,10 @@ Carry out requesting the complete score:
 		if the turn stamp entry is greater than 0:
 			say "•  [description entry]: [point value entry] points.";
 	say line break.
+	
+check requesting the score:
+	try requesting the complete score instead;
+	stop the action.
 
 [normal actions that can be uniquely described]
 every turn:
@@ -429,19 +434,52 @@ After going to a unvisited scored room:
 			increase the score by the point value entry;
 			play the Sound of Bell;
 	try looking.
+	
+Section 11 - Swearing
 
-Section 11 - Miscellaneous
+Swearing mildly is an action applying to nothing.
+The Swearing mildly action translates into I6 as "Mild".
+
+Check an actor swearing mildly (this is the block swearing mildly rule):
+	say "Quite.";
+	stop the action.
+
+Understand "bother" as swearing mildly.
+Understand the commands "curses", "drat" and "darn" as "bother".
+
+Swearing obscenely is an action applying to nothing.
+The Swearing obscenely action translates into I6 as "Strong".
+
+Check an actor swearing obscenely (this is the block swearing obscenely rule):
+	say "[one of]I can certainly understand your frustration but swearing is not the answer.[or]Real adventurers don[']t use that sort of language![or]And you kiss your mother with that mouth?[or]Shhh! Someone will hear you![at random]";
+	stop the action.
+
+Understand "shit" as swearing obscenely.
+Understand the commands "fuck", "motherfucker", "cocksucker", "cunt", and "damn" as "shit".
+
+Damning is an action applying to one thing.
+Understand "damn [something]" as damning. 
+instead of damning someone, say "[The noun] fears for his mortal soul!".
+instead of damning something, say "[The noun] hardly fears for its mortal soul!".
+
+Fucking is an action applying to one thing.
+Understand "fuck [someone]" as fucking. Understand the commands "suck", "sodomize", and "rape" as "fuck".
+instead of fucking someone, say "[story title] isn[']t that sort of game!"
+
+Section 12 - Miscellaneous
 
 [for adaptive text]
 A thing can be seen or unseen. A thing is usually unseen.
 
 Carry out examining a thing, now the noun is seen.
 
-a coin is a kind of thing.
+a coin is a kind of thing. Understand "shiny" as a coin.
 
-a dime is a kind of thing. Understand "shiny" and "coin" as a dime. The description of a dime is "It[']s a dime. Ten cents. One tenth of a dollar. And very shiny."
+a nickel is a kind of coin. The description of a nickel is "Five cents, a nickel. And very shiny."
 
-a quarter is a kind of thing. Understand "shiny" and "coin" as a quarter. The description of a quarter is "It[']s a quarter. Two bits. And very shiny."
+a dime is a kind of coin. The description of a dime is "It[']s a dime. Ten cents. One tenth of a dollar. And very shiny."
+
+a quarter is a kind of coin. . The description of a quarter is "It[']s a quarter. Two bits. And very shiny."
 
 [heaven and earth]
 A room can be indoors or outdoors. A room is usually indoors. 
@@ -452,6 +490,7 @@ The description of the sky is "[if the location is outdoors]It[']s a beautiful e
 
 The ground is a backdrop. The ground is everywhere. Understand "floor" as the ground.
 
+[Hell Ride]
 Hell Ride is a backdrop. it is everywhere.
 
 carry out examining hell ride:
@@ -459,7 +498,27 @@ carry out examining hell ride:
 		say "Through the lights and excitement of the carnival, you can see the facade for Hell Ride looming ominously over the midway." instead;
 	otherwise:
 		say "You can['] see that here."
-
+		
+instead of smelling:
+	if the location is in the Midway:
+		say "You smell the smells of the carnival. As you smell, you can discern fresh, hot buttered popcorn, the sweet aroma of cotton candy, and the warm doughy scent of pretzels.";
+	otherwise if the location is in the back stage:
+		say "You smell grease, oil, and the other scents that linger back stage.";
+	otherwise if the location is in the second floor:
+		say "You smell grease, oil, and the other scents that linger back stage.";
+	otherwise if the location is in Hellride:
+		say "You smell incense as it permeates through [story title].";
+		
+instead of listening:
+	if the location is in the Midway:
+		say "You can hear all the sounds of the carnival. The sounds of a calliope waft across the thoroughfare from the carousel. You can hear the laughter and screams as other patrons ride the rides and play the games.";
+	otherwise if the location is in the back stage:
+		say "You hear mechanical sounds: the screech metal upon metal, gears turning in precision, and the thump of the cars as they traverse the tracks through the ride.";
+	otherwise if the location is in the second floor:
+		say "You hear mechanical sounds: the screech metal upon metal, gears turning in precision, and the thump of the cars as they traverse the tracks through the ride.";
+	otherwise if the location is in Hellride:
+		say "As you travel through [story title], you hear ominous music, the murmurs of the crowd, and the occasional scream in the distance.";
+		
 Chapter 5 - Tables
 
 Section 1 - Table of Bored Responses
@@ -654,6 +713,15 @@ I hope you enjoy it.
 
 d."
 
+Section 10 - Credits
+
+Crediting is an action applying to nothing. Understand "Credits" as crediting.
+
+report crediting:
+	say "[story title], Copyright 2025 by Dana Montgomery and 1988 by No Shoes.[paragraph break]";
+	say "Extensions used in [story title]:[line break]";
+	say "[complete list of extension credits]".
+
 Chapter 6 - Figures
 
 Figure of Hell Ride is the file "HellRide.png".
@@ -820,7 +888,6 @@ Chapter 2 - Basic Help Options
 
 Table of Basic Help Options (continued)
 title	subtable	description
-"Full Score"	--	"Type 'FULL SCORE' to get a listing of your activites and the points awared for each."
 "Contacting the author"	--	"If you have any difficulties with [story title], please contact me at dmontgom22@gmail.com"
 "Parking Lot Hints"	Table of Parking Lot Hints	--
 "Attraction Hints"	Table of Attractions Hints	--
@@ -1188,7 +1255,7 @@ understand "the stub" or "ticket stub" or "the ticket stub" as the parking stub.
 after looking when the location is the parking lot:
 	say "[if the parking attendant carries the parking ticket]The attendant has a parking ticket. The price of a parking ticket is [the price of the parking ticket].[end if]";
 
-The beater car is an open enterable unopenable container in the parking lot. The beater car is scenery. Understand "vehicle" and "car" as the beater car. The description of the beater car is "[if the player is in the beater car][bold type]Car Interior[roman type][line break][end if]This is your car. It[']s a 2002 Honda Civic and it[']s seen better days.[paragraph break][if the player is in the beater car]You[']re sitting inside your car. [end if]Even though it[']s old, it feels like an old friend. From the faux leather seats to the crack in the windshield. It[']s familiar and comforting. There[']s old fast food wrappers on the floor, dirty clothes and text books in the back seat. There is an air freshener hanging from the rear view mirror. You see [the list of things which are part of the beater car]." 
+The beater car is an open enterable unopenable container in the parking lot. The beater car is scenery. Understand "vehicle" and "car" as the beater car. The description of the beater car is "[if the player is in the beater car][bold type]Car Interior[roman type][line break][end if]This is your car. It[']s a 2002 Honda Civic and it[']s seen better days.[paragraph break][if the player is in the beater car]You[']re sitting inside your car. [end if]Even though it[']s old, it feels like an old friend. From the faux leather seats to the crack in the windshield. It[']s familiar and comforting. There are old fast food wrappers on the floor, dirty clothes and text books in the back seat. There is an air freshener hanging from the rear view mirror. You see [the list of things which are part of the beater car]." 
 
 The wrappers are here. The wrappers are scenery. The description of the wrappers is "McDonald's, Burger King, Jack In The Box, Taco Bell, Carls, Jr., Five Guys... You[']re a regular equal opportunity garbage gut."
 
@@ -1201,6 +1268,8 @@ instead of looking when the player is in the beater car, try examining the beate
 A blueberry bush is here. the blueberry bush is scenery. the blueberry bush is a container. the blueberry bush is not portable. the blueberry bush contains blueberries. Understand "berries" as blueberries. The blueberries are edible.The description of the blueberries is "The blueberries are ripe and juicy.".
 	
 after eating the blueberries, say "The blueberries were delicious. A true taste of summer!"
+
+understand "Pick [blueberries]" as taking.
 	
 check giving the coupon to the parking attendant:
 	if the parking attendant carries the parking ticket:
@@ -1251,20 +1320,15 @@ A dashboard is part of the beater car. The dashboard is a supporter. Understand 
 
 A seat is part of the beater car. The seat is a supporter. It is fixed in place. Understand "car seat" as seat. The description of the seat is "A faux leather seat that looked great when it was new." The plural of seat is seats. The indefinite article of seat is "a".
 
+three quarters and one nickel underlie the seat.
+
 Your keys underlie the seat. Understand "car key", "car keys", and "key" as your keys. The description of the your is "These are your car keys. It[']s a wonder you could even find them, your house is such a mess."
 
 instead of turning your keys when the player is in the beater car, say "If you left now you would just end up in a bar, crying over a beer about your fight. You decide to stay and enjoy the carnival after all." instead.
 
-three quarters underlie the seat.
-
 A glove box is part of the beater car. The glove box is a locked openable container. Your keys unlock the glove box. Understand "glove compartment" and "compartment" as the glove box.
 
 A pair of gloves are a thing. The pair of gloves are inside the glove box. The pair of gloves is wearable. The description of the pair of gloves is "A nice set of fur-lined leather gloves. They[']re very warm." The printed name of the pair of gloves is "pair of gloves".
-
-Instead of looking under a thing which is underlaid by something:
-	say "You find [the list of things which underlie the noun]!";
-	now every thing which underlies the noun is in the location;
-	now every thing which underlies the noun does not underlie the noun;
 
 Understand "exit [a direction]" as a mistake ("Please try 'go [noun]' or just '[noun]' as a direction isn[']t necessarily an exit here.")
 
@@ -1474,7 +1538,7 @@ You[']re surprised to see that this game only costs a dime."
 
 the Dime Toss booth is a thing in the Dime Toss Game. the Dime Toss booth is scenery. The description of the Dime Toss booth is "The game booth is adorned with vibrant colors — red-and-white striped awnings, twinkling lights, and eye-catching signage. [if a dime underlies the Dime Toss booth] You can see something shiny on the ground under the booth.[end if]"
 
-a mercury dime is a dime. it underlies the Dime Toss booth.
+a mercury dime is a dime. it underlies the Dime Toss booth. The description is "The Mercury dime is a ten-cent coin struck by the United States Mint from late 1916 to 1945. Designed by Adolph Weinman and also referred to as the Winged Liberty Head dime, it gained its common name because the obverse depiction of a young Liberty, identifiable by her winged Phrygian cap, was confused with the Roman god Mercury."
 
 before examining the mercury dime, display Figure of MercuryDime.
 
@@ -2107,9 +2171,7 @@ Stocks Room is south of the Ride Entrance. "[description corresponding to the lo
 
 wooden stocks are a supporter in the Stocks Room. The wooden stocks are fixed in place. The description of the wooden stocks is "At the square[']s center stand a row of crude wooden stocks, their heavy beams stained from years of weather and use. Iron clasps hold the unfortunate captives by their wrists and necks, their bodies forced into unnatural, humiliating postures." 
 
-Instead of looking under a thing which is underlaid by the emerald fuse:
-	look under something;
-	
+
 Section 4 - Gallows Room
 
 After going south from the Stocks Room when the Gallows Room is unvisited:
@@ -2122,9 +2184,6 @@ Before looking when the location is the Gallows Room:
 The Gallows Room is south of the Stocks Room.  "[description corresponding to the locale of Gallows Room in the Table of Hell Ride Events]"
 
 The gallows platform is here. The gallows platform is a supporter. The gallows platform is fixed in place. Understand "gallows" as gallows platform. The description of the gallows platform is "At the center of the square, rising like a grim monument to mortality, stands the gallows — a wooden platform, darkened by age and weather, with thick ropes hanging like vipers poised to strike." 
-
-Instead of looking under a thing which is underlaid by khaki fuse:
-	look under something;
 
 Section 5 - Stake Room
 
@@ -2164,9 +2223,6 @@ chains are here. They are scenery. The description of the chains is "The chains 
 A rack is here. It is scenery. The description of the rack is "The rack has a prisoner splayed in four directions."
 A brazier is here. It is scenery. The description of the brazier is "It is glowing red with an infernal heat."
 A riveted iron-bound door is here. It is scenery.
-
-Instead of looking under a thing which is underlaid by the indigo fuse:
-	look under something;
 	
 Section 7 - Guillotine Room
 
@@ -2181,9 +2237,6 @@ The Guillotine Room is south of the Dungeon. "[description corresponding to the 
 
 The guillotine platform is here. The guillotine platform is a supporter. Understand "scaffold" as guillotine platform. The description of the guillotine platform is "At the center of the square stands a raised wooden platform, stark and imposing, where the grim sentence is to be carried out." 
 
-Instead of looking under a thing which is underlaid by the gray fuse:
-	look under something;
-	
 Section 8 - Ride Exit
 
 After going south from the Guillotine Room when the Ride Exit is unvisited:
@@ -2521,11 +2574,11 @@ Part 5 - Regions
 The Midway is a region. Parking Lot, Ticket Booth, Concession Stand, High Striker, Show Facade, Show Tent, Head of the Line,
 Ferris Wheel Ride, Bumper Cars Ride, Fortune Teller, Carousel Ride, Dime Toss Game, and the Pitcher's Mound are in the Midway. The sky is in the Midway.
 
-HellRide is a region. Ride Entrance, Stocks Room, Gallows Room, Stake Room, Dungeon, Guillotine Room, Ride Exit is in HellRide.
+HellRide is a region. Ride Entrance, Stocks Room, Gallows Room, Stake Room, Dungeon, Guillotine Room, Ride Exit are in HellRide.
 
 Electrical Area is a region. Electrical Room, Electrical Closet One, Electrical Closet Three, Electrical Closet Five, Electrical Closet Seven, Electrical Closet Nine, and Electrical Closet Eleven are in the Electrical Area.
 
-Backstage is a region. Dark Passage, Maintenance Office, Crawl Space, Mechanical Room North, Mechanical Room South, Generator Room, Storage Room are in Backstage.
+Back Stage is a region. Dark Passage, Maintenance Office, Crawl Space, Mechanical Room North, Mechanical Room South, Generator Room, Storage Room are in Back Stage.
 
 Second Floor is a region. Dark Hallway, Control Room, and Holding Room are in the Second Floor.
 
