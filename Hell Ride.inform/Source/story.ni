@@ -26,7 +26,7 @@ Use American Dialect.
 Use serial comma.
 The block giving rule is not listed in the check giving it to rules.
 
-Chapter 2 - Biblio Card Settings
+Chapter 2 - Library Card Settings
 
 The story title is "Hell Ride".
 The story author is "No Shoes".
@@ -331,7 +331,7 @@ Persuasion rule for asking an attendant to try going:
 instead of examining an attendant:
 	choose a random row in Table of Bored Responses;
 	Let R be response entry;
-	say "This is another bored teenager. [R]" instead;
+	say "This is another bored teenager. [R][line break]" instead;
 	
 instead of smelling an attendant, say "You get close to [the noun]. They smell like angst and regret.".
 
@@ -441,7 +441,7 @@ Swearing mildly is an action applying to nothing.
 The Swearing mildly action translates into I6 as "Mild".
 
 Check an actor swearing mildly (this is the block swearing mildly rule):
-	say "Quite.";
+	say "Said with such force!";
 	stop the action.
 
 Understand "bother" as swearing mildly.
@@ -454,17 +454,16 @@ Check an actor swearing obscenely (this is the block swearing obscenely rule):
 	say "[one of]I can certainly understand your frustration but swearing is not the answer.[or]Real adventurers don[']t use that sort of language![or]And you kiss your mother with that mouth?[or]Shhh! Someone will hear you![at random]";
 	stop the action.
 
-Understand "shit" as swearing obscenely.
-Understand the commands "fuck", "motherfucker", "cocksucker", "cunt", and "damn" as "shit".
-
-Damning is an action applying to one thing.
-Understand "damn [something]" as damning. 
-instead of damning someone, say "[The noun] fears for his mortal soul!".
-instead of damning something, say "[The noun] hardly fears for its mortal soul!".
+Understand "fuck" as swearing obscenely.
+Understand the commands "shit", "motherfucker", "cocksucker", "cunt", "cock", "tits", and "damn" as "fuck".
 
 Fucking is an action applying to one thing.
-Understand "fuck [someone]" as fucking. Understand the commands "suck", "sodomize", and "rape" as "fuck".
-instead of fucking someone, say "[story title] isn[']t that sort of game!"
+Understand "fuck [someone]" as fucking. Understand "fuck [something]" as fucking. Understand the commands "suck", "sodomize", and "rape" as "fuck".
+instead of fucking someone, say "[story title] isn[']t that kind of game!".
+instead of fucking something, say "[story title] isn[']t that kind of game!".
+
+Understand "fuck", "shit", "motherfucker", "cocksucker", "cunt", "cock", "tits", and "damn" as "[swears]".
+
 
 Section 12 - Miscellaneous
 
@@ -934,7 +933,7 @@ hint	used
 "Looks like you need something before heading into the carnival."	a number
 "Looks like you need a parking ticket."
 "The parking attendant has a parking ticket."		
-"Buy parking ticket."
+"Buy the parking ticket."
 
 Section 4 - Toad Away Hints
 
@@ -975,18 +974,36 @@ Section 3 - Boring Ride Hints
 Table of Boring Ride Hints
 hint	used
 "Surely not ALL the rides are boring."	a number
-"Have you ridden Hell Ride?"
 "It[']s a small carnival, what do you expect?"
+"Have you ridden Hell Ride?"
+
 
 Chapter 6 - Games Hints
 
 Table of Games Hints
 title	subtable	description	toggle
-"Are the prizes important?"	--	"I don[']t know. Is there somewhere you could use them?"	--
-"Why do the games only cost a dime?"	-- 	"What? You want them to cost a quarter?"	--
+"Are the prizes important?"	Table of Important Prizes Hints	"I don[']t know. Is there somewhere you could use them?"	--
+"Why do the games only cost a dime?"	Table of Game Cost Hints	"What? You want them to cost a quarter?"	--
 "I[']ve found a Mercury dime. What is it?"	Table of Mercury Hints	""	hint toggle rule
 
-Section 1 - Mercury Dime
+Section 1 - Important Prizes Hints?
+
+Table of Important Prizes Hints
+hint	used
+"Important? That[']s a matter of opinion."	a number
+"A teddy bear to make up with your sweetie?"
+"I'd go with my instincts on this one if I were you."
+"Yes, the prizes are important."
+
+Section 2 - Game Costs Hints
+
+Table of Game Cost Hints
+hint	used
+"What? You want them to cost a quarter?"	a number
+"The carnival likes to maintain a link to days past when games cost only a dime?	"
+"Just be grateful"
+
+Section 3 - Mercury Dime Hints
 
 Table of Mercury Hints
 hint	used
@@ -1001,12 +1018,14 @@ Chapter 1 - Electrical Area
 
 Section 1 - Colors
 
-[the colors values are #00FFFF, #E32636, #00C957, #6F00FF, #6F00FF, #BDB76B, #FF00FF, #FFA500, and #E7BFB3]
+[the color values are #00FFFF, #E32636, #00C957, #6F00FF, #6F00FF, #BDB76B, #FF00FF, #FFA500, and #E7BFB3]
 Color is a kind of value. The colors are nondescript, aqua, crimson, emerald, gray, indigo, khaki, magenta, orange, and quartz. 
 
 Understand "grey" as gray. 
 
 Section 2 - Electrical Closets
+
+[An electrical closet has an electrical panel. Each electrical panel has a light, a socket, and a switch. Colors and Id's inherit from the electrical panel and are referenced using the variable: [the color of holder of the noun]. Similarly, there are actions that return the corresponding switch/socket/light of the switch/socket/light. This allows us to reference which light belongs with which socket, etc. without the need to create a mass of individually named objects.]
 
 An electrical closet is a kind of room. 
 
@@ -2322,6 +2341,8 @@ every turn when the location is the Control Room:
 
 Section 4 - Control Panels
 
+[The main control panel contains control panels. Each control panel has a an indicator, dial, and a button. Colors and Id's inherit from the control panels panel and are referenced using the variable: [the color of holder of the noun]. Similarly, there are actions that return the corresponding indicator/dial/button of the indicator/dial/button. This allows us to reference which indicator belongs with which dial, etc. without the need to create a mass of individually named objects.]
+
 A control panel is a kind of open container. 
 Understand "control" and "panel" as a control panel.
 A control panel is scenery.
@@ -2511,9 +2532,9 @@ Test Death with "brief / Test Parking / Test Games / Test Attractions / Test Con
 
 Chapter 2 - Parking Lot
 
-Test Parking with "brief / get blueberries / eat blueberries / give coupon to operator / buy ticket / ask attendant about the ticket stub/ tell attendant about stub / show the stub to the attendant / talk to attendant / get in car / look / l at seat / l under seat / get all dimes / get all quarters / get keys / open glove box / get gloves / wear gloves / set stub on the dashboard / l at the dashboard / get air freshener / look at it / put keys in ignition / turn keys / exit".
+Test Parking with "brief / get blueberries / eat blueberries / give coupon to operator / buy ticket / ask attendant about the ticket stub/ tell attendant about stub / show the stub to the attendant / talk to attendant / l at attendant  / kiss attendant / smell attendant / listen to attendant / touch attendant / taste attendant / fuck attendant / darn / damn / get in car / look / l at seat / l under seat / get all dimes / get all quarters  / get nickel / get keys / open glove box / get gloves / wear gloves / set stub on the dashboard / l at the dashboard / get air freshener / look at it / put keys in ignition / turn keys / exit".
 
-Test ToadAway with "brief / test parking / get in car / get parking stub / exit car / test games / test b1"
+Test ToadAway with "brief / test parking / get in car / get parking stub / exit car / test games / test attractions"
 
 Chapter 3 - Games
 
@@ -2521,7 +2542,7 @@ Test g1 with "brief / s / w / give dime to barker / w /  z / z / z / z / z / z /
 
 Test g2 with "s / e / buy mallet / hit lever with mallet / g / g / g / g / 2 / w / n".
 
-Test g3 with "s / e  / ne / l at booth / l under booth / flip dime on plate / 1 / sw / se / give dime to attendant / throw baseball at bottles / 1 / nw / w / n"
+Test g3 with "s / e  / ne / l at booth / l under booth / flip dime on plate / toss dime on plate / toss dime on plate / 1 / get mercury dime / sw / se / give mercury dime to attendant / throw baseball at bottles / 1 / nw / w / n"
 
 Test Games with "Test g1 / test g2 / test g3".
 
