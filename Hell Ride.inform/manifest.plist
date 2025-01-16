@@ -19,55 +19,53 @@
             <key>8</key>
             <string>Figures\HighStriker.png</string>
             <key>9</key>
-            <string>Figures\RideEntrance.png</string>
-            <key>10</key>
             <string>Figures\ControlPanel.png</string>
-            <key>11</key>
+            <key>10</key>
             <string>Figures\ControlPanelStocks.png</string>
-            <key>12</key>
+            <key>11</key>
             <string>Figures\ControlPanelGallows.png</string>
-            <key>13</key>
+            <key>12</key>
             <string>Figures\ControlPanelStake.png</string>
-            <key>14</key>
+            <key>13</key>
             <string>Figures\ControlPanelDungeon.png</string>
-            <key>15</key>
+            <key>14</key>
             <string>Figures\ControlPanelGuillotine.png</string>
-            <key>16</key>
+            <key>15</key>
             <string>Figures\ControlPanelExit.png</string>
-            <key>17</key>
+            <key>16</key>
             <string>Figures\Coupon.png</string>
-            <key>18</key>
+            <key>17</key>
             <string>Figures\MaintenanceOffice.png</string>
-            <key>19</key>
+            <key>18</key>
             <string>Figures\FerrisWheel.png</string>
-            <key>20</key>
+            <key>19</key>
             <string>Figures\BumperCars.png</string>
-            <key>21</key>
+            <key>20</key>
             <string>Figures\FortuneTeller.png</string>
-            <key>22</key>
+            <key>21</key>
             <string>Figures\Carousel.png</string>
-            <key>23</key>
+            <key>22</key>
             <string>Figures\DimeToss.png</string>
-            <key>24</key>
+            <key>23</key>
             <string>Figures\MilkBottles.png</string>
-            <key>25</key>
+            <key>24</key>
             <string>Figures\RideStocks.png</string>
-            <key>26</key>
+            <key>25</key>
             <string>Figures\RideGallows.png</string>
-            <key>27</key>
+            <key>26</key>
             <string>Figures\RideStake.png</string>
-            <key>28</key>
+            <key>27</key>
             <string>Figures\RideDungeon.png</string>
-            <key>29</key>
+            <key>28</key>
             <string>Figures\RideGuillotine.png</string>
-            <key>30</key>
+            <key>29</key>
             <string>Figures\RideExit.png</string>
-            <key>31</key>
+            <key>30</key>
             <string>Figures\MercuryDime.png</string>
         </dict>
         <key>Sounds</key>
         <dict>
-            <key>32</key>
+            <key>31</key>
             <string>Sounds\Bell.ogg</string>
         </dict>
     </dict>

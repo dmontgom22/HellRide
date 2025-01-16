@@ -71,13 +71,21 @@ Before buying something for sale when the price of the money is less than the pr
 	
 Before buying something free, say "That[']s not for sale." instead.
 
+Understand "buy [things]" as buying.
+
 Instead of buying something:
 	decrease the price of the money by the price of the noun;
 	say "You fork over [the price of the noun] for [the noun], leaving yourself with [the price of the money].";
 	if the money is free, now the money is nowhere;
 	now the price of the noun is $0.00;
-	now the player is carrying the noun.
-			
+	now the noun is in the location;
+	silently try taking the noun;
+	repeat through Table of Valuable Actions:
+		if the current action is the relevant action entry and turn stamp entry is less than 0:
+			now the turn stamp entry is the turn count;
+			increase the score by the point value entry;
+			play the Sound of Bell;
+	
 The player carries a wallet. The wallet contains money. The printed name of the money is "[price of the money] in cash". Understand "cash" as the money.
 
 Instead of taking the money:
@@ -88,6 +96,7 @@ Instead of buying something free when the player carries the noun:
 
 Instead of buying the money:
 	say "The money belongs to you; you buy things with it."
+
 	
 Section 2 - Drink Mechanics
 
@@ -339,9 +348,6 @@ instead of listening to an attendant, say "All you can hear is [the noun] whinin
 
 instead of touching an attendant, say "Touching [the noun] without consent is likely to get you punched in the face! Better not.".
 
-instead of tasting someone, say "Ew! You[']re weird!".
-instead of tasting something, say "Ew! You[']re weird!".
-
 Section 10 - Scoring
 
 Table of Valuable Actions
@@ -398,7 +404,8 @@ every turn:
 		if the current action is the relevant action entry and turn stamp entry is less than 0:
 			now the turn stamp entry is the turn count;
 			increase the score by the point value entry;
-			play the Sound of Bell;	continue the action.
+			play the Sound of Bell;	
+			continue the action.
 	
 [taking prize winnings]	
 the prize table is a table name that varies. The prize table is Table of High Striker Prizes.
@@ -447,6 +454,11 @@ Check an actor swearing mildly (this is the block swearing mildly rule):
 Understand "bother" as swearing mildly.
 Understand the commands "curses", "drat" and "darn" as "bother".
 
+Understand the command "screw" as something new. 
+Fucking is an action applying to one thing.
+Understand "fuck [someone]" as fucking. Understand "fuck [something]" as fucking. Understand the commands "screw", "suck", "sodomize", and "rape" as "fuck".
+instead of fucking something, say "[story title] isn[']t that kind of game!".
+
 Swearing obscenely is an action applying to nothing.
 The Swearing obscenely action translates into I6 as "Strong".
 
@@ -454,15 +466,9 @@ Check an actor swearing obscenely (this is the block swearing obscenely rule):
 	say "[one of]I can certainly understand your frustration but swearing is not the answer.[or]Real adventurers don[']t use that sort of language![or]And you kiss your mother with that mouth?[or]Shhh! Someone will hear you![at random]";
 	stop the action.
 
-Understand "fuck" as swearing obscenely.
-Understand the commands "shit", "motherfucker", "cocksucker", "cunt", "cock", "tits", and "damn" as "fuck".
-
-Fucking is an action applying to one thing.
-Understand "fuck [someone]" as fucking. Understand "fuck [something]" as fucking. Understand the commands "suck", "sodomize", and "rape" as "fuck".
-instead of fucking someone, say "[story title] isn[']t that kind of game!".
-instead of fucking something, say "[story title] isn[']t that kind of game!".
-
+Understand "[swears]" as swearing obscenely.
 Understand "fuck", "shit", "motherfucker", "cocksucker", "cunt", "cock", "tits", and "damn" as "[swears]".
+
 
 
 Section 12 - Miscellaneous
@@ -517,6 +523,9 @@ instead of listening:
 		say "You hear mechanical sounds: the screech metal upon metal, gears turning in precision, and the thump of the cars as they traverse the tracks through the ride.";
 	otherwise if the location is in Hellride:
 		say "As you travel through [story title], you hear ominous music, the murmurs of the crowd, and the occasional scream in the distance.";
+
+instead of tasting someone, say "Ew! You[']re weird!".
+instead of tasting something, say "Ew! You[']re weird!".
 		
 Chapter 5 - Tables
 
@@ -621,7 +630,7 @@ Section 7 - Table of Hell Ride Events
 
 Table of Hell Ride Events
 locale	locale text	figure	description
-Ride Entrance	"Ride Entrance"	figure of HellRideEntrance	"The cars that will take you into the fearsome Hell Ride stop here for you to board and then move forward, the safety bar locked in place, as the entrance to Hell Ride looms ahead — a grotesque facade of twisted metal and carved wood, illuminated by flickering blood-red lights. The air carries a faint sulfuric tang mingled with the sweet aroma of carnival popcorn.
+Ride Entrance	"Ride Entrance"	figure of Hell Ride	"The cars that will take you into the fearsome Hell Ride stop here for you to board and then move forward, the safety bar locked in place, as the entrance to Hell Ride looms ahead — a grotesque facade of twisted metal and carved wood, illuminated by flickering blood-red lights. The air carries a faint sulfuric tang mingled with the sweet aroma of carnival popcorn.
 
 A towering archway of flames, spikes, and grinning skulls frames the entrance, crowned by flickering letters that read 'HELL RIDE', pulsing like a heartbeat. Below, crouching demon sculptures extend clawed hands in a sinister invitation. Wooden doors cover the entrance, whispering with faint, menacing chuckles as distorted organ music grows louder, punctuated by shrieks and grinding machinery.
 
@@ -723,63 +732,61 @@ report crediting:
 
 Chapter 6 - Figures
 
-Figure of Hell Ride is the file "HellRide.png".
+Figure of Hell Ride is the file "HellRide.png" ("The entrance to Hell Ride").
 
-Figure of TicketBooth is the file "TicketBooth.png".
+Figure of TicketBooth is the file "TicketBooth.png" ("A ticket kiosk").
 
-Figure of ConcessionStand is the file "ConcessionStand.png".
+Figure of ConcessionStand is the file "ConcessionStand.png" ("A concession stand").
 
-Figure of LittleEgyptFacade is the file "LittleEgyptFacade.png".
+Figure of LittleEgyptFacade is the file "LittleEgyptFacade.png" ("The Little Egypt facade").
 
-Figure of LittleEgyptShow is the file "LittleEgyptShow.png".
+Figure of LittleEgyptShow is the file "LittleEgyptShow.png" ("The Little Egypt tent").
 
-Figure of HighStriker is the file "HighStriker.png".
+Figure of HighStriker is the file "HighStriker.png" ("The High Striker game").
 
-Figure of HellRideEntrance is the file "RideEntrance.png".
+Figure of ControlPanel is the file "ControlPanel.png" ("Control panel displaying nothing").
 
-Figure of ControlPanel is the file "ControlPanel.png".
+Figure of ControlPanelStocks is the file "ControlPanelStocks.png" ("Control panel displaying the Stocks Room").
 
-Figure of ControlPanelStocks is the file "ControlPanelStocks.png".
+Figure of ControlPanelGallows is the file "ControlPanelGallows.png" ("Control panel displaying the Gallows Room").
 
-Figure of ControlPanelGallows is the file "ControlPanelGallows.png".
+Figure of ControlPanelStake is the file "ControlPanelStake.png" ("Control panel displaying the Stakes Room").
 
-Figure of ControlPanelStake is the file "ControlPanelStake.png".
+Figure of ControlPanelDungeon is the file "ControlPanelDungeon.png" ("Control panel displaying the Dungeon").
 
-Figure of ControlPanelDungeon is the file "ControlPanelDungeon.png".
+Figure of ControlPanelGuillotine is the file "ControlPanelGuillotine.png" ("Control panel displaying the Guillotine Room").
 
-Figure of ControlPanelGuillotine is the file "ControlPanelGuillotine.png".
+Figure of ControlPanelExit is the file "ControlPanelExit.png" ("Control panel displaying the Hell Ride Exit").
 
-Figure of ControlPanelExit is the file "ControlPanelExit.png".
+Figure of Coupon is the file "Coupon.png" ("A carnival parking coupon. Saves two dollars").
 
-Figure of Coupon is the file "Coupon.png".
+Figure of MaintenanceOffice is the file "MaintenanceOffice.png" ("A carnival maintenance office").
 
-Figure of MaintenanceOffice is the file "MaintenanceOffice.png".
+Figure of FerrisWheel is the file "FerrisWheel.png" ("A Ferris Wheel ride").
 
-Figure of FerrisWheel is the file "FerrisWheel.png".
+Figure of BumperCars is the file "BumperCars.png" ("A Bumper Cars ride").
 
-Figure of BumperCars is the file "BumperCars.png".
+Figure of FortuneTeller is the file "FortuneTeller.png" ("A fortune teller[']s booth").
 
-Figure of FortuneTeller is the file "FortuneTeller.png".
+Figure of Carousel is the file "Carousel.png" ("A Carousel").
 
-Figure of Carousel is the file "Carousel.png".
+Figure of DimeToss is the file "DimeToss.png" ("The Dime Toss game").
 
-Figure of DimeToss is the file "DimeToss.png".
+Figure of MilkBottles is the file "MilkBottles.png" ("The Pitcher[']s Mound game").
 
-Figure of MilkBottles is the file "MilkBottles.png".
+Figure of RideStocks is the file "RideStocks.png" ("The Stocks Room").
 
-Figure of RideStocks is the file "RideStocks.png".
+Figure of RideGallows is the file "RideGallows.png" ("The Gallows Room").
 
-Figure of RideGallows is the file "RideGallows.png".
+Figure of RideStake is the file "RideStake.png" ("The Stake Room").
 
-Figure of RideStake is the file "RideStake.png".
+Figure of RideDungeon is the file "RideDungeon.png" ("The Dungeon").
 
-Figure of RideDungeon is the file "RideDungeon.png".
+Figure of RideGuillotine is the file "RideGuillotine.png" ("The Guillotine Room").
 
-Figure of RideGuillotine is the file "RideGuillotine.png".
+Figure of RideExit is the file "RideExit.png" ("The Hell Ride Exit").
 
-Figure of RideExit is the file "RideExit.png".
-
-Figure of MercuryDime is the file "MercuryDime.png"
+Figure of MercuryDime is the file "MercuryDime.png" ("A Mercury dime").
 
 Chapter 7 - The Player, Global Code
 
@@ -852,7 +859,7 @@ When play begins:
 	
 The price of the money is $30.00. 
 
-Sound of Bell is the file "Silence.ogg".
+Sound of Bell is the file "Silence.ogg" ("The sound of silence").
 
 five dimes underlie the seat. 
 			
@@ -863,7 +870,7 @@ When play begins:
 
 The price of the money is $20.00. 
 
-Sound of Bell is the file "Bell.ogg".
+Sound of Bell is the file "Bell.ogg" ("The sound of a ship[']s bell").
 
 two dimes underlie the seat.
 
@@ -1294,10 +1301,10 @@ check giving the coupon to the parking attendant:
 	if the parking attendant carries the parking ticket:
 		now the price of the parking ticket is $3.00;
 		now the parking attendant carries the coupon;	
-		say "Given. The price of a parking ticket is now [the price of the parking ticket].";
+		say "Done. The price of a parking ticket is now [the price of the parking ticket].";
 		stop the action;
 	otherwise if the player carries the parking ticket:
-		say "Given. But you already bought a parking ticket.";
+		say "Done. But you already bought a parking ticket.";
 		now the parking attendant carries the coupon;
 		stop the action.
 		
@@ -1357,6 +1364,8 @@ Section 3 - Ticket Booth
 
 After going south from the parking lot when the Ticket Booth is unvisited and the player carries the parking ticket:
 	display Figure of TicketBooth;
+	say "[run paragraph on]";
+	display figure of hell ride;
 	continue the action.
 	
 Before looking when the location is the Ticket Booth:
@@ -2548,11 +2557,8 @@ Test Games with "Test g1 / test g2 / test g3".
 
 Chapter 4 - Attractions
 
-Test a1 with "s / buy fortune teller ticket / buy Ferris wheel ticket / buy bumper cars ticket / buy carousel ticket / buy hell ride ticket"
+Test Attractions with "s / buy all tickets / e / e / e / give Ferris wheel ticket to Ferris wheel operator / w / w / ne / give carousel ticket to carousel operator / sw / se / give fortune teller ticket to mysterious woman / nw / nw / l at two dollar bill / get two dollar bill / give bumper cars ticket to bumper cars operator / se / n"
 
-Test a2 with "e / e / e / give Ferris wheel ticket to Ferris wheel operator / w / w / ne / give carousel ticket to carousel operator / sw / se / give fortune teller ticket to mysterious woman / nw / nw / l at two dollar bill / get two dollar bill / give bumper cars ticket to bumper cars operator / se / n"
-
-Test Attractions with "test a1 / test a2"
 
 Chapter 5 - Back Stage
 
