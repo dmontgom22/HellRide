@@ -96,7 +96,6 @@ Instead of buying something free when the player carries the noun:
 
 Instead of buying the money:
 	say "The money belongs to you; you buy things with it."
-
 	
 Section 2 - Drink Mechanics
 
@@ -442,6 +441,26 @@ After going to a unvisited scored room:
 			play the Sound of Bell;
 	try looking.
 	
+[take all]
+The taking all items from multiple object lists rule is listed instead of the announce items from multiple object lists rule in the action-processing rules.
+
+This is the taking all items from multiple object lists rule:
+	if taking:
+		if the current item from the multiple object list is not nothing:
+			bump the score;
+			say "[current item from the multiple object list]: [run paragraph on]";
+	otherwise:
+		if the current item from the multiple object list is not nothing, say "[current item from the multiple object list]: [run paragraph on]".
+
+To bump the score:
+	sort the table of Valuable Actions in turn stamp order;
+	repeat through Table of Valuable Actions:
+		if the current action is the relevant action entry and turn stamp entry is less than 0:
+			now the turn stamp entry is the turn count;
+			increase the score by the point value entry;
+			play Sound of Bell;
+			continue the action;
+
 Section 11 - Swearing
 
 Swearing mildly is an action applying to nothing.
@@ -989,9 +1008,9 @@ Chapter 6 - Games Hints
 
 Table of Games Hints
 title	subtable	description	toggle
-"Are the prizes important?"	Table of Important Prizes Hints	"I don[']t know. Is there somewhere you could use them?"	--
-"Why do the games only cost a dime?"	Table of Game Cost Hints	"What? You want them to cost a quarter?"	--
-"I[']ve found a Mercury dime. What is it?"	Table of Mercury Hints	""	hint toggle rule
+"Are the prizes important?"	Table of Important Prizes Hints	""	hint toggle rule
+"Why do the games only cost a dime?"	Table of Game Cost Hints	""	hint toggle rule
+"I[']ve found a Mercury dime. What is it?"	Table of Mercury Dime Hints	""	hint toggle rule
 
 Section 1 - Important Prizes Hints?
 
@@ -1007,17 +1026,17 @@ Section 2 - Game Costs Hints
 Table of Game Cost Hints
 hint	used
 "What? You want them to cost a quarter?"	a number
-"The carnival likes to maintain a link to days past when games cost only a dime?	"
+"The carnival likes to maintain a link to days past when games cost only a dime?"
 "Just be grateful"
 
 Section 3 - Mercury Dime Hints
 
-Table of Mercury Hints
+Table of Mercury Dime Hints
 hint	used
 "It[']s a dime."	a number
-"It[']s a Mercury Dime."	
-"Have you looked at it?"	
-"It[']s a dime. Geez."	
+"It[']s a Mercury Dime."
+"Have you looked at it?"
+"It[']s a dime. Geez."
 
 Part 3 - The Game
 
@@ -1364,8 +1383,6 @@ Section 3 - Ticket Booth
 
 After going south from the parking lot when the Ticket Booth is unvisited and the player carries the parking ticket:
 	display Figure of TicketBooth;
-	say "[run paragraph on]";
-	display figure of hell ride;
 	continue the action.
 	
 Before looking when the location is the Ticket Booth:
