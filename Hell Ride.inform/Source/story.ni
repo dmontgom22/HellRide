@@ -34,7 +34,7 @@ The story headline is "The ride of a lifetime...".
 The story genre is "Horror".
 The story description is "You've decided to stay and enjoy the carnival anyway."
 The story creation year is 2025.
-The release number is 121.
+The release number is 122.
 	
 Chapter 3 - Extensions
 
@@ -359,19 +359,19 @@ wearing the sheer veil	"Wearing the sheer veil"	5	-1
 taking the lantern	"Taking the lantern"	10	-1
 taking the flashlight	"Taking the flashlight"	10	-1
 looking under the Dime Toss Booth	"Taking the Mercury dime"	5	-1
-pushing the big switch	"Turning off the big switch"	15	-1
+pushing the big switch	"Turning off the big switch"	10	-1
 searching the Control Room	"Finding the Control Room"	5	-1
 searching the Dark Passage	"Finding the Dark Passage"	5	-1	
 searching the High Striker	"Winning at the High Striker"	5	-1
 searching the Dime Toss	"Winning at the Dime Toss Game"	5	-1
 searching the Pitcher's Mound	"Winning at the Pitcher's Mound"	5	-1
+giving the adjustable wrench to the bumper cars attendant	"Bringing the wrench to the Bumper Cars"	5	-1
 buying fuse1	"Acquiring the Aqua fuse"	5	-1
-taking fuse3	"Acquiring the Crimson fuse"	5	-1
 looking under the wooden stocks	"Acquiring the Emerald fuse"	5	-1
 looking under the guillotine platform	"Acquiring the Gray fuse"	5	-1
 looking under the iron chair	"Acquiring the Indigo fuse"	5	-1
 looking under the gallows platform	"Acquiring the Khaki fuse"	5	-1
-pushing electrical closet one's electrical panel's switch	"Flipping the Aqua switch"	5	-1
+pushing electrical closet one's electrical panel's switch 	"Flipping the Aqua switch"	5	-1
 pushing electrical closet three's electrical panel's switch	"Flipping the Crimson switch"	5	-1
 pushing electrical closet five's electrical panel's switch	"Flipping the Emerald switch"	5	-1
 pushing electrical closet seven's electrical panel's switch	"Flipping the Gray switch"	5	-1
@@ -407,6 +407,7 @@ every turn:
 			continue the action.
 	
 [taking prize winnings]	
+prize taken is a truth state that varies. prize taken is false.
 the prize table is a table name that varies. The prize table is Table of High Striker Prizes.
 To receive a prize:
 	let C be "[the player's command]";
@@ -417,6 +418,7 @@ To receive a prize:
 		say "You are now holding [description entry].";
 		now the object entry is in the location;
 		silently try taking the object entry;
+		now prize taken is true;
 		repeat through the Table of Valuable Actions:
 			let L be the "Winning at the [location]";
 			let D be the "[description entry]";
@@ -426,11 +428,11 @@ To receive a prize:
 				play the Sound of Bell;
 				reject the player's command;
 	otherwise:
+		now prize taken is false;
 		continue the action.
 		
 [scored rooms]
 A room can be scored or unscored. A room is usually unscored.
-
 After going to a unvisited scored room:
 	repeat through Table of Valuable Actions:
 		let L be the "Finding the [location]";
@@ -913,20 +915,17 @@ Chapter 2 - Basic Help Options
 
 Table of Basic Help Options (continued)
 title	subtable	description
-"Contacting the author"	--	"If you have any difficulties with [story title], please contact me at dmontgom22@gmail.com"
-"Parking Lot Hints"	Table of Parking Lot Hints	--
-"Attraction Hints"	Table of Attractions Hints	--
-"Games Hints"	Table of Games Hints	--
+"Contacting the Author"	--	"If you have any difficulties with [story title], please contact me at dmontgom22@gmail.com"
+"The Parking Lot"	Table of Parking Lot Hints	--
+"The Attractions"	Table of Attractions Hints	--
+"The Games"	Table of Games Hints	--
+"Back Stage"	Table of Back Stage Hints	--
+"Hell Ride"	Table of Hell Ride Hints	--
+"The Electrical Area"	Table of Electrical Area Hints	--
+"The Control Room"	Table of Control Room Hints	--
 "Settings"	Table of Setting Options	--
 
-Chapter 3 - Hint Categories
-
-Table of Hint Categories
-title	subtable	description	toggle
-"The Parking Lot"	Table of Parking Lot Hints	""	hint toggle rule
-"The Attractions"	Table of Attractions Hints	""	hint toggle rule
-
-Chapter 4 - The Parking Lot
+Chapter 3 - The Parking Lot
 
 Table of Parking Lot Hints
 title	subtable	description	toggle
@@ -940,14 +939,14 @@ Section 1 - String Hints
 Table of String Hints
 hint	used
 "Remember that you know how to macrame."	a number
-"Isn't macrame the art of tying?"
+"Isn[']t macrame the art of tying?"
 "Oh, come now, isn't it obvious?"
 
 Section 2 - Glove Box Hints
 
 Table of Glove Box Hints
 hint	used
-"It's locked."	a number
+"It[']s locked."	a number
 "Have you tried unlocking it?"	
 "You need a key."	
 "Look under the car seat."
@@ -972,7 +971,7 @@ hint	used
 "The parking attendant knows something about the stub"	
 "Put the stub on the dashboard."
 
-Chapter 5 - The Attractions
+Chapter 4 - The Attractions
 
 Table of Attractions Hints
 title	subtable	description	toggle
@@ -1004,7 +1003,7 @@ hint	used
 "Have you ridden Hell Ride?"
 
 
-Chapter 6 - Games Hints
+Chapter 5 - The Games 
 
 Table of Games Hints
 title	subtable	description	toggle
@@ -1018,7 +1017,7 @@ Table of Important Prizes Hints
 hint	used
 "Important? That[']s a matter of opinion."	a number
 "A teddy bear to make up with your sweetie?"
-"I'd go with my instincts on this one if I were you."
+"I[']d go with my instincts on this one if I were you."
 "Yes, the prizes are important."
 
 Section 2 - Game Costs Hints
@@ -1037,6 +1036,130 @@ hint	used
 "It[']s a Mercury Dime."
 "Have you looked at it?"
 "It[']s a dime. Geez."
+
+Chapter 6 - Back Stage 
+
+Table of Back Stage Hints
+title	subtable	description	toggle
+"Why do I get eaten by a grue?"	Table of Grue Hints	""	hint toggle rule
+"Are the doors important?"	Table of Doors Hints	""	hint toggle rule
+
+Section 1 - Table of Grue Hints
+
+Table of Grue Hints
+hint	used
+"Grues love the dark."	a number
+"Do you have a light?"
+"Have you looked for one?"
+"There are two in the game."
+"One is in the Dark Passage."
+"The other is in the Little Egypt tent."
+
+Section 2 - Table of Doors Hints
+
+Table of Doors Hints
+hint	used
+"Only if you want to know what[']s on the other side."	a number
+"Have you tried checking what[']s on the other side?"
+"You[']ll need a key"
+"You have to find it"
+"It[']s in Electrical Closet One"
+
+Chapter 7 - Hell Ride Hints
+
+Table of Hell Ride Hints
+title	subtable	description	toggle
+"Why do I die?"	Table of Guillotine Hints	""	hint toggle rule
+"What about the different rooms"	Table of Hell Ride Rooms	""	hint toggle rule
+
+Section 1 - Table of Guillotine Hints
+
+Table of Guillotine Hints
+hint	used
+"Everybody dies."	a number
+"So, you[']ve ridden Hell Ride."
+"Aren[']t the animatronics and wax figures amazing?"
+"Did you notice the guillotine rising and falling?"
+"Did you notice it chop you in half?"
+
+Section 2 - Table of Hell Ride Rooms Hints
+
+Table of Hell Ride Rooms
+hint	used
+"Everything sure looks realistic."	a number
+"Aren[']t the animatronics and wax figures amazing?"
+"Each room shows a different manner of punishment."
+"There[']s the Stocks, the Gallows, the Stake, the Dungeon, and the Guillotine."
+"Just your typical ride in the dark."
+
+Chapter 8 - The Electrical Area Hints
+
+Table of Electrical Area Hints
+title	subtable	description	toggle
+"What[']s going on in the Electrical Room?"	Table of Electrical Room Hints	""	hint toggle rule
+"What about the electrical panels?"	Table of Electrical Panel Hints	""	hint toggle rule
+"Are the fuses important?"	Table of Fuse Hints	""	hint toggle rule
+
+Section 1 - Table of Electrical Room Hints
+
+Table of Electrical Room Hints
+hint	used
+"There are exits in all directions"	a number
+"Have you mapped the area?"
+"Can you go in the direction you intend?"
+"The room is electromagnetic."
+"Maybe that[']s causing the problem."
+"Maybe you can make it so it[']s not electromagnetic."
+"Turn off the big switch."
+
+Section 2 - Table of Electrical Panel Hints
+
+Table of Electrical Panel Hints
+hint	used
+"There[']s a socket, a switch, and an indictor in each one."	a number
+"You could probably put something in the socket."
+"Looks like a fuse will fit in the socket."
+"I[']d put a fuse in the socket and flip the switch."
+
+Section 3 - Table of Fuse Hints
+
+Table of Fuse Hints
+hint	used
+"Yes."	a number
+"They come in pretty colors."
+"Have you seen those colors before?"
+"Have you put a fuse in a socket?"
+
+Chapter 9 - The Control Room Hints
+
+Table of Control Room Hints
+title	subtable	description	toggle
+"Tell me about the big switch."	Table of Big Switch Hints	""	hint toggle rule
+"What about the control panels?"	Table of Control Panel Hints	""	hint toggle rule
+
+
+Section 1 - Table of Big Switch Hints
+
+Table of Big Switch Hints
+hint	used
+"It[']s big"	a number
+"Very big"
+"It[']s in the Control Room."
+"Have you tried turning it off?"
+"Did you die because your hands were unprotected?"
+"Try wearing the gloves."
+
+Section 2 - Table of Control Panel Hints
+
+Table of Control Panel Hints
+hint	used
+"There's a dial, a button, and a light in each one."	a number
+"These are pretty colors."
+"Have you seen these colors before?"
+"Try spinning the dials."
+"Spin the dials to the right number."
+"Is there a number that corresponds to each color?"
+"Push the indigo button."
 
 Part 3 - The Game
 
@@ -1192,22 +1315,11 @@ A switch has a truth state called points awarded. points awarded is usually fals
 
 The description is "Switch [switch id of the item described] is part of Electrical Panel [the panel id of the holder of the item described]. It[']s a big switch. You could probably turn it [if the item described is switched off]on[otherwise]off[end if] if you wanted to."
 
-[The printed name of a switch is "switch [panel id of the holder of the item described]"]
-
 To decide what number is --/the switch id of (S - a switch):
 	decide on the panel id of the holder of S.
 	
 To decide what color is --/the color of (S - a switch):
 	decide on the color of the holder of S.
-	
-Understand "switch [something related by reversed incorporation]" as a switch.
-Understand "[something related by reversed incorporation] switch" as a switch.
-
-Instead of pushing or flipping or toggling a switched off switch (this is the redirect push to switch on rule):
-	try switching on the noun.
-
-Instead of pushing or flipping or toggling a switched on switch (this is the redirect push to switch off rule):
-	try switching off the noun.
 
 To decide if (S - a socket) is properly fused:
 	if S is filled:
@@ -1215,6 +1327,23 @@ To decide if (S - a socket) is properly fused:
 		if the color of F is the shared color of S:
 			decide yes;
 	decide no.
+	
+Understand "switch [something related by reversed incorporation]" as a switch.
+Understand "[something related by reversed incorporation] switch" as a switch.
+
+toggling is an action applying to one thing.
+understand "toggle [the big switch]" as pushing.
+understand "toggle [a switch]" as pushing.
+
+flipping is an action applying to one thing.
+understand "flip [the big switch]" as pushing.
+understand "flip [a switch]" as pushing.
+
+Instead of pushing a switched off switch (this is the redirect push to switch on rule):
+	try switching on the noun.
+
+Instead of pushing a switched on switch (this is the redirect push to switch off rule):
+	try switching off the noun.
 	
 check switching on a switched off switch when the holder of the noun is not open:
 	say "You should probably open the electrical panel first." instead.
@@ -1228,6 +1357,9 @@ Last report switching on a switch (this is the final report switching on a switc
 
 Last report switching off a switch (this is the final report switching off a switch rule):		
 	say "The [corresponding indicator of the noun]'s light turns off.".
+	
+Understand "turn on [a switch]" as a mistake ("To TURN ON a switch, try FLIP switch, PUSH switch, or TOGGLE switch.").
+Understand "switch on [a switch]" as a mistake ("To SWITCH ON a switch, try FLIP switch, PUSH switch, or TOGGLE switch.").
 	
 The switch count is a number that varies. The switch count is 0.
 To count the switches:
@@ -1563,8 +1695,9 @@ After hitting the lever when second noun is the mallet 5 times:
 after reading a command when the location is the high striker and HighStrikerWin is true:
 	now prize table is Table of High Striker Prizes;
 	receive a prize;
-	now HighStrikerWin is false;
-	stop the action.
+	if prize taken is true:
+		now HighStrikerWin is false;
+		stop the action.
 	
 Section 6 - Dime Toss
 
@@ -1631,8 +1764,9 @@ instead of tossing a dime when the second noun is the plate and the player carri
 after reading a command when the location is the Dime Toss Game and TossADimeWin is true:
 	now prize table is Table of Dime Toss Prizes;
 	receive a prize;
-	now TossADimeWin is false;
-	stop the action.
+	if prize taken is true:
+		now TossADimeWin is false;
+		stop the action.
 			
 The plate is a supporter in the Dime Toss Game. Understand "plates" as plate. The description of the plate is "This is a small, flat plate, almost a saucer. You are meant to toss a dime on this plate to win a prize!"
 
@@ -1711,8 +1845,9 @@ instead of throwing a baseball at the milk bottles when the player carries the n
 after reading a command when the location is the Pitcher's Mound and PitchersMoundWin is true:
 	now prize table is Table of Pitcher's Mound Prizes;
 	receive a prize;
-	now PitchersMoundWin is false;
-	stop the action.
+	if prize taken is true:
+		now PitchersMoundWin is false;
+		stop the action.
 			
 The Pitcher's Mound attendant is an attendant in the Pitcher's Mound. 
 
@@ -1872,7 +2007,10 @@ instead of taking the two dollar bill:
 	say "You now have [the price of the money].";
 	now the two dollar bill is nowhere.
 	
-
+instead of giving the adjustable wrench to the attendant:
+	say "Hey! Thanks, I really appreciate it. Usually no one ever responds to the radio in the Control Room.";
+	now the adjustable wrench is carried by the attendant.
+	
 Section 12 - Fortune Teller
 
 After going southeast from the ticket Booth when the fortune teller booth is unvisited:
@@ -1947,9 +2085,9 @@ Section 2 - Dark Passage
 
 Dark Passage is a room. Dark Passage is east of the Ride Entrance. The dark passage is scored. "This room is backstage at the Hell Ride attraction. The room is littered with bags of trash, piles of junk, and dust bunnies so large they should be paying rent. West is back the way you came from. There an exit to the south."
 
-dust bunnies are scenery. The dust bunnies are here. Understand "bunnies" as dust bunnies.
+some dust bunnies are scenery. The dust bunnies are here. Understand "bunnies" as dust bunnies.
 
-bags of trash are scenery. The bags of trash are here. Understand "bags" and "trash" as bags of trash.
+some bags of trash are scenery. The bags of trash are here. Understand "bags" and "trash" as bags of trash.
 
 A pile of junk is a scenery container. The pile of junk is in the dark passage. The pile of junk contains the flashlight. Understand "piles" and "junk" as pile of junk. 
 
@@ -1981,7 +2119,7 @@ Before looking when the location is the Maintenance Office and the the player ca
 
 The Maintenance Office is a dark room. The maintenance office is south of the dark passage. "The maintenance office, hidden behind the carnival’s bright facade, is a dim and cluttered space reeking of grease, sweat, and faint traces of popcorn from the midway. The air hangs heavy with oil and stirred-up dust.
 
-The walls are lined with shelves holding tools and parts in disarray — rusty wrenches, screws, and mismatched containers with faded labels. Paint cans and grease jars clutter the workbenches, many left half-open. In the center, a battered desk is strewn with wires, gears, and springs, a bent piece of metal held in a vise. Overhead, a single flickering fluorescent light struggles to illuminate the room.
+The walls are lined with shelves holding tools and parts in disarray — screws and mismatched containers with faded labels. Paint cans and grease jars clutter the workbenches, many left half-open. In the center, a battered desk is strewn with wires, gears, and springs, a bent piece of metal held in a vise. Overhead, a single flickering fluorescent light struggles to illuminate the room.
 
 In one corner, a disassembled ride mechanism lies exposed, chains and pulleys dangling from hooks above, faintly clinking with the vibrations of the rides. A grease-stained manual and a half-drained mug of coffee sit abandoned on a nearby stool.
 
@@ -1991,19 +2129,19 @@ Despite the mess, the room buzzes with purpose — a hidden hub where the carniv
 
 Exits lead north and south. There is a door to the west." 
 
-rusty wrenches are here. They are scenery. The description is "Rusty wrenches, grease jars, and cans of paint are here.".
-paint cans are here. They are scenery. The description is "Rusty wrenches, grease jars, and cans of paint are here.".
-grease jars are here. They are scenery. The description is "Rusty wrenches, grease jars, and cans of paint are here.".
-A vise is here. It is scenery.
-A bent piece of metal is here. It is scenery.
-safety posters are here. They are scenery. The description is "You[']re the safe choice for safety!".
-notes are here. They are scenery. The description is "Looking at the notes all you can see are the illegible scribbles of a child."
-A clock is here. It is scenery. The description is "The clock is wildly off the correct time. I guess it[']s broken."
-A lubricant is here. It is scenery. The description is "It[']s lubricant. It[']s slippery."
-A manual is here. It is scenery. The description of the manual is "The manual is titled: 'Fixing Your Ferris Wheel. It[']s Easier Than You Think!'" 
-A stool is here. It is a supporter. It is scenery. 
+some screws are here. They are scenery. The description is "Screws, grease jars, and cans of paint are here.".
+some paint cans are here. They are scenery. The description is "Screws, grease jars, and cans of paint are here.".
+some grease jars are here. They are scenery. The description is "Screws, grease jars, and cans of paint are here.".
+a vise is here. It is scenery.
+a bent piece of metal is here. It is scenery.
+some safety posters are here. They are scenery. The description is "You[']re the safe choice for safety!".
+some notes are here. They are scenery. The description is "Looking at the notes all you can see are the illegible scribbles of a child.".
+a clock is here. It is scenery. The description is "The clock is wildly off the correct time. I guess it[']s broken.".
+some lubricant is here. It is scenery. The description is "It[']s lubricant. It[']s slippery.".
+a manual is here. It is scenery. The description of the manual is "The manual is titled: 'Fixing Your Ferris Wheel. It[']s Easier Than You Think!'" .
+a stool is here. It is a supporter. It is scenery. 
 
-The worn photo is here. Understand "picture" as the worn photo. The description of the worn photo is "This is a photo of the carnival in its heyday! A ragtag bunch of people are featured in the picture. On the back reads a date: 'May, 1962'."
+The worn photo is here. Understand "picture" as the worn photo. The description of the worn photo is "This is a photo of the carnival in its heyday! A ragtag bunch of people are featured in the picture. On the back reads a date: 'March, 1962'."
 
 The coffee mug is on the desk. The coffee mug is edible. Understand "coffee" as the coffee mug. The description of the coffee mug is "Who knows how long this has been sitting here. I wouldn[']t drink it if I were you." 
 
@@ -2065,16 +2203,18 @@ Dimly lit by a single hanging bulb, the room feels cooler and slightly damp, the
 
 There are exists north and south. There is a wooden door to the west." 
 
-The toolbox is a closed openable container in the Mechanical Room North. The toolbox is fixed in place. The toolbox contains a monkey wrench, a channel lock, pliers, and a hammer.
+The toolbox is a closed openable container in the Mechanical Room North. The toolbox is fixed in place. The toolbox contains an adjustable wrench, channel locks, pliers, and a hammer. Understand "tool", "box", and "tool box" as toolbox.
 
-A hydraulic pump is here. It is scenery.
-gauges are here. They are scenery.
-tools are here. They are scenery.
-A bench is here. It is scenery. Understand "workbench" as the bench. The description is "The workbench is covered in all manner of things.".
-wires are here. They are scenery.
-spare parts are here. They are scenery.
+The description of the adjustable wrench is "It[']s just an adjustable wrench. Nothing more."
+
+a hydraulic pump is here. It is scenery.
+some gauges are here. They are scenery.
+some tools are here. They are scenery.
+a bench is here. It is scenery. Understand "workbench" as the bench. The description is "The workbench is covered in all manner of things.".
+some wires are here. They are scenery.
+some spare parts are here. They are scenery.
 hydraulic tubing is here. It is scenery.
-A diagram is here. It is scenery.
+a diagram is here. It is scenery.
 
 An door5 is a wooden door. The color of door5 is emerald. The description of door5 is "It[']s [an printed name of item described]. It has the word 'Stake' written on it." The silver key unlocks it. door5 is west of the Mechanical Room North and east of the Stake Room. 
 
@@ -2084,7 +2224,7 @@ The Mechanical Room South is a dark room. The Mechanical Room South is south of 
 
 Heavy-duty electrical panels line the walls, adorned with warning labels like 'High Voltage' and blinking indicator lights in an array of colors. Overhead, labeled conduits and wires snake across the ceiling, connecting systems with meticulous precision.
 
-A cluttered table holds tools and spare parts — wrenches, bolts, and lubricants — alongside open maintenance logs marked with greasy fingerprints. The air is thick with the smell of oil, metal, and a faint trace of ozone from the electrics.
+A cluttered table holds tools and spare parts — bolts and lubricants — alongside open maintenance logs marked with greasy fingerprints. The air is thick with the smell of oil, metal, and a faint trace of ozone from the electrics.
 
 A cooling fan spins in the corner, barely cutting through the room’s warmth. The hum of machinery is occasionally punctuated by clinking chains and the sharp hiss of hydraulic fluid. The floor, a mix of metal grates and worn concrete, reflects years of use and maintenance.
 
@@ -2092,14 +2232,14 @@ Bright fluorescent lights in wire cages illuminate the space, highlighting the i
 
 You can travel north and south from here. There is a door to the west." 
 
-lights are here. They are scenery.
-thick belts are here. They are scenery.
-pulleys are here. They are scenery.
-gears are here. They are scenery.
-A table is here. It is scenery.
-bolts are here. They are scenery.
-lubricants are here. They are scenery.
-A cooling fan is here. It is scenery.
+some lights are here. They are scenery.
+some thick belts are here. They are scenery.
+some pulleys are here. They are scenery.
+some gears are here. They are scenery.
+a table is here. It is scenery.
+some bolts are here. They are scenery.
+some lubricants are here. They are scenery.
+a cooling fan is here. It is scenery.
 
 A grate is an openable lockable door. The grate is locked. The grate is up from the Holding Room. The description is "This grate leads down into the darkness. Too bad it[']s locked."
 
@@ -2121,16 +2261,16 @@ Though isolated and utilitarian, the generator room is the carnival’s heartbea
 The backstage area continues north and south of here. There is a wooden door to the west." 
 
 graffiti is here. It is scenery. instead of examining the graffiti, say "The graffiti is varied, from 'Peace, Love, Goodwill on Earth' to 'Anarchy Rules'.".
-junction boxes are here. They are scenery.
-cables are here. They are scenery.
-circuit breakers are here. They are scenery.
-filters are here. They are scenery.
-spark plugs are here. They are scenery.
-wire coils are here. They are scenery.
-A grease canister is here. It is scenery.
-diesel canisters are here. They are scenery.
-A maintenance manual is here. It is scenery. The description is "The cover reads, 'Put The Bump In Your Bumper Cars'."
-A large panel is here. It is scenery.
+some junction boxes are here. They are scenery.
+some cables are here. They are scenery.
+some circuit breakers are here. They are scenery.
+some filters are here. They are scenery.
+some spark plugs are here. They are scenery.
+some wire coils are here. They are scenery.
+a grease canister is here. It is scenery.
+some diesel canisters are here. They are scenery.
+a maintenance manual is here. It is scenery. The description is "The cover reads, 'Put The Bump In Your Bumper Cars'.".
+a large panel is here. It is scenery.
 
 An door9 is a wooden door. The color of door9 is indigo. The description of door9 is "It[']s [an printed name of item described]. It has the word 'Guillotine' written on it." The silver key unlocks it. door9 is west of the Generator Room and east of the Guillotine Room. 
 
@@ -2144,23 +2284,22 @@ The room’s center is dominated by larger objects: spare ride seats, unassemble
 
 Near the entrance, a battered desk is cluttered with maintenance logs, tools, and empty coffee cups. Above it, a cork board brims with ride schedules, repair requests, and notes. A flickering fluorescent bulb casts uneven shadows, adding an eerie atmosphere.
 
-The floor, a rough blend of concrete and dirt, is littered with bolts, screws, and wire scraps. In the dim corners, the scuttle of rats and the glint of cobwebs underline the room[']s gritty nature.
+The floor, a rough blend of concrete and dirt, is littered with bolts and wire scraps. In the dim corners, the scuttle of rats and the glint of cobwebs underline the room[']s gritty nature.
 
 Chaotic yet indispensable, this hidden space powers the carnival’s magic, ensuring every ride and booth runs seamlessly.
 
 There is an exit to the north and a door to the west."
 
-supplies are here. They are scenery.
-boxes of lightbulbs are here. They are scenery.
-spools of wire are here. They are scenery.
-ride parts are here. They are scenery.
-flags are here. They are scenery.
-seats are here. They are scenery.
-booths are here. They are scenery.
-A horse is here. It is scenery.
-screws are here. They are scenery.
-wire scraps are here. They are scenery.
-rats are here. The rats are scenery. The description of the rats is "You see rats scurry in all directions fleeing from the light cast by you."
+some supplies are here. They are scenery.
+some boxes of lightbulbs are here. They are scenery.
+some spools of wire are here. They are scenery.
+some ride parts are here. They are scenery.
+some flags are here. They are scenery.
+some seats are here. They are scenery.
+some booths are here. They are scenery.
+a horse is here. It is scenery.
+some wire scraps are here. They are scenery.
+some rats are here. The rats are scenery. The description of the rats is "You see rats scurry in all directions fleeing from the light cast by you."
 
 A door11 is a wooden door. The color of door11 is khaki. The description of door11 is "It[']s [a printed name of item described]. It has the word 'Ride Exit' written on it." The silver key unlocks it. door11 is west of the Storage Room and east of the Ride Exit. 
 	
@@ -2315,7 +2454,7 @@ Dark Hallway is a dark room. "This is a poorly lit hallway. Ahead to the west yo
 	
 Section 3 - Control Room
 
-Control Room is a dark room. The Control Room is west of the Dark Hallway. The Control Room is a scored room. "The backstage control room is a plain, functional hub where the carnival’s rides, lights, and attractions are managed. Gray industrial walls, scuffed and greasy, surround a large monitor streaming live carnival feeds. Beneath them, control panels with labeled dials, colored buttons, and lights oversee the systems scattered about the room. Glancing that the control panels, you can see they are [if the switch count is 6]lit up like a Christmas tree[otherwise]dark[end if].
+Control Room is a dark room. The Control Room is west of the Dark Hallway. The Control Room is a scored room. "The backstage control room is a plain, functional hub where the carnival’s rides, lights, and attractions are managed. Gray industrial walls, scuffed and greasy, surround a large monitor streaming live carnival feeds. Beneath them, control panels with labeled dials, colored buttons, and lights oversee the systems scattered about the room. Glancing at the control panels, you can see they are [if the switch count is 6]lit up like a Christmas tree[otherwise]dark[end if].
 
 The hum of electronics fills the air, punctuated by the crackle of a radio: 'Maintenance to Bumper Cars — wrench needed!' The worn floor is scattered with papers, tools, and coffee cups. A cluttered desk holds logs and schedules, while a cork board above displays charts and red-marked notes like 'Check Zipper circuit breakers.'
 
@@ -2324,7 +2463,7 @@ A flickering light casts cold shadows as the metallic tang of machinery mixes wi
 A dark hallway lies to the east." 
 
 A big switch is a device in the control room. The big switch is fixed in place. The big switch can be switched on or switched off. The big switch is switched on.
-The description of the big switch is "This is a large switch. It[']s the kind Dr. Frankenstein might pull to route the lightning to his creature.[if the big switch is switched on] Currently there are sparks arcing out from the switch.[end if]"
+The description of the big switch is "This is a large switch. It[']s the kind Dr. Frankenstein might push to route the lightning to his creature.[if the big switch is switched on] Currently there are sparks arcing out from the switch. It looks dangerous.[end if]"
 
 electrocuted is a truth state that varies. electrocuted is false.
 instead of switching off the big switch:
@@ -2335,15 +2474,6 @@ instead of switching off the big switch:
 		now electrocuted is true;
 		end the story finally.
 
-[flip the big switch]
-Toggling is an action applying to one thing.
-understand "toggle [the big switch]" as pushing.
-understand "toggle [a switch]" as pushing.
-
-Flipping is an action applying to one thing.
-understand "flip [the big switch]" as pushing.
-understand "flip [a switch]" as pushing.
-
 Instead of pushing or flipping or toggling a switched off big switch:
 	now the electrical room is not electromagnetic;
 	try switching on the noun.
@@ -2352,9 +2482,9 @@ Instead of pushing or flipping or toggling a switched on big switch:
 	now the electrical room is electromagnetic;
 	try switching off the noun.
 
-A cluttered desk is here. The desk is scenery. 
-A cork board is here. The cork board is scenery.
-charts are here. They are scenery.
+a cluttered desk is here. The desk is scenery. 
+a cork board is here. The cork board is scenery.
+some charts are here. They are scenery.
 
 every turn when the location is the Control Room:
 	count the switches;
@@ -2576,11 +2706,13 @@ Chapter 4 - Attractions
 
 Test Attractions with "s / buy all tickets / e / e / e / give Ferris wheel ticket to Ferris wheel operator / w / w / ne / give carousel ticket to carousel operator / sw / se / give fortune teller ticket to mysterious woman / nw / nw / l at two dollar bill / get two dollar bill / give bumper cars ticket to bumper cars operator / se / n"
 
-
 Chapter 5 - Back Stage
 
 [get the key]
 Test b1 with "brief / s / buy hell ride ticket / s / give hell ride ticket to operator / s / e / l at piles / get flashlight / turn it on / s / turn on radio / u / w / flip switch / push switch / push switch / e / d / l at desk / open drawer / get all from the drawer / s / s / open toolbox / get all from toolbox / s / s / s / ne / get silver key / l at panel / open panel / l at socket / sw / n / n / n / n / n"
+
+[take the wrench to the bumper cars]
+Test b1a with "n / w / n / n / nw / give the wrench to the attendant / se / s / s / e / s"
 
 [get the fuses]
 Test b2 with "w / l under stocks / take emerald / e / s / w / l under platform / take khaki fuse / e / s / w / l in pyre / get fuse / e / s / w / l under seat / take indigo fuse / e / s / w / l under platform / take gray fuse / e / s / s / w / l in stand / buy aqua fuse / e / n"
@@ -2591,7 +2723,7 @@ Test b3 with "ne / open panel / put aqua fuse in socket / flip switch / sw / e /
 [turn the dials]
 test b4 with "n / n / n / n / n / climb ladder / w / l at control panel 1 / turn aqua dial to 1 / turn crimson dial to three / turn emerald dial to 5 / turn gray dial to seven / turn indigo dial to 9 / turn khaki dial to eleven / push aqua button / l at control panel 1 / push crimson button / l at control panel  3 / push emerald button / l at control panel 5 / push gray button / l at control panel 11 / push khaki button"
 
-Test Backstage with "test b1 / test b2 / test b3 / test b4"
+Test Backstage with "test b1 / test b1a / test b2 / test b3 / test b4"
 
 Chapter 6 - Concession Stand
 
@@ -2607,7 +2739,7 @@ Test Electrocution with "s / buy hell ride ticket / s / give hell ride ticket / 
 
 Chapter 9 - Grues
 
-Test grues with "s / buy hell ride ticket / s / give hell ride ticket to ride operator / s / e / s / s / s"
+Test Grues with "s / buy hell ride ticket / s / give hell ride ticket to ride operator / s / e / s / s / s"
 
 Chapter 10 - Miscellaneous
 
