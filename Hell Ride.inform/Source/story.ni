@@ -80,11 +80,7 @@ Instead of buying something:
 	now the price of the noun is $0.00;
 	now the noun is in the location;
 	silently try taking the noun;
-	repeat through Table of Valuable Actions:
-		if the current action is the relevant action entry and turn stamp entry is less than 0:
-			now the turn stamp entry is the turn count;
-			increase the score by the point value entry;
-			play the Sound of Bell;
+	rule succeeds.
 	
 The player carries a wallet. The wallet contains money. The printed name of the money is "[price of the money] in cash". Understand "cash" as the money.
 
@@ -349,35 +345,56 @@ instead of touching an attendant, say "Touching [the noun] without consent is li
 
 Section 10 - Scoring
 
-Table of Valuable Actions
-relevant action	description	point value	turn stamp
-taking the blueberries	"Taking the blueberries"	5	-1
-eating the blueberries	"Eating the blueberries"	5	-1
-looking under the seat	"Finding coins and keys"	5	-1
-buying the Hell Ride Ticket	"Buying the Hell Ride ticket"	10	-1
-wearing the sheer veil	"Wearing the sheer veil"	5	-1
-taking the lantern	"Taking the lantern"	10	-1
-taking the flashlight	"Taking the flashlight"	10	-1
-looking under the Dime Toss Booth	"Taking the Mercury dime"	5	-1
-pushing the big switch	"Turning off the big switch"	10	-1
-searching the Control Room	"Finding the Control Room"	5	-1
-searching the Dark Passage	"Finding the Dark Passage"	5	-1	
-searching the High Striker	"Winning at the High Striker"	5	-1
-searching the Dime Toss	"Winning at the Dime Toss Game"	5	-1
-searching the Pitcher's Mound	"Winning at the Pitcher's Mound"	5	-1
-giving the adjustable wrench to the bumper cars attendant	"Bringing the wrench to the Bumper Cars"	5	-1
-buying fuse1	"Acquiring the Aqua fuse"	5	-1
-looking under the wooden stocks	"Acquiring the Emerald fuse"	5	-1
-looking under the guillotine platform	"Acquiring the Gray fuse"	5	-1
-looking under the iron chair	"Acquiring the Indigo fuse"	5	-1
-looking under the gallows platform	"Acquiring the Khaki fuse"	5	-1
-pushing electrical closet one's electrical panel's switch 	"Flipping the Aqua switch"	5	-1
-pushing electrical closet three's electrical panel's switch	"Flipping the Crimson switch"	5	-1
-pushing electrical closet five's electrical panel's switch	"Flipping the Emerald switch"	5	-1
-pushing electrical closet seven's electrical panel's switch	"Flipping the Gray switch"	5	-1
-pushing electrical closet nine's electrical panel's switch	"Flipping the Indigo switch"	5	-1
-pushing electrical closet eleven's electrical panel's switch	"Flipping the Khaki switch"	5	-1
-pushing control panel nine's button	"Pushing the Indigo button"	5	-1
+Table of Scored Circumstances
+criteria	point value	description	turn stamp
+"[if the blueberries are handled]Y[otherwise]N[end if]"	5	"Taking the blueberries"	-1
+"[if the blueberries are consumed]Y[otherwise]N[end if]"	5	"Eating the blueberries"	-1
+"[if the keys are visible]Y[otherwise]N[end if]"	5	"Finding the coins and keys"	-1
+"[if the player is carrying the Hell Ride ticket]Y[otherwise]N[end if]"	10	"Buying the Hell Ride ticket"	-1
+"[if the player is wearing the sheer veil]Y[otherwise]N[end if]"	5	"Wearing the sheer veil"	-1
+"[if the player is carrying the lantern]Y[otherwise]N[end if]"	10	"Taking the lantern"	-1
+"[if the player is carrying the flashlight]Y[otherwise]N[end if]"	10	"Taking the flashlight"	-1
+"[if the player is carrying the mercury dime]Y[otherwise]N[end if]"	5	"Taking the Mercury dime"	-1
+"[if the big switch is switched off]Y[otherwise]N[end if]"	10	"Turning off the big switch"	-1
+"[if the location is the Control Room]Y[otherwise]N[end if]"	5	"Finding the Control Room"	-1
+"[if the location is the Dark Passage]Y[otherwise]N[end if]"	5	"Finding the Dark Passage"	-1	
+"[if the bumper cars attendant is carrying the adjustable wrench]Y[otherwise]N[end if]"	5	"Bringing the wrench to the Bumper Cars"	-1
+"[if the player is carrying the aqua fuse]Y[otherwise]N[end if]"	5	"Acquiring the Aqua fuse"	-1
+"[if the player is carrying the emerald fuse]Y[otherwise]N[end if]"	5	"Acquiring the Emerald fuse"	-1
+"[if the player is carrying the gray fuse]Y[otherwise]N[end if]"	5	"Acquiring the Gray fuse"	-1
+"[if the player is carrying the indigo fuse]Y[otherwise]N[end if]"	5	"Acquiring the Indigo fuse"	-1
+"[if the player is carrying the khaki fuse]Y[otherwise]N[end if]"	5	"Acquiring the Khaki fuse"	-1
+"[if electrical closet one's electrical panel's switch is switched on]Y[otherwise]N[end if]"	5	"Flipping the Aqua switch"	-1
+"[if electrical closet three's electrical panel's switch is switched on]Y[otherwise]N[end if]"	5	"Flipping the Crimson switch"	-1
+"[if electrical closet five's electrical panel's switch is switched on]Y[otherwise]N[end if]"	5	"Flipping the Emerald switch"	-1
+"[if electrical closet seven's electrical panel's switch is switched on]Y[otherwise]N[end if]"	5	"Flipping the Gray switch"	-1
+"[if electrical closet nine's electrical panel's switch is switched on]Y[otherwise]N[end if]"	5	"Flipping the Indigo switch"	-1
+"[if electrical closet eleven's electrical panel's switch is switched on]Y[otherwise]N[end if]"	5	"Flipping the Khaki switch"	-1
+"[if the player is carrying the teddy bear]Y[otherwise]N[end if]"	5	"Winning the teddy bear"	-1
+"[if the player is carrying the Swiss Army knife]Y[otherwise]N[end if]"	10	"Winning the Swiss Army knife"	-1
+"[if the player is carrying the poster of Taylor Swift]Y[otherwise]N[end if]"	5	"Winning the poster of Taylor Swift"	-1
+"[if the player is carrying the magenta fuse]Y[otherwise]N[end if]"	5	"Winning the Magenta fuse"	-1
+"[if the player is carrying the small plush monkey]Y[otherwise]N[end if]"	5	"Winning the stuffed monkey"	-1
+"[if the player is carrying the orange fuse]Y[otherwise]N[end if]"	5	"Winning the Orange fuse"	-1
+"[if the player is carrying the poster of Billie Eilish]Y[otherwise]N[end if]"	5	"Winning the poster of Billie Eilish"	-1
+"[if the player is carrying the pocket mirror]Y[otherwise]N[end if]"	5	"Winning the small pocket mirror"	-1
+"[if the player is carrying the crimson fuse]Y[otherwise]N[end if]"	10	"Winning the Crimson fuse"	-1
+"[if the player is carrying the small plush donkey]Y[otherwise]N[end if]"	5	"Winning the a plush donkey"	-1
+"[if the player is carrying the goldfish]Y[otherwise]N[end if]"	5	"Winning the goldfish in a bowl"	-1
+"[if the player is carrying the poster of Lourde]Y[otherwise]N[end if]"	5	"Winning the poster of Lourde"	-1
+
+Every turn (this is the award points rule), award points.
+
+The award points rule is listed before the notify score changes rule in the turn sequence rules.
+	
+To award points:
+	repeat through Table of Scored Circumstances:
+		if the turn stamp entry is -1:
+			if the criteria entry is "Y":
+				now turn stamp entry is turn count;
+				increase the score by point value entry;
+				follow the notify score changes rule;
+				play the Sound of Bell.
 
 Understand "full score" or "full" as requesting the complete score. Requesting the complete score is an action out of world.
 
@@ -387,8 +404,8 @@ Check requesting the complete score:
 Carry out requesting the complete score:
 	say "Wow, you[']ve received [score] point[s] out of a possible [maximum score] in [turn count] moves! I'm very proud of you. This was a triumph. I'm being so sincere right now.[paragraph break]";
 	say "You have received points for the following: [paragraph break]";
-	sort the Table of Valuable Actions in turn stamp order;
-	repeat through the Table of Valuable Actions:
+	sort the Table of Scored Circumstances in turn stamp order;
+	repeat through the Table of Scored Circumstances:
 		if the turn stamp entry is greater than 0:
 			say "•  [description entry]: [point value entry] points.";
 	say line break.
@@ -396,72 +413,24 @@ Carry out requesting the complete score:
 check requesting the score:
 	try requesting the complete score instead;
 	stop the action.
-
-[normal actions that can be uniquely described]
-every turn:
-	repeat through Table of Valuable Actions:
-		if the current action is the relevant action entry and turn stamp entry is less than 0:
-			now the turn stamp entry is the turn count;
-			increase the score by the point value entry;
-			play the Sound of Bell;	
-			continue the action.
 	
 [taking prize winnings]	
+prize table is a table name that varies. The prize table is Table of High Striker Prizes.
 prize taken is a truth state that varies. prize taken is false.
-the prize table is a table name that varies. The prize table is Table of High Striker Prizes.
+points awarded is a number that varies.
 To receive a prize:
 	let C be "[the player's command]";
 	if there is an index of C in the prize table:
 		choose a row with an index of C in prize table;
-		let P be the point value entry;
-		increase the score by P;
 		say "You are now holding [description entry].";
 		now the object entry is in the location;
 		silently try taking the object entry;
 		now prize taken is true;
-		repeat through the Table of Valuable Actions:
-			let L be the "Winning at the [location]";
-			let D be the "[description entry]";
-			if D is L and turn stamp entry is less than 0:
-				now the turn stamp entry is the turn count;
-				now the point value entry is P;
-				play the Sound of Bell;
-				reject the player's command;
+		award points;
+		reject the player's command;
 	otherwise:
 		now prize taken is false;
 		continue the action.
-		
-[scored rooms]
-A room can be scored or unscored. A room is usually unscored.
-After going to a unvisited scored room:
-	repeat through Table of Valuable Actions:
-		let L be the "Finding the [location]";
-		let D be the "[description entry]";
-		if D is L and turn stamp entry is less than 0:
-			now the turn stamp entry is the turn count;
-			increase the score by the point value entry;
-			play the Sound of Bell;
-	try looking.
-	
-[take all]
-The taking all items from multiple object lists rule is listed instead of the announce items from multiple object lists rule in the action-processing rules.
-
-This is the taking all items from multiple object lists rule:
-	if taking:
-		if the current item from the multiple object list is not nothing:
-			bump the score;
-			say "[current item from the multiple object list]: [run paragraph on]";
-	otherwise:
-		if the current item from the multiple object list is not nothing, say "[current item from the multiple object list]: [run paragraph on]".
-
-To bump the score:
-	sort the table of Valuable Actions in turn stamp order;
-	repeat through Table of Valuable Actions:
-		if the current action is the relevant action entry and turn stamp entry is less than 0:
-			now the turn stamp entry is the turn count;
-			increase the score by the point value entry;
-			play Sound of Bell;
-			continue the action;
 
 Section 11 - Swearing
 
@@ -488,7 +457,7 @@ Check an actor swearing obscenely (this is the block swearing obscenely rule):
 	stop the action.
 
 Understand "[swears]" as swearing obscenely.
-Understand "fuck", "shit", "motherfucker", "cocksucker", "cunt", "cock", "tits", and "damn" as "[swears]".
+Understand "fuck", "shit", "motherfucker", "cocksucker", "cunt", "prick", "cock", "piss", "tits", and "damn" as "[swears]".
 
 
 
@@ -623,29 +592,29 @@ link number	figure choice		description
 Section 4 - Table of High Striker Prizes
 
 Table of High Striker Prizes
-index	object	description	point value
-"1"	teddy bear	"a teddy bear"	5
-"2"	Swiss army knife	"a Swiss Army knife"	10
-"3"	poster of Taylor Swift	"a poster of Taylor Swift"	5
-"4"	fuse13	"a magenta fuse"	5
+index	object	description
+"1"	teddy bear	"a teddy bear"
+"2"	Swiss army knife	"a Swiss Army knife"
+"3"	poster of Taylor Swift	"a poster of Taylor Swift"
+"4"	fuse13	"a magenta fuse"
 
 Section 5 - Table of Dime Toss Prizes
 
 Table of Dime Toss Prizes
-index	object	description	point value
-"1"	small plush monkey	"a stuffed monkey"	5
-"2"	fuse15	"an orange fuse"	5
-"3"	poster of Billie Eilish	"a poster of Billie Eilish"	5
-"4"	pocket mirror	"a small pocket mirror"	5
+index	object	description
+"1"	small plush monkey	"a stuffed monkey"
+"2"	fuse15	"an orange fuse"
+"3"	poster of Billie Eilish	"a poster of Billie Eilish"
+"4"	pocket mirror	"a small pocket mirror"
 
 Section 6 - Table of Pitcher's Mound Prizes
 
 Table of Pitcher's Mound Prizes
-index	object	description	point value
-"1"	fuse3	"a crimson fuse"	10
-"2"	small plush donkey	"a plush donkey"	5
-"3"	goldfish	"a goldfish in a bowl"	5
-"4"	poster of Lourde	"a poster of Lourde"	5
+index	object	description
+"1"	fuse3	"a crimson fuse"
+"2"	small plush donkey	"a plush donkey"
+"3"	goldfish	"a goldfish in a bowl"
+"4"	poster of Lourde	"a poster of Lourde"
 
 Section 7 - Table of Hell Ride Events
 
@@ -1311,7 +1280,6 @@ Section 7 - Switches
 A switch is a kind of device. A switch is part of every electrical panel.
 A switch is fixed in place. 
 A switch can be switched on or switched off. A switch is usually switched off.
-A switch has a truth state called points awarded. points awarded is usually false.
 
 The description is "Switch [switch id of the item described] is part of Electrical Panel [the panel id of the holder of the item described]. It[']s a big switch. You could probably turn it [if the item described is switched off]on[otherwise]off[end if] if you wanted to."
 
@@ -1442,9 +1410,11 @@ Your dirty clothes are here. The clothes are scenery. The description is "Your d
 
 instead of looking when the player is in the beater car, try examining the beater car.
 
-A blueberry bush is here. the blueberry bush is scenery. the blueberry bush is a container. the blueberry bush is not portable. the blueberry bush contains blueberries. Understand "berries" as blueberries. The blueberries are edible.The description of the blueberries is "The blueberries are ripe and juicy.".
+A blueberry bush is here. the blueberry bush is scenery. the blueberry bush is a container. the blueberry bush is not portable. the blueberry bush contains blueberries. Understand "berries" as blueberries. The blueberries are edible. The description of the blueberries is "The blueberries are ripe and juicy.". The blueberries can be consumed or uneaten. The blueberries are uneaten.
 	
-after eating the blueberries, say "The blueberries were delicious. A true taste of summer!"
+after eating the blueberries:
+	say "The blueberries were delicious. A true taste of summer!";
+	now the blueberries are consumed.
 
 understand "Pick [blueberries]" as taking.
 	
@@ -1913,7 +1883,7 @@ A lantern is an electric lamp. It is in the wall. Understand "lamp" as the lante
 after taking the lantern for the first time:
 	say "Taken.";
 	if  the flashlight is in the pile of junk:
-		repeat through the Table of Valuable Actions:
+		repeat through the Table of Scored Circumstances:
 			if the description entry is "Taking the flashlight":
 				blank out the whole row;
 	now the lantern is seen;
@@ -2007,9 +1977,9 @@ instead of taking the two dollar bill:
 	say "You now have [the price of the money].";
 	now the two dollar bill is nowhere.
 	
-instead of giving the adjustable wrench to the attendant:
+instead of giving the adjustable wrench to the bumper cars attendant:
 	say "Hey! Thanks, I really appreciate it. Usually no one ever responds to the radio in the Control Room.";
-	now the adjustable wrench is carried by the attendant.
+	now the adjustable wrench is carried by the bumper cars attendant.
 	
 Section 12 - Fortune Teller
 
@@ -2083,7 +2053,7 @@ The printed name of a wooden door is "[color of the item described] colored door
 
 Section 2 - Dark Passage
 
-Dark Passage is a room. Dark Passage is east of the Ride Entrance. The dark passage is scored. "This room is backstage at the Hell Ride attraction. The room is littered with bags of trash, piles of junk, and dust bunnies so large they should be paying rent. West is back the way you came from. There an exit to the south."
+Dark Passage is a room. Dark Passage is east of the Ride Entrance. "This room is backstage at the Hell Ride attraction. The room is littered with bags of trash, piles of junk, and dust bunnies so large they should be paying rent. West is back the way you came from. There an exit to the south."
 
 some dust bunnies are scenery. The dust bunnies are here. Understand "bunnies" as dust bunnies.
 
@@ -2103,7 +2073,7 @@ after examining when the noun is pile of junk and the flashlight is in the pile 
 after taking the flashlight for the first time:
 	say "Taken.";
 	if  the lantern is in the wall:
-		repeat through the Table of Valuable Actions:
+		repeat through the Table of Scored Circumstances:
 			if the description entry is "Taking the lantern":
 				blank out the whole row;
 	now the lantern is seen;
@@ -2454,7 +2424,7 @@ Dark Hallway is a dark room. "This is a poorly lit hallway. Ahead to the west yo
 	
 Section 3 - Control Room
 
-Control Room is a dark room. The Control Room is west of the Dark Hallway. The Control Room is a scored room. "The backstage control room is a plain, functional hub where the carnival’s rides, lights, and attractions are managed. Gray industrial walls, scuffed and greasy, surround a large monitor streaming live carnival feeds. Beneath them, control panels with labeled dials, colored buttons, and lights oversee the systems scattered about the room. Glancing at the control panels, you can see they are [if the switch count is 6]lit up like a Christmas tree[otherwise]dark[end if].
+Control Room is a dark room. The Control Room is west of the Dark Hallway. "The backstage control room is a plain, functional hub where the carnival’s rides, lights, and attractions are managed. Gray industrial walls, scuffed and greasy, surround a large monitor streaming live carnival feeds. Beneath them, control panels with labeled dials, colored buttons, and lights oversee the systems scattered about the room. Glancing at the control panels, you can see they are [if the switch count is 6]lit up like a Christmas tree[otherwise]dark[end if].
 
 The hum of electronics fills the air, punctuated by the crackle of a radio: 'Maintenance to Bumper Cars — wrench needed!' The worn floor is scattered with papers, tools, and coffee cups. A cluttered desk holds logs and schedules, while a cork board above displays charts and red-marked notes like 'Check Zipper circuit breakers.'
 
@@ -2712,7 +2682,7 @@ Chapter 5 - Back Stage
 Test b1 with "brief / s / buy hell ride ticket / s / give hell ride ticket to operator / s / e / l at piles / get flashlight / turn it on / s / turn on radio / u / w / flip switch / push switch / push switch / e / d / l at desk / open drawer / get all from the drawer / s / s / open toolbox / get all from toolbox / s / s / s / ne / get silver key / l at panel / open panel / l at socket / sw / n / n / n / n / n"
 
 [take the wrench to the bumper cars]
-Test b1a with "n / w / n / n / nw / give the wrench to the attendant / se / s / s / e / s"
+Test b1a with "n / w / n / n / nw / give the adjustable wrench to the attendant / se / s / s / e / s"
 
 [get the fuses]
 Test b2 with "w / l under stocks / take emerald / e / s / w / l under platform / take khaki fuse / e / s / w / l in pyre / get fuse / e / s / w / l under seat / take indigo fuse / e / s / w / l under platform / take gray fuse / e / s / s / w / l in stand / buy aqua fuse / e / n"
