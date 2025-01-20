@@ -2,7 +2,7 @@ Start of a transcript of:
 
 Hell Ride
 The ride of a lifetime... by No Shoes
-Release 122 / Serial number 250118 / Inform 7 v10.1.2 / D
+Release 122 / Serial number 250120 / Inform 7 v10.1.2
 Inform 7 v10.1.2
 Identification number: //E0A5AFB9-18BF-4485-B083-426CA51CCE70//
 Interpreter version 0.6.0 / VM 3.1.3
@@ -22,13 +22,11 @@ The blueberries were delicious. A true taste of summer!
 [Your score has just gone up by five points.]
 
 >look under seat
-You find the five dimes, the three quarters, the nickel, and your keys!
+You find the three quarters, the nickel, the three dimes, and your keys!
 
 [Your score has just gone up by five points.]
 
 >get dimes, keys
-dime: Taken.
-dime: Taken.
 dime: Taken.
 dime: Taken.
 dime: Taken.
@@ -52,7 +50,7 @@ Done. The price of a parking ticket is now $3.00.
 >buy ticket
 The attendant mumbles something about the stub.
 
-You fork over $3.00 for the parking ticket, leaving yourself with $27.00.
+You fork over $3.00 for the parking ticket, leaving yourself with $17.00.
 
 >put parking stub on dashboard
 You put the parking stub on the dashboard.
@@ -88,28 +86,30 @@ You can see a Strongman attendant and a lever here.
 The attendant is holding a mallet.
 
 >buy mallet
-You fork over $2.00 for the mallet, leaving yourself with $25.00.
+You fork over $2.00 for the mallet, leaving yourself with $15.00.
 
 >hit bullseye with mallet
-You lift the mallet high and bring it down on the lever with all your might! The striker rises towards the bell stopping at "Weakling".  C'mon! You can do better than that!
-
->g
-You lift the mallet high and bring it down on the lever with all your might! The striker rises towards the bell stopping at "Getting Stronger".  C'mon! You can do better than that!
-
->g
-You lift the mallet high and bring it down on the lever with all your might! The striker rises towards the bell stopping at "Getting Stronger".  C'mon! You can do better than that!
-
->g
 You lift the mallet high and bring it down on the lever with all your might! The striker rises towards the bell stopping at "Average".  C'mon! You can do better than that!
 
 >g
 You lift the mallet high and bring it down on the lever with all your might! The striker rises towards the bell stopping at "Getting Stronger".  C'mon! You can do better than that!
+
+>g
+You lift the mallet high and bring it down on the lever with all your might! The striker rises towards the bell stopping at "Getting Stronger".  C'mon! You can do better than that!
+
+>g
+You lift the mallet high and bring it down on the lever with all your might! The striker rises towards the bell stopping at "Weakling".  C'mon! You can do better than that!
+
+>g
+You lift the mallet high and bring it down on the lever with all your might! The striker rises towards the bell stopping at "Average".  C'mon! You can do better than that!
 
 You swing the mallet one more time. The bell rings as the striker reaches the top of the pole. The attendant says, "You're a Muscle Man. Here's a prize for you."
 Which prize would you like? 1) a teddy bear, 2) a Swiss Army knife, 3) a poster of Taylor Swift, 4) a magenta fuse?
 
 >2
 You are now holding a Swiss Army knife.
+
+[Your score has just gone up by ten points.]
 
 >ne
 
@@ -124,8 +124,6 @@ You're surprised to see that this game only costs a dime.
 
 You can see a Dime Toss attendant and a plate here.
 
-[Your score has just gone up by ten points.]
-
 >look under booth
 You find the mercury dime!
 
@@ -137,16 +135,20 @@ Taken.
 >flip mercury dime on plate
 You toss the dime. The dime hits the plate, starts to spins, and lands in the center of the plate. The attendant shouts out, "Winner! Winner! Which prize would you like? 1) a stuffed monkey, 2) an orange fuse, 3) a poster of Billie Eilish, 4) a small pocket mirror?
 
+>flip dime on plate
+(the dime on the plate)
+You toss the dime. The dime hits the plate, starts to spins, and lands in the center of the plate. The attendant shouts out, "Winner! Winner! Which prize would you like? 1) a stuffed monkey, 2) an orange fuse, 3) a poster of Billie Eilish, 4) a small pocket mirror?
+
 >2
 You are now holding an orange fuse.
+
+[Your score has just gone up by five points.]
 
 >sw
 
 High Striker
 You can see a Strongman attendant and a lever here.
 
-
-[Your score has just gone up by five points.]
 
 >se
 
@@ -167,16 +169,19 @@ The attendant gives you three baseballs in return.
 >throw baseball at bottles
 You wind up and throw the baseball at the milk bottles. The ball hits the bottles in the sweet spot and they go flying off the platform. The attendant shouts out, "Winner! Winner! Which prize would you like? 1) a crimson fuse, 2) a plush donkey, 3) a goldfish in a bowl, 4) a poster of Lourde?
 
+>g
+You wind up and throw the baseball at the milk bottles. The ball hits the bottles in the sweet spot and they go flying off the platform. The attendant shouts out, "Winner! Winner! Which prize would you like? 1) a crimson fuse, 2) a plush donkey, 3) a goldfish in a bowl, 4) a poster of Lourde?
+
 >1
 You are now holding a crimson fuse.
+
+[Your score has just gone up by ten points.]
 
 >nw
 
 High Striker
 You can see a Strongman attendant and a lever here.
 
-
-[Your score has just gone up by ten points.]
 
 >w
 
@@ -267,7 +272,7 @@ Ticket Booth
 You can see a ticket kiosk and a cashier here.
 
 >buy hell ride ticket
-You fork over $3.00 for the Hell Ride ticket, leaving yourself with $22.00.
+You fork over $4.00 for the Hell Ride ticket, leaving yourself with $11.00.
 
 [Your score has just gone up by ten points.]
 
@@ -333,7 +338,7 @@ Exits lead north and south. There is a door to the west.
 
 Nearby a ladder leads up.
 
-Nearby an aqua colored door leads west.
+Nearby an Aqua colored door leads west.
 
 On the desk are a coffee mug and a radio.
 
@@ -376,7 +381,7 @@ Nearby a ladder leads down to the Maintenance Office.
 Maintenance Office
 Nearby a ladder leads up to the Dark Hallway.
 
-Nearby an aqua colored door leads west.
+Nearby an Aqua colored door leads west.
 
 On the desk are a coffee mug and a radio.
 
@@ -391,7 +396,7 @@ The ground is uneven, a mix of packed dirt and loose gravel scattered with forgo
 
 The backstage area continues north and south. There is a door to the west.
 
-Nearby a crimson colored door leads west.
+Nearby a Crimson colored door leads west.
 
 >s
 
@@ -406,7 +411,7 @@ Dimly lit by a single hanging bulb, the room feels cooler and slightly damp, the
 
 There are exists north and south. There is a wooden door to the west.
 
-Nearby an emerald colored door leads west.
+Nearby an Emerald colored door leads west.
 
 You can also see a toolbox (closed) here.
 
@@ -431,7 +436,7 @@ Bright fluorescent lights in wire cages illuminate the space, highlighting the i
 
 You can travel north and south from here. There is a door to the west.
 
-Nearby a gray colored door leads west.
+Nearby a Gray colored door leads west.
 
 >s
 
@@ -448,7 +453,7 @@ Though isolated and utilitarian, the generator room is the carnival's heartbeat,
 
 The backstage area continues north and south of here. There is a wooden door to the west.
 
-Nearby an indigo colored door leads west.
+Nearby an Indigo colored door leads west.
 
 >s
 
@@ -497,11 +502,11 @@ Chaotic yet indispensable, this hidden space powers the carnival's magic, ensuri
 
 There is an exit to the north and a door to the west.
 
-Nearby a khaki colored door leads west.
+Nearby a Khaki colored door leads west.
 
 >w
-(first opening the khaki colored door)
-(first unlocking the khaki colored door)
+(first opening the Khaki colored door)
+(first unlocking the Khaki colored door)
 (with the silver key)
 
 Ride Exit
@@ -509,14 +514,14 @@ The exit of Hell Ride is designed to leave riders with lingering unease. Emergin
 
 Riders step into a small courtyard enclosed by jagged, rusted fencing draped with cobwebs and plastic bones. Overhead, a weathered sign reads, "You've Survived? For Now." Nearby, carnival workers in tattered costumes watch silently, occasionally muttering cryptic remarks like, "Not everyone makes it out."
 
-A merchandise stand glows red, selling items like Hell Ride Survivor t-shirts and devil horns. Beyond the fencing, the cheerful carnival lights and sounds feel jarring, contrasting sharply with the ride's oppressive atmosphere.
+A merchandise display glows red, selling items like Hell Ride Survivor t-shirts, key chains, plastic bones, and devil horns. Beyond the fencing, the cheerful carnival lights and sounds feel jarring, contrasting sharply with the ride's oppressive atmosphere.
 
 The exit ensures Hell Ride isn't just an experience - it lingers, blurring the line between thrill and fear.
 
-Nearby a khaki colored door leads east to the Storage Room.
+Nearby a Khaki colored door leads east to the Storage Room.
 
 >buy aqua fuse
-You fork over $3.50 for the aqua colored fuse, leaving yourself with $18.50.
+You fork over $3.50 for the Aqua colored fuse, leaving yourself with $7.50.
 
 [Your score has just gone up by five points.]
 
@@ -535,12 +540,10 @@ As the condemned approaches the guillotine, a crow caws sharply from a nearby ro
 
 There is just one problem: the guillotine is being raised and lowered by some mechanism. It appears that the timing of the guillotine is off and it is being lowered onto the cars instead of between them. If a person were to be in a car as it passed under the guillotine, they would be decapitated. 
 
-Nearby an indigo colored door leads east to the Generator Room.
-
-You can also see a guillotine platform here.
+Nearby an Indigo colored door leads east to the Generator Room.
 
 >l under platform
-You find the gray colored fuse!
+You find the Gray colored fuse!
 
 >get gray fuse
 Taken.
@@ -562,10 +565,10 @@ Above, rats scuttle in the shadows, and the low ceiling presses down like the we
 
 This is a realm of suffering and hopelessness, where life and death blur, and torment is the only certainty.
 
-Nearby a gray colored door leads east to the Mechanical Room South.
+Nearby a Gray colored door leads east to the Mechanical Room South.
 
 >l under chair
-You find the indigo colored fuse!
+You find the Indigo colored fuse!
 
 >get indigo fuse
 Taken.
@@ -583,9 +586,9 @@ The executioner, hooded and clad in a leather apron, steps forward with a blazin
 
 Gray clouds loom overhead, nature's somber backdrop to the grim spectacle. A raven caws from the bell tower as slow church bells toll, each strike punctuating the tragedy. As the pyre burns, some onlookers remain transfixed while others quietly slip away, the square heavy with ash, smoke, and the echoes of the condemned.
 
-Nearby an emerald colored door leads east to the Mechanical Room North.
+Nearby an Emerald colored door leads east to the Mechanical Room North.
 
-You can also see a pyre here.
+The flames of the pyre burn ever brighter and rise ever higher engulfing the victims.
 
 >n
 
@@ -598,12 +601,10 @@ Vendors hawk bread and cider, while children strain for a better view. An old ma
 
 As the executioner adjusts the noose around the man's neck, the crowd falls silent, the air thick with dread. Distant thunder rumbles faintly, as if the heavens themselves await the inevitable.
 
-Nearby a crimson colored door leads east to the Crawl Space.
-
-You can also see a gallows platform here.
+Nearby a Crimson colored door leads east to the Crawl Space.
 
 >look under platform
-You find the khaki colored fuse!
+You find the Khaki colored fuse!
 
 >get khaki fuse
 Taken.
@@ -621,12 +622,10 @@ The punished individuals hang their heads in shame, their faces etched with desp
 
 The square hums with noise: the crowd's taunts, the crack of objects hitting wood, and the quiet murmurs of the suffering captives. Overhead, a gray sky threatens rain, indifferent to the spectacle below. The jeering mob ignores its ominous weight, too engrossed in their shared cruelty to notice nature's disapproval.
 
-Nearby an aqua colored door leads east to the Maintenance Office.
-
-You can also see a wooden stocks here.
+Nearby an Aqua colored door leads east to the Maintenance Office.
 
 >look under stocks
-You find the emerald colored fuse!
+You find the Emerald colored fuse!
 
 >get emerald fuse
 Taken.
@@ -634,12 +633,12 @@ Taken.
 [Your score has just gone up by five points.]
 
 >e
-(first opening the aqua colored door)
-(first unlocking the aqua colored door)
+(first opening the Aqua colored door)
+(first unlocking the Aqua colored door)
 (with the silver key)
 
 Maintenance Office
-Nearby an aqua colored door leads west to the Stocks Room.
+Nearby an Aqua colored door leads west to the Stocks Room.
 
 Nearby a ladder leads up to the Dark Hallway.
 
@@ -686,7 +685,7 @@ You can also see a Bumper Cars attendant here.
 >get bill
 Taken.
 
-You now have $20.50.
+You now have $9.50.
 
 >give wrench to attendant
 Hey! Thanks, I really appreciate it. Usually no one ever responds to the radio in the Control Room.
@@ -715,7 +714,7 @@ Dark Passage
 >s
 
 Maintenance Office
-Nearby an aqua colored door leads west to the Stocks Room.
+Nearby an Aqua colored door leads west to the Stocks Room.
 
 Nearby a ladder leads up to the Dark Hallway.
 
@@ -726,29 +725,30 @@ You can also see a worn photo here.
 >s
 
 Crawl Space
-Nearby a crimson colored door leads west to the Gallows Room.
+Nearby a Crimson colored door leads west to the Gallows Room.
 
 >s
 
 Mechanical Room North
-Nearby an emerald colored door leads west to the Stake Room.
+Nearby an Emerald colored door leads west to the Stake Room.
 
 You can also see a toolbox (in which are channel locks, pliers, and a hammer) here.
 
 >s
 
 Mechanical Room South
-Nearby a gray colored door leads west to the Dungeon.
+Nearby a Gray colored door leads west to the Dungeon.
+
+Over the loud speaker, an announcement blares: Attention please. There is a vehicle being towed from the parking lot for parking illegally. The license plate of the car is "862901". You breathe a sigh of relief as you realize that's not your license plate. I guess it's a good thing you remembered to place the parking stub on the dashboard.
 
 >s
 
 Generator Room
-Nearby an indigo colored door leads west to the Guillotine Room.
+Nearby an Indigo colored door leads west to the Guillotine Room.
 
 >s
 
 Electrical Room
-Over the loud speaker, an announcement blares: Attention please. There is a vehicle being towed from the parking lot for parking illegally. The license plate of the car is "862901". You breathe a sigh of relief as you realize that's not your license plate. I guess it's a good thing you remembered to place the parking stub on the dashboard.
 
 >ne
 
@@ -762,12 +762,12 @@ Using the screwdriver on the Swiss Army knife, you remove the screws holding the
 You open Electrical Panel 1.
 
 >put aqua fuse in socket
-You hear a satisfying snick as the aqua fuse slides into place.
+You hear a satisfying snick as the Aqua fuse slides into place.
 
 >push switch
 You switch Electrical Panel 1's switch on.
 
-The aqua indicator's light goes on.
+The Aqua indicator's light goes on.
 
 [Your score has just gone up by five points.]
 
@@ -788,12 +788,12 @@ Using the screwdriver on the Swiss Army knife, you remove the screws holding the
 You open Electrical Panel 3.
 
 >put crimson fuse in socket
-You hear a satisfying snick as the crimson fuse slides into place.
+You hear a satisfying snick as the Crimson fuse slides into place.
 
 >flip switch
 You switch Electrical Panel 3's switch on.
 
-The crimson indicator's light goes on.
+The Crimson indicator's light goes on.
 
 [Your score has just gone up by five points.]
 
@@ -814,12 +814,12 @@ Using the screwdriver on the Swiss Army knife, you remove the screws holding the
 You open Electrical Panel 5.
 
 >put emerald fuse in socket
-You hear a satisfying snick as the emerald fuse slides into place.
+You hear a satisfying snick as the Emerald fuse slides into place.
 
 >toggle switch
 You switch Electrical Panel 5's switch on.
 
-The emerald indicator's light goes on.
+The Emerald indicator's light goes on.
 
 [Your score has just gone up by five points.]
 
@@ -840,12 +840,12 @@ Using the screwdriver on the Swiss Army knife, you remove the screws holding the
 You open Electrical Panel 7.
 
 >put gray fuse in socket
-You hear a satisfying snick as the gray fuse slides into place.
+You hear a satisfying snick as the Gray fuse slides into place.
 
 >toggle switch
 You switch Electrical Panel 7's switch on.
 
-The gray indicator's light goes on.
+The Gray indicator's light goes on.
 
 [Your score has just gone up by five points.]
 
@@ -866,12 +866,12 @@ Using the screwdriver on the Swiss Army knife, you remove the screws holding the
 You open Electrical Panel 9.
 
 >put indigo fuse in socket
-You hear a satisfying snick as the indigo fuse slides into place.
+You hear a satisfying snick as the Indigo fuse slides into place.
 
 >push switch
 You switch Electrical Panel 9's switch on.
 
-The indigo indicator's light goes on.
+The Indigo indicator's light goes on.
 
 [Your score has just gone up by five points.]
 
@@ -892,12 +892,12 @@ Using the screwdriver on the Swiss Army knife, you remove the screws holding the
 You open Electrical Panel 11.
 
 >put khaki fuse in socket
-You hear a satisfying snick as the khaki fuse slides into place.
+You hear a satisfying snick as the Khaki fuse slides into place.
 
 >push switch
 You switch Electrical Panel 11's switch on.
 
-The khaki indicator's light goes on.
+The Khaki indicator's light goes on.
 
 [Your score has just gone up by five points.]
 
@@ -908,29 +908,29 @@ Electrical Room
 >n
 
 Generator Room
-Nearby an indigo colored door leads west to the Guillotine Room.
+Nearby an Indigo colored door leads west to the Guillotine Room.
 
 >n
 
 Mechanical Room South
-Nearby a gray colored door leads west to the Dungeon.
+Nearby a Gray colored door leads west to the Dungeon.
 
 >n
 
 Mechanical Room North
-Nearby an emerald colored door leads west to the Stake Room.
+Nearby an Emerald colored door leads west to the Stake Room.
 
 You can also see a toolbox (in which are channel locks, pliers, and a hammer) here.
 
 >n
 
 Crawl Space
-Nearby a crimson colored door leads west to the Gallows Room.
+Nearby a Crimson colored door leads west to the Gallows Room.
 
 >n
 
 Maintenance Office
-Nearby an aqua colored door leads west to the Stocks Room.
+Nearby an Aqua colored door leads west to the Stocks Room.
 
 Nearby a ladder leads up to the Dark Hallway.
 
@@ -949,29 +949,29 @@ Control Room
 You can see a big switch and a cluttered desk here.
 
 >spin aqua dial to 1
-The aqua colored dial is now set to 1.
+The Aqua colored dial is now set to 1.
 
 >turn crimson dial to 3
-The crimson colored dial is now set to 3.
+The Crimson colored dial is now set to 3.
 
 >set emerald dial to 5
-The emerald colored dial is now set to 5.
+The Emerald colored dial is now set to 5.
 
 >set gray dial to 7
-The gray colored dial is now set to 7.
+The Gray colored dial is now set to 7.
 
 >spin indigo dial to nine
-The indigo colored dial is now set to 9.
+The Indigo colored dial is now set to 9.
 
 >turn khaki dial to 11
-The khaki colored dial is now set to 11.
+The Khaki colored dial is now set to 11.
 
 >push indigo button
-You switch the indigo button on.
+You switch the Indigo button on.
 
 The monitor flickers for a second and the scene it displays changes to something different.
 The monitor now shows a tableau of a guillotine rising and falling over the ride exit.
-The indigo light is now on.
+The Indigo light is now on.
 
 
 
@@ -987,7 +987,7 @@ As you exit the ride, the carnival owner and the mayor are present and extending
 
 *** You have won! ***
 
-Wow, you've received 150 points out of a possible 150 in 144 moves! I'm very proud of you. This was a triumph. I'm being so sincere right now.
+Wow, you've received 150 points out of a possible 150 in 146 moves! I'm very proud of you. This was a triumph. I'm being so sincere right now.
 
 You have received points for the following: 
 
