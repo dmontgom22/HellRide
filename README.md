@@ -1,7 +1,7 @@
 # HellRide
  Hell Ride - A Ride to remember...
  
-In the early 1980's, I had an Apple II Plus computer with 64K of RAM, dual 5.25"
+In the early 1980's, I had an Apple ][ Plus computer with 64K of RAM, dual 5.25"
 floppy disks, and a color monitor as big as a television. And the very first game I ever 
 bought was Infocom's Zork I: The Great Underground Empire. This was cool. It was all 
 text-based. The game described your surroundings and you interacted with commands that 
