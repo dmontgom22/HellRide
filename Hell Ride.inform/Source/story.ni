@@ -377,19 +377,18 @@ Understand "talk to [someone]" as a mistake ("To start a conversation, try to AS
 To say the hell ride response: 
 	say "[one of]That ride is scary. You won[']t catch me on it![or]Last time I rode Hell Ride I heard strange noises.[or]Hell ride is so old that It's falling apart. I wouldn[']t ride it.[or]Hell Ride is behind on it[']s maintenance schedule. Might want to skip that one.[at random]".
 
-instead of asking an attendant about "hell", say the hell ride response.
-instead of asking an attendant about "hell ride", say the hell ride response.
+understand "hell", "ride", and "hell ride" as "[hell ride]".
+instead of asking an attendant about "[hell ride]", say the hell ride response.
 Instead of asking an attendant about something:
 	say "'[one of]Sorry,[or]I'm afraid[or]Hmm,[at random] [one of]I don't know much about that[or]you've got me there[or]I haven't the faintest[at random],' [the noun] [one of]drawls[or]replies[or]comments[or]exclaims[at random].";
 	
-Instead of showing an something to an attendant:
-	say "'[one of]Sorry,[or]I'm afraid[or]Hmm,[at random] [one of]I don't know much about that[or]you've got me there[or]I haven't the faintest[at random],' [the noun] [one of]drawls[or]replies[or]comments[or]exclaims[at random].";
-	
-instead of telling an attendant about "hell", say the hell ride response.
-instead of telling an attendant about "hell ride", say the hell ride response.
+instead of telling an attendant about "[hell ride]", say the hell ride response.
 Instead of telling an attendant about something:
 	say "[The noun] looks [one of]surprised[or]intrigued[or]nonplussed[at random]. '[one of]You don't say[or]That's very interesting[or]Do go on[or]I wish I'd known that sooner[at random]!'".
-
+	
+Instead of showing something to an attendant:
+	say "'[one of]Sorry,[or]I'm afraid[or]Hmm,[at random] [one of]I don't know much about that[or]you've got me there[or]I haven't the faintest[at random],' [the noun] [one of]drawls[or]replies[or]comments[or]exclaims[at random].";
+	
 Persuasion rule for asking an attendant to try going:
 	say "[The actor] says, 'I can't leave my post or I[']ll get fired!";
 	persuasion fails.
@@ -556,14 +555,12 @@ carry out examining hell ride:
 instead of kissing, say "Oh, my! Why would you want to kiss [the noun]? Your sweetie wouldn't like that!".
 
 instead of touching a person, say "Touching [the noun] without consent is likely to get you punched in the face! Better not.".
-instead of touching a thing, say "You notice nothing unusual abou the way [the noun] feels."
+instead of touching a thing, say "You notice nothing unusual about the way [the noun] feels."
 
 instead of smelling:
 	if the location is in the Midway:
-		say "You smell the smells of the carnival. As you smell, you can discern fresh, hot buttered popcorn, the sweet aroma of cotton candy, and the warm doughy scent of pretzels.";
-	otherwise if the location is in the back stage:
-		say "You smell grease, oil, and the other scents that linger back stage.";
-	otherwise if the location is in the second floor:
+		say "You smell the odors of the carnival. As you smell, you can discern fresh, hot buttered popcorn, the sweet aroma of cotton candy, and the warm doughy scent of pretzels.";
+	otherwise if the location is in the back stage or the location is in the second floor:
 		say "You smell grease, oil, and the other scents that linger back stage.";
 	otherwise if the location is in Hellride:
 		say "You smell incense as it permeates through [story title].";
@@ -571,9 +568,7 @@ instead of smelling:
 instead of listening:
 	if the location is in the Midway:
 		say "You can hear all the sounds of the carnival. The sounds of a calliope waft across the thoroughfare from the carousel. You can hear the laughter and screams as other patrons ride the rides and play the games.";
-	otherwise if the location is in the back stage:
-		say "You hear mechanical sounds: the screech metal upon metal, gears turning in precision, and the thump of the cars as they traverse the tracks through the ride.";
-	otherwise if the location is in the second floor:
+	otherwise if the location is in the back stage or the location is in second floor:
 		say "You hear mechanical sounds: the screech metal upon metal, gears turning in precision, and the thump of the cars as they traverse the tracks through the ride.";
 	otherwise if the location is in Hellride:
 		say "As you travel through [story title], you hear ominous music, the murmurs of the crowd, and the occasional scream in the distance.";
@@ -779,9 +774,7 @@ A fuse is a kind of thing.
 Understand "fuse" as a fuse.
 A fuse has a color. Understand the color property as describing a fuse.
 A fuse has a number called fuse id. Understand the fuse id property as describing a fuse.
-
 The description of a fuse is "This is [color of the item described] colored electrical fuse." 
-
 The printed name of a fuse is "[color of the item described] colored fuse".
 
 Definition: a fuse is plugged-in rather than loose if it is contained by a socket.
@@ -1063,7 +1056,7 @@ To show a price table:
 	repeat through price table:
 		say "[price entry] [object entry][line break]".
 
-There is a signboard in the Ticket Booth. The signboard is scenery. Understand "sign" as signboard. The description of the signboard is "It[']s a sign displaying the prices of the various ride tickets".
+There is a signboard in the Ticket Booth. The signboard is scenery. Understand "sign" as signboard. The description of the signboard is "It[']s a sign displaying the prices of the various rides".
 
 reading is an action applying to one thing. Understand "read" as reading.
 instead of reading or examining the signboard:
@@ -1093,9 +1086,9 @@ treats are here. Treats are scenery. Understand "treat" as treats. The descripti
 
 a menu is here.  Understand "sign" as menu. the Menu is fixed in place. The description of the menu is "It[']s a sign display the prices of the various concession items for sale."
 
-a soda can is here. The price of a soda can is $2.00. The description of the can is "This soda is ice cold."
+a Drink is here. The price of a drink is $2.00. The description of the drink is "This soda is ice cold."
 
-The soda can is a fluid container. The liquid of the soda can is Cola. understand "soda", "cola", and "Coke" as the soda can. The current volume of the soda can is 8.0 fl oz. 
+The drink is a fluid container. The liquid of the drink is Cola. understand "soda", "drink", "cola", and "Coke" as the drink. The current volume of the drink is 8.0 fl oz. 
 
 Instead of player drinking a fluid container:
 	if can is empty:
@@ -1105,15 +1098,15 @@ Instead of player drinking a fluid container:
 		if the current volume of the noun is less than 0.0 fl oz, now the current volume of the noun is 0.0 fl oz;
 		say "[The person asked] gulp down some [liquid of the noun]."
 
-bubblegum is here. bubblegum is edible. The price of bubblegum is $1.00. The description of the bubblegum is "This is a square of Bazooka Joe Bubblegum. Really now, is there any other?"
+Bubblegum is here. bubblegum is edible. The price of bubblegum is $1.00. The description of the bubblegum is "This is a square of Bazooka Joe Bubblegum. Really now, is there any other?"
 
-a bucket of popcorn is here. The bucket of popcorn is edible. The price of popcorn is $2.50. The description of the popcorn is "The bucket of popcorn looks enormous!"
+a Bucket of Popcorn is here. The bucket of popcorn is edible. The price of popcorn is $2.50. The description of the popcorn is "The bucket of popcorn looks enormous!"
 
-a candy apple is here. The candy apple is edible. The price of a candy apple is $1.50. The description of the candy apple is "The candy apple is your typical caramel covered apple. It looks like it would get stuck in your teeth."
+a Candy Apple is here. The candy apple is edible. The price of a candy apple is $1.50. The description of the candy apple is "The candy apple is your typical caramel covered apple. It looks like it would get stuck in your teeth."
 
-cotton candy is here. Cotton candy is edible. The price of cotton candy is $1.50. The description of cotton candy is "The cotton candy is a mixture of pink and blue floss."
+Cotton Candy is here. Cotton candy is edible. The price of cotton candy is $1.50. The description of cotton candy is "The cotton candy is a mixture of pink and blue floss."
 
-a soft pretzel is here. The soft pretzel is edible. The price of the soft pretzel is $1.50. The description of the soft pretzel is "The soft pretzel is generously sprinkled with salt."
+a Soft Pretzel is here. The soft pretzel is edible. The price of the soft pretzel is $1.50. The description of the soft pretzel is "The soft pretzel is generously sprinkled with salt."
 
 instead of reading or examining the menu:
 	now price table is Table of Concession Prices;
@@ -1806,7 +1799,7 @@ A door11 is a wooden door. The color of door11 is khaki. The description of door
 	
 Chapter 4 - Hell Ride
 
-Section 1 - Automated Hell Ride
+Section 1 - Hell Ride Scene
 
 Hell Ride AutoPlay is a scene. 
 Hell Ride AutoPlay begins when the player is in the hell ride car for 2 turns.
@@ -1854,7 +1847,7 @@ Before looking when the location is the Stocks Room:
 
 Stocks Room is south of the Ride Entrance. "[description corresponding to the locale of Stocks Room in the Table of Hell Ride Events]"
 
-wooden stocks are a supporter in the Stocks Room. The wooden stocks are fixed in place. The description of the wooden stocks is "At the square[']s center stand a row of crude wooden stocks, their heavy beams stained from years of weather and use. Iron clasps hold the unfortunate captives by their wrists and necks, their bodies forced into unnatural, humiliating postures." 
+The wooden stocks are a supporter in the Stocks Room. The wooden stocks are scenery. The wooden stocks are fixed in place. The description of the wooden stocks is "At the square[']s center stand a row of crude wooden stocks, their heavy beams stained from years of weather and use. Iron clasps hold the unfortunate captives by their wrists and necks, their bodies forced into unnatural, humiliating postures." 
 
 
 Section 4 - Gallows Room
@@ -1868,7 +1861,7 @@ Before looking when the location is the Gallows Room:
 	
 The Gallows Room is south of the Stocks Room.  "[description corresponding to the locale of Gallows Room in the Table of Hell Ride Events]"
 
-The gallows platform is here. The gallows platform is a supporter. The gallows platform is fixed in place. Understand "gallows" as gallows platform. The description of the gallows platform is "At the center of the square, rising like a grim monument to mortality, stands the gallows — a wooden platform, darkened by age and weather, with thick ropes hanging like vipers poised to strike." 
+The gallows platform is scenery in the Gallows Room. The gallows platform is a supporter. The gallows platform is fixed in place. Understand "gallows" as gallows platform. The description of the gallows platform is "At the center of the square, rising like a grim monument to mortality, stands the gallows — a wooden platform, darkened by age and weather, with thick ropes hanging like vipers poised to strike." 
 
 Section 5 - Stake Room
 
@@ -1883,13 +1876,7 @@ The Stake Room is south of the Gallows Room. "[description corresponding to the 
 
 stakes are in the Stake Room. It is scenery. The description is "Three wooden stakes rise from a pyre. Bound to the stakes are three women."
 
-A pyre is an open unopenable container in the Stake Room. The pyre is fixed in place. Understand "fire" as pyre. The description is "The flames burn ever higher." 
-
-After printing the name of the pyre:
-	omit contents in listing.
-	
-After printing the name of a closed unopenable container:
-	omit contents in listing.
+A pyre is an open unopenable container in the Stake Room. "The flames of the pyre burn ever brighter and rise ever higher engulfing the victims." The pyre is fixed in place. Understand "fire" as pyre. The description is "The flames burn ever higher." 
 
 Section 6 - Dungeon
 
@@ -1904,7 +1891,7 @@ The Dungeon is south of the Stake Room. "[description corresponding to the local
 
 An iron chair is scenery in the Dungeon. The iron chair is a supporter. understand "spiked" and "seat" as iron chair. The description of the iron chair is "A spiked chair looms in the corner, its cruel design gleaming faintly in the dim light." 
 
-chains are here. They are scenery. The description of the chains is "The chains rattle against the walls."
+some chains are here. They are scenery. The description of the chains is "The chains rattle against the walls."
 A rack is here. It is scenery. The description of the rack is "The rack has a prisoner splayed in four directions."
 A brazier is here. It is scenery. The description of the brazier is "It is glowing red with an infernal heat."
 A riveted iron-bound door is here. It is scenery.
@@ -1920,7 +1907,7 @@ Before looking when the location is the Guillotine Room:
 
 The Guillotine Room is south of the Dungeon. "[description corresponding to the locale of Guillotine Room in the Table of Hell Ride Events]"
 
-The guillotine platform is here. The guillotine platform is a supporter. Understand "scaffold" as guillotine platform. The description of the guillotine platform is "At the center of the square stands a raised wooden platform, stark and imposing, where the grim sentence is to be carried out." 
+The guillotine platform is scenery in the Guillotine Room. The guillotine platform is a supporter. Understand "scaffold" as guillotine platform. The description of the guillotine platform is "At the center of the square stands a raised wooden platform, stark and imposing, where the grim sentence is to be carried out." 
 
 Section 8 - Ride Exit
 
@@ -1933,14 +1920,22 @@ Before looking when the location is the Ride Exit:
 
 The Ride Exit is south of the Guillotine Room. "[description corresponding to the locale of Ride Exit in the Table of Hell Ride Events]"
 
-The merchandise stand is scenery in the Ride Exit. The merchandise stand is a container. Understand "stand" as merchandise stand. The description of the merchandise stand is "The stand is bathed in red light, adding to the ominous mood." 
+The merchandise stand is scenery in the Ride Exit. The merchandise stand is a container. Understand "stand" and "display" as merchandise stand. The description of the merchandise stand is "The stand is bathed in red light, adding to the ominous mood." 
 
-plastic bones are in the merchandise stand. The price of the plastic bones is $1.00. The description is "This is a collection of plastic bones meant to decorate your yard."
+some Plastic Bones are in the merchandise stand. The price of the plastic bones is $1.00. The description is "This is a collection of plastic bones meant to decorate your yard."
 
-devil horns are in the merchandise stand. The price of the devil horns is $2.00. The description is "The devil horns tie to your head."
+some Devil Horns are in the merchandise stand. The price of the devil horns is $2.00. The description is "The devil horns tie to your head."
 
-A t-shirt is in the merchandise stand. The price of the t-shirt is $7.50. Understand "t-shirts" as t-shirt. The description is "This is a black t-shirt with the caption 'I Survived Hell Ride!"
-	
+some Key Chains are in the merchandise stand. The price of the key chains is $2.00. The description is "The key chains say 'I Survived Hell Ride!'"
+
+A T-Shirt is in the merchandise stand. The price of the t-shirt is $7.50. Understand "t-shirts" as t-shirt. The description is "This is a black t-shirt with the caption 'I Survived Hell Ride!"
+
+There is a price list in the Ride Exit. The price list is scenery. Understand "sign" as price list. The description of the price list is "It[']s a sign displaying the prices of the merchandise.".
+
+instead of reading or examining the price list:
+	now price table is Table of Merchandise Prices;
+	show a price table.
+
 Chapter 5 - Second Floor
 
 Section 1 - Holding Room
@@ -2294,25 +2289,35 @@ index	object	description
 Section 7 - Table of Ticket Prices
 
 Table of Ticket Prices
-index	object	price
-"1"	Hell Ride Ticket	$3.00
-"2"	Fortune Teller Ticket	$3.00
-"3"	Ferris Wheel Ticket	$2.00
-"4"	Bumper Cars Ticket	$2.00
-"5"	Carousel Ticket	$1.00
+object	price
+Hell Ride Ticket	$3.00
+Fortune Teller Ticket	$3.00
+Ferris Wheel Ticket	$2.00
+Bumper Cars Ticket	$2.00
+Carousel Ticket	$1.00
 
 Section 8 - Table of Concession Prices
 
 Table of Concession Prices
-index	object	price
-"1"	Soda	$2.00 
-"2"	Popcorn	$2.50 
-"3"	Candy Apple	$1.50 
-"4"	Cotton Candy	$1.50 
-"5"	Soft Pretzel	$1.50 
-"6"	Bubblegum	$1.00 
+object	price
+Drink	$2.00 
+Popcorn	$2.50 
+Candy Apple	$1.50 
+Cotton Candy	$1.50 
+Soft Pretzel	$1.50 
+Bubblegum	$1.00 
 
-Section 9 - Table of Hell Ride Events
+Section 9 - Table of Merchandise Prices
+
+Table of Merchandise Prices
+object	price
+Key Chains	$2.00 
+Fuse1	$3.50 
+Devil Horns	$2.00 
+Plastic Bones	$1.00 
+T-Shirt	$7.50 
+
+Section 10 - Table of Hell Ride Events
 
 Table of Hell Ride Events
 locale	locale text	figure	description
@@ -2373,11 +2378,11 @@ Ride Exit	"Ride Exit"	figure of RideExit	"The exit of Hell Ride is designed to l
 
 Riders step into a small courtyard enclosed by jagged, rusted fencing draped with cobwebs and plastic bones. Overhead, a weathered sign reads, 'You[’]ve Survived… For Now.' Nearby, carnival workers in tattered costumes watch silently, occasionally muttering cryptic remarks like, 'Not everyone makes it out.'
 
-A merchandise stand glows red, selling items like Hell Ride Survivor t-shirts and devil horns. Beyond the fencing, the cheerful carnival lights and sounds feel jarring, contrasting sharply with the ride’s oppressive atmosphere.
+A merchandise display glows red, selling items like Hell Ride Survivor t-shirts, key chains, plastic bones, and devil horns. Beyond the fencing, the cheerful carnival lights and sounds feel jarring, contrasting sharply with the ride’s oppressive atmosphere.
 
 The exit ensures Hell Ride isn’t just an experience — it lingers, blurring the line between thrill and fear."
 
-Section 10 - Table of Little Egypt Events
+Section 11 - Table of Little Egypt Events
 
 Table of Little Egypt Events
 description
@@ -2388,7 +2393,7 @@ description
 "The music alternates between hauntingly slow melodies and rapid, energetic drum beats, creating an emotional arc that keeps you entranced. Little Egypt relies on the music[']s dynamic changes to tell a story with movements reflecting joy, sorrow, seduction, and celebration."
 "The performance concludes with a dramatic flourish of a fast-paced shimmy, a bold spin, and Little Egypt dramatically casts off her veils. The dancer takes a bow to enthusiastic applause, leaving you spellbound by the sensual yet artful display."
 
-Section 11 - Description of Hell Ride
+Section 12 - Description of Hell Ride
 
 When play begins:
 	 choose row 1 in Table of Basic Help Options;
@@ -2407,7 +2412,7 @@ I hope you enjoy it.
 
 d."
 
-Section 12 - Credits
+Section 13 - Credits
 
 Crediting is an action applying to nothing. Understand "Credits" as crediting.
 
@@ -2465,11 +2470,11 @@ Test Backstage with "test b1 / test b1a / test b2 / test b3 / test b4"
 
 Chapter 6 - Concession Stand
 
-Test Concession with "brief / s / sw / l at treats / read menu / buy cola / buy popcorn / buy candy apple / buy cotton candy / buy pretzel / inventory / drink soda / g / g / g / g / i / ne / n / i / score".
+Test Concession with "brief / s / sw / l at treats / read menu / buy cola / buy popcorn / buy candy apple / buy cotton candy / buy pretzel / buy bubblegum / inventory / drink soda / g / g / g / g / i / ne / n / i / score".
 
 Chapter 7 - Hell Ride
 
-Test Ride with "brief / s / buy hell ride ticket / s / give hell ride ticket to operator / s / enter hell ride car / wait / z / z / z / z / z / z".
+Test Ride with "brief / s / buy hell ride ticket / s / give hell ride ticket to operator / s / enter hell ride car / wait / z / z / z / z / z".
 
 Chapter 8 - Electrocution
 
