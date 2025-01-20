@@ -55,7 +55,7 @@ Phase III ... Pre-pass through major nodes
 Phase IV ... First pass through major nodes
 -----------------------------------------------------
 
-.... MajorNodes__pass_1() took 10cs
+.... MajorNodes__pass_1() took 14cs
 .... Tables__traverse_to_stock() took 1cs
 
 
@@ -63,7 +63,7 @@ Phase IV ... First pass through major nodes
 Phase V ... Second pass through major nodes
 -----------------------------------------------------
 
-.... MajorNodes__pass_2() took 3cs
+.... MajorNodes__pass_2() took 4cs
 
 
 -----------------------------------------------------
@@ -89,14 +89,14 @@ Phase VIII ... Tables and grammar
 Phase IX ... Augment model world
 -----------------------------------------------------
 
-.... World__stage_V() took 5cs
+.... World__stage_V() took 8cs
 
 
 -----------------------------------------------------
 Phase X ... Phrases and rules
 -----------------------------------------------------
 
-.... ImperativeDefinitions__assess_all() took 6cs
+.... ImperativeDefinitions__assess_all() took 9cs
 .... Tables__traverse_to_stock() took 1cs
 
 
@@ -104,15 +104,16 @@ Phase X ... Phrases and rules
 Phase XI ... Generating inter (1)
 -----------------------------------------------------
 
-.... RTKindConstructors__compile() took 7cs
+.... RTKindConstructors__compile() took 9cs
 
 
 -----------------------------------------------------
 Phase XII ... Generating inter (2)
 -----------------------------------------------------
 
-.... CompletionModule__compile() took 1cs
+.... CompletionModule__compile() took 2cs
 .... RTKindConstructors__compile_permissions() took 8cs
+.... InferenceSubjects__emit_all() took 1cs
 .... ImperativeDefinitions__compile_first_block() took 1cs
 
 
@@ -132,9 +133,9 @@ Switch val is LOCAL_VARIABLE_NT'n' {local: LV"n"-number number}
  for kind number pointery 0
 Switch val is LOCAL_VARIABLE_NT'n' {local: LV"n"-number number}
  for kind number pointery 0
-.... Sequence__undertake_queued_tasks() took 173cs
-.... Sequence__undertake_queued_tasks() took 1cs
-.... RTPhrasebook__compile_entries() took 6cs
+.... Sequence__undertake_queued_tasks() took 181cs
+.... Sequence__undertake_queued_tasks() took 2cs
+.... RTPhrasebook__compile_entries() took 4cs
 
 
 -----------------------------------------------------
@@ -164,13 +165,14 @@ Providing for a total heap of 131072, given requirement of 131072
 Phase XVI ... Bibliographic work
 -----------------------------------------------------
 
+.... ReleaseInstructions__write_ifiction_and_blurb() took 12cs
 
 
 -----------------------------------------------------
 Phase XVII ... Complete
 -----------------------------------------------------
 
-Compile CPU time: 252 centiseconds
+Compile CPU time: 285 centiseconds
 
 
 ==== Phase XVII.1 ... step 1/15: read <- *memory ====
@@ -7639,7 +7641,7 @@ HTML tag stack:
     47. html (opened at line 236 of 'D:/Programs/Adv/Inform7/Distribution/inweb/foundation-module/Chapter 5/HTML.w')
 
 
-Back end elapsed time: 388cs
+Back end elapsed time: 305cs
 Total of 137 files written as streams.
 Vacant escapes: %: ..CDE.GH..K.M.O.QR.TU...YZab..e..h.jklm.o.qr......yz0123456789
 Vacant escapes: $: .....F...J..........UVW.....................s.u..x.........789
