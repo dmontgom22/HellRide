@@ -905,7 +905,9 @@ Section 1 - Parking Lot
 
 When play begins:
 	display the figure of Hell Ride;
-	say "The carnival is in town and you and your sweetie had a date to visit it. After dinner and just as you arrive at the carnival, you and your date have a terrible fight. They storm off leaving you alone. You decide to stay at the carnival anyway."
+	say "Date night with your sweetie: a meal at your favorite restaurant and a night at the carnival. 
+
+After a lovely meal, you get into a big fight over the tip. Your date storms off, ruining your chances of that romantic evening you hoped for. You decide to stay and enjoy the carnival anyway."
 
 The Parking Lot is a room. The parking lot is north of the Ticket Booth. The parking lot is outdoors. "The carnival parking lot stretches across an open field, its gravel crunching under arriving cars. Temporary floodlights and the carnival[']s colorful glow light the area, while distant laughter, music, and the hum of rides fill the air.
 
@@ -1849,7 +1851,6 @@ Stocks Room is south of the Ride Entrance. "[description corresponding to the lo
 
 The wooden stocks are a supporter in the Stocks Room. The wooden stocks are scenery. The wooden stocks are fixed in place. The description of the wooden stocks is "At the square[']s center stand a row of crude wooden stocks, their heavy beams stained from years of weather and use. Iron clasps hold the unfortunate captives by their wrists and necks, their bodies forced into unnatural, humiliating postures." 
 
-
 Section 4 - Gallows Room
 
 After going south from the Stocks Room when the Gallows Room is unvisited:
@@ -2393,13 +2394,25 @@ description
 "The music alternates between hauntingly slow melodies and rapid, energetic drum beats, creating an emotional arc that keeps you entranced. Little Egypt relies on the music[']s dynamic changes to tell a story with movements reflecting joy, sorrow, seduction, and celebration."
 "The performance concludes with a dramatic flourish of a fast-paced shimmy, a bold spin, and Little Egypt dramatically casts off her veils. The dancer takes a bow to enthusiastic applause, leaving you spellbound by the sensual yet artful display."
 
-Section 12 - Description of Hell Ride
+Section 12 - Introduction to Hell Ride
 
 When play begins:
-	 choose row 1 in Table of Basic Help Options;
-	 now description entry is "Hell Ride - A Ride to remember...
+	choose row 1 in Table of Basic Help Options;
+	now description entry is "Hell Ride - A ride to remember...
 
-In the early 1980[']s, I had an Apple II Plus computer with 64K of RAM, dual 5.25[quotation mark] floppy disks, and a color monitor as big as a television. And the very first game I ever bought was Infocom[']s Zork I: The Great Underground Empire. This was cool. It was all text-based. The game described your surroundings and you interacted with commands that say what you wanted to do. This 'Interactive Fiction' really evoked in a game what I appreciated most about reading: rich descriptions, colorful characters, and the like. After Zork I, there was Zork II and III. Enchanter, Moonmist, Suspect, and so many 
+Date night with your sweetie: a meal at your favorite restaurant and a night at the carnival. 
+
+After a lovely meal, you get into a big fight over the tip. Your date storms off, ruining your chances of that romantic evening you hoped for. You decide to stay and enjoy the carnival anyway.
+
+As you explore the carnival, you learn (the hard way) that the Hell Ride attraction is malfunctioning with the potential for serious injuries to the riders. You must disable the ride off and prevent any loss of life... including your own."
+
+Section 13 - Hell Ride Origins
+
+When play begins:
+	 choose row 3 in Table of Basic Help Options;
+	 now description entry is "Hell Ride - A ride to remember...
+
+In the early 1980[']s, I had an Apple [close bracket][bracket]  Plus computer with 64K of RAM, dual 5.25[quotation mark] floppy disks, and a color monitor as big as a television. And the very first game I ever bought was Infocom[']s Zork I: The Great Underground Empire. This was cool. It was all text-based. The game described your surroundings and you interacted with commands that say what you wanted to do. This 'Interactive Fiction' really evoked in a game what I appreciated most about reading: rich descriptions, colorful characters, and the like. After Zork I, there was Zork II and III. Enchanter, Moonmist, Suspect, and so many 
 more. I played them all with my best friend Andy.
 
 Andy and I were software developers at the time and we thought, 'We can do this!' So we set out to do this. We developed a game engine with a natural language parser. And it was pretty good. We could support most of the kinds of things they did, certainly less graceful but pretty good. In fact, our parser was better than Infocom[']s in one case where the sentence was ambiguous. e.g. 'Walk into the room with the lamp.' Is the player carrying the lamp? Or is the lamp in the room? 
@@ -2410,9 +2423,10 @@ We developed two prototypes: Diner and Hell Ride. Diner was about bank robbers c
 
 I hope you enjoy it.
 
-d."
+d.[line break]
+(dmontgom22@gmail.com)"
 
-Section 13 - Credits
+Section 14 - Credits
 
 Crediting is an action applying to nothing. Understand "Credits" as crediting.
 
@@ -2508,7 +2522,7 @@ Chapter 2 - Basic Help Options
 
 Table of Basic Help Options (continued)
 title	subtable	description
-"Contacting the Author"	--	"If you have any difficulties with [story title], please contact me at dmontgom22@gmail.com"
+"Hell Ride Origins"	--	"If you have any difficulties with [story title], please contact me at dmontgom22@gmail.com"
 "The Parking Lot"	Table of Parking Lot Hints	--
 "The Attractions"	Table of Attractions Hints	--
 "The Games"	Table of Games Hints	--
