@@ -585,21 +585,21 @@
     <key>83</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.inform\Source\story.ni</string>
         <key>Line</key><integer>2289</integer>
-        <key>Title</key><string>Section 7 - Table of Ticket Prices</string>
+        <key>Title</key><string>Section 7 - Table of Tickets</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>2</integer>
     </dict>
     <key>84</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.inform\Source\story.ni</string>
         <key>Line</key><integer>2299</integer>
-        <key>Title</key><string>Section 8 - Table of Concession Prices</string>
+        <key>Title</key><string>Section 8 - Table of Concessions</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>2</integer>
     </dict>
     <key>85</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.inform\Source\story.ni</string>
         <key>Line</key><integer>2310</integer>
-        <key>Title</key><string>Section 9 - Table of Merchandise Prices</string>
+        <key>Title</key><string>Section 9 - Table of Merchandise</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>2</integer>
     </dict>

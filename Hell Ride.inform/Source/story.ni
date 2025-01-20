@@ -654,7 +654,7 @@ The price of the money is $20.00.
 
 Sound of Bell is the file "Bell.ogg" ("The sound of a ship[']s bell").
 
-two dimes underlie the seat.
+three dimes underlie the seat.
 
 
 Part 2 - The Game
@@ -664,7 +664,7 @@ Chapter 1 - Electrical Area
 Section 1 - Colors
 
 [the color values are #00FFFF, #E32636, #00C957, #6F00FF, #6F00FF, #BDB76B, #FF00FF, #FFA500, and #E7BFB3]
-Color is a kind of value. The colors are nondescript, aqua, crimson, emerald, gray, indigo, khaki, magenta, orange, and quartz. 
+Color is a kind of value. The colors are nondescript, Aqua, Crimson, Emerald, Gray, Indigo, Khaki, Magenta, Orange, and Quartz. 
 
 Understand "grey" as gray. 
 
@@ -1039,7 +1039,7 @@ Next to the kiosk, a vibrant signboard lists ticket prices with playful illustra
 
 A ride ticket is a kind of thing. A ride ticket has a price.
 
-The Hell Ride ticket is a ride ticket. The cashier carries the Hell Ride ticket. The price of the Hell Ride ticket is $3.00. The description of the Hell Ride ticket is "'Admit One' to the Hell Ride.[line break]It[']s a real 'E' ticket, baby!". 
+The Hell Ride ticket is a ride ticket. The cashier carries the Hell Ride ticket. The price of the Hell Ride ticket is $4.00. The description of the Hell Ride ticket is "'Admit One' to the Hell Ride.[line break]It[']s a real 'E' ticket, baby!". 
 
 The Fortune Teller ticket is a ride ticket. The cashier carries the Fortune teller ticket. The price of the fortune teller ticket is $3.00. The description of the fortune teller ticket is "'Admit One' Have your fortune told."
 
@@ -1051,17 +1051,17 @@ The Carousel ticket is a ride ticket. The cashier carries the Carousel ticket. T
 
 The Cashier is an attendant in the Ticket Booth. 
 
-price table is a table name that varies. The price table is Table of Ticket Prices.
-To show a price table:
-	repeat through price table:
-		say "[price entry] [object entry][line break]".
+sign table is a table name that varies. The sign table is Table of Tickets.
+To show a sign table:
+	repeat through a sign table:
+		say "[price of the object entry] [object entry][line break]".
 
 There is a signboard in the Ticket Booth. The signboard is scenery. Understand "sign" as signboard. The description of the signboard is "It[']s a sign displaying the prices of the various rides".
 
 reading is an action applying to one thing. Understand "read" as reading.
 instead of reading or examining the signboard:
-	now price table is Table of Ticket Prices;
-	show a price table.
+	now sign table is Table of Tickets;
+	show a sign table.
 
 Section 4 - Concession Stand
 
@@ -1109,8 +1109,8 @@ Cotton Candy is here. Cotton candy is edible. The price of cotton candy is $1.50
 a Soft Pretzel is here. The soft pretzel is edible. The price of the soft pretzel is $1.50. The description of the soft pretzel is "The soft pretzel is generously sprinkled with salt."
 
 instead of reading or examining the menu:
-	now price table is Table of Concession Prices;
-	show a price table.
+	now sign table is Table of Concessions;
+	show a sign table.
 
 Section 5 - High Striker
 
@@ -1933,8 +1933,8 @@ A T-Shirt is in the merchandise stand. The price of the t-shirt is $7.50. Unders
 There is a price list in the Ride Exit. The price list is scenery. Understand "sign" as price list. The description of the price list is "It[']s a sign displaying the prices of the merchandise.".
 
 instead of reading or examining the price list:
-	now price table is Table of Merchandise Prices;
-	show a price table.
+	now sign table is Table of Merchandise;
+	show a sign table.
 
 Chapter 5 - Second Floor
 
@@ -2286,36 +2286,36 @@ index	object	description
 "3"	goldfish	"a goldfish in a bowl"
 "4"	poster of Lourde	"a poster of Lourde"
 
-Section 7 - Table of Ticket Prices
+Section 7 - Table of Tickets
 
-Table of Ticket Prices
-object	price
-Hell Ride Ticket	$3.00
-Fortune Teller Ticket	$3.00
-Ferris Wheel Ticket	$2.00
-Bumper Cars Ticket	$2.00
-Carousel Ticket	$1.00
+Table of Tickets
+object
+Hell Ride Ticket
+Fortune Teller Ticket
+Ferris Wheel Ticket
+Bumper Cars Ticket
+Carousel Ticket
 
-Section 8 - Table of Concession Prices
+Section 8 - Table of Concessions
 
-Table of Concession Prices
-object	price
-Drink	$2.00 
-Popcorn	$2.50 
-Candy Apple	$1.50 
-Cotton Candy	$1.50 
-Soft Pretzel	$1.50 
-Bubblegum	$1.00 
+Table of Concessions
+object
+Drink
+Popcorn
+Candy Apple
+Cotton Candy
+Soft Pretzel
+Bubblegum
 
-Section 9 - Table of Merchandise Prices
+Section 9 - Table of Merchandise
 
-Table of Merchandise Prices
-object	price
-Key Chains	$2.00 
-Fuse1	$3.50 
-Devil Horns	$2.00 
-Plastic Bones	$1.00 
-T-Shirt	$7.50 
+Table of Merchandise
+object
+Key Chains
+Fuse1
+Devil Horns
+Plastic Bones
+T-Shirt
 
 Section 10 - Table of Hell Ride Events
 
