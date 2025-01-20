@@ -48,7 +48,71 @@ Include Basic Screen Effects by Emily Short.
 
 Include Singing Reloaded by Shin.
 
-Chapter 4 - New Mechanics, Actions, Phrases
+Chapter 4 - The Player, Global Code
+
+The player is in the Parking Lot. 
+
+The description of the player is "You are despondent given that you and your date just had a huge fight and they stormed off. Maybe visiting the attractions at the carnival will make you feel better." 
+
+Instead of examining the player:
+	say "Oh, stop fussing. You look fine."
+
+The coupon is in the wallet. The description of the coupon is "You found this in a stack of coupons on the counter of the gas station."
+
+before examining the coupon, display Figure of Coupon.
+
+after reading a command:
+	if the player's command includes "please":
+		say "Please do not say 'please.'";
+		reject the player's command.
+
+after reading a command:
+	if the player's command matches "load", try restoring the game instead.
+	
+[obituary]
+Rule for printing the player's obituary:
+	[winning move]
+	if Control Panel Nine's button is switched on and Control Panel Nine's dial is properly set:
+		say "As you push the indigo button, the monitor switches to a view of the guillotine room. You can still see the blade rising and falling over the cars. Suddenly, you see the blade slowing down, taking longer and longer to fall. Until it finally comes to a complete rest. 
+
+The room is heavy with uneasy silence. The Hell Ride, once a thrilling spectacle, now looms motionless, as the guillotine blade is frozen halfway down its track. Moments ago, chaos erupted as the malfunctioning mechanism sent the blade crashing unpredictably, ripping through the roofs of cars on the track.
+
+A single car, its roof gashed open, sits under the still blade — a grim reminder of the disaster narrowly averted. Above, a black crow lands on the guillotine’s frame, its sharp caw cutting through the murmurs of anger and fear.
+
+Two mechanics climb the scaffolding with tools in hand, their appearance met with wary hope. The crowd watches, holding their breath, as the cursed ride’s fate hangs in the balance.
+
+As you exit the ride, the carnival owner and the mayor are present and extending their undying gratitude for saving the day, not to mention lives![paragraph break]";
+		say "*** You have won! ***";
+		say paragraph break;
+		rule succeeds;
+	[car was toad away]
+	else if toadaway is true:
+		say "[line break]*** You start the long walk home. ***[line break]";
+	[electrocuted by big switch]
+	else if electrocuted is true:
+		say "The sparks arc onto your unprotected hands electrocuting you on the spot.";
+		say "[line break]*** You have died! ***[line break]";
+	[grues]
+	else if the location is dark:
+		say "Oh no! You walked directly into the slavering fangs of a lurking grue!";
+		say "[line break]*** You have died! ***";
+		say paragraph break;
+	[some other way to die]
+	otherwise:
+		say "*** You have died! ***[line break]"
+		
+After printing the player's obituary: 
+	try requesting the complete score.
+	
+[fix up the map]
+Index map with title set to "The Carnival".
+Index map with Electrical Closet Eleven mapped northwest of Electrical Room.
+Index map with Electrical Closet Seven mapped southwest of Electrical Room.
+Index map with Guillotine Room mapped west of Generator Room.
+Index map with room-size set to 52
+	and room-size of the Electrical Room set to 74.
+
+Chapter 5 - New Mechanics, Actions, Phrases
 
 Section 1 - Money Mechanics
 
@@ -310,24 +374,21 @@ instead of talking about something :
 Understand "talk to [someone] about [something]" as a mistake ("To start a conversation, try to ASK [the noun] ABOUT something or TELL [the noun] ABOUT something.").
 Understand "talk to [someone]" as a mistake ("To start a conversation, try to ASK [the noun] ABOUT something or TELL [the noun] ABOUT something.").
 
-instead of kissing an attendant, say "Oh, my! Why would you want to kiss [the noun]? Your sweetie wouldn't like that!".
-
 To say the hell ride response: 
 	say "[one of]That ride is scary. You won[']t catch me on it![or]Last time I rode Hell Ride I heard strange noises.[or]Hell ride is so old that It's falling apart. I wouldn[']t ride it.[or]Hell Ride is behind on it[']s maintenance schedule. Might want to skip that one.[at random]".
 
-instead of asking an attendant about "hell", say the hell ride response.
-instead of asking an attendant about "hell ride", say the hell ride response.
+understand "hell", "ride", and "hell ride" as "[hell ride]".
+instead of asking an attendant about "[hell ride]", say the hell ride response.
 Instead of asking an attendant about something:
 	say "'[one of]Sorry,[or]I'm afraid[or]Hmm,[at random] [one of]I don't know much about that[or]you've got me there[or]I haven't the faintest[at random],' [the noun] [one of]drawls[or]replies[or]comments[or]exclaims[at random].";
 	
-Instead of showing an something to an attendant:
-	say "'[one of]Sorry,[or]I'm afraid[or]Hmm,[at random] [one of]I don't know much about that[or]you've got me there[or]I haven't the faintest[at random],' [the noun] [one of]drawls[or]replies[or]comments[or]exclaims[at random].";
-	
-instead of telling an attendant about "hell", say the hell ride response.
-instead of telling an attendant about "hell ride", say the hell ride response.
+instead of telling an attendant about "[hell ride]", say the hell ride response.
 Instead of telling an attendant about something:
 	say "[The noun] looks [one of]surprised[or]intrigued[or]nonplussed[at random]. '[one of]You don't say[or]That's very interesting[or]Do go on[or]I wish I'd known that sooner[at random]!'".
-
+	
+Instead of showing something to an attendant:
+	say "'[one of]Sorry,[or]I'm afraid[or]Hmm,[at random] [one of]I don't know much about that[or]you've got me there[or]I haven't the faintest[at random],' [the noun] [one of]drawls[or]replies[or]comments[or]exclaims[at random].";
+	
 Persuasion rule for asking an attendant to try going:
 	say "[The actor] says, 'I can't leave my post or I[']ll get fired!";
 	persuasion fails.
@@ -459,15 +520,9 @@ Check an actor swearing obscenely (this is the block swearing obscenely rule):
 Understand "[swears]" as swearing obscenely.
 Understand "fuck", "shit", "motherfucker", "cocksucker", "cunt", "prick", "cock", "piss", "tits", and "damn" as "[swears]".
 
-
-
 Section 12 - Miscellaneous
 
-[for adaptive text]
-A thing can be seen or unseen. A thing is usually unseen.
-
-Carry out examining a thing, now the noun is seen.
-
+[coins]
 a coin is a kind of thing. Understand "shiny" as a coin.
 
 a nickel is a kind of coin. The description of a nickel is "Five cents, a nickel. And very shiny."
@@ -475,6 +530,8 @@ a nickel is a kind of coin. The description of a nickel is "Five cents, a nickel
 a dime is a kind of coin. The description of a dime is "It[']s a dime. Ten cents. One tenth of a dollar. And very shiny."
 
 a quarter is a kind of coin. . The description of a quarter is "It[']s a quarter. Two bits. And very shiny."
+
+three quarters and one nickel underlie the seat.
 
 [heaven and earth]
 A room can be indoors or outdoors. A room is usually indoors. 
@@ -493,13 +550,17 @@ carry out examining hell ride:
 		say "Through the lights and excitement of the carnival, you can see the facade for Hell Ride looming ominously over the midway." instead;
 	otherwise:
 		say "You can['] see that here."
-		
+
+[senses]
+instead of kissing, say "Oh, my! Why would you want to kiss [the noun]? Your sweetie wouldn't like that!".
+
+instead of touching a person, say "Touching [the noun] without consent is likely to get you punched in the face! Better not.".
+instead of touching a thing, say "You notice nothing unusual about the way [the noun] feels."
+
 instead of smelling:
 	if the location is in the Midway:
-		say "You smell the smells of the carnival. As you smell, you can discern fresh, hot buttered popcorn, the sweet aroma of cotton candy, and the warm doughy scent of pretzels.";
-	otherwise if the location is in the back stage:
-		say "You smell grease, oil, and the other scents that linger back stage.";
-	otherwise if the location is in the second floor:
+		say "You smell the odors of the carnival. As you smell, you can discern fresh, hot buttered popcorn, the sweet aroma of cotton candy, and the warm doughy scent of pretzels.";
+	otherwise if the location is in the back stage or the location is in the second floor:
 		say "You smell grease, oil, and the other scents that linger back stage.";
 	otherwise if the location is in Hellride:
 		say "You smell incense as it permeates through [story title].";
@@ -507,218 +568,13 @@ instead of smelling:
 instead of listening:
 	if the location is in the Midway:
 		say "You can hear all the sounds of the carnival. The sounds of a calliope waft across the thoroughfare from the carousel. You can hear the laughter and screams as other patrons ride the rides and play the games.";
-	otherwise if the location is in the back stage:
-		say "You hear mechanical sounds: the screech metal upon metal, gears turning in precision, and the thump of the cars as they traverse the tracks through the ride.";
-	otherwise if the location is in the second floor:
+	otherwise if the location is in the back stage or the location is in second floor:
 		say "You hear mechanical sounds: the screech metal upon metal, gears turning in precision, and the thump of the cars as they traverse the tracks through the ride.";
 	otherwise if the location is in Hellride:
 		say "As you travel through [story title], you hear ominous music, the murmurs of the crowd, and the occasional scream in the distance.";
 
 instead of tasting someone, say "Ew! You[']re weird!".
 instead of tasting something, say "Ew! You[']re weird!".
-		
-Chapter 5 - Tables
-
-Section 1 - Table of Bored Responses
-
-Table of Bored Responses
-response
-"He[']s just trying to earn enough money to take his sweetie to the movies next week."
-"He[']s thinking about having a brewski with his bros after work."
-"His mind is completely blank."
-"He[']s thinking about the big game on Friday night."
-"He[']s wondering if his SAT scores are good enough to get into college."
-"He[']s wondering why he took this stupid job in the first place."
-"His thoughts are entirely focused on a cheeseburger for lunch."
-"He wonders how is he supposed to look cool dressed in this awful uniform."
-
-Section 2 - Table of Songs
-
-Table of Songs
-artist	song	rickroll
-"Led Zeppelin"	"Fool In The Rain"	false
-"Pink Floyd"	"Comfortably Numb"	false
-"Aretha Franklin"	"Respect"	false
-"Steely Dan"	"Aja"	false
-"Taylor Swift"	"Shake It Off"	false
-"Pharell"	"Happy"	false
-"Dolly Parton"	"Jolene"	false
-"Van Morrison"	"Brown Eyed Girl"	false
-"Weezer"	"Africa"	false
-"Johnny Cash"	"Folsom Prison Blues"	false
-"Cat Stevens"	"Peace Train"	false
-"Lou Reed and the Velvet Underground"	"Sweet Jane"	false
-"Queen"	"Bohemian Rhapsody"	false
-"Bob Seger"	"Old Time Rock[']N[']Roll"	false
-"Boston"	"More That A Feeling"	false
-"Roger Miller"	"King of the Road"	false
-"Elvis Presley"	"Suspicious Minds"	false
-"Jimmy Buffet"	"Margaritaville"	false
-"The Cure"	"Friday I'm In Love"	false
-"Dave Edmunds"	"I Hear You Knocking"	false
-"Bruddah Iz"	"Over The Rainbow"	false
-"Aerosmith"	"Dream On"	false
-"Paul Simon"	"Kodachrome"	false
-"R.E.M."	"Losing My Religion"	false
-"Modern English"	"Melt With You"	false
-"Rick Astley"	"Never Gonna Give You Up"	true
-"Bob Marley"	"No Woman, No Cry"	false
-"Smokey Robinson"	"Tracks Of My Tears"	false
-"Billy Joel"	"Piano Man"	false
-"Warren Zevon"	"Werewolves Of London"	false
-"Dusty Springfield"	"Son Of A Preacher Man"	false
-"Kermit the Frog"	"Rainbow Connection"	false
-"David Bowie"	"Young Americans"	false
-"Ben E. King"	"Stand By Me"	false
-"Blondie"	"Heart Of Glass"	false
-"Neil Diamond"	"Sweet Caroline"	false
-"The Grateful Dead"	"Ripple"	false
-"Bruce Springsteen"	"Born To Run"	false
-"The Talking Heads"	"Psycho Killer"	false
-"The Village People"	"YMCA"	false
-
-Section 3 - Table of Monitor Descriptions
-
-Table of Monitor Descriptions
-link number	figure choice		description
-0	Figure of ControlPanel		"The monitor now shows nothing but snow."
-1	Figure of ControlPanelStocks		"The monitor now shows a tableau of poor unfortunate townsfolk locked in stocks."
-3	Figure of ControlPanelGallows		"The monitor now shows a scene of someone waiting to be hanged."
-5	Figure of ControlPanelStake		"The monitor now displays a scene of three women being burned at the stake."
-7	Figure of ControlPanelDungeon		"The monitor now shows the implements of torture in the dungeon."
-9	Figure of ControlPanelGuillotine		"The monitor now shows a tableau of a guillotine rising and falling over the ride exit."
-11	Figure of ControlPanelExit		"The monitor shows the gift shop located at the Hell Ride exit."
-
-Section 4 - Table of High Striker Prizes
-
-Table of High Striker Prizes
-index	object	description
-"1"	teddy bear	"a teddy bear"
-"2"	Swiss army knife	"a Swiss Army knife"
-"3"	poster of Taylor Swift	"a poster of Taylor Swift"
-"4"	fuse13	"a magenta fuse"
-
-Section 5 - Table of Dime Toss Prizes
-
-Table of Dime Toss Prizes
-index	object	description
-"1"	small plush monkey	"a stuffed monkey"
-"2"	fuse15	"an orange fuse"
-"3"	poster of Billie Eilish	"a poster of Billie Eilish"
-"4"	pocket mirror	"a small pocket mirror"
-
-Section 6 - Table of Pitcher's Mound Prizes
-
-Table of Pitcher's Mound Prizes
-index	object	description
-"1"	fuse3	"a crimson fuse"
-"2"	small plush donkey	"a plush donkey"
-"3"	goldfish	"a goldfish in a bowl"
-"4"	poster of Lourde	"a poster of Lourde"
-
-Section 7 - Table of Hell Ride Events
-
-Table of Hell Ride Events
-locale	locale text	figure	description
-Ride Entrance	"Ride Entrance"	figure of Hell Ride	"The cars that will take you into the fearsome Hell Ride stop here for you to board and then move forward, the safety bar locked in place, as the entrance to Hell Ride looms ahead — a grotesque facade of twisted metal and carved wood, illuminated by flickering blood-red lights. The air carries a faint sulfuric tang mingled with the sweet aroma of carnival popcorn.
-
-A towering archway of flames, spikes, and grinning skulls frames the entrance, crowned by flickering letters that read 'HELL RIDE', pulsing like a heartbeat. Below, crouching demon sculptures extend clawed hands in a sinister invitation. Wooden doors cover the entrance, whispering with faint, menacing chuckles as distorted organ music grows louder, punctuated by shrieks and grinding machinery.
-
-Inside, near-total darkness is broken by flashes of sickly green light revealing twisted paths and grotesque shapes. Beyond the threshold lies only uncertainty and terror."
-Stocks Room	"Stocks Room"		figure of RideStocks	"The public square is a cobblestone expanse bordered by weathered timber-framed buildings. The air carries the mingling scents of chimney smoke, damp earth, and the faint tang of a nearby smithy. At its center, crude wooden stocks stand as a grim focal point, their beams weathered and stained from years of use. Iron clasps lock captives in degrading postures, their tattered clothing offering little protection from the biting wind.
-
-The animatronics and wax figures are extremely life like. Hell Ride sure lives up to its name.
-
-The punished individuals hang their heads in shame, their faces etched with despair. Around them, the crowd revels in cruelty — a wiry man spits insults with gleeful laughter, while a stout woman throws overripe vegetables, each impact sparking jeers. Even children join in, pointing and mocking with mischievous delight.
-
-The square hums with noise: the crowd’s taunts, the crack of objects hitting wood, and the quiet murmurs of the suffering captives. Overhead, a gray sky threatens rain, indifferent to the spectacle below. The jeering mob ignores its ominous weight, too engrossed in their shared cruelty to notice nature’s disapproval."
-Gallows Room	"Gallows Room"	figure of RideGallows	"The public square, slick with morning drizzle, lies under a brooding, overcast sky. At its center looms the gallows, a weathered wooden platform with thick ropes swaying ominously. The crowd stands in somber silence, broken by the shuffle of feet or faint murmurs, their eyes fixed on the grim scene.
-
-A hooded executioner, cloaked in black, adjusts the frayed noose with practiced precision, his cold presence exuding purpose. In front of him stands the condemned man, pale and trembling, his bound hands behind him. Beads of sweat mix with rain on his haunted face as his darting eyes search the indifferent crowd. Each shallow breath forms a fleeting cloud in the chilly air — a fragile reminder of his fleeting life.
-
-Vendors hawk bread and cider, while children strain for a better view. An old man clutches a rosary, whispering prayers, as others smirk and place bets. Above, the bell tower tolls, its mournful chime marking the passage of the man’s final moments. A raven perches on the gallows’ beam, its unblinking gaze fixed on the scene below.
-
-As the executioner adjusts the noose around the man’s neck, the crowd falls silent, the air thick with dread. Distant thunder rumbles faintly, as if the heavens themselves await the inevitable."
-Stake Room	"Stake Room"	figure of RideStake	"The public square is steeped in grim silence, broken only by the crackling of flames. At its center, three wooden stakes rise from a pyre of logs and kindling, darkened by smoke from past executions. Bound to the stakes are three women, their faces reflecting defiance, resignation, and terror.
-
-A crowd encircles the scene, expressions ranging from morbid fascination to righteous fury. Children cling to their mothers, while elders nod solemnly. Some jeer and throw stones; others murmur prayers or avert their gaze.
-
-The executioner, hooded and clad in a leather apron, steps forward with a blazing torch, igniting the pyre in a sudden roar. Flames climb rapidly as thick smoke coils upward. The condemned cry out, their voices mingling with the crackle of fire. The oppressive heat radiates outward, pressing against the silent, uneasy crowd.
-
-Gray clouds loom overhead, nature’s somber backdrop to the grim spectacle. A raven caws from the bell tower as slow church bells toll, each strike punctuating the tragedy. As the pyre burns, some onlookers remain transfixed while others quietly slip away, the square heavy with ash, smoke, and the echoes of the condemned."
-Dungeon	"Dungeon"		figure of RideDungeon	"The dungeon is a dark, suffocating chamber carved into the earth, its stone walls slick with moisture and grime. The air reeks of sweat, blood, mildew, and burning oil from flickering torches mounted on rusted sconces. Shadows twist on the walls, creating grotesque, unsettling shapes in the dim light.
-
-Chains hang from walls and ceilings, their faint clinking blending with the moans and occasional screams of prisoners. Water drips rhythmically from a cracked ceiling, adding to the chamber[’]s eerie ambiance.
-
-The room is littered with instruments of torment: a splintered rack, a glowing brazier holding bloodstained tools, and a spiked chair gleaming faintly in the light. Prisoners endure their own horrors — one stretched on the rack, another hanging limply from manacles, and a third gasping weakly in the spiked chair.
-
-The hooded torturer moves with detached precision, their leather apron stained with the evidence of countless victims. They work silently, indifferent to the agony surrounding them.
-
-Above, rats scuttle in the shadows, and the low ceiling presses down like the weight of despair. The sole exit, a riveted iron-bound door, feels more like a barrier to hope than a path to freedom.
-
-This is a realm of suffering and hopelessness, where life and death blur, and torment is the only certainty."
-Guillotine Room	"Guillotine Room"		figure of RideGuillotine	"The public square buzzes with tense anticipation, a crowd gathered under gray skies that cast a somber light on the cobblestones. At the center, a stark wooden platform looms, its purpose grim and unavoidable.
-
-A lone figure stands on the scaffold, bound hands behind their back and head bowed low, avoiding the crowd’s gaze. Their tattered clothing, once fine, reflects the fall that led them to this moment.
-
-The crowd encircles the platform, emotions ranging from jeers and curses to silent, grim observation. Children sit on shoulders, their curious eyes unaware of the event’s gravity. Near the edge of the platform, the town crier proclaims the crime: 'High treason against the crown. Let this be a warning to all who defy the realm!'
-
-The condemned flinches but remains silent as the executioner — a hooded figure in black — stands ready beside the guillotine, its blade gleaming faintly in the dim light. The murmurs of the crowd fall into silence at the executioner’s signal, leaving only the rustle of wind and the creak of the scaffold.
-
-As the condemned approaches the guillotine, a crow caws sharply from a nearby rooftop, its cry echoing through the square like an omen. The crowd leans forward, breath held, as justice and mortality converge on the scene.
-
-There is just one problem: the guillotine is being raised and lowered by some mechanism. It appears that the timing of the guillotine is off and it is being lowered onto the cars instead of between them. If a person were to be in a car as it passed under the guillotine, they would be decapitated.
-[if the player is in the hell ride car]
-
-Looks like your goose is cooked. Say 'Goodnight, Gracie!' 
-
-You are stupefied as you sit watching guillotine rising and falling, dropping like a stone on the cars in front of you. Thank goodness they are empty. As your turn comes, you raise your hands in a feeble attempt to stop the inevitable.[end if]"
-Ride Exit	"Ride Exit"	figure of RideExit	"The exit of Hell Ride is designed to leave riders with lingering unease. Emerging from a dark corridor with peeling black and red-streaked walls, flickering lights cast erratic shadows on the uneven floor. The air is cool and damp, carrying a faint metallic tang, while faint whispers and distant screams echo softly in the background.
-
-Riders step into a small courtyard enclosed by jagged, rusted fencing draped with cobwebs and plastic bones. Overhead, a weathered sign reads, 'You[’]ve Survived… For Now.' Nearby, carnival workers in tattered costumes watch silently, occasionally muttering cryptic remarks like, 'Not everyone makes it out.'
-
-A merchandise stand glows red, selling items like Hell Ride Survivor t-shirts and devil horns. Beyond the fencing, the cheerful carnival lights and sounds feel jarring, contrasting sharply with the ride’s oppressive atmosphere.
-
-The exit ensures Hell Ride isn’t just an experience — it lingers, blurring the line between thrill and fear."
-
-Section 8 - Table of Little Egypt Events
-
-Table of Little Egypt Events
-description
-"In the dimly lit tent, you see that the stage is decorated to resemble an exotic Middle Eastern market or palace, featuring rich, colorful fabrics, brass ornaments, and lanterns casting a warm, flickering glow. Scents of incense waft through the air, enhancing the atmosphere of mystique. The backdrop displays painted scenes of pyramids, desert landscapes, and domed structures evoking a sense of being transported to the 'Middle East'. "
-"Little Egypt emerges draped in flowing silk veils which she skillfully uses as part of the dance. Her attire consists of a sparkling, sequined bodice and a flowing skirt, adorned with jingling coin belts and jewelry that accentuate her movements."
-"The performance begins with slow, undulating movements, drawing you into the rhythm of exotic live music played on traditional instruments like the oud, darbuka, or zurna. As the tempo builds, her hips, torso, and hands move in intricate, mesmerizing patterns, demonstrating remarkable control and fluidity. She incorporates dramatic spins, drops, and shimmies, often accentuating the beat of the music with a quick jingle of her coin belt."
-"Little Egypt makes eye contact with you and smiles enigmatically. During her performance she balances a sword on her head and accents her dance with finger cymbals."
-"The music alternates between hauntingly slow melodies and rapid, energetic drum beats, creating an emotional arc that keeps you entranced. Little Egypt relies on the music[']s dynamic changes to tell a story with movements reflecting joy, sorrow, seduction, and celebration."
-"The performance concludes with a dramatic flourish of a fast-paced shimmy, a bold spin, and Little Egypt dramatically casts off her veils. The dancer takes a bow to enthusiastic applause, leaving you spellbound by the sensual yet artful display."
-
-Section 9 - Description of Hell Ride
-
-When play begins:
-	 choose row 1 in Table of Basic Help Options;
-	 now description entry is "Hell Ride - A Ride to remember...
-
-In the early 1980[']s, I had an Apple II Plus computer with 64K of RAM, dual 5.25[quotation mark] floppy disks, and a color monitor as big as a television. And the very first game I ever bought was Infocom[']s Zork I: The Great Underground Empire. This was cool. It was all text-based. The game described your surroundings and you interacted with commands that say what you wanted to do. This 'Interactive Fiction' really evoked in a game what I appreciated most about reading: rich descriptions, colorful characters, and the like. After Zork I, there was Zork II and III. Enchanter, Moonmist, Suspect, and so many 
-more. I played them all with my best friend Andy.
-
-Andy and I were software developers at the time and we thought, 'We can do this!' So we set out to do this. We developed a game engine with a natural language parser. And it was pretty good. We could support most of the kinds of things they did, certainly less graceful but pretty good. In fact, our parser was better than Infocom[']s in one case where the sentence was ambiguous. e.g. 'Walk into the room with the lamp.' Is the player carrying the lamp? Or is the lamp in the room? 
-
-For fun, we reverse engineered parts of Infocom[']s game format. We found the dictionary, certain text tokens used for text substitution, the game text. We also discovered the first example of compression I had ever seen and it just about made my head explode. They stored all ASCII characters in five bits! Pow! Mind blown. I had never considered anything like that. Just another hook.
-
-We developed two prototypes: Diner and Hell Ride. Diner was about bank robbers coming into the diner where you are a short order cook and you have to save the day. Hell Ride was pretty close to what you find here. I decided to implement it using modern tools. It[']s pretty good. Maybe.
-
-I hope you enjoy it.
-
-d."
-
-Section 10 - Credits
-
-Crediting is an action applying to nothing. Understand "Credits" as crediting.
-
-report crediting:
-	say "[story title], Copyright 2025 by Dana Montgomery and 1988 by No Shoes.[paragraph break]";
-	say "Extensions used in [story title]:[line break]";
-	say "[complete list of extension credits]".
 
 Chapter 6 - Figures
 
@@ -778,71 +634,7 @@ Figure of RideExit is the file "RideExit.png" ("The Hell Ride Exit").
 
 Figure of MercuryDime is the file "MercuryDime.png" ("A Mercury dime").
 
-Chapter 7 - The Player, Global Code
-
-The player is in the Parking Lot. 
-
-The description of the player is "You are despondent given that you and your date just had a huge fight and they stormed off. Maybe visiting the attractions at the carnival will make you feel better." 
-
-Instead of examining the player:
-	say "Oh, stop fussing. You look fine."
-
-The coupon is in the wallet. The description of the coupon is "You found this in a stack of coupons on the counter of the gas station."
-
-before examining the coupon, display Figure of Coupon.
-
-after reading a command:
-	if the player's command includes "please":
-		say "Please do not say 'please.'";
-		reject the player's command.
-
-after reading a command:
-	if the player's command matches "load", try restoring the game instead.
-	
-[obituary]
-Rule for printing the player's obituary:
-	[winning move]
-	if Control Panel Nine's button is switched on and Control Panel Nine's dial is properly set:
-		say "As you push the indigo button, the monitor switches to a view of the guillotine room. You can still see the blade rising and falling over the cars. Suddenly, you see the blade slowing down, taking longer and longer to fall. Until it finally comes to a complete rest. 
-
-The room is heavy with uneasy silence. The Hell Ride, once a thrilling spectacle, now looms motionless, as the guillotine blade is frozen halfway down its track. Moments ago, chaos erupted as the malfunctioning mechanism sent the blade crashing unpredictably, ripping through the roofs of cars on the track.
-
-A single car, its roof gashed open, sits under the still blade — a grim reminder of the disaster narrowly averted. Above, a black crow lands on the guillotine’s frame, its sharp caw cutting through the murmurs of anger and fear.
-
-Two mechanics climb the scaffolding with tools in hand, their appearance met with wary hope. The crowd watches, holding their breath, as the cursed ride’s fate hangs in the balance.
-
-As you exit the ride, the carnival owner and the mayor are present and extending their undying gratitude for saving the day, not to mention lives![paragraph break]";
-		say "*** You have won! ***";
-		say paragraph break;
-		rule succeeds;
-	[car was toad away]
-	else if toadaway is true:
-		say "[line break]*** You start the long walk home. ***[line break]";
-	[electrocuted by big switch]
-	else if electrocuted is true:
-		say "The sparks arc onto your unprotected hands electrocuting you on the spot.";
-		say "[line break]*** You have died! ***[line break]";
-	[grues]
-	else if the location is dark:
-		say "Oh no! You walked directly into the slavering fangs of a lurking grue!";
-		say "[line break]*** You have died! ***";
-		say paragraph break;
-	[some other way to die]
-	otherwise:
-		say "*** You have died! ***[line break]"
-		
-After printing the player's obituary: 
-	try requesting the complete score.
-	
-[fix up the map]
-Index map with title set to "The Carnival".
-Index map with Electrical Closet Eleven mapped northwest of Electrical Room.
-Index map with Electrical Closet Seven mapped southwest of Electrical Room.
-Index map with Guillotine Room mapped west of Generator Room.
-Index map with room-size set to 52
-	and room-size of the Electrical Room set to 74.
-
-Chapter 8 - RNG Seed, Money, Dimes, Sounds - Not for release
+Chapter 7 - RNG Seed, Money, Dimes, Sounds - Not for release
 			
 When play begins:
 	seed the random-number generator with 4321.
@@ -853,7 +645,7 @@ Sound of Bell is the file "Silence.ogg" ("The sound of silence").
 
 five dimes underlie the seat. 
 			
-Chapter 9 - RNG Seed, Money, Dimes, Sounds - For Release Only
+Chapter 8 - RNG Seed, Money, Dimes, Sounds - For Release Only
 
 When play begins:
 	seed the random-number generator with 0.
@@ -864,273 +656,8 @@ Sound of Bell is the file "Bell.ogg" ("The sound of a ship[']s bell").
 
 two dimes underlie the seat.
 
-Part 2 - Hints
 
-Chapter 1 - Hint Values and Code
-
-A permission is a kind of value. The permissions are allowed and denied.
-Hint usage is a permission that varies. Hint usage is allowed.
-
-Check asking for help for the first time:
-	say "Sometimes the temptation to rely on hints becomes overwhelming, and you may prefer to turn off hints now. If you do so, your further requests for guidance will be denied. Turn off hints? >";
-	if player consents:
-		now hint usage is denied;
-		say "[line break]Truly, a real adventurer does not need hints." instead.
-		
-Check asking for help:
-	if hint usage is denied, say "You have chosen to forego hints in this game. Be strong! Persevere!" instead.
-
-Chapter 2 - Basic Help Options
-
-Table of Basic Help Options (continued)
-title	subtable	description
-"Contacting the Author"	--	"If you have any difficulties with [story title], please contact me at dmontgom22@gmail.com"
-"The Parking Lot"	Table of Parking Lot Hints	--
-"The Attractions"	Table of Attractions Hints	--
-"The Games"	Table of Games Hints	--
-"Back Stage"	Table of Back Stage Hints	--
-"Hell Ride"	Table of Hell Ride Hints	--
-"The Electrical Area"	Table of Electrical Area Hints	--
-"The Control Room"	Table of Control Room Hints	--
-"Settings"	Table of Setting Options	--
-
-Chapter 3 - The Parking Lot
-
-Table of Parking Lot Hints
-title	subtable	description	toggle
-"What about the glove box?"		Table of Glove Box Hints	""	hint toggle rule
-"Why can[']t I leave the parking lot?"	Table of Leaving Lot Hints	""	hint toggle rule
-"What do I do with the string?"	Table of String Hints    	""    	hint toggle rule
-"Why does my car get towed?"	Table of Toad Away Hints	""	hint toggle rule
-
-Section 1 - String Hints
-
-Table of String Hints
-hint	used
-"Remember that you know how to macrame."	a number
-"Isn[']t macrame the art of tying?"
-"Oh, come now, isn't it obvious?"
-
-Section 2 - Glove Box Hints
-
-Table of Glove Box Hints
-hint	used
-"It[']s locked."	a number
-"Have you tried unlocking it?"	
-"You need a key."	
-"Look under the car seat."
-
-Section 3 - Leaving Parking Lot Hints
-
-Table of Leaving Lot Hints
-hint	used
-"Looks like you need something before heading into the carnival."	a number
-"Looks like you need a parking ticket."
-"The parking attendant has a parking ticket."		
-"Buy the parking ticket."
-
-Section 4 - Toad Away Hints
-
-Table of Toad Away Hints
-hint	used
-"Why might your car get towed?"	a number
-"Is your car parked legally?"	
-"Are you sure?"	
-"What about the parking stub"	
-"The parking attendant knows something about the stub"	
-"Put the stub on the dashboard."
-
-Chapter 4 - The Attractions
-
-Table of Attractions Hints
-title	subtable	description	toggle
-"Can I ride the rides?"	Table of Ride the Ride Hints	""	hint toggle rule
-"Why are tickets so expensive?"	Table of Ticket Price Hints	""	hint toggle rule
-"The rides are boring."	Table of Boring Ride Hints	""	hint toggle rule
-
-Section 1 - Ride the Ride Hints
-
-Table of Ride the Ride Hints
-hint	used
-"You[']ll need a ticket."	a number
-"Tickets are expensive though."
-"You can buy tickets at the Ticket Kiosk."
-
-Section 2 - Table of Ticket Price Hints
-
-Table of Ticket Price Hints
-hint	used
-"What? You were expecting wrist bands?"	a number
-"To remind you to spend your money wisely."
-
-Section 3 - Boring Ride Hints
-
-Table of Boring Ride Hints
-hint	used
-"Surely not ALL the rides are boring."	a number
-"It[']s a small carnival, what do you expect?"
-"Have you ridden Hell Ride?"
-
-
-Chapter 5 - The Games 
-
-Table of Games Hints
-title	subtable	description	toggle
-"Are the prizes important?"	Table of Important Prizes Hints	""	hint toggle rule
-"Why do the games only cost a dime?"	Table of Game Cost Hints	""	hint toggle rule
-"I[']ve found a Mercury dime. What is it?"	Table of Mercury Dime Hints	""	hint toggle rule
-
-Section 1 - Important Prizes Hints?
-
-Table of Important Prizes Hints
-hint	used
-"Important? That[']s a matter of opinion."	a number
-"A teddy bear to make up with your sweetie?"
-"I[']d go with my instincts on this one if I were you."
-"Yes, the prizes are important."
-
-Section 2 - Game Costs Hints
-
-Table of Game Cost Hints
-hint	used
-"What? You want them to cost a quarter?"	a number
-"The carnival likes to maintain a link to days past when games cost only a dime?"
-"Just be grateful"
-
-Section 3 - Mercury Dime Hints
-
-Table of Mercury Dime Hints
-hint	used
-"It[']s a dime."	a number
-"It[']s a Mercury Dime."
-"Have you looked at it?"
-"It[']s a dime. Geez."
-
-Chapter 6 - Back Stage 
-
-Table of Back Stage Hints
-title	subtable	description	toggle
-"Why do I get eaten by a grue?"	Table of Grue Hints	""	hint toggle rule
-"Are the doors important?"	Table of Doors Hints	""	hint toggle rule
-
-Section 1 - Table of Grue Hints
-
-Table of Grue Hints
-hint	used
-"Grues love the dark."	a number
-"Do you have a light?"
-"Have you looked for one?"
-"There are two in the game."
-"One is in the Dark Passage."
-"The other is in the Little Egypt tent."
-
-Section 2 - Table of Doors Hints
-
-Table of Doors Hints
-hint	used
-"Only if you want to know what[']s on the other side."	a number
-"Have you tried checking what[']s on the other side?"
-"You[']ll need a key"
-"You have to find it"
-"It[']s in Electrical Closet One"
-
-Chapter 7 - Hell Ride Hints
-
-Table of Hell Ride Hints
-title	subtable	description	toggle
-"Why do I die?"	Table of Guillotine Hints	""	hint toggle rule
-"What about the different rooms"	Table of Hell Ride Rooms	""	hint toggle rule
-
-Section 1 - Table of Guillotine Hints
-
-Table of Guillotine Hints
-hint	used
-"Everybody dies."	a number
-"So, you[']ve ridden Hell Ride."
-"Aren[']t the animatronics and wax figures amazing?"
-"Did you notice the guillotine rising and falling?"
-"Did you notice it chop you in half?"
-
-Section 2 - Table of Hell Ride Rooms Hints
-
-Table of Hell Ride Rooms
-hint	used
-"Everything sure looks realistic."	a number
-"Aren[']t the animatronics and wax figures amazing?"
-"Each room shows a different manner of punishment."
-"There[']s the Stocks, the Gallows, the Stake, the Dungeon, and the Guillotine."
-"Just your typical ride in the dark."
-
-Chapter 8 - The Electrical Area Hints
-
-Table of Electrical Area Hints
-title	subtable	description	toggle
-"What[']s going on in the Electrical Room?"	Table of Electrical Room Hints	""	hint toggle rule
-"What about the electrical panels?"	Table of Electrical Panel Hints	""	hint toggle rule
-"Are the fuses important?"	Table of Fuse Hints	""	hint toggle rule
-
-Section 1 - Table of Electrical Room Hints
-
-Table of Electrical Room Hints
-hint	used
-"There are exits in all directions"	a number
-"Have you mapped the area?"
-"Can you go in the direction you intend?"
-"The room is electromagnetic."
-"Maybe that[']s causing the problem."
-"Maybe you can make it so it[']s not electromagnetic."
-"Turn off the big switch."
-
-Section 2 - Table of Electrical Panel Hints
-
-Table of Electrical Panel Hints
-hint	used
-"There[']s a socket, a switch, and an indictor in each one."	a number
-"You could probably put something in the socket."
-"Looks like a fuse will fit in the socket."
-"I[']d put a fuse in the socket and flip the switch."
-
-Section 3 - Table of Fuse Hints
-
-Table of Fuse Hints
-hint	used
-"Yes."	a number
-"They come in pretty colors."
-"Have you seen those colors before?"
-"Have you put a fuse in a socket?"
-
-Chapter 9 - The Control Room Hints
-
-Table of Control Room Hints
-title	subtable	description	toggle
-"Tell me about the big switch."	Table of Big Switch Hints	""	hint toggle rule
-"What about the control panels?"	Table of Control Panel Hints	""	hint toggle rule
-
-
-Section 1 - Table of Big Switch Hints
-
-Table of Big Switch Hints
-hint	used
-"It[']s big"	a number
-"Very big"
-"It[']s in the Control Room."
-"Have you tried turning it off?"
-"Did you die because your hands were unprotected?"
-"Try wearing the gloves."
-
-Section 2 - Table of Control Panel Hints
-
-Table of Control Panel Hints
-hint	used
-"There's a dial, a button, and a light in each one."	a number
-"These are pretty colors."
-"Have you seen these colors before?"
-"Try spinning the dials."
-"Spin the dials to the right number."
-"Is there a number that corresponds to each color?"
-"Push the indigo button."
-
-Part 3 - The Game
+Part 2 - The Game
 
 Chapter 1 - Electrical Area
 
@@ -1247,9 +774,7 @@ A fuse is a kind of thing.
 Understand "fuse" as a fuse.
 A fuse has a color. Understand the color property as describing a fuse.
 A fuse has a number called fuse id. Understand the fuse id property as describing a fuse.
-
 The description of a fuse is "This is [color of the item described] colored electrical fuse." 
-
 The printed name of a fuse is "[color of the item described] colored fuse".
 
 Definition: a fuse is plugged-in rather than loose if it is contained by a socket.
@@ -1467,8 +992,6 @@ A dashboard is part of the beater car. The dashboard is a supporter. Understand 
 
 A seat is part of the beater car. The seat is a supporter. It is fixed in place. Understand "car seat" as seat. The description of the seat is "A faux leather seat that looked great when it was new." The plural of seat is seats. The indefinite article of seat is "a".
 
-three quarters and one nickel underlie the seat.
-
 Your keys underlie the seat. Understand "car key", "car keys", and "key" as your keys. The description of the your is "These are your car keys. It[']s a wonder you could even find them, your house is such a mess."
 
 instead of turning your keys when the player is in the beater car, say "If you left now you would just end up in a bar, crying over a beer about your fight. You decide to stay and enjoy the carnival after all." instead.
@@ -1488,7 +1011,7 @@ After going south from the parking lot when the Ticket Booth is unvisited and th
 	continue the action.
 	
 Before looking when the location is the Ticket Booth:
-	display Figure of TicketBooth.
+	display Figure of TicketBooth;
 
 The Ticket Booth is a room. The Ticket Booth is outdoors. 
 The Ticket Booth is northwest of the Fortune Teller Booth.
@@ -1527,13 +1050,18 @@ The Bumper Cars ticket is a ride ticket. The cashier carries the Bumper Cars tic
 The Carousel ticket is a ride ticket. The cashier carries the Carousel ticket. The price of the carousel ticket is $1.00. The description of the Carousel ticket is "'Admit One' to the Carousel."
 
 The Cashier is an attendant in the Ticket Booth. 
-	
-There is a signboard in the Ticket Booth. The signboard is scenery. Understand "sign" as signboard. The description of the signboard is 
-"[line break]$3.00 Hell Ride
-[line break]$3.00 Fortune Teller
-[line break]$2.00 Ferris Wheel
-[line break]$2.00 Bumper Cars
-[line break]$1.00 Carousel"
+
+price table is a table name that varies. The price table is Table of Ticket Prices.
+To show a price table:
+	repeat through price table:
+		say "[price entry] [object entry][line break]".
+
+There is a signboard in the Ticket Booth. The signboard is scenery. Understand "sign" as signboard. The description of the signboard is "It[']s a sign displaying the prices of the various rides".
+
+reading is an action applying to one thing. Understand "read" as reading.
+instead of reading or examining the signboard:
+	now price table is Table of Ticket Prices;
+	show a price table.
 
 Section 4 - Concession Stand
 
@@ -1556,17 +1084,11 @@ There is a menu to the right of the window. You can see the treats inside the st
 
 treats are here. Treats are scenery. Understand "treat" as treats. The description of treats is "There are a variety of things to eat here."
 
-a menu is here.  Understand "sign" as menu. the Menu is fixed in place. The description of the menu is 
-"[line break]$2.00 Cola
-[line break]$2.50 Popcorn
-[line break]$1.50 Candy Apple
-[line break]$1.50 Cotton Candy
-[line break]$1.50 Soft Pretzel
-[line break]$1.00 Bubblegum"
+a menu is here.  Understand "sign" as menu. the Menu is fixed in place. The description of the menu is "It[']s a sign display the prices of the various concession items for sale."
 
-a can is here. The price of a can is $2.00. The description of the can is "This soda is ice cold."
+a Drink is here. The price of a drink is $2.00. The description of the drink is "This soda is ice cold."
 
-The can is a fluid container. The liquid of the can is Cola. understand "soda" as cola. The current volume of the can is 8.0 fl oz. Understand "Coke" as the can.
+The drink is a fluid container. The liquid of the drink is Cola. understand "soda", "drink", "cola", and "Coke" as the drink. The current volume of the drink is 8.0 fl oz. 
 
 Instead of player drinking a fluid container:
 	if can is empty:
@@ -1576,15 +1098,19 @@ Instead of player drinking a fluid container:
 		if the current volume of the noun is less than 0.0 fl oz, now the current volume of the noun is 0.0 fl oz;
 		say "[The person asked] gulp down some [liquid of the noun]."
 
-bubblegum is here. bubblegum is edible. The price of bubblegum is $1.00. The description of the bubblegum is "This is a square of Bazooka Joe Bubblegum. Really now, is there any other?"
+Bubblegum is here. bubblegum is edible. The price of bubblegum is $1.00. The description of the bubblegum is "This is a square of Bazooka Joe Bubblegum. Really now, is there any other?"
 
-a bucket of popcorn is here. The bucket of popcorn is edible. The price of popcorn is $2.50. The description of the popcorn is "The bucket of popcorn looks enormous!"
+a Bucket of Popcorn is here. The bucket of popcorn is edible. The price of popcorn is $2.50. The description of the popcorn is "The bucket of popcorn looks enormous!"
 
-a candy apple is here. The candy apple is edible. The price of a candy apple is $1.50. The description of the candy apple is "The candy apple is your typical caramel covered apple. It looks like it would get stuck in your teeth."
+a Candy Apple is here. The candy apple is edible. The price of a candy apple is $1.50. The description of the candy apple is "The candy apple is your typical caramel covered apple. It looks like it would get stuck in your teeth."
 
-cotton candy is here. Cotton candy is edible. The price of cotton candy is $1.50. The description of cotton candy is "The cotton candy is a mixture of pink and blue floss."
+Cotton Candy is here. Cotton candy is edible. The price of cotton candy is $1.50. The description of cotton candy is "The cotton candy is a mixture of pink and blue floss."
 
-a soft pretzel is here. The soft pretzel is edible. The price of the soft pretzel is $1.50. The description of the soft pretzel is "The soft pretzel is generously sprinkled with salt."
+a Soft Pretzel is here. The soft pretzel is edible. The price of the soft pretzel is $1.50. The description of the soft pretzel is "The soft pretzel is generously sprinkled with salt."
+
+instead of reading or examining the menu:
+	now price table is Table of Concession Prices;
+	show a price table.
 
 Section 5 - High Striker
 
@@ -1886,25 +1412,24 @@ after taking the lantern for the first time:
 		repeat through the Table of Scored Circumstances:
 			if the description entry is "Taking the flashlight":
 				blank out the whole row;
-	now the lantern is seen;
 
 The folding chair is a enterable scenery supporter in the Show Tent. The description of the Folding Chair is "This is one of many folding chairs in the tent tonight."
 
-LittleEgyptAuto is a scene. 
-LittleEgyptAuto begins when the player has been in the show tent for exactly three turns or the player has been on the folding chair for exactly two turns.. 
-LittleEgyptAuto ends when the number of filled rows in the Table of Little Egypt Events is 0.
+Little Egypt AutoPlay is a scene. 
+Little Egypt AutoPlay begins when the player has been in the show tent for exactly three turns or the player has been on the folding chair for exactly two turns.. 
+Little Egypt AutoPlay ends when the number of filled rows in the Table of Little Egypt Events is 0.
 
-When LittleEgyptAuto ends:
+When Little Egypt AutoPlay ends:
 	say "You applaud until your hands are sore. Did she just wink at you?[paragraph break]As she leaves the stage, Little Egypt tosses one of her veils to you!";
 	now the player carries the Sheer Veil.
 	
-every turn during LittleEgyptAuto:
+every turn during Little Egypt AutoPlay:
 	repeat through Table of Little Egypt Events:
 		say "[description entry][paragraph break]";
 		blank out the whole row;
 		rule succeeds.
 
-Instead of doing something other than waiting, looking, listening or examining during LittleEgyptAuto:
+Instead of doing something other than waiting, looking, listening or examining during Little Egypt AutoPlay:
 	say "You[']re much too entranced by the show to do anything other than watch the show. You are riveted[if the player is in the folding chair] to your seat[end if]!".
 
 Section 10 - Ferris Wheel Ride
@@ -2076,7 +1601,6 @@ after taking the flashlight for the first time:
 		repeat through the Table of Scored Circumstances:
 			if the description entry is "Taking the lantern":
 				blank out the whole row;
-	now the lantern is seen;
 
 Section 3 - Maintenance Office
 
@@ -2275,16 +1799,19 @@ A door11 is a wooden door. The color of door11 is khaki. The description of door
 	
 Chapter 4 - Hell Ride
 
-Section 1 - Automated Hell Ride
+Section 1 - Hell Ride Scene
 
-HellRideAuto is a scene. 
-HellRideAuto begins when the player is in the hell ride car for 3 turns.
-HellRideAuto ends when the number of filled rows in the Table of Hell Ride Events is 1.
+Hell Ride AutoPlay is a scene. 
+Hell Ride AutoPlay begins when the player is in the hell ride car for 2 turns.
+Hell Ride AutoPlay ends when the number of filled rows in the Table of Hell Ride Events is 1.
 	
-When HellRideAuto ends:
+When Hell Ride AutoPlay ends:
 	end the story finally.
 	
-every turn during HellRideAuto:
+Instead of doing something other than waiting, looking, listening or examining during Hell Ride AutoPlay:
+	say "You[']re enjoying the ride so much that you don[']t want to do anything but sit and watch the ride go by."
+	
+every turn during Hell Ride AutoPlay:
 	repeat through Table of Hell Ride Events:
 		display figure entry;
 		say "[bold type][locale text entry][roman type][line break][description entry][paragraph break]Mist fills the area as you move to the next room...
@@ -2300,9 +1827,6 @@ After going south from the Head of Line when the Ride Entrance is unvisited:
 	
 Before looking when the location is the Ride Entrance:
 	display Figure of Hell Ride.
-	
-Instead of doing something other than waiting, looking, listening or examining during HellRideAuto:
-	say "You are having such a good time that you don[']t want to do anything but sit and enjoy the ride."
 	
 Ride Entrance is a room. Ride Entrance is south of Head of the Line. "[description corresponding to the locale of Ride Entrance in the Table of Hell Ride Events]"
 
@@ -2323,7 +1847,7 @@ Before looking when the location is the Stocks Room:
 
 Stocks Room is south of the Ride Entrance. "[description corresponding to the locale of Stocks Room in the Table of Hell Ride Events]"
 
-wooden stocks are a supporter in the Stocks Room. The wooden stocks are fixed in place. The description of the wooden stocks is "At the square[']s center stand a row of crude wooden stocks, their heavy beams stained from years of weather and use. Iron clasps hold the unfortunate captives by their wrists and necks, their bodies forced into unnatural, humiliating postures." 
+The wooden stocks are a supporter in the Stocks Room. The wooden stocks are scenery. The wooden stocks are fixed in place. The description of the wooden stocks is "At the square[']s center stand a row of crude wooden stocks, their heavy beams stained from years of weather and use. Iron clasps hold the unfortunate captives by their wrists and necks, their bodies forced into unnatural, humiliating postures." 
 
 
 Section 4 - Gallows Room
@@ -2337,7 +1861,7 @@ Before looking when the location is the Gallows Room:
 	
 The Gallows Room is south of the Stocks Room.  "[description corresponding to the locale of Gallows Room in the Table of Hell Ride Events]"
 
-The gallows platform is here. The gallows platform is a supporter. The gallows platform is fixed in place. Understand "gallows" as gallows platform. The description of the gallows platform is "At the center of the square, rising like a grim monument to mortality, stands the gallows — a wooden platform, darkened by age and weather, with thick ropes hanging like vipers poised to strike." 
+The gallows platform is scenery in the Gallows Room. The gallows platform is a supporter. The gallows platform is fixed in place. Understand "gallows" as gallows platform. The description of the gallows platform is "At the center of the square, rising like a grim monument to mortality, stands the gallows — a wooden platform, darkened by age and weather, with thick ropes hanging like vipers poised to strike." 
 
 Section 5 - Stake Room
 
@@ -2352,13 +1876,7 @@ The Stake Room is south of the Gallows Room. "[description corresponding to the 
 
 stakes are in the Stake Room. It is scenery. The description is "Three wooden stakes rise from a pyre. Bound to the stakes are three women."
 
-A pyre is an open unopenable container in the Stake Room. The pyre is fixed in place. Understand "fire" as pyre. The description is "The flames burn ever higher." 
-
-After printing the name of the pyre:
-	omit contents in listing.
-	
-After printing the name of a closed unopenable container:
-	omit contents in listing.
+A pyre is an open unopenable container in the Stake Room. "The flames of the pyre burn ever brighter and rise ever higher engulfing the victims." The pyre is fixed in place. Understand "fire" as pyre. The description is "The flames burn ever higher." 
 
 Section 6 - Dungeon
 
@@ -2373,7 +1891,7 @@ The Dungeon is south of the Stake Room. "[description corresponding to the local
 
 An iron chair is scenery in the Dungeon. The iron chair is a supporter. understand "spiked" and "seat" as iron chair. The description of the iron chair is "A spiked chair looms in the corner, its cruel design gleaming faintly in the dim light." 
 
-chains are here. They are scenery. The description of the chains is "The chains rattle against the walls."
+some chains are here. They are scenery. The description of the chains is "The chains rattle against the walls."
 A rack is here. It is scenery. The description of the rack is "The rack has a prisoner splayed in four directions."
 A brazier is here. It is scenery. The description of the brazier is "It is glowing red with an infernal heat."
 A riveted iron-bound door is here. It is scenery.
@@ -2389,7 +1907,7 @@ Before looking when the location is the Guillotine Room:
 
 The Guillotine Room is south of the Dungeon. "[description corresponding to the locale of Guillotine Room in the Table of Hell Ride Events]"
 
-The guillotine platform is here. The guillotine platform is a supporter. Understand "scaffold" as guillotine platform. The description of the guillotine platform is "At the center of the square stands a raised wooden platform, stark and imposing, where the grim sentence is to be carried out." 
+The guillotine platform is scenery in the Guillotine Room. The guillotine platform is a supporter. Understand "scaffold" as guillotine platform. The description of the guillotine platform is "At the center of the square stands a raised wooden platform, stark and imposing, where the grim sentence is to be carried out." 
 
 Section 8 - Ride Exit
 
@@ -2402,14 +1920,22 @@ Before looking when the location is the Ride Exit:
 
 The Ride Exit is south of the Guillotine Room. "[description corresponding to the locale of Ride Exit in the Table of Hell Ride Events]"
 
-The merchandise stand is scenery in the Ride Exit. The merchandise stand is a container. Understand "stand" as merchandise stand. The description of the merchandise stand is "The stand is bathed in red light, adding to the ominous mood." 
+The merchandise stand is scenery in the Ride Exit. The merchandise stand is a container. Understand "stand" and "display" as merchandise stand. The description of the merchandise stand is "The stand is bathed in red light, adding to the ominous mood." 
 
-plastic bones are in the merchandise stand. The price of the plastic bones is $1.00. The description is "This is a collection of plastic bones meant to decorate your yard."
+some Plastic Bones are in the merchandise stand. The price of the plastic bones is $1.00. The description is "This is a collection of plastic bones meant to decorate your yard."
 
-devil horns are in the merchandise stand. The price of the devil horns is $2.00. The description is "The devil horns tie to your head."
+some Devil Horns are in the merchandise stand. The price of the devil horns is $2.00. The description is "The devil horns tie to your head."
 
-A t-shirt is in the merchandise stand. The price of the t-shirt is $7.50. Understand "t-shirts" as t-shirt. The description is "This is a black t-shirt with the caption 'I Survived Hell Ride!"
-	
+some Key Chains are in the merchandise stand. The price of the key chains is $2.00. The description is "The key chains say 'I Survived Hell Ride!'"
+
+A T-Shirt is in the merchandise stand. The price of the t-shirt is $7.50. Understand "t-shirts" as t-shirt. The description is "This is a black t-shirt with the caption 'I Survived Hell Ride!"
+
+There is a price list in the Ride Exit. The price list is scenery. Understand "sign" as price list. The description of the price list is "It[']s a sign displaying the prices of the merchandise.".
+
+instead of reading or examining the price list:
+	now price table is Table of Merchandise Prices;
+	show a price table.
+
 Chapter 5 - Second Floor
 
 Section 1 - Holding Room
@@ -2647,8 +2173,255 @@ instead of examining the monitor:
 	say "[description entry][line break]";
 	now ControlPanelImage is figure choice entry;
 	display ControlPanelImage.
+	
+Part 3 - Regions
 
-Part 4 - Unit Tests
+The Midway is a region. Parking Lot, Ticket Booth, Concession Stand, High Striker, Show Facade, Show Tent, Head of the Line,
+Ferris Wheel Ride, Bumper Cars Ride, Fortune Teller, Carousel Ride, Dime Toss Game, and the Pitcher's Mound are in the Midway. The sky is in the Midway.
+
+HellRide is a region. Ride Entrance, Stocks Room, Gallows Room, Stake Room, Dungeon, Guillotine Room, Ride Exit are in HellRide.
+
+Electrical Area is a region. Electrical Room, Electrical Closet One, Electrical Closet Three, Electrical Closet Five, Electrical Closet Seven, Electrical Closet Nine, and Electrical Closet Eleven are in the Electrical Area.
+
+Back Stage is a region. Dark Passage, Maintenance Office, Crawl Space, Mechanical Room North, Mechanical Room South, Generator Room, Storage Room are in Back Stage.
+
+Second Floor is a region. Dark Hallway, Control Room, and Holding Room are in the Second Floor.
+
+Part 4 - Tables
+
+Section 1 - Table of Bored Responses
+
+Table of Bored Responses
+response
+"He[']s just trying to earn enough money to take his sweetie to the movies next week."
+"He[']s thinking about having a brewski with his bros after work."
+"His mind is completely blank."
+"He[']s thinking about the big game on Friday night."
+"He[']s wondering if his SAT scores are good enough to get into college."
+"He[']s wondering why he took this stupid job in the first place."
+"His thoughts are entirely focused on a cheeseburger for lunch."
+"He wonders how is he supposed to look cool dressed in this awful uniform."
+
+Section 2 - Table of Songs
+
+Table of Songs
+artist	song	rickroll
+"Led Zeppelin"	"Fool In The Rain"	false
+"Pink Floyd"	"Comfortably Numb"	false
+"Aretha Franklin"	"Respect"	false
+"Steely Dan"	"Aja"	false
+"Taylor Swift"	"Shake It Off"	false
+"Pharell"	"Happy"	false
+"Dolly Parton"	"Jolene"	false
+"Van Morrison"	"Brown Eyed Girl"	false
+"Weezer"	"Africa"	false
+"Johnny Cash"	"Folsom Prison Blues"	false
+"Cat Stevens"	"Peace Train"	false
+"Lou Reed and the Velvet Underground"	"Sweet Jane"	false
+"Queen"	"Bohemian Rhapsody"	false
+"Bob Seger"	"Old Time Rock[']N[']Roll"	false
+"Boston"	"More That A Feeling"	false
+"Roger Miller"	"King of the Road"	false
+"Elvis Presley"	"Suspicious Minds"	false
+"Jimmy Buffet"	"Margaritaville"	false
+"The Cure"	"Friday I'm In Love"	false
+"Dave Edmunds"	"I Hear You Knocking"	false
+"Bruddah Iz"	"Over The Rainbow"	false
+"Aerosmith"	"Dream On"	false
+"Paul Simon"	"Kodachrome"	false
+"R.E.M."	"Losing My Religion"	false
+"Modern English"	"Melt With You"	false
+"Rick Astley"	"Never Gonna Give You Up"	true
+"Bob Marley"	"No Woman, No Cry"	false
+"Smokey Robinson"	"Tracks Of My Tears"	false
+"Billy Joel"	"Piano Man"	false
+"Warren Zevon"	"Werewolves Of London"	false
+"Dusty Springfield"	"Son Of A Preacher Man"	false
+"Kermit the Frog"	"Rainbow Connection"	false
+"David Bowie"	"Young Americans"	false
+"Ben E. King"	"Stand By Me"	false
+"Blondie"	"Heart Of Glass"	false
+"Neil Diamond"	"Sweet Caroline"	false
+"The Grateful Dead"	"Ripple"	false
+"Bruce Springsteen"	"Born To Run"	false
+"The Talking Heads"	"Psycho Killer"	false
+"The Village People"	"YMCA"	false
+
+Section 3 - Table of Monitor Descriptions
+
+Table of Monitor Descriptions
+link number	figure choice		description
+0	Figure of ControlPanel		"The monitor now shows nothing but snow."
+1	Figure of ControlPanelStocks		"The monitor now shows a tableau of poor unfortunate townsfolk locked in stocks."
+3	Figure of ControlPanelGallows		"The monitor now shows a scene of someone waiting to be hanged."
+5	Figure of ControlPanelStake		"The monitor now displays a scene of three women being burned at the stake."
+7	Figure of ControlPanelDungeon		"The monitor now shows the implements of torture in the dungeon."
+9	Figure of ControlPanelGuillotine		"The monitor now shows a tableau of a guillotine rising and falling over the ride exit."
+11	Figure of ControlPanelExit		"The monitor shows the gift shop located at the Hell Ride exit."
+
+Section 4 - Table of High Striker Prizes
+
+Table of High Striker Prizes
+index	object	description
+"1"	teddy bear	"a teddy bear"
+"2"	Swiss army knife	"a Swiss Army knife"
+"3"	poster of Taylor Swift	"a poster of Taylor Swift"
+"4"	fuse13	"a magenta fuse"
+
+Section 5 - Table of Dime Toss Prizes
+
+Table of Dime Toss Prizes
+index	object	description
+"1"	small plush monkey	"a stuffed monkey"
+"2"	fuse15	"an orange fuse"
+"3"	poster of Billie Eilish	"a poster of Billie Eilish"
+"4"	pocket mirror	"a small pocket mirror"
+
+Section 6 - Table of Pitcher's Mound Prizes
+
+Table of Pitcher's Mound Prizes
+index	object	description
+"1"	fuse3	"a crimson fuse"
+"2"	small plush donkey	"a plush donkey"
+"3"	goldfish	"a goldfish in a bowl"
+"4"	poster of Lourde	"a poster of Lourde"
+
+Section 7 - Table of Ticket Prices
+
+Table of Ticket Prices
+object	price
+Hell Ride Ticket	$3.00
+Fortune Teller Ticket	$3.00
+Ferris Wheel Ticket	$2.00
+Bumper Cars Ticket	$2.00
+Carousel Ticket	$1.00
+
+Section 8 - Table of Concession Prices
+
+Table of Concession Prices
+object	price
+Drink	$2.00 
+Popcorn	$2.50 
+Candy Apple	$1.50 
+Cotton Candy	$1.50 
+Soft Pretzel	$1.50 
+Bubblegum	$1.00 
+
+Section 9 - Table of Merchandise Prices
+
+Table of Merchandise Prices
+object	price
+Key Chains	$2.00 
+Fuse1	$3.50 
+Devil Horns	$2.00 
+Plastic Bones	$1.00 
+T-Shirt	$7.50 
+
+Section 10 - Table of Hell Ride Events
+
+Table of Hell Ride Events
+locale	locale text	figure	description
+Ride Entrance	"Ride Entrance"	figure of Hell Ride	"The cars that will take you into the fearsome Hell Ride stop here for you to board and then move forward, the safety bar locked in place, as the entrance to Hell Ride looms ahead — a grotesque facade of twisted metal and carved wood, illuminated by flickering blood-red lights. The air carries a faint sulfuric tang mingled with the sweet aroma of carnival popcorn.
+
+A towering archway of flames, spikes, and grinning skulls frames the entrance, crowned by flickering letters that read 'HELL RIDE', pulsing like a heartbeat. Below, crouching demon sculptures extend clawed hands in a sinister invitation. Wooden doors cover the entrance, whispering with faint, menacing chuckles as distorted organ music grows louder, punctuated by shrieks and grinding machinery.
+
+Inside, near-total darkness is broken by flashes of sickly green light revealing twisted paths and grotesque shapes. Beyond the threshold lies only uncertainty and terror."
+Stocks Room	"Stocks Room"		figure of RideStocks	"The public square is a cobblestone expanse bordered by weathered timber-framed buildings. The air carries the mingling scents of chimney smoke, damp earth, and the faint tang of a nearby smithy. At its center, crude wooden stocks stand as a grim focal point, their beams weathered and stained from years of use. Iron clasps lock captives in degrading postures, their tattered clothing offering little protection from the biting wind.
+
+The animatronics and wax figures are extremely life like. Hell Ride sure lives up to its name.
+
+The punished individuals hang their heads in shame, their faces etched with despair. Around them, the crowd revels in cruelty — a wiry man spits insults with gleeful laughter, while a stout woman throws overripe vegetables, each impact sparking jeers. Even children join in, pointing and mocking with mischievous delight.
+
+The square hums with noise: the crowd’s taunts, the crack of objects hitting wood, and the quiet murmurs of the suffering captives. Overhead, a gray sky threatens rain, indifferent to the spectacle below. The jeering mob ignores its ominous weight, too engrossed in their shared cruelty to notice nature’s disapproval."
+Gallows Room	"Gallows Room"	figure of RideGallows	"The public square, slick with morning drizzle, lies under a brooding, overcast sky. At its center looms the gallows, a weathered wooden platform with thick ropes swaying ominously. The crowd stands in somber silence, broken by the shuffle of feet or faint murmurs, their eyes fixed on the grim scene.
+
+A hooded executioner, cloaked in black, adjusts the frayed noose with practiced precision, his cold presence exuding purpose. In front of him stands the condemned man, pale and trembling, his bound hands behind him. Beads of sweat mix with rain on his haunted face as his darting eyes search the indifferent crowd. Each shallow breath forms a fleeting cloud in the chilly air — a fragile reminder of his fleeting life.
+
+Vendors hawk bread and cider, while children strain for a better view. An old man clutches a rosary, whispering prayers, as others smirk and place bets. Above, the bell tower tolls, its mournful chime marking the passage of the man’s final moments. A raven perches on the gallows’ beam, its unblinking gaze fixed on the scene below.
+
+As the executioner adjusts the noose around the man’s neck, the crowd falls silent, the air thick with dread. Distant thunder rumbles faintly, as if the heavens themselves await the inevitable."
+Stake Room	"Stake Room"	figure of RideStake	"The public square is steeped in grim silence, broken only by the crackling of flames. At its center, three wooden stakes rise from a pyre of logs and kindling, darkened by smoke from past executions. Bound to the stakes are three women, their faces reflecting defiance, resignation, and terror.
+
+A crowd encircles the scene, expressions ranging from morbid fascination to righteous fury. Children cling to their mothers, while elders nod solemnly. Some jeer and throw stones; others murmur prayers or avert their gaze.
+
+The executioner, hooded and clad in a leather apron, steps forward with a blazing torch, igniting the pyre in a sudden roar. Flames climb rapidly as thick smoke coils upward. The condemned cry out, their voices mingling with the crackle of fire. The oppressive heat radiates outward, pressing against the silent, uneasy crowd.
+
+Gray clouds loom overhead, nature’s somber backdrop to the grim spectacle. A raven caws from the bell tower as slow church bells toll, each strike punctuating the tragedy. As the pyre burns, some onlookers remain transfixed while others quietly slip away, the square heavy with ash, smoke, and the echoes of the condemned."
+Dungeon	"Dungeon"		figure of RideDungeon	"The dungeon is a dark, suffocating chamber carved into the earth, its stone walls slick with moisture and grime. The air reeks of sweat, blood, mildew, and burning oil from flickering torches mounted on rusted sconces. Shadows twist on the walls, creating grotesque, unsettling shapes in the dim light.
+
+Chains hang from walls and ceilings, their faint clinking blending with the moans and occasional screams of prisoners. Water drips rhythmically from a cracked ceiling, adding to the chamber[’]s eerie ambiance.
+
+The room is littered with instruments of torment: a splintered rack, a glowing brazier holding bloodstained tools, and a spiked chair gleaming faintly in the light. Prisoners endure their own horrors — one stretched on the rack, another hanging limply from manacles, and a third gasping weakly in the spiked chair.
+
+The hooded torturer moves with detached precision, their leather apron stained with the evidence of countless victims. They work silently, indifferent to the agony surrounding them.
+
+Above, rats scuttle in the shadows, and the low ceiling presses down like the weight of despair. The sole exit, a riveted iron-bound door, feels more like a barrier to hope than a path to freedom.
+
+This is a realm of suffering and hopelessness, where life and death blur, and torment is the only certainty."
+Guillotine Room	"Guillotine Room"		figure of RideGuillotine	"The public square buzzes with tense anticipation, a crowd gathered under gray skies that cast a somber light on the cobblestones. At the center, a stark wooden platform looms, its purpose grim and unavoidable.
+
+A lone figure stands on the scaffold, bound hands behind their back and head bowed low, avoiding the crowd’s gaze. Their tattered clothing, once fine, reflects the fall that led them to this moment.
+
+The crowd encircles the platform, emotions ranging from jeers and curses to silent, grim observation. Children sit on shoulders, their curious eyes unaware of the event’s gravity. Near the edge of the platform, the town crier proclaims the crime: 'High treason against the crown. Let this be a warning to all who defy the realm!'
+
+The condemned flinches but remains silent as the executioner — a hooded figure in black — stands ready beside the guillotine, its blade gleaming faintly in the dim light. The murmurs of the crowd fall into silence at the executioner’s signal, leaving only the rustle of wind and the creak of the scaffold.
+
+As the condemned approaches the guillotine, a crow caws sharply from a nearby rooftop, its cry echoing through the square like an omen. The crowd leans forward, breath held, as justice and mortality converge on the scene.
+
+There is just one problem: the guillotine is being raised and lowered by some mechanism. It appears that the timing of the guillotine is off and it is being lowered onto the cars instead of between them. If a person were to be in a car as it passed under the guillotine, they would be decapitated.
+[if the player is in the hell ride car]
+
+Looks like your goose is cooked. Say 'Goodnight, Gracie!' 
+
+You are stupefied as you sit watching guillotine rising and falling, dropping like a stone on the cars in front of you. Thank goodness they are empty. As your turn comes, you raise your hands in a feeble attempt to stop the inevitable.[end if]"
+Ride Exit	"Ride Exit"	figure of RideExit	"The exit of Hell Ride is designed to leave riders with lingering unease. Emerging from a dark corridor with peeling black and red-streaked walls, flickering lights cast erratic shadows on the uneven floor. The air is cool and damp, carrying a faint metallic tang, while faint whispers and distant screams echo softly in the background.
+
+Riders step into a small courtyard enclosed by jagged, rusted fencing draped with cobwebs and plastic bones. Overhead, a weathered sign reads, 'You[’]ve Survived… For Now.' Nearby, carnival workers in tattered costumes watch silently, occasionally muttering cryptic remarks like, 'Not everyone makes it out.'
+
+A merchandise display glows red, selling items like Hell Ride Survivor t-shirts, key chains, plastic bones, and devil horns. Beyond the fencing, the cheerful carnival lights and sounds feel jarring, contrasting sharply with the ride’s oppressive atmosphere.
+
+The exit ensures Hell Ride isn’t just an experience — it lingers, blurring the line between thrill and fear."
+
+Section 11 - Table of Little Egypt Events
+
+Table of Little Egypt Events
+description
+"In the dimly lit tent, you see that the stage is decorated to resemble an exotic Middle Eastern market or palace, featuring rich, colorful fabrics, brass ornaments, and lanterns casting a warm, flickering glow. Scents of incense waft through the air, enhancing the atmosphere of mystique. The backdrop displays painted scenes of pyramids, desert landscapes, and domed structures evoking a sense of being transported to the 'Middle East'. "
+"Little Egypt emerges draped in flowing silk veils which she skillfully uses as part of the dance. Her attire consists of a sparkling, sequined bodice and a flowing skirt, adorned with jingling coin belts and jewelry that accentuate her movements."
+"The performance begins with slow, undulating movements, drawing you into the rhythm of exotic live music played on traditional instruments like the oud, darbuka, or zurna. As the tempo builds, her hips, torso, and hands move in intricate, mesmerizing patterns, demonstrating remarkable control and fluidity. She incorporates dramatic spins, drops, and shimmies, often accentuating the beat of the music with a quick jingle of her coin belt."
+"Little Egypt makes eye contact with you and smiles enigmatically. During her performance she balances a sword on her head and accents her dance with finger cymbals."
+"The music alternates between hauntingly slow melodies and rapid, energetic drum beats, creating an emotional arc that keeps you entranced. Little Egypt relies on the music[']s dynamic changes to tell a story with movements reflecting joy, sorrow, seduction, and celebration."
+"The performance concludes with a dramatic flourish of a fast-paced shimmy, a bold spin, and Little Egypt dramatically casts off her veils. The dancer takes a bow to enthusiastic applause, leaving you spellbound by the sensual yet artful display."
+
+Section 12 - Description of Hell Ride
+
+When play begins:
+	 choose row 1 in Table of Basic Help Options;
+	 now description entry is "Hell Ride - A Ride to remember...
+
+In the early 1980[']s, I had an Apple II Plus computer with 64K of RAM, dual 5.25[quotation mark] floppy disks, and a color monitor as big as a television. And the very first game I ever bought was Infocom[']s Zork I: The Great Underground Empire. This was cool. It was all text-based. The game described your surroundings and you interacted with commands that say what you wanted to do. This 'Interactive Fiction' really evoked in a game what I appreciated most about reading: rich descriptions, colorful characters, and the like. After Zork I, there was Zork II and III. Enchanter, Moonmist, Suspect, and so many 
+more. I played them all with my best friend Andy.
+
+Andy and I were software developers at the time and we thought, 'We can do this!' So we set out to do this. We developed a game engine with a natural language parser. And it was pretty good. We could support most of the kinds of things they did, certainly less graceful but pretty good. In fact, our parser was better than Infocom[']s in one case where the sentence was ambiguous. e.g. 'Walk into the room with the lamp.' Is the player carrying the lamp? Or is the lamp in the room? 
+
+For fun, we reverse engineered parts of Infocom[']s game format. We found the dictionary, certain text tokens used for text substitution, the game text. We also discovered the first example of compression I had ever seen and it just about made my head explode. They stored all ASCII characters in five bits! Pow! Mind blown. I had never considered anything like that. Just another hook.
+
+We developed two prototypes: Diner and Hell Ride. Diner was about bank robbers coming into the diner where you are a short order cook and you have to save the day. Hell Ride was pretty close to what you find here. I decided to implement it using modern tools. It[']s pretty good. Maybe.
+
+I hope you enjoy it.
+
+d."
+
+Section 13 - Credits
+
+Crediting is an action applying to nothing. Understand "Credits" as crediting.
+
+report crediting:
+	say "[story title], Copyright 2025 by Dana Montgomery and 1988 by No Shoes.[paragraph break]";
+	say "Extensions used in [story title]:[line break]";
+	say "[complete list of extension credits]".
+	
+Part 5 - Unit Tests
 
 Chapter 1 - Life and Death
 
@@ -2697,11 +2470,11 @@ Test Backstage with "test b1 / test b1a / test b2 / test b3 / test b4"
 
 Chapter 6 - Concession Stand
 
-Test Concession with "brief / s / sw / l at treats / read menu / buy cola / buy popcorn / buy candy apple / buy cotton candy / buy pretzel / inventory / drink soda / g / g / g / g / i / ne / n / i / score".
+Test Concession with "brief / s / sw / l at treats / read menu / buy cola / buy popcorn / buy candy apple / buy cotton candy / buy pretzel / buy bubblegum / inventory / drink soda / g / g / g / g / i / ne / n / i / score".
 
 Chapter 7 - Hell Ride
 
-Test Ride with "brief / s / buy hell ride ticket / s / give hell ride ticket to operator / s / enter hell ride car / wait / z / z / z / z / z / z".
+Test Ride with "brief / s / buy hell ride ticket / s / give hell ride ticket to operator / s / enter hell ride car / wait / z / z / z / z / z".
 
 Chapter 8 - Electrocution
 
@@ -2715,16 +2488,268 @@ Chapter 10 - Miscellaneous
 
 Test Misc with "brief / xyzzy / plugh / hello sailor / please get the dime / i / score".
 
-Part 5 - Regions
+Part 6 - Hints
 
-The Midway is a region. Parking Lot, Ticket Booth, Concession Stand, High Striker, Show Facade, Show Tent, Head of the Line,
-Ferris Wheel Ride, Bumper Cars Ride, Fortune Teller, Carousel Ride, Dime Toss Game, and the Pitcher's Mound are in the Midway. The sky is in the Midway.
+Chapter 1 - Hint Values and Code
 
-HellRide is a region. Ride Entrance, Stocks Room, Gallows Room, Stake Room, Dungeon, Guillotine Room, Ride Exit are in HellRide.
+A permission is a kind of value. The permissions are allowed and denied.
+Hint usage is a permission that varies. Hint usage is allowed.
 
-Electrical Area is a region. Electrical Room, Electrical Closet One, Electrical Closet Three, Electrical Closet Five, Electrical Closet Seven, Electrical Closet Nine, and Electrical Closet Eleven are in the Electrical Area.
+Check asking for help for the first time:
+	say "Sometimes the temptation to rely on hints becomes overwhelming, and you may prefer to turn off hints now. If you do so, your further requests for guidance will be denied. Turn off hints? >";
+	if player consents:
+		now hint usage is denied;
+		say "[line break]Truly, a real adventurer does not need hints." instead.
+		
+Check asking for help:
+	if hint usage is denied, say "You have chosen to forego hints in this game. Be strong! Persevere!" instead.
 
-Back Stage is a region. Dark Passage, Maintenance Office, Crawl Space, Mechanical Room North, Mechanical Room South, Generator Room, Storage Room are in Back Stage.
+Chapter 2 - Basic Help Options
 
-Second Floor is a region. Dark Hallway, Control Room, and Holding Room are in the Second Floor.
+Table of Basic Help Options (continued)
+title	subtable	description
+"Contacting the Author"	--	"If you have any difficulties with [story title], please contact me at dmontgom22@gmail.com"
+"The Parking Lot"	Table of Parking Lot Hints	--
+"The Attractions"	Table of Attractions Hints	--
+"The Games"	Table of Games Hints	--
+"Back Stage"	Table of Back Stage Hints	--
+"Hell Ride"	Table of Hell Ride Hints	--
+"The Electrical Area"	Table of Electrical Area Hints	--
+"The Control Room"	Table of Control Room Hints	--
+"Settings"	Table of Setting Options	--
 
+Chapter 3 - The Parking Lot
+
+Table of Parking Lot Hints
+title	subtable	description	toggle
+"What about the glove box?"		Table of Glove Box Hints	""	hint toggle rule
+"Why can[']t I leave the parking lot?"	Table of Leaving Lot Hints	""	hint toggle rule
+"What do I do with the string?"	Table of String Hints    	""    	hint toggle rule
+"Why does my car get towed?"	Table of Toad Away Hints	""	hint toggle rule
+
+Section 1 - String Hints
+
+Table of String Hints
+hint	used
+"Remember that you know how to macrame."	a number
+"Isn[']t macrame the art of tying?"
+"Oh, come now, isn't it obvious?"
+
+Section 2 - Glove Box Hints
+
+Table of Glove Box Hints
+hint	used
+"It[']s locked."	a number
+"Have you tried unlocking it?"	
+"You need a key."	
+"Look under the car seat."
+
+Section 3 - Leaving Parking Lot Hints
+
+Table of Leaving Lot Hints
+hint	used
+"Looks like you need something before heading into the carnival."	a number
+"Looks like you need a parking ticket."
+"The parking attendant has a parking ticket."		
+"Buy the parking ticket."
+
+Section 4 - Toad Away Hints
+
+Table of Toad Away Hints
+hint	used
+"Why might your car get towed?"	a number
+"Is your car parked legally?"	
+"Are you sure?"	
+"What about the parking stub"	
+"The parking attendant knows something about the stub"	
+"Put the stub on the dashboard."
+
+Chapter 4 - The Attractions
+
+Table of Attractions Hints
+title	subtable	description	toggle
+"Can I ride the rides?"	Table of Ride the Ride Hints	""	hint toggle rule
+"Why are tickets so expensive?"	Table of Ticket Price Hints	""	hint toggle rule
+"The rides are boring."	Table of Boring Ride Hints	""	hint toggle rule
+
+Section 1 - Ride the Ride Hints
+
+Table of Ride the Ride Hints
+hint	used
+"You[']ll need a ticket."	a number
+"Tickets are expensive though."
+"You can buy tickets at the Ticket Kiosk."
+
+Section 2 - Table of Ticket Price Hints
+
+Table of Ticket Price Hints
+hint	used
+"What? You were expecting wrist bands?"	a number
+"To remind you to spend your money wisely."
+
+Section 3 - Boring Ride Hints
+
+Table of Boring Ride Hints
+hint	used
+"Surely not ALL the rides are boring."	a number
+"It[']s a small carnival, what do you expect?"
+"Have you ridden Hell Ride?"
+
+
+Chapter 5 - The Games 
+
+Table of Games Hints
+title	subtable	description	toggle
+"Are the prizes important?"	Table of Important Prizes Hints	""	hint toggle rule
+"Why do the games only cost a dime?"	Table of Game Cost Hints	""	hint toggle rule
+"I[']ve found a Mercury dime. What is it?"	Table of Mercury Dime Hints	""	hint toggle rule
+
+Section 1 - Important Prizes Hints?
+
+Table of Important Prizes Hints
+hint	used
+"Important? That[']s a matter of opinion."	a number
+"A teddy bear to make up with your sweetie?"
+"I[']d go with my instincts on this one if I were you."
+"Yes, the prizes are important."
+
+Section 2 - Game Costs Hints
+
+Table of Game Cost Hints
+hint	used
+"What? You want them to cost a quarter?"	a number
+"The carnival likes to maintain a link to days past when games cost only a dime?"
+"Just be grateful"
+
+Section 3 - Mercury Dime Hints
+
+Table of Mercury Dime Hints
+hint	used
+"It[']s a dime."	a number
+"It[']s a Mercury Dime."
+"Have you looked at it?"
+"It[']s a dime. Geez."
+
+Chapter 6 - Back Stage 
+
+Table of Back Stage Hints
+title	subtable	description	toggle
+"Why do I get eaten by a grue?"	Table of Grue Hints	""	hint toggle rule
+"Are the doors important?"	Table of Doors Hints	""	hint toggle rule
+
+Section 1 - Table of Grue Hints
+
+Table of Grue Hints
+hint	used
+"Grues love the dark."	a number
+"Do you have a light?"
+"Have you looked for one?"
+"There are two in the game."
+"One is in the Dark Passage."
+"The other is in the Little Egypt tent."
+
+Section 2 - Table of Doors Hints
+
+Table of Doors Hints
+hint	used
+"Only if you want to know what[']s on the other side."	a number
+"Have you tried checking what[']s on the other side?"
+"You[']ll need a key"
+"You have to find it"
+"It[']s in Electrical Closet One"
+
+Chapter 7 - Hell Ride Hints
+
+Table of Hell Ride Hints
+title	subtable	description	toggle
+"Why do I die?"	Table of Guillotine Hints	""	hint toggle rule
+"What about the different rooms"	Table of Hell Ride Rooms	""	hint toggle rule
+
+Section 1 - Table of Guillotine Hints
+
+Table of Guillotine Hints
+hint	used
+"Everybody dies."	a number
+"So, you[']ve ridden Hell Ride."
+"Aren[']t the animatronics and wax figures amazing?"
+"Did you notice the guillotine rising and falling?"
+"Did you notice it chop you in half?"
+
+Section 2 - Table of Hell Ride Rooms Hints
+
+Table of Hell Ride Rooms
+hint	used
+"Everything sure looks realistic."	a number
+"Aren[']t the animatronics and wax figures amazing?"
+"Each room shows a different manner of punishment."
+"There[']s the Stocks, the Gallows, the Stake, the Dungeon, and the Guillotine."
+"Just your typical ride in the dark."
+
+Chapter 8 - The Electrical Area Hints
+
+Table of Electrical Area Hints
+title	subtable	description	toggle
+"What[']s going on in the Electrical Room?"	Table of Electrical Room Hints	""	hint toggle rule
+"What about the electrical panels?"	Table of Electrical Panel Hints	""	hint toggle rule
+"Are the fuses important?"	Table of Fuse Hints	""	hint toggle rule
+
+Section 1 - Table of Electrical Room Hints
+
+Table of Electrical Room Hints
+hint	used
+"There are exits in all directions"	a number
+"Have you mapped the area?"
+"Can you go in the direction you intend?"
+"The room is electromagnetic."
+"Maybe that[']s causing the problem."
+"Maybe you can make it so it[']s not electromagnetic."
+"Turn off the big switch."
+
+Section 2 - Table of Electrical Panel Hints
+
+Table of Electrical Panel Hints
+hint	used
+"There[']s a socket, a switch, and an indictor in each one."	a number
+"You could probably put something in the socket."
+"Looks like a fuse will fit in the socket."
+"I[']d put a fuse in the socket and flip the switch."
+
+Section 3 - Table of Fuse Hints
+
+Table of Fuse Hints
+hint	used
+"Yes."	a number
+"They come in pretty colors."
+"Have you seen those colors before?"
+"Have you put a fuse in a socket?"
+
+Chapter 9 - The Control Room Hints
+
+Table of Control Room Hints
+title	subtable	description	toggle
+"Tell me about the big switch."	Table of Big Switch Hints	""	hint toggle rule
+"What about the control panels?"	Table of Control Panel Hints	""	hint toggle rule
+
+
+Section 1 - Table of Big Switch Hints
+
+Table of Big Switch Hints
+hint	used
+"It[']s big"	a number
+"Very big"
+"It[']s in the Control Room."
+"Have you tried turning it off?"
+"Did you die because your hands were unprotected?"
+"Try wearing the gloves."
+
+Section 2 - Table of Control Panel Hints
+
+Table of Control Panel Hints
+hint	used
+"There's a dial, a button, and a light in each one."	a number
+"These are pretty colors."
+"Have you seen these colors before?"
+"Try spinning the dials."
+"Spin the dials to the right number."
+"Is there a number that corresponds to each color?"
+"Push the indigo button."
