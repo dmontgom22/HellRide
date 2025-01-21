@@ -34,7 +34,7 @@ The story headline is "The ride of a lifetime...".
 The story genre is "Horror".
 The story description is "You've decided to stay and enjoy the carnival anyway."
 The story creation year is 2025.
-The release number is 122.
+The release number is 123.
 	
 Chapter 3 - Extensions
 
@@ -146,7 +146,7 @@ Instead of buying something:
 	silently try taking the noun;
 	rule succeeds.
 	
-The player carries a wallet. The wallet contains money. The printed name of the money is "[price of the money] in cash". Understand "cash" as the money.
+The player carries a wallet. The wallet contains money. The description is "This is a nice, leather, tri-fold wallet." The printed name of the money is "[price of the money] in cash". Understand "cash" as the money.
 
 Instead of taking the money:
 	say "Best to leave it alone until you need to buy something."
@@ -337,7 +337,7 @@ if the noun is not a person, say "I think that only schizophrenics say 'Hello' t
 Carry out hi-speaking:
 say "[The noun] bows his head to you in greeting."
 
-The Sailor is a backdrop. The sailor is everywhere. The sailor is scenery.
+The Sailor is a backdrop. The sailor is everywhere. The sailor is scenery. The description is "This is a very famous sailor.".
 
 Check hi-speaking the sailor for the tenth time:
 say "I think that phrase is getting a bit worn out." instead.
@@ -362,7 +362,7 @@ Carry out casting plugh:
 	
 Section 9 - Attendants
 
-An attendant is a kind of male person. Understand "attendent", "operator", "teen", "teenager", and "bored" as an attendant. 
+An attendant is a kind of male person. Understand "attendent", "operator", "teen", "teenager", and "bored" as an attendant.  The description of an attendant is "This is a bored teenager."
 
 Understand "talk about [text]" as talking randomly about. Talking randomly about is an action applying to one topic.
 instead of talking randomly about, say "No one wants to hear you prattle on about [the noun]."
@@ -540,10 +540,10 @@ The sky is a backdrop. The sky is everywhere.
 
 The description of the sky is "[if the location is outdoors]It[']s a beautiful evening. Not a cloud in the sky. The moon is out and there are so many stars to see. A shooting star streaks across the sky.[otherwise]You[']re indoors. You can[']t see the sky here."
 
-The ground is a backdrop. The ground is everywhere. Understand "floor" as the ground.
+The ground is a backdrop. The ground is everywhere. Understand "floor" as the ground. The description is "[if the location is in the midway]You see nothing special about the ground.[otherwise]You see nothing special about the floor.[end if]"
 
 [Hell Ride]
-Hell Ride is a backdrop. it is everywhere.
+Hell Ride is a backdrop. it is everywhere. The description is "This carnival is famous for its Hell Ride attraction."
 
 carry out examining hell ride:
 	if the location is in the midway:
@@ -644,7 +644,32 @@ The price of the money is $30.00.
 Sound of Bell is the file "Silence.ogg" ("The sound of silence").
 
 five dimes underlie the seat. 
+
+Displaying prices is an action out of world applying to nothing. Understand "display prices" as displaying prices.
+Carry out displaying prices:
+	repeat with item running through things:
+		if item is for sale:
+			say "[price of the item] [An item]."
+
+Displaying missing descriptions is an action out of world applying to nothing. Understand "display missing descriptions" as displaying missing descriptions.			
+Carry out displaying missing descriptions:
+	repeat with item running through things:
+		if description of the item is "" and the item is not nothing:
+			say "[item] has no description."
 			
+Displaying descriptions is an action out of world applying to nothing. Understand "display descriptions" as displaying descriptions.
+Carry out displaying descriptions:
+	repeat with item running through things:
+		if the description of the item is not "":
+			say "[item] has a description."
+			
+Displaying fuses is an action out of world applying to nothing. Understand "display fuses " as displaying fuses.
+Carry out displaying fuses:
+	repeat with item running through things:
+		if item is a fuse:
+			say "[An item] is a fuse."
+
+
 Chapter 8 - RNG Seed, Money, Dimes, Sounds - For Release Only
 
 When play begins:
@@ -685,7 +710,7 @@ A silver key is in the Electrical Closet One. The description of the silver key 
 
 Section 3 - Electrical Panels
 
-An electrical panel is a kind of openable lockable container. 
+An electrical panel is a kind of openable lockable container.
 Understand "panel" as an electrical panel. Understand "screws" as an electrical panel.
 An electrical panel is usually closed, locked, scenery.
 An electrical panel has a color. Understand the color property as describing an electrical panel.
@@ -882,13 +907,16 @@ Instead of going from the Electrical Room:
 	if the big switch is switched on, move the player to a random adjacent room;
 	otherwise continue the action.
 
-a breaker panel is here. It is scenery. 
-a junction box is here. It is scenery. 
-a workbench is here. It is scenery.
-an emergency shutdown panel is here. It is scenery.
-A fire extinguisher is here. It is scenery.
-A faded safety poster is here. It is scenery.
-A small fan is here. It is scenery.
+a breaker panel is here. It is scenery. The description is "This breaker panel controls various portions of the carnival.".
+a junction box is here. It is scenery. The description is "This is a junction box routing the various electrical cables running through the back stage area.".
+a workbench is here. It is scenery. The description is "This is a cluttered work bench. You would have a hard time finding room to do anything on it.".
+an emergency shutdown panel is here. It is scenery. "This is an emergency shut down panel. There is a switch on the panel.".
+a red switch is part of the emergency shutdown panel. The description is "This is a big red switch, presumably to shut down the carnival rides.".
+a fire extinguisher is here. It is scenery. The description is "This is a Class E fire extinguisher, specially made for electrical fires.".
+a faded safety poster is here. It is scenery. The description is "The poster reads, 'Safety First!'".
+a small fan is here. It is scenery. The description is "The fan sits on the desktop.".
+
+instead of pushing the red switch, say "You apply a considerable amount of force and push [the noun]. You listen and can still hear the sounds of the machinery working somewhere. Nothing happens."
 
 Electrical Room is south of the Generator Room. 
 Electrical Room is southwest of Electrical Closet One.
@@ -921,8 +949,9 @@ Alive with anticipation, the parking lot marks the transition from the ordinary 
 
 The midway is to the south. There is a blueberry bush here. [if blueberry bush contains blueberries]There are blueberries on the bush.[otherwise]The bush has been picked clean.[end if][paragraph break]Your car is here. It[']s a bit of a beater. Inside the car, you can see [the list of things which are part of the beater car]."
 
-The parking attendant is an attendant in the the parking lot. The parking attendant carries a parking ticket and a parking stub. The price of the parking ticket is $5.00. 
-understand "the stub" or "ticket stub" or "the ticket stub" as the parking stub.
+The parking attendant is an attendant in the the parking lot. The parking attendant carries a parking ticket. The price of the parking ticket is $5.00. The description of the parking ticket is "This is your receipt for parking."
+
+The parking attendant carries a parking stub. The description of the parking stub is "This stub is meant to be placed on your dashboard to indicate you paid for parking.". Understand "the stub" or "ticket stub" or "the ticket stub" as the parking stub.
 
 after looking when the location is the parking lot:
 	say "[if the parking attendant carries the parking ticket]The attendant has a parking ticket. The price of a parking ticket is [the price of the parking ticket].[end if]";
@@ -937,9 +966,9 @@ Your dirty clothes are here. The clothes are scenery. The description is "Your d
 
 instead of looking when the player is in the beater car, try examining the beater car.
 
-A blueberry bush is here. the blueberry bush is scenery. the blueberry bush is a container. the blueberry bush is not portable. the blueberry bush contains blueberries. Understand "berries" as blueberries. The blueberries are edible. The description of the blueberries is "The blueberries are ripe and juicy.". The blueberries can be consumed or uneaten. The blueberries are uneaten.
+A blueberry bush is here. the blueberry bush is scenery. the blueberry bush is a container.  The description is "This is a high bush blueberry plant.". The blueberry bush is not portable. the blueberry bush contains blueberries. Understand "berries" as blueberries. The blueberries are edible. The description of the blueberries is "The blueberries are ripe and juicy.". The blueberries can be consumed or uneaten. The blueberries are uneaten.
 	
-after eating the blueberries:
+instead of eating the blueberries:
 	say "The blueberries were delicious. A true taste of summer!";
 	now the blueberries are consumed.
 
@@ -988,7 +1017,7 @@ every turn when the player is in the beater car:
 
 An air freshener is in the beater car. The description of the air freshener is "This is one of those air fresheners that are shaped like a pine tree and smell like one too. You bought it the last time you went to the car wash."
 
-An ignition is part of the beater car. The ignition is a scenery container. 
+An ignition is part of the beater car. The ignition is a scenery container. The description is "It[']s an ignition. You put your car key here and start your car."
 
 A dashboard is part of the beater car. The dashboard is a supporter. Understand "dash" as the dashboard. The description of the dashboard is "It looks like you could set something there."
 
@@ -998,7 +1027,7 @@ Your keys underlie the seat. Understand "car key", "car keys", and "key" as your
 
 instead of turning your keys when the player is in the beater car, say "If you left now you would just end up in a bar, crying over a beer about your fight. You decide to stay and enjoy the carnival after all." instead.
 
-A glove box is part of the beater car. The glove box is a locked openable container. Your keys unlock the glove box. Understand "glove compartment" and "compartment" as the glove box.
+A glove box is part of the beater car. The glove box is a locked openable container. The description is "This glove box contains things like your registration and insurance information." Your keys unlock the glove box. Understand "glove compartment" and "compartment" as the glove box.
 
 A pair of gloves are a thing. The pair of gloves are inside the glove box. The pair of gloves is wearable. The description of the pair of gloves is "A nice set of fur-lined leather gloves. They[']re very warm." The printed name of the pair of gloves is "pair of gloves".
 
@@ -1234,7 +1263,7 @@ check tossing a dime when the location is the Dime Toss Game:
 
 A small plush monkey is carried by the Dime Toss attendant. Understand "stuffie" and "stuffed" as monkey. The description of the monkey is "You feel rather underwhelmed as you look at the small plush monkey on a key chain."
 
-A poster of Billie Eilish is carried by the Dime Toss attendant. The description of the poster is "This is a poster of Billie Eilish. Doesn[']t your sweetie like them?"
+A poster of Billie Eilish is carried by the Dime Toss attendant. The description of the poster of Billie Eilish is "This is a poster of Billie Eilish. Doesn[']t your sweetie like them?"
 
 A small pocket mirror is carried by the Dime Toss attendant. The description of the small pocket mirror is "This is a small pocket mirror. You could use it to check your hair."
 
@@ -1297,9 +1326,9 @@ A poster of Lourde is carried by the Pitcher's Mound attendant. The description 
 
 A goldfish is carried by the Pitcher's Mound attendant. Understand "bowl" as goldfish. The description of the goldfish is "This is a small goldfish in a bowl. A pet is just what you need."
 
-a baseball is a kind of thing. Understand "ball" as baseball.The Pitcher's Mound attendant carries three baseballs.
+a baseball is a kind of thing. Understand "ball" as baseball.The Pitcher's Mound attendant carries three baseballs. The description of a baseball is "This is a regulation baseball."
 
-the milk bottles are scenery in the Pitcher's Mound. Understand "bottle" as milk bottles.
+the milk bottles are scenery in the Pitcher's Mound. Understand "bottle" as milk bottles. The description is "The milk bottles are stacked in three neat rows: three on the bottom, two in the middle, and one on top."
 
 Throwing is an action applying to two things.
 Understand "throw [something preferably held] at/on [something]" as throwing.
@@ -1404,7 +1433,7 @@ after wearing the veil, say "You wrap the veil around your head, shrouding your 
 
 The Stage is here. The Stage is scenery. The description of the Stage is "The stage is decorated to resemble an exotic Middle Eastern market or palace, featuring rich, colorful fabrics, brass ornaments, and lanterns casting a warm, flickering glow. Scents of incense waft through the air, enhancing the atmosphere of mystique. The backdrop displays painted scenes of pyramids, desert landscapes, and domed structures to evoking a sense of being transported to the 'Middle East'."
 
-The wall is a scenery container. The wall is in the Show Tent. 
+The wall is a scenery container. The wall is in the Show Tent. The description is "Hanging on the wall is a lantern."
 
 A lantern is an electric lamp. It is in the wall. Understand "lamp" as the lantern. The description of the lantern is "This is a highly polished brass lantern."
 
@@ -1582,11 +1611,11 @@ Section 2 - Dark Passage
 
 Dark Passage is a room. Dark Passage is east of the Ride Entrance. "This room is backstage at the Hell Ride attraction. The room is littered with bags of trash, piles of junk, and dust bunnies so large they should be paying rent. West is back the way you came from. There an exit to the south."
 
-some dust bunnies are scenery. The dust bunnies are here. Understand "bunnies" as dust bunnies.
+some dust bunnies are scenery. The dust bunnies are here. Understand "bunnies" as dust bunnies. The description of the dust bunnies is "These are some massive dust bunnies. Be careful, I[']ve heard they bite."
 
-some bags of trash are scenery. The bags of trash are here. Understand "bags" and "trash" as bags of trash.
+some bags of trash are scenery. The bags of trash are here. Understand "bags" and "trash" as bags of trash. The description of the bags of trash is "The bags of trash are piled in the corner."
 
-A pile of junk is a scenery container. The pile of junk is in the dark passage. The pile of junk contains the flashlight. Understand "piles" and "junk" as pile of junk. 
+A pile of junk is a scenery container. The pile of junk is in the dark passage. The pile of junk contains the flashlight. Understand "piles" and "junk" as pile of junk. The description of the pile of junk is "This is a pile of assorted flotsam and jetsam from the carnival. None of it looks very interesting."
 
 instead of looking under when the noun is the pile of junk:
 	try examining the junk instead. 
@@ -1596,7 +1625,6 @@ The flashlight is an electric lamp. The description of the flashlight is "This i
 after examining when the noun is pile of junk and the flashlight is in the pile of junk:
 	say "You find a flashlight here.".
 	
-
 after taking the flashlight for the first time:
 	say "Taken.";
 	if  the lantern is in the wall:
@@ -1628,14 +1656,14 @@ Exits lead north and south. There is a door to the west."
 some screws are here. They are scenery. The description is "Screws, grease jars, and cans of paint are here.".
 some paint cans are here. They are scenery. The description is "Screws, grease jars, and cans of paint are here.".
 some grease jars are here. They are scenery. The description is "Screws, grease jars, and cans of paint are here.".
-a vise is here. It is scenery.
-a bent piece of metal is here. It is scenery.
+a vise is here. It is scenery. The description is "This is just a standard issue vice.".
+a bent piece of metal is here. It is scenery. The description is "This is a piece of scrap steel.".
 some safety posters are here. They are scenery. The description is "You[']re the safe choice for safety!".
 some notes are here. They are scenery. The description is "Looking at the notes all you can see are the illegible scribbles of a child.".
 a clock is here. It is scenery. The description is "The clock is wildly off the correct time. I guess it[']s broken.".
 some lubricant is here. It is scenery. The description is "It[']s lubricant. It[']s slippery.".
-a manual is here. It is scenery. The description of the manual is "The manual is titled: 'Fixing Your Ferris Wheel. It[']s Easier Than You Think!'" .
-a stool is here. It is a supporter. It is scenery. 
+a manual is here. It is scenery. The description of the manual is "The manual is titled: 'Fixing Your Ferris Wheel. It[']s Easier Than You Think!'".
+a stool is here. It is a supporter. It is scenery.  "This is just a stool.".
 
 The worn photo is here. Understand "picture" as the worn photo. The description of the worn photo is "This is a photo of the carnival in its heyday! A ragtag bunch of people are featured in the picture. On the back reads a date: 'March, 1962'."
 
@@ -1643,7 +1671,9 @@ The coffee mug is on the desk. The coffee mug is edible. Understand "coffee" as 
 
 Instead of drinking the coffee mug: say "That looks nasty. You decide against drinking the coffee." instead.
 
-A desk is in the maintenance office. The desk is a supporter. The desk is fixed in place. A drawer is part of the desk. The drawer is a closed openable container. The drawer is scenery. The description of the desk is "It[']s a desk. There are coffee stains and cigarette burns from years of abuse. The single drawer is [if the drawer is open]open[otherwise]shut[end if]."
+A desk is in the maintenance office. The desk is a supporter. The desk is fixed in place. The description of the desk is "It[']s a desk. There are coffee stains and cigarette burns from years of abuse. The single drawer is [if the drawer is open]open[otherwise]shut[end if]."
+
+A drawer is part of the desk. The drawer is a closed openable container. The drawer is scenery. The description of the drawer is "The single drawer is [if the drawer is open]open[otherwise]shut[end if]."
 
 Nearness relates a room (called A) to a room (called B) when the number of moves from B to A is less than 2. The verb to be near means the nearness relation.
 
@@ -1699,18 +1729,21 @@ Dimly lit by a single hanging bulb, the room feels cooler and slightly damp, the
 
 There are exists north and south. There is a wooden door to the west." 
 
-The toolbox is a closed openable container in the Mechanical Room North. The toolbox is fixed in place. The toolbox contains an adjustable wrench, channel locks, pliers, and a hammer. Understand "tool", "box", and "tool box" as toolbox.
+The toolbox is a closed openable container in the Mechanical Room North. The toolbox is fixed in place. The toolbox contains an adjustable wrench, channel locks, pliers, and a hammer. Understand "tool", "box", and "tool box" as toolbox. The description of the toolbox is "This is a toolbox. I bet it contains tools."
 
-The description of the adjustable wrench is "It[']s just an adjustable wrench. Nothing more."
+The description of the adjustable wrench is "Just one of the many tools used to maintain the carnival.".
+The description of the channel locks is "Just one of the many tools used to maintain the carnival.".
+The description of the pliers is "Just one of the many tools used to maintain the carnival.".
+The description of the hammer is "Just one of the many tools used to maintain the carnival.".
 
-a hydraulic pump is here. It is scenery.
-some gauges are here. They are scenery.
-some tools are here. They are scenery.
+a hydraulic pump is here. It is scenery. The description is "This is some of the equipment that keeps the carnival running smoothly.".
+some gauges are here. They are scenery. The description is "The room is full of gauges reporting on the condition of the carnival.".
+some tools are here. They are scenery. The description is "Just one of the many tools used to maintain the carnival.".
 a bench is here. It is scenery. Understand "workbench" as the bench. The description is "The workbench is covered in all manner of things.".
-some wires are here. They are scenery.
-some spare parts are here. They are scenery.
-hydraulic tubing is here. It is scenery.
-a diagram is here. It is scenery.
+some wires are here. They are scenery. The description is "Wires, spare parts, and hydraulic tubing is here.".
+some spare parts are here. They are scenery. The description is "Wires, spare parts, and hydraulic tubing is here.".
+hydraulic tubing is here. It is scenery. The description is "Wires, spare parts, and hydraulic tubing is here.".
+a diagram is here. It is scenery. The description is "This is an electrical diagram for something.".
 
 An door5 is a wooden door. The color of door5 is emerald. The description of door5 is "It[']s [an printed name of item described]. It has the word 'Stake' written on it." The silver key unlocks it. door5 is west of the Mechanical Room North and east of the Stake Room. 
 
@@ -1728,14 +1761,14 @@ Bright fluorescent lights in wire cages illuminate the space, highlighting the i
 
 You can travel north and south from here. There is a door to the west." 
 
-some lights are here. They are scenery.
-some thick belts are here. They are scenery.
-some pulleys are here. They are scenery.
-some gears are here. They are scenery.
-a table is here. It is scenery.
-some bolts are here. They are scenery.
-some lubricants are here. They are scenery.
-a cooling fan is here. It is scenery.
+some lights are here. They are scenery. The description is "The table is covered with belts, lubricants, gears, pulleys, gears and bolts.".
+some thick belts are here. They are scenery. The description is "The table is covered with belts, lubricants, gears, pulleys, gears and bolts.".
+some pulleys are here. They are scenery. The description is "The table is covered with belts, lubricants, gears, pulleys, gears and bolts.".
+some gears are here. They are scenery. The description is "The table is covered with belts, lubricants, gears, pulleys, gears and bolts.".
+a table is here. It is scenery. The description is "The table is covered with belts, lubricants, gears, pulleys, gears and bolts.".
+some bolts are here. They are scenery. The description is "The table is covered with belts, lubricants, gears, pulleys, gears and bolts.".
+some lubricants are here. They are scenery. The description is "The table is covered with belts, lubricants, gears, pulleys, gears and bolts.".
+a cooling fan is here. It is scenery. The description is "This is an overworked fan.".
 
 A grate is an openable lockable door. The grate is locked. The grate is up from the Holding Room. The description is "This grate leads down into the darkness. Too bad it[']s locked."
 
@@ -1756,17 +1789,17 @@ Though isolated and utilitarian, the generator room is the carnival’s heartbea
 
 The backstage area continues north and south of here. There is a wooden door to the west." 
 
-graffiti is here. It is scenery. instead of examining the graffiti, say "The graffiti is varied, from 'Peace, Love, Goodwill on Earth' to 'Anarchy Rules'.".
-some junction boxes are here. They are scenery.
-some cables are here. They are scenery.
-some circuit breakers are here. They are scenery.
-some filters are here. They are scenery.
-some spark plugs are here. They are scenery.
-some wire coils are here. They are scenery.
-a grease canister is here. It is scenery.
-some diesel canisters are here. They are scenery.
+graffiti is here. It is scenery. The description of the graffiti is "The graffiti is varied, from 'Peace, Love, Goodwill on Earth' to 'Anarchy Rules'.".
+some junction boxes are here. They are scenery. The description is "These are electrical junction boxes carrying the power throughout the carnival.".
+some cables are here. They are scenery. The description is "These cables connect different parts of the ride to the hydraulics.".
+some circuit breakers are here. They are scenery. The description is "These circuit breakers control the flow of power to the rides.".
+some filters are here. They are scenery. The description is "The filters litter the shelves.".
+some spark plugs are here. They are scenery. The description is "The spark plugs are piled on the shelves.".
+some wire coils are here. They are scenery. The description is " The wire coils littler the shelves.".
+a grease canister is here. It is scenery. The description is "This is a canister of grease used to provide proper lubrication to the machinery.".
+some diesel canisters are here. They are scenery. The description is "The canisters are full of diesel fuel.".
 a maintenance manual is here. It is scenery. The description is "The cover reads, 'Put The Bump In Your Bumper Cars'.".
-a large panel is here. It is scenery.
+a large panel is here. It is scenery. The description is "The panel looks important.".
 
 An door9 is a wooden door. The color of door9 is indigo. The description of door9 is "It[']s [an printed name of item described]. It has the word 'Guillotine' written on it." The silver key unlocks it. door9 is west of the Generator Room and east of the Guillotine Room. 
 
@@ -1786,16 +1819,15 @@ Chaotic yet indispensable, this hidden space powers the carnival’s magic, ensu
 
 There is an exit to the north and a door to the west."
 
-some supplies are here. They are scenery.
-some boxes of lightbulbs are here. They are scenery.
-some spools of wire are here. They are scenery.
-some ride parts are here. They are scenery.
-some flags are here. They are scenery.
-some seats are here. They are scenery.
-some booths are here. They are scenery.
-a horse is here. It is scenery.
-some wire scraps are here. They are scenery.
-some rats are here. The rats are scenery. The description of the rats is "You see rats scurry in all directions fleeing from the light cast by you."
+some supplies are here. They are scenery. The description is "The shelves are full of supplies, light bulbs, and ride parts.".
+some boxes of lightbulbs are here. They are scenery. The description is "The shelves are full of supplies, light bulbs, and ride parts.".
+some spools of wire are here. They are scenery. The description is "The shelves are full of supplies, light bulbs, and ride parts.".
+some ride parts are here. They are scenery. The description is "The shelves are full of supplies, light bulbs, and ride parts.".
+some flags are here. They are scenery. The description is "The flags are pennants used for decorating the midway.".
+some seats are here. They are scenery. The description is "These are broken seats from some of the rides.".
+a horse is here. It is scenery. The description is "This is one of the horses from the carousel ride.".
+some wire scraps are here. They are scenery. The description is "The shelves are full of supplies, light bulbs, and ride parts.".
+some rats are here. The rats are scenery. The description of the rats is "You see rats scurry in all directions fleeing from the light cast by you.".
 
 A door11 is a wooden door. The color of door11 is khaki. The description of door11 is "It[']s [a printed name of item described]. It has the word 'Ride Exit' written on it." The silver key unlocks it. door11 is west of the Storage Room and east of the Ride Exit. 
 	
@@ -1895,7 +1927,7 @@ An iron chair is scenery in the Dungeon. The iron chair is a supporter. understa
 some chains are here. They are scenery. The description of the chains is "The chains rattle against the walls."
 A rack is here. It is scenery. The description of the rack is "The rack has a prisoner splayed in four directions."
 A brazier is here. It is scenery. The description of the brazier is "It is glowing red with an infernal heat."
-A riveted iron-bound door is here. It is scenery.
+A riveted iron-bound door is here. It is scenery. The description is "This iron-bound door is part of the ambiance."
 	
 Section 7 - Guillotine Room
 
@@ -1979,9 +2011,9 @@ Instead of pushing or flipping or toggling a switched on big switch:
 	now the electrical room is electromagnetic;
 	try switching off the noun.
 
-a cluttered desk is here. The desk is scenery. 
-a cork board is here. The cork board is scenery.
-some charts are here. They are scenery.
+a cluttered desk is in the control room. The cluttered desk is scenery. The description is "The desk is covered with all matter of detritus.".
+a cork board is in the control room. The cork board is scenery. The description is "The cork board displays charts and notes.".
+some charts are in the control room. They are scenery. The description is "There is nothing interesting about the charts and notes.".
 
 every turn when the location is the Control Room:
 	count the switches;
@@ -2001,6 +2033,7 @@ Understand "control" and "panel" as a control panel.
 A control panel is scenery.
 A control panel has a color. Understand the color property as describing a control panel.
 A control panel has a number called a panel id. Understand the panel id property as describing a control panel.
+The description of a control panel is "This is a control panel."
 
 Control Panel One is a control panel in the Control Room. The panel id of Control Panel One is 1. The color of Control Panel One is aqua.
 Control Panel Three is a control panel in the Control Room. The panel id of Control Panel Three is 3. The color of Control Panel Three is crimson.
@@ -2165,7 +2198,7 @@ Section 8 - The Monitor
 
 ControlPanelImage is a figure name that varies. ControlPanelImage is Figure of ControlPanel.
 
-The monitor is in the Control Room. The monitor is scenery. Understand "screen" as monitor. The monitor has a number called the figure id. The figure id is 0.
+The monitor is in the Control Room. The monitor is scenery. Understand "screen" as monitor. The monitor has a number called the figure id. The figure id is 0. The description is "This is a monitor that displays the various scenes from Hell Ride.".
 
 instead of examining the monitor:
 	let N be the figure id of the monitor;
@@ -2723,7 +2756,7 @@ Section 2 - Table of Electrical Panel Hints
 
 Table of Electrical Panel Hints
 hint	used
-"There[']s a socket, a switch, and an indictor in each one."	a number
+"There[']s a socket, a switch, and an indicator in each one."	a number
 "You could probably put something in the socket."
 "Looks like a fuse will fit in the socket."
 "I[']d put a fuse in the socket and flip the switch."
