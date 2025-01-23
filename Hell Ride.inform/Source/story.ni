@@ -51,7 +51,7 @@ Include Singing Reloaded by Shin.
 Chapter 4 - The Player, Global Code
 
 The player is in the Parking Lot. 
-
+[The carrying capacity of the player is 10.]
 The description of the player is "You are despondent given that you and your date just had a huge fight and they stormed off. Maybe visiting the attractions at the carnival will make you feel better." 
 
 Instead of examining the player:
@@ -60,6 +60,8 @@ Instead of examining the player:
 The coupon is in the wallet. The description of the coupon is "You found this in a stack of coupons on the counter of the gas station."
 
 before examining the coupon, display Figure of Coupon.
+
+[The fanny pack is a player's holdall. The fanny pack is wearable. The player is wearing the fanny pack. ]
 
 after reading a command:
 	if the player's command includes "please":
@@ -146,16 +148,21 @@ Instead of buying something:
 	silently try taking the noun;
 	rule succeeds.
 	
-The player carries a wallet. The wallet contains money. The description is "This is a nice, leather, tri-fold wallet." The printed name of the money is "[price of the money] in cash". Understand "cash" as the money.
+The player carries a wallet. The wallet contains money. The description is "This is a nice, leather, tri-fold wallet." The printed name of the money is "[price of the money] in cash". Understand "cash" as the money. The carrying capacity of the wallet is 5.
 
 Instead of taking the money:
-	say "Best to leave it alone until you need to buy something."
+	say "Best to leave it alone until you need to BUY something."
 
 Instead of buying something free when the player carries the noun:
 	say "[The noun] is yours already."
 
 Instead of buying the money:
 	say "The money belongs to you; you buy things with it."
+
+Understand "offer [price] to [someone]" as a mistake ("Try PAY FOR something or BUY something instead.").
+Understand "pay [someone]" as a mistake ("Try PAY FOR something or BUY something instead.").
+paying for is an action applying to one thing. Understand "pay for [something]" as paying for.
+instead of paying for something, try buying the noun instead.
 	
 Section 2 - Drink Mechanics
 
@@ -302,7 +309,22 @@ Rule for showing action of the noun:
 Before printing the name of a lit electric lamp, say "lit ".
 Before printing the name of an unlit lit electric lamp, say "extinguished ".
 
-Section 5 - Toad Away
+Section 5 - Weight Mechanics
+
+A weight is a kind of value. 10kg specifies a weight. 10kg net specifies a weight. 10 kg specifies a weight. 
+The verb to weigh means the weight property. Everything has a weight. A thing usually weighs 1kg.
+Every container, every supporter, and every person has a weight called maximum weight. 
+The maximum weight of a person is usually 50kg.
+The maximum weight of a container is usually 20kg.
+The maximum weight of a supporter is usually 20kg.
+
+check inserting:
+	let W be the weight of the noun plus the total weight of things in the second noun;
+	if W is greater than the maximum weight of the second noun:
+		say "There[']s no room in [the second noun] to hold [the noun].".
+
+
+Section 6 - Toad Away
 
 toadaway is a truth state that varies. toadaway is false.
 every turn:
@@ -315,7 +337,7 @@ every turn:
 			now toadaway is true;
 			end the story finally.
 
-Section 6 - Grues
+Section 7 - Grues
 
 The lurking grue is a backdrop. The lurking grue is everywhere. The description of the lurking grue is "The grue is a sinister, lurking presence in the dark places of the earth. Its favorite diet is humans, but its insatiable appetite is tempered by its fear of light. No grue has ever been seen by the light of day, and few have survived its fearsome jaws to tell the tale."
 
@@ -328,7 +350,7 @@ every turn when in darkness:
 	if the dark terminus count is 3, end the story finally.
 every turn when not in darkness, now dark terminus count is 0.
 
-Section 7 - Hello Sailor
+Section 8 - Hello Sailor
 
 Hi-speaking is an action applying to one visible thing. Understand "hello [something]" and "hi [something]" as hi-speaking.
 Check hi-speaking:
@@ -344,7 +366,7 @@ say "I think that phrase is getting a bit worn out." instead.
 Check hi-speaking the sailor for the 20th time:
 say "You seem to be repeating yourself." instead.
 
-Section 8 - xyzzy
+Section 9 - xyzzy
 
 Understand "xyzzy" or "say xyzzy" or "cast xyzzy" as casting xyzzy.
 
@@ -360,35 +382,21 @@ Casting plugh is an action applying to nothing.
 Carry out casting plugh:
 	say "Nothing happens."
 	
-Section 9 - Attendants
+Section 10 - Attendants
 
 An attendant is a kind of male person. Understand "attendent", "operator", "teen", "teenager", and "bored" as an attendant.  The description of an attendant is "This is a bored teenager."
-
-Understand "talk about [text]" as talking randomly about. Talking randomly about is an action applying to one topic.
-instead of talking randomly about, say "No one wants to hear you prattle on about [the noun]."
-		
-Understand "talk about [something]" as talking about. Talking about is an action applying to one visible thing.
-instead of talking about something :
-	say "No one wants to hear you prattle on about [the noun]."
-
-Understand "talk to [someone] about [something]" as a mistake ("To start a conversation, try to ASK [the noun] ABOUT something or TELL [the noun] ABOUT something.").
-Understand "talk to [someone]" as a mistake ("To start a conversation, try to ASK [the noun] ABOUT something or TELL [the noun] ABOUT something.").
 
 To say the hell ride response: 
 	say "[one of]That ride is scary. You won[']t catch me on it![or]Last time I rode Hell Ride I heard strange noises.[or]Hell ride is so old that It's falling apart. I wouldn[']t ride it.[or]Hell Ride is behind on it[']s maintenance schedule. Might want to skip that one.[at random]".
 
 understand "hell", "ride", and "hell ride" as "[hell ride]".
 instead of asking an attendant about "[hell ride]", say the hell ride response.
-Instead of asking an attendant about something:
-	say "'[one of]Sorry,[or]I'm afraid[or]Hmm,[at random] [one of]I don't know much about that[or]you've got me there[or]I haven't the faintest[at random],' [the noun] [one of]drawls[or]replies[or]comments[or]exclaims[at random].";
-	
 instead of telling an attendant about "[hell ride]", say the hell ride response.
-Instead of telling an attendant about something:
-	say "[The noun] looks [one of]surprised[or]intrigued[or]nonplussed[at random]. '[one of]You don't say[or]That's very interesting[or]Do go on[or]I wish I'd known that sooner[at random]!'".
-	
-Instead of showing something to an attendant:
-	say "'[one of]Sorry,[or]I'm afraid[or]Hmm,[at random] [one of]I don't know much about that[or]you've got me there[or]I haven't the faintest[at random],' [the noun] [one of]drawls[or]replies[or]comments[or]exclaims[at random].";
-	
+
+understand "Hell Ride Ticket", "Carousel Ticket", "Bumper Cars Ticket", "Ferris Wheel Ticket", "Fortune Teller Ticket", and "ticket" as "[ride tickets]".
+instead of asking an attendant about "[ride tickets]", say "[The actor] says, 'You need to buy a ticket in order to ride the attractions.'".
+instead of asking an attendant about "parking ticket", say "[The actor] says, 'You need a parking ticket to leave your car here.".
+
 Persuasion rule for asking an attendant to try going:
 	say "[The actor] says, 'I can't leave my post or I[']ll get fired!";
 	persuasion fails.
@@ -404,7 +412,7 @@ instead of listening to an attendant, say "All you can hear is [the noun] whinin
 
 instead of touching an attendant, say "Touching [the noun] without consent is likely to get you punched in the face! Better not.".
 
-Section 10 - Scoring
+Section 11 - Scoring
 
 Table of Scored Circumstances
 criteria	point value	description	turn stamp
@@ -493,7 +501,7 @@ To receive a prize:
 		now prize taken is false;
 		continue the action.
 
-Section 11 - Swearing
+Section 12 - Swearing
 
 Swearing mildly is an action applying to nothing.
 The Swearing mildly action translates into I6 as "Mild".
@@ -520,46 +528,38 @@ Check an actor swearing obscenely (this is the block swearing obscenely rule):
 Understand "[swears]" as swearing obscenely.
 Understand "fuck", "shit", "motherfucker", "cocksucker", "cunt", "prick", "cock", "piss", "tits", and "damn" as "[swears]".
 
-Section 12 - Miscellaneous
+Section 13 - Talking/Asking/Telling/Showing
 
-[coins]
-a coin is a kind of thing. Understand "shiny" as a coin.
+Understand "talk about [text]" as talking randomly about. Talking randomly about is an action applying to one topic.
+instead of talking randomly about, say "No one wants to hear you prattle on about [the noun]."
+		
+Understand "talk about [something]" as talking about. Talking about is an action applying to one visible thing.
+instead of talking about something :
+	say "No one wants to hear you prattle on about [the noun]."
 
-a nickel is a kind of coin. The description of a nickel is "Five cents, a nickel. And very shiny."
+Understand "talk to [someone] about [anything]" as a mistake ("To start a conversation, try to ASK [the noun] ABOUT something or TELL [the noun] ABOUT something.").
+Understand "talk to [someone]" as a mistake ("To start a conversation, try to ASK [the noun] ABOUT something or TELL [the noun] ABOUT something.").
 
-a dime is a kind of coin. The description of a dime is "It[']s a dime. Ten cents. One tenth of a dollar. And very shiny."
+Instead of asking someone about something:
+	say "'[one of]Sorry,[or]I'm afraid[or]Hmm,[at random] [one of]I don't know much about that[or]you've got me there[or]I haven't the faintest[at random],' [the noun] [one of]drawls[or]replies[or]comments[or]exclaims[at random].";
+	
+Instead of telling an someone about something:
+	say "[The noun] looks [one of]surprised[or]intrigued[or]nonplussed[at random]. '[one of]You don't say[or]That's very interesting[or]Do go on[or]I wish I'd known that sooner[at random]!'".
+	
+Instead of showing something to an someone:
+	say "'[one of]Sorry,[or]I'm afraid[or]Hmm,[at random] [one of]I don't know much about that[or]you've got me there[or]I haven't the faintest[at random],' [the second noun] [one of]drawls[or]replies[or]comments[or]exclaims[at random].";
 
-a quarter is a kind of coin. . The description of a quarter is "It[']s a quarter. Two bits. And very shiny."
+Section 14 - Senses
 
-three quarters and one nickel underlie the seat.
-
-[heaven and earth]
-A room can be indoors or outdoors. A room is usually indoors. 
-
-The sky is a backdrop. The sky is everywhere.
-
-The description of the sky is "[if the location is outdoors]It[']s a beautiful evening. Not a cloud in the sky. The moon is out and there are so many stars to see. A shooting star streaks across the sky.[otherwise]You[']re indoors. You can[']t see the sky here."
-
-The ground is a backdrop. The ground is everywhere. Understand "floor" as the ground. The description is "[if the location is in the midway]You see nothing special about the ground.[otherwise]You see nothing special about the floor.[end if]"
-
-[Hell Ride]
-Hell Ride is a backdrop. it is everywhere. The description is "This carnival is famous for its Hell Ride attraction."
-
-carry out examining hell ride:
-	if the location is in the midway:
-		say "Through the lights and excitement of the carnival, you can see the facade for Hell Ride looming ominously over the midway." instead;
-	otherwise:
-		say "You can['] see that here."
-
-[senses]
 instead of kissing, say "Oh, my! Why would you want to kiss [the noun]? Your sweetie wouldn't like that!".
 
 instead of touching a person, say "Touching [the noun] without consent is likely to get you punched in the face! Better not.".
 instead of touching a thing, say "You notice nothing unusual about the way [the noun] feels."
 
+Understand "smell carnival" as smelling.
 instead of smelling:
 	if the location is in the Midway:
-		say "You smell the odors of the carnival. As you smell, you can discern fresh, hot buttered popcorn, the sweet aroma of cotton candy, and the warm doughy scent of pretzels.";
+		say "You smell the odors of the carnival. As you inhale deeply, you can discern fresh, hot buttered popcorn, the sweet aroma of cotton candy, and the warm doughy scent of pretzels.";
 	otherwise if the location is in the back stage or the location is in the second floor:
 		say "You smell grease, oil, and the other scents that linger back stage.";
 	otherwise if the location is in Hellride:
@@ -575,6 +575,38 @@ instead of listening:
 
 instead of tasting someone, say "Ew! You[']re weird!".
 instead of tasting something, say "Ew! You[']re weird!".
+
+Section 15 - Miscellaneous
+
+[coins]
+a coin is a kind of thing. Understand "shiny" as a coin.
+a nickel is a kind of coin. The description of a nickel is "Five cents, a nickel. And very shiny.".
+a dime is a kind of coin. The description of a dime is "It[']s a dime. Ten cents. One tenth of a dollar. And very shiny.".
+a quarter is a kind of coin. . The description of a quarter is "It[']s a quarter. Two bits. And very shiny.".
+
+three quarters and one nickel underlie the seat.
+
+[heaven and earth]
+A room can be indoors or outdoors. A room is usually indoors. 
+
+The sky is a backdrop. The sky is everywhere. The description of the sky is "[if the location is outdoors]It[']s a beautiful evening. Not a cloud in the sky. The moon is out and there are so many stars to see. A shooting star streaks across the sky.[otherwise]You[']re indoors. You can[']t see the sky here."
+
+The moon is a backdrop. It is everywhere. The description of the moon is "[if the location is outdoors]It[']s a full moon tonight. It's sort of romantic. Too bad you[']re alone.[otherwise]You can[']t see the moon here.".
+
+The ground is a backdrop. The ground is everywhere. Understand "floor" as the ground. The description is "[if the location is in the midway]You see nothing special about the ground.[otherwise]You see nothing special about the floor.[end if]"
+
+[Carnival]
+The carnival is a backdrop. it is everywhere. The description of the carnival is "The carnival is lively and colorful filled with fun attractions, games, and entertainment. It features rides like the Ferris Wheel and the Carousel, game booths offering prizes, live performances such as dancers and musicians, and a variety of food stands serving treats like cotton candy, popcorn, and pretzels. The atmosphere is vibrant, with bright lights, music, and the cheerful sounds of laughter and excitement.".
+
+[Hell Ride]
+Hell Ride is a backdrop. it is everywhere. The description is "This carnival is famous for its Hell Ride attraction."
+
+carry out examining hell ride:
+	if the location is in the midway:
+		say "Through the lights and excitement of the carnival, you can see the facade for Hell Ride looming ominously over the midway." instead;
+	otherwise:
+		say "You can['] see that here."
+
 
 Chapter 6 - Figures
 
@@ -645,11 +677,31 @@ Sound of Bell is the file "Silence.ogg" ("The sound of silence").
 
 five dimes underlie the seat. 
 
+[The carrying capacity of the fanny pack is 50.]
+
 Displaying prices is an action out of world applying to nothing. Understand "display prices" as displaying prices.
 Carry out displaying prices:
 	repeat with item running through things:
 		if item is for sale:
 			say "[price of the item] [An item]."
+
+Displaying fuses is an action out of world applying to nothing. Understand "display fuses " as displaying fuses.
+Carry out displaying fuses:
+	repeat with item running through things:
+		if item is a fuse:
+			say "[An item] is a fuse."
+
+Displaying weights is an action out of world applying to nothing. Understand "display weights" as displaying weights.
+Carry out displaying weights:
+	repeat with item running through things:
+		if the weight of the item is greater than 0kg:
+			say "[weight of the item] [item][line break]".
+			
+Displaying containers is an action out of world applying to nothing. Understand "display containers" as displaying containers.
+Carry out displaying containers:
+	repeat with item running through things:
+		if the item is a container or the item is a supporter or the item is a person:
+			say "[total weight of things in the item] *** [maximum weight of the item] [item][line break]".
 
 Displaying missing descriptions is an action out of world applying to nothing. Understand "display missing descriptions" as displaying missing descriptions.			
 Carry out displaying missing descriptions:
@@ -662,12 +714,12 @@ Carry out displaying descriptions:
 	repeat with item running through things:
 		if the description of the item is not "":
 			say "[item] has a description."
-			
-Displaying fuses is an action out of world applying to nothing. Understand "display fuses " as displaying fuses.
-Carry out displaying fuses:
+
+Displaying things is an action out of world applying to nothing. Understand "display things" as displaying things.
+Carry out displaying things:
 	repeat with item running through things:
-		if item is a fuse:
-			say "[An item] is a fuse."
+		if the item is not a person and the item is not scenery and the item is not fixed in place and the item is not part of something:
+			say "[weight of item] [item][line break]".
 
 
 Chapter 8 - RNG Seed, Money, Dimes, Sounds - For Release Only
@@ -681,6 +733,7 @@ Sound of Bell is the file "Bell.ogg" ("The sound of a ship[']s bell").
 
 three dimes underlie the seat.
 
+[The carrying capacity of the fanny pack is 15.]
 
 Part 2 - The Game
 
@@ -797,6 +850,7 @@ Section 6 - Fuses
 
 A fuse is a kind of thing. 
 Understand "fuse" as a fuse.
+The weight of a fuse is 2kg.
 A fuse has a color. Understand the color property as describing a fuse.
 A fuse has a number called fuse id. Understand the fuse id property as describing a fuse.
 The description of a fuse is "This is [color of the item described] colored electrical fuse." 
@@ -875,10 +929,7 @@ Last report switching on a switch (this is the final report switching on a switc
 
 Last report switching off a switch (this is the final report switching off a switch rule):		
 	say "The [corresponding indicator of the noun]'s light turns off.".
-	
-Understand "turn on [a switch]" as a mistake ("To TURN ON a switch, try FLIP switch, PUSH switch, or TOGGLE switch.").
-Understand "switch on [a switch]" as a mistake ("To SWITCH ON a switch, try FLIP switch, PUSH switch, or TOGGLE switch.").
-	
+
 The switch count is a number that varies. The switch count is 0.
 To count the switches:
 	now the switch count is 0;
@@ -958,7 +1009,7 @@ after looking when the location is the parking lot:
 
 The beater car is an open enterable unopenable container in the parking lot. The beater car is scenery. Understand "vehicle" and "car" as the beater car. The description of the beater car is "[if the player is in the beater car][bold type]Car Interior[roman type][line break][end if]This is your car. It[']s a 2002 Honda Civic and it[']s seen better days.[paragraph break][if the player is in the beater car]You[']re sitting inside your car. [end if]Even though it[']s old, it feels like an old friend. From the faux leather seats to the crack in the windshield. It[']s familiar and comforting. There are old fast food wrappers on the floor, dirty clothes and text books in the back seat. There is an air freshener hanging from the rear view mirror. You see [the list of things which are part of the beater car]." 
 
-The wrappers are here. The wrappers are scenery. The description of the wrappers is "McDonald's, Burger King, Jack In The Box, Taco Bell, Carls, Jr., Five Guys... You[']re a regular equal opportunity garbage gut."
+The wrappers are here. The wrappers are scenery. The description of the wrappers is "McDonald's, Burger King, Jack In The Box, Taco Bell, Carl's Jr., Five Guys... You[']re a regular equal opportunity garbage gut."
 
 The text books are here. The text books are scenery. Understand "books" as text books. The description of the text books is "The titles you see are Introduction to Calculus, Statistics, and Heart of Darkness here."
 
@@ -966,7 +1017,7 @@ Your dirty clothes are here. The clothes are scenery. The description is "Your d
 
 instead of looking when the player is in the beater car, try examining the beater car.
 
-A blueberry bush is here. the blueberry bush is scenery. the blueberry bush is a container.  The description is "This is a high bush blueberry plant.". The blueberry bush is not portable. the blueberry bush contains blueberries. Understand "berries" as blueberries. The blueberries are edible. The description of the blueberries is "The blueberries are ripe and juicy.". The blueberries can be consumed or uneaten. The blueberries are uneaten.
+A blueberry bush is here. the blueberry bush is scenery. the blueberry bush is a container.  The description is "This is a high bush blueberry plant.". The blueberry bush is not portable. the blueberry bush contains some blueberries. Understand "berries" as blueberries. The blueberries are edible. The description of the blueberries is "The blueberries are ripe and juicy.". The blueberries can be consumed or uneaten. The blueberries are uneaten.
 	
 instead of eating the blueberries:
 	say "The blueberries were delicious. A true taste of summer!";
@@ -984,7 +1035,7 @@ check giving the coupon to the parking attendant:
 		say "Done. But you already bought a parking ticket.";
 		now the parking attendant carries the coupon;
 		stop the action.
-		
+
 instead of buying the parking ticket when the player is not in the car:
 	say "The attendant mumbles something about the stub.";
 	now the player carries the parking ticket;
@@ -1005,7 +1056,7 @@ instead of asking the parking attendant about "[stub]":
 instead of telling the parking attendant about the "[stub]":
 	say "He replies, 'Put the ticket stub on your dashboard or your car will get towed.'"
 
-instead of going south when the location is the parking lot and the player does not carry the parking ticket, say "You need a parking ticket to leave your car here." instead.
+instead of going south when the location is the parking lot and the player does not have the parking ticket, say "You need to buy a parking ticket to leave your car here." instead.
 
 Section 2 - Car Interior
 
@@ -1068,7 +1119,7 @@ The ticket kiosk is a thing. It is in the ticket booth. Understand "booth" as th
 
 Next to the kiosk, a vibrant signboard lists ticket prices with playful illustrations of rides and treats."
 
-A ride ticket is a kind of thing. A ride ticket has a price.
+A ride ticket is a kind of thing. A ride ticket has a price. The plural of ride ticket is ride tickets.
 
 The Hell Ride ticket is a ride ticket. The cashier carries the Hell Ride ticket. The price of the Hell Ride ticket is $4.00. The description of the Hell Ride ticket is "'Admit One' to the Hell Ride.[line break]It[']s a real 'E' ticket, baby!". 
 
@@ -1192,12 +1243,22 @@ A mallet is carried by the Strongman attendant.  The price of the mallet is $2.0
 
 A strength pattern is a kind of value. The strength patterns are Weakling, Getting Stronger, Average, Almost There, Muscle Man.
 
+understand the command punch as something new.
+piercing is an action applying to two things. Understand "pierce [something preferably held] with [something]" as punching.
+punching is an action applying to two things. Understand "punch [something preferably held] with [something]" as punching.
+instead of punching:
+	say "You [if the second noun is not the awl or the noun is not the wallet]can[']t [end if]punch a hole in [the noun] with the [second noun].".
+	
 Hitting is an action applying to two visible things. 
-Understand "hit [something]" as hitting. Understand "hit [something] with [something preferably held]" as hitting. 
+Understand "hit [something]" as hitting. Understand "hit [something] with [something preferably held]" as hitting.
 Understand "strike [something]" as hitting. Understand "strike [something] with [something preferably held]" as hitting.
 Understand "swing [something preferably held] at [something]" as hitting (with nouns reversed). 
 
 Check hitting:
+	if noun is an attendant:
+		say "[The noun] blocks your swing and takes the mallet from you!";
+		now the mallet is nowhere;
+		stop the action;
 	if noun is not lever, say "Nothing happens." instead;
 	if the second noun is not mallet, say "You can[']t hit [the noun] with that!" instead;
 	if the player is not carrying the mallet, say "You[']re not holding the mallet." instead.
@@ -1427,7 +1488,7 @@ The Show Tent is a room. The Show Tent is west of Show Facade. "You are inside t
 
 Little Egypt is a woman. Little Egypt is in the Show Tent. Little Egypt is scenery. The description of Little Egypt is "Little Egypt is an exotic looking, beautiful woman who is draped in flowing silk veils which she skillfully uses as part of the dance. Her attire consists of a sparkling, sequined bodice and a flowing skirt, adorned with jingling coin belts and jewelry that accentuate her movements."
 
-A sheer veil is a wearable thing. The description of the Sheer Veil is "This is a sheer gold veil that Little Egypt wore (and removed) during her show. Your head swims as you smell the scent of her perfume on her veil: patchouli."
+A sheer veil is a wearable thing. The description of the Sheer Veil is "This is a sheer gold veil that Little Egypt wore (and removed) during her show. Your head swims as you smell the scent of her perfume on the veil: Pyramid Patchouli."
 
 after wearing the veil, say "You wrap the veil around your head, shrouding your eyes. The world is a lovely color pink as you look through the veil while her perfume fills your nostrils in the most delightful way. You look pretty!"
 
@@ -1460,7 +1521,7 @@ every turn during Little Egypt AutoPlay:
 		blank out the whole row;
 		rule succeeds.
 
-Instead of doing something other than waiting, looking, listening or examining during Little Egypt AutoPlay:
+Instead of doing something other than waiting, looking, listening, smelling or examining during Little Egypt AutoPlay:
 	say "You[']re much too entranced by the show to do anything other than watch the show. You are riveted[if the player is in the folding chair] to your seat[end if]!".
 
 Section 10 - Ferris Wheel Ride
@@ -1495,6 +1556,10 @@ The gondola sways gently, adding a hint of thrill to the tranquil ride. You exch
 
 Whether you’re seeking a moment of calm, a romantic view, or the sheer wonder of seeing the world from above, the Ferris wheel delivers an unforgettable ride that captures the magic of the carnival."
 
+A thing called the Ferris Wheel is in the Ferris Wheel Ride. The Ferris Wheel is scenery. The description of the Ferris Wheel is "The Ferris wheel towers above the carnival and is illuminated with vibrant lights, creating a dazzling display. As the wheel turns slowly, the gondolas remain upright, offering riders a thrilling yet gentle experience and spectacular views from the top.".
+
+Does the player mean doing something with the Ferris Wheel: it is very likely.
+
 Section 11 - Bumper Cars
 
 After going northwest from the ticket Booth when the bumper cars ride is unvisited:
@@ -1525,7 +1590,11 @@ The thrill of the bumper cars is in the collisions — every thud and jolt accom
 
 The ride is a whirlwind of laughter, harmless competition, and shared joy. As the music fades and the cars slow to a stop, you climb out with a wide grin, already looking forward to your next turn in the driver’s seat."
 
-A two dollar bill is a thing. The two dollar bill is in the Bumper Cars Ride. Understand "bill" as the two dollar bill. "Hey! Is that a two dollar bill on the ground?" The description of the two dollar bill is "It has a picture of Thomas Jefferson on it."
+A thing called the Bumper Cars are in the Bumper Cars Ride. The Bumper Cars are scenery. The description of the Bumper Cars is "The Bumper Cars are small, colorful, electric-powered vehicles equipped with a padded outer rim to absorb impacts, allowing riders to safely bump into each other as part of the game. The ceiling has a conductive surface that powers the cars. Riders are thrilled by chaotic collisions, laughter, and the challenge of maneuvering away from — or into — other drivers."
+
+Does the player mean doing something with the Bumper Cars: it is very likely.
+
+A two dollar bill is a thing. The two dollar bill is in the Bumper Cars Ride. Understand "bill" as the two dollar bill. "Hey! Is that a two dollar bill on the ground?" The description of the two dollar bill is "It has a picture of Thomas Jefferson on it.".
 
 instead of taking the two dollar bill:
 	say "Taken.[paragraph break]";
@@ -1548,6 +1617,8 @@ Before looking when the location is the Fortune Teller Booth:
 	
 The Fortune Teller Booth is a room. The Fortune Teller Booth is outdoors. The fortune teller booth is southeast of the Ticket Booth. "Approaching the fortune teller[’]s booth, you’re drawn in by its mysterious allure. Draped in deep purple curtains adorned with golden moons and stars, the booth glows with the soft, inviting light of lanterns. The air is heavy with the scent of incense, mingling with the sweet aroma of carnival treats. A sign reading 'Fortunes Told — What Does Your Future Hold?' sways slightly in the evening breeze."
 
+The Fortune Teller sign is here. The Fortune Teller sign is scenery. The description of the Fortune Teller sign is "'Fortunes Told — What Does Your Future Hold?'".
+
 The Mysterious Woman is a woman in the fortune teller booth. The description of the Mysterious Woman is "The fortune teller sits in a dimly lit booth, draped in rich fabrics of deep purple and gold, adorned with celestial patterns of stars and moons. Their appearance is enigmatic, with piercing eyes that seem to look right through you and a knowing smile that hints at secrets yet untold. They wear flowing robes embellished with shimmering beads, and a jeweled headpiece catches the flickering light of nearby candles."
 
 instead of giving the fortune teller ticket to the Mysterious Woman:
@@ -1558,6 +1629,8 @@ instead of giving the fortune teller ticket to the Mysterious Woman:
 The fortune teller[’]s voice is low and melodic, weaving an air of intrigue as they ask you to focus on a question or offer your palm for a reading. The room seems to shrink, the bustling carnival outside fading into the background as they reveal your fate. Each card turned or line traced feels significant, as though unlocking a secret you didn’t know you carried.
 
 As the reading concludes, the fortune teller gazes into your eyes with a cryptic smile and delivers their final words of wisdom. Whether you leave with a sense of wonder, excitement, or unease, the encounter lingers with you — a touch of magic amid the carnival’s chaos, as if you’ve glimpsed something beyond the ordinary."
+
+[instead of asking the mysterious woman when the second noun is me, say "You[']ll need a ticket if you want another fortune.".]
 
 Section 13 - Carousel
 
@@ -1584,6 +1657,11 @@ instead of giving the carousel ticket to the carousel attendant:
 As the ride picks up speed, the world outside becomes a blur of glowing carnival lights and swirling colors. The gentle up-and-down motion mimics a playful gallop, and the rhythmic whir of the carousel’s machinery adds a soothing backdrop to the cheerful atmosphere. Laughter and the sound of children’s chatter mix with the music, creating a sense of nostalgia and joy.
 
 For a few moments, you’re transported into a magical world, the worries of the day fading away with each graceful rotation. Whether you’re enjoying the ride alone, with friends, or sharing a special moment with family, the carousel[’]s charm captures a timeless blend of whimsy and wonder. As it slows to a stop, you step off with a smile, the music lingering in your ears as you rejoin the bustling carnival."
+
+Understand "merry-go-round" and "merry go round" as carousel.
+A thing called the Carousel is in the Carousel Room. The Carousel is scenery. The description of the Carousel is "The carousel features intricately decorated, moving figures such as horses, chariots, and sea dragons, all mounted on poles. The figures move up and down in an endless chase accompaniment of cheerful, calliope music. Illuminated by bright, twinkling lights, the carousel creates a magical and timeless atmosphere.".
+
+Does the player mean doing something with the Carousel: it is very likely.
 
 Section 14 - Head of the Line
 
@@ -1729,7 +1807,7 @@ Dimly lit by a single hanging bulb, the room feels cooler and slightly damp, the
 
 There are exists north and south. There is a wooden door to the west." 
 
-The toolbox is a closed openable container in the Mechanical Room North. The toolbox is fixed in place. The toolbox contains an adjustable wrench, channel locks, pliers, and a hammer. Understand "tool", "box", and "tool box" as toolbox. The description of the toolbox is "This is a toolbox. I bet it contains tools."
+The toolbox is a closed openable container in the Mechanical Room North. The toolbox is fixed in place. The toolbox contains an adjustable wrench, channel locks, some pliers, and a hammer. Understand "tool", "box", and "tool box" as toolbox. The description of the toolbox is "This is a toolbox. I bet it contains tools."
 
 The description of the adjustable wrench is "Just one of the many tools used to maintain the carnival.".
 The description of the channel locks is "Just one of the many tools used to maintain the carnival.".
@@ -1837,21 +1915,21 @@ Section 1 - Hell Ride Scene
 
 Hell Ride AutoPlay is a scene. 
 Hell Ride AutoPlay begins when the player is in the hell ride car for 2 turns.
-Hell Ride AutoPlay ends when the number of filled rows in the Table of Hell Ride Events is 1.
+Hell Ride AutoPlay ends when index is the number of rows in the Table of Hell Ride Events.
 	
 When Hell Ride AutoPlay ends:
 	end the story finally.
 	
-Instead of doing something other than waiting, looking, listening or examining during Hell Ride AutoPlay:
+Instead of doing something other than waiting, looking, listening, smelling or examining during Hell Ride AutoPlay:
 	say "You[']re enjoying the ride so much that you don[']t want to do anything but sit and watch the ride go by."
 	
+index is a number that varies. index is usually 1.		
 every turn during Hell Ride AutoPlay:
-	repeat through Table of Hell Ride Events:
-		display figure entry;
-		say "[bold type][locale text entry][roman type][line break][description entry][paragraph break]Mist fills the area as you move to the next room...
-[paragraph break]";
-		blank out the whole row;
-		rule succeeds.
+	choose row index in the Table of Hell Ride Events;
+	move the hell ride car to the locale entry, without printing a room description;
+	try looking;
+	say "Mist fills the area as you move to the next room...[paragraph break]";
+	increment index;
 
 Section 2 - Ride Entrance
 
@@ -1973,9 +2051,8 @@ Chapter 5 - Second Floor
 
 Section 1 - Holding Room
 
-The Holding Room is a room. "I am a room to hold things."
-
-every turn when the location is the holding room, say "Danger, Will Robinson! This can never happen!"
+The Holding Room is a room. "I am a room to hold things.".
+every turn when the location is the holding room, say "Danger, Will Robinson! This can never happen!".
 
 Section 2 - Dark Hallway
 
@@ -1991,8 +2068,9 @@ A flickering light casts cold shadows as the metallic tang of machinery mixes wi
 
 A dark hallway lies to the east." 
 
-A big switch is a device in the control room. The big switch is fixed in place. The big switch can be switched on or switched off. The big switch is switched on.
-The description of the big switch is "This is a large switch. It[']s the kind Dr. Frankenstein might push to route the lightning to his creature.[if the big switch is switched on] Currently there are sparks arcing out from the switch. It looks dangerous.[end if]"
+A big switch is a device in the control room. The big switch is fixed in place. The big switch can be switched on or switched off. The big switch is switched on. 
+"[if the big switch is switched on]Currently there are sparks arcing out from the switch. It looks dangerous.[end if]".
+The description of the big switch is "This is a large switch. It[']s the kind Dr. Frankenstein might push to route the lightning to his creature."
 
 electrocuted is a truth state that varies. electrocuted is false.
 instead of switching off the big switch:
