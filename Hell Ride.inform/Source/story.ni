@@ -11,7 +11,8 @@ Release along with
 	the solution, 
 	and library card.
 
-Use maximum things understood at once of at least 300.
+Use unabbreviated object names.
+Use maximum things understood at once of at least 400.
 Use dynamic memory allocation of at least 131072.
 Use maximum text length of at least 4096.
 Use DICT_WORD_SIZE of 25.
@@ -53,6 +54,8 @@ Chapter 4 - The Player, Global Code
 The player is in the Parking Lot. 
 [The carrying capacity of the player is 10.]
 The description of the player is "You are despondent given that you and your date just had a huge fight and they stormed off. Maybe visiting the attractions at the carnival will make you feel better." 
+
+hair is a thing. the hair is part of the player. the description is "Your hair is clean and well styled.".
 
 Instead of examining the player:
 	say "Oh, stop fussing. You look fine."
@@ -353,14 +356,14 @@ every turn when not in darkness, now dark terminus count is 0.
 
 Section 8 - Hello Sailor
 
-Hi-speaking is an action applying to one visible thing. Understand "hello [something]" and "hi [something]" as hi-speaking.
+Hi-speaking is an action applying to one visible thing. Understand "hello [something]", "hi [something]" and "[someone] hello" and "[someone] hi" as hi-speaking.
 Check hi-speaking:
 if the noun is the sailor, say "Nothing happens here." instead;
 if the noun is not a person, say "I think that only schizophrenics say 'Hello' to [a noun]." instead.
 Carry out hi-speaking:
-say "[The noun] bows his head to you in greeting."
+say "[The noun] bows their head to you in greeting."
 
-The Sailor is a backdrop. The sailor is everywhere. The sailor is scenery. The description is "This is a very famous sailor.".
+The Sailor is a backdrop. The sailor is everywhere. The sailor is scenery. The description is "This sailor seems familiar to you.".
 
 Check hi-speaking the sailor for the tenth time:
 say "I think that phrase is getting a bit worn out." instead.
@@ -419,7 +422,7 @@ Table of Scored Circumstances
 criteria	point value	description	turn stamp
 "[if the blueberries are handled]Y[otherwise]N[end if]"	5	"Taking the blueberries"	-1
 "[if the blueberries are consumed]Y[otherwise]N[end if]"	5	"Eating the blueberries"	-1
-"[if the keys are visible]Y[otherwise]N[end if]"	5	"Finding the coins and keys"	-1
+"[if your keys are visible]Y[otherwise]N[end if]"	5	"Finding the coins and keys"	-1
 "[if the player is carrying the Hell Ride ticket]Y[otherwise]N[end if]"	10	"Buying the Hell Ride ticket"	-1
 "[if the player is wearing the sheer veil]Y[otherwise]N[end if]"	5	"Wearing the sheer veil"	-1
 "[if the player is carrying the lantern]Y[otherwise]N[end if]"	10	"Taking the lantern"	-1
@@ -477,8 +480,7 @@ Carry out requesting the complete score:
 	sort the Table of Scored Circumstances in turn stamp order;
 	repeat through the Table of Scored Circumstances:
 		if the turn stamp entry is greater than 0:
-			say "•  [description entry]: [point value entry] points.";
-	say line break.
+			say "•  [description entry]: [point value entry] points.".
 	
 check requesting the score:
 	try requesting the complete score instead;
@@ -563,7 +565,7 @@ instead of smelling:
 		say "You smell the odors of the carnival. As you inhale deeply, you can discern fresh, hot buttered popcorn, the sweet aroma of cotton candy, and the warm doughy scent of pretzels.";
 	otherwise if the location is in the back stage or the location is in the second floor:
 		say "You smell grease, oil, and the other scents that linger back stage.";
-	otherwise if the location is in Hellride:
+	otherwise if the location is in HellRide:
 		say "You smell incense as it permeates through [story title].";
 		
 instead of listening:
@@ -571,7 +573,7 @@ instead of listening:
 		say "You can hear all the sounds of the carnival. The sounds of a calliope waft across the thoroughfare from the carousel. You can hear the laughter and screams as other patrons ride the rides and play the games.";
 	otherwise if the location is in the back stage or the location is in second floor:
 		say "You hear mechanical sounds: the screech metal upon metal, gears turning in precision, and the thump of the cars as they traverse the tracks through the ride.";
-	otherwise if the location is in Hellride:
+	otherwise if the location is in HellRide:
 		say "As you travel through [story title], you hear ominous music, the murmurs of the crowd, and the occasional scream in the distance.";
 
 instead of tasting someone, say "Ew! You[']re weird!".
@@ -600,7 +602,7 @@ The ground is a backdrop. The ground is everywhere. Understand "floor" as the gr
 The carnival is a backdrop. it is everywhere. The description of the carnival is "The carnival is lively and colorful filled with fun attractions, games, and entertainment. It features rides like the Ferris Wheel and the Carousel, game booths offering prizes, live performances such as dancers and musicians, and a variety of food stands serving treats like cotton candy, popcorn, and pretzels. The atmosphere is vibrant, with bright lights, music, and the cheerful sounds of laughter and excitement.".
 
 [Hell Ride]
-Hell Ride is a backdrop. it is everywhere. The description is "This carnival is famous for its Hell Ride attraction."
+Hell Ride is a backdrop. it is everywhere. The description is "This carnival is famous for its Hell Ride attraction.". The price of Hell Ride is $0.00.
 
 carry out examining hell ride:
 	if the location is in the midway:
@@ -620,6 +622,14 @@ Images off is an action out of world applying to nothing. Understand "images off
 carry out images off:
 	say "Images off.";
 	now show images is false.
+	
+Section 16 - Does The Player Mean
+
+Does the player mean doing something with the hell ride ticket when the location is the head of the line: it is very likely.
+Does the player mean doing something with the fortune teller ticket when the location is the FT-room: it is very likely.
+Does the player mean doing something with the ferris wheel ticket when the location is the FW-room: it is very likely.
+Does the player mean doing something with the bumper cars ticket when the location is the bumper cars ride: it is very likely.
+Does the player mean doing something with the carousel ticket when the location is the carousel: it is very likely.
 
 Chapter 6 - Figures
 
@@ -867,7 +877,7 @@ The weight of a fuse is 2kg.
 A fuse has a color. Understand the color property as describing a fuse.
 A fuse has a number called fuse id. Understand the fuse id property as describing a fuse.
 The description of a fuse is "This is [color of the item described] colored electrical fuse." 
-The printed name of a fuse is "[color of the item described] colored fuse".
+The printed name of a fuse is "[an color of the item described] colored fuse".
 
 Definition: a fuse is plugged-in rather than loose if it is contained by a socket.
 
@@ -917,12 +927,10 @@ Understand "switch [something related by reversed incorporation]" as a switch.
 Understand "[something related by reversed incorporation] switch" as a switch.
 
 toggling is an action applying to one thing.
-understand "toggle [the big switch]" as pushing.
-understand "toggle [a switch]" as pushing.
+understand "toggle [something]" as pushing.
 
 flipping is an action applying to one thing.
-understand "flip [the big switch]" as pushing.
-understand "flip [a switch]" as pushing.
+understand "flip [something]" as pushing.
 
 Instead of pushing a switched off switch (this is the redirect push to switch on rule):
 	try switching on the noun.
@@ -971,16 +979,28 @@ Instead of going from the Electrical Room:
 	if the big switch is switched on, move the player to a random adjacent room;
 	otherwise continue the action.
 
-a breaker panel is here. It is scenery. The description is "This breaker panel controls various portions of the carnival.".
-a junction box is here. It is scenery. The description is "This is a junction box routing the various electrical cables running through the back stage area.".
-a workbench is here. It is scenery. The description is "This is a cluttered work bench. You would have a hard time finding room to do anything on it.".
-an emergency shutdown panel is here. It is scenery. "This is an emergency shut down panel. There is a switch on the panel.".
-a red switch is part of the emergency shutdown panel. The description is "This is a big red switch, presumably to shut down the carnival rides.".
+some metal panels are here. they are scenery. the description is "Some are polished, others are worn and streaked with grease.".
+a central breaker panel is here. It is scenery. The description is "This breaker panel controls various portions of the carnival.".
+a junction box is here. It is scenery. understand "cables", "bundles", and "wires" as the junction box. The description is "This is a junction box routing the various wires and electrical cables running through the back stage area.".
+a workbench is here. It is scenery. understand "work" and "bench" as the workbench. The description is "This is a cluttered work bench. You would have a hard time finding room to do anything on it.".
+an emergency shutdown panel is an open unopenable container in the electrical room. It is scenery. "This is an emergency shut down panel. There is a switch on the panel.".
 a fire extinguisher is here. It is scenery. The description is "This is a Class E fire extinguisher, specially made for electrical fires.".
 a faded safety poster is here. It is scenery. The description is "The poster reads, 'Safety First!'".
-a small fan is here. It is scenery. The description is "The fan sits on the desktop.".
+a small fan is here. It is scenery. The description is "The fan sits on the desktop oscillating back and forth.".
+a smudged wiring diagram is here. it is scenery. the description is "It[']s hard to make out what this is supposed to be. Better leave it alone.".
+some scattered tools are here. they are scenery. the description is "These are various tools you might use to repair electrical equipment.".
 
-instead of pushing the red switch, say "You apply a considerable amount of force and push [the noun]. You listen and can still hear the sounds of the machinery working somewhere. Nothing happens."
+instead of smelling when the location is the electrical room, say "The air vibrates with electric energy, carrying the acrid scent of overheated wires and metal.".
+
+The red switch is a device. it is part of the emergency shutdown panel. The red switch can be switched on or switched off. The red switch is switched on. The description of the red switch is "This is a big red switch, presumably to shut down the carnival rides.".
+
+Instead of pushing or flipping or toggling a switched off red switch:
+	say "You apply a considerable amount of force and push [the noun]. You listen and can still hear the sounds of the machinery working somewhere. Nothing happens.";
+	try switching on the noun.
+
+Instead of pushing or flipping or toggling a switched on red switch:
+	say "You apply a considerable amount of force and push [the noun]. You listen and can still hear the sounds of the machinery working somewhere. Nothing happens.";
+	try switching off the noun.
 
 Electrical Room is south of the Generator Room. 
 Electrical Room is southwest of Electrical Closet One.
@@ -999,7 +1019,7 @@ When play begins:
 	display the figure of Hell Ride;
 	say "Date night with your sweetie: a meal at your favorite restaurant and a night at the carnival. 
 
-After a lovely meal, you get into a big fight over the tip. Your date storms off, ruining your chances of that romantic evening you hoped for. You decide to stay and enjoy the carnival anyway."
+After a lovely meal, you get into a big fight over the tip. Your date storms off, ruining your chances of that romantic evening you hoped for. You decide to stay and enjoy the carnival anyway.".
 
 The Parking Lot is a room. The parking lot is north of the Ticket Booth. The parking lot is outdoors. "The carnival parking lot stretches across an open field, its gravel crunching under arriving cars. Temporary floodlights and the carnival[']s colorful glow light the area, while distant laughter, music, and the hum of rides fill the air.
 
@@ -1011,36 +1031,38 @@ Puddles from recent rain shimmer with reflected lights, while patches of mud cli
 
 Alive with anticipation, the parking lot marks the transition from the ordinary to the magic of the carnival.
 
-The midway is to the south. There is a blueberry bush here. [if blueberry bush contains blueberries]There are blueberries on the bush.[otherwise]The bush has been picked clean.[end if][paragraph break]Your car is here. It[']s a bit of a beater. Inside the car, you can see [the list of things which are part of the beater car]."
+The midway is to the south. There is a blueberry bush here. [if blueberry bush contains blueberries]There are blueberries on the bush.[otherwise]The bush has been picked clean.[end if][paragraph break]Your car is here. It[']s a bit of a beater. Inside the car, you can see [the list of things which are part of the beater car].[if the parking lot is unvisited]
+
+Type 'Images off' to prevent the game from display images. Type 'Help' for hints about the game and general information about playing interactive fiction games.[end if]"
 
 The parking attendant is an attendant in the the parking lot. The parking attendant carries a parking ticket. The price of the parking ticket is $5.00. The description of the parking ticket is "This is your receipt for parking."
 
-The parking attendant carries a parking stub. The description of the parking stub is "This stub is meant to be placed on your dashboard to indicate you paid for parking.". Understand "the stub" or "ticket stub" or "the ticket stub" as the parking stub.
+The parking attendant carries a parking stub. The description of the parking stub is "This stub is meant to be placed on your dashboard to indicate you paid for parking.". Understand "stub" or "ticket stub" as the parking stub.
 
 after looking when the location is the parking lot:
 	say "[if the parking attendant carries the parking ticket]The attendant has a parking ticket. The price of a parking ticket is [the price of the parking ticket].[end if]";
 
 The beater car is an open enterable unopenable container in the parking lot. The beater car is scenery. Understand "vehicle" and "car" as the beater car. The description of the beater car is "[if the player is in the beater car][bold type]Car Interior[roman type][line break][end if]This is your car. It[']s a 2002 Honda Civic and it[']s seen better days.[paragraph break][if the player is in the beater car]You[']re sitting inside your car. [end if]Even though it[']s old, it feels like an old friend. From the faux leather seats to the crack in the windshield. It[']s familiar and comforting. There are old fast food wrappers on the floor, dirty clothes and text books in the back seat. There is an air freshener hanging from the rear view mirror. You see [the list of things which are part of the beater car]." 
 
+The puddles are here. The puddles are scenery. The description is "You carefully skirt the puddles to avoid getting your feet wet.".
+
 The wrappers are here. The wrappers are scenery. The description of the wrappers is "McDonald's, Burger King, Jack In The Box, Taco Bell, Carl's Jr., Five Guys... You[']re a regular equal opportunity garbage gut."
 
 The text books are here. The text books are scenery. Understand "books" as text books. The description of the text books is "The titles you see are Introduction to Calculus, Statistics, and Heart of Darkness here."
 
-Your dirty clothes are here. The clothes are scenery. The description is "Your dirty clothes are strewn about. You really meant to do laundry days ago."
+Your dirty clothes are here. Your dirty clothes are scenery. The description is "Your dirty clothes are strewn about. You really meant to do laundry days ago."
 
 instead of looking when the player is in the beater car, try examining the beater car.
 
-A blueberry bush is here. the blueberry bush is scenery. the blueberry bush is a container.  The description is "This is a high bush blueberry plant.". The blueberry bush is not portable. the blueberry bush contains some blueberries. Understand "bushes" as bush.
+A blueberry bush is here. the blueberry bush is scenery. the blueberry bush is a container.  The description is "This is a high bush blueberry plant.". The blueberry bush is not portable. the blueberry bush contains some blueberries. Understand "bushes" as blueberry bush.
 
-Understand "berries" as blueberries. The blueberries are edible. The description of the blueberries is "The blueberries are ripe and juicy.". The blueberries can be consumed or uneaten. The blueberries are uneaten.
+Understand "berries" as blueberries. The blueberries are edible. The description of the blueberries is "The blueberries are ripe and juicy.". The blueberries can be consumed or uneaten. The blueberries are uneaten. understand "Pick [blueberries]" as taking.
 	
 instead of eating the blueberries when the blueberries are uneaten:
 	say "The blueberries were delicious. A true taste of summer!";
 	now the blueberries are consumed;
 	now the blueberries are in the holding room.
 
-understand "Pick [blueberries]" as taking.
-	
 check giving the coupon to the parking attendant:
 	if the parking attendant carries the parking ticket:
 		now the price of the parking ticket is $3.00;
@@ -1052,7 +1074,7 @@ check giving the coupon to the parking attendant:
 		now the parking attendant carries the coupon;
 		stop the action.
 
-instead of buying the parking ticket when the player is not in the car:
+instead of buying the parking ticket when the player is not in the beater car:
 	say "The attendant mumbles something about the stub.";
 	now the player carries the parking ticket;
 	now the player carries the parking stub;
@@ -1061,16 +1083,13 @@ instead of buying the parking ticket when the player is not in the car:
 instead of buying something when the player is in the beater car:
 	say "You don[']t see that here." instead.
 	
-understand "stub" or "the stub" or "ticket stub" or "the ticket stub" as "[stub]".
-
+understand "stub", "the stub", "ticket stub", and "the ticket stub" as "[stub]".
 instead of showing the parking stub to the parking attendant:
-	say "He replies, 'Put the ticket stub on your dashboard or your car will get towed.'"
-
+	say "[The noun] replies, 'Put the ticket stub on your dashboard or your car will get towed.'".
 instead of asking the parking attendant about "[stub]":
-	say "He replies, 'Put the ticket stub on your dashboard or your car will get towed.'"
-	
+	say "[The noun] replies, 'Put the ticket stub on your dashboard or your car will get towed.'".
 instead of telling the parking attendant about the "[stub]":
-	say "He replies, 'Put the ticket stub on your dashboard or your car will get towed.'"
+	say "[The noun] replies, 'Put the ticket stub on your dashboard or your car will get towed.'".
 
 instead of going south when the location is the parking lot and the player does not have the parking ticket, say "You need to buy a parking ticket to leave your car here." instead.
 
@@ -1112,7 +1131,7 @@ Before looking when the location is the Ticket Booth:
 	if show images is true, display Figure of TicketBooth;
 
 The Ticket Booth is a room. The Ticket Booth is outdoors. 
-The Ticket Booth is northwest of the Fortune Teller Booth.
+The Ticket Booth is northwest of the FT-room.
 The Ticket Booth is north of Head of the Line. 
 The Ticket Booth is northeast of the Concession Stand. 
 The Ticket Booth is east of the Show Facade. 
@@ -1147,7 +1166,7 @@ The Bumper Cars ticket is a ride ticket. The cashier carries the Bumper Cars tic
 
 The Carousel ticket is a ride ticket. The cashier carries the Carousel ticket. The price of the carousel ticket is $1.00. The description of the Carousel ticket is "'Admit One' to the Carousel."
 
-The Cashier is an attendant in the Ticket Booth. Understand "attendant", "attendent", "operator", "teen", "teenager", and "bored" as cashier.
+The Cashier is an attendant in the Ticket Booth. 
 
 sign table is a table name that varies. The sign table is Table of Tickets.
 To show a sign table:
@@ -1180,7 +1199,9 @@ In front of the stand, kids tug at their parents, teens share pretzels, and the 
 
 There is a menu to the right of the window. You can see the treats inside the stand. There is an exit to the northeast."
 
-treats are here. Treats are scenery. Understand "treat" as treats. The description of treats is "There are a variety of things to eat here."
+The Concession Attendant is an attendant in the concession stand. 
+
+some treats are here. Treats are scenery. Understand "treat" and "goodies" as treats. The description of treats is "There are a variety of things to eat here."
 
 a menu is here.  Understand "sign" as menu. the Menu is fixed in place. The description of the menu is "It[']s a sign display the prices of the various concession items for sale."
 
@@ -1196,19 +1217,36 @@ Instead of player drinking a fluid container:
 		if the current volume of the noun is less than 0.0 fl oz, now the current volume of the noun is 0.0 fl oz;
 		say "[The person asked] gulp down some [liquid of the noun]."
 
-Bubblegum is here. bubblegum is edible. The price of bubblegum is $1.00. The description of the bubblegum is "This is a square of Bazooka Joe Bubblegum. Really now, is there any other?"
+some Bubblegum is here. bubblegum is edible. The price of bubblegum is $1.00. Understand "bubble" and "gum" as bubblegum. The description of the bubblegum is "This is a square of Bazooka Joe Bubblegum. Really now, is there any other?"
 
-a Bucket of Popcorn is here. The bucket of popcorn is edible. The price of popcorn is $2.50. The description of the popcorn is "The bucket of popcorn looks enormous!"
+a Bucket of Popcorn is here. The bucket of popcorn is edible. The price of a bucket of popcorn is $2.50. Understand "bucket", "buttered" as bucket of popcorn. The description of the bucket of popcorn is "The bucket of popcorn looks enormous!"
 
 a Candy Apple is here. The candy apple is edible. The price of a candy apple is $1.50. The description of the candy apple is "The candy apple is your typical caramel covered apple. It looks like it would get stuck in your teeth."
 
 Cotton Candy is here. Cotton candy is edible. The price of cotton candy is $1.50. The description of cotton candy is "The cotton candy is a mixture of pink and blue floss."
 
-a Soft Pretzel is here. The soft pretzel is edible. The price of the soft pretzel is $1.50. The description of the soft pretzel is "The soft pretzel is generously sprinkled with salt."
+a Soft Pretzel is here. The soft pretzel is edible. The price of the soft pretzel is $1.50. understand "pretzels" as soft pretzel. The description of the soft pretzel is "The soft pretzel is generously sprinkled with salt."
 
 instead of reading or examining the menu:
 	now sign table is Table of Concessions;
 	show a sign table.
+
+understand "popcorn", "bucket", and "buttered" as "[popcorn]".
+instead of asking the attendant about "[popcorn]", say "[The noun] says, 'The popcorn is really good. It[']s hot and fresh.'".
+understand "bubblegum", "bubble", and "gum" as "[bubblegum]".
+instead of asking the attendant about "[bubblegum]", say "[The noun] says, 'It[']s Bazooka Joe! My favorite!'".
+understand "candy apple", "candy", and "apple" as "[candy apple]".
+instead of asking the attendant about "[candy apple]", say "[The noun] says, 'I can[']t eat these. I have braces.'".
+understand "cotton candy", "cotton", "candy" as "[cotton candy]".
+instead of asking the attendant about "[cotton candy]", say "[The noun] says, 'I love the way cotton candy melts in my mouth.'".
+understand "pretzel" and "pretzels" as "[pretzels]".
+instead of asking the attendant about "[pretzels]", say "[The noun] says, 'I prefer to eat my pretzels with mustard.".
+	
+the counter is here. it is scenery . the description is "On the counter there are paper bags, napkins, and cups of cheese and sugar sprinkles.".
+the napkin dispenser is here. it is scenery. understand "napkin" and "napkins" as napkin dispenser. the description is "It[']s the kind of dispenser that doesn[']t allow you to take more than one at a time.".
+some paper bags are here. they are scenery. the description is "The paper bags are used to send the customer off with their goodies.".
+some cups are here. they are scenery. the description is "The cups are full of cheese and sugar sprinkles.".
+some workers are here. they are scenery. the description is "More bored teenagers doing their jobs.".
 
 Section 5 - High Striker
 
@@ -1222,9 +1260,9 @@ Before looking when the location is the High Striker:
 [ this was a forward reference that Inform 7 couldn't resolve for some reason]
 A room called the Pitcher's Mound is southeast of the high striker. 
 
-The High Striker is a room. The High Striker is west of the Ferris Wheel Ride, southwest of the Dime Toss Game, and northwest of the Pitcher's Mound. The High Striker is outdoors. "This area features a tall, eye-catching machine adorned with bright, colorful lights, typically red, yellow, and blue. A large sign at the top reads 'Test Your Strength!' in bold, playful lettering. The machine[’]s base is made of polished wood, with a polished, vintage appearance. At the center is a sturdy metal pole, with a large bell hanging at the top, signaling when a successful attempt has been made. Along the length of the pole are markings indicating how strong you are.  A nearby sign says, 'Buy a mallet, strike the bell, win a prize.'[if the strongman attendant contains the mallet] You can see an over-sized mallet here.[end if]
+The High Striker is a room. The High Striker is west of the FW-room, southwest of the Dime Toss Game, and northwest of the Pitcher's Mound. The High Striker is outdoors. "This area features a tall, eye-catching machine adorned with bright, colorful lights, typically red, yellow, and blue. A large sign at the top reads 'Test Your Strength!' in bold, playful lettering. The machine[’]s base is made of polished wood, with a polished, vintage appearance. At the center is a sturdy metal pole, with a large bell hanging at the top, signaling when a successful attempt has been made. Along the length of the pole are markings indicating how strong you are.  A nearby sign says, 'Buy a mallet, strike the bell, win a prize.'[if the strongman attendant contains the mallet] You can see an over-sized mallet here.[end if]
 
-Spectators gather around, cheering on participants and offering lighthearted jabs and encouragement, creating a lively, competitive atmosphere. The sound of the mallet hitting the target is followed by the resonant clang of the bell (if struck), alongside the buzz of carnival music in the background. The Ticket Kiosk is back the way you came and other games are northeast and southeast of here. The Ferris Wheel lies to the east."
+Spectators gather around, cheering on participants and offering lighthearted jabs and encouragement, creating a lively, competitive atmosphere. The sound of the mallet hitting the target is followed by the resonant clang of the bell (if struck), alongside the buzz of carnival music in the background. The Ticket Kiosk is to the west. Other games are northeast and southeast of here. The Ferris Wheel lies to the east."
 
 The markings are here. The markings are scenery. Understand "marking" and "sign" and "signs" as markings. The description of markings is "There are five levels marked on the pole: Weakling, Getting There, Average, Almost There, and Muscle Man."
 
@@ -1265,10 +1303,15 @@ punching is an action applying to two things. Understand "punch [something prefe
 instead of punching:
 	say "You [if the second noun is not the awl or the noun is not the wallet]can[']t [end if]punch a hole in [the noun] with the [second noun].".
 	
+instead of asking the strongman attendant about "mallet", say "Use the mallet to strike the bullseye. Ring the bell to win a prize.".
+instead of asking the strongman attendant about "lever", say "Use the mallet to strike the bullseye. Ring the bell to win a prize.".
+	
 Hitting is an action applying to two visible things. 
 Understand "hit [something]" as hitting. Understand "hit [something] with [something preferably held]" as hitting.
 Understand "strike [something]" as hitting. Understand "strike [something] with [something preferably held]" as hitting.
 Understand "swing [something preferably held] at [something]" as hitting (with nouns reversed). 
+
+Does the player mean doing something with the mallet: it is very likely.
 
 Check hitting:
 	if noun is an attendant:
@@ -1316,11 +1359,13 @@ A room called the Dime Toss Game is northeast of the high striker. "The game boo
 
 The distinctive 'ping' of dimes hitting plates creates a rhythmic soundtrack, punctuated by the occasional satisfying 'plop' when a dime lands perfectly. Victorious shouts mix with playful groans of near-misses, creating a symphony of excitement. Nearby, the hum of other booths, upbeat carnival music, and the distant laughter of children add to the lively backdrop. The booth operator calls out enthusiastically, 'Step right up! Test your skill! Win big!' Their energetic pitch draws in curious onlookers.[if a dime underlies the Dime Toss  booth] You thought you caught a flash of something coming from the area of the booth.[end if]
 
-You[']re surprised to see that this game only costs a dime."
+You[']re surprised to see that this game only costs a dime. The exit is to the southwest."
 
 the Dime Toss booth is a thing in the Dime Toss Game. the Dime Toss booth is scenery. The description of the Dime Toss booth is "The game booth is adorned with vibrant colors — red-and-white striped awnings, twinkling lights, and eye-catching signage. [if a dime underlies the Dime Toss booth] You can see something shiny on the ground under the booth.[end if]"
 
 a mercury dime is a dime. it underlies the Dime Toss booth. The description is "The Mercury dime is a ten-cent coin struck by the United States Mint from late 1916 to 1945. Designed by Adolph Weinman and also referred to as the Winged Liberty Head dime, it gained its common name because the obverse depiction of a young Liberty, identifiable by her winged Phrygian cap, was confused with the Roman god Mercury."
+
+Does the player mean doing something with the mercury dime: it is likely.
 
 before examining the mercury dime:
 	if show images is true, display Figure of MercuryDime.
@@ -1343,7 +1388,7 @@ A small plush monkey is carried by the Dime Toss attendant. Understand "stuffie"
 
 A poster of Billie Eilish is carried by the Dime Toss attendant. The description of the poster of Billie Eilish is "This is a poster of Billie Eilish. Doesn[']t your sweetie like them?"
 
-A small pocket mirror is carried by the Dime Toss attendant. The description of the small pocket mirror is "This is a small pocket mirror. You could use it to check your hair."
+A pocket mirror is carried by the Dime Toss attendant. The description of the pocket mirror is "This is a small pocket mirror. You could use it to check your hair."
 
 To show the Toss A Dime prizes:
 	say "Which prize would you like? [run paragraph on]";
@@ -1394,19 +1439,21 @@ Before looking when the location is the Pitcher's Mound:
 
 A room called the Pitcher's Mound is southeast of the high striker. "The milk bottle ball toss is a classic carnival game that combines skill, strength, and a bit of luck. The setup features a pyramid of brightly colored milk bottles stacked on a sturdy platform — three on the bottom, two in the middle, and one on top. Players stand behind a marked line and toss baseballs, aiming to knock down as many bottles as possible. Clearing the entire stack wins a prize.
 
-The booth buzzes with energy, its colorful banners and flashing lights drawing a lively crowd. The satisfying clatter of falling bottles mixes with cheers and groans from players and spectators. A carnival barker calls out, 'Step right up and test your aim! Three balls for just a dime.' Prizes — ranging from small toys to giant stuffed animals — hang prominently, enticing players to take a shot. With every toss, the game delivers moments of suspense, joy, and fun, making it a favorite at the carnival.
+The booth buzzes with energy, its colorful banners and flashing lights drawing a lively crowd. The satisfying clatter of falling bottles mixes with cheers and groans from players and spectators. A carnival attendant calls out, 'Step right up and test your aim! Three balls for just a dime.' Prizes — ranging from small toys to giant stuffed animals — hang prominently, enticing players to take a shot. With every toss, the game delivers moments of suspense, joy, and fun, making it a favorite at the carnival.
 
-You[']re surprised to see that this game only costs a dime."
+You[']re surprised to see that this game only costs a dime. The High Striker is to the northwest.".
 
 A small plush donkey is carried by the Pitcher's Mound attendant. Understand "stuffie" and "stuffed" as donkey. The description of the donkey is "You feel rather underwhelmed as you look at the small plush donkey on a key chain."
 
-A poster of Lourde is carried by the Pitcher's Mound attendant. The description of the poster of Lourde is "This is a poster of Lourde. You love her singing."
+A poster of Lourde is carried by the Pitcher's Mound attendant. The description of the poster of Lourde is "This is a poster of Lourde. You love her music."
 
 A goldfish is carried by the Pitcher's Mound attendant. Understand "bowl" as goldfish. The description of the goldfish is "This is a small goldfish in a bowl. A pet is just what you need."
 
 a baseball is a kind of thing. Understand "ball" as baseball.The Pitcher's Mound attendant carries three baseballs. The description of a baseball is "This is a regulation baseball."
 
-the milk bottles are scenery in the Pitcher's Mound. Understand "bottle" as milk bottles. The description is "The milk bottles are stacked in three neat rows: three on the bottom, two in the middle, and one on top."
+the milk bottles are scenery in the Pitcher's Mound. Understand "bottle" as milk bottles. The description is "The milk bottles are stacked in three neat rows: three on the bottom, two in the middle, and one on top.". understand "pyramid" and "stack" as milk bottles.
+
+the toys are here. they are scenery. Understand "toy", "stuffed", "stuffie", "stuffed animal" as toys. The description is "There[']s nothing noteworthy about the toys and stuffed animals. They are prizes.".
 
 Throwing is an action applying to two things.
 Understand "throw [something preferably held] at/on [something]" as throwing.
@@ -1471,9 +1518,9 @@ Before going west when the location is the Ticket Booth and the Show Facade is u
 Before looking when the location is the Show Facade:
 	if show images is true, display Figure of LittleEgyptFacade.
 
-Show Facade is a room. Show Facade is east of Show Tent. Show Facade is outdoors. "You head west through the midway, the bright lights of the carnival fading behind you as you approach a wooden booth. A sign above the entrance reads 'Little Egypt Show — A Journey Into the Mysterious and Exotic!' A rotund barker, wearing a fez and a dazzling smile, gestures to a small sign beside him that says 'Dime Admission.'  The Ticket Kiosk is back the way you came.
+Show Facade is a room. Show Facade is east of ST-room. Show Facade is outdoors. "You head west through the midway, the bright lights of the carnival fading behind you as you approach a wooden booth. A sign above the entrance reads 'Little Egypt Show — A Journey Into the Mysterious and Exotic!' A rotund barker, wearing a fez and a dazzling smile, gestures to a small sign beside him that says 'Dime Admission.'  The Ticket Kiosk is back the way you came.
 
-You are standing in front of a dark and mysterious tent filled with illusions and exotic performers. Perhaps there’s a bearded lady inside, offering cryptic clues about your journey or a hidden artifact that can be collected. There is a stage in front of the tent. The Barker is encouraging you to step up, pay for, and enjoy the Little Egypt Show."
+You are standing in front of a dark and mysterious tent filled with illusions and mysterious performers. Perhaps there’s a bearded lady inside, offering cryptic clues about your journey or a hidden artifact that can be collected. There is a stage in front of the tent. The Barker is encouraging you to step up, pay for, and enjoy the Little Egypt Show."
 
 To say the barker's cry:
 	say "The barker cries:[paragraph break]Ladies and gentlemen, boys and girls, gather [']round! [line break]Step right up and witness the spectacle that[’]s taken the world by storm! [line break]She walks, she talks, she crawls on her belly like a reptile. [line break]Behold the one, the only Little Egypt, performing her legendary Dance of the Pyramids — a dazzling display of mystery, grace, and exotic allure! [line break]For just a dime, a mere one tenth of a dollar, prepare to be transported to the sands of Cairo, where enchantment and wonder await!"
@@ -1498,30 +1545,33 @@ After giving when the noun is dime and the second noun is barker:
 
 Section 9 - Show Tent	
 
-Before going west when the location is the Show Facade and the Show Tent is unvisited and barker is carrying a dime:
+Before going west when the location is the Show Facade and the ST-room is unvisited and barker is carrying a dime:
 	if show images is true, display Figure of LittleEgyptShow;
 	continue the action.
 	
-Before looking when the location is the the Show Tent:
+Before looking when the location is the the ST-room:
 	if show images is true, display Figure of LittleEgyptShow.		
 
-The Show Tent is a room. The Show Tent is west of Show Facade. "You are inside the Little Egypt Show. The attraction[']s facade is to the east. There are folding chairs organized neatly in rows. The show should start soon."
+The ST-room is a room. The printed name is "Show Tent". The ST-room is west of Show Facade. "You are inside the Little Egypt Show. The attraction[']s facade is to the east. There are folding chairs organized neatly in rows.[if the ST-room is unvisited] The show should start soon.[end if]"
 
-Little Egypt is a woman. Little Egypt is in the Show Tent. Little Egypt is scenery. The description of Little Egypt is "Little Egypt is an exotic looking, beautiful woman who is draped in flowing silk veils which she skillfully uses as part of the dance. Her attire consists of a sparkling, sequined bodice and a flowing skirt, adorned with jingling coin belts and jewelry that accentuate her movements."
+Little Egypt is a woman. Little Egypt is in the ST-room. Little Egypt is scenery. The description of Little Egypt is "Little Egypt is a beautiful woman who is draped in flowing silk veils which she skillfully uses as part of the dance. Her attire consists of a sparkling, sequined bodice and a flowing skirt, adorned with jingling coin belts and jewelry that accentuate her movements."
 
 A sheer veil is a wearable thing. The description of the Sheer Veil is "This is a sheer gold veil that Little Egypt wore (and removed) during her show. Your head swims as you smell the scent of her perfume on the veil: Pyramid Patchouli."
 
-after wearing the veil, say "You wrap the veil around your head, shrouding your eyes. The world is a lovely color pink as you look through the veil while her perfume fills your nostrils in the most delightful way. You look pretty!"
+after wearing the sheer veil, say "You wrap the veil around your head, shrouding your eyes. The world is a lovely color pink as you look through the veil while her perfume fills your nostrils in the most delightful way. You look pretty!"
 
 The Stage is here. The Stage is scenery. The description of the Stage is "The stage is decorated to resemble an exotic Middle Eastern market or palace, featuring rich, colorful fabrics, brass ornaments, and lanterns casting a warm, flickering glow. Scents of incense waft through the air, enhancing the atmosphere of mystique. The canvas displays painted scenes of pyramids, desert landscapes, and domed structures to evoking a sense of being transported to the 'Middle East'."
 
-the tent1 is a thing in the show tent. the tent1 is scenery. The description of the tent1 is "You are inside the Little Egypt Show. The attraction[']s facade is to the east. There are folding chairs organized neatly in rows.". Understand "tent" as tent1.
-examining tent1 is an action applying to one thing. Understand "examine tent" as examining tent1.
+the show tent is a thing in the ST-room. it is scenery. The description is "You are inside the Little Egypt Show. The attraction[']s facade is to the east. There are folding chairs organized neatly in rows.". 
 
 understand "backdrop" as canvas.
 The canvas is here. It is scenery. The description of the canvas is "Elegantly painted on linen, the backdrop shows scenes of Middle Eastern life.".
 
-The wall is a scenery container. The wall is in the Show Tent. The description is "Hanging on the wall is a lantern.". Understand "walls" as wall.
+some finger cymbals are here. they are scenery. the description is "The cymbals are placed on the thumb and index finger of each hand. Tapping them together produces a ringing sound.".
+
+The sword is here. It is scenery. The description is "This is a beautiful steel sword with a filigreed handle and blade.".
+
+The wall is a scenery container. The wall is here. The description is "Hanging on the wall is a lantern.". Understand "walls" as wall.
 
 A lantern is an electric lamp. It is in the wall. Understand "lamp" and "lanterns" as the lantern. The description of the lantern is "This is a highly polished brass lantern.".
 
@@ -1532,10 +1582,10 @@ after taking the lantern for the first time:
 			if the description entry is "Taking the flashlight":
 				blank out the whole row;
 
-The folding chair is a enterable scenery supporter in the Show Tent. The description of the Folding Chair is "This is one of many folding chairs in the tent tonight." Understand "chairs" as chair.
+The folding chair is a enterable scenery supporter in the ST-room. The description of the Folding Chair is "This is one of many folding chairs in the tent tonight." Understand "chairs" as folding chair.
 
 Little Egypt AutoPlay is a scene. 
-Little Egypt AutoPlay begins when the player has been in the show tent for exactly three turns or the player has been on the folding chair for exactly two turns.. 
+Little Egypt AutoPlay begins when the player has been in the ST-room for exactly three turns or the player has been on the folding chair for exactly two turns.. 
 Little Egypt AutoPlay ends when the number of filled rows in the Table of Little Egypt Events is 0.
 
 When Little Egypt AutoPlay ends:
@@ -1558,20 +1608,20 @@ instead of looking during the Little Egypt AutoPlay, say "[last description][par
 Instead of doing something other than waiting, looking, listening, smelling or examining during Little Egypt AutoPlay:
 	say "You[']re much too entranced by the show to do anything other than watch the show. You are riveted[if the player is in the folding chair] to your seat[end if]!".
 	
-the entryway is a thing in the show tent. the entryway is scenery. The description of the entryway is "The show[']s facade and the barker are back to the east.". Understand "facade" as entryway.
+the entryway is a thing in the ST-room. the entryway is scenery. The description of the entryway is "The show[']s facade and the barker are back to the east.". Understand "facade" as entryway.
 examining the entryway is an action applying to one thing. Understand "examine entryway" as examining the entryway.
 
 
-Section 10 - Ferris Wheel Ride
+Section 10 - Ferris Wheel
 
-After going east from the high striker when the Ferris wheel ride is unvisited:
+After going east from the high striker when the FW-room is unvisited:
 	if show images is true, display Figure of FerrisWheel;
 	continue the action.
 	
-Before looking when the location is the Ferris Wheel Ride:
+Before looking when the location is the FW-room:
 	if show images is true, display Figure of FerrisWheel.
 
-A room called the Ferris Wheel Ride is outdoors. The Ferris Wheel Ride is east of the High Striker. "The Ferris wheel is the towering centerpiece of the carnival, its vibrant lights and graceful rotations drawing the attention of visitors from every corner of the fairgrounds. The wheel[']s massive steel frame arches high into the sky, its intricate network of beams glinting under the colorful glow of bulbs strung along its circumference. Each gondola, painted in bright hues like red, yellow, and blue, dangles from the wheel, swaying gently as it turns.
+A room called the FW-room is outdoors. The printed name of the FW-room is "Ferris Wheel". The FW-room is east of the High Striker. "The Ferris wheel is the towering centerpiece of the carnival, its vibrant lights and graceful rotations drawing the attention of visitors from every corner of the fairgrounds. The wheel[']s massive steel frame arches high into the sky, its intricate network of beams glinting under the colorful glow of bulbs strung along its circumference. Each gondola, painted in bright hues like red, yellow, and blue, dangles from the wheel, swaying gently as it turns.
 
 At night, the Ferris wheel transforms into a dazzling spectacle, with hundreds of synchronized lights creating patterns and ripples that pulse outward like waves. The bulbs flash in bursts of red, green, and white, casting playful reflections on nearby attractions and the surrounding crowd.
 
@@ -1581,7 +1631,7 @@ The Ferris wheel offers an ever-changing perspective of the carnival below. From
 
 Whether it[']s a romantic ride for couples, a thrilling adventure for friends, or a calming retreat for families, the Ferris wheel captures the spirit of the carnival — an iconic blend of excitement, wonder, and timeless charm."
 
-The Ferris Wheel attendant is an attendant in the Ferris Wheel Ride. 
+The Ferris Wheel attendant is an attendant in the FW-room. 
 
 instead of giving the Ferris wheel ticket to the Ferris wheel attendant:
 	say "You give [the noun] to [the second noun].";
@@ -1594,9 +1644,11 @@ The gondola sways gently, adding a hint of thrill to the tranquil ride. You exch
 
 Whether you’re seeking a moment of calm, a romantic view, or the sheer wonder of seeing the world from above, the Ferris wheel delivers an unforgettable ride that captures the magic of the carnival."
 
-A thing called the Ferris Wheel is in the Ferris Wheel Ride. The Ferris Wheel is scenery. The description of the Ferris Wheel is "The Ferris wheel towers above the carnival and is illuminated with vibrant lights, creating a dazzling display. As the wheel turns slowly, the gondolas remain upright, offering riders a thrilling yet gentle experience and spectacular views from the top.".
+The gondola is here. it is scenery. The description is "Each gondola, painted in bright hues like red, yellow, and blue, dangles from the wheel, swaying gently as it turns."
 
-Does the player mean doing something with the Ferris Wheel: it is very likely.
+A thing called the Ferris Wheel is in the FW-room. The Ferris Wheel is scenery. The description of the Ferris Wheel is "The Ferris wheel towers above the carnival and is illuminated with vibrant lights, creating a dazzling display. As the wheel turns slowly, the gondolas remain upright, offering riders a thrilling yet gentle experience and spectacular views from the top.".
+
+Does the player mean doing something with the Ferris Wheel when the location is the FW-room: it is very likely.
 
 Section 11 - Bumper Cars
 
@@ -1644,40 +1696,52 @@ instead of giving the adjustable wrench to the bumper cars attendant:
 	say "Hey! Thanks, I really appreciate it. Usually no one ever responds to the radio in the Control Room.";
 	now the adjustable wrench is carried by the bumper cars attendant.
 	
-Section 12 - Fortune Teller Tent
+Section 12 - Fortune Teller 
 
-After going southeast from the ticket Booth when the fortune teller booth is unvisited:
+After going southeast from the ticket Booth when the FT-room is unvisited:
 	if show images is true, display Figure of FortuneTeller;
 	continue the action.
 	
-Before looking when the location is the Fortune Teller Booth:
+Before looking when the location is the FT-room:
 	if show images is true, display Figure of FortuneTeller.
 	
-The Fortune Teller Booth is a room. The Fortune Teller Booth is outdoors. The fortune teller booth is southeast of the Ticket Booth. "Approaching the fortune teller[’]s cabana, you’re drawn in by its mysterious allure. Draped in deep purple curtains adorned with golden moons and stars, the cabana glows with the soft, inviting light of candles. The air is heavy with the scent of incense, mingling with the sweet aroma of carnival treats. A sign reading 'Fortunes Told — What Does Your Future Hold?' sways slightly in the evening breeze."
+FT-room is a room. The printed name is "Fortune Teller Booth". The FT-room is outdoors. The FT-room is southeast of the Ticket Booth. "Approaching the fortune teller[’]s booth, you’re drawn in by its mysterious allure. Draped in deep purple curtains adorned with golden moons and stars, the booth glows with the soft, inviting light of candles. The air is heavy with the scent of incense, mingling with the sweet aroma of carnival treats. A sign sways slightly in the evening breeze."
 
-The candles are here. The candles are scenery. The description of the candles is "The candles flicker in the soft breeze casting light on the foretune teller[']s face.". Understand "candle" as candles. instead of taking the candles, say "The fortune teller says, 'Hey! I need those!".
+some candles are here. The candles are scenery. The description of the candles is "The candles flicker in the soft breeze casting light on the Esmerelda[']s face.". Understand "candle" as candles. instead of taking the candles, say "Esmerelda says, 'Hey! I need those!".
 
-The cabana is here. The cabana is scenery. The description of the cabana is "Draped in deep purple curtains adorned with golden moons and stars, the cabana glows with the soft, inviting light of lanterns. The air is heavy with the scent of incense, mingling with the sweet aroma of carnival treats."
+The Fortune Teller Booth is here. It is scenery. The description is "Draped in deep purple curtains adorned with golden moons and stars, the cabana glows with the soft, inviting light of lanterns. The air is heavy with the scent of incense, mingling with the sweet aroma of carnival treats."
 
-instead of smelling when the location is the Fortune Teller Booth, say "The smell of incense wafts through the air mingled with the scent of fresh, buttered popcorn.".
+instead of smelling when the location is the FT-room, say "The smell of incense wafts through the air mixed with the scent of fresh, buttered popcorn.".
 
-The curtains are here. They are scenery. The description of the curtains is "The curtains are deep purple with golden moons and stars.".
+The curtains are here. They are scenery. Understand "drapes" as curtains. The description of the curtains is "The curtains are deep purple with golden moons and stars.".
+The Fortune Teller sign is here. The Fortune Teller sign is scenery. The description of the Fortune Teller sign is "'Fortunes Told — What Does Your Future Hold?' Underneath that if says 'Ticket Required'".
 
-The Fortune Teller sign is here. The Fortune Teller sign is scenery. The description of the Fortune Teller sign is "'Fortunes Told — What Does Your Future Hold?'".
+some robes are here. they are scenery. understand "robe" as robes. the description is "The Esmerelda wears flowing robes embellished with shimmering beads, and a jeweled headpiece.".
+a headpiece is here. it is scenery. understand "robe", "jewels", and "jeweled" as headpiece. the description is "Esmerelda wears flowing robes embellished with shimmering beads, and a jeweled headpiece.".
+a round table is here. it is scenery. It is a  supporter. the description is "This is a small round table with a crystal ball, some tarot cards, and some trinkets on it.".
+a crystal ball is on the round table. The crystal ball is scenery. The description is "A softball sized crystal ball sits on the table, glowing dimly.".
+some tarot cards are on the round table. they are scenery. understand "card" as tarot cards. the description is "The tarot cards have beautiful drawings upon them.".
+some trinkets are on the round table. they are scenery. the description is "The purpose of the trinkets remains a mystery.".
+your palm is here. it is scenery. the description is "It[']s the your palm, in the middle of your hand.".
 
-The Mysterious Woman is a woman in the fortune teller booth. The description of the Mysterious Woman is "The fortune teller sits in a dimly lit booth, draped in rich fabrics of deep purple and gold, adorned with celestial patterns of stars and moons. Their appearance is enigmatic, with piercing eyes that seem to look right through you and a knowing smile that hints at secrets yet untold. They wear flowing robes embellished with shimmering beads, and a jeweled headpiece catches the flickering light of nearby candles."
+Esmerelda the Mysterious is a woman in the FT-room. Understand "mysterious", "woman", "fortune teller" and "teller" as the Esmerelda the Mysterious. The description of the Esmerelda the Mysterious is "The fortune teller sits in a dimly lit booth, draped in rich fabrics of deep purple and gold, adorned with celestial patterns of stars and moons. Their appearance is enigmatic, with piercing eyes that seem to look right through you and a knowing smile that hints at secrets yet untold. She wears flowing robes embellished with shimmering beads, and a jeweled headpiece catches the flickering light of nearby candles."
 
-instead of giving the fortune teller ticket to the Mysterious Woman:
+a thing called a fortune is here. it is scenery. the description is "You ponder the ramifications of having your fortune told.".
+does the player mean doing something with the fortune: it is very likely.
+
+does the player mean giving the fortune teller ticket to Esmerelda the Mysterious: it is very likely.
+instead of giving the fortune teller ticket to the Esmerelda the Mysterious:
 	say "You give [the noun] to [the second noun].";
-	now the Mysterious Woman carries the fortune teller ticket;
+	now Esmerelda the Mysterious carries the fortune teller ticket;
 	say "[line break]Stepping inside, you’re greeted by the fortune teller, a figure cloaked in flowing robes with a jeweled headpiece catching the flickering light. Their piercing eyes seem to look right through you as they gesture for you to sit at a small round table covered in an ornate cloth. At its center rests a glowing crystal ball, surrounded by tarot cards and mysterious trinkets.
 
 The fortune teller[’]s voice is low and melodic, weaving an air of intrigue as they ask you to focus on a question or offer your palm for a reading. The room seems to shrink, the bustling carnival outside fading into the background as they reveal your fate. Each card turned or line traced feels significant, as though unlocking a secret you didn’t know you carried.
 
-As the reading concludes, the fortune teller gazes into your eyes with a cryptic smile and delivers their final words of wisdom. Whether you leave with a sense of wonder, excitement, or unease, the encounter lingers with you — a touch of magic amid the carnival’s chaos, as if you’ve glimpsed something beyond the ordinary."
+As the reading concludes, the fortune teller gazes into your eyes with a cryptic smile and delivers their final words of wisdom: 'You need fuses.' Whether you leave with a sense of wonder, excitement, or unease, the encounter lingers with you — a touch of magic amid the carnival’s chaos, as if you’ve glimpsed something beyond the ordinary."
 
-instead of asking the woman about "fortune", say "You[']ll need a ticket if you want me to see your future.".
-instead of asking the woman about "me", say "You[']ll need a ticket if you want me to see your future.".
+instead of asking the Esmerelda the Mysterious about "fortune", say "You[']ll need a ticket if you want me to reveal your future.".
+instead of asking the Esmerelda the Mysterious about "me", say "You[']ll need a ticket if you want me to reveal your future.".
+
 
 Section 13 - Carousel
 
@@ -1710,9 +1774,17 @@ A thing called the Carousel is in the Carousel Ride. The Carousel is scenery. Th
 
 Does the player mean doing something with the Carousel: it is very likely.
 
+the calliope is here. it is scenery. The description is "The sounds of the calliope fill the air with pleasant music.".
+the mirrors are here. they are scenery. the description is "You gaze at yourself in the mirror and think you look pretty good.". Understand "mirror" as mirrors.
+a thing called the animals are here. they are scenery. the description is "The carousel is populated with exotic creatures like lions, tigers, and sea dragons, adding whimsy to the ride.". Understand "animal" as animals.
+the horses are here. they are scenery. The description is "The horses are mounted on poles which go up and down as the Carousel turns.". Understand "horse" as horses.
+the lions are here. they are scenery. The description is "The majestic lions and tigers are mounted on poles which go up and down as the carousel turns.". Understand "lion", "tigers", and "tiger" as lions.
+the giraffes are here. they are scenery. The description is "The giraffes are mounted on poles which go up and down as the carousel turns.". Understand "giraffe"as giraffes.
+the sea dragons are here. They are scenery. The description is "The sea dragons, with their long necks are mounted to the poles which go up and down as the carousel turns.".  Understand "sea dragon" and "dragon" as sea dragons.
+
 Section 14 - Head of the Line
 
-Head of the Line is a room. Head of the Line is south of Ticket Booth. Head of the Line is north of Ride Entrance. The Head of the Line is outdoors. "You are standing in front of a ticket taker with his hand open waiting for your ticket. The entrance to the ride is south of here. The ride operator tells you that you[']re lucky you showed up when you did because this will be the last trip through Hell Ride for the night. You notice that all the other cars are empty. The Ticket Kiosk is back the way you came."
+Head of the Line is a room. Head of the Line is south of Ticket Booth. Head of the Line is north of Ride Entrance. The Head of the Line is outdoors. "You are standing in front of an attendant with his hand open waiting for your ticket. The entrance to the ride is south of here. The ride operator tells you that you[']re lucky you showed up when you did because this will be the last trip through Hell Ride for the night. You notice that all the other cars are empty. The Ticket Kiosk is north of here."
 
 The Hell Ride attendant is an attendant in Head of the Line. 
 
@@ -1730,11 +1802,11 @@ A wooden door is usually locked.
 A wooden door has a color. A wooden door is usually nondescript. 
 The initial appearance of a door is usually "Nearby [an item described] leads [if the other side of the item described is visited][direction of the item described from the location] to [the other side of the item described][otherwise][direction of the item described from the location][end if]."
 The description of a wooden door is "The [color of the item described] door is [if the item described is open]open[otherwise]closed[end if]. It is [if the item described is locked]locked[otherwise]unlocked[end if]."
-The printed name of a wooden door is "[color of the item described] colored door".
+The printed name of a wooden door is "[a color of the item described] colored door".
 
 Section 2 - Dark Passage
 
-Dark Passage is a room. Dark Passage is east of the Ride Entrance. "This room is backstage at the Hell Ride attraction. The room is littered with bags of trash, piles of junk, and dust bunnies so large they should be paying rent. West is back the way you came from. There an exit to the south."
+Dark Passage is a room. Dark Passage is east of the Ride Entrance. "This room is backstage at the Hell Ride attraction. The room is littered with bags of trash, piles of junk, and dust bunnies so large they should be paying rent. There an exit to the south and west."
 
 some dust bunnies are scenery. The dust bunnies are here. Understand "bunnies" as dust bunnies. The description of the dust bunnies is "These are some massive dust bunnies. Be careful, I[']ve heard they bite."
 
@@ -1743,7 +1815,7 @@ some bags of trash are scenery. The bags of trash are here. Understand "bags" an
 A pile of junk is a scenery container. The pile of junk is in the dark passage. The pile of junk contains the flashlight. Understand "piles" and "junk" as pile of junk. The description of the pile of junk is "This is a pile of assorted flotsam and jetsam from the carnival. None of it looks very interesting."
 
 instead of looking under when the noun is the pile of junk:
-	try examining the junk instead. 
+	try examining the pile of junk instead. 
 
 The flashlight is an electric lamp. The description of the flashlight is "This is a flashlight. It[']s a nice one."
 
@@ -1776,11 +1848,11 @@ The walls display faded safety posters, a cork board with maintenance schedules 
 
 Despite the mess, the room buzzes with purpose — a hidden hub where the carnival’s magic is sustained through sweat, ingenuity, and the hum of machinery.
 
-Exits lead north and south. There is a door to the west." 
+Exits lead north and south." 
 
-some screws are here. They are scenery. The description is "Screws, grease jars, and cans of paint are here.".
-some paint cans are here. They are scenery. The description is "Screws, grease jars, and cans of paint are here.".
-some grease jars are here. They are scenery. The description is "Screws, grease jars, and cans of paint are here.".
+some parts are here. they are scenery. the description is "The parts are varied and surely fit all manner of things around the carnival.".
+some wires are here. they are scenery. the description is "The wires lay in twisted tangles on the desk.".
+some paint cans are here. They are scenery. understand "screws", "grease", "grease jars", "grease jar", and "jar" as paint cans. The description is "Screws, grease jars, and cans of paint are here.".
 a vise is here. It is scenery. The description is "This is just a standard issue vice.".
 a bent piece of metal is here. It is scenery. The description is "This is a piece of scrap steel.".
 some safety posters are here. They are scenery. The description is "You[']re the safe choice for safety!".
@@ -1788,7 +1860,9 @@ some notes are here. They are scenery. The description is "Looking at the notes 
 a clock is here. It is scenery. The description is "The clock is wildly off the correct time. I guess it[']s broken.".
 some lubricant is here. It is scenery. The description is "It[']s lubricant. It[']s slippery.".
 a manual is here. It is scenery. The description of the manual is "The manual is titled: 'Fixing Your Ferris Wheel. It[']s Easier Than You Think!'".
-a stool is here. It is a supporter. It is scenery.  "This is just a stool.".
+a stool is here. It is a supporter. It is scenery.  The description is "This is just a stool.".
+some pulleys are here. they are scenery. understand "chains" as pulleys. The description is "The chains and pulleys hang from hooks on the ceiling.".
+some springs are here. they are scenery. understand "gears" as springs. The description is "The gears and springs are strewn on the desk.".
 
 The worn photo is here. Understand "picture" as the worn photo. The description of the worn photo is "This is a photo of the carnival in its heyday! A ragtag bunch of people are featured in the picture. On the back reads a date: 'March, 1962'."
 
@@ -1804,7 +1878,11 @@ Nearness relates a room (called A) to a room (called B) when the number of moves
 
 The radio is a device on the desk. The radio is switched off and fixed in place. The description of the radio is "[if switched on]The radio burbles on[otherwise]The radio is off[end if]." 
 
-every turn when the radio is switched on and the location is near the maintenance office:
+instead of listening when the radio is switched on and the location is near the maintenance office, play a song.
+
+every turn when the radio is switched on and the location is near the maintenance office, play a song.
+
+To play a song:
 	choose a random row in Table of Songs;
 	let A be the artist entry;
 	Let S be the song entry;
@@ -1812,19 +1890,18 @@ every turn when the radio is switched on and the location is near the maintenanc
 	say "[one of]You hear [A][']s '[S]' playing on the radio.[or]'[S]' by [A] plays on the radio.[or]You sing along to [A][']s '[S]'.[or]The DJ announces that '[S]' by [A] will be up next.[or]Nearby, you can hear '[S]' by [A].[or]You whistle along to '[S]' by [A].[at random][if R is true] Yes, you have been Rick Rolled![end if]";
 
 Rule for showing action of the radio:
-	if the radio is switched on, say "Through the static, you pick up hear bits of the latest number one hit.";
+	if the radio is switched on, say "Through the static, you pick up hear bits of the music.";
 	otherwise say "The radio is silent. You[']re saving the batteries."
 
 Instead of listening in the presence of the switched on radio:
 	carry out the showing action activity with the radio instead.
 
-scissors are in the drawer. The description is "This is a sharp pair of office scissors." 
+some scissors are in the drawer. The description is "This is a sharp pair of office scissors." 
 A stapler is in the drawer. The description is "This is a red stapler." 
 A ballpoint pen is in the drawer. The description is "Your standard ballpoint pen. It says Bic on the side." 
 A pad of paper is in the drawer. The description is "This is a pad of lined paper."
 
-An door1 is a wooden door. The color of door1 is aqua. The description of door1 is "It[']s [a printed name of item described]. It has the word 'Stocks' written on it." The silver key unlocks it. 
-door1 is west of the Maintenance Office and east of the Stocks Room. 
+An aqua colored door is a wooden door. The color of the aqua colored door is aqua.The description of the aqua colored door is "It[']s [printed name of item described]. It has the word 'Stocks' written on it." The silver key unlocks it. the aqua colored door is west of the Maintenance Office and east of the Stocks Room. 
 
 A ladder is up from the Maintenance Office and down from the Dark Hallway. The ladder is an open door. The description of the Ladder is "It[']s a typical 10 foot ladder."
 
@@ -1837,28 +1914,30 @@ The Crawl Space is a dark room. The Crawl Space is south of Maintenance Office. 
 
 The ground is uneven, a mix of packed dirt and loose gravel scattered with forgotten tools, scraps of metal, and tangled wires. Overhead, a network of pipes crisscross the space, some wrapped in fraying insulation that crackles faintly as you crawl past. Small puddles of murky water collect in dips on the floor, their surfaces rippling with vibrations from the ride’s movement.
 
-The backstage area continues north and south. There is a door to the west."
+The backstage area continues north and south."
 
-A door3 is a wooden door. The color of door3 is crimson. The description of door3 is "It[']s [a printed name of item described]. It has the word 'Gallows' written on it." The silver key unlocks it. door3 is west of the Crawl Space and east of the Gallows Room. 
+A crimson colored door is a wooden door. The color of crimson colored door is crimson. The description of crimson colored door is "It[']s [printed name of item described]. It has the word 'Gallows' written on it." The silver key unlocks it. crimson colored door is west of the Crawl Space and east of the Gallows Room. 
 
-the pipes are here. The pipes are scenery. The description of the pipes is "The pipes head in every direction.".
-
+some gravel is here. it is scenery. understand "dirt" as gravel. the description is "The dirt and gravel digs into your clothes and through to your skin. You hope you don[']t ruin your clothes.".
+the network of pipes is here. The network of pipes are scenery. The description of the network of pipes is "The pipes head in every direction.".
 The insulation is here. The insulation is scenery. The description of the insulation is "The insulation is ratty and not doing much good to protect the cables and pipes.".
+some small puddles are here. they are scenery. the description is "You move gingerly to avoid the puddles. It[']s much more pleasant to be dry.".
+some scraps of metal are here. they are scenery. the description is "These scraps are mostly angle iron and scaffolding.".
 
-
-
+instead of listening in the crawl space, say "You can hear the hum of the machinery above.".
+instead of smelling in the crawl space, say "The air is stale and heavy, carrying the sharp metallic scent of oil and the faint tang of rust.".
 
 Section 5 - Mechanical Room North
 
 The Mechanical Room North is a dark room. The Mechanical Room North is south of the Crawl Space. "The north mechanical room is compact and specialized, housing auxiliary systems that keep the ride running smoothly. A subdued hum of capacitors and relays fills the space, its quiet rhythm broken only by the occasional hiss of hydraulic fluid.
 
-Electrical panels line the walls, labeled for functions like 'Lighting Controls,' 'Brake Systems,' and 'Emergency Shutdown.' Smaller cables and conduits snake along the walls, linking these systems to the main hub. In one corner, a hydraulic pump and reservoir manage lifting arms and rotating platforms, their gauges flickering as they work. 
+Circuit breaker panels line the walls, labeled for functions like 'Lighting Controls' and 'Brake Systems'. Smaller cables and conduits snake along the walls, linking these systems to the main hub. In one corner, a hydraulic pump and reservoir manage lifting arms and rotating platforms, their gauges flickering as they work. 
 
 A small workbench against the eastern wall is cluttered with tools and coiled wires, while shelves above hold neatly labeled spare parts — cables, and hydraulic tubing. A faded ride diagram pinned nearby is marked with red annotations from past repairs.
 
 Dimly lit by a single hanging bulb, the room feels cooler and slightly damp, the metallic tang of machinery mixing with a hint of mildew. Though quieter and less prominent than the south mechanical room, this space plays a vital role in supporting the ride’s operation and ensuring its emergency systems are always prepared.
 
-There are exists north and south. There is a wooden door to the west." 
+There are exists north and south." 
 
 The toolbox is a closed openable container in the Mechanical Room North. The toolbox is fixed in place. The toolbox contains an adjustable wrench, channel locks, some pliers, and a hammer. Understand "tool", "box", and "tool box" as toolbox. The description of the toolbox is "This is a toolbox. I bet it contains tools."
 
@@ -1867,17 +1946,16 @@ The description of the channel locks is "Just one of the many tools used to main
 The description of the pliers is "Just one of the many tools used to maintain the carnival.".
 The description of the hammer is "Just one of the many tools used to maintain the carnival.".
 
+some circuit breaker panels are here. they are scenery. the description is "Thes are electrical panels for other parts of the carnival.".
 a bulb is here. it is scenery. The description is "This single bulb is feebly trying to light the room.".
 a hydraulic pump is here. It is scenery. The description is "This is some of the equipment that keeps the carnival running smoothly.".
 some gauges are here. They are scenery. The description is "The room is full of gauges reporting on the condition of the carnival.".
 some tools are here. They are scenery. The description is "Just some of the many tools used to maintain the carnival.".
 a bench is here. It is scenery. Understand "workbench" as the bench. The description is "The workbench is covered in all manner of things.".
-some wires are here. They are scenery. The description is "Wires, spare parts, and hydraulic tubing is here.".
-some spare parts are here. They are scenery. The description is "Wires, spare parts, and hydraulic tubing is here.".
-hydraulic tubing is here. It is scenery. The description is "Wires, spare parts, and hydraulic tubing is here.".
+hydraulic tubing is here. It is scenery. understand "wires" and "spare" and "parts", and "spare parts" as hydraulic tubing. The description is "Wires, spare parts, and hydraulic tubing is here.".
 a diagram is here. It is scenery. The description is "This is an electrical diagram for something.".
 
-An door5 is a wooden door. The color of door5 is emerald. The description of door5 is "It[']s [an printed name of item described]. It has the word 'Stake' written on it." The silver key unlocks it. door5 is west of the Mechanical Room North and east of the Stake Room. 
+An emerald colored door is a wooden door. The color of emerald colored door is emerald. The description of emerald colored door is "It[']s [printed name of item described]. It has the word 'Stake' written on it." The silver key unlocks it. emerald colored door is west of the Mechanical Room North and east of the Stake Room. 
 
 Section 6 - Mechanical Room South
 
@@ -1891,20 +1969,17 @@ A cooling fan spins in the corner, barely cutting through the room’s warmth. T
 
 Bright fluorescent lights in wire cages illuminate the space, highlighting the intricate systems at work. The south mechanical room is the ride’s powerhouse, where every movement is controlled with precision to deliver its thrilling experience.
 
-You can travel north and south from here. There is a door to the west." 
+You can travel north and south from here." 
 
-some lights are here. They are scenery. The description is "The table is covered with belts, lubricants, gears, pulleys, gears and bolts.".
-some thick belts are here. They are scenery. The description is "The table is covered with belts, lubricants, gears, pulleys, gears and bolts.".
-some pulleys are here. They are scenery. The description is "The table is covered with belts, lubricants, gears, pulleys, gears and bolts.".
-some gears are here. They are scenery. The description is "The table is covered with belts, lubricants, gears, pulleys, gears and bolts.".
-a table is here. It is scenery. The description is "The table is covered with belts, lubricants, gears, pulleys, gears and bolts.".
+some thick belts are here. They are scenery. understand "pulleys", "gears", and "lights" as thick belts. The description is "The table is covered with belts, lubricants, gears, pulleys, gears and bolts.".
+a cluttered table is here. It is scenery. The description is "The table is covered with belts, lubricants, gears, pulleys, gears and bolts.".
 some bolts are here. They are scenery. The description is "The table is covered with belts, lubricants, gears, pulleys, gears and bolts.".
 some lubricants are here. They are scenery. The description is "The table is covered with belts, lubricants, gears, pulleys, gears and bolts.".
 a cooling fan is here. It is scenery. The description is "This is an overworked fan.".
 
 A grate is an openable lockable door. The grate is locked. The grate is up from the Holding Room. The description is "This grate leads down into the darkness. Too bad it[']s locked."
 
-A door7 is a wooden door. The color of door7 is gray. The description of door7 is "It[']s [a printed name of item described]. It has the word 'Dungeon' written on it." The silver key unlocks it. door7 is west of the Mechanical Room South and east of the Dungeon. 
+A gray colored door is a wooden door. The color of gray colored door is gray. understand "door" as gray colored door. The description of gray colored door is "It[']s [printed name of item described]. It has the word 'Dungeon' written on it." The silver key unlocks it. gray colored door is west of the Mechanical Room South and east of the Dungeon. 
 
 Section 7 - Generator Room
 
@@ -1913,13 +1988,13 @@ The generator room is a compact, utilitarian space where the lifeblood of the ca
 
 At the center, the main generator hums steadily, its scuffed steel casing evidence of years of service. Thick rubberized cables extend from it like veins, connecting to junction boxes and circuit breakers along the walls. A large panel nearby is cluttered with buttons, switches, and gauges, many with faded labels like 'Fuel Intake' and 'Emergency Shutoff.' A flickering display screen shows power levels and load distribution.
 
-The rough concrete floor is uneven, marked by small puddles of spilled fuel or condensation. Shelves along the walls hold spare parts — filters, spark plugs, and wire coils — while tools lie scattered on a workbench beside a grease canister and a worn maintenance manual.
+The rough concrete floor is uneven, marked by small puddles of spilled fuel or condensation. Shelves along the walls hold spare parts — filters, spark plugs, and wire coils — while a work area sits beside a grease canister and a worn maintenance manual.
 
-A single industrial bulb in a protective cage casts harsh light, leaving deep shadows across the machinery. In the corner, a vent fan whirs faintly, struggling to cool the warm, vibrating air. A row of diesel canisters gleams beneath a faded safety poster that warns, 'Fuel Safely — No Open Flames!'
+A single industrial bulb in a protective cage casts harsh light, leaving deep shadows across the machinery. In the corner, a vent fan whirs faintly, struggling to cool the warm, vibrating air. A row of diesel canisters gleams beneath a faded safety sign that warns, 'Fuel Safely — No Open Flames!'
 
 Though isolated and utilitarian, the generator room is the carnival’s heartbeat, powering its lights, rides, and sounds. Its quiet separation from the carnival’s chaos serves as a stark reminder of the machinery driving the magic.
 
-The backstage area continues north and south of here. There is a wooden door to the west." 
+The backstage area continues north and south of here." 
 
 graffiti is here. It is scenery. The description of the graffiti is "The graffiti is varied, from 'Peace, Love, Goodwill on Earth' to 'Anarchy Rules'.".
 some junction boxes are here. They are scenery. The description is "These are electrical junction boxes carrying the power throughout the carnival.".
@@ -1932,8 +2007,10 @@ a grease canister is here. It is scenery. The description is "This is a canister
 some diesel canisters are here. They are scenery. The description is "The canisters are full of diesel fuel.".
 a maintenance manual is here. It is scenery. The description is "The cover reads, 'Put The Bump In Your Bumper Cars'.".
 a large panel is here. It is scenery. The description is "The panel looks important.".
+the work area is here. it is scenery. the description is "The work area is surprisingly uncluttered.". 
+a safety sign is here. it is scenery. the description is "The sign reads, 'Fuel Safety - No Open Flames!".
 
-An door9 is a wooden door. The color of door9 is indigo. The description of door9 is "It[']s [an printed name of item described]. It has the word 'Guillotine' written on it." The silver key unlocks it. door9 is west of the Generator Room and east of the Guillotine Room. 
+An indigo colored door is a wooden door. The color of indigo colored door is indigo. The description of indigo colored door is "It[']s [printed name of item described]. It has the word 'Guillotine' written on it." The silver key unlocks it. An indigo colored door is west of the Generator Room and east of the Guillotine Room. 
 
 Section 8 - Storage Room
 
@@ -1949,7 +2026,7 @@ The floor, a rough blend of concrete and dirt, is littered with nuts and wire sc
 
 Chaotic yet indispensable, this hidden space powers the carnival’s magic, ensuring every ride and booth runs seamlessly.
 
-There is an exit to the north and a door to the west."
+There is an exit to the north."
 
 some empty coffee cups are here. they are scenery. the description is "People just use the desk as a trash can.".
 some maintenance logs are here. they are scenery. the description is "So much tattered paper on this bulletin board. Most of it is illegible.".
@@ -1958,7 +2035,7 @@ some ride schedules are here. they are scenery. the description is "So much tatt
 some crates are here. They are scenery. The description is "The crates labeled 'GAME PRIZES' and 'RIDE PARTS' hold items like stuffed animals and plastic toys.".
 a battered desk are here. It is scenery. The description is "The desk is covered with supplies, light bulbs, and ride parts.".
 some supplies are here. They are scenery. The description is "The shelves are full of supplies, light bulbs, and ride parts.".
-some boxes of lightbulbs are here. They are scenery. The description is "The shelves are full of supplies, light bulbs, and ride parts.".
+some boxes of lightbulbs are here. They are scenery. Understand "light" and "bulbs" as boxes of lightbulbs.The description is "The shelves are full of supplies, light bulbs, and ride parts.".
 some spools of wire are here. They are scenery. The description is "The shelves are full of supplies, light bulbs, and ride parts.".
 some ride parts are here. They are scenery. The description is "The shelves are full of supplies, light bulbs, and ride parts.".
 some flags are here. They are scenery. The description is "The flags are pennants used for decorating the midway.".
@@ -1968,7 +2045,7 @@ some nuts are here. they are scenery. The description is "The shelves are full o
 some wire scraps are here. They are scenery. The description is "The shelves are full of supplies, light bulbs, and ride parts.".
 some rats are here. The rats are scenery. The description of the rats is "You see rats scurry in all directions fleeing from the light cast by you.".
 
-A door11 is a wooden door. The color of door11 is khaki. The description of door11 is "It[']s [a printed name of item described]. It has the word 'Ride Exit' written on it." The silver key unlocks it. door11 is west of the Storage Room and east of the Ride Exit. 
+A khaki colored door is a wooden door. The color of khaki colored door is khaki. The description of khaki colored door is "It[']s [printed name of item described]. It has the word 'Ride Exit' written on it." The silver key unlocks it. khaki colored door is west of the Storage Room and east of the Ride Exit. 
 	
 Chapter 4 - Hell Ride
 
@@ -1994,7 +2071,7 @@ every turn during Hell Ride AutoPlay:
 
 Section 2 - Ride Entrance
 
-After going south from the Head of Line when the Ride Entrance is unvisited:
+After going south from the Head of the Line when the Ride Entrance is unvisited:
 	if show images is true, display Figure of Hell Ride;
 	continue the action.
 	
@@ -2003,11 +2080,30 @@ Before looking when the location is the Ride Entrance:
 	
 Ride Entrance is a room. Ride Entrance is south of Head of the Line. "[description corresponding to the locale of Ride Entrance in the Table of Hell Ride Events]"
 
-The Hell Ride car is a vehicle in the Ride Entrance. The description of the Hell Ride car is "A car waits to take you through the horror that is Hell Ride."
+The Hell Ride car is a vehicle in the Ride Entrance. understand "cars" as hell ride car. The description of the Hell Ride car is "A car waits to take you through the horror that is Hell Ride."
 
 Before going south when the player is in the Ride Entrance:
 	say "You can[']t go that way." instead;
 	continue the action.
+
+the ride entrance facade is here. it is scenery. The description is "A towering archway of flames, spikes, and grinning skulls frames the entrance, crowned by flickering letters that read 'HELL RIDE', pulsing like a heartbeat. Below, crouching demon sculptures extend clawed hands in a sinister invitation. Wooden doors cover the entrance, whispering with faint, menacing chuckles as distorted organ music grows louder, punctuated by shrieks and grinding machinery.".
+
+some ride entrance doors are here. they are scenery. understand "wooden" as the ride entrance doors. the description is "The doors begin to swing open to let a car into the ride.".	
+a safety bar is here. it is scenery. the description is "The safety bar is locked into place ensuring you don[']t leave the car before the end of the ride.".
+an archway is here. it is scenery. the description is "The archway surrounds the entrance to the ride.". Understand "flames", "arch" as the archway.
+some grinning skulls are here. they are scenery. understand "threshold" as grinning skulls. the description is "There are skulls scattered about the threshold of the ride entrance.".
+some spikes are here. they are scenery. the description is "Spikes stand on either side of the door, their sharpened points gleaming in the eerie light.".
+some demon sculptures are here. they are scenery. the description is "On either side of the doors are sculptures of demons welcoming you inside.".
+the sickly green light is here. it is scenery. the description is "The sickly green light reveals twisted paths and grotesque shapes.".
+some grotesque shapes are here. understand "shadowy" and "figures" as grotesque shapes. they are scenery. the description is "Shadowy figures in the shape of demons can be seen through the door.".
+some twisted paths are here. they are scenery. the description is "The paths lead through the darkness into Hell RIde.".
+instead of examining something when in darkness, say "It[']s dark. It[']s really dark. It[']s so dark you can't see anything. Really.".
+
+instead of smelling in the ride entrance, say "You can smell a faint sulfuric tang in the air.".
+instead of listening in the ride entrance, say "The sound of organ music, shrieks, and grinding machinery fills the air.".
+
+lifting is an action applying to one thing. understand "lift [something]" as lifting. understand "raise [something]" as lifting. understand "pry [something]" as lifting.
+instead of lifting the safety bar, say "The safety bar is locked in place.".
 
 Section 3 - Stocks Room
 
@@ -2140,7 +2236,7 @@ The description of the big switch is "This is a large switch. It[']s the kind Dr
 
 electrocuted is a truth state that varies. electrocuted is false.
 instead of switching off the big switch:
-	if the player is wearing the gloves:
+	if the player is wearing the pair of gloves:
 		now the electrical room is not electromagnetic;
 		continue the action;
 	otherwise:
@@ -2354,8 +2450,8 @@ instead of examining the monitor:
 	
 Part 3 - Regions
 
-The Midway is a region. Parking Lot, Ticket Booth, Concession Stand, High Striker, Show Facade, Show Tent, Head of the Line,
-Ferris Wheel Ride, Bumper Cars Ride, Fortune Teller, Carousel Ride, Dime Toss Game, and the Pitcher's Mound are in the Midway. The sky is in the Midway.
+The Midway is a region. Parking Lot, Ticket Booth, Concession Stand, High Striker, Show Facade, ST-room, Head of the Line,
+FW-room, Bumper Cars Ride, FT-room, Carousel Ride, Dime Toss Game, and the Pitcher's Mound are in the Midway. The sky is in the Midway.
 
 HellRide is a region. Ride Entrance, Stocks Room, Gallows Room, Stake Room, Dungeon, Guillotine Room, Ride Exit are in HellRide.
 
@@ -2479,7 +2575,7 @@ Section 8 - Table of Concessions
 Table of Concessions
 object
 Drink
-Popcorn
+Bucket of Popcorn
 Candy Apple
 Cotton Candy
 Soft Pretzel
@@ -2503,7 +2599,7 @@ Ride Entrance	"Ride Entrance"	figure of Hell Ride	"The cars that will take you i
 
 A towering archway of flames, spikes, and grinning skulls frames the entrance, crowned by flickering letters that read 'HELL RIDE', pulsing like a heartbeat. Below, crouching demon sculptures extend clawed hands in a sinister invitation. Wooden doors cover the entrance, whispering with faint, menacing chuckles as distorted organ music grows louder, punctuated by shrieks and grinding machinery.
 
-Inside, near-total darkness is broken by flashes of sickly green light revealing twisted paths and grotesque shapes. Beyond the threshold lies only uncertainty and terror. To one side the darkness looks a little bit darker than the rest of the room."
+Inside, near-total darkness is broken by flashes of sickly green light revealing twisted paths and grotesque shapes. Beyond the threshold lies only uncertainty and terror. To one side, the darkness looks a little bit darker than the rest of the room."
 Stocks Room	"Stocks Room"		figure of RideStocks	"The public square is a cobblestone expanse bordered by weathered timber-framed buildings. The air carries the mingling scents of chimney smoke, damp earth, and the faint tang of a nearby smithy. At its center, crude wooden stocks stand as a grim focal point, their beams weathered and stained from years of use. Iron clasps lock captives in degrading postures, their tattered clothing offering little protection from the biting wind.
 
 The animatronics and wax figures are extremely life like. Hell Ride sure lives up to its name.
@@ -2821,7 +2917,7 @@ hint	used
 "It[']s a dime."	a number
 "It[']s a Mercury Dime."
 "Have you looked at it?"
-"It[']s a dime. Geez."
+"It[']s just an old dime."
 
 Chapter 6 - Back Stage 
 
