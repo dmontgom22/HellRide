@@ -43,15 +43,16 @@ Include Modified Exit by Emily Short.
 
 Include Locksmith by Emily Short.
 
-Include Basic Help Menu by Emily Short.
-
-Include Basic Screen Effects by Emily Short.
-
 Include Singing Reloaded by Shin.
+
+Include Basic Help Menu by Wade Clarke.
+
+Include Menus by Wade Clarke.
+
 
 Chapter 4 - The Player, Global Code
 
-The player is in the Parking Lot. 
+The player is in the PL-room. 
 [The carrying capacity of the player is 10.]
 The description of the player is "You are despondent given that you and your date just had a huge fight and they stormed off. Maybe visiting the attractions at the carnival will make you feel better." 
 
@@ -628,8 +629,8 @@ Section 16 - Does The Player Mean
 Does the player mean doing something with the hell ride ticket when the location is the head of the line: it is very likely.
 Does the player mean doing something with the fortune teller ticket when the location is the FT-room: it is very likely.
 Does the player mean doing something with the ferris wheel ticket when the location is the FW-room: it is very likely.
-Does the player mean doing something with the bumper cars ticket when the location is the bumper cars ride: it is very likely.
-Does the player mean doing something with the carousel ticket when the location is the carousel: it is very likely.
+Does the player mean doing something with the bumper cars ticket when the location is the BC-room: it is very likely.
+Does the player mean doing something with the carousel ticket when the location is the CR-room: it is very likely.
 
 Chapter 6 - Figures
 
@@ -1021,7 +1022,7 @@ When play begins:
 
 After a lovely meal, you get into a big fight over the tip. Your date storms off, ruining your chances of that romantic evening you hoped for. You decide to stay and enjoy the carnival anyway.".
 
-The Parking Lot is a room. The parking lot is north of the Ticket Booth. The parking lot is outdoors. "The carnival parking lot stretches across an open field, its gravel crunching under arriving cars. Temporary floodlights and the carnival[']s colorful glow light the area, while distant laughter, music, and the hum of rides fill the air.
+The PL-room is a room. The printed name is "Parking Lot". The PL-room is north of the TB-room. The PL-room is outdoors. "The carnival parking lot stretches across an open field, its gravel crunching under arriving cars. Temporary floodlights and the carnival[']s colorful glow light the area, while distant laughter, music, and the hum of rides fill the air.
 
 Cars park haphazardly, guided by makeshift signs and fluttering flags. Families unload strollers and blankets, their chatter mixing with the carnival sounds. Others linger in vehicles, preparing for the chilly evening.
 
@@ -1031,18 +1032,20 @@ Puddles from recent rain shimmer with reflected lights, while patches of mud cli
 
 Alive with anticipation, the parking lot marks the transition from the ordinary to the magic of the carnival.
 
-The midway is to the south. There is a blueberry bush here. [if blueberry bush contains blueberries]There are blueberries on the bush.[otherwise]The bush has been picked clean.[end if][paragraph break]Your car is here. It[']s a bit of a beater. Inside the car, you can see [the list of things which are part of the beater car].[if the parking lot is unvisited]
+The midway is to the south. There is a blueberry bush here. [if blueberry bush contains blueberries]There are blueberries on the bush.[otherwise]The bush has been picked clean.[end if][paragraph break]Your car is here. It[']s a bit of a beater. Inside the car, you can see [the list of things which are part of the beater car].[if the PL-room is unvisited]
 
 Type 'Images off' to prevent the game from display images. Type 'Help' for hints about the game and general information about playing interactive fiction games.[end if]"
 
-The parking attendant is an attendant in the the parking lot. The parking attendant carries a parking ticket. The price of the parking ticket is $5.00. The description of the parking ticket is "This is your receipt for parking."
+The parking attendant is an attendant in the the PL-room. The parking attendant carries a parking ticket. The price of the parking ticket is $5.00. The description of the parking ticket is "This is your receipt for parking."
 
 The parking attendant carries a parking stub. The description of the parking stub is "This stub is meant to be placed on your dashboard to indicate you paid for parking.". Understand "stub" or "ticket stub" as the parking stub.
 
-after looking when the location is the parking lot:
+after looking when the location is the PL-room:
 	say "[if the parking attendant carries the parking ticket]The attendant has a parking ticket. The price of a parking ticket is [the price of the parking ticket].[end if]";
 
-The beater car is an open enterable unopenable container in the parking lot. The beater car is scenery. Understand "vehicle" and "car" as the beater car. The description of the beater car is "[if the player is in the beater car][bold type]Car Interior[roman type][line break][end if]This is your car. It[']s a 2002 Honda Civic and it[']s seen better days.[paragraph break][if the player is in the beater car]You[']re sitting inside your car. [end if]Even though it[']s old, it feels like an old friend. From the faux leather seats to the crack in the windshield. It[']s familiar and comforting. There are old fast food wrappers on the floor, dirty clothes and text books in the back seat. There is an air freshener hanging from the rear view mirror. You see [the list of things which are part of the beater car]." 
+The beater car is an open enterable unopenable container in the PL-room. The beater car is scenery. Understand "vehicle" and "car" as the beater car. The description of the beater car is "[if the player is in the beater car][bold type]Car Interior[roman type][line break][end if]This is your car. It[']s a 2002 Honda Civic and it[']s seen better days.[paragraph break][if the player is in the beater car]You[']re sitting inside your car. [end if]Even though it[']s old, it feels like an old friend. From the faux leather seats to the crack in the windshield. It[']s familiar and comforting. There are old fast food wrappers on the floor, dirty clothes and text books in the back seat. There is an air freshener hanging from the rear view mirror. You see [the list of things which are part of the beater car]." 
+
+a cash box is here. it is scenery. the description is "The cash box is full of change and paper money.".
 
 The puddles are here. The puddles are scenery. The description is "You carefully skirt the puddles to avoid getting your feet wet.".
 
@@ -1091,11 +1094,11 @@ instead of asking the parking attendant about "[stub]":
 instead of telling the parking attendant about the "[stub]":
 	say "[The noun] replies, 'Put the ticket stub on your dashboard or your car will get towed.'".
 
-instead of going south when the location is the parking lot and the player does not have the parking ticket, say "You need to buy a parking ticket to leave your car here." instead.
+instead of going south when the location is the PL-room and the player does not have the parking ticket, say "You need to buy a parking ticket to leave your car here." instead.
 
 Section 2 - Car Interior
 
-every turn when the location is the parking lot:
+every turn when the location is the PL-room:
 	now the left hand status line is "[the player's surroundings]".
 	
 every turn when the player is in the beater car:
@@ -1123,24 +1126,24 @@ Understand "place [something] on [something]" as putting it on. Understand "set 
 
 Section 3 - Ticket Booth
 
-After going south from the parking lot when the Ticket Booth is unvisited and the player carries the parking ticket:
+After going south from the PL-room when the TB-room is unvisited and the player carries the parking ticket:
 	if show images is true, display Figure of TicketBooth;
 	continue the action.
 	
-Before looking when the location is the Ticket Booth:
+Before looking when the location is the TB-room:
 	if show images is true, display Figure of TicketBooth;
 
-The Ticket Booth is a room. The Ticket Booth is outdoors. 
-The Ticket Booth is northwest of the FT-room.
-The Ticket Booth is north of Head of the Line. 
-The Ticket Booth is northeast of the Concession Stand. 
-The Ticket Booth is east of the Show Facade. 
-The Ticket Booth is southwest of the Carousel Ride.
-The Ticket Booth is south of the Parking Lot. 
-The Ticket Booth is southeast of the Bumper Cars Ride.
-The Ticket Booth is west of the High Striker. 
+The TB-room is a room. The TB-room is outdoors. The printed name is "Ticket Booth".
+The TB-room is northwest of the FT-room.
+The TB-room is north of Head of the Line. 
+The TB-room is northeast of the CS-room. 
+The TB-room is east of the SF-room. 
+The TB-room is southwest of the CR-room.
+The TB-room is south of the PL-room. 
+The TB-room is southeast of the BC-room.
+The TB-room is west of the HS-room. 
 
-The description of the Ticket Booth is "The ticket kiosk stands at the carnival entrance, a compact booth painted in bright red and yellow stripes with bold letters above the window reading 'Tickets Here!' Twinkling lights outline its edges, blinking rhythmically to draw attention.
+The description of the TB-room is "The ticket kiosk stands at the carnival entrance, a compact booth painted in bright red and yellow stripes with bold letters above the window reading 'Tickets Here!' Twinkling lights outline its edges, blinking rhythmically to draw attention.
 
 A single window serves visitors, where a smiling cashier dispenses colorful tickets from neatly arranged rolls. Beside the tickets, a cash drawer jingles as change is counted, and a digital payment system glows faintly for modern convenience. Too bad you don[']t have a debit card.
 
@@ -1150,7 +1153,7 @@ The worn ground around the kiosk shows the passage of eager carnival-goers. Fami
 
 The midway continues in all directions from here. There is a cashier here. The prices of ride tickets are on the signboard. The cashier has [list of things carried by the cashier]."
 
-The ticket kiosk is a thing. It is in the ticket booth. Understand "booth" as the ticket kiosk. The description of the ticket kiosk is "A single window serves visitors, where a smiling cashier dispenses colorful tickets from neatly arranged rolls. Beside the tickets, a cash drawer jingles as change is counted, and a digital payment system glows faintly for modern convenience. Too bad you don[']t have a debit card.
+The ticket kiosk is a thing. It is in the TB-room. Understand "booth" as the ticket kiosk. The description of the ticket kiosk is "A single window serves visitors, where a smiling cashier dispenses colorful tickets from neatly arranged rolls. Beside the tickets, a cash drawer jingles as change is counted, and a digital payment system glows faintly for modern convenience. Too bad you don[']t have a debit card.
 
 Next to the kiosk, a vibrant signboard lists ticket prices with playful illustrations of rides and treats."
 
@@ -1166,14 +1169,14 @@ The Bumper Cars ticket is a ride ticket. The cashier carries the Bumper Cars tic
 
 The Carousel ticket is a ride ticket. The cashier carries the Carousel ticket. The price of the carousel ticket is $1.00. The description of the Carousel ticket is "'Admit One' to the Carousel."
 
-The Cashier is an attendant in the Ticket Booth. 
+The Cashier is an attendant in the TB-room. 
 
 sign table is a table name that varies. The sign table is Table of Tickets.
 To show a sign table:
 	repeat through a sign table:
 		say "[price of the object entry] [object entry][line break]".
 
-There is a signboard in the Ticket Booth. The signboard is scenery. Understand "sign" as signboard. The description of the signboard is "It[']s a sign displaying the prices of the various rides".
+There is a signboard in the TB-room. The signboard is scenery. Understand "sign" as signboard. The description of the signboard is "It[']s a sign displaying the prices of the various rides".
 
 reading is an action applying to one thing. Understand "read" as reading.
 instead of reading or examining the signboard:
@@ -1182,14 +1185,14 @@ instead of reading or examining the signboard:
 
 Section 4 - Concession Stand
 
-Before going southwest when the location is the Ticket Booth and the Concession Stand is unvisited:
+Before going southwest when the location is the TB-room and the CS-room is unvisited:
 	if show images is true, display Figure of ConcessionStand;
 	continue the action.
 	
-Before looking when the location is the Concession Stand:
+Before looking when the location is the CS-room:
 	if show images is true, display Figure of ConcessionStand.
 
-The Concession Stand is a room. The concession stand is outdoors. "The concession stand, perched along the midway, is a colorful and bustling hub. Painted in bright reds, blues, and yellows, it features bold lettering announcing treats like 'SODA! POPCORN! CANDY APPLES!' Strings of twinkling lights frame the stand, making it a glowing beacon amid the carnival excitement.
+The CS-room is a room. The printed name is "Concession Stand". The CS-room is outdoors. "The concession stand, perched along the midway, is a colorful and bustling hub. Painted in bright reds, blues, and yellows, it features bold lettering announcing treats like 'SODA! POPCORN! CANDY APPLES!' Strings of twinkling lights frame the stand, making it a glowing beacon amid the carnival excitement.
 
 Behind the counter, a popcorn machine churns out golden kernels, filling the air with a buttery aroma. Candy apples gleam under the lights, and cotton candy machines spin fluffy clouds of pink and blue. Warm pretzels sit under a heat lamp, their buttery, salted scent mingling with the sugary treats. A cooler holds sodas, their colorful labels visible through the frosted glass.
 
@@ -1199,7 +1202,9 @@ In front of the stand, kids tug at their parents, teens share pretzels, and the 
 
 There is a menu to the right of the window. You can see the treats inside the stand. There is an exit to the northeast."
 
-The Concession Attendant is an attendant in the concession stand. 
+The Concession Attendant is an attendant in the CS-room. 
+
+The concession stand is here. it is scenery. the description is "The Concession Stand, perched along the midway, is a colorful and bustling hub. Painted in bright reds, blues, and yellows, it features bold lettering announcing treats like 'SODA! POPCORN! CANDY APPLES!' Strings of twinkling lights frame the stand, making it a glowing beacon amid the carnival excitement."
 
 some treats are here. Treats are scenery. Understand "treat" and "goodies" as treats. The description of treats is "There are a variety of things to eat here."
 
@@ -1250,32 +1255,34 @@ some workers are here. they are scenery. the description is "More bored teenager
 
 Section 5 - High Striker
 
-Before going east when the location is the Ticket Booth and the High Striker is unvisited:
+Before going east when the location is the TB-room and the HS-room is unvisited:
 	if show images is true, display Figure of HighStriker;
 	continue the action.
 	
-Before looking when the location is the High Striker:
+Before looking when the location is the HS-room:
 	if show images is true, display Figure of HighStriker.
 
 [ this was a forward reference that Inform 7 couldn't resolve for some reason]
-A room called the Pitcher's Mound is southeast of the high striker. 
+A room called the Pitcher's Mound is southeast of the HS-room. 
 
-The High Striker is a room. The High Striker is west of the FW-room, southwest of the Dime Toss Game, and northwest of the Pitcher's Mound. The High Striker is outdoors. "This area features a tall, eye-catching machine adorned with bright, colorful lights, typically red, yellow, and blue. A large sign at the top reads 'Test Your Strength!' in bold, playful lettering. The machine[’]s base is made of polished wood, with a polished, vintage appearance. At the center is a sturdy metal pole, with a large bell hanging at the top, signaling when a successful attempt has been made. Along the length of the pole are markings indicating how strong you are.  A nearby sign says, 'Buy a mallet, strike the bell, win a prize.'[if the strongman attendant contains the mallet] You can see an over-sized mallet here.[end if]
+The HS-room is a room. The printed name is "High Striker". The HS-room is west of the FW-room, southwest of the Dime Toss Game, and northwest of the Pitcher's Mound. The printed name is "High Striker". The HS-room is outdoors. "This area features a tall, eye-catching machine adorned with bright, colorful lights, typically red, yellow, and blue. A large sign at the top reads 'Test Your Strength!' in bold, playful lettering. The machine[’]s base is made of polished wood, with a polished, vintage appearance. At the center is a sturdy metal pole, with a large bell hanging at the top, signaling when a successful attempt has been made. Along the length of the pole are markings indicating how strong you are.  A nearby sign says, 'Buy a mallet, strike the bell, win a prize.'[if the strongman attendant contains the mallet] You can see an over-sized mallet here.[end if]
 
 Spectators gather around, cheering on participants and offering lighthearted jabs and encouragement, creating a lively, competitive atmosphere. The sound of the mallet hitting the target is followed by the resonant clang of the bell (if struck), alongside the buzz of carnival music in the background. The Ticket Kiosk is to the west. Other games are northeast and southeast of here. The Ferris Wheel lies to the east."
 
 The markings are here. The markings are scenery. Understand "marking" and "sign" and "signs" as markings. The description of markings is "There are five levels marked on the pole: Weakling, Getting There, Average, Almost There, and Muscle Man."
 
-The Strongman attendant is an attendant in the High Striker. 
+The Strongman attendant is an attendant in the HS-room. 
 
-after looking when the location is the high striker:
+after looking when the location is the HS-room:
 	say "[if the strongman attendant carries the mallet]The attendant is holding a mallet.[end if]";
 
 after examining the strongman attendant:
 	if HighStrikerWin is true, show the high striker prizes. 
 	
-after looking when the HighStrikerWin is true and the location is the High Striker:
+after looking when the HighStrikerWin is true and the location is the HS-room:
 	show the high striker prizes.
+	
+The High Striker is in the HS-room. It is scenery. the description is "The High Striker is a tall, eye-catching machine adorned with bright, colorful lights. A large sign at the top reads 'Test Your Strength!'. The machine[’]s base is made of polished wood. At the center is a sturdy metal pole, with a large bell hanging at the top.".
 	
 A teddy bear is carried by the Strongman attendant. The description of the teddy bear is "This is a teddy bear like you had when you were a kid. Right down to the red bow around its neck." 
 
@@ -1297,7 +1304,7 @@ A mallet is carried by the Strongman attendant.  The price of the mallet is $2.0
 
 A strength pattern is a kind of value. The strength patterns are Weakling, Getting Stronger, Average, Almost There, Muscle Man.
 
-understand the command punch as something new.
+understand the command "punch" as something new.
 piercing is an action applying to two things. Understand "pierce [something preferably held] with [something]" as punching.
 punching is an action applying to two things. Understand "punch [something preferably held] with [something]" as punching.
 instead of punching:
@@ -1305,13 +1312,19 @@ instead of punching:
 	
 instead of asking the strongman attendant about "mallet", say "Use the mallet to strike the bullseye. Ring the bell to win a prize.".
 instead of asking the strongman attendant about "lever", say "Use the mallet to strike the bullseye. Ring the bell to win a prize.".
-	
-Hitting is an action applying to two visible things. 
-Understand "hit [something]" as hitting. Understand "hit [something] with [something preferably held]" as hitting.
-Understand "strike [something]" as hitting. Understand "strike [something] with [something preferably held]" as hitting.
-Understand "swing [something preferably held] at [something]" as hitting (with nouns reversed). 
 
-Does the player mean doing something with the mallet: it is very likely.
+understand the command "hit" as something new. understand the command "swing" as something new.
+hitting relates one thing to one thing. The verb to hit means the hitting relation.
+Hitting is an action applying to two visible things. 
+Understand "hit [something] with [something preferably held]" as hitting.
+Understand "strike [something] with [something preferably held]" as hitting.
+Understand "swing [something preferably held] at [something]" as hitting (with nouns reversed).  
+
+Rule for supplying a missing second noun while hitting:
+	if the mallet is carried, now the second noun is the mallet;
+	otherwise say "You will have to specify what to hit [the noun] with."
+
+Does the player mean doing something with the mallet when the location is the HS-room and the second noun is the mallet: it is very likely.
 
 Check hitting:
 	if noun is an attendant:
@@ -1319,7 +1332,7 @@ Check hitting:
 		now the mallet is nowhere;
 		stop the action;
 	if noun is not lever, say "Nothing happens." instead;
-	if the second noun is not mallet, say "You can[']t hit [the noun] with that!" instead;
+	if the second noun is not mallet, say "You can[']t hit [the noun] with [the second noun]!" instead;
 	if the player is not carrying the mallet, say "You[']re not holding the mallet." instead.
 
 To show the High Striker prizes:
@@ -1327,7 +1340,7 @@ To show the High Striker prizes:
 	repeat with N running from 1 to the number of rows in the Table of High Striker Prizes:
 		say "[index in row N of the Table of High Striker Prizes]) [description in row N of the Table of High Striker Prizes][if N < number of rows in the Table of High Striker Prizes], [otherwise]?[end if]".
 
-Carry out hitting when the player is carrying the mallet:
+Carry out hitting when the noun is the lever and the second noun is the mallet and the player is carrying the mallet:
 	say "You lift the mallet high and bring it down on the lever with all your might! The striker rises towards the bell stopping at '[a random strength pattern between weakling and almost there]'.  C[']mon! You can do better than that!";
 	
 The bell is here. The bell is scenery. The description of the bell is "This is the bell that will ring out when you prove to everyone that you[']re a 'Muscle Man'."
@@ -1339,7 +1352,7 @@ After hitting the lever when second noun is the mallet 5 times:
 	say "You swing the mallet one more time. The bell rings as the striker reaches the top of the pole. The attendant says, 'You[']re a Muscle Man. Here[']s a prize for you.'";
 	show the high striker prizes.
 
-after reading a command when the location is the high striker and HighStrikerWin is true:
+after reading a command when the location is the HS-room and HighStrikerWin is true:
 	now prize table is Table of High Striker Prizes;
 	receive a prize;
 	if prize taken is true:
@@ -1348,14 +1361,14 @@ after reading a command when the location is the high striker and HighStrikerWin
 	
 Section 6 - Dime Toss
 
-Before going northeast when the location is the High Striker and the Dime Toss Game is unvisited:
+Before going northeast when the location is the HS-room and the Dime Toss Game is unvisited:
 	if show images is true, display Figure of DimeToss;
 	continue the action.
 	
 Before looking when the location is the Dime Toss Game:
 	if show images is true, display Figure of DimeToss.
 
-A room called the Dime Toss Game is northeast of the high striker. "The game booth is adorned with vibrant colors — red-and-white striped awnings, twinkling lights, and eye-catching signage that reads 'TOSS A DIME — WIN A PRIZE!'. You can see prizes of all shapes and sizes hang around the booth, from stuffed animals and novelty toys to shiny trinkets and quirky collectibles. The larger prizes are prominently displayed to entice passersby. Rows of gleaming plates sparkle under overhead lights, their glass surfaces reflecting the surrounding glow.
+A room called the Dime Toss Game is northeast of the HS-room. "The game booth is adorned with vibrant colors — red-and-white striped awnings, twinkling lights, and eye-catching signage that reads 'TOSS A DIME — WIN A PRIZE!'. You can see prizes of all shapes and sizes hang around the booth, from stuffed animals and novelty toys to shiny trinkets and quirky collectibles. The larger prizes are prominently displayed to entice passersby. Rows of gleaming plates sparkle under overhead lights, their glass surfaces reflecting the surrounding glow.
 
 The distinctive 'ping' of dimes hitting plates creates a rhythmic soundtrack, punctuated by the occasional satisfying 'plop' when a dime lands perfectly. Victorious shouts mix with playful groans of near-misses, creating a symphony of excitement. Nearby, the hum of other booths, upbeat carnival music, and the distant laughter of children add to the lively backdrop. The booth operator calls out enthusiastically, 'Step right up! Test your skill! Win big!' Their energetic pitch draws in curious onlookers.[if a dime underlies the Dime Toss  booth] You thought you caught a flash of something coming from the area of the booth.[end if]
 
@@ -1430,14 +1443,14 @@ after looking when the TossADimeWin is true and the location is the Dime Toss Ga
 
 Section 7 - Pitcher's Mound
 
-Before going southeast when the location is the High Striker and the Pitcher's Mound is unvisited:
+Before going southeast when the location is the HS-room and the Pitcher's Mound is unvisited:
 	if show images is true, display Figure of MilkBottles;
 	continue the action.
 	
 Before looking when the location is the Pitcher's Mound:
 	if show images is true, display Figure of MilkBottles.
 
-A room called the Pitcher's Mound is southeast of the high striker. "The milk bottle ball toss is a classic carnival game that combines skill, strength, and a bit of luck. The setup features a pyramid of brightly colored milk bottles stacked on a sturdy platform — three on the bottom, two in the middle, and one on top. Players stand behind a marked line and toss baseballs, aiming to knock down as many bottles as possible. Clearing the entire stack wins a prize.
+A room called the Pitcher's Mound is southeast of the HS-room. "The milk bottle ball toss is a classic carnival game that combines skill, strength, and a bit of luck. The setup features a pyramid of brightly colored milk bottles stacked on a sturdy platform — three on the bottom, two in the middle, and one on top. Players stand behind a marked line and toss baseballs, aiming to knock down as many bottles as possible. Clearing the entire stack wins a prize.
 
 The booth buzzes with energy, its colorful banners and flashing lights drawing a lively crowd. The satisfying clatter of falling bottles mixes with cheers and groans from players and spectators. A carnival attendant calls out, 'Step right up and test your aim! Three balls for just a dime.' Prizes — ranging from small toys to giant stuffed animals — hang prominently, enticing players to take a shot. With every toss, the game delivers moments of suspense, joy, and fun, making it a favorite at the carnival.
 
@@ -1458,10 +1471,12 @@ the toys are here. they are scenery. Understand "toy", "stuffed", "stuffie", "st
 Throwing is an action applying to two things.
 Understand "throw [something preferably held] at/on [something]" as throwing.
 
+Instead of buying a baseball, say "You don[']t need to buy the baseballs. Just give the attendant a dime.".
+
 instead of giving a dime to the pitcher's mound attendant:
 	say "The attendant gives you three baseballs in return.";
 	now the pitcher's mound attendant carries the noun;
-	now the player carries all baseballs;
+	now the player carries every baseball;
 	stop the action.
 
 instead of throwing a baseball at the milk bottles:
@@ -1483,7 +1498,7 @@ instead of throwing a baseball at the milk bottles when the player carries the n
 		now PitchersMoundWin is true;	
 		say "The ball hits the bottles in the sweet spot and they go flying off the platform. The attendant shouts out, 'Winner! Winner! [run paragraph on]";
 		show the Pitcher's Mound prizes;
-		now the noun is nowhere;
+		now every baseball is nowhere;
 	otherwise:
 		let N be a random number between 1 and 5;
 		if N is:
@@ -1511,32 +1526,34 @@ after looking when the PitchersMoundWin is true and the location is the Pitcher'
 
 Section 8 - Show Facade
 
-Before going west when the location is the Ticket Booth and the Show Facade is unvisited:
+Before going west when the location is the TB-room and the SF-room is unvisited:
 	if show images is true, display Figure of LittleEgyptFacade;
 	continue the action.
 
-Before looking when the location is the Show Facade:
+Before looking when the location is the SF-room:
 	if show images is true, display Figure of LittleEgyptFacade.
 
-Show Facade is a room. Show Facade is east of ST-room. Show Facade is outdoors. "You head west through the midway, the bright lights of the carnival fading behind you as you approach a wooden booth. A sign above the entrance reads 'Little Egypt Show — A Journey Into the Mysterious and Exotic!' A rotund barker, wearing a fez and a dazzling smile, gestures to a small sign beside him that says 'Dime Admission.'  The Ticket Kiosk is back the way you came.
+SF-room is a room. SF-room is east of ST-room. The printed name is "Show Facade". SF-room is outdoors. "You head west through the midway, the bright lights of the carnival fading behind you as you approach a wooden booth. A sign above the entrance reads 'Little Egypt Show — A Journey Into the Mysterious and Exotic!' A rotund barker, wearing a fez and a dazzling smile, gestures to a small sign beside him that says 'Dime Admission.'  The Ticket Kiosk is back the way you came.
 
 You are standing in front of a dark and mysterious tent filled with illusions and mysterious performers. Perhaps there’s a bearded lady inside, offering cryptic clues about your journey or a hidden artifact that can be collected. There is a stage in front of the tent. The Barker is encouraging you to step up, pay for, and enjoy the Little Egypt Show."
+
+the facade is in the SF-room. it is scenery. the description is "You are standing in front of a dark and mysterious tent filled with illusions and mysterious performers. Perhaps there’s a bearded lady inside, offering cryptic clues about your journey or a hidden artifact that can be collected. There is a stage in front of the tent. The Barker is encouraging you to step up, pay for, and enjoy the Little Egypt Show."
 
 To say the barker's cry:
 	say "The barker cries:[paragraph break]Ladies and gentlemen, boys and girls, gather [']round! [line break]Step right up and witness the spectacle that[’]s taken the world by storm! [line break]She walks, she talks, she crawls on her belly like a reptile. [line break]Behold the one, the only Little Egypt, performing her legendary Dance of the Pyramids — a dazzling display of mystery, grace, and exotic allure! [line break]For just a dime, a mere one tenth of a dollar, prepare to be transported to the sands of Cairo, where enchantment and wonder await!"
 
-report going west when the location is the Show Facade and the location is unvisited:
+report going west when the location is the SF-room and the location is unvisited:
 	try looking;
 	say "[the barker's cry]";
 	stop the action.
 
-A sign is in the Show Facade. The sign is scenery. The description of the sign is "The sign reads, 'Little Egypt Show — A Journey Into the Mysterious and Exotic!'".
+A sign is in the SF-room. The sign is scenery. The description of the sign is "The sign reads, 'Little Egypt Show — A Journey Into the Mysterious and Exotic!'".
 
-The Barker is a person in Show Facade. Understand "attendant", "attendent", and "operator" as the Barker. The description of the barker is "Here is a man dressed in black pants, a white shirt,a striped vest, a fez, and a dazzling smile."
+The Barker is a person in SF-room. Understand "attendant", "attendent", and "operator" as the Barker. The description of the barker is "Here is a man dressed in black pants, a white shirt,a striped vest, a fez, and a dazzling smile."
 
 after examining the barker, say "[the barker's cry]".
 
-Check going west when the location is the Show Facade and the barker is not carrying a dime:
+Check going west when the location is the SF-room and the barker is not carrying a dime:
 	say "It[']ll cost you a dime to go that way.";
 	stop the action.
 
@@ -1545,24 +1562,31 @@ After giving when the noun is dime and the second noun is barker:
 
 Section 9 - Show Tent	
 
-Before going west when the location is the Show Facade and the ST-room is unvisited and barker is carrying a dime:
+Before going west when the location is the SF-room and the ST-room is unvisited and barker is carrying a dime:
 	if show images is true, display Figure of LittleEgyptShow;
 	continue the action.
 	
 Before looking when the location is the the ST-room:
 	if show images is true, display Figure of LittleEgyptShow.		
 
-The ST-room is a room. The printed name is "Show Tent". The ST-room is west of Show Facade. "You are inside the Little Egypt Show. The attraction[']s facade is to the east. There are folding chairs organized neatly in rows.[if the ST-room is unvisited] The show should start soon.[end if]"
+The ST-room is a room. The printed name is "Show Tent". The ST-room is west of SF-room. "You are inside the Little Egypt Show. The attraction[']s facade is to the east. There are folding chairs organized neatly in rows.[if the ST-room is unvisited] The show should start soon.[end if]"
 
-Little Egypt is a woman. Little Egypt is in the ST-room. Little Egypt is scenery. The description of Little Egypt is "Little Egypt is a beautiful woman who is draped in flowing silk veils which she skillfully uses as part of the dance. Her attire consists of a sparkling, sequined bodice and a flowing skirt, adorned with jingling coin belts and jewelry that accentuate her movements."
+Little Egypt is a woman. Little Egypt is in the ST-room. Little Egypt is scenery. The description of Little Egypt is "Little Egypt is a beautiful woman who is draped in flowing silk veils which she skillfully uses as part of the dance. Her attire consists of a sparkling, sequined bodice and a flowing skirt, adorned with jingling coin belts and jewelry that accentuate her movements.". understand "silk", "veils", "bodice", "sequined", "sequins", "flowing", "skirt", "jingling", "coins", "belts", and "jewelry" as Little Egypt.
 
 A sheer veil is a wearable thing. The description of the Sheer Veil is "This is a sheer gold veil that Little Egypt wore (and removed) during her show. Your head swims as you smell the scent of her perfume on the veil: Pyramid Patchouli."
 
 after wearing the sheer veil, say "You wrap the veil around your head, shrouding your eyes. The world is a lovely color pink as you look through the veil while her perfume fills your nostrils in the most delightful way. You look pretty!"
 
+the show tent is a thing in the ST-room. it is scenery. The description is "You are inside the Little Egypt Show. The attraction[']s facade is to the east. There are folding chairs organized neatly in rows.". 
+
 The Stage is here. The Stage is scenery. The description of the Stage is "The stage is decorated to resemble an exotic Middle Eastern market or palace, featuring rich, colorful fabrics, brass ornaments, and lanterns casting a warm, flickering glow. Scents of incense waft through the air, enhancing the atmosphere of mystique. The canvas displays painted scenes of pyramids, desert landscapes, and domed structures to evoking a sense of being transported to the 'Middle East'."
 
-the show tent is a thing in the ST-room. it is scenery. The description is "You are inside the Little Egypt Show. The attraction[']s facade is to the east. There are folding chairs organized neatly in rows.". 
+some incense is here. they are scenery. the description is "The smell of incense wafts through the tent.".
+instead of smelling when the location is the ST-room, try examining the incense instead.
+
+some fabric is here. they are scenery. the description is "The linen and silk fabrics come in all different colors.".
+
+some brass ornaments are here. they are scenery. the description is "There are highly polished incense holders and brass lanterns here.". understand "polished", "incense", "holders", "holder", "brass", "lantern", and "lanterns" as brass ornaments.
 
 understand "backdrop" as canvas.
 The canvas is here. It is scenery. The description of the canvas is "Elegantly painted on linen, the backdrop shows scenes of Middle Eastern life.".
@@ -1614,14 +1638,14 @@ examining the entryway is an action applying to one thing. Understand "examine e
 
 Section 10 - Ferris Wheel
 
-After going east from the high striker when the FW-room is unvisited:
+After going east from the HS-room when the FW-room is unvisited:
 	if show images is true, display Figure of FerrisWheel;
 	continue the action.
 	
 Before looking when the location is the FW-room:
 	if show images is true, display Figure of FerrisWheel.
 
-A room called the FW-room is outdoors. The printed name of the FW-room is "Ferris Wheel". The FW-room is east of the High Striker. "The Ferris wheel is the towering centerpiece of the carnival, its vibrant lights and graceful rotations drawing the attention of visitors from every corner of the fairgrounds. The wheel[']s massive steel frame arches high into the sky, its intricate network of beams glinting under the colorful glow of bulbs strung along its circumference. Each gondola, painted in bright hues like red, yellow, and blue, dangles from the wheel, swaying gently as it turns.
+A room called the FW-room is outdoors. The printed name of the FW-room is "Ferris Wheel". The FW-room is east of the HS-room. "The Ferris wheel is the towering centerpiece of the carnival, its vibrant lights and graceful rotations drawing the attention of visitors from every corner of the fairgrounds. The wheel[']s massive steel frame arches high into the sky, its intricate network of beams glinting under the colorful glow of bulbs strung along its circumference. Each gondola, painted in bright hues like red, yellow, and blue, dangles from the wheel, swaying gently as it turns.
 
 At night, the Ferris wheel transforms into a dazzling spectacle, with hundreds of synchronized lights creating patterns and ripples that pulse outward like waves. The bulbs flash in bursts of red, green, and white, casting playful reflections on nearby attractions and the surrounding crowd.
 
@@ -1652,14 +1676,14 @@ Does the player mean doing something with the Ferris Wheel when the location is 
 
 Section 11 - Bumper Cars
 
-After going northwest from the ticket Booth when the bumper cars ride is unvisited:
+After going northwest from the TB-room when the BC-room is unvisited:
 	if show images is true, display Figure of BumperCars;
 	continue the action.
 	
-Before looking when the location is the Bumper Cars Ride:
+Before looking when the location is the BC-room:
 	if show images is true, display Figure of BumperCars.
 	
-The Bumper Cars Ride is a room. The Bumper Cars Ride is northwest of the Ticket Booth. The Bumper Cars Ride is outdoors. "The bumper cars is a bustling hub of excitement and laughter, set beneath a canopy of flashing lights and colorful decorations. The rectangular arena is surrounded by padded barriers, ensuring a safe yet thrilling experience for riders. The floor, slick and metallic, allows the brightly colored cars — painted in shades of red, blue, yellow, and green — to glide effortlessly in all directions.
+The BC-room is a room. The printed name is "Bumper Cars". The BC-room is northwest of the TB-room. The BC-room is outdoors. "The bumper cars is a bustling hub of excitement and laughter, set beneath a canopy of flashing lights and colorful decorations. The rectangular arena is surrounded by padded barriers, ensuring a safe yet thrilling experience for riders. The floor, slick and metallic, allows the brightly colored cars — painted in shades of red, blue, yellow, and green — to glide effortlessly in all directions.
 
 Each car is equipped with a steering wheel and a padded bumper, designed to absorb the impact of playful collisions. As the ride begins, drivers of all ages eagerly maneuver their cars, aiming for friends, family, or strangers with mischievous grins. The air is filled with the sound of bumpers colliding, laughter, and the occasional squeal of surprise.
 
@@ -1667,7 +1691,7 @@ Overhead, a web of electric poles connects the cars to the ceiling, sparking fai
 
 The bumper cars perfectly captures the playful spirit of the carnival, offering a mix of harmless competition, shared laughter, and nostalgic fun for all ages. The Ticket Kiosk is southeast of here."
 
-The Bumper Cars attendant is an attendant in the Bumper Cars Ride. 
+The Bumper Cars attendant is an attendant in the BC-room. 
 
 instead of giving the bumper cars ticket to the bumper cars attendant:
 	say "You give [the noun] to [the second noun].";
@@ -1680,11 +1704,11 @@ The thrill of the bumper cars is in the collisions — every thud and jolt accom
 
 The ride is a whirlwind of laughter, harmless competition, and shared joy. As the music fades and the cars slow to a stop, you climb out with a wide grin, already looking forward to your next turn in the driver’s seat."
 
-A thing called the Bumper Cars are in the Bumper Cars Ride. The Bumper Cars are scenery. The description of the Bumper Cars is "The Bumper Cars are small, colorful, electric-powered vehicles equipped with a padded outer rim to absorb impacts, allowing riders to safely bump into each other as part of the game. The ceiling has a conductive surface that powers the cars. Riders are thrilled by chaotic collisions, laughter, and the challenge of maneuvering away from — or into — other drivers."
+A thing called the Bumper Cars are in the BC-room. The Bumper Cars are scenery. The description of the Bumper Cars is "The Bumper Cars are small, colorful, electric-powered vehicles equipped with a padded outer rim to absorb impacts, allowing riders to safely bump into each other as part of the game. The ceiling has a conductive surface that powers the cars. Riders are thrilled by chaotic collisions, laughter, and the challenge of maneuvering away from — or into — other drivers."
 
 Does the player mean doing something with the Bumper Cars: it is very likely.
 
-A two dollar bill is a thing. The two dollar bill is in the Bumper Cars Ride. Understand "bill" as the two dollar bill. "Hey! Is that a two dollar bill on the ground?" The description of the two dollar bill is "It has a picture of Thomas Jefferson on it.".
+A two dollar bill is a thing. The two dollar bill is in the BC-room. Understand "bill" as the two dollar bill. "Hey! Is that a two dollar bill on the ground?" The description of the two dollar bill is "It has a picture of Thomas Jefferson on it.".
 
 instead of taking the two dollar bill:
 	say "Taken.[paragraph break]";
@@ -1698,14 +1722,14 @@ instead of giving the adjustable wrench to the bumper cars attendant:
 	
 Section 12 - Fortune Teller 
 
-After going southeast from the ticket Booth when the FT-room is unvisited:
+After going southeast from the TB-room when the FT-room is unvisited:
 	if show images is true, display Figure of FortuneTeller;
 	continue the action.
 	
 Before looking when the location is the FT-room:
 	if show images is true, display Figure of FortuneTeller.
 	
-FT-room is a room. The printed name is "Fortune Teller Booth". The FT-room is outdoors. The FT-room is southeast of the Ticket Booth. "Approaching the fortune teller[’]s booth, you’re drawn in by its mysterious allure. Draped in deep purple curtains adorned with golden moons and stars, the booth glows with the soft, inviting light of candles. The air is heavy with the scent of incense, mingling with the sweet aroma of carnival treats. A sign sways slightly in the evening breeze."
+FT-room is a room. The printed name is "Fortune Teller Booth". The FT-room is outdoors. The FT-room is southeast of the TB-room. "Approaching the fortune teller[’]s booth, you’re drawn in by its mysterious allure. Draped in deep purple curtains adorned with golden moons and stars, the booth glows with the soft, inviting light of candles. The air is heavy with the scent of incense, mingling with the sweet aroma of carnival treats. A sign sways slightly in the evening breeze."
 
 some candles are here. The candles are scenery. The description of the candles is "The candles flicker in the soft breeze casting light on the Esmerelda[']s face.". Understand "candle" as candles. instead of taking the candles, say "Esmerelda says, 'Hey! I need those!".
 
@@ -1745,20 +1769,20 @@ instead of asking the Esmerelda the Mysterious about "me", say "You[']ll need a 
 
 Section 13 - Carousel
 
-After going northeast from the ticket Booth when the carousel ride is unvisited:
+After going northeast from the TB-room when the CR-room is unvisited:
 	if show images is true, display Figure of Carousel;
 	continue the action.
 	
-Before looking when the location is the Carousel Ride:
+Before looking when the location is the CR-room:
 	if show images is true, display Figure of Carousel.
 
-The Carousel Ride is a room. The Carousel Ride is outdoors. The Carousel Ride is northeast of the Ticket Booth. "The carousel is a timeless carnival attraction, radiating charm and nostalgia with its brightly painted horses, vibrant lights, and cheerful music. The circular platform is adorned with a canopy of swirling colors, gold trim, and decorative mirrors that reflect the flickering bulbs lining its edges.
+The CR-room is a room. The CR-room is outdoors. The printed name is "Carousel". The CR-room is northeast of the TB-room. "The carousel is a timeless carnival attraction, radiating charm and nostalgia with its brightly painted horses, vibrant lights, and cheerful music. The circular platform is adorned with a canopy of swirling colors, gold trim, and decorative mirrors that reflect the flickering bulbs lining its edges.
 
 Rows of hand-carved animals, most often horses with flowing manes, are arranged in a circle. Each is painted in vivid colors, detailed with golden saddles and ribbons. It also features exotic creatures like lions, tigers, and sea dragons, adding whimsy to the ride. The animals rise and fall gently as the carousel spins, mimicking a galloping motion.
 
 The carousel[’]s warm, playful tunes drift across the midway, inviting riders of all ages to enjoy its simple delight. Children laugh as they choose their favorite animals, while adults savor the nostalgia of the spinning ride. As it rotates, the carousel becomes a moving work of art, blending motion, color, and music into an enchanting centerpiece of the carnival. The Ticket Kiosk is back to the southwest; the way you came."
 
-The Carousel attendant is an attendant in the Carousel Ride. 
+The Carousel attendant is an attendant in the CR-room. 
 
 instead of giving the carousel ticket to the carousel attendant:
 	say "You give [the noun] to [the second noun].";
@@ -1770,7 +1794,7 @@ As the ride picks up speed, the world outside becomes a blur of glowing carnival
 For a few moments, you’re transported into a magical world, the worries of the day fading away with each graceful rotation. Whether you’re enjoying the ride alone, with friends, or sharing a special moment with family, the carousel[’]s charm captures a timeless blend of whimsy and wonder. As it slows to a stop, you step off with a smile, the music lingering in your ears as you rejoin the bustling carnival."
 
 Understand "merry-go-round" and "merry go round" as carousel.
-A thing called the Carousel is in the Carousel Ride. The Carousel is scenery. The description of the Carousel is "The carousel features intricately decorated, moving figures such as horses, chariots, and sea dragons, all mounted on poles. The figures move up and down in an endless chase accompaniment of cheerful, calliope music. Illuminated by bright, twinkling lights, the carousel creates a magical and timeless atmosphere.".
+A thing called the Carousel is in the CR-room. The Carousel is scenery. The description of the Carousel is "The carousel features intricately decorated, moving figures such as horses, chariots, and sea dragons, all mounted on poles. The figures move up and down in an endless chase accompaniment of cheerful, calliope music. Illuminated by bright, twinkling lights, the carousel creates a magical and timeless atmosphere.".
 
 Does the player mean doing something with the Carousel: it is very likely.
 
@@ -1784,7 +1808,7 @@ the sea dragons are here. They are scenery. The description is "The sea dragons,
 
 Section 14 - Head of the Line
 
-Head of the Line is a room. Head of the Line is south of Ticket Booth. Head of the Line is north of Ride Entrance. The Head of the Line is outdoors. "You are standing in front of an attendant with his hand open waiting for your ticket. The entrance to the ride is south of here. The ride operator tells you that you[']re lucky you showed up when you did because this will be the last trip through Hell Ride for the night. You notice that all the other cars are empty. The Ticket Kiosk is north of here."
+Head of the Line is a room. Head of the Line is south of TB-room. Head of the Line is north of Ride Entrance. The Head of the Line is outdoors. "You are standing in front of an attendant with his hand open waiting for your ticket. The entrance to the ride is south of here. The ride operator tells you that you[']re lucky you showed up when you did because this will be the last trip through Hell Ride for the night. You notice that all the other cars are empty. The Ticket Kiosk is north of here."
 
 The Hell Ride attendant is an attendant in Head of the Line. 
 
@@ -2366,7 +2390,7 @@ A dial is a kind of thing. A dial is part of every control panel.
 A dial is fixed in place.
 A dial has a number called a dial setting. 
 
-The description of a dial is "This is the [color of the holder of the item described] colored dial. It is currently set to [dial setting of the item described]. I bet you could SPIN it.".
+The description of a dial is "This is the [color of the holder of the item described] colored dial. It is currently set to [dial setting of the item described]. I bet you could SET it to a number.".
 
 The printed name of a dial is "the [color of the holder of the item described] dial".
 
@@ -2450,8 +2474,8 @@ instead of examining the monitor:
 	
 Part 3 - Regions
 
-The Midway is a region. Parking Lot, Ticket Booth, Concession Stand, High Striker, Show Facade, ST-room, Head of the Line,
-FW-room, Bumper Cars Ride, FT-room, Carousel Ride, Dime Toss Game, and the Pitcher's Mound are in the Midway. The sky is in the Midway.
+The Midway is a region. PL-room, TB-room, CS-room, HS-room, SF-room, ST-room, Head of the Line,
+FW-room, BC-room, FT-room, CR-room, Dime Toss Game, and the Pitcher's Mound are in the Midway. The sky is in the Midway.
 
 HellRide is a region. Ride Entrance, Stocks Room, Gallows Room, Stake Room, Dungeon, Guillotine Room, Ride Exit are in HellRide.
 
@@ -2672,7 +2696,7 @@ description
 Section 12 - Introduction to Hell Ride
 
 When play begins:
-	choose row 1 in Table of Basic Help Options;
+	choose row 1 in Table of Help Options;
 	now description entry is "Hell Ride - A ride to remember...
 
 Date night with your sweetie: a meal at your favorite restaurant and a night at the carnival. 
@@ -2684,7 +2708,7 @@ As you explore the carnival, you learn (the hard way) that the Hell Ride attract
 Section 13 - Hell Ride Origins
 
 When play begins:
-	 choose row 3 in Table of Basic Help Options;
+	 choose row 2 in Table of Help Options;
 	 now description entry is "Hell Ride - A ride to remember...
 
 In the early 1980[']s, I had an Apple [close bracket][bracket]  Plus computer with 64K of RAM, dual 5.25[quotation mark] floppy disks, and a color monitor as big as a television. And the very first game I ever bought was Infocom[']s Zork I: The Great Underground Empire. This was cool. It was all text-based. The game described your surroundings and you interacted with commands that say what you wanted to do. This 'Interactive Fiction' really evoked in a game what I appreciated most about reading: rich descriptions, colorful characters, and the like. After Zork I, there was Zork II and III. Enchanter, Moonmist, Suspect, and so many 
@@ -2792,253 +2816,142 @@ Check asking for help for the first time:
 		
 Check asking for help:
 	if hint usage is denied, say "You have chosen to forego hints in this game. Be strong! Persevere!" instead.
+	
+when play begins:
+	 now mn_master_table is the Table of Help Options.
 
-Chapter 2 - Basic Help Options
+Chapter 2 - Help Options
 
-Table of Basic Help Options (continued)
-title	subtable	description
-"Hell Ride Origins"	--	"If you have any difficulties with [story title], please contact me at dmontgom22@gmail.com"
-"The Parking Lot"	Table of Parking Lot Hints	--
-"The Attractions"	Table of Attractions Hints	--
-"The Games"	Table of Games Hints	--
-"Back Stage"	Table of Back Stage Hints	--
-"Hell Ride"	Table of Hell Ride Hints	--
-"The Electrical Area"	Table of Electrical Area Hints	--
-"The Control Room"	Table of Control Room Hints	--
-"Settings"	Table of Setting Options	--
+Table of Help Options
+title (text)	subtable (table name)	description (text)	toggle (rule)	used (number)	bookpage (number)	localpage (number)
+"Introduction to Hell Ride"	--	"placeholder"
+"Hell Ride Origins"	--	"placeholder"
+"The Parking Lot"	Table of Parking Lot Hints	""
+"The Attractions"	Table of Attractions Hints	""
+"The Games"	Table of Games Hints	""
+"Back Stage"	Table of Back Stage Hints	""
+"Hell Ride"	Table of Hell Ride Hints	""
+"The Electrical Area"	Table of Electrical Area Hints	""
+"The Control Room"	Table of Control Room Hints	""
+"Settings"	Table of Setting Options	""
 
 Chapter 3 - The Parking Lot
 
 Table of Parking Lot Hints
-title	subtable	description	toggle
-"What about the glove box?"		Table of Glove Box Hints	""	hint toggle rule
-"Why can[']t I leave the parking lot?"	Table of Leaving Lot Hints	""	hint toggle rule
-"What do I do with the string?"	Table of String Hints    	""    	hint toggle rule
-"Why does my car get towed?"	Table of Toad Away Hints	""	hint toggle rule
-
-Section 1 - String Hints
-
-Table of String Hints
-hint	used
-"Remember that you know how to macrame."	a number
-"Isn[']t macrame the art of tying?"
-"Oh, come now, isn't it obvious?"
-
-Section 2 - Glove Box Hints
-
-Table of Glove Box Hints
-hint	used
-"It[']s locked."	a number
-"Have you tried unlocking it?"	
-"You need a key."	
-"Look under the car seat."
-
-Section 3 - Leaving Parking Lot Hints
-
-Table of Leaving Lot Hints
-hint	used
-"Looks like you need something before heading into the carnival."	a number
-"Looks like you need a parking ticket."
-"The parking attendant has a parking ticket."		
-"Buy the parking ticket."
-
-Section 4 - Toad Away Hints
-
-Table of Toad Away Hints
-hint	used
-"Why might your car get towed?"	a number
-"Is your car parked legally?"	
-"Are you sure?"	
-"What about the parking stub"	
-"The parking attendant knows something about the stub"	
-"Put the stub on the dashboard."
+title (text)	subtable (table name)	description (text)	toggle (rule)	used (number)	bookpage (number)	localpage (number)
+"What about the glove box?"	table of hinting	"It[']s locked."	
+"hint"	--	"Have you tried unlocking it?"	
+"hint"	--	"You need a key."	
+"hint"	--	"Look under the car seat."
+"Why can[']t I leave the parking lot?"	table of hinting	"Looks like you need something before heading into the carnival."
+"hint"	--	"Looks like you need a parking ticket."
+"hint"	--	"The parking attendant has a parking ticket."		
+"hint"	--	"Buy the parking ticket."
+"What do I do with the string?"	table of hinting    	"Remember that you know how to macrame."  
+"hint"	--	"Isn[']t macrame the art of tying?"
+"hint"	--	"Oh, come now, isn't it obvious?"  	
+"Why does my car get towed?"	table of hinting	"Why might your car get towed?"
+"hint"	--	"Is your car parked legally?"	
+"hint"	--	"Are you sure?"	
+"hint"	--	"What about the parking stub"	
+"hint"	--	"The parking attendant knows something about the stub"	
+"hint"	--	"Put the stub on the dashboard."
 
 Chapter 4 - The Attractions
 
 Table of Attractions Hints
-title	subtable	description	toggle
-"Can I ride the rides?"	Table of Ride the Ride Hints	""	hint toggle rule
-"Why are tickets so expensive?"	Table of Ticket Price Hints	""	hint toggle rule
-"The rides are boring."	Table of Boring Ride Hints	""	hint toggle rule
-
-Section 1 - Ride the Ride Hints
-
-Table of Ride the Ride Hints
-hint	used
-"You[']ll need a ticket."	a number
-"Tickets are expensive though."
-"You can buy tickets at the Ticket Kiosk."
-
-Section 2 - Table of Ticket Price Hints
-
-Table of Ticket Price Hints
-hint	used
-"What? You were expecting wrist bands?"	a number
-"To remind you to spend your money wisely."
-
-Section 3 - Boring Ride Hints
-
-Table of Boring Ride Hints
-hint	used
-"Surely not ALL the rides are boring."	a number
-"It[']s a small carnival, what do you expect?"
-"Have you ridden Hell Ride?"
-
+title (text)	subtable (table name)	description (text)	toggle (rule)	used (number)	bookpage (number)	localpage (number)
+"Can I ride the rides?"	table of hinting	"You[']ll need a ticket."	
+"hint"	--	"Tickets are expensive though."
+"hint"	--	"You can buy tickets at the Ticket Kiosk."
+"Why are tickets so expensive?"	table of hinting		"What? You were expecting wrist bands?"
+"hint"	--	"To remind you to spend your money wisely."
+"The rides are boring."	table of hinting	"Surely not ALL the rides are boring."	
+"hint"	--	"It[']s a small carnival, what do you expect?"
+"hint"	--	"Have you ridden Hell Ride?"
 
 Chapter 5 - The Games 
 
 Table of Games Hints
-title	subtable	description	toggle
-"Are the prizes important?"	Table of Important Prizes Hints	""	hint toggle rule
-"Why do the games only cost a dime?"	Table of Game Cost Hints	""	hint toggle rule
-"I[']ve found a Mercury dime. What is it?"	Table of Mercury Dime Hints	""	hint toggle rule
-
-Section 1 - Important Prizes Hints?
-
-Table of Important Prizes Hints
-hint	used
-"Important? That[']s a matter of opinion."	a number
-"A teddy bear to make up with your sweetie?"
-"I[']d go with my instincts on this one if I were you."
-"Yes, the prizes are important."
-
-Section 2 - Game Costs Hints
-
-Table of Game Cost Hints
-hint	used
-"What? You want them to cost a quarter?"	a number
-"The carnival likes to maintain a link to days past when games cost only a dime?"
-"Just be grateful"
-
-Section 3 - Mercury Dime Hints
-
-Table of Mercury Dime Hints
-hint	used
-"It[']s a dime."	a number
-"It[']s a Mercury Dime."
-"Have you looked at it?"
-"It[']s just an old dime."
+title (text)	subtable (table name)	description (text)	toggle (rule)	used (number)	bookpage (number)	localpage (number)
+"Are the prizes important?"	table of hinting	"Important? That[']s a matter of opinion."
+"hint"	--	"A teddy bear to make up with your sweetie?"
+"hint"	--	"I[']d go with my instincts on this one if I were you."
+"hint"	--	"Yes, the prizes are important."
+"Why do the games only cost a dime?"	table of hinting	"What? You want them to cost a quarter?"
+"hint"	--	"The carnival likes to maintain a link to days past when games cost only a dime?"
+"hint"	--	"Just be grateful"
+"I[']ve found a Mercury dime. What is it?"	table of hinting	"It[']s a dime."
+"hint"	--	"It[']s a Mercury Dime."
+"hint"	--	"Have you looked at it?"
+"hint"	--	"It[']s just an old dime."
 
 Chapter 6 - Back Stage 
 
 Table of Back Stage Hints
-title	subtable	description	toggle
-"Why do I get eaten by a grue?"	Table of Grue Hints	""	hint toggle rule
-"Are the doors important?"	Table of Doors Hints	""	hint toggle rule
-
-Section 1 - Table of Grue Hints
-
-Table of Grue Hints
-hint	used
-"Grues love the dark."	a number
-"Do you have a light?"
-"Have you looked for one?"
-"There are two in the game."
-"One is in the Dark Passage."
-"The other is in the Little Egypt tent."
-
-Section 2 - Table of Doors Hints
-
-Table of Doors Hints
-hint	used
-"Only if you want to know what[']s on the other side."	a number
-"Have you tried checking what[']s on the other side?"
-"You[']ll need a key"
-"You have to find it"
-"It[']s in Electrical Closet One"
+title (text)	subtable (table name)	description (text)	toggle (rule)	used (number)	bookpage (number)	localpage (number)
+"Why do I get eaten by a grue?"	table of hinting	"Grues love the dark."
+"hint"	--	"Do you have a light?"
+"hint"	--	"Have you looked for one?"
+"hint"	--	"There are two in the game."
+"hint"	--	"One is in the Dark Passage."
+"hint"	--	"The other is in the Little Egypt tent."
+"Are the doors important?"	table of hinting	"Only if you want to know what[']s on the other side."
+"hint"	--	"Have you tried checking what[']s on the other side?"
+"hint"	--	"You[']ll need a key"
+"hint"	--	"You have to find it"
+"hint"	--	"It[']s in Electrical Closet One"
 
 Chapter 7 - Hell Ride Hints
 
 Table of Hell Ride Hints
-title	subtable	description	toggle
-"Why do I die?"	Table of Guillotine Hints	""	hint toggle rule
-"What about the different rooms"	Table of Hell Ride Rooms	""	hint toggle rule
+title (text)	subtable (table name)	description (text)	toggle (rule)	used (number)	bookpage (number)	localpage (number)
+"Why do I die?"	table of hinting	"Everybody dies."
+"hint"	--	"So, you[']ve ridden Hell Ride."
+"hint"	--	"Aren[']t the animatronics and wax figures amazing?"
+"hint"	--	"Did you notice the guillotine rising and falling?"
+"hint"	--	"Did you notice it chop you in half?"
+"What about the different rooms"	table of hinting	"Everything sure looks realistic."	
+"hint"	--	"Aren[']t the animatronics and wax figures amazing?"
+"hint"	--	"Each room shows a different manner of punishment."
+"hint"	--	"There[']s the Stocks, the Gallows, the Stake, the Dungeon, and the Guillotine."
+"hint"	--	"Just your typical ride in the dark."
 
-Section 1 - Table of Guillotine Hints
-
-Table of Guillotine Hints
-hint	used
-"Everybody dies."	a number
-"So, you[']ve ridden Hell Ride."
-"Aren[']t the animatronics and wax figures amazing?"
-"Did you notice the guillotine rising and falling?"
-"Did you notice it chop you in half?"
-
-Section 2 - Table of Hell Ride Rooms Hints
-
-Table of Hell Ride Rooms
-hint	used
-"Everything sure looks realistic."	a number
-"Aren[']t the animatronics and wax figures amazing?"
-"Each room shows a different manner of punishment."
-"There[']s the Stocks, the Gallows, the Stake, the Dungeon, and the Guillotine."
-"Just your typical ride in the dark."
 
 Chapter 8 - The Electrical Area Hints
 
 Table of Electrical Area Hints
-title	subtable	description	toggle
-"What[']s going on in the Electrical Room?"	Table of Electrical Room Hints	""	hint toggle rule
-"What about the electrical panels?"	Table of Electrical Panel Hints	""	hint toggle rule
-"Are the fuses important?"	Table of Fuse Hints	""	hint toggle rule
-
-Section 1 - Table of Electrical Room Hints
-
-Table of Electrical Room Hints
-hint	used
-"There are exits in all directions"	a number
-"Have you mapped the area?"
-"Can you go in the direction you intend?"
-"The room is electromagnetic."
-"Maybe that[']s causing the problem."
-"Maybe you can make it so it[']s not electromagnetic."
-"Turn off the big switch."
-
-Section 2 - Table of Electrical Panel Hints
-
-Table of Electrical Panel Hints
-hint	used
-"There[']s a socket, a switch, and an indicator in each one."	a number
-"You could probably put something in the socket."
-"Looks like a fuse will fit in the socket."
-"I[']d put a fuse in the socket and flip the switch."
-
-Section 3 - Table of Fuse Hints
-
-Table of Fuse Hints
-hint	used
-"Yes."	a number
-"They come in pretty colors."
-"Have you seen those colors before?"
-"Have you put a fuse in a socket?"
+title (text)	subtable (table name)	description (text)	toggle (rule)	used (number)	bookpage (number)	localpage (number)
+"What[']s going on in the Electrical Room?"	table of hinting	"There are exits in all directions"	
+"hint"	--	"Have you mapped the area?"
+"hint"	--	"Can you go in the direction you intend?"
+"hint"	--	"The room is electromagnetic."
+"hint"	--	"Maybe that[']s causing the problem."
+"hint"	--	"Maybe you can make it so it[']s not electromagnetic."
+"hint"	--	"Turn off the big switch."
+"What about the electrical panels?"	table of hinting	"There[']s a socket, a switch, and an indicator in each one."
+"hint"	--	"You could probably put something in the socket."
+"hint"	--	"Looks like a fuse will fit in the socket."
+"hint"	--	"I[']d put a fuse in the socket and flip the switch."
+"Are the fuses important?"	table of hinting	"Yes."	
+"hint"	--	"They come in pretty colors."
+"hint"	--	"Have you seen those colors before?"
+"hint"	--	"Have you put a fuse in a socket?"
 
 Chapter 9 - The Control Room Hints
 
 Table of Control Room Hints
-title	subtable	description	toggle
-"Tell me about the big switch."	Table of Big Switch Hints	""	hint toggle rule
-"What about the control panels?"	Table of Control Panel Hints	""	hint toggle rule
-
-
-Section 1 - Table of Big Switch Hints
-
-Table of Big Switch Hints
-hint	used
-"It[']s big"	a number
-"Very big"
-"It[']s in the Control Room."
-"Have you tried turning it off?"
-"Did you die because your hands were unprotected?"
-"Try wearing the gloves."
-
-Section 2 - Table of Control Panel Hints
-
-Table of Control Panel Hints
-hint	used
-"There's a dial, a button, and a light in each one."	a number
-"These are pretty colors."
-"Have you seen these colors before?"
-"Try spinning the dials."
-"Spin the dials to the right number."
-"Is there a number that corresponds to each color?"
-"Push the indigo button."
+title (text)	subtable (table name)	description (text)	toggle (rule)	used (number)	bookpage (number)	localpage (number)
+"Tell me about the big switch."	table of hinting	"It[']s big"	
+"hint"	--	"Very big"
+"hint"	--	"It[']s in the Control Room."
+"hint"	--	"Have you tried turning it off?"
+"hint"	--	"Did you die because your hands were unprotected?"
+"hint"	--	"Try wearing the gloves."
+"What about the control panels?"	table of hinting	"There's a dial, a button, and a light in each one."
+"hint"	--	"These are pretty colors."
+"hint"	--	"Have you seen these colors before?"
+"hint"	--	"Try spinning the dials."
+"hint"	--	"Spin the dials to the right number."
+"hint"	--	"Is there a number that corresponds to each color?"
+"hint"	--	"Push the indigo button."
