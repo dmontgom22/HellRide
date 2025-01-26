@@ -33,7 +33,13 @@ The story title is "Hell Ride".
 The story author is "No Shoes".
 The story headline is "The ride of a lifetime...".
 The story genre is "Horror".
-The story description is "You've decided to stay and enjoy the carnival anyway."
+The story description is "Hell Ride - A ride to remember...
+
+Date night with your sweetie: a meal at your favorite restaurant and a night at the carnival. 
+
+After a lovely meal, you get into a big fight over the tip. Your date storms off, ruining your chances of that romantic evening you had hoped for. You decide to stay and enjoy the carnival anyway.
+
+As you explore the carnival, you learn (the hard way) that the Hell Ride attraction is malfunctioning with the potential for serious injuries to the riders. You must disable the ride off and prevent any loss of life... including your own."
 The story creation year is 2025.
 The release number is 123.
 	
@@ -48,7 +54,6 @@ Include Singing Reloaded by Shin.
 Include Basic Help Menu by Wade Clarke.
 
 Include Menus by Wade Clarke.
-
 
 Chapter 4 - The Player, Global Code
 
@@ -327,7 +332,6 @@ check inserting:
 	let W be the weight of the noun plus the total weight of things in the second noun;
 	if W is greater than the maximum weight of the second noun:
 		say "There[']s no room in [the second noun] to hold [the noun].".
-
 
 Section 6 - Toad Away
 
@@ -714,6 +718,12 @@ Carry out displaying fuses:
 	repeat with item running through things:
 		if item is a fuse:
 			say "[An item] is a fuse."
+			
+Displaying attendants is an action out of world applying to nothing. Understand "display attendants" as displaying attendants.
+Carry out displaying attendants:
+	repeat with item running through things:
+		if item is an attendant:
+			say "[An item] is an attendant in [the location of the item]."
 
 Displaying weights is an action out of world applying to nothing. Understand "display weights" as displaying weights.
 Carry out displaying weights:
@@ -1020,7 +1030,7 @@ When play begins:
 	display the figure of Hell Ride;
 	say "Date night with your sweetie: a meal at your favorite restaurant and a night at the carnival. 
 
-After a lovely meal, you get into a big fight over the tip. Your date storms off, ruining your chances of that romantic evening you hoped for. You decide to stay and enjoy the carnival anyway.".
+After a lovely meal, you get into a big fight over the tip. Your date storms off, ruining your chances of that romantic evening you had hoped for. You decide to stay and enjoy the carnival anyway.".
 
 The PL-room is a room. The printed name is "Parking Lot". The PL-room is north of the TB-room. The PL-room is outdoors. "The carnival parking lot stretches across an open field, its gravel crunching under arriving cars. Temporary floodlights and the carnival[']s colorful glow light the area, while distant laughter, music, and the hum of rides fill the air.
 
@@ -1036,7 +1046,7 @@ The midway is to the south. There is a blueberry bush here. [if blueberry bush c
 
 Type 'Images off' to prevent the game from display images. Type 'Help' for hints about the game and general information about playing interactive fiction games.[end if]"
 
-The parking attendant is an attendant in the the PL-room. The parking attendant carries a parking ticket. The price of the parking ticket is $5.00. The description of the parking ticket is "This is your receipt for parking."
+The Parking Attendant is an attendant in the the PL-room. The parking attendant carries a parking ticket. The price of the parking ticket is $5.00. The description of the parking ticket is "This is your receipt for parking."
 
 The parking attendant carries a parking stub. The description of the parking stub is "This stub is meant to be placed on your dashboard to indicate you paid for parking.". Understand "stub" or "ticket stub" as the parking stub.
 
@@ -1064,7 +1074,7 @@ Understand "berries" as blueberries. The blueberries are edible. The description
 instead of eating the blueberries when the blueberries are uneaten:
 	say "The blueberries were delicious. A true taste of summer!";
 	now the blueberries are consumed;
-	now the blueberries are in the holding room.
+	now the blueberries are nowhere.
 
 check giving the coupon to the parking attendant:
 	if the parking attendant carries the parking ticket:
@@ -1143,11 +1153,13 @@ The TB-room is south of the PL-room.
 The TB-room is southeast of the BC-room.
 The TB-room is west of the HS-room. 
 
+The Cashier is an attendant in the TB-room. 
+
 The description of the TB-room is "The ticket kiosk stands at the carnival entrance, a compact booth painted in bright red and yellow stripes with bold letters above the window reading 'Tickets Here!' Twinkling lights outline its edges, blinking rhythmically to draw attention.
 
 A single window serves visitors, where a smiling cashier dispenses colorful tickets from neatly arranged rolls. Beside the tickets, a cash drawer jingles as change is counted, and a digital payment system glows faintly for modern convenience. Too bad you don[']t have a debit card.
 
-Next to the kiosk, a vibrant signboard lists ticket prices with playful illustrations of rides and treats. Pennant flags flutter from the kiosk’s roof, adding to the festive atmosphere, while the smell of popcorn and fried dough wafts from the southwest.
+Next to the kiosk, a vibrant signboard lists ticket prices with playful illustrations of rides and treats. Pennant flags flutter from the kiosk’s roof, adding to the festive atmosphere, while the smell of popcorn and pretzels wafts from the southwest.
 
 The worn ground around the kiosk shows the passage of eager carnival-goers. Families, couples, and friends form a buzzing line, their excitement building as they approach this first step into the magic of the carnival.
 
@@ -1169,19 +1181,23 @@ The Bumper Cars ticket is a ride ticket. The cashier carries the Bumper Cars tic
 
 The Carousel ticket is a ride ticket. The cashier carries the Carousel ticket. The price of the carousel ticket is $1.00. The description of the Carousel ticket is "'Admit One' to the Carousel."
 
-The Cashier is an attendant in the TB-room. 
+a cash drawer is here. it is scenery. understand "box" as cash drawer. the description is "The cash drawer is full of change and paper money.".
+
+
 
 sign table is a table name that varies. The sign table is Table of Tickets.
 To show a sign table:
 	repeat through a sign table:
 		say "[price of the object entry] [object entry][line break]".
 
-There is a signboard in the TB-room. The signboard is scenery. Understand "sign" as signboard. The description of the signboard is "It[']s a sign displaying the prices of the various rides".
+There is a signboard in the TB-room. The signboard is scenery. Understand "sign", "board", "price", and "list" as signboard. The description of the signboard is "It[']s a sign displaying the prices of the various rides".
 
 reading is an action applying to one thing. Understand "read" as reading.
 instead of reading or examining the signboard:
 	now sign table is Table of Tickets;
 	show a sign table.
+	
+instead of smelling when the location is the TB-room, say "The smell of popcorn and pretzels wafts from the southwest.".
 
 Section 4 - Concession Stand
 
@@ -1251,7 +1267,7 @@ the counter is here. it is scenery . the description is "On the counter there ar
 the napkin dispenser is here. it is scenery. understand "napkin" and "napkins" as napkin dispenser. the description is "It[']s the kind of dispenser that doesn[']t allow you to take more than one at a time.".
 some paper bags are here. they are scenery. the description is "The paper bags are used to send the customer off with their goodies.".
 some cups are here. they are scenery. the description is "The cups are full of cheese and sugar sprinkles.".
-some workers are here. they are scenery. the description is "More bored teenagers doing their jobs.".
+some concession workers are here. they are scenery. the description is "More bored teenagers doing their jobs.".
 
 Section 5 - High Striker
 
@@ -1271,7 +1287,7 @@ Spectators gather around, cheering on participants and offering lighthearted jab
 
 The markings are here. The markings are scenery. Understand "marking" and "sign" and "signs" as markings. The description of markings is "There are five levels marked on the pole: Weakling, Getting There, Average, Almost There, and Muscle Man."
 
-The Strongman attendant is an attendant in the HS-room. 
+The Strongman Attendant is an attendant in the HS-room. 
 
 after looking when the location is the HS-room:
 	say "[if the strongman attendant carries the mallet]The attendant is holding a mallet.[end if]";
@@ -1433,7 +1449,7 @@ after reading a command when the location is the Dime Toss Game and TossADimeWin
 			
 The plate is a supporter in the Dime Toss Game. Understand "plates" as plate. The description of the plate is "This is a small, flat plate, almost a saucer. You are meant to toss a dime on this plate to win a prize!"
 
-The Dime Toss attendant is an attendant in the the Dime Toss Game. 
+The Dime Toss Attendant is an attendant in the the Dime Toss Game. 
 
 after examining the Dime Toss attendant:
 	if TossADimeWin is true, show the toss a dime prizes. 
@@ -1516,7 +1532,7 @@ after reading a command when the location is the Pitcher's Mound and PitchersMou
 		now PitchersMoundWin is false;
 		stop the action.
 			
-The Pitcher's Mound attendant is an attendant in the Pitcher's Mound. 
+The Pitcher's Mound Attendant is an attendant in the Pitcher's Mound. 
 
 after examining the pitcher's mound attendant:
 	if PitchersMoundWin is true, show the pitcher's mound prizes. 
@@ -1655,7 +1671,7 @@ The Ferris wheel offers an ever-changing perspective of the carnival below. From
 
 Whether it[']s a romantic ride for couples, a thrilling adventure for friends, or a calming retreat for families, the Ferris wheel captures the spirit of the carnival — an iconic blend of excitement, wonder, and timeless charm."
 
-The Ferris Wheel attendant is an attendant in the FW-room. 
+The Ferris Wheel Attendant is an attendant in the FW-room. 
 
 instead of giving the Ferris wheel ticket to the Ferris wheel attendant:
 	say "You give [the noun] to [the second noun].";
@@ -1691,7 +1707,7 @@ Overhead, a web of electric poles connects the cars to the ceiling, sparking fai
 
 The bumper cars perfectly captures the playful spirit of the carnival, offering a mix of harmless competition, shared laughter, and nostalgic fun for all ages. The Ticket Kiosk is southeast of here."
 
-The Bumper Cars attendant is an attendant in the BC-room. 
+The Bumper Cars Attendant is an attendant in the BC-room. 
 
 instead of giving the bumper cars ticket to the bumper cars attendant:
 	say "You give [the noun] to [the second noun].";
@@ -1782,7 +1798,7 @@ Rows of hand-carved animals, most often horses with flowing manes, are arranged 
 
 The carousel[’]s warm, playful tunes drift across the midway, inviting riders of all ages to enjoy its simple delight. Children laugh as they choose their favorite animals, while adults savor the nostalgia of the spinning ride. As it rotates, the carousel becomes a moving work of art, blending motion, color, and music into an enchanting centerpiece of the carnival. The Ticket Kiosk is back to the southwest; the way you came."
 
-The Carousel attendant is an attendant in the CR-room. 
+The Carousel Attendant is an attendant in the CR-room. 
 
 instead of giving the carousel ticket to the carousel attendant:
 	say "You give [the noun] to [the second noun].";
@@ -1810,7 +1826,9 @@ Section 14 - Head of the Line
 
 Head of the Line is a room. Head of the Line is south of TB-room. Head of the Line is north of Ride Entrance. The Head of the Line is outdoors. "You are standing in front of an attendant with his hand open waiting for your ticket. The entrance to the ride is south of here. The ride operator tells you that you[']re lucky you showed up when you did because this will be the last trip through Hell Ride for the night. You notice that all the other cars are empty. The Ticket Kiosk is north of here."
 
-The Hell Ride attendant is an attendant in Head of the Line. 
+the hell ride cars are here. they are scenery. understand "car" as hell ride cars. the description is "These cars ferry carnival goers into the depths of [story title].".
+
+The Hell Ride Attendant is an attendant in Head of the Line. 
 
 Check going south when the location is Head of the Line and the Hell Ride attendant does not have the hell ride ticket:
 	say "You[']ll need a ticket to go that way.";
@@ -2140,7 +2158,20 @@ Before looking when the location is the Stocks Room:
 
 Stocks Room is south of the Ride Entrance. "[description corresponding to the locale of Stocks Room in the Table of Hell Ride Events]"
 
-The wooden stocks are a supporter in the Stocks Room. The wooden stocks are scenery. The wooden stocks are fixed in place. The description of the wooden stocks is "At the square[']s center stand a row of crude wooden stocks, their heavy beams stained from years of weather and use. Iron clasps hold the unfortunate captives by their wrists and necks, their bodies forced into unnatural, humiliating postures." 
+The wooden stocks are a supporter in the Stocks Room. The wooden stocks are fixed in place. The description of the wooden stocks is "At the square[']s center stand a row of crude wooden stocks, their heavy beams stained from years of weather and use. Iron clasps hold the unfortunate captives by their wrists and necks, their bodies forced into unnatural, humiliating postures.".
+does the player mean doing something with the wooden stocks: it is very likely.
+
+the stocks public square is here. it is scenery. the description is "The public square is a cobblestone expanse bordered by weathered timber-framed buildings.".
+
+some animatronics are here. they are scenery. understand "wax", and "figures" as animatronics. the description is "The animatronics and wax figures are extremely life like. Hell Ride sure lives up to its name.".
+
+some punished individuals are here. they are scenery. understand "prisoners", and "captives" as punished individuals. the description is "The punished individuals hang their heads in shame, their faces etched with despair.".
+
+the stocks room crowd is here. they are scenery. understand "mob", and "jeering" as stocks room crowd. the description is "The crowd revels in cruelty - a wiry man spits insults with gleeful laughter, while a stout woman throws overripe vegetables, each impact sparking jeers.".
+
+some tattered clothing is here. it is scenery. the description is "The prisoner[']s tattered clothing offering little protection from the biting wind.".
+
+instead of smelling when the location is the stocks room, say "The air carries the mingling scents of chimney smoke, damp earth, and the faint tang of a nearby smithy.".
 
 Section 4 - Gallows Room
 
@@ -2153,7 +2184,23 @@ Before looking when the location is the Gallows Room:
 	
 The Gallows Room is south of the Stocks Room.  "[description corresponding to the locale of Gallows Room in the Table of Hell Ride Events]"
 
-The gallows platform is scenery in the Gallows Room. The gallows platform is a supporter. The gallows platform is fixed in place. Understand "gallows" as gallows platform. The description of the gallows platform is "At the center of the square, rising like a grim monument to mortality, stands the gallows — a wooden platform, darkened by age and weather, with thick ropes hanging like vipers poised to strike." 
+The gallows platform is in the Gallows Room. The gallows platform is a supporter. The gallows platform is fixed in place. Understand "gallows" as gallows platform. The description of the gallows platform is "At the center of the square, rising like a grim monument to mortality, stands the gallows — a wooden platform, darkened by age and weather, with thick ropes hanging like vipers poised to strike." 
+
+the gallows public square is here. it is scenery. the description is "The public square, slick with morning drizzle, lies under a brooding, overcast sky. At its center looms the gallows, a weathered wooden platform with thick ropes swaying ominously.".
+
+the gallows crowd is here. it is scenery. the description is "The crowd stands in somber silence, broken by the shuffle of feet or faint murmurs, their eyes fixed on the grim scene.".
+
+a gallows executioner is here. it is scenery. understand "hooded" as gallows executioner. the description is "A hooded executioner, cloaked in black, adjusts the frayed noose with practiced precision, his cold presence exuding purpose.".
+
+a condemned man is here. it is scenery. understand "prisoner" as the condemned man. the description is "The condemned man, pale and trembling, has his bound hands behind him.". 
+
+some vendors are here. they are scenery. the description is "Vendors hawk bread and cider, while children strain for a better view.".
+
+an old man is here. it is scenery. the description is "An old man clutches a rosary, whispering prayers, as others smirk and place bets.".
+
+a gallows room raven is here. it is scenery. the description is "A raven perches on the gallows['] beam, its unblinking gaze fixed on the scene below.".
+
+instead of listening when the location is the gallows room, say "Above, the bell tower tolls, its mournful chime marking the passage of the man's final moments.".
 
 Section 5 - Stake Room
 
@@ -2166,9 +2213,22 @@ Before looking when the location is the Stake Room:
 
 The Stake Room is south of the Gallows Room. "[description corresponding to the locale of Stake Room in the Table of Hell Ride Events]"
 
-stakes are in the Stake Room. It is scenery. The description is "Three wooden stakes rise from a pyre. Bound to the stakes are three women."
+the condemned women  are here. they are scenery. understand "woman" and "prisoners" as the condemned women. the description is "Bound to the stakes are three women, their faces reflecting defiance, resignation, and terror.".
+
+the stakes public square is here. it is scenery. the description is "The public square is steeped in grim silence, broken only by the crackling of flames.".
+
+stakes are in the Stake Room. It is scenery. The description is "Three wooden stakes rise from a pyre. Bound to the stakes are three women.".
+does the player mean doing something with the stakes: it is very likely.
+
+the stake crowd is here. it is scenery. understand "onlookers" as the stake crowd. the description is "A crowd encircles the scene, expressions ranging from morbid fascination to righteous fury.".
+
+the stake executioner is here. it is scenery. the description is "The executioner, hooded and clad in a leather apron, steps forward with a blazing torch, igniting the pyre in a sudden roar.".
+
+a stake room raven is here. it is scenery. the description is "A raven caws from the bell tower as slow church bells toll.".
 
 A pyre is an open unopenable container in the Stake Room. "The flames of the pyre burn ever brighter and rise ever higher engulfing the victims." The pyre is fixed in place. Understand "fire" as pyre. The description is "The flames burn ever higher." 
+
+instead of listening when the location is the stake room, say "Slow church bells toll, each strike punctuating the tragedy.".
 
 Section 6 - Dungeon
 
@@ -2181,12 +2241,18 @@ Before looking when the location is the Dungeon:
 	
 The Dungeon is south of the Stake Room. "[description corresponding to the locale of Dungeon in the Table of Hell Ride Events]"
 
-An iron chair is scenery in the Dungeon. The iron chair is a supporter. understand "spiked" and "seat" as iron chair. The description of the iron chair is "A spiked chair looms in the corner, its cruel design gleaming faintly in the dim light." 
+An iron chair is in the Dungeon. The iron chair is a supporter. understand "spiked" and "seat" as iron chair. The description of the iron chair is "A spiked chair looms in the corner, its cruel design gleaming faintly in the dim light." 
 
 some chains are here. They are scenery. The description of the chains is "The chains rattle against the walls."
-A rack is here. It is scenery. The description of the rack is "The rack has a prisoner splayed in four directions."
-A brazier is here. It is scenery. The description of the brazier is "It is glowing red with an infernal heat."
-A riveted iron-bound door is here. It is scenery. The description is "This iron-bound door is part of the ambiance."
+A splintered rack is here. understand "rack" as the splintered rack. The description of the splintered rack is "The rack has a prisoner splayed in four directions."
+A glowing brazier is here. understand "bloodstained", "blood", "stained", and "tools" as the glowing brazier. The description of the glowing brazier is "It is glowing red with an infernal heat raising the temperature of the bloodstained tools.".
+some sconces are here. they are scenery. the description is "These are oil burning lamps.". understand "lamp", "lamps", and "light" as sconces.
+some prisoners are here. they are scenery. the description is "Prisoners endure their own horrors - one stretched on the rack, another hanging limply from manacles, and a third gasping weakly in the spiked chair.".
+the hooded torturer is here. it is scenery. the description is "The hooded torturer wears a leather apron stained with the evidence of countless victims.".
+some dungeon rats are here. The dungeon rats are scenery. The description of the dungeon rats is "You see rats scurry in all directions fleeing from the light cast by you.".
+
+instead of smelling in the dungeon, say "The air reeks of sweat, blood, mildew, and burning oil from flickering torches mounted on rusted sconces.".
+instead of listening in the dungeon, say "Chains hang from walls and ceilings, their faint clinking blending with the moans and occasional screams of prisoners.".
 	
 Section 7 - Guillotine Room
 
@@ -2199,11 +2265,21 @@ Before looking when the location is the Guillotine Room:
 
 The Guillotine Room is south of the Dungeon. "[description corresponding to the locale of Guillotine Room in the Table of Hell Ride Events]"
 
-The guillotine platform is scenery in the Guillotine Room. The guillotine platform is a supporter. Understand "scaffold" as guillotine platform. The description of the guillotine platform is "At the center of the square stands a raised wooden platform, stark and imposing, where the grim sentence is to be carried out." 
+The guillotine platform is in the Guillotine Room. The guillotine platform is a supporter. Understand "scaffold" as guillotine platform. The description of the guillotine platform is "At the center of the square stands a raised wooden platform, stark and imposing, where the grim sentence is to be carried out." 
 
 a thing called a guillotine is here. it is scenery. The description is "The guillotine looms over the public square, its blade gleaming faintly in the dim light.".
 
-a thing called the cars are here. they are scenery. the description is "The cars keep coming and move under the malfunctioning guillotine. You shudder just at the thought of it".
+a figure is here. it is scenery. the description is "A lone figure stands on the scaffold, bound hands behind their back and head bowed low, avoiding the crowd's gaze.".
+
+a guillotine executioner is here. it is scenery. the description is "The executioner - a hooded figure in black - stands ready beside the guillotine."
+
+the town crier is here. it is scenery. the description is "The town crier proclaims the crime: 'High treason against the crown. Let this be a warning to all who defy the realm!'".
+
+the guillotine crowd is here. it is scenery. the description is "The crowd encircles the platform, emotions ranging from jeers and curses to silent, grim observation. Children sit on shoulders, their curious eyes unaware of the event's gravity.".
+
+a crow is here. it is scenery. the description is "The crow sits, sleek and black, on a nearby rooftop."
+
+a thing called the cars are here. understand "car" as cars. they are scenery. the description is "The cars keep coming and move under the malfunctioning guillotine. You shudder just at the thought of it".
 
 
 Section 8 - Ride Exit
@@ -2217,7 +2293,9 @@ Before looking when the location is the Ride Exit:
 
 The Ride Exit is south of the Guillotine Room. "[description corresponding to the locale of Ride Exit in the Table of Hell Ride Events]"
 
-The merchandise stand is scenery in the Ride Exit. The merchandise stand is a container. Understand "stand" and "display" as merchandise stand. The description of the merchandise stand is "The stand is bathed in red light, adding to the ominous mood." 
+The Merchandise Attendent is an attendant in the ride exit.
+
+The merchandise stand is scenery in the Ride Exit. The merchandise stand is a container. Understand "display" as merchandise stand. The description of the merchandise stand is "The stand is bathed in red light, adding to the ominous mood." 
 
 some Plastic Bones are in the merchandise stand. The price of the plastic bones is $1.00. The description is "This is a collection of plastic bones meant to decorate your yard."
 
@@ -2225,13 +2303,23 @@ some Devil Horns are in the merchandise stand. The price of the devil horns is $
 
 some Key Chains are in the merchandise stand. The price of the key chains is $2.00. The description is "The key chains say 'I Survived Hell Ride!'"
 
-A T-Shirt is in the merchandise stand. The price of the t-shirt is $7.50. Understand "t-shirts" as t-shirt. The description is "This is a black t-shirt with the caption 'I Survived Hell Ride!"
+some T-Shirts are in the merchandise stand. The price of the t-shirts is $7.50. Understand "t-shirts" as t-shirts. The description is "These are black t-shirt with the caption 'I Survived Hell Ride!"
 
 There is a price list in the Ride Exit. The price list is scenery. Understand "sign" as price list. The description of the price list is "It[']s a sign displaying the prices of the merchandise.".
 
 instead of reading or examining the price list:
 	now sign table is Table of Merchandise;
 	show a sign table.
+	
+the cash register is here. it is scenery. the description is "The cash register accommodates both cash and electronic payments. Too bad you don[']t have a debit card.".
+
+some walls are here. they are scenery. understand "wall", "flickering", "lights", "erratic", and "shadows" as walls. The description is "Leading out of the ride a dark corridor with peeling black and red-streaked walls, flickering lights cast erratic shadows on the uneven floor.".
+
+some riders are here. they are scenery. the description is "The riders exit [story title]. Some are laughing while others look rather upset.".
+
+some hell ride workers are here. they are scenery. the description is "The actors are here dressed in their tattered costumes muttering things like 'You made it!".
+
+instead of listening when the location is the ride exit, say "You hear the faint whispers and distant screams echoing softly in the background.".
 
 Chapter 5 - Second Floor
 
@@ -2256,7 +2344,7 @@ A dark hallway lies to the east."
 
 A big switch is a device in the control room. The big switch is fixed in place. The big switch can be switched on or switched off. The big switch is switched on. 
 "[if the big switch is switched on]Currently there are sparks arcing out from the switch. It looks dangerous.[end if]".
-The description of the big switch is "This is a large switch. It[']s the kind Dr. Frankenstein might push to route the lightning to his creature."
+The description of the big switch is "This is a large switch. It[']s the kind Dr. Frankenstein might push to route the lightning to his creature. A label underneath the switch reads: 'Electrical Room'.".
 
 electrocuted is a truth state that varies. electrocuted is false.
 instead of switching off the big switch:
@@ -2613,7 +2701,7 @@ Key Chains
 Fuse1
 Devil Horns
 Plastic Bones
-T-Shirt
+T-Shirts
 
 Section 10 - Table of Hell Ride Events
 
@@ -2653,9 +2741,7 @@ The room is littered with instruments of torment: a splintered rack, a glowing b
 
 The hooded torturer moves with detached precision, their leather apron stained with the evidence of countless victims. They work silently, indifferent to the agony surrounding them.
 
-Above, rats scuttle in the shadows, and the low ceiling presses down like the weight of despair. The sole exit, a riveted iron-bound door, feels more like a barrier to hope than a path to freedom.
-
-This is a realm of suffering and hopelessness, where life and death blur, and torment is the only certainty."
+Above, rats scuttle in the shadows, and the low ceiling presses down like the weight of despair. This is a realm of suffering and hopelessness, where life and death blur, and torment is the only certainty."
 Guillotine Room	"Guillotine Room"		figure of RideGuillotine	"The public square buzzes with tense anticipation, a crowd gathered under gray skies that cast a somber light on the cobblestones. At the center, a stark wooden platform looms, its purpose grim and unavoidable.
 
 A lone figure stands on the scaffold, bound hands behind their back and head bowed low, avoiding the crowd’s gaze. Their tattered clothing, once fine, reflects the fall that led them to this moment.
@@ -2678,9 +2764,11 @@ Ride Exit	"Ride Exit"	figure of RideExit	"The exit of Hell Ride is designed to l
 
 Riders step into a small courtyard enclosed by jagged, rusted fencing draped with cobwebs and plastic bones. Overhead, a weathered sign reads, 'You[’]ve Survived… For Now.' Nearby, carnival workers in tattered costumes watch silently, occasionally muttering cryptic remarks like, 'Not everyone makes it out.'
 
-A merchandise display glows red, selling items like Hell Ride Survivor t-shirts, key chains, plastic bones, and devil horns. Beyond the fencing, the cheerful carnival lights and sounds feel jarring, contrasting sharply with the ride’s oppressive atmosphere.
+A merchandise display glows red, selling items like Hell Ride Survivor t-shirts and key chains. Beyond the fencing, the cheerful carnival lights and sounds feel jarring, contrasting sharply with the ride’s oppressive atmosphere. 
 
-The exit ensures Hell Ride isn’t just an experience — it lingers, blurring the line between thrill and fear."
+The exit ensures Hell Ride isn’t just an experience — it lingers, blurring the line between thrill and fear.
+
+There is a price list next to the cash register. An attendant is here to assist you with your purchases. The stand has an [list of things contained by the merchandise stand] for sale."
 
 Section 11 - Table of Little Egypt Events
 
@@ -2701,9 +2789,9 @@ When play begins:
 
 Date night with your sweetie: a meal at your favorite restaurant and a night at the carnival. 
 
-After a lovely meal, you get into a big fight over the tip. Your date storms off, ruining your chances of that romantic evening you hoped for. You decide to stay and enjoy the carnival anyway.
+After a lovely meal, you get into a big fight over the tip. Your date storms off, ruining your chances of that romantic evening you had hoped for. You decide to stay and enjoy the carnival anyway.
 
-As you explore the carnival, you learn (the hard way) that the Hell Ride attraction is malfunctioning with the potential for serious injuries to the riders. You must disable the ride off and prevent any loss of life... including your own."
+As you explore the carnival, you learn (the hard way) that the Hell Ride attraction is malfunctioning with the potential for serious injuries to the riders. You must disable the ride and prevent any loss of life... including your own."
 
 Section 13 - Hell Ride Origins
 
@@ -2819,21 +2907,31 @@ Check asking for help:
 	
 when play begins:
 	 now mn_master_table is the Table of Help Options.
+	
+This is the image presentation status rule:
+	if show images is true, now show images is false;
+	otherwise now show images is true.
+	
+Table of Setting Options (continued)
+title (text)	toggle(rule)
+"Image presentation is currently [if show images is true]ON[otherwise]OFF[end if]"	image presentation status rule
 
 Chapter 2 - Help Options
 
 Table of Help Options
 title (text)	subtable (table name)	description (text)	toggle (rule)	used (number)	bookpage (number)	localpage (number)
-"Introduction to Hell Ride"	--	"placeholder"
-"Hell Ride Origins"	--	"placeholder"
-"The Parking Lot"	Table of Parking Lot Hints	""
-"The Attractions"	Table of Attractions Hints	""
-"The Games"	Table of Games Hints	""
-"Back Stage"	Table of Back Stage Hints	""
-"Hell Ride"	Table of Hell Ride Hints	""
-"The Electrical Area"	Table of Electrical Area Hints	""
-"The Control Room"	Table of Control Room Hints	""
-"Settings"	Table of Setting Options	""
+"Introduction to Hell Ride"	--	""
+"Hell Ride Origins"	--	""
+"Introduction to Interactive Fiction"	Table of Instruction Options	--
+"The Parking Lot"	Table of Parking Lot Hints	--
+"The Attractions"	Table of Attractions Hints	--
+"The Games"	Table of Games Hints	--
+"Back Stage"	Table of Back Stage Hints	--
+"Hell Ride"	Table of Hell Ride Hints	--
+"The Electrical Area"	Table of Electrical Area Hints	--
+"The Control Room"	Table of Control Room Hints	--
+"Settings"	Table of Setting Options	--	
+"Credits"	--	"[story title], Copyright 2025 by Dana Montgomery and 1988 by No Shoes.[paragraph break]Extensions used in [story title]:[line break][complete list of extension credits]"
 
 Chapter 3 - The Parking Lot
 
@@ -2916,7 +3014,6 @@ title (text)	subtable (table name)	description (text)	toggle (rule)	used (number
 "hint"	--	"Each room shows a different manner of punishment."
 "hint"	--	"There[']s the Stocks, the Gallows, the Stake, the Dungeon, and the Guillotine."
 "hint"	--	"Just your typical ride in the dark."
-
 
 Chapter 8 - The Electrical Area Hints
 
