@@ -1914,19 +1914,18 @@ some facade incense is here. they are scenery. the description is "The smell of 
 instead of smelling when the location is the ST-room, try examining the incense instead.
 
 report going west when the location is the SF-room and the location is unvisited:
-	try looking;
 	say "[the barker's cry]";
-	stop the action.
+[	stop the action.]
 
 a tent is in the SF-room. it is scenery. the description is "Inside the tent is the Little Egypt show.".
 
 the facade stage is here. it is scenery. the description is "On the stage stands a barker extolling the wonders of Little Egypt.".
 
-a fez is here. it is scenery. the description is "The fez is a type of hat that originates from the Ottoman Empire and is named after the city of Fez in Morocco. It is a brimless, cylindrical or truncated conical hat, typically made of red felt. The hat often features a black tassel that hangs from the top, though the design can vary slightly.".
+a fez is here. it is scenery. understand "hat" as fez. the description is "The fez is a type of hat that originates from the Ottoman Empire and is named after the city of Fez in Morocco. It is a brimless, cylindrical or truncated conical hat, typically made of red felt. The hat often features a black tassel that hangs from the top, though the design can vary slightly.".
 
 A sign is in the SF-room. The sign is scenery. The description of the sign is "The sign reads, 'Little Egypt Show — Dime Admission'".
 
-The Barker is a person in SF-room. Understand "attendant", "attendent", "operator", "shirt", "pants", and "vest" as the Barker. The description of the barker is "Here is a man dressed in black pants, a white shirt,a striped vest, a fez, and a dazzling smile.". 
+The Barker is a person in SF-room. Understand "attendant", "attendent", "operator", "shirt", "pants", and "vest" as the Barker. The description of the barker is "Here is a man dressed in black pants, a blue shirt,a red vest, a hat much like a fez, and a dazzling smile.". 
 
 after examining the barker, say "[the barker's cry]".
 
