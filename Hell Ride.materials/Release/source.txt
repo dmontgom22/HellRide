@@ -41,7 +41,7 @@ After a lovely meal, you get into a big fight over the tip. Your date storms off
 
 As you explore the carnival, you learn (the hard way) that the Hell Ride attraction is malfunctioning with the potential for serious injuries to the riders. You must disable the ride off and prevent any loss of life... including your own."
 The story creation year is 2025.
-The release number is 124.
+The release number is 125.
 	
 Chapter 3 - Extensions
 
@@ -396,7 +396,7 @@ Section 10 - Attendants
 An attendant is a kind of male person. Understand "attendent", "operator", "cashier",  "teen", "teenager", and "bored" as an attendant.  The description of an attendant is "This is a bored teenager."
 
 To say the hell ride response: 
-	say "[one of]That ride is scary. You won[']t catch me on it![or]Last time I rode Hell Ride I heard strange noises.[or]Hell ride is so old that It's falling apart. I wouldn[']t ride it.[or]Hell Ride is behind on it[']s maintenance schedule. Might want to skip that one.[at random]".
+	say "[one of]That ride is scary. You won[']t catch me on it![or]Last time I rode [story title], I heard strange noises.[or][story title] is so old that It's falling apart. I wouldn[']t ride it.[or][story title] is behind on it[']s maintenance schedule. Might want to skip that one.[at random]".
 
 understand "hell", "ride", and "hell ride" as "[hell ride]".
 instead of asking an attendant about "[hell ride]", say the hell ride response.
@@ -610,53 +610,347 @@ The ground is a backdrop. The ground is everywhere. Understand "floor" as the gr
 [Carnival]
 The carnival is a backdrop. it is everywhere. The description of the carnival is "The carnival is lively and colorful filled with fun attractions, games, and entertainment. It features rides like the Ferris Wheel and the Carousel, game booths offering prizes, live performances such as dancers and musicians, and a variety of food stands serving treats like cotton candy, popcorn, and pretzels. The atmosphere is vibrant, with bright lights, music, and the cheerful sounds of laughter and excitement.".
 
-[Hell Ride]
-a thing called Hell Ride is a backdrop. The description is "This carnival is famous for its Hell Ride attraction.". 
-carry out examining hell ride:
-	if the location is in the midway:
-		say "Through the lights and excitement of the carnival, you can see the facade for Hell Ride looming ominously over the midway." instead;
-	otherwise:
-		say "You can['] see that here."
-		
 [images]
 show images is a truth state that varies. show images is true.
 
 Images on is an action out of world applying to nothing. Understand "images on" as images on.
 carry out images on:
-	say "Images on.";
+	say "Images on. Game images will be displayed.";
 	now show images is true.
 	
 Images off is an action out of world applying to nothing. Understand "images off" as images off.
 carry out images off:
-	say "Images off.";
+	say "Images off. Game images will not be displayed.";
 	now show images is false.
 	
 Section 16 - Does The Player Mean
 
-Does the player mean doing something with the hell ride ticket when the location is the head of the line: it is very likely.
-Does the player mean doing something with the fortune teller ticket when the location is the FT-room: it is likely.
-[Does the player mean doing something with the ferris wheel ticket when the location is the FW-room: it is very likely.]
-Does the player mean doing something with the bumper cars ticket when the location is the BC-room: it is very likely.
-Does the player mean doing something with the carousel ticket when the location is the CR-room: it is very likely.
+Does the player mean doing something with Hell Ride: it is very likely.
+Does the player mean doing something with Hell Ride when the Hell Ride ticket is carried by the player: it is very likely.
+Does the player mean doing something with Hell Ride when the location is outdoors: it is very likely.
+Does the player mean doing something with the Hell Ride ticket when the location of the player is not the Head of the Line: it is very unlikely.
+Does the player mean doing something with the Hell Ride ticket when (the location of the player is the Head of the Line) and (the Hell Ride attendant is in the location of the player): it is likely.
+
+Does the player mean doing something with the Ferris Wheel when the location is outdoors: it is very likely.
+Does the player mean doing something with the Ferris Wheel ticket when (the location of the player is the FW-room) and (the Ferris Wheel attendant is in the location of the player): it is likely.
+
+Does the player mean doing something with Esmerelda the Mysterious when the location is the FT-room: it is very likely.
+Does the player mean doing something with the Fortune Teller ticket when (the location of the player is the FT-room) and (the Esmerelda the Mysterious is in the location of the player): it is likely.
+
+Does the player mean doing something with the Bumper Cars when the location is the BC-room: it is very likely.
+Does the player mean doing something with the Bumper Cars ticket when (the location of the player is the BC-room) and (the Bumper Cars attendant is in the location of the player): it is likely.
+
+Does the player mean doing something with the Carousel when the location is the CR-room: it is very likely.
+Does the player mean doing something with the Carousel ticket when (the location of the player is the CR-room) and (the Carousel attendant is in the location of the player): it is likely.
+
 
 Section 17 - Directions
 
-[instead of going:
-	if the location is the ST-room:
-		if the current action is going east:
-			continue the action;
+[parking lot]
+instead of going when the location is the PL-room:
+	if the current action is going south:
+		continue the action;
 	otherwise:
-		say "The exit is to the east.".
+		say "The only exit is south.";
+		rule fails.
 
-instead of going:
-	if the location is the ST-room:
-		if the current action is going east:
-			continue the action;
-		otherwise if the current action is going west:
-			continue the action;
+[show tent]
+instead of going when the location is the ST-room:
+	if the current action is going east:
+		continue the action;
 	otherwise:
-		say "There are exits to the east and west.".]
+		say "The only exit is east.";
+		rule fails.
 
+[show facade]
+instead of going when the location is the SF-room:
+	if the current action is going east:
+		continue the action;
+	otherwise if the current action is going west:
+		continue the action;
+	otherwise:
+		say "There are exits to the east and west.".
+
+[bumper cars]
+instead of going when the location is the BC-room:
+	if the current action is going southeast:
+		continue the action;
+	otherwise:
+		say "The only exit is to the southeast.".
+		
+[concession stand]
+instead of going when the location is the CS-room:
+	if the current action is going northeast:
+		continue the action;
+	otherwise:
+		say "The only exit is to the northeast.".
+		
+[carousel]
+instead of going when the location is the CR-room:
+	if the current action is going southwest:
+		continue the action;
+	otherwise:
+		say "The only exit is to the southwest.".
+		
+[fortune teller]
+instead of going when the location is the FT-room:
+	if the current action is going northwest:
+		continue the action;
+	otherwise:
+		say "The only exit is to the northwest.".
+		
+[high striker]
+instead of going when the location is the HS-room:
+	if the current action is going northeast:
+		continue the action;
+	if the current action is going southeast:
+		continue the action;
+	if the current action is going east:
+		continue the action;
+	if the current action is going west:
+		continue the action;
+	otherwise:
+		say "The exits are northeast, southeast, west, and east of here.".
+		
+[dime toss]
+instead of going when the location is the Dime Toss Game:
+	if the current action is going southwest:
+		continue the action;
+	otherwise:
+		say "The only exit is to the southwest.".
+		
+[pitcher's mound]
+instead of going when the location is the Pitcher's Mound:
+	if the current action is going northwest:
+		continue the action;
+	otherwise:
+		say "The only exit is to the northwest.".
+		
+[ferris wheel]
+instead of going when the location is the FW-room:
+	if the current action is going west:
+		continue the action;
+	otherwise:
+		say "The only exit is to the west.".
+		
+[ride entrance]
+instead of going when the location is the Ride Entrance:
+	if the current action is going east:
+		continue the action;
+	if the current action is going north:
+		continue the action;
+	otherwise:
+		if the Dark Passage is visited:
+			say "There are exits to the north and east of here.";
+		otherwise:
+			say "The only exit you can see is to the north.".
+		
+[dark passage]
+instead of going when the location is the Dark Passage:
+	if the current action is going west:
+		continue the action;
+	if the current action is going south:
+		continue the action;
+	otherwise:
+		say "The only exits you can see are to the south and the west.".
+		
+[maintenance office]
+instead of going when the location is the Maintenance Office:
+	if the current action is going north:
+		continue the action;
+	if the current action is going south:
+		continue the action;
+	if the current action is going west:
+		continue the action;
+	if the current action is going up:
+		continue the action;
+	if the current action is going the ladder:
+		continue the action;
+	otherwise:
+		if not in darkness:
+			say "The are exits are to the north, south, west, and up.";
+		otherwise:
+			say "It[']s too dark to see.".
+		
+[crawl space]
+instead of going when the location is the Crawl Space:
+	if the current action is going north:
+		continue the action;
+	if the current action is going south:
+		continue the action;
+	if the current action is going west:
+		continue the action;
+	otherwise:
+		if not in darkness:
+			say "The are exits are to the north, south, and west.";
+		otherwise:
+			say "It[']s too dark to see.".
+		
+[mechanical room north]
+instead of going when the location is the Mechanical Room North:
+	if the current action is going north:
+		continue the action;
+	if the current action is going south:
+		continue the action;
+	if the current action is going west:
+		continue the action;
+	otherwise:
+		say "The are exits are to the north, south, and west.".
+		
+[mechanical room south]
+instead of going when the location is the Mechanical Room South:
+	if the current action is going north:
+		continue the action;
+	if the current action is going south:
+		continue the action;
+	if the current action is going west:
+		continue the action;
+	otherwise:
+		say "The are exits are to the north, south, and west.".
+		
+[generator room]
+instead of going when the location is the Generator Room:
+	if the current action is going north:
+		continue the action;
+	if the current action is going south:
+		continue the action;
+	if the current action is going west:
+		continue the action;
+	otherwise:
+		say "The are exits are to the north, south, and west.".
+		
+[storage room]
+instead of going when the location is Storage Room:
+	if the current action is going north:
+		continue the action;
+	if the current action is going west:
+		continue the action;
+	otherwise:
+		say "The are exits are to the north and west.".
+		
+[dark hallway]
+instead of going when the location is Dark Hallway:
+	if the current action is going west:
+		continue the action;
+	if the current action is going down:
+		continue the action;
+	if the current action is going the ladder:
+		continue the action;
+	otherwise:
+		say "The are exits are to the west and down.".
+		
+[control room]
+instead of going when the location is Control Room:
+	if the current action is going east:
+		continue the action;
+	otherwise:
+		say "The only exits is to west.".
+		
+[stocks room]
+instead of going when the location is the Stocks Room:
+	if the current action is going north:
+		continue the action;
+	if the current action is going south:
+		continue the action;
+	if the current action is going east:
+		continue the action;
+	otherwise:
+		say "The are exits are to the north, south, and east.".
+		
+[gallow room]
+instead of going when the location is the Gallows Room:
+	if the current action is going north:
+		continue the action;
+	if the current action is going south:
+		continue the action;
+	if the current action is going east:
+		continue the action;
+	otherwise:
+		say "The are exits are to the north, south, and east.".
+		
+[stake room]
+instead of going when the location is the Stake Room:
+	if the current action is going north:
+		continue the action;
+	if the current action is going south:
+		continue the action;
+	if the current action is going east:
+		continue the action;
+	otherwise:
+		say "The are exits are to the north, south, and east.".
+		
+[dungeon]
+instead of going when the location is the Dungeon:
+	if the current action is going north:
+		continue the action;
+	if the current action is going south:
+		continue the action;
+	if the current action is going east:
+		continue the action;
+	otherwise:
+		say "The are exits are to the north, south, and east.".
+		
+[guillotine room]
+instead of going when the location is the Guillotine Room:
+	if the current action is going north:
+		continue the action;
+	if the current action is going south:
+		continue the action;
+	if the current action is going east:
+		continue the action;
+	otherwise:
+		say "The are exits are to the north, south, and east.".
+		
+[ride exit]
+instead of going when the location is the Ride Exit:
+	if the current action is going north:
+		continue the action;
+	if the current action is going east:
+		continue the action;
+	otherwise:
+		say "The are exits are to the north and east.".
+		
+[electrical closet 1]
+instead of going when the location is the Electrical Closet One:
+	if the current action is going southwest:
+		continue the action;
+	otherwise:
+		say "The only exit is to the southwest.".
+		
+[electrical closet 3]
+instead of going when the location is the Electrical Closet Three:
+	if the current action is going west:
+		continue the action;
+	otherwise:
+		say "The only exit is to the west.".
+		
+[electrical closet 5]
+instead of going when the location is the Electrical Closet Five:
+	if the current action is going northwest:
+		continue the action;
+	otherwise:
+		say "The only exit is to the northwest.".
+		
+[electrical closet 7]
+instead of going when the location is the Electrical Closet Seven:
+	if the current action is going northeast:
+		continue the action;
+	otherwise:
+		say "The only exit is to the northeast.".
+		
+[electrical closet 9]
+instead of going when the location is the Electrical Closet Nine:
+	if the current action is going east:
+		continue the action;
+	otherwise:
+		say "The only exit is to the east.".
+		
+[electrical closet 11]
+instead of going when the location is the Electrical Closet Eleven:
+	if the current action is going southeast:
+		continue the action;
+	otherwise:
+		say "The only exit is to the southeast.".
 
 Chapter 6 - Figures
 
@@ -1101,12 +1395,12 @@ instead of eating the blueberries when the blueberries are uneaten:
 check giving the coupon to the parking attendant:
 	if the parking attendant carries the parking ticket:
 		now the price of the parking ticket is $3.00;
-		now the parking attendant carries the coupon;	
+		now the coupon is nowhere;
 		say "Done. The price of a parking ticket is now [the price of the parking ticket].";
 		stop the action;
 	otherwise if the player carries the parking ticket:
 		say "Done. But you already bought a parking ticket.";
-		now the parking attendant carries the coupon;
+		now the coupon is nowhere;
 		stop the action.
 
 instead of buying the parking ticket when the player is not in the beater car:
@@ -1193,9 +1487,9 @@ Next to the kiosk, a vibrant signboard lists ticket prices with playful illustra
 
 A ride ticket is a kind of thing. A ride ticket has a price. The plural of ride ticket is ride tickets.
 
-a thing called a Fortune Teller ticket is a ride ticket. The cashier carries the fortune teller ticket. The price of the fortune teller ticket is $3.00. The description of the fortune teller ticket is "'Admit One' Have your fortune told."
+a thing called a Hell Ride ticket is a ride ticket. The cashier carries the hell ride ticket. The price of the hell ride ticket is $4.00. The description of the Hell Ride ticket is "'Admit One' to the Hell Ride.[line break]It[']s a real 'E' ticket, baby!". 
 
-a thing called a Hell Ride ticket is a ride ticket. The cashier carries the hell ride ticket. The price of the hell ride ticket is $4.00. The description is "'Admit One' to the Hell Ride.[line break]It[']s a real 'E' ticket, baby!". 
+a thing called a Fortune Teller ticket is a ride ticket. The cashier carries the fortune teller ticket. The price of the fortune teller ticket is $3.00. The description of the fortune teller ticket is "'Admit One' Have your fortune told."
 
 a thing called a Ferris Wheel ticket is a ride ticket. The cashier carries the ferris wheel ticket.The price of the ferris wheel ticket is $2.00. The description of the ferris wheel ticket is "'Admit One' to the Ferris Wheel."
 
@@ -1378,6 +1672,15 @@ Check hitting:
 	if noun is not lever, say "Nothing happens." instead;
 	if the second noun is not mallet, say "You can[']t hit [the noun] with [the second noun]!" instead;
 	if the player is not carrying the mallet, say "You[']re not holding the mallet." instead.
+	
+some High Striker prizes are here. understand "stuffie", "stuffed", "animals", "novelty", "toys", "quirky", and "trinkets" as high striker prizes. the description is "The prizes range from stuffed animals and novelty toys to shiny trinkets and quirky collectibles."
+
+instead of examining the high striker prizes:
+	say "The prizes are [run paragraph on]";
+	repeat with N running from 1 to the number of rows in the Table of High Striker Prizes:
+		choose row N in the Table of High Striker prizes;
+		if object entry is carried by the strongman attendant:
+			say "[description entry][if N < number of rows in the Table of High Striker Prizes], [end if][if N is the number of rows in the Table of High Striker Prizes - 1]and [end if][if N is the number of rows in the Table of High Striker Prizes].[end if]".
 
 To show the High Striker prizes:
 	say "Which prize would you like? [run paragraph on]";
@@ -1447,7 +1750,14 @@ A pocket mirror is carried by the Dime Toss attendant. The description of the po
 
 the Dime Toss sign is here. it is scenery. understand "signage" as the dime toss sign. the description is "The sign reads, 'TOSS A DIME - WIN A PRIZE!'.".
 
-some High Striker prizes are here. they are scenery. understand "stuffie", "stuffed", "animals", "novelty", "toys", "quirky", and "trinkets" as high striker prizes. the description is "The prizes range from stuffed animals and novelty toys to shiny trinkets and quirky collectibles."
+some Dime Toss prizes are here. understand "stuffie", "stuffed", "animals", "novelty", "toys", "quirky", and "trinkets" as dime toss prizes. the description is "The prizes range from stuffed animals and novelty toys to shiny trinkets and quirky collectibles."
+
+instead of examining the Dime Toss prizes:
+	say "The prizes are [run paragraph on]";
+	repeat with N running from 1 to the number of rows in the Table of Dime Toss Prizes:
+		choose row N in the Table of Dime Toss prizes;
+		if object entry is carried by the dime toss attendant:
+			say "[description entry][if N < number of rows in the Table of Dime Toss Prizes], [end if][if N is the number of rows in the Table of Dime Toss Prizes - 1]and [end if][if N is the number of rows in the Table of Dime Toss Prizes].[end if]".
 
 instead of listening when the location is the Dime Toss Game, say "The distinctive 'ping' of dimes hitting plates creates a rhythmic soundtrack.".
 
@@ -1511,8 +1821,6 @@ a baseball is a kind of thing. Understand "ball" as baseball.The Pitcher's Mound
 
 the milk bottles are scenery in the Pitcher's Mound. The description is "The milk bottles are stacked in three neat rows: three on the bottom, two in the middle, and one on top.". understand "bottle", "pyramid" and "stack" as milk bottles.
 
-the toys are here. they are scenery. Understand "toy", "stuffed", "stuffie", "stuffed animal", "stuffed", "animal", "animals", and "prizes" as toys. The description is "Prizes - ranging from small toys to giant stuffed animals - hang prominently.".
-
 some Pitcher's Mound spectators are here. they are scenery. the description is "The satisfying clatter of falling bottles mixes with cheers and groans from players and spectators.".
 
 the Pitcher's Mound booth is here. it is scenery. the description is "The booth buzzes with energy, its colorful banners and flashing lights drawing a lively crowd.".
@@ -1526,7 +1834,7 @@ Instead of buying a baseball, say "You don[']t need to buy the baseballs. Just g
 
 instead of giving a dime to the pitcher's mound attendant:
 	say "The attendant gives you three baseballs in return.";
-	now the pitcher's mound attendant carries the noun;
+	now the noun is nowhere;
 	now the player carries every baseball;
 	stop the action.
 
@@ -1536,6 +1844,15 @@ instead of throwing a baseball at the milk bottles:
 	otherwise:
 		say "That seems futile to me.";
 		rule fails.
+		
+some Pitcher's Mound prizes are here. Understand "toys", "toy", "stuffed", "stuffie", "stuffed animal", "animal", "animals", and "prizes" as Pitcher's Mound prizes. The description is "Prizes - ranging from small toys to giant stuffed animals - hang prominently.".
+
+instead of examining the Pitcher's Mound prizes:
+	say "The prizes are [run paragraph on]";
+	repeat with N running from 1 to the number of rows in the Table of Pitcher's Mound Prizes:
+		choose row N in the Table of Pitcher's Mound prizes;
+		if object entry is carried by the Pitcher's Mound attendant:
+			say "[description in row N of the Table of Pitcher's Mound Prizes][if N < number of rows in the Table of Pitcher's Mound Prizes], [end if][if N is the number of rows in the Table of Pitcher's Mound Prizes - 1]and [end if][if N is the number of rows in the Table of Pitcher's Mound Prizes].[end if]".
 		
 To show the Pitcher's Mound prizes:
 	say "Which prize would you like? [run paragraph on]";
@@ -1597,19 +1914,18 @@ some facade incense is here. they are scenery. the description is "The smell of 
 instead of smelling when the location is the ST-room, try examining the incense instead.
 
 report going west when the location is the SF-room and the location is unvisited:
-	try looking;
 	say "[the barker's cry]";
-	stop the action.
+[	stop the action.]
 
 a tent is in the SF-room. it is scenery. the description is "Inside the tent is the Little Egypt show.".
 
 the facade stage is here. it is scenery. the description is "On the stage stands a barker extolling the wonders of Little Egypt.".
 
-a fez is here. it is scenery. the description is "The fez is a type of hat that originates from the Ottoman Empire and is named after the city of Fez in Morocco. It is a brimless, cylindrical or truncated conical hat, typically made of red felt. The hat often features a black tassel that hangs from the top, though the design can vary slightly.".
+a fez is here. it is scenery. understand "hat" as fez. the description is "The fez is a type of hat that originates from the Ottoman Empire and is named after the city of Fez in Morocco. It is a brimless, cylindrical or truncated conical hat, typically made of red felt. The hat often features a black tassel that hangs from the top, though the design can vary slightly.".
 
 A sign is in the SF-room. The sign is scenery. The description of the sign is "The sign reads, 'Little Egypt Show — Dime Admission'".
 
-The Barker is a person in SF-room. Understand "attendant", "attendent", "operator", "shirt", "pants", and "vest" as the Barker. The description of the barker is "Here is a man dressed in black pants, a white shirt,a striped vest, a fez, and a dazzling smile.". 
+The Barker is a person in SF-room. Understand "attendant", "attendent", "operator", "shirt", "pants", and "vest" as the Barker. The description of the barker is "Here is a man dressed in black pants, a blue shirt,a red vest, a hat much like a fez, and a dazzling smile.". 
 
 after examining the barker, say "[the barker's cry]".
 
@@ -1629,7 +1945,7 @@ Before going west when the location is the SF-room and the ST-room is unvisited 
 Before looking when the location is the the ST-room:
 	if show images is true, display Figure of LittleEgyptShow.		
 
-The ST-room is a room. The printed name is "Show Tent". The ST-room is west of SF-room. "You are inside the Little Egypt Show. The attraction[']s facade is to the east. There are folding chairs organized neatly in rows.[if the ST-room is unvisited] The show should start soon.[end if]"
+The ST-room is a room. The printed name is "Show Tent". The ST-room is west of SF-room. "You are inside the Little Egypt Show. The attraction[']s facade is to the east. There are folding chairs organized neatly in rows. The show should start soon."
 
 Little Egypt is a woman. Little Egypt is in the ST-room. Little Egypt is scenery. The description of Little Egypt is "Little Egypt is a beautiful woman who is draped in flowing silk veils which she skillfully uses as part of the dance. Her attire consists of a sparkling, sequined bodice and a flowing skirt, adorned with jingling coin belts and jewelry that accentuate her movements.". understand "silk", "veils", "bodice", "sequined", "sequins", "flowing", "skirt", "jingling", "coins", "belts", and "jewelry" as Little Egypt.
 
@@ -1668,30 +1984,41 @@ after taking the lantern for the first time:
 
 The folding chair is a enterable scenery supporter in the ST-room. The description of the Folding Chair is "This is one of many folding chairs in the tent tonight." Understand "chairs" as folding chair.
 
-Little Egypt AutoPlay is a scene. 
-Little Egypt AutoPlay begins when the player has been in the ST-room for exactly three turns or the player has been on the folding chair for exactly two turns.. 
-Little Egypt AutoPlay ends when the number of filled rows in the Table of Little Egypt Events is 0.
+Little Egypt AutoPlay is a recurring scene. 
+Little Egypt AutoPlay begins when little egypt counter is 3.
+Little Egypt AutoPlay ends when the index is the number of rows in the Table of Little Egypt Events.
 
 When Little Egypt AutoPlay ends:
-	say "You applaud until your hands are sore. Did she just wink at you?[paragraph break]As she leaves the stage, Little Egypt tosses one of her veils to you!";
-	now the player carries the Sheer Veil.
-	
-clapping is an action applying to nothing. Understand "clap" and "applaud" as clapping.
-instead of clapping, say "Your hands are sore from clapping so much!".
+	say "You applaud until your hands are sore. Did she just wink at you?[run paragraph on]";
+	if the sheer veil was not handled:
+		say "[paragraph break]As she leaves the stage, Little Egypt tosses one of her veils to you!";
+		now the player carries the Sheer Veil;
+	say "[paragraph break]";
+	now index is 1.
 
-last description is text that varies. last description is "".
+little egypt counter is a number that varies. little egypt counter is usually 1.
+After going west when the location is the ST-room:
+	now little egypt counter is 1;
+	continue the action.
+every turn when the location is the ST-room, increment little egypt counter.
+	
+last description is text that varies. last description is "".		
+index is a number that varies. index is usually 1.		
 every turn during Little Egypt AutoPlay:
-	repeat through Table of Little Egypt Events:
-		now last description is description entry;
-		say "[description entry][paragraph break]";
-		blank out the whole row;
-		rule succeeds.
-		
+	choose row index in the Table of Little Egypt Events;
+	now last description is description entry;
+	say "[description entry][paragraph break]";
+	increment index;
+	rule succeeds;
+
 instead of looking during the Little Egypt AutoPlay, say "[last description][paragraph break]";
 
 Instead of doing something other than waiting, looking, listening, smelling or examining during Little Egypt AutoPlay:
 	say "You[']re much too entranced by the show to do anything other than watch the show. You are riveted[if the player is in the folding chair] to your seat[end if]!".
 	
+clapping is an action applying to nothing. Understand "clap" and "applaud" as clapping.
+instead of clapping, say "Your hands are sore from clapping so much!".
+
 the entryway is a thing in the ST-room. the entryway is scenery. The description of the entryway is "The show[']s facade and the barker are back to the east.". Understand "facade" as entryway.
 examining the entryway is an action applying to one thing. Understand "examine entryway" as examining the entryway.
 
@@ -1718,7 +2045,7 @@ The Ferris Wheel Attendant is an attendant in the FW-room.
 
 instead of giving the Ferris wheel ticket to the Ferris wheel attendant:
 	say "You give [the noun] to [the second noun].";
-	now the Ferris wheel attendant carries the Ferris wheel ticket;
+	now the Ferris wheel ticket is nowhere;
 	say "[line break]As you step into the gently swaying gondola, a faint creak accompanies the safety bar locking into place. The Ferris wheel begins its slow ascent, the hum of its machinery blending with the distant sounds of carnival games and laughter below. A soft breeze brushes against your face as the gondola rises higher, offering an ever-expanding view of the fairgrounds.
 
 With each rotation, the world transforms. At the peak, the carnival sprawls beneath you like a miniature village, its vibrant lights twinkling against the twilight sky. The sound of the midway fades into a soft murmur, replaced by the serene quiet of being high above the bustling crowd. Beyond the carnival, the horizon stretches endlessly, framed by the glow of distant city lights.
@@ -1739,10 +2066,6 @@ some passengers are here. they are scenery. the description is "The passengers f
 A Ferris Wheel booth is here. it is scenery. the description is "From this booth, the attendant collects tickets and operates the ride.".
 
 A thing called the Ferris Wheel is a backdrop. The description of the Ferris Wheel is "The Ferris wheel towers above the carnival and is illuminated with vibrant lights, creating a dazzling display. As the wheel turns slowly, the gondolas remain upright, offering riders a thrilling yet gentle experience and spectacular views from the top.". understand "frame", "beams", "bulbs", "lightbulbs", "ferris", "wheel", and "ride" as the ferris wheel.
-
-Does the player mean examining the Ferris Wheel when the location is the FW-room: it is very likely.
-Does the player mean examining the Ferris Wheel ticket when the location is the FW-room: it is likely.
-Does the player mean giving the Ferris Wheel ticket to an attendant when the location is the FW-room: it is very likely.
 
 instead of listening when the location is FW-room, say "You hear a mix of excited chatter, the hum of its motor, and the occasional squeal of laughter or nervousness from riders high above.".
 
@@ -1767,7 +2090,7 @@ The Bumper Cars Attendant is an attendant in the BC-room.
 
 instead of giving the bumper cars ticket to the bumper cars attendant:
 	say "You give [the noun] to [the second noun].";
-	now the bumper cars attendant carries the bumper cars ticket;
+	now the bumper cars ticket is nowhere;
 	say "[line break]Sliding into the snug seat of the bumper car, your hands grip the steering wheel, anticipation buzzing in the air. Around you, the arena is alive with flashing lights, bursts of laughter, and the hum of electric currents running through the overhead poles. A quick glance shows other riders locking eyes, playful grins spreading as everyone braces for the chaos about to unfold.
 
 As the ride starts, your car jolts forward, and you steer into the fray. The slick metal floor beneath makes every turn feel smooth yet unpredictable. Suddenly, bam! — another car collides into you from the side, sending your car into a spin. You laugh, recovering quickly to aim your vehicle at a friend across the arena.
@@ -1776,9 +2099,7 @@ The thrill of the bumper cars is in the collisions — every thud and jolt accom
 
 The ride is a whirlwind of laughter, harmless competition, and shared joy. As the music fades and the cars slow to a stop, you climb out with a wide grin, already looking forward to your next turn in the driver’s seat."
 
-A thing called the Bumper Cars are in the BC-room. The Bumper Cars are scenery. The description of the Bumper Cars is "The Bumper Cars are small, colorful, electric-powered vehicles equipped with a padded outer rim to absorb impacts, allowing riders to safely bump into each other as part of the game. The ceiling has a conductive surface that powers the cars. Riders are thrilled by chaotic collisions, laughter, and the challenge of maneuvering away from — or into — other drivers."
-
-Does the player mean doing something with the Bumper Cars: it is very likely.
+A thing called the Bumper Cars are in the BC-room. The Bumper Cars are scenery. understand "car" as the bumper cars. The description of the Bumper Cars is "The Bumper Cars are small, colorful, electric-powered vehicles equipped with a padded outer rim to absorb impacts, allowing riders to safely bump into each other as part of the game. The ceiling has a conductive surface that powers the cars. Riders are thrilled by chaotic collisions, laughter, and the challenge of maneuvering away from — or into — other drivers."
 
 some padded barriers are here. they are scenery. the description is "The padded barriers ensure a safe yet thrilling experience for riders. ".
 some padded bumpers are here. they are scenery. the description is "The padded bumper on each car is designed to absorb the impact of playful collisions.".
@@ -1834,7 +2155,6 @@ Esmerelda the Mysterious is a woman in the FT-room. Understand "mysterious", "wo
 a thing called a fortune is here. it is scenery. the description is "You ponder the ramifications of having your fortune told.".
 does the player mean doing something with the fortune: it is very likely.
 
-does the player mean giving the fortune teller ticket to Esmerelda the Mysterious: it is very likely.
 instead of giving the fortune teller ticket to the Esmerelda the Mysterious:
 	say "You give [the noun] to [the second noun].";
 	now Esmerelda the Mysterious carries the fortune teller ticket;
@@ -1867,7 +2187,7 @@ The carousel[’]s warm, playful tunes drift across the midway, inviting riders 
 
 instead of giving the carousel ticket to the carousel attendant:
 	say "You give [the noun] to [the second noun].";
-	now the carousel attendant carries the carousel ticket;
+	now the carousel ticket is nowhere;
 	say "[line break]Stepping onto the carousel[']s spinning platform, you’re greeted by a kaleidoscope of color — brightly painted horses, glittering lights, and golden trim. The cheerful melody of calliope music fills the air. What will you choose as your mount, perhaps a galloping horse with a flowing mane, a majestic lion, or a whimsical giraffe. Gripping the polished pole, you settle onto the saddle, feeling the smooth rise and fall as the carousel begins to turn.
 
 As the ride picks up speed, the world outside becomes a blur of glowing carnival lights and swirling colors. The gentle up-and-down motion mimics a playful gallop, and the rhythmic whir of the carousel’s machinery adds a soothing backdrop to the cheerful atmosphere. Laughter and the sound of children’s chatter mix with the music, creating a sense of nostalgia and joy.
@@ -1876,8 +2196,6 @@ For a few moments, you’re transported into a magical world, the worries of the
 
 Understand "merry-go-round" and "merry go round" as carousel.
 A thing called the Carousel is in the CR-room. The Carousel is scenery. The description of the Carousel is "The carousel features intricately decorated, moving figures such as horses, chariots, and sea dragons, all mounted on poles. The figures move up and down in an endless chase accompaniment of cheerful, calliope music. Illuminated by bright, twinkling lights, the carousel creates a magical and timeless atmosphere.".
-
-Does the player mean doing something with the Carousel: it is very likely.
 
 instead of listening when the location is the CR-room, say "The carousel's warm, playful tunes drift across the midway, inviting riders of all ages to enjoy its simple delight.".
 
@@ -1893,7 +2211,9 @@ Some children are here. they are scenery. understand "adults" as children. the d
 
 Section 14 - Head of the Line
 
-Head of the Line is a room. Head of the Line is south of TB-room. Head of the Line is north of Ride Entrance. The Head of the Line is outdoors. "You are standing in front of an attendant with his hand open waiting for your ticket. The entrance to the ride is south of here. The ride operator tells you that you[']re lucky you showed up when you did because this will be the last trip through Hell Ride for the night. You notice that all the other cars are empty. The Ticket Kiosk is north of here."
+Head of the Line is a room. Head of the Line is south of TB-room. Head of the Line is north of Ride Entrance. The Head of the Line is outdoors. "You are standing in front of an attendant with his hand open waiting for your ticket. The entrance to the ride is south of here. The ride operator tells you that you[']re lucky you showed up when you did because this will be the last trip through [story title] for the night. You notice that all the other cars are empty. The Ticket Kiosk is north of here."
+
+a thing called Hell Ride is a backdrop. Understand "hell ride" and "ride" as hell ride. The description of Hell Ride is "Through the lights and excitement of the carnival, you can see the facade for [story title] looming ominously over the midway.". 
 
 the hell ride cars are here. they are scenery. understand "car" as hell ride cars. the description is "These cars ferry carnival goers into the depths of [story title].".
 
@@ -2202,7 +2522,7 @@ The Hell Ride car is a vehicle in the Ride Entrance. understand "cars" as hell r
 Before going south when the player is in the Ride Entrance:
 	say "You can[']t go that way." instead;
 	continue the action.
-
+	
 the ride entrance facade is here. it is scenery. The description is "A towering archway of flames, spikes, and grinning skulls frames the entrance, crowned by flickering letters that read 'HELL RIDE', pulsing like a heartbeat. Below, crouching demon sculptures extend clawed hands in a sinister invitation. Wooden doors cover the entrance, whispering with faint, menacing chuckles as distorted organ music grows louder, punctuated by shrieks and grinding machinery.".
 
 some ride entrance doors are here. they are scenery. understand "wooden" as the ride entrance doors. the description is "The doors begin to swing open to let a car into the ride.".	
@@ -2420,6 +2740,7 @@ A dark hallway lies to the east."
 A big switch is a device in the control room. The big switch is fixed in place. The big switch can be switched on or switched off. The big switch is switched on. 
 "[if the big switch is switched on]Currently there are sparks arcing out from the switch. It looks dangerous.[end if]".
 The description of the big switch is "This is a large switch. It[']s the kind Dr. Frankenstein might push to route the lightning to his creature. A label underneath the switch reads: 'Electrical Room'.".
+there is a label here. it is scenery. The description is "It reads, 'Electrical Room'.".
 
 electrocuted is a truth state that varies. electrocuted is false.
 instead of switching off the big switch:
@@ -2440,7 +2761,7 @@ Instead of pushing or flipping or toggling a switched on big switch:
 
 a cluttered desk is in the control room. The cluttered desk is scenery. The description is "The desk is covered with all matter of detritus.".
 a cork board is in the control room. The cork board is scenery. The description is "The cork board displays charts and notes.".
-some charts are in the control room. They are scenery. understand "notes" as charts. The description is "There is nothing interesting about the charts and notes.".
+some charts are in the control room. They are scenery. understand "notes", "red", "red-marked" as charts. The description is "There is nothing interesting about the charts and notes.".
 some papers are here. they are scenery. understand "tools", "coffee", and "cups" as papers. the description is "The worn floor is scattered with papers, tools, and coffee cups.".
 some logs are here. they are scenery. understand "schedules" as logs. the description is "The cluttered desk holds logs and schedules.".
 
@@ -2534,7 +2855,6 @@ last report switching on a button when the switch count is 6 and the dial count 
 	say "The monitor flickers for a second and the scene it displays changes to something different.";
 	say "[description entry][line break]";
 	say "The [color of the holder of the noun] light is now on.";
-	display ControlPanelImage;
 	now all buttons are switched off;
 	now the noun is switched on;
 	now the figure id of the monitor is N;
@@ -2547,7 +2867,6 @@ Last report switching off a button (this is the final report switching off a but
 	say "The monitor turns off and the screen goes black.";
 	say "[description entry][line break]";
 	say "The [color of the holder of the noun] light is now off.";
-	display ControlPanelImage;
 	now the figure id of the monitor is 0;
 	now all buttons are switched off.
 
@@ -2642,7 +2961,8 @@ instead of examining the monitor:
 Part 3 - Regions
 
 The Midway is a region. PL-room, TB-room, CS-room, HS-room, SF-room, ST-room, Head of the Line,
-FW-room, BC-room, FT-room, CR-room, Dime Toss Game, and the Pitcher's Mound are in the Midway. The sky, music, and The Ferris Wheel is in the Midway
+FW-room, BC-room, FT-room, CR-room, Dime Toss Game, and the Pitcher's Mound are in the Midway. 
+The sky, music, Hell Ride, and the Ferris Wheel are in the Midway
 
 HellRide is a region. Ride Entrance, Stocks Room, Gallows Room, Stake Room, Dungeon, Guillotine Room, Ride Exit are in HellRide.
 
@@ -2727,16 +3047,17 @@ link number	figure choice		description
 Section 4 - Table of High Striker Prizes
 
 Table of High Striker Prizes
-index	object	description
+index (text)	object (an object)	description (text)
 "1"	teddy bear	"a teddy bear"
 "2"	Swiss army knife	"a Swiss Army knife"
-"3"	poster of Taylor Swift	"a poster of Taylor Swift"
-"4"	fuse13	"a magenta fuse"
+"3"	fuse13	"a magenta fuse"
+"4"	poster of Taylor Swift	"a poster of Taylor Swift"
+
 
 Section 5 - Table of Dime Toss Prizes
 
 Table of Dime Toss Prizes
-index	object	description
+index (text)	object (an object)	description (text)
 "1"	small plush monkey	"a stuffed monkey"
 "2"	fuse15	"an orange fuse"
 "3"	poster of Billie Eilish	"a poster of Billie Eilish"
@@ -2745,7 +3066,7 @@ index	object	description
 Section 6 - Table of Pitcher's Mound Prizes
 
 Table of Pitcher's Mound Prizes
-index	object	description
+index (text)	object (an object)	description (text)
 "1"	fuse3	"a crimson fuse"
 "2"	small plush donkey	"a plush donkey"
 "3"	goldfish	"a goldfish in a bowl"
@@ -3046,7 +3367,7 @@ title (text)	subtable (table name)	description (text)	toggle (rule)	used (number
 "hint"	--	"Are you sure?"	
 "hint"	--	"What about the parking stub"	
 "hint"	--	"The parking attendant knows something about the stub"	
-"hint"	--	"Put the stub on the dashboard."
+"hint"	--	"Put the parking stub on the dashboard."
 
 Chapter 4 - The Attractions
 
@@ -3098,10 +3419,11 @@ Chapter 7 - Hell Ride Hints
 Table of Hell Ride Hints
 title (text)	subtable (table name)	description (text)	toggle (rule)	used (number)	bookpage (number)	localpage (number)
 "Why do I die?"	table of hinting	"Everybody dies."
-"hint"	--	"So, you[']ve ridden Hell Ride."
+"hint"	--	"So, you[']ve ridden Hell Ride, huh?"
 "hint"	--	"Aren[']t the animatronics and wax figures amazing?"
 "hint"	--	"Did you notice the guillotine rising and falling?"
 "hint"	--	"Did you notice it chop you in half?"
+"hint"	--	"You have to disable [story title]"
 "What about the different rooms"	table of hinting	"Everything sure looks realistic."	
 "hint"	--	"Aren[']t the animatronics and wax figures amazing?"
 "hint"	--	"Each room shows a different manner of punishment."
@@ -3113,19 +3435,19 @@ Chapter 8 - The Electrical Area Hints
 Table of Electrical Area Hints
 title (text)	subtable (table name)	description (text)	toggle (rule)	used (number)	bookpage (number)	localpage (number)
 "What[']s going on in the Electrical Room?"	table of hinting	"There are exits in all directions"	
-"hint"	--	"Have you mapped the area?"
 "hint"	--	"Can you go in the direction you intend?"
 "hint"	--	"The room is electromagnetic."
 "hint"	--	"Maybe that[']s causing the problem."
+"hint"	--	"You end up in a random room every time you try to move."
 "hint"	--	"Maybe you can make it so it[']s not electromagnetic."
-"hint"	--	"Turn off the big switch."
+"hint"	--	"Turn off the big switch in the Control Room."
 "What about the electrical panels?"	table of hinting	"There[']s a socket, a switch, and an indicator in each one."
 "hint"	--	"You could probably put something in the socket."
 "hint"	--	"Looks like a fuse will fit in the socket."
 "hint"	--	"I[']d put a fuse in the socket and flip the switch."
 "Are the fuses important?"	table of hinting	"Yes."	
 "hint"	--	"They come in pretty colors."
-"hint"	--	"Have you seen those colors before?"
+"hint"	--	"Have you seen those colors anywhere else?"
 "hint"	--	"Have you put a fuse in a socket?"
 
 Chapter 9 - The Control Room Hints
@@ -3135,13 +3457,15 @@ title (text)	subtable (table name)	description (text)	toggle (rule)	used (number
 "Tell me about the big switch."	table of hinting	"It[']s big"	
 "hint"	--	"Very big"
 "hint"	--	"It[']s in the Control Room."
-"hint"	--	"Have you tried turning it off?"
+"hint"	--	"Did you read the label?"
+"hint"	--	"Have you tried turning the big switch off?"
 "hint"	--	"Did you die because your hands were unprotected?"
 "hint"	--	"Try wearing the gloves."
 "What about the control panels?"	table of hinting	"There's a dial, a button, and a light in each one."
 "hint"	--	"These are pretty colors."
-"hint"	--	"Have you seen these colors before?"
+"hint"	--	"Have you seen these colors anywhere else?"
 "hint"	--	"Try spinning the dials."
 "hint"	--	"Spin the dials to the right number."
 "hint"	--	"Is there a number that corresponds to each color?"
+"hint"	--	"Aqua = A = 1, Crimson = C = 3, etc."
 "hint"	--	"Push the indigo button."

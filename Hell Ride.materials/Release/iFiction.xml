@@ -24,8 +24,8 @@
         <releases>
             <attached>
                 <release>
-                    <releasedate>2025-01-25</releasedate>
-                    <version>124</version>
+                    <releasedate>2025-01-28</releasedate>
+                    <version>125</version>
                     <compiler>Inform 7</compiler>
                     <compilerversion>Inform 10.1.2 (build )</compilerversion>
                 </release>
@@ -34,11 +34,11 @@
         <colophon>
             <generator>Inform 7</generator>
             <generatorversion>Inform 10.1.2 (build )</generatorversion>
-            <originated>2025-01-25</originated>
+            <originated>2025-01-28</originated>
         </colophon>
         <glulx>
-            <serial>250125</serial>
-            <release>124</release>
+            <serial>250128</serial>
+            <release>125</release>
             <compiler>Inform Inform 10.1.2 (build )</compiler>
             <coverpicture>1</coverpicture>
         </glulx>
