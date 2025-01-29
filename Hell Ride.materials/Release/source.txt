@@ -623,6 +623,10 @@ carry out images off:
 	say "Images off. Game images will not be displayed.";
 	now show images is false.
 	
+[beta tester's notes]
+Understand "* [text]" as a mistake ("Noted.").
+
+	
 Section 16 - Does The Player Mean
 
 Does the player mean doing something with Hell Ride: it is very likely.
@@ -634,8 +638,8 @@ Does the player mean doing something with the Hell Ride ticket when (the locatio
 Does the player mean doing something with the Ferris Wheel when the location is outdoors: it is very likely.
 Does the player mean doing something with the Ferris Wheel ticket when (the location of the player is the FW-room) and (the Ferris Wheel attendant is in the location of the player): it is likely.
 
-Does the player mean doing something with Esmerelda the Mysterious when the location is the FT-room: it is very likely.
-Does the player mean doing something with the Fortune Teller ticket when (the location of the player is the FT-room) and (the Esmerelda the Mysterious is in the location of the player): it is likely.
+Does the player mean doing something with Esmeralda the Mysterious when the location is the FT-room: it is very likely.
+Does the player mean doing something with the Fortune Teller ticket when (the location of the player is the FT-room) and (the Esmeralda the Mysterious is in the location of the player): it is likely.
 
 Does the player mean doing something with the Bumper Cars when the location is the BC-room: it is very likely.
 Does the player mean doing something with the Bumper Cars ticket when (the location of the player is the BC-room) and (the Bumper Cars attendant is in the location of the player): it is likely.
@@ -857,7 +861,7 @@ instead of going when the location is the Stocks Room:
 	otherwise:
 		say "The are exits are to the north, south, and east.".
 		
-[gallow room]
+[gallows room]
 instead of going when the location is the Gallows Room:
 	if the current action is going north:
 		continue the action;
@@ -2133,7 +2137,7 @@ Before looking when the location is the FT-room:
 	
 FT-room is a room. The printed name is "Fortune Teller". The FT-room is outdoors. The FT-room is southeast of the TB-room. "Approaching the fortune teller[’]s booth, you’re drawn in by its mysterious allure. Draped in deep purple curtains adorned with golden moons and stars, the booth glows with the soft, inviting light of candles. The air is heavy with the scent of incense, mingling with the sweet aroma of carnival treats. A sign sways slightly in the evening breeze."
 
-some candles are here. The candles are scenery. The description of the candles is "The candles flicker in the soft breeze casting light on the Esmerelda[']s face.". Understand "candle" as candles. instead of taking the candles, say "Esmerelda says, 'Hey! I need those!".
+some candles are here. The candles are scenery. The description of the candles is "The candles flicker in the soft breeze casting light on the Esmeralda[']s face.". Understand "candle" as candles. instead of taking the candles, say "Esmeralda says, 'Hey! I need those!'".
 
 The Fortune Teller Booth is here. It is scenery. The description is "Draped in deep purple curtains adorned with golden moons and stars, the cabana glows with the soft, inviting light of lanterns. The air is heavy with the scent of incense, mingling with the sweet aroma of carnival treats."
 
@@ -2142,30 +2146,30 @@ instead of smelling when the location is the FT-room, say "The smell of incense 
 The curtains are here. They are scenery. Understand "drapes" as curtains. The description of the curtains is "The curtains are deep purple with golden moons and stars.".
 The Fortune Teller sign is here. The Fortune Teller sign is scenery. The description of the Fortune Teller sign is "'Fortunes Told — What Does Your Future Hold?' Underneath that it says 'Ticket Required'".
 
-some robes are here. they are scenery. understand "robe" as robes. the description is "The Esmerelda wears flowing robes embellished with shimmering beads, and a jeweled headpiece.".
-a headpiece is here. it is scenery. understand "beads", "jewels", and "jeweled" as headpiece. the description is "Esmerelda wears flowing robes embellished with shimmering beads, and a jeweled headpiece.".
+some robes are here. they are scenery. understand "robe" as robes. the description is "The Esmeralda wears flowing robes embellished with shimmering beads, and a jeweled headpiece.".
+a headpiece is here. it is scenery. understand "beads", "jewels", and "jeweled" as headpiece. the description is "Esmeralda wears flowing robes embellished with shimmering beads, and a jeweled headpiece.".
 a round table is here. it is scenery. It is a  supporter. the description is "This is a small round table with a crystal ball, some tarot cards, and some trinkets on it.".
 a crystal ball is on the round table. The crystal ball is scenery. The description is "A softball sized crystal ball sits on the table, glowing dimly.".
 some tarot cards are on the round table. they are scenery. understand "card" as tarot cards. the description is "The tarot cards have beautiful drawings upon them.".
 some trinkets are on the round table. they are scenery. the description is "The purpose of the trinkets remains a mystery.".
 your palm is here. it is scenery. the description is "It[']s your palm, in the middle of your hand.".
 
-Esmerelda the Mysterious is a woman in the FT-room. Understand "mysterious", "woman", "fortune teller" and "teller" as the Esmerelda the Mysterious. The description of the Esmerelda the Mysterious is "The fortune teller sits in a dimly lit booth, draped in rich fabrics of deep purple and gold, adorned with celestial patterns of stars and moons. Their appearance is enigmatic, with piercing eyes that seem to look right through you and a knowing smile that hints at secrets yet untold. She wears flowing robes embellished with shimmering beads, and a jeweled headpiece catches the flickering light of nearby candles."
+Esmeralda the Mysterious is a woman in the FT-room. Understand "mysterious", "woman", "fortune teller" and "teller" as the Esmeralda the Mysterious. The description of the Esmeralda the Mysterious is "The fortune teller sits in a dimly lit booth, draped in rich fabrics of deep purple and gold, adorned with celestial patterns of stars and moons. Their appearance is enigmatic, with piercing eyes that seem to look right through you and a knowing smile that hints at secrets yet untold. She wears flowing robes embellished with shimmering beads, and a jeweled headpiece catches the flickering light of nearby candles."
 
 a thing called a fortune is here. it is scenery. the description is "You ponder the ramifications of having your fortune told.".
 does the player mean doing something with the fortune: it is very likely.
 
-instead of giving the fortune teller ticket to the Esmerelda the Mysterious:
+instead of giving the fortune teller ticket to the Esmeralda the Mysterious:
 	say "You give [the noun] to [the second noun].";
-	now Esmerelda the Mysterious carries the fortune teller ticket;
+	now Esmeralda the Mysterious carries the fortune teller ticket;
 	say "[line break]Stepping inside, you’re greeted by the fortune teller, a figure cloaked in flowing robes with a jeweled headpiece catching the flickering light. Their piercing eyes seem to look right through you as they gesture for you to sit at a small round table covered in an ornate cloth. At its center rests a glowing crystal ball, surrounded by tarot cards and mysterious trinkets.
 
-Esmerelda[’]s voice is low and melodic, weaving an air of intrigue as they ask you to focus on a question and offer your palm for a reading. The room seems to shrink, the bustling carnival outside fading into the background as they reveal your fate. Each card turned and line traced on your palm feels significant, as though unlocking a secret you didn’t know you carried.
+Esmeralda[’]s voice is low and melodic, weaving an air of intrigue as they ask you to focus on a question and offer your palm for a reading. The room seems to shrink, the bustling carnival outside fading into the background as they reveal your fate. Each card turned and line traced on your palm feels significant, as though unlocking a secret you didn’t know you carried.
 
-As the reading concludes, the Esmerelda gazes into your eyes with a cryptic smile and delivers their final words of wisdom: 'You need fuses.' Whether you leave with a sense of wonder, excitement, or unease, the encounter lingers with you — a touch of magic amid the carnival’s chaos, as if you’ve glimpsed something beyond the ordinary."
+As the reading concludes, the Esmeralda gazes into your eyes with a cryptic smile and delivers their final words of wisdom: 'You need fuses.' Whether you leave with a sense of wonder, excitement, or unease, the encounter lingers with you — a touch of magic amid the carnival’s chaos, as if you’ve glimpsed something beyond the ordinary."
 
-instead of asking the Esmerelda the Mysterious about "fortune", say "You[']ll need a ticket if you want me to reveal your future.".
-instead of asking the Esmerelda the Mysterious about "me", say "You[']ll need a ticket if you want me to reveal your future.".
+instead of asking the Esmeralda the Mysterious about "fortune", say "You[']ll need a ticket if you want me to reveal your future.".
+instead of asking the Esmeralda the Mysterious about "me", say "You[']ll need a ticket if you want me to reveal your future.".
 
 
 Section 13 - Carousel
@@ -2383,7 +2387,7 @@ The description of the channel locks is "Just one of the many tools used to main
 The description of the pliers is "Just one of the many tools used to maintain the carnival.".
 The description of the hammer is "Just one of the many tools used to maintain the carnival.".
 
-some circuit breaker panels are here. they are scenery. the description is "Thes are electrical panels for other parts of the carnival.".
+some circuit breaker panels are here. they are scenery. the description is "These are electrical panels for other parts of the carnival.".
 a bulb is here. it is scenery. The description is "This single bulb is feebly trying to light the room.".
 a hydraulic pump is here. It is scenery. The description is "This is some of the equipment that keeps the carnival running smoothly.".
 some gauges are here. They are scenery. The description is "The room is full of gauges reporting on the condition of the carnival.".
@@ -2533,7 +2537,7 @@ some spikes are here. they are scenery. the description is "Spikes stand on eith
 some demon sculptures are here. they are scenery. the description is "On either side of the doors are sculptures of demons welcoming you inside.".
 the sickly green light is here. it is scenery. the description is "The sickly green light reveals twisted paths and grotesque shapes.".
 some grotesque shapes are here. understand "shadowy" and "figures" as grotesque shapes. they are scenery. the description is "Shadowy figures in the shape of demons can be seen through the door.".
-some twisted paths are here. they are scenery. the description is "The paths lead through the darkness into Hell RIde.".
+some twisted paths are here. they are scenery. the description is "The paths lead through the darkness into Hell Ride.".
 instead of examining something when in darkness, say "It[']s dark. It[']s really dark. It[']s so dark you can't see anything. Really.".
 
 instead of smelling when the location is the ride entrance, say "You can smell a faint sulfuric tang in the air.".
@@ -2688,7 +2692,7 @@ Before looking when the location is the Ride Exit:
 
 The Ride Exit is south of the Guillotine Room. "[description corresponding to the locale of Ride Exit in the Table of Hell Ride Events]"
 
-The Merchandise Attendent is an attendant in the ride exit.
+The Merchandise Attendant is an attendant in the ride exit.
 
 The merchandise stand is scenery in the Ride Exit. The merchandise stand is a container. Understand "display" as merchandise stand. The description of the merchandise stand is "The stand is bathed in red light, adding to the ominous mood." 
 
@@ -3325,10 +3329,20 @@ when play begins:
 This is the image presentation status rule:
 	if show images is true, now show images is false;
 	otherwise now show images is true.
+
+transcript mode is a truth state that varies. transcript mode is usually false.	
+This is the switch transcript status rule:
+	if transcript mode is true:
+		try switching the story transcript off;
+		now transcript mode is false;
+	otherwise:
+		try switching the story transcript on;
+		now transcript mode is true.
 	
 Table of Setting Options (continued)
 title (text)	toggle(rule)
 "Image presentation is currently [if show images is true]ON[otherwise]OFF[end if]"	image presentation status rule
+"Transcript is currently [if transcript mode is true]ON[otherwise]OFF[end if]"	switch transcript status rule
 
 Chapter 2 - Help Options
 
