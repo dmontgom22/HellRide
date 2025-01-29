@@ -623,6 +623,10 @@ carry out images off:
 	say "Images off. Game images will not be displayed.";
 	now show images is false.
 	
+[beta tester's notes]
+Understand "* [text]" as a mistake ("Noted.").
+
+	
 Section 16 - Does The Player Mean
 
 Does the player mean doing something with Hell Ride: it is very likely.
@@ -1022,8 +1026,6 @@ Sound of Bell is the file "Silence.ogg" ("The sound of silence").
 five dimes underlie the seat. 
 
 [The carrying capacity of the fanny pack is 50.]
-
-Understand "* [text]" as a mistake ("Noted.").
 
 Displaying prices is an action out of world applying to nothing. Understand "display prices" as displaying prices.
 Carry out displaying prices:
