@@ -1441,7 +1441,7 @@ instead of asking the parking attendant about "[stub]":
 instead of telling the parking attendant about the "[stub]":
 	say "[The noun] replies, 'Put the ticket stub on your dashboard or your car will get towed.'".
 
-instead of going south when the location is the PL-room and the player does not have the parking ticket, say "You need to buy a parking ticket to leave your car here." instead.
+instead of going south when the location is the PL-room and the parking ticket was not handled, say "You need to buy a parking ticket to leave your car here." instead.
 
 Section 2 - Car Interior
 
@@ -1475,7 +1475,7 @@ Understand "place [something] on [something]" as putting it on. Understand "set 
 
 Section 3 - Ticket Booth
 
-After going south from the PL-room when the TB-room is unvisited and the player carries the parking ticket:
+After going south from the PL-room when the TB-room is unvisited and the parking ticket was handled:
 	if show images is true, display Figure of TicketBooth;
 	continue the action.
 	

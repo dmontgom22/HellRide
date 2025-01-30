@@ -3235,8 +3235,60 @@
     <commentary xml:space="preserve">(Testing.)&#x000A;&#x000A;&gt;[1] brief&#x000A;Hell Ride is now in its "brief" printing mode, which gives long descriptions of places never before visited and short descriptions otherwise.&#x000A;&#x000A;&gt;[2] get blueberries&#x000A;Taken.&#x000A;&#x000A;[Your score has just gone up by five points.]&#x000A;&#x000A;&gt;[3] eat blueberries&#x000A;The blueberries were delicious. A true taste of summer!&#x000A;&#x000A;[Your score has just gone up by five points.]&#x000A;&#x000A;&gt;[4] give coupon to operator&#x000A;(first taking the coupon)&#x000A;Done. The price of a parking ticket is now $3.00.&#x000A;&#x000A;&gt;[5] buy ticket&#x000A;The attendant mumbles something about the stub.&#x000A;&#x000A;You fork over $3.00 for the parking ticket, leaving yourself with $27.00.&#x000A;&#x000A;&gt;[6] ask attendant about the ticket stub&#x000A;The Parking Attendant replies, "Put the ticket stub on your dashboard or your car will get towed."&#x000A;&#x000A;&gt;[7] tell attendant about stub&#x000A;The Parking Attendant replies, "Put the ticket stub on your dashboard or your car will get towed."&#x000A;&#x000A;&gt;[8] show the stub to the attendant&#x000A;The parking stub replies, "Put the ticket stub on your dashboard or your car will get towed."&#x000A;&#x000A;&gt;[9] talk to attendant&#x000A;To start a conversation, try to ASK the Parking Attendant ABOUT something or TELL the Parking Attendant ABOUT something.&#x000A;&#x000A;&gt;[10] l at attendant&#x000A;This is another bored teenager. He's thinking about the big game on Friday night.&#x000A;&#x000A;&gt;[11] kiss attendant&#x000A;Oh, my! Why would you want to kiss the Parking Attendant? Your sweetie wouldn't like that!&#x000A;&#x000A;&gt;[12] smell attendant&#x000A;You get close to the Parking Attendant. They smell like angst and regret.&#x000A;&#x000A;&gt;[13] listen to attendant&#x000A;All you can hear is the Parking Attendant whining about working at the carnival.&#x000A;&#x000A;&gt;[14] touch attendant&#x000A;Touching the Parking Attendant without consent is likely to get you punched in the face! Better not.&#x000A;&#x000A;&gt;[15] taste attendant&#x000A;Ew! You're weird!&#x000A;&#x000A;&gt;[16] fuck attendant&#x000A;Hell Ride isn't that kind of game!&#x000A;&#x000A;&gt;[17] darn&#x000A;Said with such force!&#x000A;&#x000A;&gt;[18] damn&#x000A;Shhh! Someone will hear you!&#x000A;&#x000A;&gt;[19] get in car&#x000A;You get into the beater car.&#x000A;&#x000A;In the beater car you can see an air freshener.&#x000A;&#x000A;&gt;[20] look&#x000A;Car Interior&#x000A;This is your car. It's a 2002 Honda Civic and it's seen better days.&#x000A;&#x000A;You're sitting inside your car. Even though it's old, it feels like an old friend. From the faux leather seats to the crack in the windshield. It's familiar and comforting. There are old fast food wrappers on the floor, dirty clothes and text books in the back seat. There is an air freshener hanging from the rear view mirror. You see the seat, the ignition, the dashboard, and the glove box.&#x000A;&#x000A;In the beater car is an air freshener.&#x000A;&#x000A;&gt;[21] l at seat&#x000A;A faux leather seat that looked great when it was new.&#x000A;&#x000A;&gt;[22] l under seat&#x000A;You find the three quarters, the nickel, the five dimes, and your keys!&#x000A;&#x000A;[Your score has just gone up by five points.]&#x000A;&#x000A;&gt;[23] get all dimes&#x000A;dime: Taken.&#x000A;dime: Taken.&#x000A;dime: Taken.&#x000A;dime: Taken.&#x000A;dime: Taken.&#x000A;&#x000A;&gt;[24] get all quarters&#x000A;quarter: Taken.&#x000A;quarter: Taken.&#x000A;quarter: Taken.&#x000A;&#x000A;&gt;[25] get nickel&#x000A;Taken.&#x000A;&#x000A;&gt;[26] get keys&#x000A;Taken.&#x000A;&#x000A;&gt;[27] open glove box&#x000A;(first unlocking the glove box)&#x000A;(with your keys)&#x000A;You open the glove box, revealing a pair of gloves and a string.&#x000A;&#x000A;&gt;[28] get gloves&#x000A;Taken.&#x000A;&#x000A;&gt;[29] wear gloves&#x000A;You put on the pair of gloves.&#x000A;&#x000A;&gt;[30] set stub on the dashboard&#x000A;You put the parking stub on the dashboard.&#x000A;&#x000A;&gt;[31] l at the dashboard&#x000A;It looks like you could set something there.&#x000A;&#x000A;On the dashboard is a parking stub.&#x000A;&#x000A;&gt;[32] get air freshener&#x000A;Taken.&#x000A;&#x000A;&gt;[33] look at it&#x000A;This is one of those air fresheners that are shaped like a pine tree and smell like one too. You bought it the last time you went to the car wash.&#x000A;&#x000A;&gt;[34] put keys in ignition&#x000A;You put your keys into the ignition.&#x000A;&#x000A;&gt;[35] turn keys&#x000A;If you left now you would just end up in a bar, crying over a beer about your fight. You decide to stay and enjoy the carnival after all.&#x000A;&#x000A;&gt;[36] exit&#x000A;You get out of the beater car.&#x000A;&#x000A;Parking Lot&#x000A;You can see a Parking Attendant here.&#x000A;&#x000A;&#x000A;&gt;</commentary>
     <changed>NO</changed>
     <children>
+      <child nodeId="node-2848"/>
       <child nodeId="node-499"/>
     </children>
+  </item>
+  <item nodeId="node-2848">
+    <command xml:space="preserve">drop ticket</command>
+    <result xml:space="preserve">Dropped.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-2849"/>
+    </children>
+  </item>
+  <item nodeId="node-2849">
+    <command xml:space="preserve">s</command>
+    <result xml:space="preserve">Ticket Booth&#x000A;The ticket kiosk stands at the carnival entrance, a compact booth painted in bright red and yellow stripes with bold letters above the window reading "Tickets Here!" Twinkling lights outline its edges, blinking rhythmically to draw attention.&#x000A;&#x000A;A single window serves visitors, where a smiling cashier dispenses colorful tickets from neatly arranged rolls. Beside the tickets, a cash drawer jingles as change is counted, and a digital payment system glows faintly for modern convenience. Too bad you don't have a debit card.&#x000A;&#x000A;Next to the kiosk, a vibrant signboard lists ticket prices with playful illustrations of rides. Pennant flags flutter from the kiosk's roof, adding to the festive atmosphere, while the smell of popcorn and pretzels wafts from the southwest.&#x000A;&#x000A;The worn ground around the kiosk shows the passage of eager carnival-goers. Families, couples, and friends form a buzzing line, their excitement building as they approach this first step into the magic of the carnival.&#x000A;&#x000A;The midway continues in all directions from here. There is a cashier here. The prices of ride tickets are on the signboard. The cashier has Hell Ride ticket, Fortune Teller ticket, Ferris Wheel ticket, Bumper Cars ticket, and Carousel ticket.&#x000A;&#x000A;You can see a Cashier and a ticket kiosk here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-2850"/>
+    </children>
+  </item>
+  <item nodeId="node-2850">
+    <command xml:space="preserve">s</command>
+    <result xml:space="preserve">Head of the Line&#x000A;You are standing in front of an attendant with his hand open waiting for your ticket. The entrance to the ride is south of here. The ride operator tells you that you're lucky you showed up when you did because this will be the last trip through Hell Ride for the night. You notice that all the other cars are empty. The Ticket Kiosk is north of here.&#x000A;&#x000A;You can see a Hell Ride Attendant here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-2851"/>
+    </children>
+  </item>
+  <item nodeId="node-2851">
+    <command xml:space="preserve">n</command>
+    <result xml:space="preserve">Ticket Booth&#x000A;You can see a Cashier and a ticket kiosk here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-2852"/>
+    </children>
+  </item>
+  <item nodeId="node-2852">
+    <command xml:space="preserve">n</command>
+    <result xml:space="preserve">Parking Lot&#x000A;You can see a parking ticket and a Parking Attendant here.&#x000A;&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-2853"/>
+    </children>
+  </item>
+  <item nodeId="node-2853">
+    <command xml:space="preserve">s</command>
+    <result xml:space="preserve">Ticket Booth&#x000A;You can see a Cashier and a ticket kiosk here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
   </item>
   <item nodeId="node-499">
     <command xml:space="preserve">test electrocution</command>
