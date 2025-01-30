@@ -41,7 +41,7 @@ After a lovely meal, you get into a big fight over the tip. Your date storms off
 
 As you explore the carnival, you learn (the hard way) that the Hell Ride attraction is malfunctioning with the potential for serious injuries to the riders. You must disable the ride off and prevent any loss of life... including your own."
 The story creation year is 2025.
-The release number is 125.
+The release number is 126.
 	
 Chapter 3 - Extensions
 
@@ -58,7 +58,7 @@ Include Menus by Wade Clarke.
 Chapter 4 - The Player, Global Code
 
 The player is in the PL-room. 
-[The carrying capacity of the player is 10.]
+The carrying capacity of the player is 20.
 The description of the player is "You are despondent given that you and your date just had a huge fight and they stormed off. Maybe visiting the attractions at the carnival will make you feel better." 
 
 hair is a thing. the hair is part of the player. the description is "Your hair is clean and well styled.".
@@ -71,7 +71,7 @@ The coupon is in the wallet. The description of the coupon is "You found this in
 before examining the coupon:
 	if show images is true, display Figure of Coupon.
 
-[The fanny pack is a player's holdall. The fanny pack is wearable. The player is wearing the fanny pack. ]
+The fanny pack is a player's holdall. The fanny pack is wearable. The player is wearing the fanny pack. 
 
 after reading a command:
 	if the player's command includes "please":
@@ -158,7 +158,7 @@ Instead of buying something:
 	silently try taking the noun;
 	rule succeeds.
 	
-The player carries a wallet. The wallet contains money. The description is "This is a nice, leather, tri-fold wallet." The printed name of the money is "[price of the money] in cash". Understand "cash" as the money. The carrying capacity of the wallet is 5.
+The player carries a wallet. The wallet contains money. The description is "This is a nice, leather, tri-fold wallet." The printed name of the money is "[price of the money] in cash". Understand "cash" as the money. The carrying capacity of the wallet is 2.
 
 Instead of taking the money:
 	say "Best to leave it alone until you need to BUY something."
@@ -324,14 +324,15 @@ Section 5 - Weight Mechanics
 A weight is a kind of value. 10kg specifies a weight. 10kg net specifies a weight. 10 kg specifies a weight. 
 The verb to weigh means the weight property. Everything has a weight. A thing usually weighs 1kg.
 Every container, every supporter, and every person has a weight called maximum weight. 
-The maximum weight of a person is usually 50kg.
-The maximum weight of a container is usually 20kg.
-The maximum weight of a supporter is usually 20kg.
+The maximum weight of a person is usually 25kg.
+The maximum weight of a container is usually 15kg.
+The maximum weight of a supporter is usually 15kg.
 
 check inserting:
 	let W be the weight of the noun plus the total weight of things in the second noun;
 	if W is greater than the maximum weight of the second noun:
-		say "There[']s no room in [the second noun] to hold [the noun].".
+		say "There[']s no room in [the second noun] to hold [the noun].";
+		stop the action.
 
 Section 6 - Toad Away
 
@@ -629,24 +630,41 @@ Understand "* [text]" as a mistake ("Noted.").
 	
 Section 16 - Does The Player Mean
 
+[hell ride]
 Does the player mean doing something with Hell Ride: it is very likely.
 Does the player mean doing something with Hell Ride when the Hell Ride ticket is carried by the player: it is very likely.
 Does the player mean doing something with Hell Ride when the location is outdoors: it is very likely.
 Does the player mean doing something with the Hell Ride ticket when the location of the player is not the Head of the Line: it is very unlikely.
 Does the player mean doing something with the Hell Ride ticket when (the location of the player is the Head of the Line) and (the Hell Ride attendant is in the location of the player): it is likely.
 
+[ferris wheel]
 Does the player mean doing something with the Ferris Wheel when the location is outdoors: it is very likely.
 Does the player mean doing something with the Ferris Wheel ticket when (the location of the player is the FW-room) and (the Ferris Wheel attendant is in the location of the player): it is likely.
 
-Does the player mean doing something with Esmeralda the Mysterious when the location is the FT-room: it is very likely.
-Does the player mean doing something with the Fortune Teller ticket when (the location of the player is the FT-room) and (the Esmeralda the Mysterious is in the location of the player): it is likely.
+[fortune teller]
+Does the player mean doing something with the fortune when the location is the FT-room: it is very likely.
+Does the player mean doing something with the Fortune Teller ticket when (the location of the player is the FT-room) and (Esmeralda the Mysterious is in the location of the player): it is likely.
 
+[bumper cars]
 Does the player mean doing something with the Bumper Cars when the location is the BC-room: it is very likely.
 Does the player mean doing something with the Bumper Cars ticket when (the location of the player is the BC-room) and (the Bumper Cars attendant is in the location of the player): it is likely.
 
+[carousel]
 Does the player mean doing something with the Carousel when the location is the CR-room: it is very likely.
 Does the player mean doing something with the Carousel ticket when (the location of the player is the CR-room) and (the Carousel attendant is in the location of the player): it is likely.
 
+[miscellaneous]
+Does the player mean throwing a baseball when the location is the Pitcher's Mound: it is very likely.
+
+Does the player mean doing something with the High Striker when the location is the HS-room: it is very likely.
+
+Does the player mean doing something with the mallet when the location is the HS-room: it is very likely.
+
+Does the player mean doing something with the mercury dime when the location is the Dime Toss Game or the location is Pitcher's Mound: it is likely.
+
+Does the player mean doing something with the wooden stocks when the location is the Stocks Room: it is very likely.
+
+Does the player mean doing something with the stakes when the location is the Stake Room: it is very likely.
 
 Section 17 - Directions
 
@@ -1025,7 +1043,7 @@ Sound of Bell is the file "Silence.ogg" ("The sound of silence").
 
 five dimes underlie the seat. 
 
-[The carrying capacity of the fanny pack is 50.]
+The carrying capacity of the fanny pack is 50.
 
 Displaying prices is an action out of world applying to nothing. Understand "display prices" as displaying prices.
 Carry out displaying prices:
@@ -1087,7 +1105,7 @@ Sound of Bell is the file "Bell.ogg" ("The sound of a ship[']s bell").
 
 three dimes underlie the seat.
 
-[The carrying capacity of the fanny pack is 15.]
+The carrying capacity of the fanny pack is 15.
 
 Part 2 - The Game
 
@@ -1204,7 +1222,6 @@ Section 6 - Fuses
 
 A fuse is a kind of thing. 
 Understand "fuse" as a fuse.
-The weight of a fuse is 2kg.
 A fuse has a color. Understand the color property as describing a fuse.
 A fuse has a number called fuse id. Understand the fuse id property as describing a fuse.
 The description of a fuse is "This is [color of the item described] colored electrical fuse." 
@@ -1402,7 +1419,7 @@ check giving the coupon to the parking attendant:
 		now the coupon is nowhere;
 		say "Done. The price of a parking ticket is now [the price of the parking ticket].";
 		stop the action;
-	otherwise if the player carries the parking ticket:
+	otherwise if the parking ticket was handled:
 		say "Done. But you already bought a parking ticket.";
 		now the coupon is nowhere;
 		stop the action.
@@ -1449,6 +1466,8 @@ instead of turning your keys, say "If you left now you would just end up in a ba
 A glove box is part of the beater car. The glove box is a locked openable container. The description is "This glove box contains things like your registration and insurance information." Your keys unlock the glove box. Understand "glove compartment", "glovebox", and "compartment" as the glove box.
 
 A pair of gloves are a thing. The pair of gloves are inside the glove box. The pair of gloves is wearable. The description of the pair of gloves is "A nice set of fur-lined leather gloves. They[']re very warm." The printed name of the pair of gloves is "pair of gloves".
+
+a string is a thing. understand "twine" as string. The string is inside the glove box. The description is "It[']s a 14' piece of baker[']s twine.".
 
 Understand "exit [a direction]" as a mistake ("Please try 'go [noun]' or just '[noun]' as a direction isn[']t necessarily an exit here.")
 
@@ -1618,8 +1637,6 @@ instead of listening when the location is the HS-room, say "The sound of the mal
 	
 The High Striker is in the HS-room. It is scenery. understand "machine", "wood", "polished" and "base" as High Striker. the description is "The High Striker is a tall, eye-catching machine adorned with bright, colorful lights. A large sign at the top reads 'Test Your Strength!'. The machine[’]s base is made of polished wood. At the center is a sturdy metal pole, with a large bell hanging at the top.".
 
-does the player mean doing something with the High Striker: it is very likely.
-	
 The bell is here. The bell is scenery. The description of the bell is "This is the bell that will ring out when you prove to everyone that you[']re a 'Muscle Man'."
 
 a High Striker sign is here. it is scenery. the description is "Buy a mallet, strike the bell, win a prize."
@@ -1665,8 +1682,6 @@ Understand "swing [something preferably held] at [something]" as hitting (with n
 Rule for supplying a missing second noun while hitting:
 	if the mallet is carried, now the second noun is the mallet;
 	otherwise say "You will have to specify what to hit [the noun] with."
-
-Does the player mean doing something with the mallet when the location is the HS-room and the second noun is the mallet: it is very likely.
 
 Check hitting:
 	if noun is an attendant:
@@ -1726,8 +1741,6 @@ You[']re surprised to see that this game only costs a dime. The exit is to the s
 the Dime Toss booth is a thing in the Dime Toss Game. the Dime Toss booth is scenery. understand "game" as the dime toss booth. The description of the Dime Toss booth is "The game booth is adorned with vibrant colors — red-and-white striped awnings, twinkling lights, and eye-catching signage. [if a dime underlies the Dime Toss booth] You can see something shiny on the ground under the booth.[end if]"
 
 a mercury dime is a dime. it underlies the Dime Toss booth. The description is "The Mercury dime is a ten-cent coin struck by the United States Mint from late 1916 to 1945. Designed by Adolph Weinman and also referred to as the Winged Liberty Head dime, it gained its common name because the obverse depiction of a young Liberty, identifiable by her winged Phrygian cap, was confused with the Roman god Mercury."
-
-Does the player mean doing something with the mercury dime: it is likely.
 
 before examining the mercury dime:
 	if show images is true, display Figure of MercuryDime.
@@ -2126,27 +2139,26 @@ instead of giving the adjustable wrench to the bumper cars attendant:
 	say "Hey! Thanks, I really appreciate it. Usually no one ever responds to the radio in the Control Room.";
 	now the adjustable wrench is carried by the bumper cars attendant.
 	
-Section 12 - Fortune Teller 
+Section 12 - Fortune Teller
 
 After going southeast from the TB-room when the FT-room is unvisited:
 	if show images is true, display Figure of FortuneTeller;
 	continue the action.
 	
-Before looking when the location is the FT-room:
+Before looking when the location is the FT-room and Fortune Teller AutoPlay is not happening:
 	if show images is true, display Figure of FortuneTeller.
 	
 FT-room is a room. The printed name is "Fortune Teller". The FT-room is outdoors. The FT-room is southeast of the TB-room. "Approaching the fortune teller[’]s booth, you’re drawn in by its mysterious allure. Draped in deep purple curtains adorned with golden moons and stars, the booth glows with the soft, inviting light of candles. The air is heavy with the scent of incense, mingling with the sweet aroma of carnival treats. A sign sways slightly in the evening breeze."
 
-some candles are here. The candles are scenery. The description of the candles is "The candles flicker in the soft breeze casting light on the Esmeralda[']s face.". Understand "candle" as candles. instead of taking the candles, say "Esmeralda says, 'Hey! I need those!'".
+some candles are here. The candles are scenery. The description of the candles is "The candles flicker in the soft breeze casting light on Esmeralda[']s face.". Understand "candle" as candles. instead of taking the candles, say "Esmeralda says, 'Hey! I need those!'".
 
-The Fortune Teller Booth is here. It is scenery. The description is "Draped in deep purple curtains adorned with golden moons and stars, the cabana glows with the soft, inviting light of lanterns. The air is heavy with the scent of incense, mingling with the sweet aroma of carnival treats."
+The Fortune Teller Booth is here. It is scenery. The description is "Draped in deep purple curtains adorned with golden moons and stars, the booth glows with the soft, inviting light of candles. The air is heavy with the scent of incense, mingling with the sweet aroma of carnival treats."
 
 instead of smelling when the location is the FT-room, say "The smell of incense wafts through the air mixed with the scent of fresh, buttered popcorn.".
 
-The curtains are here. They are scenery. Understand "drapes" as curtains. The description of the curtains is "The curtains are deep purple with golden moons and stars.".
+some curtains are here. They are scenery. Understand "drapes" as curtains. The description of the curtains is "The curtains are deep purple with golden moons and stars.".
 The Fortune Teller sign is here. The Fortune Teller sign is scenery. The description of the Fortune Teller sign is "'Fortunes Told — What Does Your Future Hold?' Underneath that it says 'Ticket Required'".
-
-some robes are here. they are scenery. understand "robe" as robes. the description is "The Esmeralda wears flowing robes embellished with shimmering beads, and a jeweled headpiece.".
+some robes are here. they are scenery. understand "robe" as robes. the description is "Esmeralda wears flowing robes embellished with shimmering beads, and a jeweled headpiece.".
 a headpiece is here. it is scenery. understand "beads", "jewels", and "jeweled" as headpiece. the description is "Esmeralda wears flowing robes embellished with shimmering beads, and a jeweled headpiece.".
 a round table is here. it is scenery. It is a  supporter. the description is "This is a small round table with a crystal ball, some tarot cards, and some trinkets on it.".
 a crystal ball is on the round table. The crystal ball is scenery. The description is "A softball sized crystal ball sits on the table, glowing dimly.".
@@ -2154,23 +2166,41 @@ some tarot cards are on the round table. they are scenery. understand "card" as 
 some trinkets are on the round table. they are scenery. the description is "The purpose of the trinkets remains a mystery.".
 your palm is here. it is scenery. the description is "It[']s your palm, in the middle of your hand.".
 
-Esmeralda the Mysterious is a woman in the FT-room. Understand "mysterious", "woman", "fortune teller" and "teller" as the Esmeralda the Mysterious. The description of the Esmeralda the Mysterious is "The fortune teller sits in a dimly lit booth, draped in rich fabrics of deep purple and gold, adorned with celestial patterns of stars and moons. Their appearance is enigmatic, with piercing eyes that seem to look right through you and a knowing smile that hints at secrets yet untold. She wears flowing robes embellished with shimmering beads, and a jeweled headpiece catches the flickering light of nearby candles."
+Esmeralda the Mysterious is a woman in the FT-room. Understand "mysterious", "woman", "fortune teller", and "Esmerelda" as Esmeralda the Mysterious. The description of Esmeralda the Mysterious is "The fortune teller sits in a dimly lit booth, draped in rich fabrics of deep purple and gold, adorned with celestial patterns of stars and moons. Her appearance is enigmatic, with piercing eyes that seem to look right through you and a knowing smile that hints at secrets yet untold. She wears flowing robes embellished with shimmering beads, and a jeweled headpiece catches the flickering light of nearby candles."
 
 a thing called a fortune is here. it is scenery. the description is "You ponder the ramifications of having your fortune told.".
-does the player mean doing something with the fortune: it is very likely.
 
-instead of giving the fortune teller ticket to the Esmeralda the Mysterious:
+instead of giving the fortune teller ticket to Esmeralda the Mysterious:
 	say "You give [the noun] to [the second noun].";
 	now Esmeralda the Mysterious carries the fortune teller ticket;
-	say "[line break]Stepping inside, you’re greeted by the fortune teller, a figure cloaked in flowing robes with a jeweled headpiece catching the flickering light. Their piercing eyes seem to look right through you as they gesture for you to sit at a small round table covered in an ornate cloth. At its center rests a glowing crystal ball, surrounded by tarot cards and mysterious trinkets.
+	say "[line break]Stepping inside, you’re greeted by the Esmeralda, a figure cloaked in flowing robes with a jeweled headpiece catching the flickering light. Their piercing eyes seem to look right through you as they gesture for you to sit at a small round table covered in an ornate cloth. At its center rests a glowing crystal ball, surrounded by tarot cards and mysterious trinkets.
 
-Esmeralda[’]s voice is low and melodic, weaving an air of intrigue as they ask you to focus on a question and offer your palm for a reading. The room seems to shrink, the bustling carnival outside fading into the background as they reveal your fate. Each card turned and line traced on your palm feels significant, as though unlocking a secret you didn’t know you carried.
+Esmeralda[’]s voice is low and melodic, weaving an air of intrigue as they ask you to focus on a question and offer you a tarot reading. The room seems to shrink, the bustling carnival outside fading into the background as they reveal your fate. Each card turned  feels significant, as though unlocking a secret you didn’t know you carried."
 
-As the reading concludes, the Esmeralda gazes into your eyes with a cryptic smile and delivers their final words of wisdom: 'You need fuses.' Whether you leave with a sense of wonder, excitement, or unease, the encounter lingers with you — a touch of magic amid the carnival’s chaos, as if you’ve glimpsed something beyond the ordinary."
+instead of asking Esmeralda the Mysterious about "fortune", say "You[']ll need a ticket if you want me to reveal your future.".
+instead of asking Esmeralda the Mysterious about "me", say "You[']ll need a ticket if you want me to reveal your future.".
 
-instead of asking the Esmeralda the Mysterious about "fortune", say "You[']ll need a ticket if you want me to reveal your future.".
-instead of asking the Esmeralda the Mysterious about "me", say "You[']ll need a ticket if you want me to reveal your future.".
+Fortune Teller AutoPlay is a scene. 
+Fortune Teller AutoPlay begins when Esmeralda the Mysterious carries the Fortune Teller ticket.
+Fortune Teller AutoPlay ends when the index is the number of rows in the Table of Fortune Teller Events plus 1.
 
+When Fortune Teller AutoPlay begins, now index is 1.
+When Fortune Teller AutoPlay ends:
+	say "As the reading concludes, Esmeralda gazes into your eyes with a cryptic smile and delivers their final words of wisdom: 'You need fuses.' Whether you leave with a sense of wonder, excitement, or unease, the encounter lingers with you — a touch of magic amid the carnival’s chaos, as if you’ve glimpsed something beyond the ordinary.";
+	now the fortune teller ticket is nowhere.
+	
+last category is text that varies. last category is usually ""..
+last card is text that varies. last card is usually "".
+every turn during Fortune Teller AutoPlay:
+	choose row index in the Table of Fortune Teller Events;
+	say "[bold type][category entry]: [card entry][roman type][line break][description entry][paragraph break]";
+	now last category is category entry;
+	now last card is card entry;
+	now last description is description entry;
+	increment index;
+	rule succeeds;
+
+instead of looking during the Fortune Teller AutoPlay, say "[bold type][last category]: [last card][roman type][line break][last description][paragraph break]";
 
 Section 13 - Carousel
 
@@ -2496,8 +2526,8 @@ Hell Ride AutoPlay is a scene.
 Hell Ride AutoPlay begins when the player is in the hell ride car for 2 turns.
 Hell Ride AutoPlay ends when index is the number of rows in the Table of Hell Ride Events.
 	
-When Hell Ride AutoPlay ends:
-	end the story finally.
+When Hell Ride AutoPlay begins, now index is 1.
+When Hell Ride AutoPlay ends, end the story finally.
 	
 Instead of doing something other than waiting, looking, listening, smelling or examining during Hell Ride AutoPlay:
 	say "You[']re enjoying the ride so much that you don[']t want to do anything but sit and watch the ride go by."
@@ -2558,7 +2588,6 @@ Before looking when the location is the Stocks Room:
 Stocks Room is south of the Ride Entrance. "[description corresponding to the locale of Stocks Room in the Table of Hell Ride Events]"
 
 The wooden stocks are a supporter in the Stocks Room. The wooden stocks are fixed in place. The description of the wooden stocks is "At the square[']s center stand a row of crude wooden stocks, their heavy beams stained from years of weather and use. Iron clasps hold the unfortunate captives by their wrists and necks, their bodies forced into unnatural, humiliating postures.".
-does the player mean doing something with the wooden stocks: it is very likely.
 
 the stocks public square is here. it is scenery. the description is "The public square is a cobblestone expanse bordered by weathered timber-framed buildings.".
 
@@ -2617,7 +2646,6 @@ the condemned women  are here. they are scenery. understand "woman" and "prisone
 the stakes public square is here. it is scenery. the description is "The public square is steeped in grim silence, broken only by the crackling of flames.".
 
 stakes are in the Stake Room. It is scenery. The description is "Three wooden stakes rise from a pyre. Bound to the stakes are three women.".
-does the player mean doing something with the stakes: it is very likely.
 
 the stake crowd is here. it is scenery. understand "onlookers" as the stake crowd. the description is "A crowd encircles the scene, expressions ranging from morbid fascination to righteous fury.".
 
@@ -2901,8 +2929,8 @@ To decide what number is --/the dial setting of (D - a dial):
 Understand "dial [something related by reversed incorporation]" as a dial.
 Understand "[something related by reversed incorporation] dial" as a dial.
 
-Does the player mean spinning a dial to a number: it is very likely.
-Does the player mean spinning a control panel to a number: it is very unlikely.
+Does the player mean spinning a dial to a number when the location is the Control Room: it is very likely.
+Does the player mean spinning a control panel to a number when the location is the Control Room: it is very unlikely.
 
 Spinning it to is an action applying to one thing and one number. 
 Check spinning it to: if the noun is not a dial, say "[The noun] does not spin." instead. 
@@ -3199,7 +3227,19 @@ description
 "The music alternates between hauntingly slow melodies and rapid, energetic drum beats, creating an emotional arc that keeps you entranced. Little Egypt relies on the music[']s dynamic changes to tell a story with movements reflecting joy, sorrow, seduction, and celebration."
 "The performance concludes with a dramatic flourish of a fast-paced shimmy, a bold spin, and Little Egypt dramatically casts off her veils. The dancer takes a bow to enthusiastic applause, leaving you spellbound by the sensual yet artful display."
 
-Section 12 - Introduction to Hell Ride
+Section 12 - Table of Fortune Teller Events
+
+Table of Fortune Teller Events
+category (text)	card (text)	description (text)
+"Where you are now"	"The Hermit"	"The Hermit reflects solitude and wisdom. It suggests that it is time for you to turn inward, exploring your intuition and hidden knowledge. Through introspection and soul-searching, you will be able to find enlightenment. There is an element of healing with the Hermit. If you have been through a difficult time, the energy of the Hermit will allow you to heal and learn from your past."
+"What fears are holding you back"	"The Tower"	"You are scared to face up to the truth and prefer to live in denial. They say ignorance is bliss, but the bliss won’t last forever. What is it that you are finding it difficult to admit? Why are you shutting it out? It is time to reflect on your truth and figure out what you need to face up to. You will feel so much better for doing so."
+"Your strengths"	"The Star"	"You are an upbeat and positive individual, full of energy and hope. You always look on the bright side of life, learning from difficulty and trauma. The Star reminds you to shine. Always be yourself and keep that positive energy flowing! This card also suggests that you have creative talents that provide you with ways to succeed and flourish."
+"Weaknesses you need to address"	"The Devil"	"Materialism and greed are defining your life. You put money and status above everything else and always compare what you have to what other people have. You need to step back and remind yourself of what life is really about. Of course, getting a new car or a new designer bag feels good at the time. But, this good feeling is short-lived. It is time to turn your attention to spirituality and let go of your materialistic attitude."
+"Your potential"	"Death"	"The future is bright with the Death card, with the potential for transformation and growth on the horizon. You are able to become exactly who you dream of being by embracing changes and fresh starts that are coming your way. By working with the rhythm of the universe, you can manifest and achieve whatever you want."
+
+
+
+Section 13 - Introduction to Hell Ride
 
 When play begins:
 	choose row 1 in Table of Help Options;
@@ -3211,7 +3251,7 @@ After a lovely meal, you get into a big fight over the tip. Your date storms off
 
 As you explore the carnival, you learn (the hard way) that the Hell Ride attraction is malfunctioning with the potential for serious injuries to the riders. You must disable the ride and prevent any loss of life... including your own."
 
-Section 13 - Hell Ride Origins
+Section 14 - Hell Ride Origins
 
 When play begins:
 	 choose row 2 in Table of Help Options;
@@ -3231,7 +3271,7 @@ I hope you enjoy it.
 d.[line break]
 (dmontgom22@gmail.com)"
 
-Section 14 - Credits
+Section 15 - Credits
 
 Crediting is an action applying to nothing. Understand "Credits" as crediting.
 
@@ -3266,7 +3306,7 @@ Test Games with "Test g1 / test g2 / test g3".
 
 Chapter 4 - Attractions
 
-Test Attractions with "s / buy all tickets / e / e / e / give Ferris wheel ticket to Ferris wheel operator / w / w / ne / give carousel ticket to carousel operator / sw / se / give fortune teller ticket to mysterious woman / nw / nw / l at two dollar bill / get two dollar bill / give bumper cars ticket to bumper cars operator / se / n"
+Test Attractions with "s / buy all tickets / e / e / e / give Ferris wheel ticket to Ferris wheel operator / w / w / ne / give carousel ticket to carousel operator / sw / se / give fortune teller ticket to mysterious woman  / z / z / z / z / nw / nw / l at two dollar bill / get two dollar bill / give bumper cars ticket to bumper cars operator / se / n"
 
 Chapter 5 - Back Stage
 
@@ -3280,7 +3320,7 @@ Test b1a with "n / w / n / n / nw / give the adjustable wrench to the attendant 
 Test b2 with "w / l under stocks / take emerald / e / s / w / l under platform / take khaki fuse / e / s / w / l in pyre / get fuse / e / s / w / l under seat / take indigo fuse / e / s / w / l under platform / take gray fuse / e / s / s / w / l in stand / buy aqua fuse / e / n"
 
 [fill the sockets]
-Test b3 with "ne / open panel / put aqua fuse in socket / flip switch / sw / e / open panel / put crimson in socket / flip switch / w / se / open panel / put emerald fuse in socket / toggle switch / nw / sw / open panel / put gray fuse in socket / toggle switch / ne / w / open panel / put indigo fuse in socket / push switch / e / nw / l at panel / unlock panel with knife / l at panel / open  panel / l at panel / l at switch. / l at indicator / l at socket / put khaki fuse in socket / push switch / l at socket / se"
+Test b3 with "ne / open panel / put aqua fuse in socket / flip switch / sw / e / open panel / put crimson fuse in socket / flip switch / w / se / open panel / put emerald fuse in socket / toggle switch / nw / sw / open panel / put gray fuse in socket / toggle switch / ne / w / open panel / put indigo fuse in socket / push switch / e / nw / l at panel / unlock panel with knife / l at panel / open  panel / l at panel / l at switch. / l at indicator / l at socket / put khaki fuse in socket / push switch / l at socket / se"
 
 [turn the dials]
 test b4 with "n / n / n / n / n / climb ladder / w / l at control panel 1 / turn aqua dial to 1 / turn crimson dial to three / turn emerald dial to 5 / turn gray dial to seven / turn indigo dial to 9 / turn khaki dial to eleven / push aqua button / l at control panel 1 / push crimson button / l at control panel  3 / push emerald button / l at control panel 5 / push gray button / l at control panel 11 / push khaki button"
@@ -3326,10 +3366,20 @@ Check asking for help:
 when play begins:
 	 now mn_master_table is the Table of Help Options.
 	
+[build points awarded text]
+when play begins:
+	let T be "[fixed letter spacing]Note that not all of these points are awarded. Some are mutually exclusive of others.[paragraph break]";
+	repeat through Table of Scored Circumstances:
+		let T be "[T][point value entry] - [description entry][line break]";
+	choose row 11 from Table of Help Options;
+	now the description entry is T.
+
+[images]	
 This is the image presentation status rule:
 	if show images is true, now show images is false;
 	otherwise now show images is true.
 
+[transcript]
 transcript mode is a truth state that varies. transcript mode is usually false.	
 This is the switch transcript status rule:
 	if transcript mode is true:
@@ -3338,7 +3388,7 @@ This is the switch transcript status rule:
 	otherwise:
 		try switching the story transcript on;
 		now transcript mode is true.
-	
+
 Table of Setting Options (continued)
 title (text)	toggle(rule)
 "Image presentation is currently [if show images is true]ON[otherwise]OFF[end if]"	image presentation status rule
@@ -3358,6 +3408,7 @@ title (text)	subtable (table name)	description (text)	toggle (rule)	used (number
 "Hell Ride"	Table of Hell Ride Hints	--
 "The Electrical Area"	Table of Electrical Area Hints	--
 "The Control Room"	Table of Control Room Hints	--
+"How Points Are Awarded"	--	""
 "Settings"	Table of Setting Options	--	
 "Credits"	--	"[story title], Copyright 2025 by Dana Montgomery and 1988 by No Shoes.[paragraph break]Extensions used in [story title]:[line break][complete list of extension credits]"
 
@@ -3483,3 +3534,104 @@ title (text)	subtable (table name)	description (text)	toggle (rule)	used (number
 "hint"	--	"Is there a number that corresponds to each color?"
 "hint"	--	"Aqua = A = 1, Crimson = C = 3, etc."
 "hint"	--	"Push the indigo button."
+
+Part 7 - Inform 6
+
+Include (-
+
+	[ ChooseObjects obj code  l i swn spcount;
+		if (code<2) rfalse;
+
+		if (cobj_flag == 1) {
+			.CodeOne;
+			if (parameters > 0) {
+				#ifdef COBJ_DEBUG;
+				print "[scoring ", (the) obj, " (second)]^";
+				#endif;
+				return ScoreDabCombo(parser_results-->INP1_PRES, obj);
+			} else {
+				#ifdef COBJ_DEBUG;
+				print "[scoring ", (the) obj, " (first) in ",
+					alt_match_list-->0, " combinations]^";
+				#endif;
+				l = 0;
+				for (i=1: i<=alt_match_list-->0: i++) {
+					spcount = ScoreDabCombo(obj, alt_match_list-->i);
+					if (spcount == HIGHEST_DPMR_SCORE) {
+						#ifdef COBJ_DEBUG;
+						print "[scored ", spcount, " - best possible]^";
+						#endif;
+						return spcount;
+					}
+					if (spcount>l) l = spcount;
+				}
+				return l;
+			}
+		}
+		if (cobj_flag == 2) {
+			.CodeTwo;
+			#ifdef COBJ_DEBUG;
+			print "[scoring ", (the) obj, " (simple); parameters = ", parameters,
+				" aw = ", advance_warning, "]^";
+			#endif;
+			@push action_to_be;
+			if (parameters==0) {
+				if (advance_warning > 0)
+					l = ScoreDabCombo(obj, advance_warning);
+				else
+					l = ScoreDabCombo(obj, 0);
+			} else {
+				l = ScoreDabCombo(parser_results-->INP1_PRES, obj);
+			}
+			@pull action_to_be;
+			return l;
+		}
+
+		#ifdef COBJ_DEBUG;
+		print "[choosing a cobj strategy: ";
+		#endif;
+		swn = wn;
+		spcount = pcount;
+		while (line_ttype-->pcount == PREPOSITION_TT) pcount++;
+		if (line_ttype-->pcount == ELEMENTARY_TT) {
+			if (line_tdata-->pcount == TOPIC_TOKEN) {
+				pcount = spcount;
+				jump CodeTwo;
+			}
+			while (wn <= num_words + 1) {	! MODIFIED
+				l = NextWordStopped(); wn--;
+				if (l == THEN1__WD) break;
+				if ( (l ~= -1 or 0) && (l->#dict_par1) &8 ) { wn++; continue; }	! if preposition
+				if (l == ALL1__WD or ALL2__WD or ALL3__WD or ALL4__WD or ALL5__WD) { wn++; continue; }
+				SafeSkipDescriptors();
+				! save the current match state
+				@push match_length; @push token_filter; @push match_from;
+				alt_match_list-->0 = number_matched;
+				COBJ__Copy(number_matched, match_list, alt_match_list+WORDSIZE);
+				! now get all the matches for the second noun
+				match_length = 0; number_matched = 0; match_from = wn;
+				token_filter = 0;
+				SearchScope(actor, actors_location, line_tdata-->pcount);
+				#ifdef COBJ_DEBUG;
+				print number_matched, " possible second nouns]^";
+				#endif;
+				wn = swn;
+				cobj_flag = 1;
+				! restore match variables
+				COBJ__SwapMatches();
+				@pull match_from; @pull token_filter; @pull match_length;
+				pcount = spcount;
+				jump CodeOne;
+			}
+		}
+		pcount = spcount;
+		wn = swn;	
+		
+		#ifdef COBJ_DEBUG;
+		print "nothing interesting]^";
+		#endif;
+		cobj_flag = 2;
+		jump CodeTwo;
+	];
+
+-) replacing "ChooseObjects".
