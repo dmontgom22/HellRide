@@ -72,7 +72,7 @@ Next to the kiosk, a vibrant signboard lists ticket prices with playful illustra
 
 The worn ground around the kiosk shows the passage of eager carnival-goers. Families, couples, and friends form a buzzing line, their excitement building as they approach this first step into the magic of the carnival.
 
-The midway continues in all directions from here. There is a cashier here. The prices of ride tickets are on the signboard. The cashier has Hell Ride ticket, Fortune Teller ticket, Ferris Wheel ticket, Bumper Cars ticket, and Carousel ticket.
+The midway continues in all directions from here. There is a cashier here. A price list for ride tickets is on the signboard. The cashier has Hell Ride ticket, Fortune Teller ticket, Ferris Wheel ticket, Bumper Cars ticket, and Carousel ticket.
 
 You can see a Cashier and a ticket kiosk here.
 
@@ -218,7 +218,7 @@ Behold the one, the only Little Egypt, performing her legendary Dance of the Pyr
 For just a dime, a mere one tenth of a dollar, prepare to be transported to the sands of Cairo, where enchantment and wonder await!
 
 Show Facade
-You head west through the midway, the bright lights of the carnival fading behind you as you approach a tent. A sign above the entrance reads "Little Egypt Show - A Journey Into the Mysterious and Exotic!" A rotund barker, wearing a fez and a dazzling smile, gestures to a small sign beside him that says "Little Egypt - Dime Admission."  The Ticket Kiosk is back the way you came.
+You head west through the midway, the bright lights of the carnival fading behind you as you approach a tent. A sign above the entrance reads "Little Egypt Show - A Journey Into the Mysterious and Exotic!" A rotund barker, wearing a fez and a dazzling smile, gestures to a small sign beside him. The Ticket Kiosk is back the way you came.
 
 There is a stage in front of the tent. The Barker is encouraging you to step up and enjoy the Little Egypt Show.
 
@@ -233,9 +233,6 @@ You hand over a dime, and the barker nods, waving you through. As you step past 
 
 Show Tent
 You are inside the Little Egypt Show. The attraction's facade is to the east. There are folding chairs organized neatly in rows. The show should start soon.
-
->z
-Time passes.
 
 >z
 Time passes.
@@ -261,6 +258,11 @@ Little Egypt makes eye contact with you and smiles enigmatically. During her per
 Time passes.
 
 The music alternates between hauntingly slow melodies and rapid, energetic drum beats, creating an emotional arc that keeps you entranced. Little Egypt relies on the music's dynamic changes to tell a story with movements reflecting joy, sorrow, seduction, and celebration.
+
+>z
+Time passes.
+
+The performance concludes with a dramatic flourish of a fast-paced shimmy, a bold spin, and Little Egypt dramatically casts off her veils. The dancer takes a bow to enthusiastic applause, leaving you spellbound by the sensual yet artful display.
 
 You applaud until your hands are sore. Did she just wink at you?
 

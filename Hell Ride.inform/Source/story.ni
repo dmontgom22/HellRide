@@ -81,6 +81,13 @@ after reading a command:
 after reading a command:
 	if the player's command matches "load", try restoring the game instead.
 	
+[time]
+when play begins:
+	now the left hand status line is "Score: [score] / Turns: [turn count] / [the player's surroundings]";
+	now the right hand status line is "Time: [time of day]".
+	
+The time of day is 7:53 PM.
+	
 [obituary]
 Rule for printing the player's obituary:
 	[winning move]
@@ -588,7 +595,6 @@ instead of tasting something, say "Ew! You[']re weird!".
 a thing called music is a backdrop.
 instead of listening to music, say "You can hear all the sounds of the carnival. The sounds of a calliope waft across the thoroughfare from the carousel. You can hear the laughter and screams as other patrons ride the rides and play the games.".
 
-
 Section 15 - Miscellaneous
 
 [coins]
@@ -626,7 +632,6 @@ carry out images off:
 	
 [beta tester's notes]
 Understand "* [text]" as a mistake ("Noted.").
-
 	
 Section 16 - Does The Player Mean
 
@@ -665,6 +670,10 @@ Does the player mean doing something with the mercury dime when the location is 
 Does the player mean doing something with the wooden stocks when the location is the Stocks Room: it is very likely.
 
 Does the player mean doing something with the stakes when the location is the Stake Room: it is very likely.
+
+Does the player mean doing something with the glove box when the location is PL-room: it is very likely.
+
+Does the player mean doing something with the rolls of tickets when the location is the TB-room: it is very unlikely.
 
 Section 17 - Directions
 
@@ -1364,6 +1373,7 @@ Chapter 2 - The Midway
 Section 1 - Parking Lot
 
 When play begins:
+	say "Type 'Images off' to prevent the game from displaying images. Type 'Help' for hints about [story title] and general information about playing interactive fiction games.";
 	display the figure of Hell Ride;
 	say "Date night with your sweetie: a meal at your favorite restaurant and a night at the carnival. 
 
@@ -1379,9 +1389,7 @@ Puddles from recent rain shimmer with reflected lights, while patches of mud cli
 
 Alive with anticipation, the parking lot marks the transition from the ordinary to the magic of the carnival.
 
-The midway is to the south. There is a blueberry bush here. [if blueberry bush contains blueberries]There are blueberries on the bush.[otherwise]The bush has been picked clean.[end if][paragraph break]Your car is here. It[']s a bit of a beater. Inside the car, you can see [the list of things which are part of the beater car].[if the PL-room is unvisited]
-
-Type 'Images off' to prevent the game from display images. Type 'Help' for hints about the game and general information about playing interactive fiction games.[end if]"
+The midway is to the south. There is a blueberry bush here. [if blueberry bush contains blueberries]There are blueberries on the bush.[otherwise]The bush has been picked clean.[end if][paragraph break]Your car is here. It[']s a bit of a beater. Inside the car, you can see [the list of things which are part of the beater car]."
 
 The Parking Attendant is an attendant in the the PL-room. The parking attendant carries a parking ticket. The price of the parking ticket is $5.00. The description of the parking ticket is "This is your receipt for parking."
 
@@ -1392,7 +1400,7 @@ after looking when the location is the PL-room:
 
 The beater car is an open enterable unopenable container in the PL-room. The beater car is scenery. Understand "vehicle" and "car" as the beater car. The description of the beater car is "[if the player is in the beater car][bold type]Car Interior[roman type][line break][end if]This is your car. It[']s a 2002 Honda Civic and it[']s seen better days.[paragraph break][if the player is in the beater car]You[']re sitting inside your car. [end if]Even though it[']s old, it feels like an old friend. From the faux leather seats to the crack in the windshield. It[']s familiar and comforting. There are old fast food wrappers on the floor, dirty clothes and text books in the back seat. There is an air freshener hanging from the rear view mirror. You see [the list of things which are part of the beater car]." 
 
-a cash box is here. it is scenery. the description is "The cash box is full of change and paper money.".
+a cash box is here. it is scenery. understand "drawer" as the cash box. the description is "The cash box is full of change and paper money.".
 
 The puddles are here. The puddles are scenery. The description is "You carefully skirt the puddles to avoid getting your feet wet.".
 
@@ -1446,10 +1454,10 @@ instead of going south when the location is the PL-room and the parking ticket w
 Section 2 - Car Interior
 
 every turn when the location is the PL-room:
-	now the left hand status line is "[the player's surroundings]".
+	now the left hand status line is "Score: [score] / Turns: [turn count] / [the player's surroundings]".
 	
 every turn when the player is in the beater car:
-	now the left hand status line is "Car Interior".
+	now the left hand status line is "Score: [score] / Turns: [turn count] / Car Interior".
 
 An air freshener is in the beater car. The description of the air freshener is "This is one of those air fresheners that are shaped like a pine tree and smell like one too. You bought it the last time you went to the car wash."
 
@@ -1492,7 +1500,7 @@ The TB-room is south of the PL-room.
 The TB-room is southeast of the BC-room.
 The TB-room is west of the HS-room. 
 
-The Cashier is an attendant in the TB-room. 
+The Cashier is an attendant in the TB-room. Understand "smiling" as cashier.
 
 The description of the TB-room is "The ticket kiosk stands at the carnival entrance, a compact booth painted in bright red and yellow stripes with bold letters above the window reading 'Tickets Here!' Twinkling lights outline its edges, blinking rhythmically to draw attention.
 
@@ -1502,7 +1510,17 @@ Next to the kiosk, a vibrant signboard lists ticket prices with playful illustra
 
 The worn ground around the kiosk shows the passage of eager carnival-goers. Families, couples, and friends form a buzzing line, their excitement building as they approach this first step into the magic of the carnival.
 
-The midway continues in all directions from here. There is a cashier here. The prices of ride tickets are on the signboard. The cashier has [list of things carried by the cashier]."
+The midway continues in all directions from here. There is a cashier here. A price list for ride tickets is on the signboard. The cashier has [list of things carried by the cashier]."
+
+a window is here. it is scenery. the description is "Behind the window is a cashier selling tickets to the various rides.".
+
+some playful illustrations are here. they are scenery. the description is "You can see colorful illustrations of some of the rides: the Carousel, [story title], the Bumper Cars, and the Ferris Wheel.".
+
+some pennant flags are here. they are scenery. the description is "Pennant flags flutter from the kiosk’s roof.".
+
+some lights are here. they are scenery. the description is "Twinkling lights outline its edges, blinking rhythmically to draw attention.".
+
+some rolls of tickets are here. they are scenery. understand "roll" as rolls of tickets. the description is "Neatly arranged rolls of colorful tickets are displayed behind the cashier.".
 
 The ticket kiosk is a thing. It is in the TB-room. Understand "booth" as the ticket kiosk. The description of the ticket kiosk is "A single window serves visitors, where a smiling cashier dispenses colorful tickets from neatly arranged rolls. Beside the tickets, a cash drawer jingles as change is counted, and a digital payment system glows faintly for modern convenience. Too bad you don[']t have a debit card.
 
@@ -1520,9 +1538,11 @@ a thing called a Bumper Cars ticket is a ride ticket. The cashier carries the bu
 
 a thing called a Carousel ticket is a ride ticket. The cashier carries the carousel ticket. The price of the carousel ticket is $1.00. The description of the carousel ticket is "'Admit One' to the Carousel."
 
+a digital payment system is here. it is scenery. the description is "This is your usual credt/debit card reader. Too bad you have neither.".
+
 a cash drawer is here. it is scenery. understand "box" as cash drawer. the description is "The cash drawer is full of change and paper money.".
 
-some families are here. they are scenery. understand "couples", and "friends" as families. the description is "Families, couples, and friends form a buzzing line, their excitement building as they approach this first step into the magic of the carnival.".
+some families are here. they are scenery. understand "couples", "visitors", and "friends" as families. the description is "Families, couples, and friends form a buzzing line, their excitement building as they approach this first step into the magic of the carnival.".
 
 There is a signboard in the TB-room. The signboard is scenery. Understand "sign", "board", "price", and "list" as signboard. The description of the signboard is "It[']s a sign displaying the prices of the various rides".
 
@@ -1918,7 +1938,7 @@ Before going west when the location is the TB-room and the SF-room is unvisited:
 Before looking when the location is the SF-room:
 	if show images is true, display Figure of LittleEgyptFacade.
 
-SF-room is a room. SF-room is east of ST-room. The printed name is "Show Facade". SF-room is outdoors. "You head west through the midway, the bright lights of the carnival fading behind you as you approach a tent. A sign above the entrance reads 'Little Egypt Show — A Journey Into the Mysterious and Exotic!' A rotund barker, wearing a fez and a dazzling smile, gestures to a small sign beside him that says 'Little Egypt - Dime Admission.'  The Ticket Kiosk is back the way you came.
+SF-room is a room. SF-room is east of ST-room. The printed name is "Show Facade". SF-room is outdoors. "You head west through the midway, the bright lights of the carnival fading behind you as you approach a tent. A sign above the entrance reads 'Little Egypt Show — A Journey Into the Mysterious and Exotic!' A rotund barker, wearing a fez and a dazzling smile, gestures to a small sign beside him. The Ticket Kiosk is back the way you came.
 
 There is a stage in front of the tent. The Barker is encouraging you to step up and enjoy the Little Egypt Show."
 
@@ -1931,8 +1951,7 @@ some facade incense is here. they are scenery. the description is "The smell of 
 instead of smelling when the location is the ST-room, try examining the incense instead.
 
 report going west when the location is the SF-room and the location is unvisited:
-	say "[the barker's cry]";
-[	stop the action.]
+	say "[the barker's cry]".
 
 a tent is in the SF-room. it is scenery. the description is "Inside the tent is the Little Egypt show.".
 
@@ -1940,7 +1959,7 @@ the facade stage is here. it is scenery. the description is "On the stage stands
 
 a fez is here. it is scenery. understand "hat" as fez. the description is "The fez is a type of hat that originates from the Ottoman Empire and is named after the city of Fez in Morocco. It is a brimless, cylindrical or truncated conical hat, typically made of red felt. The hat often features a black tassel that hangs from the top, though the design can vary slightly.".
 
-A sign is in the SF-room. The sign is scenery. The description of the sign is "The sign reads, 'Little Egypt Show — Dime Admission'".
+A sign is in the SF-room. The sign is scenery. The description of the sign is "The sign reads, 'Little Egypt Show — Dime Admission'. Underneath it says 'The show starts every 15 minutes beginning at the top of the hour.'".
 
 The Barker is a person in SF-room. Understand "attendant", "attendent", "operator", "shirt", "pants", and "vest" as the Barker. The description of the barker is "Here is a man dressed in black pants, a blue shirt,a red vest, a hat much like a fez, and a dazzling smile.". 
 
@@ -1952,6 +1971,9 @@ Check going west when the location is the SF-room and the barker is not carrying
 
 After giving when the noun is dime and the second noun is barker:
 	say "You hand over a dime, and the barker nods, waving you through. As you step past the entrance, the air feels thicker, almost humid, and the sounds of the carnival fade away. You’ve entered an entirely different world now — one filled with the scents of incense and exotic spices, and the low, hypnotic music of a faraway land. Before you, a series of dimly lit tents stretch out, their flaps slightly swaying in the breeze. Intrigued, you take your first step into the Little Egypt Show. You can now head west into the show."
+	
+instead of listening when the location is the SF-room, say "You hear the low, hypnotic music of a faraway land.".
+instead of smelling when the location is the SF-room, say "The smell of incense and spices wafts through the tent."
 
 Section 9 - Show Tent	
 
@@ -1979,7 +2001,7 @@ instead of smelling when the location is the ST-room, try examining the incense 
 
 some fabric is here. they are scenery. the description is "The linen and silk fabrics come in all different colors.".
 
-some brass ornaments are here. they are scenery. the description is "There are highly polished incense holders and brass lanterns here.". understand "polished", "incense", "holders", "holder", "brass", "lantern", and "lanterns" as brass ornaments.
+some brass ornaments are here. they are scenery. the description is "There are highly polished incense holders and brass lanterns here.". understand "polished", "incense", "holders", "holder", and "brass" as brass ornaments.
 
 understand "backdrop" as canvas.
 The canvas is here. It is scenery. The description of the canvas is "Elegantly painted on linen, the backdrop shows scenes of Middle Eastern life.".
@@ -2002,8 +2024,10 @@ after taking the lantern for the first time:
 The folding chair is a enterable scenery supporter in the ST-room. The description of the Folding Chair is "This is one of many folding chairs in the tent tonight." Understand "chairs" as folding chair.
 
 Little Egypt AutoPlay is a recurring scene. 
-Little Egypt AutoPlay begins when little egypt counter is 3.
-Little Egypt AutoPlay ends when the index is the number of rows in the Table of Little Egypt Events.
+Little Egypt AutoPlay begins when the location is the ST-room and (minutes part of time of day is 0 or minutes part of time of day is 15 or minutes part of time of day is 30 or minutes part of time of day is 45).
+Little Egypt AutoPlay ends when the index is the number of rows in the Table of Little Egypt Events plus 1.
+
+When Little Egypt AutoPlay begins, now index is 1;
 
 When Little Egypt AutoPlay ends:
 	say "You applaud until your hands are sore. Did she just wink at you?[run paragraph on]";
@@ -2013,12 +2037,6 @@ When Little Egypt AutoPlay ends:
 	say "[paragraph break]";
 	now index is 1.
 
-little egypt counter is a number that varies. little egypt counter is usually 1.
-After going west when the location is the ST-room:
-	now little egypt counter is 1;
-	continue the action.
-every turn when the location is the ST-room, increment little egypt counter.
-	
 last description is text that varies. last description is "".		
 index is a number that varies. index is usually 1.		
 every turn during Little Egypt AutoPlay:
@@ -2030,7 +2048,7 @@ every turn during Little Egypt AutoPlay:
 
 instead of looking during the Little Egypt AutoPlay, say "[last description][paragraph break]";
 
-Instead of doing something other than waiting, looking, listening, smelling or examining during Little Egypt AutoPlay:
+Instead of doing something other than waiting, looking, listening, smelling, or examining during Little Egypt AutoPlay:
 	say "You[']re much too entranced by the show to do anything other than watch the show. You are riveted[if the player is in the folding chair] to your seat[end if]!".
 	
 clapping is an action applying to nothing. Understand "clap" and "applaud" as clapping.
@@ -3296,13 +3314,14 @@ Test ToadAway with "brief / test parking / get in car / get parking stub / exit 
 
 Chapter 3 - Games
 
-Test g1 with "brief / s / w / give dime to barker / w /  z / z / z / z / z / z / z / z / get lamp / turn it on / wear veil / e / e / n"
+Test g1 with "brief / s / w / give dime to barker / w /  z / z / z / z / z / get lamp / turn it on / wear veil / e / e / n"
 
 Test g2 with "s / e / buy mallet / hit lever with mallet / g / g / g / g / 2 / w / n".
 
 Test g3 with "s / e  / ne / l at booth / l under booth / flip dime on plate / toss dime on plate / toss dime on plate / 1 / get mercury dime / sw / se / give mercury dime to attendant / throw baseball at bottles / 1 / nw / w / n"
 
 Test Games with "Test g1 / test g2 / test g3".
+
 
 Chapter 4 - Attractions
 
