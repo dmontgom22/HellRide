@@ -48,11 +48,11 @@ sound 31 "C:\HellRide\Hell Ride.materials\Sounds\Silence.ogg" "The sound of sile
 ! Placeholder variables
 
 placeholder [IFID] = "E0A5AFB9-18BF-4485-B083-426CA51CCE70"
-placeholder [RELEASE] = "126"
+placeholder [RELEASE] = "200"
 placeholder [YEAR] = "2025"
 placeholder [TITLE] = "Hell Ride"
 placeholder [AUTHOR] = "No Shoes"
-placeholder [BLURB] = "Hell Ride - A ride to remember...<br/>Date night with your sweetie: a meal at your favorite restaurant and a night at the carnival.<br/>After a lovely meal, you get into a big fight over the tip. Your date storms off, ruining your chances of that romantic evening you had hoped for. You decide to stay and enjoy the carnival anyway.<br/>As you explore the carnival, you learn (the hard way) that the Hell Ride attraction is malfunctioning with the potential for serious injuries to the riders. You must disable the ride off and prevent any loss of life... including your own."
+placeholder [BLURB] = "Hell Ride - A ride to remember...<br/>Date night with your sweetie: dinner at your favorite restaurant and a night at the carnival.<br/>After a lovely meal, you get into a big fight over the tip. Your date storms off, ruining your chances of that romantic evening you had hoped for. You decide to stay and enjoy the carnival anyway.<br/>As you explore the carnival, you learn (the hard way) that the Hell Ride attraction is malfunctioning with the potential for serious injuries to the riders. You must disable the ride off and prevent any loss of life... including your own."
 
 ! Other material to release
 

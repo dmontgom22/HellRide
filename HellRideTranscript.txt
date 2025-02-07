@@ -2,21 +2,19 @@ Start of a transcript of:
 
 Hell Ride
 The ride of a lifetime... by No Shoes
-Release 126 / Serial number 250130 / Inform 7 v10.1.2 / D
+Release 200 / Serial number 250207 / Inform 7 v10.1.2 / D
 Inform 7 v10.1.2
 Identification number: //E0A5AFB9-18BF-4485-B083-426CA51CCE70//
 Interpreter version 0.6.0 / VM 3.1.3
-Singing Reloaded version 1 by Shin
 Basic Help Menu version 4 by Wade Clarke
 Menus version 5 by Wade Clarke
+Object Response Tests version 7 by Juhana Leinonen
 
 >brief
 Hell Ride is now in its "brief" printing mode, which gives long descriptions of places never before visited and short descriptions otherwise.
 
 >get berries
 Taken.
-
-[Your score has just gone up by five points.]
 
 >eat blueberries
 The blueberries were delicious. A true taste of summer!
@@ -39,10 +37,11 @@ your keys: Taken.
 >open glove box
 (first unlocking the glove box)
 (with your keys)
-You open the glove box, revealing a pair of gloves and a string.
+You open the glove box, revealing a pair of gloves and a 14" long piece of string.
 
->get gloves
-Taken.
+>get all from glove compartment
+pair of gloves: Taken.
+14" long piece of string: Taken.
 
 >wear gloves
 You put on the pair of gloves.
@@ -54,9 +53,9 @@ Done. The price of a parking ticket is now $3.00.
 >buy ticket
 The attendant mumbles something about the stub.
 
-You fork over $3.00 for the parking ticket, leaving yourself with $27.00.
+You fork over $3.00 for the parking ticket, leaving yourself with $32.00.
 
->put parking stub on dashboard
+>put stub on dashboard
 You put the parking stub on the dashboard.
 
 >s
@@ -72,9 +71,18 @@ Next to the kiosk, a vibrant signboard lists ticket prices with playful illustra
 
 The worn ground around the kiosk shows the passage of eager carnival-goers. Families, couples, and friends form a buzzing line, their excitement building as they approach this first step into the magic of the carnival.
 
-The midway continues in all directions from here. There is a cashier here. A price list for ride tickets is on the signboard. The cashier has Hell Ride ticket, Fortune Teller ticket, Ferris Wheel ticket, Bumper Cars ticket, and Carousel ticket.
+The midway continues in all directions from here. There is a cashier here. A price list for attraction tickets is on the signboard. The cashier has Hell Ride ticket, Fortune Teller ticket, Ferris Wheel ticket, Bumper Cars ticket, and Carousel ticket.
 
 You can see a Cashier and a ticket kiosk here.
+
+>buy tickets
+Hell Ride ticket: You fork over $4.00 for the Hell Ride ticket, leaving yourself with $28.00.
+Fortune Teller ticket: You fork over $3.00 for the Fortune Teller ticket, leaving yourself with $25.00.
+Ferris Wheel ticket: You fork over $2.00 for the Ferris Wheel ticket, leaving yourself with $23.00.
+Bumper Cars ticket: You fork over $2.00 for the Bumper Cars ticket, leaving yourself with $21.00.
+Carousel ticket: You fork over $1.00 for the Carousel ticket, leaving yourself with $20.00.
+
+[Your score has just gone up by ten points.]
 
 >e
 
@@ -91,11 +99,8 @@ You can see a Strongman attendant, a lever, and some High Striker prizes here.
 
 The attendant is holding a mallet.
 
->l at prizes
-The prizes are a teddy bear, a Swiss Army knife, a magenta fuse, and a poster of Taylor Swift.
-
 >buy mallet
-You fork over $2.00 for the mallet, leaving yourself with $25.00.
+You fork over $2.00 for the mallet, leaving yourself with $18.00.
 
 >hit bullseye with mallet
 You lift the mallet high and bring it down on the lever with all your might! The striker rises towards the bell stopping at "Weakling".  C'mon! You can do better than that!
@@ -133,9 +138,6 @@ You're surprised to see that this game only costs a dime. The exit is to the sou
 
 You can see a Dime Toss attendant, some Dime Toss prizes, and a plate here.
 
->l at prizes
-The prizes are a stuffed monkey, an orange fuse, a poster of Billie Eilish, and a small pocket mirror.
-
 >look under booth
 You find the mercury dime!
 
@@ -145,14 +147,10 @@ Taken.
 [Your score has just gone up by five points.]
 
 >flip mercury dime on plate
-You toss the dime. The dime hits the plate, starts to spins, and lands in the center of the plate. The attendant shouts out, "Winner! Winner! Which prize would you like? 1) a stuffed monkey, 2) an orange fuse, 3) a poster of Billie Eilish, 4) a small pocket mirror?
+You toss the dime. The dime hits the plate, starts to spins, and lands in the center of the plate. The attendant shouts out, "Winner! Winner!" Which prize would you like? 1) a stuffed monkey, 2) an orange fuse, 3) a poster of Billie Eilish, 4) a horsehoe magnet?
 
->flip dime on plate
-(the dime on the plate)
-You toss the dime. The dime hits the plate, starts to spins, and lands in the center of the plate. The attendant shouts out, "Winner! Winner! Which prize would you like? 1) a stuffed monkey, 2) an orange fuse, 3) a poster of Billie Eilish, 4) a small pocket mirror?
-
->2
-You are now holding an orange fuse.
+>4
+You are now holding a horsehoe magnet.
 
 [Your score has just gone up by five points.]
 
@@ -175,20 +173,11 @@ You're surprised to see that this game only costs a dime. The High Striker is to
 
 You can see a Pitcher's Mound attendant and some Pitcher's Mound prizes here.
 
->l at prizes
-The prizes are a crimson fuse, a plush donkey, a goldfish in a bowl, and a poster of Lourde.
-
 >give dime to attendant
 The attendant gives you three baseballs in return.
 
 >throw baseball at bottles
-You wind up and throw the baseball at the milk bottles. You knocked over one bottle. You can do better than that.
-
->g
-You wind up and throw the baseball at the milk bottles. You knocked over two bottles. Too bad.
-
->g
-You wind up and throw the baseball at the milk bottles. The ball hits the bottles in the sweet spot and they go flying off the platform. The attendant shouts out, "Winner! Winner! Which prize would you like? 1) a crimson fuse, 2) a plush donkey, 3) a goldfish in a bowl, 4) a poster of Lourde?
+You wind up and throw the baseball at the milk bottles. The ball hits the bottles in the sweet spot and they go flying off the platform. The attendant shouts out, "Winner! Winner!" Which prize would you like? 1) a crimson fuse, 2) a plush donkey, 3) a goldfish in a bowl, 4) a poster of Lourde?
 
 >1
 You are now holding a crimson fuse.
@@ -201,7 +190,91 @@ High Striker
 You can see a Strongman attendant, a lever, and some High Striker prizes here.
 
 
+>e
+
+
+
+Ferris Wheel
+The Ferris wheel is the towering centerpiece of the carnival, its vibrant lights and graceful rotations drawing the attention of visitors from every corner of the fairgrounds. The wheel's massive steel frame arches high into the sky, its intricate network of beams glinting under the colorful glow of bulbs strung along its circumference. Each gondola, painted in bright hues like red, yellow, and blue, dangles from the wheel, swaying gently as it turns.
+
+At night, the Ferris wheel transforms into a dazzling spectacle, with hundreds of synchronized lights creating patterns and ripples that pulse outward like waves. The bulbs flash in bursts of red, green, and white, casting playful reflections on nearby attractions and the surrounding crowd.
+
+The air around the wheel is filled with a mix of excited chatter, the hum of its motor, and the occasional squeal of laughter or nervousness from riders high above. The ride operator, standing in a small booth at the base, keeps a steady rhythm of loading and unloading passengers, their voice occasionally calling out, "Step right up! The best view of the carnival awaits!"
+
+The Ferris wheel offers an ever-changing perspective of the carnival below. From its peak, riders can see the entire fairground: the spinning lights of the rides, the colorful stripes of game booths, and the winding paths of visitors navigating the midway. Beyond the carnival, the view stretches to the horizon, with city lights adding to the magical experience.
+
+Whether it's a romantic ride for couples, a thrilling adventure for friends, or a calming retreat for families, the Ferris wheel captures the spirit of the carnival - an iconic blend of excitement, wonder, and timeless charm.
+
+Hey! Is that a two dollar bill on the ground?
+
+You can also see a Ferris Wheel Attendant here.
+
+>give ticket to attendant
+(the Ferris Wheel ticket to the Ferris Wheel Attendant)
+You give the Ferris Wheel ticket to the Ferris Wheel Attendant.
+
+As you step into the gently swaying gondola, a faint creak accompanies the safety bar locking into place. The Ferris wheel begins its slow ascent, the hum of its machinery blending with the distant sounds of carnival games and laughter below. A soft breeze brushes against your face as the gondola rises higher, offering an ever-expanding view of the fairgrounds.
+
+With each rotation, the world transforms. At the peak, the carnival sprawls beneath you like a miniature village, its vibrant lights twinkling against the twilight sky. The sound of the midway fades into a soft murmur, replaced by the serene quiet of being high above the bustling crowd. Beyond the carnival, the horizon stretches endlessly, framed by the glow of distant city lights.
+
+From the top you can see something to the west behind the concession stand.
+
+The gondola sways gently, adding a hint of thrill to the tranquil ride. You exchange smiles with your companions, pointing out tiny figures darting between booths and the dizzying motion of other rides below. The Ferris wheel begins its descent, and the lively carnival sounds grow louder once again, bringing you back into the heart of the action.
+
+Whether you're seeking a moment of calm, a romantic view, or the sheer wonder of seeing the world from above, the Ferris wheel delivers an unforgettable ride that captures the magic of the carnival.
+
 >w
+
+High Striker
+You can see a Strongman attendant, a lever, and some High Striker prizes here.
+
+
+>w
+
+Ticket Booth
+You can see a Cashier and a ticket kiosk here.
+
+>sw
+
+
+
+Concession Stand
+The concession stand, perched along the midway, is a colorful and bustling hub. Painted in bright reds, blues, and yellows, it features bold lettering announcing treats like "SODA! POPCORN! CANDY APPLES!" Strings of twinkling lights frame the stand, making it a glowing beacon amid the carnival excitement.
+
+Behind the counter, a popcorn machine churns out golden kernels, filling the air with a buttery aroma. Candy apples gleam under the lights, and cotton candy machines spin fluffy clouds of pink and blue. Warm pretzels sit under a heat lamp, their buttery, salted scent mingling with the sugary treats. A cooler holds sodas, their colorful labels visible through the frosted glass.
+
+The counter is lively with stacks of paper bags, napkins, and cups of cheese and sugar sprinkles. A handwritten chalkboard menu lists prices in playful lettering. Workers in colorful aprons quickly hand out snacks, their movements efficient amid the cheerful chaos.
+
+In front of the stand, kids tug at their parents, teens share pretzels, and the crowd buzzes with energy. More than just a snack stop, the stand is a sensory delight, adding flavor and charm to the carnival experience.
+
+There is a menu to the right of the window. You can see the treats inside the stand. There is an exit to the northeast.
+
+You can see a Concession Attendant, a menu, a Drink of Cola, some Bubblegum, a Bucket of Popcorn, a Candy Apple, Cotton Candy, and a Soft Pretzel here.
+
+>buy bubblegum
+You fork over $1.00 for the Bubblegum, leaving yourself with $17.00.
+
+>w
+
+Behind the Concession Stand
+Behind the concession stand, to one side is the trash generated from the day's activities and to the other side boxes of supplies. There is a chair here sourrounded by cigarette butts.
+
+You can see a trash can (closed) and some boxes here.
+
+>open trash can
+You open the trash can, revealing a Khaki colored fuse.
+
+>get khaki fuse
+Taken.
+
+[Your score has just gone up by five points.]
+
+>e
+
+Concession Stand
+You can see a Concession Attendant, a menu, a Drink of Cola, a Bucket of Popcorn, a Candy Apple, Cotton Candy, and a Soft Pretzel here.
+
+>ne
 
 Ticket Booth
 You can see a Cashier and a ticket kiosk here.
@@ -233,6 +306,36 @@ You hand over a dime, and the barker nods, waving you through. As you step past 
 
 Show Tent
 You are inside the Little Egypt Show. The attraction's facade is to the east. There are folding chairs organized neatly in rows. The show should start soon.
+
+>sit in chair
+You get onto the folding chair.
+
+>z
+Time passes.
+
+>z
+Time passes.
+
+>z
+Time passes.
+
+>z
+Time passes.
+
+>z
+Time passes.
+
+>z
+Time passes.
+
+>z
+Time passes.
+
+>z
+Time passes.
+
+>z
+Time passes.
 
 >z
 Time passes.
@@ -269,12 +372,13 @@ You applaud until your hands are sore. Did she just wink at you?
 As she leaves the stage, Little Egypt tosses one of her veils to you!
 
 
->wear sheer veil
+>wear veil
 You wrap the veil around your head, shrouding your eyes. The world is a lovely color pink as you look through the veil while her perfume fills your nostrils in the most delightful way. You look pretty!
 
 [Your score has just gone up by five points.]
 
 >e
+(first getting off the folding chair)
 
 Show Facade
 You can see a Barker here.
@@ -284,11 +388,6 @@ You can see a Barker here.
 Ticket Booth
 You can see a Cashier and a ticket kiosk here.
 
->buy hell ride ticket
-You fork over $4.00 for the Hell Ride ticket, leaving yourself with $21.00.
-
-[Your score has just gone up by ten points.]
-
 >s
 
 Head of the Line
@@ -296,7 +395,8 @@ You are standing in front of an attendant with his hand open waiting for your ti
 
 You can see a Hell Ride Attendant here.
 
->give hell ride ticket to attendant
+>give ticket to attendant
+(the Hell Ride ticket to the Hell Ride Attendant)
 You give the Hell Ride ticket to the Hell Ride Attendant.
 
 >s
@@ -319,12 +419,10 @@ This room is backstage at the Hell Ride attraction. The room is littered with ba
 
 [Your score has just gone up by five points.]
 
->l under junk
+>x piles of junk
 This is a pile of assorted flotsam and jetsam from the carnival. None of it looks very interesting.
 
 In the pile of junk is a flashlight.
-
-You find a flashlight here.
 
 >get flashlight
 Taken.
@@ -379,10 +477,10 @@ Currently there are sparks arcing out from the switch. It looks dangerous.
 
 [Your score has just gone up by five points.]
 
->flip big switch
+>flip switch
 You switch the big switch off.
 
-[Your score has just gone up by ten points.]
+[Your score has just gone up by fifteen points.]
 
 >e
 
@@ -426,11 +524,106 @@ Nearby an Emerald colored door leads west.
 
 You can also see a toolbox (closed) here.
 
->open toolbox
+>open tool box
 You open the toolbox, revealing an adjustable wrench, channel locks, some pliers, and a hammer.
 
 >get wrench
 Taken.
+
+>n
+
+Crawl Space
+Nearby a Crimson colored door leads west.
+
+>n
+
+Maintenance Office
+Nearby a ladder leads up to the Dark Hallway.
+
+Nearby an Aqua colored door leads west.
+
+You can also see a worn photo and a desk (on which are a coffee mug and a radio) here.
+
+>n
+
+Dark Passage
+
+>w
+
+Ride Entrance
+You can see a Hell Ride car (empty) here.
+
+>n
+
+Head of the Line
+You can see a Hell Ride Attendant here.
+
+>n
+
+Ticket Booth
+You can see a Cashier and a ticket kiosk here.
+
+>nw
+
+
+
+Bumper Cars
+The bumper cars is a bustling hub of excitement and laughter, set beneath a canopy of flashing lights and colorful decorations. The rectangular arena is surrounded by padded barriers, ensuring a safe yet thrilling experience for riders. The floor, slick and metallic, allows the brightly colored cars - painted in shades of red, blue, yellow, and green - to glide effortlessly in all directions.
+
+Each car is equipped with a steering wheel and a padded bumper, designed to absorb the impact of playful collisions. As the ride begins, drivers of all ages eagerly maneuver their cars, aiming for friends, family, or strangers with mischievous grins. The air is filled with the sound of bumpers colliding, laughter, and the occasional squeal of surprise.
+
+Overhead, a web of electric poles connects the cars to the ceiling, sparking faintly as they supply power to the vehicles. The ride operator watches from a booth, ensuring everyone enjoys the chaos safely. Surrounding the bumper cars are cheering onlookers, carnival lights, and the lively hum of the fairground.
+
+The bumper cars perfectly captures the playful spirit of the carnival, offering a mix of harmless competition, shared laughter, and nostalgic fun for all ages. The Ticket Kiosk is southeast of here.
+
+You can see a Bumper Cars attendant here.
+
+>give wrench to attendant
+Hey! Thanks, I really appreciate it. Usually no one ever responds to the radio in the Control Room. Here, take this fuse.
+
+Taken.
+
+[Your score has just gone up by ten points.]
+
+>se
+
+Ticket Booth
+You can see a Cashier and a ticket kiosk here.
+
+>s
+
+Head of the Line
+You can see a Hell Ride Attendant here.
+
+>s
+
+Ride Entrance
+You can see a Hell Ride car (empty) here.
+
+>e
+
+Dark Passage
+
+>s
+
+Maintenance Office
+Nearby a ladder leads up to the Dark Hallway.
+
+Nearby an Aqua colored door leads west.
+
+You can also see a worn photo and a desk (on which are a coffee mug and a radio) here.
+
+>s
+
+Crawl Space
+Nearby a Crimson colored door leads west.
+
+>s
+
+Mechanical Room North
+Nearby an Emerald colored door leads west.
+
+You can also see a toolbox (in which are channel locks, some pliers, and a hammer) here.
 
 >s
 
@@ -448,6 +641,19 @@ Bright fluorescent lights in wire cages illuminate the space, highlighting the i
 You can travel north and south from here.
 
 Nearby a Gray colored door leads west.
+
+You can also see a grate (in which is an Emerald colored fuse) here.
+
+>tie string to bubblegum
+You tie the 14" long piece of string to the Bubblegum.
+
+>chew bubblegum
+You chew the bubblegum, blowing a few bubbles as you do so.
+
+>put bubblegum in grate
+You drop the chewed Bubblegum into the grate. The Emerald colored fuse attaches to the chewed Bubblegum. You quickly and carefully raise the chewed Bubblegum and drop Emerald colored fuse into your hand.
+
+[Your score has just gone up by five points.]
 
 >s
 
@@ -484,9 +690,11 @@ This room is eerily quiet, missing the ever present buzz of electricity. There a
 >ne
 
 Electrical Closet One
-This is Electrical Closet One. There's an electrical panel here and an exit to the south west.
+This is Electrical Closet One. There's an electrical panel here and an exit to the southwest.
 
 You can see a silver key here.
+
+Over the loud speaker, an announcement blares: Attention please. There is a vehicle being towed from the parking lot for parking illegally. The license plate of the car is "862901". You breathe a sigh of relief as you realize that's not your license plate. I guess it's a good thing you remembered to place the parking stub on the dashboard.
 
 >get key
 (the silver key)
@@ -536,7 +744,8 @@ Nearby a Khaki colored door leads east to the Storage Room.
 You can also see a Merchandise Attendant here.
 
 >buy aqua fuse
-You fork over $3.50 for the Aqua colored fuse, leaving yourself with $17.50.
+You fork over $3.50 for the Aqua colored fuse, leaving yourself with $13.50.
+(putting the wallet into the fanny pack to make room)
 
 [Your score has just gone up by five points.]
 
@@ -553,19 +762,11 @@ The condemned flinches but remains silent as the executioner - a hooded figure i
 
 As the condemned approaches the guillotine, a crow caws sharply from a nearby rooftop, its cry echoing through the square like an omen. The crowd leans forward, breath held, as justice and mortality converge on the scene.
 
-There is just one problem: the guillotine is being raised and lowered by some mechanism. It appears that the timing of the guillotine is off and it is being lowered onto the cars instead of between them. If a person were to be in a car as it passed under the guillotine, they would be decapitated.  You're glad you're not in one of those cars now. 
+There is just one problem: the guillotine is being raised and lowered by some mechanism. It appears that the timing of the guillotine is off and it is being lowered onto the cars instead of between them. If a person were to be in a car as it passed under the guillotine, they would be seriously injured.  You're glad you're not in one of those cars now. 
 
 Nearby an Indigo colored door leads east to the Generator Room.
 
 You can also see a guillotine platform here.
-
->l under platform
-You find the Gray colored fuse!
-
->get gray fuse
-Taken.
-
-[Your score has just gone up by five points.]
 
 >n
 
@@ -584,180 +785,25 @@ Nearby a Gray colored door leads east to the Mechanical Room South.
 
 You can also see an iron chair, a splintered rack, and a glowing brazier here.
 
->l under chair
+>l under iron chair
 You find the Indigo colored fuse!
 
->get indigo fuse
-Taken.
-
-[Your score has just gone up by five points.]
-
->n
-
-Stake Room
-The public square is steeped in grim silence, broken only by the crackling of flames. At its center, three wooden stakes rise from a pyre of logs and kindling, darkened by smoke from past executions. Bound to the stakes are three women, their faces reflecting defiance, resignation, and terror.
-
-A crowd encircles the scene, expressions ranging from morbid fascination to righteous fury. Children cling to their mothers, while elders nod solemnly. Some jeer and throw stones; others murmur prayers or avert their gaze.
-
-The executioner, hooded and clad in a leather apron, steps forward with a blazing torch, igniting the pyre in a sudden roar. Flames climb rapidly as thick smoke coils upward. The condemned cry out, their voices mingling with the crackle of fire. The oppressive heat radiates outward, pressing against the silent, uneasy crowd.
-
-Gray clouds loom overhead, nature's somber backdrop to the grim spectacle. A raven caws from the bell tower as slow church bells toll, each strike punctuating the tragedy. As the pyre burns, some onlookers remain transfixed while others quietly slip away, the square heavy with ash, smoke, and the echoes of the condemned.
-
-Nearby an Emerald colored door leads east to the Mechanical Room North.
-
-The flames of the pyre burn ever brighter and rise ever higher engulfing the victims.
-
->n
-
-Gallows Room
-The public square, slick with morning drizzle, lies under a brooding, overcast sky. At its center looms the gallows, a weathered wooden platform with thick ropes swaying ominously. The crowd stands in somber silence, broken by the shuffle of feet or faint murmurs, their eyes fixed on the grim scene.
-
-A hooded executioner, cloaked in black, adjusts the frayed noose with practiced precision, his cold presence exuding purpose. In front of him stands the condemned man, pale and trembling, his bound hands behind him. Beads of sweat mix with rain on his haunted face as his darting eyes search the indifferent crowd. Each shallow breath forms a fleeting cloud in the chilly air - a fragile reminder of his fleeting life.
-
-Vendors hawk bread and cider, while children strain for a better view. An old man clutches a rosary, whispering prayers, as others smirk and place bets. Above, the bell tower tolls, its mournful chime marking the passage of the man's final moments. A raven perches on the gallows" beam, its unblinking gaze fixed on the scene below.
-
-As the executioner adjusts the noose around the man's neck, the crowd falls silent, the air thick with dread. Distant thunder rumbles faintly, as if the heavens themselves await the inevitable.
-
-Nearby a Crimson colored door leads east to the Crawl Space.
-
-You can also see a gallows platform here.
-
->look under platform
-You find the Khaki colored fuse!
-
->get khaki fuse
-Taken.
-
-[Your score has just gone up by five points.]
-
->n
-
-Stocks Room
-The public square is a cobblestone expanse bordered by weathered timber-framed buildings. The air carries the mingling scents of chimney smoke, damp earth, and the faint tang of a nearby smithy. At its center, crude wooden stocks stand as a grim focal point, their beams weathered and stained from years of use. Iron clasps lock captives in degrading postures, their tattered clothing offering little protection from the biting wind.
-
-The animatronics and wax figures are extremely life like. Hell Ride sure lives up to its name.
-
-The punished individuals hang their heads in shame, their faces etched with despair. Around them, the crowd revels in cruelty - a wiry man spits insults with gleeful laughter, while a stout woman throws overripe vegetables, each impact sparking jeers. Even children join in, pointing and mocking with mischievous delight.
-
-The square hums with noise: the crowd's taunts, the crack of objects hitting wood, and the quiet murmurs of the suffering captives. Overhead, a gray sky threatens rain, indifferent to the spectacle below. The jeering mob ignores its ominous weight, too engrossed in their shared cruelty to notice nature's disapproval.
-
-Nearby an Aqua colored door leads east to the Maintenance Office.
-
-You can also see a wooden stocks here.
-
->look under stocks
-(the wooden stocks)
-You find the Emerald colored fuse!
-
->get emerald fuse
+>get fuse
+(the Indigo colored fuse)
+(putting the dime into the fanny pack to make room)
 Taken.
 
 [Your score has just gone up by five points.]
 
 >e
-(first opening the Aqua colored door)
-(first unlocking the Aqua colored door)
+(first opening the Gray colored door)
+(first unlocking the Gray colored door)
 (with the silver key)
-
-Maintenance Office
-Nearby an Aqua colored door leads west to the Stocks Room.
-
-Nearby a ladder leads up to the Dark Hallway.
-
-You can also see a worn photo and a desk (on which are a coffee mug and a radio) here.
-
->n
-
-Dark Passage
-
->w
-
-Ride Entrance
-You can see a Hell Ride car (empty) here.
-
->n
-
-Head of the Line
-You can see a Hell Ride Attendant here.
-
->n
-
-Ticket Booth
-You can see a Cashier and a ticket kiosk here.
-
->nw
-
-
-
-Bumper Cars
-The bumper cars is a bustling hub of excitement and laughter, set beneath a canopy of flashing lights and colorful decorations. The rectangular arena is surrounded by padded barriers, ensuring a safe yet thrilling experience for riders. The floor, slick and metallic, allows the brightly colored cars - painted in shades of red, blue, yellow, and green - to glide effortlessly in all directions.
-
-Each car is equipped with a steering wheel and a padded bumper, designed to absorb the impact of playful collisions. As the ride begins, drivers of all ages eagerly maneuver their cars, aiming for friends, family, or strangers with mischievous grins. The air is filled with the sound of bumpers colliding, laughter, and the occasional squeal of surprise.
-
-Overhead, a web of electric poles connects the cars to the ceiling, sparking faintly as they supply power to the vehicles. The ride operator watches from a booth, ensuring everyone enjoys the chaos safely. Surrounding the bumper cars are cheering onlookers, carnival lights, and the lively hum of the fairground.
-
-The bumper cars perfectly captures the playful spirit of the carnival, offering a mix of harmless competition, shared laughter, and nostalgic fun for all ages. The Ticket Kiosk is southeast of here.
-
-Hey! Is that a two dollar bill on the ground?
-
-You can also see a Bumper Cars Attendant here.
-
->get bill
-Taken.
-
-You now have $19.50.
-
->give wrench to attendant
-Hey! Thanks, I really appreciate it. Usually no one ever responds to the radio in the Control Room.
-
-[Your score has just gone up by five points.]
-
->se
-
-Ticket Booth
-You can see a Cashier and a ticket kiosk here.
-
->s
-
-Head of the Line
-You can see a Hell Ride Attendant here.
-
->s
-
-Ride Entrance
-You can see a Hell Ride car (empty) here.
-
->e
-
-Dark Passage
-
->s
-
-Maintenance Office
-Nearby an Aqua colored door leads west to the Stocks Room.
-
-Nearby a ladder leads up to the Dark Hallway.
-
-You can also see a worn photo and a desk (on which are a coffee mug and a radio) here.
-
->s
-
-Crawl Space
-Nearby a Crimson colored door leads west to the Gallows Room.
-
-Over the loud speaker, an announcement blares: Attention please. There is a vehicle being towed from the parking lot for parking illegally. The license plate of the car is "862901". You breathe a sigh of relief as you realize that's not your license plate. I guess it's a good thing you remembered to place the parking stub on the dashboard.
-
->s
-
-Mechanical Room North
-Nearby an Emerald colored door leads west to the Stake Room.
-
-You can also see a toolbox (in which are channel locks, some pliers, and a hammer) here.
-
->s
 
 Mechanical Room South
 Nearby a Gray colored door leads west to the Dungeon.
+
+You can also see a grate (empty) here.
 
 >s
 
@@ -782,7 +828,7 @@ You open Electrical Panel 1.
 >put aqua fuse in socket
 You hear a satisfying snick as the Aqua fuse slides into place.
 
->push switch
+>flip switch
 You switch Electrical Panel 1's switch on.
 
 The Aqua indicator's light goes on.
@@ -822,7 +868,7 @@ Electrical Room
 >se
 
 Electrical Closet Five
-This is Electrical Closet Five. There's an electrical panel here and an exit to the north west.
+This is Electrical Closet Five. There's an electrical panel here and an exit to the northwest.
 
 >open panel
 (first unlocking Electrical Panel 5)
@@ -834,7 +880,7 @@ You open Electrical Panel 5.
 >put emerald fuse in socket
 You hear a satisfying snick as the Emerald fuse slides into place.
 
->toggle switch
+>flip switch
 You switch Electrical Panel 5's switch on.
 
 The Emerald indicator's light goes on.
@@ -848,7 +894,7 @@ Electrical Room
 >sw
 
 Electrical Closet Seven
-This is Electrical Closet Seven. There's an electrical panel here and an exit to the north east.
+This is Electrical Closet Seven. There's an electrical panel here and an exit to the northeast.
 
 >open panel
 (first unlocking Electrical Panel 7)
@@ -860,7 +906,7 @@ You open Electrical Panel 7.
 >put gray fuse in socket
 You hear a satisfying snick as the Gray fuse slides into place.
 
->toggle switch
+>flip switch
 You switch Electrical Panel 7's switch on.
 
 The Gray indicator's light goes on.
@@ -886,7 +932,7 @@ You open Electrical Panel 9.
 >put indigo fuse in socket
 You hear a satisfying snick as the Indigo fuse slides into place.
 
->push switch
+>flip switch
 You switch Electrical Panel 9's switch on.
 
 The Indigo indicator's light goes on.
@@ -900,7 +946,7 @@ Electrical Room
 >nw
 
 Electrical Closet Eleven
-This is Electrical Closet Eleven. There's an electrical panel here and an exit to the south east.
+This is Electrical Closet Eleven. There's an electrical panel here and an exit to the southeast.
 
 >open panel
 (first unlocking Electrical Panel 11)
@@ -912,7 +958,7 @@ You open Electrical Panel 11.
 >put khaki fuse in socket
 You hear a satisfying snick as the Khaki fuse slides into place.
 
->push switch
+>flip switch
 You switch Electrical Panel 11's switch on.
 
 The Khaki indicator's light goes on.
@@ -933,28 +979,30 @@ Nearby an Indigo colored door leads west to the Guillotine Room.
 Mechanical Room South
 Nearby a Gray colored door leads west to the Dungeon.
 
+You can also see a grate (empty) here.
+
 >n
 
 Mechanical Room North
-Nearby an Emerald colored door leads west to the Stake Room.
+Nearby an Emerald colored door leads west.
 
 You can also see a toolbox (in which are channel locks, some pliers, and a hammer) here.
 
 >n
 
 Crawl Space
-Nearby a Crimson colored door leads west to the Gallows Room.
+Nearby a Crimson colored door leads west.
 
 >n
 
 Maintenance Office
-Nearby an Aqua colored door leads west to the Stocks Room.
-
 Nearby a ladder leads up to the Dark Hallway.
+
+Nearby an Aqua colored door leads west.
 
 You can also see a worn photo and a desk (on which are a coffee mug and a radio) here.
 
->climb ladder
+>u
 
 Dark Hallway
 Nearby a ladder leads down to the Maintenance Office.
@@ -967,16 +1015,16 @@ You can see a big switch here.
 >spin aqua dial to 1
 The Aqua colored dial is now set to 1.
 
->turn crimson dial to 3
+>set crimson dial to 3
 The Crimson colored dial is now set to 3.
 
 >set emerald dial to 5
 The Emerald colored dial is now set to 5.
 
->set gray dial to 7
+>turn gray dial to 7
 The Gray colored dial is now set to 7.
 
->spin indigo dial to nine
+>turn indigo dial to 9
 The Indigo colored dial is now set to 9.
 
 >turn khaki dial to 11
@@ -995,35 +1043,33 @@ The room is heavy with uneasy silence. The Hell Ride, once a thrilling spectacle
 
 A single car, its roof gashed open, sits under the still blade - a grim reminder of the disaster narrowly averted. Above, a black crow lands on the guillotine's frame, its sharp caw cutting through the murmurs of anger and fear.
 
-Two mechanics climb the scaffolding with tools in hand, their appearance met with wary hope. The crowd watches, holding their breath, as the cursed ride's fate hangs in the balance.
+Two mechanics climb the scaffolding with tools in hand, their appearance met with wary hope. A crowd has gathered and is watching, holding their breath, as the cursed ride's fate hangs in the balance.
 
 As you exit the ride, the carnival owner and the mayor are present and extending their undying gratitude for saving the day, not to mention lives!
 
 *** You have won! ***
 
-Wow, you've received 150 points out of a possible 150 in 148 moves! I'm very proud of you. This was a triumph. I'm being so sincere right now.
+You've received 150 points out of a possible 150 in 156 moves!
 
 You have received points for the following: 
 
-?  Taking the blueberries: 5 points.
 ?  Eating the blueberries: 5 points.
 ?  Finding the coins and keys: 5 points.
+?  Buying the Hell Ride ticket: 10 points.
 ?  Winning the Swiss Army knife: 10 points.
 ?  Taking the Mercury dime: 5 points.
-?  Winning the Orange fuse: 5 points.
+?  Winning the horseshoe magnet: 5 points.
 ?  Winning the Crimson fuse: 10 points.
+?  Acquiring the Khaki fuse: 5 points.
 ?  Wearing the sheer veil: 5 points.
-?  Buying the Hell Ride ticket: 10 points.
 ?  Finding the Dark Passage: 5 points.
 ?  Taking the flashlight: 10 points.
 ?  Finding the Control Room: 5 points.
-?  Turning off the big switch: 10 points.
-?  Acquiring the Aqua fuse: 5 points.
-?  Acquiring the Gray fuse: 5 points.
-?  Acquiring the Indigo fuse: 5 points.
-?  Acquiring the Khaki fuse: 5 points.
+?  Turning off the big switch: 15 points.
+?  Bringing the wrench to the Bumper Cars: 10 points.
 ?  Acquiring the Emerald fuse: 5 points.
-?  Bringing the wrench to the Bumper Cars: 5 points.
+?  Acquiring the Aqua fuse: 5 points.
+?  Acquiring the Indigo fuse: 5 points.
 ?  Flipping the Aqua switch: 5 points.
 ?  Flipping the Crimson switch: 5 points.
 ?  Flipping the Emerald switch: 5 points.
