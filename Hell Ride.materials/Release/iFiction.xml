@@ -11,7 +11,7 @@
             <headline>The ride of a lifetime...</headline>
             <genre>Horror</genre>
             <firstpublished>2025</firstpublished>
-            <description>Hell Ride - A ride to remember...<br/>Date night with your sweetie: a meal at your favorite restaurant and a night at the carnival.<br/>After a lovely meal, you get into a big fight over the tip. Your date storms off, ruining your chances of that romantic evening you had hoped for. You decide to stay and enjoy the carnival anyway.<br/>As you explore the carnival, you learn (the hard way) that the Hell Ride attraction is malfunctioning with the potential for serious injuries to the riders. You must disable the ride off and prevent any loss of life... including your own.</description>
+            <description>Hell Ride - A ride to remember...<br/>Date night with your sweetie: dinner at your favorite restaurant and a night at the carnival.<br/>After a lovely meal, you get into a big fight over the tip. Your date storms off, ruining your chances of that romantic evening you had hoped for. You decide to stay and enjoy the carnival anyway.<br/>As you explore the carnival, you learn (the hard way) that the Hell Ride attraction is malfunctioning with the potential for serious injuries to the riders. You must disable the ride off and prevent any loss of life... including your own.</description>
             <language>en</language>
             <group>Inform</group>
         </bibliographic>
@@ -24,8 +24,8 @@
         <releases>
             <attached>
                 <release>
-                    <releasedate>2025-01-30</releasedate>
-                    <version>126</version>
+                    <releasedate>2025-02-07</releasedate>
+                    <version>200</version>
                     <compiler>Inform 7</compiler>
                     <compilerversion>Inform 10.1.2 (build )</compilerversion>
                 </release>
@@ -34,11 +34,11 @@
         <colophon>
             <generator>Inform 7</generator>
             <generatorversion>Inform 10.1.2 (build )</generatorversion>
-            <originated>2025-01-30</originated>
+            <originated>2025-02-07</originated>
         </colophon>
         <glulx>
-            <serial>250130</serial>
-            <release>126</release>
+            <serial>250207</serial>
+            <release>200</release>
             <compiler>Inform Inform 10.1.2 (build )</compiler>
             <coverpicture>1</coverpicture>
         </glulx>

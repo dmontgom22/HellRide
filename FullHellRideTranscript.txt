@@ -1,0 +1,2664 @@
+Start of a transcript of:
+
+Hell Ride
+The ride of a lifetime... by No Shoes
+Release 200 / Serial number 250207 / Inform 7 v10.1.2 / D
+Inform 7 v10.1.2
+Identification number: //E0A5AFB9-18BF-4485-B083-426CA51CCE70//
+Interpreter version 0.6.0 / VM 3.1.3
+Basic Help Menu version 4 by Wade Clarke
+Menus version 5 by Wade Clarke
+Object Response Tests version 7 by Juhana Leinonen
+
+>brief
+Hell Ride is now in its "brief" printing mode, which gives long descriptions of places never before visited and short descriptions otherwise.
+
+>listen
+You can hear all the sounds of the carnival. The sounds of a calliope waft across the thoroughfare from the carousel. You can hear the laughter and screams as other patrons ride the rides and play the games.
+
+>smell
+You smell the odors of the carnival. As you inhale deeply, you can discern fresh, hot buttered popcorn, the sweet aroma of cotton candy, and the warm doughy scent of pretzels.
+
+>l at attendant
+This is another bored teenager. He's thinking about the big game on Friday night.
+
+>ask attendant about hell ride
+Hell Ride is behind on its maintenance schedule. Might want to skip that one.
+
+>talk to attendant about ferris wheel
+You can see the whole carnival from up there!
+
+>l at puddles
+You carefully skirt the mud and puddles to avoid getting your feet wet.
+
+>l at signs
+The signs are painted with arrows pointing the way to the parking spaces.
+
+>l at flags
+The flags are strung from saw horse to saw horse marking the space between rows.
+
+>l at cars
+The cars are parked, filling the lot.
+
+>x bush
+This is a high bush blueberry plant.
+
+In the blueberry bush are some blueberries.
+
+>get berries
+Taken.
+
+>eat berries
+The blueberries were delicious. A true taste of summer!
+
+[Your score has just gone up by five points.]
+
+>x cash box
+The cash box is full of change and paper money.
+
+>x car
+This is your car. It's a 2002 Honda Civic and it's seen better days.
+
+Even though it's old, it feels like an old friend. From the faux leather seats to the crack in the windshield. It's familiar and comforting. There are old fast food wrappers on the floor, dirty clothes and text books in the back seat. There is an air freshener hanging from the rear view mirror.
+
+In the beater car is an air freshener.
+
+>l under seat
+You find the three quarters, the nickel, the five dimes, and your keys!
+
+[Your score has just gone up by five points.]
+
+>get all
+your keys: Taken.
+dime: Taken.
+dime: Taken.
+dime: Taken.
+dime: Taken.
+dime: Taken.
+nickel: Taken.
+quarter: Taken.
+quarter: Taken.
+quarter: Taken.
+parking ticket: You'll have to pay for that.
+parking stub: That seems to belong to the Parking Attendant.
+air freshener: Taken.
+
+>l at seat
+A faux leather seat that looked great when it was new.
+
+>l at ignition
+It's an ignition. You put your car key here and start your car.
+
+>l at dashboard
+It looks like you could set something there.
+
+>l at glove box
+This glove box contains things like your registration and insurance information.
+
+>l at rear view mirror
+You catch a glimpse of yourself in the rear view mirror. "Looking good!" you think.
+
+>l at coupon
+
+
+You found this in a stack of coupons on the counter of the gas station.
+
+>smell air freshener
+It smells like fake pine trees. The odor is pretty strong.
+
+>l at wrappers
+McDonald's, Burger King, Jack In The Box, Taco Bell, Carl's Jr., Five Guys... You're a regular equal opportunity garbage gut.
+
+>l at books
+The titles you see are Introduction to Calculus, Statistics, and Heart of Darkness here.
+
+>l at clothes
+Your dirty clothes are strewn about. You really meant to do laundry days ago.
+
+>give coupon to attendant
+(first taking the coupon)
+Done. The price of a parking ticket is now $3.00.
+
+>buy parking ticket
+The attendant mumbles something about the stub.
+
+You fork over $3.00 for the parking ticket, leaving yourself with $32.00.
+
+>put stub on dashboard
+You put the parking stub on the dashboard.
+
+>open glove box
+(first unlocking the glove box)
+(with your keys)
+You open the glove box, revealing a pair of gloves and a 14" long piece of string.
+
+>get all from the glove box
+pair of gloves: Taken.
+14" long piece of string: Taken.
+
+>wear gloves
+You put on the pair of gloves.
+
+>put keys in ignition
+You put your keys into the ignition.
+
+>turn keys
+If you left now you would just end up in a bar, crying over a beer about your fight. You decide to stay and enjoy the carnival after all.
+
+>s
+
+
+
+Ticket Booth
+The ticket kiosk stands at the carnival entrance, a compact booth painted in bright red and yellow stripes with bold letters above the window reading "Tickets Here!" Twinkling lights outline its edges, blinking rhythmically to draw attention.
+
+A single window serves visitors, where a smiling cashier dispenses colorful tickets from neatly arranged rolls. Beside the tickets, a cash drawer jingles as change is counted, and a digital payment system glows faintly for modern convenience. Too bad you don't have a debit card.
+
+Next to the kiosk, a vibrant signboard lists ticket prices with playful illustrations of rides. Pennant flags flutter from the kiosk's roof, adding to the festive atmosphere, while the smell of popcorn and pretzels wafts from the southwest.
+
+The worn ground around the kiosk shows the passage of eager carnival-goers. Families, couples, and friends form a buzzing line, their excitement building as they approach this first step into the magic of the carnival.
+
+The midway continues in all directions from here. There is a cashier here. A price list for attraction tickets is on the signboard. The cashier has Hell Ride ticket, Fortune Teller ticket, Ferris Wheel ticket, Bumper Cars ticket, and Carousel ticket.
+
+You can see a Cashier and a ticket kiosk here.
+
+>buy tickets
+Hell Ride ticket: You fork over $4.00 for the Hell Ride ticket, leaving yourself with $28.00.
+Fortune Teller ticket: You fork over $3.00 for the Fortune Teller ticket, leaving yourself with $25.00.
+Ferris Wheel ticket: You fork over $2.00 for the Ferris Wheel ticket, leaving yourself with $23.00.
+Bumper Cars ticket: You fork over $2.00 for the Bumper Cars ticket, leaving yourself with $21.00.
+Carousel ticket: You fork over $1.00 for the Carousel ticket, leaving yourself with $20.00.
+
+[Your score has just gone up by ten points.]
+
+>l at kiosk
+A single window serves visitors, where a smiling cashier dispenses colorful tickets from neatly arranged rolls. Beside the tickets, a cash drawer jingles as change is counted, and a digital payment system glows faintly for modern convenience. Too bad you don't have a debit card.
+
+Next to the kiosk, a vibrant signboard lists ticket prices with playful illustrations of rides.
+
+>read sign
+$4.00 Hell Ride ticket
+$3.00 Fortune Teller ticket
+$2.00 Ferris Wheel ticket
+$2.00 Bumper Cars ticket
+$1.00 Carousel ticket
+
+>l at rolls
+Neatly arranged rolls of colorful tickets are displayed behind the cashier.
+
+>l at rolls of tickets
+Neatly arranged rolls of colorful tickets are displayed behind the cashier.
+
+>x cash drawer
+The cash drawer is full of change and paper money.
+
+>l at flags
+Pennant flags flutter from the kiosk's roof.
+
+>smell
+The smell of popcorn and pretzels wafts from the southwest.
+
+>listen
+You can hear all the sounds of the carnival. The sounds of a calliope waft across the thoroughfare from the carousel. You can hear the laughter and screams as other patrons ride the rides and play the games.
+
+>l at families
+Families, couples, and friends form a buzzing line, their excitement building as they approach this first step into the magic of the carnival.
+
+>ne
+
+
+
+Carousel
+The carousel is a timeless carnival attraction, radiating charm and nostalgia with its brightly painted horses, vibrant lights, and cheerful music. The circular platform is adorned with a canopy of swirling colors, gold trim, and decorative mirrors that reflect the flickering bulbs lining its edges.
+
+Rows of hand-carved animals, most often horses with flowing manes, are arranged in a circle. Each is painted in vivid colors, detailed with golden saddles and ribbons. It also features exotic creatures like lions, tigers, and sea dragons, adding whimsy to the ride. The animals rise and fall gently as the carousel spins, mimicking a galloping motion.
+
+The carousel's warm, playful tunes drift across the midway, inviting riders of all ages to enjoy its simple delight. Children laugh as they choose their favorite animals, while adults savor the nostalgia of the spinning ride. As it rotates, the carousel becomes a moving work of art, blending motion, color, and music into an enchanting centerpiece of the carnival. The Ticket Kiosk is back to the southwest; the way you came.
+
+You can see a Carousel Attendant here.
+
+>give ticket to attendant
+(the Carousel ticket to the Carousel Attendant)
+You give the Carousel ticket to the Carousel Attendant.
+
+Stepping onto the carousel's spinning platform, you're greeted by a kaleidoscope of color - brightly painted horses, glittering lights, and golden trim. The cheerful melody of calliope music fills the air. What will you choose as your mount, perhaps a galloping horse with a flowing mane, a majestic lion, or a whimsical giraffe. Gripping the polished pole, you settle onto the saddle, feeling the smooth rise and fall as the carousel begins to turn.
+
+As the ride picks up speed, the world outside becomes a blur of glowing carnival lights and swirling colors. The gentle up-and-down motion mimics a playful gallop, and the rhythmic whir of the carousel's machinery adds a soothing backdrop to the cheerful atmosphere. Laughter and the sound of children's chatter mix with the music, creating a sense of nostalgia and joy.
+
+For a few moments, you're transported into a magical world, the worries of the day fading away with each graceful rotation. Whether you're enjoying the ride alone, with friends, or sharing a special moment with family, the carousel's charm captures a timeless blend of whimsy and wonder. As it slows to a stop, you step off with a smile, the music lingering in your ears as you rejoin the bustling carnival.
+
+>l at horses
+The horses are mounted on poles which go up and down as the Carousel turns.
+
+>l at lions
+The majestic lions and tigers are mounted on poles which go up and down as the carousel turns.
+
+>l at giraffe
+The giraffes are mounted on poles which go up and down as the carousel turns.
+
+>l at saddles
+Each animal is painted in vivid colors, detailed with golden saddles and ribbons.
+
+>listen 
+The carousel's warm, playful tunes drift across the midway, inviting riders of all ages to enjoy its simple delight.
+
+>l at calliope
+The sounds of the calliope fill the air with pleasant music.
+
+>listen to calliope
+The carousel's warm, playful tunes drift across the midway, inviting riders of all ages to enjoy its simple delight.
+
+>sw
+
+Ticket Booth
+You can see a Cashier and a ticket kiosk here.
+
+>nw
+
+
+
+Bumper Cars
+The bumper cars is a bustling hub of excitement and laughter, set beneath a canopy of flashing lights and colorful decorations. The rectangular arena is surrounded by padded barriers, ensuring a safe yet thrilling experience for riders. The floor, slick and metallic, allows the brightly colored cars - painted in shades of red, blue, yellow, and green - to glide effortlessly in all directions.
+
+Each car is equipped with a steering wheel and a padded bumper, designed to absorb the impact of playful collisions. As the ride begins, drivers of all ages eagerly maneuver their cars, aiming for friends, family, or strangers with mischievous grins. The air is filled with the sound of bumpers colliding, laughter, and the occasional squeal of surprise.
+
+Overhead, a web of electric poles connects the cars to the ceiling, sparking faintly as they supply power to the vehicles. The ride operator watches from a booth, ensuring everyone enjoys the chaos safely. Surrounding the bumper cars are cheering onlookers, carnival lights, and the lively hum of the fairground.
+
+The bumper cars perfectly captures the playful spirit of the carnival, offering a mix of harmless competition, shared laughter, and nostalgic fun for all ages. The Ticket Kiosk is southeast of here.
+
+You can see a Bumper Cars attendant here.
+
+>l at cars
+(the Bumper Cars)
+The Bumper Cars are small, colorful, electric-powered vehicles equipped with a padded outer rim to absorb impacts, allowing riders to safely bump into each other as part of the game. The ceiling has a conductive surface that powers the cars. Riders are thrilled by chaotic collisions, laughter, and the challenge of maneuvering away from - or into - other drivers.
+
+>l at riders
+Drivers of all ages eagerly maneuver their cars, aiming for others.
+
+>l at bumper
+(the Bumper Cars)
+The Bumper Cars are small, colorful, electric-powered vehicles equipped with a padded outer rim to absorb impacts, allowing riders to safely bump into each other as part of the game. The ceiling has a conductive surface that powers the cars. Riders are thrilled by chaotic collisions, laughter, and the challenge of maneuvering away from - or into - other drivers.
+
+>l at steering wheel
+The steering wheel turns 360 degrees adding to the fun and thrills.
+
+>x drivers
+Drivers of all ages eagerly maneuver their cars, aiming for others.
+
+>x poles
+The electric poles connects the cars to the ceiling, sparking faintly as they supply power to the vehicles.
+
+>l at booth
+The operator stands in this booth overseeing the action below.
+
+>se
+
+Ticket Booth
+You can see a Cashier and a ticket kiosk here.
+
+>se
+
+
+
+Fortune Teller
+Approaching the fortune teller's booth, you're drawn in by its mysterious allure. Draped in deep purple curtains adorned with golden moons and stars, the booth glows with the soft, inviting light of candles. The air is heavy with the scent of incense, mingling with the sweet aroma of carnival treats. A sign sways slightly in the evening breeze.
+
+You can see Esmeralda the Mysterious here.
+
+>l at booth
+Draped in deep purple curtains adorned with golden moons and stars, the booth glows with the soft, inviting light of candles. The air is heavy with the scent of incense, mingling with the sweet aroma of carnival treats.
+
+>l at curtains
+The curtains are deep purple with golden moons and stars.
+
+>smell
+The smell of incense wafts through the air mixed with the scent of fresh, buttered popcorn.
+
+>listen
+You can hear all the sounds of the carnival. The sounds of a calliope waft across the thoroughfare from the carousel. You can hear the laughter and screams as other patrons ride the rides and play the games.
+
+>l at esmeralda
+The fortune teller sits in a dimly lit booth, draped in rich fabrics of deep purple and gold, adorned with celestial patterns of stars and moons. Her appearance is enigmatic, with piercing eyes that seem to look right through you and a knowing smile that hints at secrets yet untold. She wears flowing robes embellished with shimmering beads, and a jeweled headpiece catches the flickering light of nearby candles.
+
+>l at robes
+Esmeralda wears flowing robes embellished with shimmering beads, and a jeweled headpiece.
+
+>l at candles
+The candles flicker in the soft breeze casting light on Esmeralda's face.
+
+>take candles
+Esmeralda says, "Hey! I need those!"
+
+>read sign
+"Fortunes Told - What Does Your Future Hold?" Underneath that it says "Ticket Required"
+
+>give ticket to fortune teller
+(the Fortune Teller ticket to Esmeralda the Mysterious)
+You give the Fortune Teller ticket to Esmeralda the Mysterious.
+
+Stepping inside, you're greeted by the Esmeralda, a figure cloaked in flowing robes with a jeweled headpiece catching the flickering light. Her piercing eyes seem to look right through you as they gesture for you to sit at a small round table covered in an ornate cloth. At its center rests a glowing crystal ball, surrounded by tarot cards and mysterious trinkets.
+
+Esmeralda's voice is low and melodic, weaving an air of intrigue as they ask you to focus on a question and offer you a tarot reading. The room seems to shrink, the bustling carnival outside fading into the background as they reveal your fate. Each card turned  feels significant, as though unlocking a secret you didn't know you carried.
+
+Past: Ten of Wands (upright)
+Ten of Wands suggests that you may be shouldering too many responsibilities or taking on more than you can handle. You may feel overwhelmed, exhausted, or weighed down by the tasks and obligations in your life. This card serves as a reminder to evaluate your commitments and consider whether you need to delegate, seek support, or let go of some burdens.
+
+>z
+Time passes.
+
+Present: Nine of Wands (upright)
+Nine of Wands is the card for strength, courage, resilience and endurance. Never give up and never surrender. It suggests that while you may be tired or worn out from the struggles you've faced, it's important to remain alert and prepared for any further challenges that may arise. This card encourages you to draw upon your past experiences and learn from them, using them as sources of wisdom and guidance.
+
+>z
+Time passes.
+
+Challenge: The World (upright)
+World is the final Major Arcana card and represents fulfillment and successful completion of a cycle. You know your place in the world, and your life lessons have served you well. It serves as a gentle reminder that the universe is aligning perfectly in your favor, propelling you forward towards the triumphant realization of your ambitions. The world is at your feet. You're on the right path towards the attainment of your long-cherished aspirations and dreams.
+
+>z
+Time passes.
+
+Opportunity: Two of Swords (reversed)
+Two of Swords reversed suggests that poor choices and hasty decision-making are likely to lead to movement in the wrong direction. It serves as a reminder that impulsive actions can often result in unfavorable outcomes, urging you to carefully consider your options and approach situations with thoughtfulness and patience. By taking the time to weigh your choices and make deliberate decisions, you can avoid the pitfalls that come with rushing into action without considering the potential consequences.
+
+>z
+Time passes.
+
+Future: Four of Wands (reversed)
+Four of Wands reversed indicates the foundation not laid or not ready. Something has caused a disruption in your plans. This could be due to external factors, such as unexpected events that have thrown you off course. Alternatively, it could be self-sabotage, your wavering self-belief or lack of confidence in your abilities can be hindering you from achieving your goals.
+
+As the reading concludes, Esmeralda gazes into your eyes with a cryptic smile and delivers their final words of wisdom: "You need fuses." Whether you leave with a sense of wonder, excitement, or unease, the encounter lingers with you - a touch of magic amid the carnival's chaos, as if you've glimpsed something beyond the ordinary.
+
+>nw
+
+Ticket Booth
+You can see a Cashier and a ticket kiosk here.
+
+>e
+
+
+
+High Striker
+This area features a tall, eye-catching machine adorned with bright, colorful lights, typically red, yellow, and blue. A large sign at the top reads "Test Your Strength!" in bold, playful lettering. The machine's base is made of polished wood, giving it a vintage appearance. At the center is a sturdy metal pole, with a large bell hanging at the top, signaling when a successful attempt has been made. Along the length of the pole are markings indicating how strong you are.  A nearby sign says, "Buy a mallet, strike the bell, win a prize."
+
+Spectators gather around, cheering on participants and offering lighthearted jabs and encouragement, creating a lively, competitive atmosphere. The sound of the mallet hitting the target is followed by the resonant clang of the bell (if struck), alongside the buzz of carnival music in the background.
+
+The Ticket Kiosk is to the west. Other games are northeast and southeast of here. The Ferris Wheel lies to the east.
+
+You can see a Strongman attendant, a lever, and some High Striker prizes here.
+
+The attendant is holding a mallet.
+
+>e
+
+
+
+Ferris Wheel
+The Ferris wheel is the towering centerpiece of the carnival, its vibrant lights and graceful rotations drawing the attention of visitors from every corner of the fairgrounds. The wheel's massive steel frame arches high into the sky, its intricate network of beams glinting under the colorful glow of bulbs strung along its circumference. Each gondola, painted in bright hues like red, yellow, and blue, dangles from the wheel, swaying gently as it turns.
+
+At night, the Ferris wheel transforms into a dazzling spectacle, with hundreds of synchronized lights creating patterns and ripples that pulse outward like waves. The bulbs flash in bursts of red, green, and white, casting playful reflections on nearby attractions and the surrounding crowd.
+
+The air around the wheel is filled with a mix of excited chatter, the hum of its motor, and the occasional squeal of laughter or nervousness from riders high above. The ride operator, standing in a small booth at the base, keeps a steady rhythm of loading and unloading passengers, their voice occasionally calling out, "Step right up! The best view of the carnival awaits!"
+
+The Ferris wheel offers an ever-changing perspective of the carnival below. From its peak, riders can see the entire fairground: the spinning lights of the rides, the colorful stripes of game booths, and the winding paths of visitors navigating the midway. Beyond the carnival, the view stretches to the horizon, with city lights adding to the magical experience.
+
+Whether it's a romantic ride for couples, a thrilling adventure for friends, or a calming retreat for families, the Ferris wheel captures the spirit of the carnival - an iconic blend of excitement, wonder, and timeless charm.
+
+Hey! Is that a two dollar bill on the ground?
+
+You can also see a Ferris Wheel Attendant here.
+
+>give ticket to attendant
+(the Ferris Wheel ticket to the Ferris Wheel Attendant)
+You give the Ferris Wheel ticket to the Ferris Wheel Attendant.
+
+As you step into the gently swaying gondola, a faint creak accompanies the safety bar locking into place. The Ferris wheel begins its slow ascent, the hum of its machinery blending with the distant sounds of carnival games and laughter below. A soft breeze brushes against your face as the gondola rises higher, offering an ever-expanding view of the fairgrounds.
+
+With each rotation, the world transforms. At the peak, the carnival sprawls beneath you like a miniature village, its vibrant lights twinkling against the twilight sky. The sound of the midway fades into a soft murmur, replaced by the serene quiet of being high above the bustling crowd. Beyond the carnival, the horizon stretches endlessly, framed by the glow of distant city lights.
+
+From the top you can see something to the west behind the concession stand.
+
+The gondola sways gently, adding a hint of thrill to the tranquil ride. You exchange smiles with your companions, pointing out tiny figures darting between booths and the dizzying motion of other rides below. The Ferris wheel begins its descent, and the lively carnival sounds grow louder once again, bringing you back into the heart of the action.
+
+Whether you're seeking a moment of calm, a romantic view, or the sheer wonder of seeing the world from above, the Ferris wheel delivers an unforgettable ride that captures the magic of the carnival.
+
+>l at beams
+The Ferris wheel towers above the carnival and is illuminated with vibrant lights, creating a dazzling display. As the wheel turns slowly, the gondolas remain upright, offering riders a thrilling yet gentle experience and spectacular views from the top.
+
+>l at gondolas
+Each gondola, painted in bright hues like red, yellow, and blue, dangles from the wheel, swaying gently as it turns.
+
+>l at bulbs
+The Ferris wheel towers above the carnival and is illuminated with vibrant lights, creating a dazzling display. As the wheel turns slowly, the gondolas remain upright, offering riders a thrilling yet gentle experience and spectacular views from the top.
+
+>l at bill
+It has a picture of Thomas Jefferson on it.
+
+>get it
+Taken.
+
+You now have $22.00.
+
+>l at safety bar
+The safety bar is locked in place.
+
+>raise safety bar
+The safety bar is locked in place.
+
+>w
+
+High Striker
+You can see a Strongman attendant, a lever, and some High Striker prizes here.
+
+The attendant is holding a mallet.
+
+>l
+
+
+High Striker
+This area features a tall, eye-catching machine adorned with bright, colorful lights, typically red, yellow, and blue. A large sign at the top reads "Test Your Strength!" in bold, playful lettering. The machine's base is made of polished wood, giving it a vintage appearance. At the center is a sturdy metal pole, with a large bell hanging at the top, signaling when a successful attempt has been made. Along the length of the pole are markings indicating how strong you are.  A nearby sign says, "Buy a mallet, strike the bell, win a prize."
+
+Spectators gather around, cheering on participants and offering lighthearted jabs and encouragement, creating a lively, competitive atmosphere. The sound of the mallet hitting the target is followed by the resonant clang of the bell (if struck), alongside the buzz of carnival music in the background.
+
+The Ticket Kiosk is to the west. Other games are northeast and southeast of here. The Ferris Wheel lies to the east.
+
+You can see a Strongman attendant, a lever, and some High Striker prizes here.
+
+The attendant is holding a mallet.
+
+>read sign
+Which do you mean, the markings or the High Striker sign?
+
+>markings
+There are five levels marked on the pole: Weakling, Getting There, Average, Almost There, and Muscle Man.
+
+>read high striker sign
+Buy a mallet, strike the bell, win a prize.
+
+>l at base
+The High Striker is a tall, eye-catching machine adorned with bright, colorful lights. A large sign at the top reads "Test Your Strength!". The machine's base is made of polished wood. At the center is a sturdy metal pole, with a large bell hanging at the top.
+
+>l at pole
+There are five levels marked on the pole: Weakling, Getting There, Average, Almost There, and Muscle Man.
+
+>l at spectators
+Spectators gather around, cheering on participants and offering lighthearted jabs and encouragement.
+
+>listen
+The sound of the mallet hitting the target is followed by the resonant clang of the bell ), alongside the buzz of carnival music in the background.
+
+>smell
+You smell the odors of the carnival. As you inhale deeply, you can discern fresh, hot buttered popcorn, the sweet aroma of cotton candy, and the warm doughy scent of pretzels.
+
+>l at bell
+This is the bell that will ring out when you prove to everyone that you're a "Muscle Man".
+
+Over the loud speaker, an announcement blares: Attention please. There is a vehicle being towed from the parking lot for parking illegally. The license plate of the car is "862901". You breathe a sigh of relief as you realize that's not your license plate. I guess it's a good thing you remembered to place the parking stub on the dashboard.
+
+>buy mallet
+You fork over $2.00 for the mallet, leaving yourself with $20.00.
+
+>hit bullseye with mallet
+You lift the mallet high and bring it down on the lever with all your might! The striker rises towards the bell stopping at "Getting Stronger".  C'mon! You can do better than that!
+
+>g
+You lift the mallet high and bring it down on the lever with all your might! The striker rises towards the bell stopping at "Almost There".  C'mon! You can do better than that!
+
+>g
+You lift the mallet high and bring it down on the lever with all your might! The striker rises towards the bell stopping at "Getting Stronger".  C'mon! You can do better than that!
+
+>g
+You lift the mallet high and bring it down on the lever with all your might! The striker rises towards the bell stopping at "Almost There".  C'mon! You can do better than that!
+
+>g
+You lift the mallet high and bring it down on the lever with all your might! The striker rises towards the bell stopping at "Almost There".  C'mon! You can do better than that!
+
+You swing the mallet one more time. The bell rings as the striker reaches the top of the pole. The attendant says, "You're a Muscle Man. Here's a prize for you."
+Which prize would you like? 1) a teddy bear, 2) a Swiss Army knife, 3) a magenta fuse, 4) a poster of Taylor Swift?
+
+>2
+You are now holding a Swiss Army knife.
+
+[Your score has just gone up by ten points.]
+
+>ne
+
+
+
+Dime Toss Game
+The game booth is adorned with vibrant colors - red-and-white striped awnings, twinkling lights, and eye-catching signage that reads "TOSS A DIME - WIN A PRIZE!". You can see prizes of all shapes and sizes hang around the booth, from stuffed animals and novelty toys to shiny trinkets and quirky collectibles. The larger prizes are prominently displayed to entice passersby. Rows of gleaming plates sparkle under overhead lights, their glass surfaces reflecting the surrounding glow.
+
+The distinctive "ping" of dimes hitting plates creates a rhythmic soundtrack, punctuated by the occasional satisfying "plop" when a dime lands perfectly. Victorious shouts mix with playful groans of near-misses, creating a symphony of excitement. Nearby, the hum of other booths, upbeat carnival music, and the distant laughter of children add to the lively backdrop. The booth operator calls out enthusiastically, "Step right up! Test your skill! Win big!" Their energetic pitch draws in curious onlookers. You thought you caught a flash of something coming from the area of the booth.
+
+You're surprised to see that this game only costs a dime. The exit is to the southwest.
+
+You can see a Dime Toss attendant, some Dime Toss prizes, and a plate here.
+
+>l at awnings
+The game booth is adorned with vibrant colors - red-and-white striped awnings, twinkling lights, and eye-catching signage.  You can see something shiny on the ground under the booth.
+
+>read sign
+The sign reads, "TOSS A DIME - WIN A PRIZE!".
+
+>l at prizes
+The prizes are a stuffed monkey, an orange fuse, a poster of Billie Eilish, and a horseshoe magnet.
+
+>listen
+The distinctive "ping" of dimes hitting plates creates a rhythmic soundtrack.
+
+>smell
+You smell the odors of the carnival. As you inhale deeply, you can discern fresh, hot buttered popcorn, the sweet aroma of cotton candy, and the warm doughy scent of pretzels.
+
+>l at plates
+These are small, flat plates, almost saucers. You are meant to toss a dime on these plates to win a prize!
+
+>l under booth
+You find the mercury dime!
+
+>get mercury dime
+Taken.
+
+[Your score has just gone up by five points.]
+
+>x it
+
+
+The Mercury dime is a ten-cent coin struck by the United States Mint from late 1916 to 1945. Designed by Adolph Weinman and also referred to as the Winged Liberty Head dime, it gained its common name because the obverse depiction of a young Liberty, identifiable by her winged Phrygian cap, was confused with the Roman god Mercury.
+
+>toss mercury dime at plate
+You toss the dime. Like skipping a stone in water, the dime skitters off the plate.
+
+>toss dime at plate
+(the dime at the plate)
+You toss the dime. The dime hits the plate, starts to spins, and lands in the center of the plate. The attendant shouts out, "Winner! Winner!" Which prize would you like? 1) a stuffed monkey, 2) an orange fuse, 3) a poster of Billie Eilish, 4) a horseshoe magnet?
+
+>4
+You are now holding a horseshoe magnet.
+
+[Your score has just gone up by five points.]
+
+>sw
+
+High Striker
+You can see a Strongman attendant, a lever, and some High Striker prizes here.
+
+
+>se
+
+
+
+Pitcher's Mound
+The milk bottle ball toss is a classic carnival game that combines skill, strength, and a bit of luck. The setup features a pyramid of brightly colored milk bottles stacked on a sturdy platform - three on the bottom, two in the middle, and one on top. Players stand behind a marked line and toss baseballs, aiming to knock down as many bottles as possible. Clearing the entire stack wins a prize.
+
+The booth buzzes with energy, its colorful banners and flashing lights drawing a lively crowd. The satisfying clatter of falling bottles mixes with cheers and groans from players and spectators. A carnival attendant calls out, "Step right up and test your aim! Three balls for just a dime." Prizes - ranging from small toys to giant stuffed animals - hang prominently, enticing players to take a shot. With every toss, the game delivers moments of suspense, joy, and fun, making it a favorite at the carnival.
+
+You're surprised to see that this game only costs a dime. The High Striker is to the northwest.
+
+You can see a Pitcher's Mound attendant and some Pitcher's Mound prizes here.
+
+>l at bottles
+The milk bottles are stacked in three neat rows: three on the bottom, two in the middle, and one on top.
+
+>l at pyramid
+The milk bottles are stacked in three neat rows: three on the bottom, two in the middle, and one on top.
+
+>l at banners
+The booth buzzes with energy, its colorful banners and flashing lights drawing a lively crowd.
+
+>l at spectators
+The satisfying clatter of falling bottles mixes with cheers and groans from players and spectators.
+
+>l at prizes
+The prizes are a crimson fuse, a plush donkey, a goldfish in a bowl, and a poster of Lourde.
+
+>give dime to attendant
+The attendant gives you three baseballs in return.
+
+>throw baseball at bottles
+You wind up and throw the baseball at the milk bottles. The ball hits the bottles in the sweet spot and they go flying off the platform. The attendant shouts out, "Winner! Winner!" Which prize would you like? 1) a crimson fuse, 2) a plush donkey, 3) a goldfish in a bowl, 4) a poster of Lourde?
+
+>1
+You are now holding a crimson fuse.
+
+[Your score has just gone up by ten points.]
+
+>nw
+
+High Striker
+You can see a Strongman attendant, a lever, and some High Striker prizes here.
+
+
+>l at prizes
+The prizes are a teddy bear, a magenta fuse, and a poster of Taylor Swift.
+
+>w
+
+Ticket Booth
+You can see a Cashier and a ticket kiosk here.
+
+>sw
+
+
+
+Concession Stand
+The concession stand, perched along the midway, is a colorful and bustling hub. Painted in bright reds, blues, and yellows, it features bold lettering announcing treats like "SODA! POPCORN! CANDY APPLES!" Strings of twinkling lights frame the stand, making it a glowing beacon amid the carnival excitement.
+
+Behind the counter, a popcorn machine churns out golden kernels, filling the air with a buttery aroma. Candy apples gleam under the lights, and cotton candy machines spin fluffy clouds of pink and blue. Warm pretzels sit under a heat lamp, their buttery, salted scent mingling with the sugary treats. A cooler holds sodas, their colorful labels visible through the frosted glass.
+
+The counter is lively with stacks of paper bags, napkins, and cups of cheese and sugar sprinkles. A handwritten chalkboard menu lists prices in playful lettering. Workers in colorful aprons quickly hand out snacks, their movements efficient amid the cheerful chaos.
+
+In front of the stand, kids tug at their parents, teens share pretzels, and the crowd buzzes with energy. More than just a snack stop, the stand is a sensory delight, adding flavor and charm to the carnival experience.
+
+There is a menu to the right of the window. You can see the treats inside the stand. There is an exit to the northeast.
+
+You can see a Concession Attendant, a menu, a Drink of Cola, some Bubblegum, a Bucket of Popcorn, a Candy Apple, Cotton Candy, and a Soft Pretzel here.
+
+>l at stand
+The Concession Stand, perched along the midway, is a colorful and bustling hub. Painted in bright reds, blues, and yellows, it features bold lettering announcing treats like "SODA! POPCORN! CANDY APPLES!" Strings of twinkling lights frame the stand, making it a glowing beacon amid the carnival excitement.
+
+>read sign
+$2.00 Drink
+$2.50 Bucket of Popcorn
+$1.50 Candy Apple
+$1.50 Cotton Candy
+$1.50 Soft Pretzel
+$1.00 Bubblegum
+
+>ask attendant about popcorn
+The Concession Attendant says, "The popcorn is really good. It's hot and fresh."
+
+>ask attendant about pretzels
+The Concession Attendant says, "I prefer to eat my pretzels with mustard.
+
+>ask attendant about cotton candy
+The Concession Attendant says, "I love the way cotton candy melts in my mouth."
+
+>ask attendant about candy apples
+"I'm afraid I haven't the faintest," the Concession Attendant exclaims.
+
+>ask attendant about bubblegum
+The Concession Attendant says, "It's Bazooka Joe! My favorite!"
+
+>l at counter
+On the counter there are paper bags, napkins, and cups of cheese and sugar sprinkles.
+
+>l at machine
+The machines faithfully prepares batch of batch of treats for the crowd.
+
+>l at bags
+The paper bags are used to send the customer off with their goodies.
+
+>l at napkins
+It's the kind of dispenser that doesn't allow you to take more than one at a time.
+
+>l at cups
+The cups are full of cheese and sugar sprinkles Not together though. That's nasty!
+
+>read chalkboard
+$2.00 Drink
+$2.50 Bucket of Popcorn
+$1.50 Candy Apple
+$1.50 Cotton Candy
+$1.50 Soft Pretzel
+$1.00 Bubblegum
+
+>l at aprons
+These are full-sized aprons with the carnival's logo printed on them.
+
+>buy bubblegum
+You fork over $1.00 for the Bubblegum, leaving yourself with $19.00.
+
+>w
+
+Behind the Concession Stand
+Behind the concession stand, to one side is the trash generated from the day's activities and to the other side boxes of supplies. There is a chair here surrounded by cigarette butts.
+
+You can see a trash can (closed) and some concession boxes here.
+
+>open trash can
+You open the trash can, revealing a Khaki colored fuse.
+
+>get fuse
+(the Khaki colored fuse)
+Taken.
+
+[Your score has just gone up by five points.]
+
+>l at chair
+The employees sit in this chair while on break.
+
+>l at trash
+This a garbage can overflowing with trash.
+
+>l at butts
+The chair is surrounded by cigarette butts carelessly discarded on the ground.
+
+>e
+
+Concession Stand
+You can see a Concession Attendant, a menu, a Drink of Cola, a Bucket of Popcorn, a Candy Apple, Cotton Candy, and a Soft Pretzel here.
+
+>ne
+
+Ticket Booth
+You can see a Cashier and a ticket kiosk here.
+
+>w
+
+
+The barker cries:
+
+Ladies and gentlemen, boys and girls, gather 'round! 
+Step right up and witness the spectacle that's taken the world by storm! 
+She walks, she talks, she crawls on her belly like a reptile. 
+Behold the one, the only Little Egypt, performing her legendary Dance of the Pyramids - a dazzling display of mystery, grace, and exotic allure! 
+For just a dime, a mere one tenth of a dollar, prepare to be transported to the sands of Cairo, where enchantment and wonder await!
+
+Show Facade
+You head west through the midway, the bright lights of the carnival fading behind you as you approach a tent. A sign above the entrance reads "Little Egypt Show - A Journey Into the Mysterious and Exotic!" A rotund barker, wearing a fez and a dazzling smile, gestures to a small sign beside him. The Ticket Kiosk is back the way you came.
+
+There is a stage in front of the tent. The Barker is encouraging you to step up and enjoy the Little Egypt Show.
+
+You can see a Barker here.
+
+>l at tent
+Inside the tent is the Little Egypt show.
+
+>read sign
+The sign reads, "Little Egypt Show - Dime Admission". Underneath it says "The show starts every 15 minutes beginning at the top of the hour."
+
+>give dime to barker
+You hand over a dime, and the barker nods, waving you through. As you step past the entrance, the air feels thicker, almost humid, and the sounds of the carnival fade away. You've entered an entirely different world now - one filled with the scents of incense and exotic spices, and the low, hypnotic music of a faraway land. Before you, a series of dimly lit tents stretch out, their flaps slightly swaying in the breeze. Intrigued, you take your first step into the Little Egypt Show. You can now head west into the show.
+
+>w
+
+
+
+Show Tent
+You are inside the Little Egypt Show. The attraction's facade is to the east. There are folding chairs organized neatly in rows. The show should start soon.
+
+>sit in chair
+You get onto the folding chair.
+
+>z
+Time passes.
+
+>z
+Time passes.
+
+>z
+Time passes.
+
+>z
+Time passes.
+
+>smell
+The smell of incense and spices wafts through the tent.
+
+>listen
+The soft sounds of exotic music fill the air.
+
+>z
+Time passes.
+
+>z
+Time passes.
+
+>z
+Time passes.
+
+>l at market
+The stage is decorated to resemble an exotic Middle Eastern market or palace, featuring rich, colorful fabrics, brass ornaments, and lanterns casting a warm, flickering glow. Scents of incense waft through the air, enhancing the atmosphere of mystique. The canvas displays painted scenes of pyramids, desert landscapes, and domed structures to evoking a sense of being transported to the "Middle East".
+
+>l at palace
+The stage is decorated to resemble an exotic Middle Eastern market or palace, featuring rich, colorful fabrics, brass ornaments, and lanterns casting a warm, flickering glow. Scents of incense waft through the air, enhancing the atmosphere of mystique. The canvas displays painted scenes of pyramids, desert landscapes, and domed structures to evoking a sense of being transported to the "Middle East".
+
+>l at stage
+The stage is decorated to resemble an exotic Middle Eastern market or palace, featuring rich, colorful fabrics, brass ornaments, and lanterns casting a warm, flickering glow. Scents of incense waft through the air, enhancing the atmosphere of mystique. The canvas displays painted scenes of pyramids, desert landscapes, and domed structures to evoking a sense of being transported to the "Middle East".
+
+>z
+Time passes.
+
+In the dimly lit tent, you see that the stage is decorated to resemble an exotic Middle Eastern market or palace, featuring rich, colorful fabrics, brass ornaments, and lanterns casting a warm, flickering glow. Scents of incense waft through the air, enhancing the atmosphere of mystique. The backdrop displays painted scenes of pyramids, desert landscapes, and domed structures evoking a sense of being transported to the "Middle East". 
+
+>z
+Time passes.
+
+Little Egypt emerges draped in flowing silk veils which she skillfully uses as part of the dance. Her attire consists of a sparkling, sequined bodice and a flowing skirt, adorned with jingling coin belts and jewelry that accentuate her movements.
+
+>z
+Time passes.
+
+The performance begins with slow, undulating movements, drawing you into the rhythm of exotic live music played on traditional instruments like the oud, darbuka, or zurna. As the tempo builds, her hips, torso, and hands move in intricate, mesmerizing patterns, demonstrating remarkable control and fluidity. She incorporates dramatic spins, drops, and shimmies, often accentuating the beat of the music with a quick jingle of her coin belt.
+
+>z
+Time passes.
+
+Little Egypt makes eye contact with you and smiles enigmatically. During her performance she balances a sword on her head and accents her dance with finger cymbals.
+
+>z
+Time passes.
+
+The music alternates between hauntingly slow melodies and rapid, energetic drum beats, creating an emotional arc that keeps you entranced. Little Egypt relies on the music's dynamic changes to tell a story with movements reflecting joy, sorrow, seduction, and celebration.
+
+>z
+Time passes.
+
+The performance concludes with a dramatic flourish of a fast-paced shimmy, a bold spin, and Little Egypt dramatically casts off her veils. The dancer takes a bow to enthusiastic applause, leaving you spellbound by the sensual yet artful display.
+
+You applaud until your hands are sore. Did she just wink at you?
+
+As she leaves the stage, Little Egypt tosses one of her veils to you!
+
+
+>l at pyramids
+The canvas displays painted scenes of pyramids, desert landscapes, and domed structures .
+
+>l at landscapes
+The canvas displays painted scenes of pyramids, desert landscapes, and domed structures .
+
+>l at lanterns
+This is a highly polished brass lantern.
+
+It is currently switched off.
+
+>get lantern
+Taken.
+
+[Your score has just gone up by ten points.]
+
+>turn it on
+You flip a switch. A strong, narrow beam of light shines from the lit lantern.
+
+>l at backdrop
+Elegantly painted on linen, the backdrop shows scenes of Middle Eastern life.
+
+>look at veils
+Little Egypt is a beautiful woman who is draped in flowing silk veils which she skillfully uses as part of the dance. Her attire consists of a sparkling, sequined bodice and a flowing skirt, adorned with jingling coin belts and jewelry that accentuate her movements.
+
+>z
+Time passes.
+
+>z
+Time passes.
+
+>z
+Time passes.
+
+In the dimly lit tent, you see that the stage is decorated to resemble an exotic Middle Eastern market or palace, featuring rich, colorful fabrics, brass ornaments, and lanterns casting a warm, flickering glow. Scents of incense waft through the air, enhancing the atmosphere of mystique. The backdrop displays painted scenes of pyramids, desert landscapes, and domed structures evoking a sense of being transported to the "Middle East". 
+
+>z
+Time passes.
+
+Little Egypt emerges draped in flowing silk veils which she skillfully uses as part of the dance. Her attire consists of a sparkling, sequined bodice and a flowing skirt, adorned with jingling coin belts and jewelry that accentuate her movements.
+
+>z
+Time passes.
+
+The performance begins with slow, undulating movements, drawing you into the rhythm of exotic live music played on traditional instruments like the oud, darbuka, or zurna. As the tempo builds, her hips, torso, and hands move in intricate, mesmerizing patterns, demonstrating remarkable control and fluidity. She incorporates dramatic spins, drops, and shimmies, often accentuating the beat of the music with a quick jingle of her coin belt.
+
+>z
+Time passes.
+
+Little Egypt makes eye contact with you and smiles enigmatically. During her performance she balances a sword on her head and accents her dance with finger cymbals.
+
+>z
+Time passes.
+
+The music alternates between hauntingly slow melodies and rapid, energetic drum beats, creating an emotional arc that keeps you entranced. Little Egypt relies on the music's dynamic changes to tell a story with movements reflecting joy, sorrow, seduction, and celebration.
+
+>z
+Time passes.
+
+The performance concludes with a dramatic flourish of a fast-paced shimmy, a bold spin, and Little Egypt dramatically casts off her veils. The dancer takes a bow to enthusiastic applause, leaving you spellbound by the sensual yet artful display.
+
+You applaud until your hands are sore. Did she just wink at you?
+
+>wear veil
+You wrap the veil around your head, shrouding your eyes. The world is a lovely color pink as you look through the veil while her perfume fills your nostrils in the most delightful way. You look pretty!
+
+[Your score has just gone up by five points.]
+
+>l at scenes
+The canvas displays painted scenes of pyramids, desert landscapes, and domed structures .
+
+>l at landscapes
+The canvas displays painted scenes of pyramids, desert landscapes, and domed structures .
+
+>l at incense
+The smell of incense and spices wafts through the tent.
+
+>l at oud
+That's a traditional Middle Eastern musical instrument.
+
+>l at fabric
+The linen and silk fabrics come in all different colors.
+
+>l at brass
+There are highly polished incense holders and brass lanterns here.
+
+>l at canvas
+Elegantly painted on linen, the backdrop shows scenes of Middle Eastern life.
+
+>l at backdrop
+Elegantly painted on linen, the backdrop shows scenes of Middle Eastern life.
+
+>l at cymbals
+The cymbals are placed on the thumb and index finger of each hand. Tapping them together produces a ringing sound.
+
+In the dimly lit tent, you see that the stage is decorated to resemble an exotic Middle Eastern market or palace, featuring rich, colorful fabrics, brass ornaments, and lanterns casting a warm, flickering glow. Scents of incense waft through the air, enhancing the atmosphere of mystique. The backdrop displays painted scenes of pyramids, desert landscapes, and domed structures evoking a sense of being transported to the "Middle East". 
+
+>l at sword
+This is a beautiful steel sword with a filigreed handle and blade.
+
+Little Egypt emerges draped in flowing silk veils which she skillfully uses as part of the dance. Her attire consists of a sparkling, sequined bodice and a flowing skirt, adorned with jingling coin belts and jewelry that accentuate her movements.
+
+>l at wall
+You see nothing specal about the wall.
+
+The performance begins with slow, undulating movements, drawing you into the rhythm of exotic live music played on traditional instruments like the oud, darbuka, or zurna. As the tempo builds, her hips, torso, and hands move in intricate, mesmerizing patterns, demonstrating remarkable control and fluidity. She incorporates dramatic spins, drops, and shimmies, often accentuating the beat of the music with a quick jingle of her coin belt.
+
+>l at instruments
+That's a traditional Middle Eastern musical instrument.
+
+Little Egypt makes eye contact with you and smiles enigmatically. During her performance she balances a sword on her head and accents her dance with finger cymbals.
+
+>z
+Time passes.
+
+The music alternates between hauntingly slow melodies and rapid, energetic drum beats, creating an emotional arc that keeps you entranced. Little Egypt relies on the music's dynamic changes to tell a story with movements reflecting joy, sorrow, seduction, and celebration.
+
+>z
+Time passes.
+
+The performance concludes with a dramatic flourish of a fast-paced shimmy, a bold spin, and Little Egypt dramatically casts off her veils. The dancer takes a bow to enthusiastic applause, leaving you spellbound by the sensual yet artful display.
+
+You applaud until your hands are sore. Did she just wink at you?
+
+>stand
+You get off the folding chair.
+
+Show Tent
+
+>e
+
+Show Facade
+You can see a Barker here.
+
+>look
+
+
+Show Facade
+You head west through the midway, the bright lights of the carnival fading behind you as you approach a tent. A sign above the entrance reads "Little Egypt Show - A Journey Into the Mysterious and Exotic!" A rotund barker, wearing a fez and a dazzling smile, gestures to a small sign beside him. The Ticket Kiosk is back the way you came.
+
+There is a stage in front of the tent. The Barker is encouraging you to step up and enjoy the Little Egypt Show.
+
+You can see a Barker here.
+
+>read sign
+The sign reads, "Little Egypt Show - Dime Admission". Underneath it says "The show starts every 15 minutes beginning at the top of the hour."
+
+>l at barker
+Here is a man dressed in black pants, a blue shirt, a red vest, a hat much like a fez, and a dazzling smile.
+
+The barker cries:
+
+Ladies and gentlemen, boys and girls, gather 'round! 
+Step right up and witness the spectacle that's taken the world by storm! 
+She walks, she talks, she crawls on her belly like a reptile. 
+Behold the one, the only Little Egypt, performing her legendary Dance of the Pyramids - a dazzling display of mystery, grace, and exotic allure! 
+For just a dime, a mere one tenth of a dollar, prepare to be transported to the sands of Cairo, where enchantment and wonder await!
+
+>e
+
+Ticket Booth
+You can see a Cashier and a ticket kiosk here.
+
+>l at attendant
+This is another bored teenager. He wonders how is he supposed to look cool dressed in this awful uniform.
+
+>g
+This is another bored teenager. He's thinking about having a brewski with his bros after work.
+
+>g
+This is another bored teenager. He wonders how is he supposed to look cool dressed in this awful uniform.
+
+>ask attendant about uniform
+Wearing blue pants and a pink shirt, the Cashier says, "This is just awful! I look like a lollipop.
+
+>ask attendant about brewski
+The Cashier replies, "A nice cold Coors Light would taste good about now."
+
+>ask attendant about beer
+The Cashier replies, "A nice cold Coors Light would taste good about now."
+
+>ask attendant about game
+The Cashier says, "Friday night is the league championship. I hope we win!"
+
+>s
+
+Head of the Line
+You are standing in front of an attendant with his hand open waiting for your ticket. The entrance to the ride is south of here. The ride operator tells you that you're lucky you showed up when you did because this will be the last trip through Hell Ride for the night. You notice that all the other cars are empty. The Ticket Kiosk is north of here.
+
+You can see a Hell Ride Attendant here.
+
+>l at cars
+(the hell ride cars)
+These cars ferry carnival goers into the depths of Hell Ride.
+
+>l at car
+These cars ferry carnival goers into the depths of Hell Ride.
+
+>fuck attendant
+Hell Ride isn't that kind of game!
+
+>shit
+Real adventurers don't use that sort of language!
+
+>damn
+And you kiss your mother with that mouth?
+
+>s
+You'll need a ticket to go that way.
+
+>give ticket to attendant
+(the Hell Ride ticket to the Hell Ride Attendant)
+You give the Hell Ride ticket to the Hell Ride Attendant.
+
+>s
+
+
+
+Ride Entrance
+The cars that will take you into the fearsome Hell Ride stop here for you to board and then move forward, the safety bar locked in place, as the entrance to Hell Ride looms ahead - a grotesque facade of twisted metal and carved wood, illuminated by flickering blood-red lights. The air carries a faint sulfuric tang mingled with the sweet aroma of carnival popcorn.
+
+A towering archway of flames, spikes, and grinning skulls frames the entrance, crowned by flickering letters that read "HELL RIDE", pulsing like a heartbeat. Below, crouching demon sculptures extend clawed hands in a sinister invitation. Wooden doors cover the entrance, whispering with faint, menacing chuckles as distorted organ music grows louder, punctuated by shrieks and grinding machinery.
+
+Inside, near-total darkness is broken by flashes of sickly green light revealing twisted paths and grotesque shapes. Beyond the threshold lies only uncertainty and terror. To one side, the darkness looks a little bit darker than the rest of the room.
+
+You can see a Hell Ride car (empty) here.
+
+>l at cars
+(the Hell Ride car)
+A car waits to take you through the horror that is Hell Ride.
+
+>smell
+You can smell a faint sulfuric tang in the air.
+
+>listen
+The sound of organ music, shrieks, and grinding machinery fills the air.
+
+>l at lights
+The archway surrounds the entrance to the ride.
+
+>l at flames
+The archway surrounds the entrance to the ride.
+
+>l at sculptures
+On either side of the doors are sculptures of demons welcoming you inside.
+
+>l at paths
+The paths lead through the darkness into Hell Ride.
+
+>l at shapes
+Shadowy figures in the shape of demons can be seen through the door.
+
+>l at threshold
+There are skulls scattered about the threshold of the ride entrance.
+
+>l at flashes
+Flashes of sickly green light reveal twisted paths and grotesque shapes in the dark of the ride.
+
+>e
+
+Dark Passage
+This room is backstage at the Hell Ride attraction. The room is littered with bags of trash, piles of junk, and dust bunnies so large they should be paying rent. There an exit to the south and west.
+
+[Your score has just gone up by five points.]
+
+>l at bags of trash
+The bags of trash are piled in the corner.
+
+>l at junk
+This is a pile of assorted flotsam and jetsam from the carnival. None of it looks very interesting.
+
+In the pile of junk is a flashlight.
+
+>get flashlight
+Taken.
+
+>turn it on
+You flip a switch. A strong, narrow beam of light shines from the lit flashlight.
+
+>l at bunnies
+These are some massive dust bunnies. Be careful, I've heard they bite.
+
+>s
+
+
+
+Maintenance Office
+The maintenance office, hidden behind the carnival's bright facade, is a dim and cluttered space reeking of grease, sweat, and faint traces of popcorn from the midway. The air hangs heavy with oil and stirred-up dust.
+
+The walls are lined with shelves holding tools and parts in disarray - screws and mismatched jars with faded labels. Paint cans and grease jars clutter the workbenches, many left half-open. In the center, a battered desk is strewn with wires, gears, and springs, a bent piece of metal held in a vise. Overhead, a single flickering fluorescent light struggles to illuminate the room.
+
+In one corner, a disassembled ride mechanism lies exposed, chains and pulleys dangling from hooks above, faintly clinking with the vibrations of the rides. A grease-stained manual and a half-drained mug of coffee sit abandoned on a nearby stool.
+
+The walls display faded safety posters, a cork board with maintenance schedules and notes, and a worn photo of the carnival in its prime. A clock ticks faintly, its hands out of sync with reality. The floor, gritty with dust and scattered nails, adds to the room's chaotic charm.
+
+Despite the mess, the room buzzes with purpose - a hidden hub where the carnival's magic is sustained through sweat, ingenuity, and the hum of machinery.
+
+Exits lead north and south.
+
+Nearby a ladder leads up.
+
+Nearby an Aqua colored door leads west.
+
+You can also see a worn photo and a desk (on which are a coffee mug and a radio) here.
+
+>smell
+You smell grease, oil, and the other scents that linger back stage.
+
+>listen
+You can hear a clock ticking softly nearby.
+
+>l at shelves
+The shelves hold all manner of things.
+
+>l at labels
+The labels have faded so much that they are illegible.
+
+>l at jars
+Screws, grease jars, and cans of paint are here.
+
+>l at tools
+The tools are varied and surely fit all manner of things around the carnival.
+
+>l at parts
+The parts are varied and surely fit all manner of things around the carnival.
+
+>l at screws
+Screws, grease jars, and cans of paint are here.
+
+>l at workbenches
+The workbenches are messy, cluttered, and covered with things.
+
+>l at wires
+The wires lay in twisted tangles on the desk.
+
+>turn on radio
+You switch the radio on.
+
+The DJ announces that "Tracks Of My Tears" by Smokey Robinson will be up next.
+
+>l at gears
+The gears and springs are strewn on the desk.
+
+You hear Led Zeppelin's "Fool In The Rain" playing on the radio.
+
+>l at posters
+You're the safe choice for safety!
+
+You whistle along to "Losing My Religion" by R.E.M..
+
+>l at schedules
+Looking at the maintenance schedules and notes, all you can see are the illegible scribbles of a child.
+
+"Fool In The Rain" by Led Zeppelin plays on the radio.
+
+>look
+
+
+Maintenance Office
+The maintenance office, hidden behind the carnival's bright facade, is a dim and cluttered space reeking of grease, sweat, and faint traces of popcorn from the midway. The air hangs heavy with oil and stirred-up dust.
+
+The walls are lined with shelves holding tools and parts in disarray - screws and mismatched jars with faded labels. Paint cans and grease jars clutter the workbenches, many left half-open. In the center, a battered desk is strewn with wires, gears, and springs, a bent piece of metal held in a vise. Overhead, a single flickering fluorescent light struggles to illuminate the room.
+
+In one corner, a disassembled ride mechanism lies exposed, chains and pulleys dangling from hooks above, faintly clinking with the vibrations of the rides. A grease-stained manual and a half-drained mug of coffee sit abandoned on a nearby stool.
+
+The walls display faded safety posters, a cork board with maintenance schedules and notes, and a worn photo of the carnival in its prime. A clock ticks faintly, its hands out of sync with reality. The floor, gritty with dust and scattered nails, adds to the room's chaotic charm.
+
+Despite the mess, the room buzzes with purpose - a hidden hub where the carnival's magic is sustained through sweat, ingenuity, and the hum of machinery.
+
+Exits lead north and south.
+
+Nearby a ladder leads up.
+
+Nearby an Aqua colored door leads west.
+
+You can also see a worn photo and a desk (on which are a coffee mug and a radio) here.
+
+You hear Paul Simon's "Kodachrome" playing on the radio.
+
+>read manual
+The manual is titled: "Fixing Your Ferris Wheel. It's Easier Than You Think!"
+
+"Bohemian Rhapsody" by Queen plays on the radio.
+
+>drink coffee
+That looks nasty. There's something floating on the top. I wouldn't drink that if I was you.
+
+The DJ announces that "Never Gonna Give You Up" by Rick Astley will be up next.
+ Yes, you have been Rick Rolled!
+
+>drink coffee
+You decide to drink it after all. Your stomach lurches as the cold, nasty coffee settles.
+
+You sing along to Bruce Springsteen's "Born To Run".
+
+>drink coffee
+You've learned your lesson and set the coffee cup down.
+
+You hear Cat Stevens's "Peace Train" playing on the radio.
+
+>drink coffee
+There's nothing suitable to drink here.
+
+The DJ announces that "Respect" by Aretha Franklin will be up next.
+
+>l at clock
+The clock is wildly off the correct time. I guess it's broken.
+
+Nearby, you can hear "No Woman, No Cry" by Bob Marley.
+
+>turn off radio
+You switch the radio off.
+
+>u
+
+Dark Hallway
+This is a poorly lit hallway. Ahead to the west you can see the glow of an open door.
+
+Nearby a ladder leads down to the Maintenance Office.
+
+>w
+
+Control Room
+The backstage control room is a plain, functional hub where the carnival's rides, lights, and attractions are managed. Gray industrial walls, scuffed and greasy, surround a large monitor streaming live carnival feeds. Beneath them, control panels with labeled dials, colored buttons, and lights oversee the systems scattered about the room. Glancing at the control panels, you can see they are dark.
+
+The hum of electronics fills the air, punctuated by the crackle of a radio: "Maintenance to Bumper Cars - wrench needed!" The worn floor is scattered with papers, tools, and coffee cups. A cluttered desk holds logs and schedules, while a cork board above displays charts and red-marked notes like "Check Zipper circuit breakers."
+
+A flickering light casts cold shadows as the metallic tang of machinery mixes with dampness. Functional yet essential, this hidden space ensures the carnival's magic runs seamlessly. On one wall is a large switch with sparks arcing out from it.
+
+A dark hallway lies to the east.
+
+Currently there are sparks arcing out from the switch. It looks dangerous.
+
+[Your score has just gone up by five points.]
+
+>l at monitor
+The monitor flickers for a second and the scene it displays changes to something different.
+The monitor now shows nothing but snow.
+
+
+
+>l at papers
+The worn floor is scattered with papers, tools, and coffee cups.
+
+>l at desk
+The desk is covered with all matter of detritus.
+
+>l at cork board
+The cork board displays charts and notes.
+
+>l at charts
+There is nothing interesting about the charts and notes.
+
+>listen 
+The hum of electronics fills the air, punctuated by the crackle of a radio: "Maintenance to Bumper Cars - wrench needed!"
+
+>flip switch
+You switch the big switch off.
+
+[Your score has just gone up by fifteen points.]
+
+>e
+
+Dark Hallway
+Nearby a ladder leads down to the Maintenance Office.
+
+>d
+
+Maintenance Office
+Nearby a ladder leads up to the Dark Hallway.
+
+Nearby an Aqua colored door leads west.
+
+You can also see a worn photo and a desk (on which are a coffee mug and a radio) here.
+
+>get photo
+Taken.
+
+>look at it
+This is a photo of the carnival in its heyday! A ragtag bunch of people are featured in the picture. On the back reads a date: "March, 1962".
+
+>s
+
+Crawl Space
+The crawl space beneath the carnival ride is a tight, claustrophobic tunnel shrouded in darkness and filled with the hum of machinery above. The air is stale and heavy, carrying the sharp metallic scent of oil and the faint tang of rust. Every sound is amplified in the confined space - the groaning of steel beams, the clanking of chains, and the rhythmic thrum of motors driving the ride above.
+
+The ground is uneven, a mix of packed dirt and loose gravel scattered with forgotten tools, scraps of metal, and tangled wires. Overhead, a network of pipes crisscross the space, some wrapped in fraying insulation that crackles faintly as you crawl past. Small puddles of murky water collect in dips on the floor, their surfaces rippling with vibrations from the ride's movement.
+
+The backstage area continues north and south.
+
+Nearby a Crimson colored door leads west.
+
+>listen
+You can hear the hum of the machinery above.
+
+>smell
+The air is stale and heavy, carrying the sharp metallic scent of oil and the faint tang of rust.
+
+>l at tools
+Scattered on the floor are some long forgotten tools.
+
+>l at pipes
+The pipes head in every direction.
+
+>l at wires
+Scattered on the floor are some hopelessly tangled wires.
+
+>l at scraps
+These scraps are mostly angle iron and scaffolding.
+
+>l at insulation
+The insulation is ratty and not doing much good to protect the cables and pipes.
+
+>l at puddles
+You move gingerly to avoid the puddles. It's much more pleasant to be dry.
+
+>s
+
+Mechanical Room North
+The north mechanical room is compact and specialized, housing auxiliary systems that keep the ride running smoothly. A subdued hum of capacitors and relays fills the space, its quiet rhythm broken only by the occasional hiss of hydraulic fluid.
+
+Circuit breaker panels line the walls, labeled for functions like "Lighting Controls" and "Brake Systems". Smaller cables and conduits snake along the walls, linking these systems to the main hub. In one corner, a hydraulic pump and reservoir manage lifting arms and rotating platforms, their gauges flickering as they work.
+
+A small workbench against the eastern wall is cluttered with tools and coiled wires, while shelves above hold neatly labeled spare parts - cables, and hydraulic tubing. A faded ride diagram pinned nearby is marked with red annotations from past repairs.
+
+Dimly lit by a single hanging bulb, the room feels cooler and slightly damp, the metallic tang of machinery mixing with a hint of mildew. Though quieter and less prominent than the south mechanical room, this space plays a vital role in supporting the ride's operation and ensuring its emergency systems are always prepared.
+
+There are exists north and south.
+
+Nearby an Emerald colored door leads west.
+
+You can also see a toolbox (closed) here.
+
+>listen
+You hear the subdued hum of capacitors and relays.
+
+>smell
+You smell grease, oil, and the other scents that linger back stage.
+
+>l at  capacitors
+The subdued hum of capacitors and relays fills the air.
+
+>l at relays
+The subdued hum of capacitors and relays fills the air.
+
+>l at circuit breaker
+These are electrical panels for other parts of the carnival.
+
+>l at cables
+The cables snake along the walls.
+
+>l at pump
+This is some of the equipment that keeps the carnival running smoothly.
+
+>l at gauges
+The room is full of gauges reporting on the condition of the carnival.
+
+>l at tools
+Just some of the many tools used to maintain the carnival.
+
+>l at wires
+Wires, spare parts, and hydraulic tubing is here.
+
+>l at diagram
+This is an electrical diagram for something.
+
+>l at bulb
+This single bulb is feebly trying to light the room.
+
+>s
+
+Mechanical Room South
+The south mechanical room is the operational core of the carnival ride, a bustling, noisy space dominated by a massive motor. Its steady hum drives the thick belts, pulleys, and gears that work in perfect unison to power the ride.
+
+Heavy-duty electrical panels line the walls, adorned with warning labels like "High Voltage" and blinking indicator lights in an array of colors. Overhead, labeled conduits and wires snake across the ceiling, connecting systems with meticulous precision.
+
+A cluttered table holds tools and spare parts - bolts and lubricants - alongside open maintenance logs marked with greasy fingerprints. The air is thick with the smell of oil, metal, and a faint trace of ozone from the electrics.
+
+A cooling fan spins in the corner, barely cutting through the room's warmth. The hum of machinery is occasionally punctuated by clinking chains and the sharp hiss of hydraulic fluid. The floor, a mix of metal grates and worn concrete, reflects years of use and maintenance.
+
+Bright fluorescent lights in wire cages illuminate the space, highlighting the intricate systems at work. The south mechanical room is the ride's powerhouse, where every movement is controlled with precision to deliver its thrilling experience.
+
+You can travel north and south from here.
+
+Nearby a Gray colored door leads west.
+
+You can also see a grate (in which is an Emerald colored fuse) here.
+
+>l at motor
+There is all manner of unidentifiable equipment here.
+
+>l at pulleys
+The table is covered with belts, lubricants, gears, pulleys, gears and bolts.
+
+>l at panels
+These are electrical panels controlling other parts of the carnival.
+
+>l at wires
+The labeled conduits and wires snake across the ceiling.
+
+>l at conduits
+The labeled conduits and wires snake across the ceiling.
+
+>l at gears
+The table is covered with belts, lubricants, gears, pulleys, gears and bolts.
+
+>l at table
+The table is covered with belts, lubricants, gears, pulleys, gears and bolts.
+
+>l at fan
+This is an overworked fan.
+
+>l at chains
+The chains clink as they sway against the vibrations of the machinery.
+
+>l at maintenance logs
+These logs record the dates, times, and repairs made for the carnival rides. You notice that Hell Ride is conspicuously missing from the logs.
+
+>l at fingerprints
+The police could use these to track down a criminal.
+
+>l at wire cages
+The wire cages protect the fluorescent lights from becoming damaged.
+
+>l at grate
+This grate leads down into the darkness. Too bad it's locked.
+
+In the grate is an Emerald colored fuse.
+
+>get fuse
+(the Emerald colored fuse)
+Your fingers won't fit inside the grate. You can't reach the the Emerald colored fuse.
+  If only you could grab the Emerald colored fuse with something.
+
+>tie string to bubblegum
+You tie the 14" long piece of string to the Bubblegum.
+
+>put bubblegum in grate
+It's a hard square of bubblegum and won't stick to the fuse.
+
+>chew bubblegum
+You chew the bubblegum, blowing a few bubbles as you do so.
+
+>put bubblegum in grate
+You drop the chewed Bubblegum into the grate. The Emerald colored fuse attaches to the chewed Bubblegum. You quickly and carefully raise the chewed Bubblegum and drop Emerald colored fuse into your hand.
+
+[Your score has just gone up by five points.]
+
+>n
+
+Mechanical Room North
+Nearby an Emerald colored door leads west.
+
+You can also see a toolbox (closed) here.
+
+>open tool box
+You open the toolbox, revealing an adjustable wrench, channel locks, some pliers, and a hammer.
+
+>get wrench
+(putting the wallet into the fanny pack to make room)
+You're carrying too many things already.
+
+>i
+You are carrying:
+  an Emerald colored fuse
+  a worn photo
+  a lit flashlight (providing light)
+  a lit lantern (providing light)
+  a sheer veil (being worn)
+  a Khaki colored fuse
+  some chewed Bubblegum
+  a Crimson colored fuse
+  a horseshoe magnet
+  a Swiss Army knife
+  a mallet
+  a Bumper Cars ticket
+  a 14" long piece of string (tied to chewed Bubblegum)
+  a pair of gloves (being worn)
+  a parking ticket
+  an air freshener
+  three quarters
+  a nickel
+  two dimes
+  a fanny pack (being worn, and open)
+    a wallet
+      $19.00 in cash
+
+>drop flashlight
+Dropped.
+
+>drop magnet
+Dropped.
+
+>get wrench
+Taken.
+
+>n
+
+Crawl Space
+Nearby a Crimson colored door leads west.
+
+>n
+
+Maintenance Office
+Nearby a ladder leads up to the Dark Hallway.
+
+Nearby an Aqua colored door leads west.
+
+You can also see a desk (on which are a coffee mug and a radio) here.
+
+>n
+
+Dark Passage
+
+>w
+
+Ride Entrance
+You can see a Hell Ride car (empty) here.
+
+>n
+
+Head of the Line
+You can see a Hell Ride Attendant here.
+
+>n
+
+Ticket Booth
+You can see a Cashier and a ticket kiosk here.
+
+>nw
+
+Bumper Cars
+You can see a Bumper Cars attendant here.
+
+>give wrench to attendant
+Hey! Thanks, I really appreciate it. Usually no one ever responds to the radio in the Control Room. Here, take this fuse.
+
+Taken.
+
+[Your score has just gone up by ten points.]
+
+>give ticket to attendant
+(the Bumper Cars ticket to the Bumper Cars attendant)
+You give the Bumper Cars ticket to the Bumper Cars attendant.
+
+Sliding into the snug seat of the bumper car, your hands grip the steering wheel, anticipation buzzing in the air. Around you, the arena is alive with flashing lights, bursts of laughter, and the hum of electric currents running through the overhead poles. A quick glance shows other riders locking eyes, playful grins spreading as everyone braces for the chaos about to unfold.
+
+As the ride starts, your car jolts forward, and you steer into the fray. The slick metal floor beneath makes every turn feel smooth yet unpredictable. Suddenly, bam! - another car collides into you from the side, sending your car into a spin. You laugh, recovering quickly to aim your vehicle at a friend across the arena.
+
+The thrill of the bumper cars is in the collisions - every thud and jolt accompanied by squeals of delight or mock indignation. The impact is cushioned by the padded bumpers, keeping the fun safe but exhilarating. You swerve, dodge, and sometimes reverse in a desperate attempt to avoid being cornered, all while plotting your next playful crash.
+
+The ride is a whirlwind of laughter, harmless competition, and shared joy. As the music fades and the cars slow to a stop, you climb out with a wide grin, already looking forward to your next turn in the driver's seat.
+
+>i
+You are carrying:
+  a Gray colored fuse
+  an Emerald colored fuse
+  a worn photo
+  a lit lantern (providing light)
+  a sheer veil (being worn)
+  a Khaki colored fuse
+  some chewed Bubblegum
+  a Crimson colored fuse
+  a Swiss Army knife
+  a mallet
+  a 14" long piece of string (tied to chewed Bubblegum)
+  a pair of gloves (being worn)
+  a parking ticket
+  an air freshener
+  three quarters
+  a nickel
+  two dimes
+  a fanny pack (being worn, and open)
+    a wallet
+      $19.00 in cash
+
+>se
+
+Ticket Booth
+You can see a Cashier and a ticket kiosk here.
+
+>s
+
+Head of the Line
+You can see a Hell Ride Attendant here.
+
+>s
+
+Ride Entrance
+You can see a Hell Ride car (empty) here.
+
+>e
+
+Dark Passage
+
+>s
+
+Maintenance Office
+Nearby a ladder leads up to the Dark Hallway.
+
+Nearby an Aqua colored door leads west.
+
+You can also see a desk (on which are a coffee mug and a radio) here.
+
+>s
+
+Crawl Space
+Nearby a Crimson colored door leads west.
+
+>s
+
+Mechanical Room North
+Nearby an Emerald colored door leads west.
+
+You can also see a horseshoe magnet, a lit flashlight (providing light), and a toolbox (in which are channel locks, some pliers, and a hammer) here.
+
+>s
+
+Mechanical Room South
+Nearby a Gray colored door leads west.
+
+You can also see a grate (empty) here.
+
+>s
+
+Generator Room
+ The generator room is a compact, utilitarian space where the lifeblood of the carnival's power is produced. Its reinforced concrete walls bear grime, oil streaks, and faint graffiti from past workers. The air carries a mix of diesel, hot metal, ozone, and damp earth, creating a distinctly industrial scent.
+
+At the center, the main generator hums steadily, its scuffed steel casing evidence of years of service. Thick rubberized cables extend from it like veins, connecting to junction boxes and circuit breakers along the walls. A large panel nearby is cluttered with buttons, switches, and gauges, many with faded labels like "Fuel Intake" and "Emergency Shutoff." A flickering display screen shows power levels and load distribution.
+
+The rough concrete floor is uneven, marked by small puddles of spilled fuel or condensation. Shelves along the walls hold spare parts - filters, spark plugs, and wire coils - while a work area sits beside a grease canister and a worn maintenance manual.
+
+A single industrial bulb in a protective cage casts harsh light, leaving deep shadows across the machinery. In the corner, a vent fan whirs faintly, struggling to cool the warm, vibrating air. A row of diesel canisters gleams beneath a faded safety sign that warns, "Fuel Safely - No Open Flames!"
+
+Though isolated and utilitarian, the generator room is the carnival's heartbeat, powering its lights, rides, and sounds. Its quiet separation from the carnival's chaos serves as a stark reminder of the machinery driving the magic.
+
+The backstage area continues north and south of here.
+
+Nearby an Indigo colored door leads west.
+
+>l at graffiti
+The graffiti is varied, from "Peace, Love, Goodwill on Earth" to "Anarchy Rules".
+
+>smell
+The air carries a mix of diesel, hot metal, ozone, and damp earth, creating a distinctly industrial scent. 
+>l at generator
+(the main generator)
+The main generator hums steadily.
+
+>l at cables
+These cables connect different parts of the ride to the hydraulics.
+
+>l at puddles
+Not wanting to get your shoes wet, you carefully avoid the puddles.
+
+>l at shelves
+The shelves are piled high with filters, spark plugs, and wire coils.
+
+>l at spare parts
+The shelves are piled high with filters, spark plugs, and wire coils.
+
+>l at filters
+The filters litter the shelves.
+
+>l at spark plugs
+The spark plugs are piled on the shelves.
+
+>l at coils
+ The wire coils littler the shelves.
+
+>l at canister
+This is a canister of grease used to provide proper lubrication to the machinery.
+
+>read sign
+The sign reads, "Fuel Safety - No Open Flames!"
+
+>l at diesel canisters
+The canisters are full of diesel fuel.
+
+>s
+
+Electrical Room
+The electrical room is a small but essential space hidden behind the carnival's bright attractions. The air vibrates with electric energy, carrying the acrid scent of overheated wires and metal. Metal panels line the walls, some polished, others worn and streaked with grease.
+
+A central breaker panel, labeled with destinations like "Ferris Wheel Lights" and "Carousel Motors," dominates one wall. Colored indicator lights blink intermittently, reflecting off steel surfaces. Overhead, thick cable bundles snake across the ceiling, connecting to the carnival's power network.
+
+In a corner, an open junction box spills wires onto the wall, while a workbench holds scattered tools and a smudged wiring diagram pinned above. The dirt floor bears scratches, oil stains, and wire clippings. A faint vibration, carried from the generator or nearby rides, pulses through the room.
+
+An emergency shutdown panel painted bright red stands near a fire extinguisher and a faded safety poster. A small fan on the workbench oscillates weakly, barely cooling the room's warmth. Flickering fluorescent tubes overhead cast harsh, shifting shadows.
+
+The electrical room is raw and utilitarian, revealing the fragile systems behind the carnival's magic - a humbling reminder of the power sustaining the midway's enchantment.
+
+This room is eerily quiet, missing the ever present buzz of electricity. There are exits in all directions.
+
+>smell
+The air vibrates with electric energy, carrying the acrid scent of overheated wires and metal.
+
+>listen
+>l at breaker
+This breaker panel controls various portions of the carnival.
+
+>l at junction box
+This is a junction box routing the various wires and electrical cables running through the back stage area.
+
+>l at workbench
+This is a cluttered work bench. You would have a hard time finding room to do anything on it.
+
+>l at shutdown
+This is an emergency shut down panel. There is a switch on the panel.
+
+>l at switch
+This is a big red switch, presumably to shut down the carnival rides.
+
+It is currently switched on.
+
+>flip switch
+You apply a considerable amount of force and push the red switch. You listen and can still hear the sounds of the machinery working somewhere. Nothing happens.
+
+You switch the red switch off.
+
+>l at fire extinguisher
+This is a Class E fire extinguisher, specially made for electrical fires.
+
+>l at poster
+The poster reads, "Safety First!"
+
+>l at diagram
+It's hard to make out what this is supposed to be. Better leave it alone.
+
+>l at tools
+These are various tools you might use to repair electrical equipment.
+
+>s
+
+Storage Room
+The carnival storage room is a cramped yet essential space, tucked away from the bustling grounds. Its rusted metal and peeling wooden walls bear the marks of years of use, while the air hangs heavy with grease, dust, damp canvas, and a faint trace of stale popcorn.
+
+Shelves overflow with supplies - boxes of light bulbs, spools of wire, and assorted ride parts - piled without order. Tangled flags and strings of lights dangle from hooks, while crates labeled "GAME PRIZES" and "RIDE PARTS" hold items like stuffed animals and plastic toys. Folded tarps and tent poles teeter in one corner.
+
+The room's center is dominated by larger objects: spare ride seats, unassembled booths, and faded attraction pieces like a scratched carousel horse, all hidden beneath protective tarps.
+
+Near the entrance, a battered desk is cluttered with maintenance logs and empty coffee cups. Above it, a bulletin board brims with ride schedules and repair requests. A flickering fluorescent bulb casts uneven shadows, adding an eerie atmosphere.
+
+The floor, a rough blend of concrete and dirt, is littered with nuts and wire scraps. In the dim corners, the scuttle of rats and the glint of cobwebs underline the room's gritty nature.
+
+Chaotic yet indispensable, this hidden space powers the carnival's magic, ensuring every ride and booth runs seamlessly.
+
+There is an exit to the north.
+
+Nearby a Khaki colored door leads west.
+
+>l at walls
+The rusted metal and peeling wooden walls bear the marks of years of use.
+
+>l at shelves
+The shelves are full of supplies, light bulbs, and ride parts
+
+>smell
+The air hangs heavy with grease, dust, damp canvas, and a faint trace of stale popcorn.
+
+>listen
+You hear mechanical sounds: the screech metal upon metal, gears turning in precision, and the thump of the cars as they traverse the tracks through the ride.
+
+>l at seats
+These are broken seats from some of the rides.
+
+>l at booths
+It's impossible to tell which parts belong to which attraction.
+
+>l at horse
+This is one of the horses from the carousel ride. It looks like its tail is broken.
+
+>l at tarps
+The tarps and tent poles are used to provide shelter to the attendants if it should rain.
+
+>l at desk
+The desk is covered with supplies, light bulbs, and ride parts.
+
+>l at battered desk
+The desk is covered with supplies, light bulbs, and ride parts.
+
+>l at coffee cups
+People just use the desk as a trash can.
+
+>l at logs
+So much tattered paper on this bulletin board. Most of it is illegible.
+
+>l at bulletin board
+So much tattered paper on this bulletin board. Most of it is illegible.
+
+>l at repair requests
+So much tattered paper on this bulletin board. Most of it is illegible.
+
+>l at schedules
+So much tattered paper on this bulletin board. Most of it is illegible.
+
+>l at bulb
+The fluorescent bulb flickers overhead.
+
+>l at nuts
+The shelves are full of supplies, light bulbs, and ride parts.
+
+>l at rates
+You can't see any such thing.
+
+>l at rats
+You see rats scurry in all directions fleeing from the light cast by you.
+
+>l at cobwebs
+There are cobwebs everywhere. I guess it's been a while since this place was cleaned.
+
+>n
+
+Electrical Room
+
+>ne
+
+Electrical Closet One
+This is Electrical Closet One. There's an electrical panel here and an exit to the southwest.
+
+You can see a silver key here.
+
+>get key
+Taken.
+
+>l at electrical panel
+Electrical Panel 1 is a standard issue 200 amp electrical panel supplying 220 power throughout the ride. The electrical panel is closed. There are screws holding it shut.
+
+>sw
+
+Electrical Room
+
+>s
+
+Storage Room
+Nearby a Khaki colored door leads west.
+
+>w
+(first opening the Khaki colored door)
+(first unlocking the Khaki colored door)
+(with the silver key)
+
+Ride Exit
+The exit of Hell Ride is designed to leave riders with lingering unease. Emerging from a dark corridor with peeling black and red-streaked walls, flickering lights cast erratic shadows on the uneven floor. The air is cool and damp, carrying a faint metallic tang, while faint whispers and distant screams echo softly in the background.
+
+Riders step into a small courtyard enclosed by jagged, rusted fencing draped with cobwebs and plastic skulls. Overhead, a weathered sign reads, "You've Survived? For Now." Nearby, carnival workers in tattered costumes watch silently, occasionally muttering cryptic remarks like, "Not everyone makes it out."
+
+A merchandise display glows red, selling items like Hell Ride Survivor t-shirts and key chains. Beyond the fencing, the cheerful carnival lights and sounds feel jarring, contrasting sharply with the ride's oppressive atmosphere.
+
+The exit ensures Hell Ride isn't just an experience - it lingers, blurring the line between thrill and fear.
+
+There is a price list next to the cash register. An attendant is here to assist you with your purchases. The stand has an Aqua colored fuse, Plastic Bones, Devil Horns, Key Chains, and T-Shirts for sale.
+
+Nearby a Khaki colored door leads east to the Storage Room.
+
+You can also see a Merchandise Attendant here.
+
+>read sign
+$2.00 Key Chains
+$3.50 Aqua colored fuse
+$2.00 Devil Horns
+$1.00 Plastic Bones
+$7.50 T-Shirts
+
+>buy aqua fuse
+You fork over $3.50 for the Aqua colored fuse, leaving yourself with $15.50.
+
+[Your score has just gone up by five points.]
+
+>l at fencing
+The jagged, rusted fencing is draped with cobwebs and plastic skulls.
+
+>l at cobwebs
+The fake cobwebs and skulls cover the rusty fencing.
+
+>l at plastic skulls
+The fake cobwebs and skulls cover the rusty fencing.
+
+>l at workers
+The actors are here dressed in their tattered costumes muttering things like "You made it!
+
+>l at actors
+The actors are here dressed in their tattered costumes muttering things like "You made it!
+
+>l at riders
+The riders exit Hell Ride. Some are laughing while others look rather upset.
+
+>l at walls
+Leading out of the ride a dark corridor with peeling black and red-streaked walls, flickering lights cast erratic shadows on the uneven floor.
+
+>l at cash register
+The cash register accommodates both cash and electronic payments. Too bad you don't have a debit card.
+
+>bite fingernails
+That's a bad habit. You should really try to stop biting your fingernails.
+
+>clip fingernails
+Your fingernails look much neater now that you've trimmed them.
+
+>n
+
+Guillotine Room
+The public square buzzes with tense anticipation, a crowd gathered under gray skies that cast a somber light on the cobblestones. At the center, a stark wooden platform looms, its purpose grim and unavoidable.
+
+A lone figure stands on the scaffold, bound hands behind their back and head bowed low, avoiding the crowd's gaze. Their tattered clothing, once fine, reflects the fall that led them to this moment.
+
+The crowd encircles the platform, emotions ranging from jeers and curses to silent, grim observation. Children sit on shoulders, their curious eyes unaware of the event's gravity. Near the edge of the platform, the town crier proclaims the crime: "High treason against the crown. Let this be a warning to all who defy the realm!"
+
+The condemned flinches but remains silent as the executioner - a hooded figure in black - stands ready beside the guillotine, its blade gleaming faintly in the dim light. The murmurs of the crowd fall into silence at the executioner's signal, leaving only the rustle of wind and the creak of the scaffold.
+
+As the condemned approaches the guillotine, a crow caws sharply from a nearby rooftop, its cry echoing through the square like an omen. The crowd leans forward, breath held, as justice and mortality converge on the scene.
+
+There is just one problem: the guillotine is being raised and lowered by some mechanism. It appears that the timing of the guillotine is off and it is being lowered onto the cars instead of between them. If a person were to be in a car as it passed under the guillotine, they would be seriously injured.  You're glad you're not in one of those cars now. 
+
+Nearby an Indigo colored door leads east to the Generator Room.
+
+You can also see a guillotine platform here.
+
+>l at crowd
+The crowd encircles the platform, emotions ranging from jeers and curses to silent, grim observation. Children sit on shoulders, their curious eyes unaware of the event's gravity.
+
+>l at platform
+At the center of the square stands a raised wooden platform, stark and imposing, where the grim sentence is to be carried out.
+
+>l at figure
+A lone figure stands on the scaffold, bound hands behind their back and head bowed low, avoiding the crowd's gaze.
+
+>l at children
+The crowd encircles the platform, emotions ranging from jeers and curses to silent, grim observation. Children sit on shoulders, their curious eyes unaware of the event's gravity.
+
+>l at town crier
+The town crier proclaims the crime: "High treason against the crown. Let this be a warning to all who defy the realm!"
+
+>l at condemned
+A lone figure stands on the scaffold, bound hands behind their back and head bowed low, avoiding the crowd's gaze.
+
+>l at executioner
+The executioner - a hooded figure in black - stands ready beside the guillotine.
+
+>l at scaffold
+At the center of the square stands a raised wooden platform, stark and imposing, where the grim sentence is to be carried out.
+
+>l at crow
+The crow sits, sleek and black, on a nearby rooftop.
+
+>l at cars
+The cars keep coming and move under the malfunctioning guillotine. You shudder at just the thought of it
+
+>n
+
+Dungeon
+The dungeon is a dark, suffocating chamber carved into the earth, its stone walls slick with moisture and grime. The air reeks of sweat, blood, mildew, and burning oil from flickering torches mounted on rusted sconces. Shadows twist on the walls, creating grotesque, unsettling shapes in the dim light.
+
+Chains hang from walls and ceilings, their faint clinking blending with the moans and occasional screams of prisoners. Water drips rhythmically from a cracked ceiling, adding to the chamber's eerie ambiance.
+
+The room is littered with instruments of torment: a splintered rack, a glowing brazier holding bloodstained tools, and a spiked chair gleaming faintly in the light. Prisoners endure their own horrors - one stretched on the rack, another hanging limply from manacles, and a third gasping weakly in the spiked chair.
+
+The hooded torturer moves with detached precision, their leather apron stained with the evidence of countless victims. They work silently, indifferent to the agony surrounding them.
+
+Above, rats scuttle in the shadows, and the low ceiling presses down like the weight of despair. This is a realm of suffering and hopelessness, where life and death blur, and torment is the only certainty.
+
+Nearby a Gray colored door leads east to the Mechanical Room South.
+
+You can also see an iron chair, a splintered rack, and a glowing brazier here.
+
+>l at walls
+The its stone walls slick with moisture and grime.
+
+>smell 
+The air reeks of sweat, blood, mildew, and burning oil from flickering torches mounted on rusted sconces.
+
+>listen
+Chains hang from walls and ceilings, their faint clinking blending with the moans and occasional screams of prisoners.
+
+>l at chains
+The chains rattle against the walls.
+
+>l at rack
+The rack has a prisoner splayed in four directions.
+
+>l at brazier
+It is glowing red with an infernal heat raising the temperature of the bloodstained tools.
+
+>l at torches
+These are oil burning lamps.
+
+>l at sconces
+These are oil burning lamps.
+
+>l at prisoners
+Prisoners endure their own horrors - one stretched on the rack, another hanging limply from manacles, and a third gasping weakly in the spiked chair.
+
+>l at torturer
+The hooded torturer wears a leather apron stained with the evidence of countless victims.
+
+>l at rats
+You see rats scurry in all directions fleeing from the light cast by you.
+
+>l at walls
+The its stone walls slick with moisture and grime.
+
+>l at rats
+You see rats scurry in all directions fleeing from the light cast by you.
+
+>l under chair
+You find the Indigo colored fuse!
+
+>get fuse
+(the Indigo colored fuse)
+(putting the dime into the fanny pack to make room)
+Taken.
+
+[Your score has just gone up by five points.]
+
+>n
+
+Stake Room
+The public square is steeped in grim silence, broken only by the crackling of flames. At its center, three wooden stakes rise from a pyre of logs and kindling, darkened by smoke from past executions. Bound to the stakes are three women, their faces reflecting defiance, resignation, and terror.
+
+A crowd encircles the scene, expressions ranging from morbid fascination to righteous fury. Children cling to their mothers, while elders nod solemnly. Some jeer and throw stones; others murmur prayers or avert their gaze.
+
+The executioner, hooded and clad in a leather apron, steps forward with a blazing torch, igniting the pyre in a sudden roar. Flames climb rapidly as thick smoke coils upward. The condemned cry out, their voices mingling with the crackle of fire. The oppressive heat radiates outward, pressing against the silent, uneasy crowd.
+
+Gray clouds loom overhead, nature's somber backdrop to the grim spectacle. A raven caws from the bell tower as slow church bells toll, each strike punctuating the tragedy. As the pyre burns, some onlookers remain transfixed while others quietly slip away, the square heavy with ash, smoke, and the echoes of the condemned.
+
+Nearby an Emerald colored door leads east to the Mechanical Room North.
+
+The flames of the pyre burn ever brighter and rise ever higher engulfing the victims.
+
+>l at square
+The public square is steeped in grim silence, broken only by the crackling of flames.
+
+>l at flames
+The flames burn ever higher.
+
+In the pyre is a Quartz colored fuse.
+
+>get quartz fuse
+(putting the dime into the fanny pack to make room)
+Taken.
+
+>l at pyre
+The flames burn ever higher.
+
+>l at logs
+The flames burn ever higher.
+
+>l at stakes
+(stakes)
+Three wooden stakes rise from a pyre. Bound to the stakes are three women.
+
+>l at women
+Bound to the stakes are three women, their faces reflecting defiance, resignation, and terror.
+
+>l at crowd
+A crowd encircles the scene, expressions ranging from morbid fascination to righteous fury.
+
+>l at children
+A crowd encircles the scene, expressions ranging from morbid fascination to righteous fury.
+
+>listen
+A raven caws from the bell tower as slow church bells toll.
+
+>smell
+The smell of smoke permeates the air.
+
+>l at apron
+The leather apron appears to have seen its share of action.
+
+>l at executioner
+The executioner, hooded and clad in a leather apron, steps forward with a blazing torch, igniting the pyre in a sudden roar.
+
+>l at torch
+The executioner carries the torch to light the pyre.
+
+>n
+
+Gallows Room
+The public square, slick with morning drizzle, lies under a brooding, overcast sky. At its center looms the gallows, a weathered wooden platform with thick ropes swaying ominously. The crowd stands in somber silence, broken by the shuffle of feet or faint murmurs, their eyes fixed on the grim scene.
+
+A hooded executioner, cloaked in black, adjusts the frayed noose with practiced precision, his cold presence exuding purpose. In front of him stands the condemned man, pale and trembling, his bound hands behind him. Beads of sweat mix with rain on his haunted face as his darting eyes search the indifferent crowd. Each shallow breath forms a fleeting cloud in the chilly air - a fragile reminder of his fleeting life.
+
+Vendors hawk bread and cider, while children strain for a better view. An old man clutches a rosary, whispering prayers, as others smirk and place bets. Above, the bell tower tolls, its mournful chime marking the passage of the man's final moments. A raven perches on the gallows" beam, its unblinking gaze fixed on the scene below.
+
+As the executioner adjusts the noose around the man's neck, the crowd falls silent, the air thick with dread. Distant thunder rumbles faintly, as if the heavens themselves await the inevitable.
+
+Nearby a Crimson colored door leads east to the Crawl Space.
+
+You can also see a gallows platform here.
+
+>score
+You've received 120 points out of a possible 150 in 458 moves!
+
+You have received points for the following: 
+
+?  Eating the blueberries: 5 points.
+?  Finding the coins and keys: 5 points.
+?  Buying the Hell Ride ticket: 10 points.
+?  Winning the Swiss Army knife: 10 points.
+?  Taking the Mercury dime: 5 points.
+?  Winning the horseshoe magnet: 5 points.
+?  Winning the Crimson fuse: 10 points.
+?  Acquiring the Khaki fuse: 5 points.
+?  Taking the lantern: 10 points.
+?  Wearing the sheer veil: 5 points.
+?  Finding the Dark Passage: 5 points.
+?  Finding the Control Room: 5 points.
+?  Turning off the big switch: 15 points.
+?  Acquiring the Emerald fuse: 5 points.
+?  Bringing the wrench to the Bumper Cars: 10 points.
+?  Acquiring the Aqua fuse: 5 points.
+?  Acquiring the Indigo fuse: 5 points.
+
+>i
+You are carrying:
+  a Quartz colored fuse
+  an Indigo colored fuse
+  an Aqua colored fuse
+  a silver key
+  a Gray colored fuse
+  an Emerald colored fuse
+  a worn photo
+  a lit lantern (providing light)
+  a sheer veil (being worn)
+  a Khaki colored fuse
+  some chewed Bubblegum
+  a Crimson colored fuse
+  a Swiss Army knife
+  a mallet
+  a 14" long piece of string (tied to chewed Bubblegum)
+  a pair of gloves (being worn)
+  a parking ticket
+  an air freshener
+  three quarters
+  a nickel
+  a fanny pack (being worn, and open)
+    two dimes
+    a wallet
+      $15.50 in cash
+
+>l
+
+
+Gallows Room
+The public square, slick with morning drizzle, lies under a brooding, overcast sky. At its center looms the gallows, a weathered wooden platform with thick ropes swaying ominously. The crowd stands in somber silence, broken by the shuffle of feet or faint murmurs, their eyes fixed on the grim scene.
+
+A hooded executioner, cloaked in black, adjusts the frayed noose with practiced precision, his cold presence exuding purpose. In front of him stands the condemned man, pale and trembling, his bound hands behind him. Beads of sweat mix with rain on his haunted face as his darting eyes search the indifferent crowd. Each shallow breath forms a fleeting cloud in the chilly air - a fragile reminder of his fleeting life.
+
+Vendors hawk bread and cider, while children strain for a better view. An old man clutches a rosary, whispering prayers, as others smirk and place bets. Above, the bell tower tolls, its mournful chime marking the passage of the man's final moments. A raven perches on the gallows" beam, its unblinking gaze fixed on the scene below.
+
+As the executioner adjusts the noose around the man's neck, the crowd falls silent, the air thick with dread. Distant thunder rumbles faintly, as if the heavens themselves await the inevitable.
+
+Nearby a Crimson colored door leads east to the Crawl Space.
+
+You can also see a gallows platform here.
+
+>listen
+Above, the bell tower tolls, its mournful chime marking the passage of the man's final moments.
+
+>smell
+You smell incense as it permeates through Hell Ride.
+
+>l at square
+The public square, slick with morning drizzle, lies under a brooding, overcast sky. At its center looms the gallows, a weathered wooden platform with thick ropes swaying ominously.
+
+>l at gallows
+(the gallows platform)
+At the center of the square, rising like a grim monument to mortality, stands the gallows - a wooden platform, darkened by age and weather, with thick ropes hanging like vipers poised to strike.
+
+>l at platform
+At the center of the square, rising like a grim monument to mortality, stands the gallows - a wooden platform, darkened by age and weather, with thick ropes hanging like vipers poised to strike.
+
+>l at crowd
+The crowd stands in somber silence, broken by the shuffle of feet or faint murmurs, their eyes fixed on the grim scene.
+
+>l at executioner
+A hooded executioner, cloaked in black, adjusts the frayed noose with practiced precision, his cold presence exuding purpose.
+
+>l at condemned
+The condemned man, pale and trembling, has his bound hands behind him.
+
+>l at vendors
+Vendors hawk bread and cider, while children strain for a better view.
+
+>l at old man
+An old man clutches a rosary, whispering prayers, as others smirk and place bets.
+
+>l at raven
+A raven perches on the gallows' beam, its unblinking gaze fixed on the scene below.
+
+>l at noose
+The noose has been tied and hangs from the gallows proper.
+
+>n
+
+Stocks Room
+The public square is a cobblestone expanse bordered by weathered timber-framed buildings. The air carries the mingling scents of chimney smoke, damp earth, and the faint tang of a nearby smithy. At its center, crude wooden stocks stand as a grim focal point, their beams weathered and stained from years of use. Iron clasps lock captives in degrading postures, their tattered clothing offering little protection from the biting wind.
+
+The animatronics and wax figures are extremely life like. Hell Ride sure lives up to its name.
+
+The punished individuals hang their heads in shame, their faces etched with despair. Around them, the crowd revels in cruelty - a wiry man spits insults with gleeful laughter, while a stout woman throws overripe vegetables, each impact sparking jeers. Even children join in, pointing and mocking with mischievous delight.
+
+The square hums with noise: the crowd's taunts, the crack of objects hitting wood, and the quiet murmurs of the suffering captives. Overhead, a gray sky threatens rain, indifferent to the spectacle below. The jeering mob ignores its ominous weight, too engrossed in their shared cruelty to notice nature's disapproval.
+
+Nearby an Aqua colored door leads east to the Maintenance Office.
+
+You can also see a wooden stocks here.
+
+>l at square
+The public square is a cobblestone expanse bordered by weathered timber-framed buildings.
+
+>smell
+The air carries the mingling scents of chimney smoke, damp earth, and the faint tang of a nearby smithy.
+
+>listen
+As you travel through Hell Ride, you hear ominous music, the murmurs of the crowd, and the occasional scream in the distance.
+
+>l at stocks
+(the wooden stocks)
+At the square's center stand a row of crude wooden stocks, their heavy beams stained from years of weather and use. Iron clasps hold the unfortunate captives by their wrists and necks, their bodies forced into unnatural, humiliating postures.
+
+>l at beams
+At the square's center stand a row of crude wooden stocks, their heavy beams stained from years of weather and use. Iron clasps hold the unfortunate captives by their wrists and necks, their bodies forced into unnatural, humiliating postures.
+
+>l at clasps
+Iron clasps lock the prisoners in place.
+
+>l at animatronics
+The animatronics and wax figures are extremely life like. Hell Ride sure lives up to its name.
+
+>l at wax figures
+The animatronics and wax figures are extremely life like. Hell Ride sure lives up to its name.
+
+>l at the wax figures
+The animatronics and wax figures are extremely life like. Hell Ride sure lives up to its name.
+
+>l at vegetables
+The rotten fruit and vegetables splatter as each hits its mark, coating the prisoners with rank vegetation.
+
+>e
+(first opening the Aqua colored door)
+(first unlocking the Aqua colored door)
+(with the silver key)
+
+Maintenance Office
+Nearby an Aqua colored door leads west to the Stocks Room.
+
+Nearby a ladder leads up to the Dark Hallway.
+
+You can also see a desk (on which are a coffee mug and a radio) here.
+
+>i
+You are carrying:
+  a Quartz colored fuse
+  an Indigo colored fuse
+  an Aqua colored fuse
+  a silver key
+  a Gray colored fuse
+  an Emerald colored fuse
+  a worn photo
+  a lit lantern (providing light)
+  a sheer veil (being worn)
+  a Khaki colored fuse
+  some chewed Bubblegum
+  a Crimson colored fuse
+  a Swiss Army knife
+  a mallet
+  a 14" long piece of string (tied to chewed Bubblegum)
+  a pair of gloves (being worn)
+  a parking ticket
+  an air freshener
+  three quarters
+  a nickel
+  a fanny pack (being worn, and open)
+    two dimes
+    a wallet
+      $15.50 in cash
+
+>s
+
+Crawl Space
+Nearby a Crimson colored door leads west to the Gallows Room.
+
+>s
+
+Mechanical Room North
+Nearby an Emerald colored door leads west to the Stake Room.
+
+You can also see a horseshoe magnet, a lit flashlight (providing light), and a toolbox (in which are channel locks, some pliers, and a hammer) here.
+
+>s
+
+Mechanical Room South
+Nearby a Gray colored door leads west to the Dungeon.
+
+You can also see a grate (empty) here.
+
+>s
+
+Generator Room
+Nearby an Indigo colored door leads west to the Guillotine Room.
+
+>s
+
+Electrical Room
+
+>ne
+
+Electrical Closet One
+
+>open panel
+(first unlocking Electrical Panel 1)
+(with the Swiss Army knife)
+Using the screwdriver on the Swiss Army knife, you remove the screws holding the electrical panel shut.
+
+You open Electrical Panel 1.
+
+>l at panel
+Electrical Panel 1 is a standard issue 200 amp electrical panel supplying 220 power throughout the ride. The electrical panel is open. Inside the panel you see a switch, a socket, and an indicator light. The screws for the door are gone.
+
+>l at indicator
+The indicator is currently indicating nothing.
+
+>put aqua in socket
+(the Aqua colored fuse in socket 1)
+You hear a satisfying snick as the Aqua fuse slides into place.
+
+>flip switch
+You switch Electrical Panel 1's switch on.
+
+The Aqua indicator's light goes on.
+
+[Your score has just gone up by five points.]
+
+>l at indicator
+The indicator is glowing Aqua and is currently indicating something.
+
+>sw
+
+Electrical Room
+
+>e
+
+Electrical Closet Three
+This is Electrical Closet Three. There's an electrical panel here and an exit to the west.
+
+>open panel
+(first unlocking Electrical Panel 3)
+(with the Swiss Army knife)
+Using the screwdriver on the Swiss Army knife, you remove the screws holding the electrical panel shut.
+
+You open Electrical Panel 3.
+
+>put crimson in socket
+(the Crimson colored fuse in socket 3)
+You hear a satisfying snick as the Crimson fuse slides into place.
+
+>flip switch
+You switch Electrical Panel 3's switch on.
+
+The Crimson indicator's light goes on.
+
+[Your score has just gone up by five points.]
+
+>w
+
+Electrical Room
+
+>se
+
+Electrical Closet Five
+This is Electrical Closet Five. There's an electrical panel here and an exit to the northwest.
+
+>open panel
+(first unlocking Electrical Panel 5)
+(with the Swiss Army knife)
+Using the screwdriver on the Swiss Army knife, you remove the screws holding the electrical panel shut.
+
+You open Electrical Panel 5.
+
+>put emerald fuse in socket
+You hear a satisfying snick as the Emerald fuse slides into place.
+
+>flip switch
+You switch Electrical Panel 5's switch on.
+
+The Emerald indicator's light goes on.
+
+[Your score has just gone up by five points.]
+
+>nw
+
+Electrical Room
+
+>sw
+
+Electrical Closet Seven
+This is Electrical Closet Seven. There's an electrical panel here and an exit to the northeast.
+
+>open panel
+(first unlocking Electrical Panel 7)
+(with the Swiss Army knife)
+Using the screwdriver on the Swiss Army knife, you remove the screws holding the electrical panel shut.
+
+You open Electrical Panel 7.
+
+>put gray in socket
+(the Gray colored fuse in socket 7)
+You hear a satisfying snick as the Gray fuse slides into place.
+
+>flip switch
+You switch Electrical Panel 7's switch on.
+
+The Gray indicator's light goes on.
+
+[Your score has just gone up by five points.]
+
+>ne
+
+Electrical Room
+
+>w
+
+Electrical Closet Nine
+This is Electrical Closet Nine. There's an electrical panel here and an exit to the east.
+
+>open panel
+(first unlocking Electrical Panel 9)
+(with the Swiss Army knife)
+Using the screwdriver on the Swiss Army knife, you remove the screws holding the electrical panel shut.
+
+You open Electrical Panel 9.
+
+>put indigo in socket
+(the Indigo colored fuse in socket 9)
+You hear a satisfying snick as the Indigo fuse slides into place.
+
+>flip switch
+You switch Electrical Panel 9's switch on.
+
+The Indigo indicator's light goes on.
+
+[Your score has just gone up by five points.]
+
+>e
+
+Electrical Room
+
+>nw
+
+Electrical Closet Eleven
+This is Electrical Closet Eleven. There's an electrical panel here and an exit to the southeast.
+
+>open panel
+(first unlocking Electrical Panel 11)
+(with the Swiss Army knife)
+Using the screwdriver on the Swiss Army knife, you remove the screws holding the electrical panel shut.
+
+You open Electrical Panel 11.
+
+>put khaki in socket
+(the Khaki colored fuse in socket 11)
+You hear a satisfying snick as the Khaki fuse slides into place.
+
+>flip switch
+You switch Electrical Panel 11's switch on.
+
+The Khaki indicator's light goes on.
+
+[Your score has just gone up by five points.]
+
+>se
+
+Electrical Room
+
+>n
+
+Generator Room
+Nearby an Indigo colored door leads west to the Guillotine Room.
+
+>n
+
+Mechanical Room South
+Nearby a Gray colored door leads west to the Dungeon.
+
+You can also see a grate (empty) here.
+
+>n
+
+Mechanical Room North
+Nearby an Emerald colored door leads west to the Stake Room.
+
+You can also see a horseshoe magnet, a lit flashlight (providing light), and a toolbox (in which are channel locks, some pliers, and a hammer) here.
+
+>n
+
+Crawl Space
+Nearby a Crimson colored door leads west to the Gallows Room.
+
+>n
+
+Maintenance Office
+Nearby an Aqua colored door leads west to the Stocks Room.
+
+Nearby a ladder leads up to the Dark Hallway.
+
+You can also see a desk (on which are a coffee mug and a radio) here.
+
+>u
+
+Dark Hallway
+Nearby a ladder leads down to the Maintenance Office.
+
+>w
+
+Control Room
+You can see a big switch here.
+
+>l
+Control Room
+The backstage control room is a plain, functional hub where the carnival's rides, lights, and attractions are managed. Gray industrial walls, scuffed and greasy, surround a large monitor streaming live carnival feeds. Beneath them, control panels with labeled dials, colored buttons, and lights oversee the systems scattered about the room. Glancing at the control panels, you can see they are lit up like a Christmas tree.
+
+The hum of electronics fills the air, punctuated by the crackle of a radio: "Maintenance to Bumper Cars - wrench needed!" The worn floor is scattered with papers, tools, and coffee cups. A cluttered desk holds logs and schedules, while a cork board above displays charts and red-marked notes like "Check Zipper circuit breakers."
+
+A flickering light casts cold shadows as the metallic tang of machinery mixes with dampness. Functional yet essential, this hidden space ensures the carnival's magic runs seamlessly. On one wall is a large switch.
+
+A dark hallway lies to the east.
+
+You can see a big switch here.
+
+>l at control panel
+Which do you mean, Control Panel One, the Aqua button, the Aqua dial, the Aqua colored light, Control Panel Three, the Crimson button, the Crimson dial, the Crimson colored light, Control Panel Five, the Emerald button, the Emerald dial, the Emerald colored light, Control Panel Seven, the Gray button, the Gray dial, the Gray colored light, Control Panel Nine, the Indigo button, the Indigo dial, the Indigo colored light, Control Panel Eleven, the Khaki button, the Khaki dial, or the Khaki colored light?
+
+>control panel one
+Each control panel is populated with a dial, a button, and a light. From left to right, the colors are aqua, crimson, emerald, gray, indigo, and khaki. Below the lights is a row of similarly colored dials and below that is a row of buttons. The control panels are lit up like a Christmas tree.
+
+Control Panel One is lit. The Aqua dial is set to 0. The Aqua light is now off.
+
+
+
+>set aqua dial to 1
+The Aqua colored dial is now set to 1.
+
+>set crimson dial to 3
+The Crimson colored dial is now set to 3.
+
+>set emerald dial to 5
+The Emerald colored dial is now set to 5.
+
+>set gray dial to 7
+The Gray colored dial is now set to 7.
+
+>set indigo button to 9
+the Indigo button does not spin.
+
+>set indigo dial to 9
+The Indigo colored dial is now set to 9.
+
+>set khaki dial to 11
+The Khaki colored dial is now set to 11.
+
+>push indigo button
+You switch the Indigo button on.
+
+The monitor flickers for a second and the scene it displays changes to something different.
+The monitor now shows a tableau of a guillotine rising and falling over the ride exit.
+The Indigo light is now on.
+
+As you push the indigo button, the monitor switches to a view of the guillotine room. You can still see the blade rising and falling over the cars. Suddenly, you see the blade slowing down, taking longer and longer to fall. Until it finally comes to a complete rest.
+
+The room is heavy with uneasy silence. The Hell Ride, once a thrilling spectacle, now looms motionless, as the guillotine blade is frozen halfway down its track. Moments ago, chaos erupted as the malfunctioning mechanism sent the blade crashing unpredictably, ripping through the roofs of cars on the track.
+
+A single car, its roof gashed open, sits under the still blade - a grim reminder of the disaster narrowly averted. Above, a black crow lands on the guillotine's frame, its sharp caw cutting through the murmurs of anger and fear.
+
+Two mechanics climb the scaffolding with tools in hand, their appearance met with wary hope. A crowd has gathered and is watching, holding their breath, as the cursed ride's fate hangs in the balance.
+
+As you exit the ride, the carnival owner and the mayor are present and extending their undying gratitude for saving the day, not to mention lives!
+
+*** You have won! ***
+
+You've received 150 points out of a possible 150 in 539 moves!
+
+You have received points for the following: 
+
+?  Eating the blueberries: 5 points.
+?  Finding the coins and keys: 5 points.
+?  Buying the Hell Ride ticket: 10 points.
+?  Winning the Swiss Army knife: 10 points.
+?  Taking the Mercury dime: 5 points.
+?  Winning the horseshoe magnet: 5 points.
+?  Winning the Crimson fuse: 10 points.
+?  Acquiring the Khaki fuse: 5 points.
+?  Taking the lantern: 10 points.
+?  Wearing the sheer veil: 5 points.
+?  Finding the Dark Passage: 5 points.
+?  Finding the Control Room: 5 points.
+?  Turning off the big switch: 15 points.
+?  Acquiring the Emerald fuse: 5 points.
+?  Bringing the wrench to the Bumper Cars: 10 points.
+?  Acquiring the Aqua fuse: 5 points.
+?  Acquiring the Indigo fuse: 5 points.
+?  Flipping the Aqua switch: 5 points.
+?  Flipping the Crimson switch: 5 points.
+?  Flipping the Emerald switch: 5 points.
+?  Flipping the Gray switch: 5 points.
+?  Flipping the Indigo switch: 5 points.
+?  Flipping the Khaki switch: 5 points.
+
+
+Would you like to RESTART, RESTORE a saved game, QUIT, or UNDO the last command?
+> 
