@@ -2939,7 +2939,7 @@ some gift shop walls are here. they are scenery. understand "wall", "flickering"
 some riders are here. they are scenery. the description is "The riders exit [story title]. Some are laughing while others look rather upset.".
 some carnival workers are here. they are scenery. understand "actors" as carnival workers. the description is "The actors are here dressed in their tattered costumes muttering things like 'You made it!".
 some fencing is here. it is scenery. the description is "The jagged, rusted fencing is draped with cobwebs and plastic skulls.".
-some cobwebs are here. they are scenery. understand "plastic" and "skulls", as cobwebs. the description is "The fake cobwebs and skulls cover the rusty fencing.".
+some cobwebs are here. they are scenery. understand "plastic" and "skulls" as cobwebs. the description is "The fake cobwebs and skulls cover the rusty fencing.".
 
 instead of listening when the location is the ride exit, say "You hear the faint whispers and distant screams echoing softly in the background.".
 instead of smelling when the location is the ride exit, say "The air is cool and damp, carrying a faint metallic tang.".
