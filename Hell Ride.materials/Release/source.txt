@@ -457,7 +457,7 @@ instead of taking the indigo fuse:
 		continue the action.
 
 understand "indigo fuse", "the indigo fuse", "indigo", and "fuse" as "[janitor fuse]".
-instead of asking the janitor about "[janitor fuse]", say "This? It[']s a fuse. I suppose it[']s supposed to go somewhere important. Seems I[']ve lost my flashlight.[if the janitor is carrying fuse9] If you can find it, you can have [the fuse9].[end if]".
+instead of asking the janitor about "[janitor fuse]", say "This? It[']s a fuse. I suppose it[']s supposed to go somewhere important.[if the janitor has not handled the flashlight] Seems I[']ve lost my flashlight.[end if][if the janitor is carrying fuse9] If you can find it, you can have [the fuse9].[end if]".
 instead of asking the janitor about a topic listed in the Table of Conversation Responses, say "[response entry][paragraph break]".
 instead of telling the janitor about something: try asking the noun about it.
 
@@ -481,9 +481,10 @@ criteria	point value	description	turn stamp
 "[if the big switch is switched off]Y[otherwise]N[end if]"	15	"Turning off the big switch"	-1
 "[if the location is the Control Room]Y[otherwise]N[end if]"	5	"Finding the Control Room"	-1
 "[if the location is the Dark Passage]Y[otherwise]N[end if]"	5	"Finding the Dark Passage"	-1	
-"[if the bumper cars attendant is carrying the adjustable wrench]Y[otherwise]N[end if]"	10	"Bringing the wrench to the Bumper Cars"	-1
+"[if the bumper cars attendant is carrying the adjustable wrench]Y[otherwise]N[end if]"	5	"Bringing the wrench to the Bumper Cars"	-1
 "[if the player is carrying the aqua fuse]Y[otherwise]N[end if]"	5	"Acquiring the Aqua fuse"	-1
 "[if the player is carrying the emerald fuse]Y[otherwise]N[end if]"	5	"Acquiring the Emerald fuse"	-1
+"[if the player is carrying the gray fuse]Y[otherwise]N[end if]"	5	"Acquiring the Gray fuse"	-1
 "[if the player is carrying the indigo fuse]Y[otherwise]N[end if]"	5	"Acquiring the Indigo fuse"	-1
 "[if the player is carrying the khaki fuse]Y[otherwise]N[end if]"	5	"Acquiring the Khaki fuse"	-1
 "[if electrical closet one's electrical panel's switch is switched on]Y[otherwise]N[end if]"	5	"Flipping the Aqua switch"	-1
@@ -644,9 +645,9 @@ Section 17 - Miscellaneous
 
 [coins]
 a coin is a kind of thing. Understand "shiny" as a coin.
-a nickel is a kind of coin. The description of a nickel is "Five cents, a nickel. And very shiny.".
-a dime is a kind of coin. The description of a dime is "It[']s a dime. Ten cents. One tenth of a dollar. And very shiny.".
-a quarter is a kind of coin. . The description of a quarter is "It[']s a quarter. Two bits. And very shiny.".
+a nickel is a kind of coin. The description of a nickel is "Five cents, a nickel. And very shiny. The weight of a nickel is 5 grams.".
+a dime is a kind of coin. The description of a dime is "It[']s a dime. Ten cents. One tenth of a dollar. And very shiny. A modern dime has a weight of 2.268 grams.".
+a quarter is a kind of coin. . The description of a quarter is "It[']s a quarter. Two bits. And very shiny. The weight of a quarter is 5.67 grams.".
 
 three quarters and one nickel underlie the seat.
 
@@ -1118,14 +1119,6 @@ Sound of Bell is the file "Silence.ogg" ("The sound of silence").
 five dimes underlie the seat. 
 
 The carrying capacity of the fanny pack is 50.
-
-Displaying bottles is an action out of world applying to nothing. understand "display bottles" as displaying bottles.
-carry out displaying bottles:
-	let C be 0;
-	repeat with item running through bottles:
-		increment C;
-		say "[an item].";
-	say "[C] items.".
 
 Displaying signs is an action out of world applying to nothing. Understand "display signs" as displaying signs.
 carry out displaying signs:
@@ -1846,12 +1839,12 @@ Rule for supplying a missing second noun while hitting:
 
 Check hitting:
 	if noun is an attendant:
-		say "[The noun] blocks your swing and takes the mallet from you!";
-		now the mallet is nowhere;
+		say "[The noun] blocks your swing and takes [the second noun] from you!";
+		now the second noun is nowhere;
 		stop the action;
 	if noun is not lever, say "Nothing happens." instead;
-	if the second noun is not mallet, say "You can[']t hit [the noun] with [the second noun]!" instead;
-	if the player is not carrying the mallet, say "You[']re not holding the mallet." instead.
+	if the second noun is not mallet and the second noun is not the sledgehammer, say "You can[']t hit [the noun] with [the second noun]!" instead;
+	if the player is not carrying the mallet and the player is not carrying the sledgehammer, say "You[']re not holding anything you can hit with." instead.
 	
 some High Striker prizes are here. understand "stuffie", "stuffed", "animals", "novelty", "toys", "quirky", and "trinkets" as high striker prizes. the description is "The prizes range from stuffed animals and novelty toys to shiny trinkets and quirky collectibles."
 
@@ -1863,18 +1856,23 @@ instead of examining the high striker prizes:
 			say "[description entry][if N < number of rows in the Table of High Striker Prizes], [end if][if N is the number of rows in the Table of High Striker Prizes - 1]and [end if][if N is the number of rows in the Table of High Striker Prizes].[end if]".
 
 To show the High Striker prizes:
-	say "Which prize would you like? [run paragraph on]";
+	say "[line break]Which prize would you like? [run paragraph on]";
 	repeat with N running from 1 to the number of rows in the Table of High Striker Prizes:
 		say "[index in row N of the Table of High Striker Prizes]) [description in row N of the Table of High Striker Prizes][if N < number of rows in the Table of High Striker Prizes], [otherwise]?[end if]".
 
 Carry out hitting when the noun is the lever and the second noun is the mallet and the player is carrying the mallet:
-	say "You lift the mallet high and bring it down on the lever with all your might! The striker rises towards the bell stopping at '[a random strength pattern between weakling and almost there]'.  C[']mon! You can do better than that!";
+	say "You lift the mallet high and bring it down on the lever with all your might! The striker rises towards the bell stopping at '[a random strength pattern between weakling and almost there]'.[line break] ";
+	
+after hitting the lever when the second noun is the mallet for the fourth time:
+	say "You can[']t be sure of it but it seems as if the mallet isn[']t heavy enough to ring the bell.".
+after hitting the lever when the second noun is the mallet for the seventh time:
+	say "This mallet is definitely not heavy enough to ring the bell.".
 	
 HighStrikerWin is a truth state that varies. HighStrikerWin is false.
-After hitting the lever when second noun is the mallet 5 times:
+After hitting the lever when second noun is the sledgehammer:
 	play the sound of Bell;
 	now HighStrikerWin is true;
-	say "You swing the mallet one more time. The bell rings as the striker reaches the top of the pole. The attendant says, 'You[']re a Muscle Man. Here[']s a prize for you.'";
+	say "As you swing, you feel the extra weight from the sledgehammer. As it comes down on the bullseye, you can[']t help but feel like the extra weight gives you an edge. The bell rings as the striker reaches the top of the pole. The attendant says, 'You[']re a Muscle Man. Here[']s a prize for you.'";
 	show the high striker prizes.
 
 after reading a command when the location is the HS-room and HighStrikerWin is true:
@@ -1901,7 +1899,7 @@ You[']re surprised to see that this game only costs a dime. The exit is to the s
 
 the Dime Toss booth is a thing in the Dime Toss Game. the Dime Toss booth is scenery. understand "game" as the dime toss booth. The description of the Dime Toss booth is "The game booth is adorned with vibrant colors — red-and-white striped awnings, twinkling lights, and eye-catching signage. [if a dime underlies the Dime Toss booth] You can see something shiny on the ground under the booth.[end if]". understand "awning", "awnings", "twinkling", and "lights" as the dime toss booth.
 
-a mercury dime is a dime. it underlies the Dime Toss booth. The description is "The Mercury dime is a ten-cent coin struck by the United States Mint from late 1916 to 1945. Designed by Adolph Weinman and also referred to as the Winged Liberty Head dime, it gained its common name because the obverse depiction of a young Liberty, identifiable by her winged Phrygian cap, was confused with the Roman god Mercury."
+a Mercury dime is a dime. it underlies the Dime Toss booth. The description is "The Mercury dime is a ten-cent coin struck by the United States Mint from late 1916 to 1945. Designed by Adolph Weinman and also referred to as the Winged Liberty Head dime, it gained its common name because the obverse depiction of a young Liberty, identifiable by her winged Phrygian cap, was confused with the Roman god Mercury. It is 90% silver, 10% copper, and has a weight of 2.50 grams."
 
 before examining the mercury dime:
 	if show images is true, display Figure of MercuryDime.
@@ -1941,17 +1939,17 @@ instead of examining the Dime Toss prizes:
 instead of listening when the location is the Dime Toss Game, say "The distinctive 'ping' of dimes hitting plates creates a rhythmic soundtrack.".
 
 To show the Toss A Dime prizes:
-	say "Which prize would you like? [run paragraph on]";
+	say "[line break]Which prize would you like? [run paragraph on]";
 	repeat with N running from 1 to the number of rows in the Table of Dime Toss Prizes:
 		say "[index in row N of the Table of Dime Toss Prizes]) [description in row N of the Table of Dime Toss Prizes][if N < number of rows in the Table of Dime Toss Prizes], [otherwise]?[end if]".
 
 TossADimeWin is a truth state that varies. TossADimeWin is false.
 instead of tossing a dime when the second noun is the plate and the player carries the noun:
 	say "You toss the dime. [run paragraph on]";
-	if a random chance of 3 in 5 succeeds:
+	if the noun is the mercury dime:
 		now TossADimeWin is true;
 		now noun is nowhere;
-		say "The dime hits the plate, starts to spins, and lands in the center of the plate. The attendant shouts out, 'Winner! Winner!' [run paragraph on]";
+		say "The heavier Mercury dime hits the plate, starts to spins, and lands in the center of the plate. The attendant shouts out, 'Winner! Winner!'";
 		show the Toss A Dime prizes;
 	otherwise:
 		let N be a random number between 1 and 3;
@@ -2028,7 +2026,7 @@ instead of examining the Pitcher's Mound prizes:
 			say "[description in row N of the Table of Pitcher's Mound Prizes][if N < number of rows in the Table of Pitcher's Mound Prizes], [end if][if N is the number of rows in the Table of Pitcher's Mound Prizes - 1]and [end if][if N is the number of rows in the Table of Pitcher's Mound Prizes].[end if]".
 		
 To show the Pitcher's Mound prizes:
-	say "Which prize would you like? [run paragraph on]";
+	say "[line break]Which prize would you like? [run paragraph on]";
 	repeat with N running from 1 to the number of rows in the Table of Pitcher's Mound Prizes:
 		say "[index in row N of the Table of Pitcher's Mound Prizes]) [description in row N of the Table of Pitcher's Mound Prizes][if N < number of rows in the Table of Pitcher's Mound Prizes], [otherwise]?[end if]";
 		
@@ -2073,7 +2071,7 @@ instead of throwing a baseball at a bottle when the player carries the noun:
 	say "You wind up and throw the baseball at the milk bottles. [run paragraph on]";
 	if the second noun is bottle 5:
 		now PitchersMoundWin is true;	
-		say "The ball hits the bottles in the sweet spot and they go flying off the platform. The attendant shouts out, 'Winner! Winner!' [run paragraph on]";
+		say "The ball hits the bottles in the sweet spot and they topple over onto the platform. The attendant shouts out, 'Winner! Winner!'";
 		show the Pitcher's Mound prizes;
 		now every baseball is nowhere;
 	otherwise:
@@ -2625,12 +2623,13 @@ Dimly lit by a single hanging bulb, the room feels cooler and slightly damp, the
 
 There are exists north and south." 
 
-The toolbox is a closed openable container in the Mechanical Room North. The toolbox is fixed in place. The toolbox contains an adjustable wrench, channel locks, some pliers, and a hammer. Understand "tool", "box", and "tool box" as toolbox. The description of the toolbox is "This is a toolbox. I bet it contains tools."
+The toolbox is a closed openable container in the Mechanical Room North. The toolbox is fixed in place. Understand "tool", "box", and "tool box" as toolbox. The description of the toolbox is "This is a toolbox. I bet it contains tools."
 
-The description of the adjustable wrench is "Just one of the many tools used to maintain the carnival.".
-The description of the channel locks is "Just one of the many tools used to maintain the carnival.".
-The description of the pliers is "Just one of the many tools used to maintain the carnival.".
-The description of the hammer is "Just one of the many tools used to maintain the carnival.".
+an adjustable wrench is in the toolbox. The description of the adjustable wrench is "Just one of the many tools used to maintain the carnival.".
+some channel locks are in the toolbox. The description of the channel locks is "Just one of the many tools used to maintain the carnival.".
+some pliers is in the toolbox. The description of the pliers is "Just one of the many tools used to maintain the carnival.".
+a hammer is in the toolbox. The description of the hammer is "Just one of the many tools used to maintain the carnival.".
+a sledgehammer is here. The description of the sledgehammer is "This is an eight pound sledgehammer. Feels really hefty.".
 
 instead of listening when the location is the mechanical room north, say "You hear the subdued hum of capacitors and relays.".
 
@@ -3794,11 +3793,25 @@ title (text)	subtable (table name)	description (text)	toggle (rule)	used (number
 "hint"	--	"Yes, the prizes are important."
 "Why do the games only cost a dime?"	table of hinting	"What? You want them to cost a quarter?"
 "hint"	--	"The carnival likes to maintain a link to days past when games cost only a dime?"
-"hint"	--	"Just be grateful."
+"hint"	--	"Just be grateful they don[']t cost more."
 "I[']ve found a Mercury dime. What is it?"	table of hinting	"It[']s a dime."
 "hint"	--	"It[']s a Mercury Dime."
 "hint"	--	"Have you looked at it?"
-"hint"	--	"It[']s just an old dime."
+"hint"	--	"It has a weight of 2.50 grams."
+"The High Striker Game"	table of hinting	"Do you have what it takes? Are you a man or are you a mouse?"
+"hint"	--	"You have to be pretty strong to ring the bell."
+"hint"	--	"You swing with all your might and still can[']t ring the bell."
+"hint"	--	"Maybe the mallet isn[']t heavy enough."
+"hint"	--	"There[']s a sledgehammer in the Mechanical Room North."
+"The Dime Toss Game"	table of hinting	"How hard can it be?"
+"hint"	--	"The dimes keep skidding off the plate."
+"hint"	--	"A modern dime weighs 2.268 grams."
+"hint"	--	"A Mercury dime weighs 2.500 grams."
+"hint"	--	"Toss the Mercury dime. It[']s heavier."
+"The Pitcher[']s Mound"	table of hinting	"You have to choose which bottle to aim at."
+"hint"	--	"The bottles are weighted in such a way as to make you lose."
+"hint"	--	"You have to throw the baseball at the right bottle."
+"hint"	--	"Throw the baseball at bottle 5."
 
 Chapter 6 - Back Stage 
 
