@@ -43,7 +43,7 @@ picture 27 "C:\HellRide\Hell Ride.materials\Figures\RideDungeon.png" "The Dungeo
 picture 28 "C:\HellRide\Hell Ride.materials\Figures\RideGuillotine.png" "The Guillotine Room"
 picture 29 "C:\HellRide\Hell Ride.materials\Figures\RideExit.png" "The Hell Ride Exit"
 picture 30 "C:\HellRide\Hell Ride.materials\Figures\MercuryDime.png" "A Mercury dime"
-sound 31 "C:\HellRide\Hell Ride.materials\Sounds\Silence.ogg" "The sound of silence"
+sound 31 "C:\HellRide\Hell Ride.materials\Sounds\Bell.ogg" "The sound of a bell"
 
 ! Placeholder variables
 

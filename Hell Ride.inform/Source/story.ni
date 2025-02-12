@@ -1872,7 +1872,7 @@ HighStrikerWin is a truth state that varies. HighStrikerWin is false.
 After hitting the lever when second noun is the sledgehammer:
 	play the sound of Bell;
 	now HighStrikerWin is true;
-	say "You swing and feel the extra weight from the sledgehammer. As it comes down on the bullseye, you can[']t help but feel like the extra weight gives you an edge. The bell rings as the striker reaches the top of the pole. The attendant says, 'You[']re a Muscle Man. Here[']s a prize for you.'";
+	say "As you swing, you feel the extra weight from the sledgehammer. As it comes down on the bullseye, you can[']t help but feel like the extra weight gives you an edge. The bell rings as the striker reaches the top of the pole. The attendant says, 'You[']re a Muscle Man. Here[']s a prize for you.'";
 	show the high striker prizes.
 
 after reading a command when the location is the HS-room and HighStrikerWin is true:
