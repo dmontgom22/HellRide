@@ -2,7 +2,7 @@ Start of a transcript of:
 
 Hell Ride
 The ride of a lifetime... by No Shoes
-Release 200 / Serial number 250211 / Inform 7 v10.1.2 / D
+Release 200 / Serial number 250213 / Inform 7 v10.1.2 / D
 Inform 7 v10.1.2
 Identification number: //E0A5AFB9-18BF-4485-B083-426CA51CCE70//
 Interpreter version 0.6.0 / VM 3.1.3
@@ -678,9 +678,13 @@ The counter is lively with stacks of paper bags, napkins, and cups of cheese and
 
 In front of the stand, kids tug at their parents, teens share pretzels, and the crowd buzzes with energy. More than just a snack stop, the stand is a sensory delight, adding flavor and charm to the carnival experience.
 
-There is a menu to the right of the window. You can see the treats inside the stand. There is an exit to the northeast.
+To the south is the Carnival Office. The trailer's exterior is painted in dull, peeling shades of red and white, with old carnival-themed advertisements that are barely legible due to sun damage. A string of dimly lit, flickering bulbs hang above the door, and an old "Private" sign is half-hanging on the side, clearly neglected.
 
-You can see a Concession Attendant, a menu, a Drink of Cola, some Bubblegum, a Bucket of Popcorn, a Candy Apple, Cotton Candy, and a Soft Pretzel here.
+There is a menu to the right of the window. You can see the treats inside the stand. There is an exit to the south and northeast. 
+
+Nearby a sturdy door leads south.
+
+You can also see a Concession Attendant, a menu, a Drink of Cola, some Bubblegum, a Bucket of Popcorn, a Candy Apple, Cotton Candy, and a Soft Pretzel here.
 
 >l at stand
 The Concession Stand, perched along the midway, is a colorful and bustling hub. Painted in bright reds, blues, and yellows, it features bold lettering announcing treats like "SODA! POPCORN! CANDY APPLES!" Strings of twinkling lights frame the stand, making it a glowing beacon amid the carnival excitement.
@@ -740,7 +744,7 @@ You fork over $1.00 for the Bubblegum, leaving yourself with $19.00.
 >w
 
 Behind the Concession Stand
-Behind the concession stand, to one side is the trash generated from the day's activities and to the other side boxes of supplies. There is a chair here surrounded by cigarette butts.
+Behind the concession stand, to one side, is the trash generated from the day's activities and to the other side boxes of supplies. There is a chair here surrounded by cigarette butts. There is an exit to the east.
 
 You can see a trash can (closed) and some concession boxes here.
 
@@ -765,7 +769,9 @@ The chair is surrounded by cigarette butts carelessly discarded on the ground.
 >e
 
 Concession Stand
-You can see a Concession Attendant, a menu, a Drink of Cola, a Bucket of Popcorn, a Candy Apple, Cotton Candy, and a Soft Pretzel here.
+Nearby a sturdy door leads south.
+
+You can also see a Concession Attendant, a menu, a Drink of Cola, a Bucket of Popcorn, a Candy Apple, Cotton Candy, and a Soft Pretzel here.
 
 >ne
 
@@ -1187,7 +1193,7 @@ Head of the Line
 You can see a janitor and a Hell Ride Attendant here.
 
 >l at janitor
-This is another bored teenager. He's wondering why he took this stupid job in the first place.
+The janitor is a portly gentleman wearing dirty overalls, leaning on a broom, and tossing what looks to be a fuse in the air. The janitor is wearing a brass ring with a key on it.
 
 The janitor heads to the Ticket Booth.
 
@@ -1209,6 +1215,26 @@ Hey! Thanks, I really appreciate it. I've been lost without my flashlight. Here,
 Taken.
 
 [Your score has just gone up by five points.]
+
+>steal the brass ring
+Out of the corner of his eye, the janitor sees you reach for his key ring and slaps your hand away.
+
+The janitor heads to the Bumper Cars.
+
+>nw
+
+Bumper Cars
+You can see a janitor and a Bumper Cars attendant here.
+
+>steal brass ring
+While the janitor is distracted, you manage to steal the brass ring from the janitor.
+
+Taken.
+
+>se
+
+Ticket Booth
+You can see a Cashier and a ticket kiosk here.
 
 >s
 
@@ -1283,22 +1309,22 @@ The wires lay in twisted tangles on the desk.
 >turn on radio
 You switch the radio on.
 
-"Peace Train" by Cat Stevens plays on the radio.
+The DJ announces that "Tracks Of My Tears" by Smokey Robinson will be up next.
 
 >l at gears
 The gears and springs are strewn on the desk.
 
-You sing along to Warren Zevon's "Werewolves Of London".
+You hear Led Zeppelin's "Fool In The Rain" playing on the radio.
 
 >l at posters
 You're the safe choice for safety!
 
-You hear Pharell's "Happy" playing on the radio.
+You whistle along to "Losing My Religion" by R.E.M..
 
 >l at schedules
 Looking at the maintenance schedules and notes, all you can see are the illegible scribbles of a child.
 
-You whistle along to "Losing My Religion" by R.E.M..
+"Fool In The Rain" by Led Zeppelin plays on the radio.
 
 >look
 
@@ -1322,38 +1348,38 @@ Nearby an aqua colored door leads west.
 
 You can also see a worn photo and a desk (on which are a coffee mug and a radio) here.
 
-"Fool In The Rain" by Led Zeppelin plays on the radio.
+You hear Paul Simon's "Kodachrome" playing on the radio.
 
 >read manual
 The manual is titled: "Fixing Your Ferris Wheel. It's Easier Than You Think!"
 
-You hear Paul Simon's "Kodachrome" playing on the radio.
-
->drink coffee
-That looks nasty. There's something floating on the top. I wouldn't drink that if I was you.
-
 "Bohemian Rhapsody" by Queen plays on the radio.
 
 >drink coffee
-You decide to drink it after all. Your stomach lurches as the cold, nasty coffee settles.
+That looks nasty. There's something floating on the top. I wouldn't drink that if I was you.
 
 The DJ announces that "Never Gonna Give You Up" by Rick Astley will be up next.
  Yes, you have been Rick Rolled!
 
 >drink coffee
-You've learned your lesson and set the coffee cup down.
+You decide to drink it after all. Your stomach lurches as the cold, nasty coffee settles.
 
 You sing along to Bruce Springsteen's "Born To Run".
 
 >drink coffee
-There's nothing suitable to drink here.
+You've learned your lesson and set the coffee cup down.
 
 You hear Cat Stevens's "Peace Train" playing on the radio.
+
+>drink coffee
+There's nothing suitable to drink here.
+
+The DJ announces that "Respect" by Aretha Franklin will be up next.
 
 >l at clock
 The clock is wildly off the correct time. I guess it's broken.
 
-The DJ announces that "Respect" by Aretha Franklin will be up next.
+Nearby, you can hear "No Woman, No Cry" by Bob Marley.
 
 >turn off radio
 You switch the radio off.
@@ -1365,7 +1391,12 @@ This is a poorly lit hallway. Ahead to the west you can see the glow of an open 
 
 Nearby a ladder leads down to the Maintenance Office.
 
+Nearby an iron door leads west.
+
 >w
+(first opening the iron door)
+(first unlocking the iron door)
+(with the brass key)
 
 Control Room
 The backstage control room is a plain, functional hub where the carnival's rides, lights, and attractions are managed. Gray industrial walls, scuffed and greasy, surround a large monitor streaming live carnival feeds. Beneath them, control panels with labeled dials, colored buttons, and lights oversee the systems scattered about the room. Glancing at the control panels, you can see they are dark.
@@ -1375,6 +1406,8 @@ The hum of electronics fills the air, punctuated by the crackle of a radio: "Mai
 A flickering light casts cold shadows as the metallic tang of machinery mixes with dampness. Functional yet essential, this hidden space ensures the carnival's magic runs seamlessly. On one wall is a large switch with sparks arcing out from it.
 
 A dark hallway lies to the east.
+
+Nearby an iron door leads east to the Dark Hallway.
 
 Currently there are sparks arcing out from the switch. It looks dangerous.
 
@@ -1409,6 +1442,8 @@ You switch the big switch off.
 >e
 
 Dark Hallway
+Nearby an iron door leads west to Control Room.
+
 Nearby a ladder leads down to the Maintenance Office.
 
 >d
@@ -1605,7 +1640,7 @@ It's a hard square of bubblegum and won't stick to the fuse.
 You chew the bubblegum, blowing a few bubbles as you do so.
 
 >put bubblegum in grate
-You drop the chewed Bubblegum into the grate. The emerald colored fuse attaches to the chewed Bubblegum. You quickly and carefully raise the chewed Bubblegum and drop emerald colored fuse into your hand.
+You drop the chewed bubblegum into the grate. The emerald colored fuse attaches to the chewed bubblegum. You quickly and carefully raise the chewed bubblegum and drop emerald colored fuse into your hand.
 
 [Your score has just gone up by five points.]
 
@@ -1620,10 +1655,11 @@ You can also see a toolbox (closed) and a sledgehammer here.
 You open the toolbox, revealing an adjustable wrench, some channel locks, some pliers, and a hammer.
 
 >get wrench
+(putting the wallet into the fanny pack to make room)
 Taken.
 
 >get sledgehammer
-(putting the wallet into the fanny pack to make room)
+(putting the dime into the fanny pack to make room)
 Taken.
 
 >i
@@ -1632,22 +1668,25 @@ You are carrying:
   an adjustable wrench
   an emerald colored fuse
   a worn photo
+  a brass ring
+    a brass key (which opens the iron door)
   an indigo colored fuse
   a lit lantern (providing light)
   a sheer veil (being worn)
   a khaki colored fuse
-  some chewed Bubblegum
+  some chewed bubblegum
   a crimson colored fuse
   a horseshoe magnet
   a mallet
   a Bumper Cars ticket
-  a 14" long piece of string (tied to chewed Bubblegum)
+  a 14" long piece of string (tied to chewed bubblegum)
   a pair of gloves (being worn)
   an air freshener
   three quarters
   a nickel
-  two dimes
+  a dime
   a fanny pack (being worn, and open)
+    a dime
     a wallet
       $19.00 in cash
 
@@ -1691,7 +1730,7 @@ You can see a Hell Ride Attendant here.
 >n
 
 Ticket Booth
-You can see a janitor, a Cashier, and a ticket kiosk here.
+You can see a Cashier and a ticket kiosk here.
 
 >nw
 
@@ -1724,27 +1763,30 @@ You are carrying:
   a sledgehammer
   an emerald colored fuse
   a worn photo
+  a brass ring
+    a brass key (which opens the iron door)
   an indigo colored fuse
   a lit lantern (providing light)
   a sheer veil (being worn)
   a khaki colored fuse
-  some chewed Bubblegum
+  some chewed bubblegum
   a crimson colored fuse
   a mallet
-  a 14" long piece of string (tied to chewed Bubblegum)
+  a 14" long piece of string (tied to chewed bubblegum)
   a pair of gloves (being worn)
   an air freshener
   three quarters
   a nickel
-  two dimes
+  a dime
   a fanny pack (being worn, and open)
+    a dime
     a wallet
       $19.00 in cash
 
 >se
 
 Ticket Booth
-You can see a Cashier and a ticket kiosk here.
+You can see a janitor, a Cashier, and a ticket kiosk here.
 
 >e
 
@@ -1753,7 +1795,7 @@ You can see a Strongman attendant, a lever, and some High Striker prizes here.
 
 
 >hit bullseye with sledgehammer
-You swing and feel the extra weight from the sledgehammer. As it comes down on the bullseye, you can't help but feel like the extra weight gives you an edge. The bell rings as the striker reaches the top of the pole. The attendant says, "You're a Muscle Man. Here's a prize for you."
+As you swing, you feel the extra weight from the sledgehammer. As it comes down on the bullseye, you can't help but feel like the extra weight gives you an edge. The bell rings as the striker reaches the top of the pole. The attendant says, "You're a Muscle Man. Here's a prize for you."
 
 Which prize would you like? 1) a teddy bear, 2) a Swiss Army knife, 3) a magenta fuse, 4) a poster of Taylor Swift?
 
@@ -1767,10 +1809,12 @@ You are now holding a Swiss Army knife.
 Ticket Booth
 You can see a janitor, a Cashier, and a ticket kiosk here.
 
+The janitor heads to the Head of the Line.
+
 >s
 
 Head of the Line
-You can see a Hell Ride Attendant here.
+You can see a janitor and a Hell Ride Attendant here.
 
 >s
 
@@ -2009,6 +2053,7 @@ This is Electrical Closet One. There's an electrical panel here and an exit to t
 You can see a silver key here.
 
 >get key
+(the silver key)
 Taken.
 
 >l at electrical panel
@@ -2215,7 +2260,7 @@ The flames burn ever higher.
 In the pyre is a quartz colored fuse.
 
 >get quartz fuse
-(putting the dime into the fanny pack to make room)
+(putting the nickel into the fanny pack to make room)
 Taken.
 
 >l at pyre
@@ -2268,7 +2313,7 @@ Nearby a crimson colored door leads east to the Crawl Space.
 You can also see a gallows platform here.
 
 >score
-You've received 120 points out of a possible 150 in 479 moves!
+You've received 120 points out of a possible 150 in 483 moves!
 
 You have received points for the following: 
 
@@ -2302,19 +2347,21 @@ You are carrying:
   a sledgehammer
   an emerald colored fuse
   a worn photo
+  a brass ring
+    a brass key (which opens the iron door)
   an indigo colored fuse
   a lit lantern (providing light)
   a sheer veil (being worn)
   a khaki colored fuse
-  some chewed Bubblegum
+  some chewed bubblegum
   a crimson colored fuse
   a mallet
-  a 14" long piece of string (tied to chewed Bubblegum)
+  a 14" long piece of string (tied to chewed bubblegum)
   a pair of gloves (being worn)
   an air freshener
   three quarters
-  a nickel
   a fanny pack (being worn, and open)
+    a nickel
     two dimes
     a wallet
       $15.50 in cash
@@ -2440,19 +2487,21 @@ You are carrying:
   a sledgehammer
   an emerald colored fuse
   a worn photo
+  a brass ring
+    a brass key (which opens the iron door)
   an indigo colored fuse
   a lit lantern (providing light)
   a sheer veil (being worn)
   a khaki colored fuse
-  some chewed Bubblegum
+  some chewed bubblegum
   a crimson colored fuse
   a mallet
-  a 14" long piece of string (tied to chewed Bubblegum)
+  a 14" long piece of string (tied to chewed bubblegum)
   a pair of gloves (being worn)
   an air freshener
   three quarters
-  a nickel
   a fanny pack (being worn, and open)
+    a nickel
     two dimes
     a wallet
       $15.50 in cash
@@ -2692,10 +2741,14 @@ You can also see a desk (on which are a coffee mug and a radio) here.
 Dark Hallway
 Nearby a ladder leads down to the Maintenance Office.
 
+Nearby an iron door leads west to Control Room.
+
 >w
 
 Control Room
-You can see a big switch here.
+Nearby an iron door leads east to the Dark Hallway.
+
+You can also see a big switch here.
 
 >l
 Control Room
@@ -2707,7 +2760,9 @@ A flickering light casts cold shadows as the metallic tang of machinery mixes wi
 
 A dark hallway lies to the east.
 
-You can see a big switch here.
+Nearby an iron door leads east to the Dark Hallway.
+
+You can also see a big switch here.
 
 >l at control panel
 Which do you mean, Control Panel One, the aqua button, the aqua dial, the aqua colored light, Control Panel Three, the crimson button, the crimson dial, the crimson colored light, Control Panel Five, the emerald button, the emerald dial, the emerald colored light, Control Panel Seven, the gray button, the gray dial, the gray colored light, Control Panel Nine, the indigo button, the indigo dial, the indigo colored light, Control Panel Eleven, the khaki button, the khaki dial, or the khaki colored light?
@@ -2759,7 +2814,7 @@ As you exit the ride, the carnival owner and the mayor are present and extending
 
 *** You have won! ***
 
-You've received 150 points out of a possible 150 in 560 moves!
+You've received 150 points out of a possible 150 in 564 moves!
 
 You have received points for the following: 
 

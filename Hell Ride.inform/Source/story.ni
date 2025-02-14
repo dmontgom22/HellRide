@@ -84,6 +84,13 @@ stealing is an action applying to one thing. Understand "steal [something]" as s
 instead of stealing something:
 	if the noun is for sale:
 		say "Stealing [an noun] is unbecoming for an adventurer.";
+	otherwise if the noun is the brass ring or the noun is the brass key:
+		if a random chance of 3 in 10 succeeds:
+			say "While the janitor is distracted, you manage to steal the brass ring from the janitor.";
+			now the brass ring is in the location;
+			try taking the brass ring;
+		otherwise:
+			say "[one of]Out of the corner of his eye, the janitor sees you reach for his key ring.[or]The janitor catches you as he turns to face you.[or]The janitor says, 'Hey! What do you think you[']re doing?![or]The jani slaps your hand away as you reach for the keys.[at random]";
 	otherwise:
 		say "There[']s no need to steal [an noun]: it[']s free.".
 	
@@ -415,7 +422,7 @@ Understand the command "tell" as something new.
 Understand "talk to [someone] about [text]" as telling it about.
 Understand "tell [someone] about [text]" as telling it about.
 
-instead of asking an attendant about a topic listed in the Table of Conversation Responses, say "[response entry][paragraph break]".
+instead of asking an attendant about a topic listed in the Table of Attendant Conversation Responses, say "[response entry][paragraph break]".
 instead of telling an attendant about something: try asking the noun about it.
 
 Understand "talk to [someone]" as a mistake ("To start a conversation, try to ASK [the noun] ABOUT something or TELL [the noun] ABOUT something.").
@@ -437,7 +444,7 @@ instead of touching an attendant, say "Touching [the noun] without consent is li
 
 Section 11 - The Janitor
 
-the janitor is an attendant. the janitor is in the Head of the Line. The description of the janitor is "The janitor is a portly gentleman wearing dirty overalls, leaning on a broom[if the janitor carries fuse9], and tossing what looks to be a fuse in the air[end if].".
+the janitor is an a male person. the janitor is in the Head of the Line. The description of the janitor is "The janitor is a portly gentleman wearing dirty overalls, leaning on a broom.[if the janitor is wearing the brass ring] The janitor is wearing a brass ring with a key on it.[end if]".
 
 [the janitor walks]
 every turn:
@@ -452,20 +459,18 @@ every turn:
 			
 instead of taking the indigo fuse:
 	if the noun is carried by the janitor:
-		say "The janitor says, 'I[']ve lost my flashlight. If you can find it, I[']ll give you [the noun].'";
+		say "The janitor says, 'I[']ve lost my flashlight.'";
 	otherwise: 
 		continue the action.
 
-understand "indigo fuse", "the indigo fuse", "indigo", and "fuse" as "[janitor fuse]".
-instead of asking the janitor about "[janitor fuse]", say "This? It[']s a fuse. I suppose it[']s supposed to go somewhere important.[if the janitor has not handled the flashlight] Seems I[']ve lost my flashlight.[end if][if the janitor is carrying fuse9] If you can find it, you can have [the fuse9].[end if]".
-instead of asking the janitor about a topic listed in the Table of Conversation Responses, say "[response entry][paragraph break]".
+instead of asking the janitor about a topic listed in the Table of Janitor Conversation Responses, say "[response entry][paragraph break]".
 instead of telling the janitor about something: try asking the noun about it.
 
 instead of giving the flashlight to the janitor:
-	say "Hey! Thanks, I really appreciate it. I[']ve been lost without my flashlight. Here, take this fuse.";
-	now the flashlight is carried by the janitor;
-	now the fuse9 is in the location;
-	try taking the fuse9;
+	say "Hey! Thanks, I really appreciate it. I[']ve been lost without my flashlight.";
+	now the flashlight is carried by the janitor.
+	
+The brass ring is a keychain. understand "key/chain/keychain" as the brass ring. The description is "A ring to hold keys." The brass key is a passkey. The brass key unlocks the sturdy door and the iron door. the brass key is on the brass ring. the description of the brass key is "This is a shiny brass key. It must be important if the janitor has it.". The brass ring is worn by the janitor. 
 
 Section 12 - Scoring
 
@@ -616,7 +621,7 @@ Section 16 - Senses
 instead of kissing, say "Oh, my! Why would you want to kiss [the noun]? Your sweetie wouldn[']t like that!".
 
 instead of touching a person, say "Touching [the noun] without consent is likely to get you punched in the face! Better not.".
-instead of touching a thing, say "You don[']t notice anything unusual about the way [the noun] feels."
+instead of touching a thing, say "You don[']t notice anything unusual about the way [the noun][if the noun is plural-named] feel[otherwise] feels[end if]."
 
 Understand "smell carnival" as smelling.
 instead of smelling:
@@ -709,6 +714,13 @@ Does the player mean doing something with the bumper cars ticket when the locati
 Does the player mean doing something with the bumper cars ticket when the location is Ride Entrance: it is very unlikely.
 Does the player mean doing something with the bumper cars ticket when the location is Guillotine Room: it is very unlikely.
 
+Does the player mean doing something with the mini ferris wheel when the player is carrying the mini ferris wheel: it is very likely.
+Does the player mean doing something with the mini carousel when the player is carrying the mini carousel: it is very likely.
+
+Does the player mean doing something with the brass ring when the janitor is in the location of the player: it is very likely.
+
+Does the player mean doing something with the brass key when the location is behind the concession stand or the location is the dark hallway: it is very likely.
+
 Does the player mean doing something with the indigo fuse when the janitor is in the location of the player: it is very likely.
 
 Does the player mean doing something with the main generator when the location is the generator room: it is very likely.
@@ -767,13 +779,15 @@ instead of going when the location is the BC-room:
 instead of going when the location is the CS-room:
 	if the current action is going northeast:
 		continue the action;
-	if the current action is going west and the ferris wheel ticket is nowhere:
+	otherwise if the current action is going south:
+		continue the action;
+	otherwise if the current action is going west and the ferris wheel ticket is nowhere:
 		continue the action;
 	otherwise:
 		if Behind the Concession Stand is visited:
-			say "There are exits to the west and northeast.";
+			say "There are exits to the west, south, and northeast.";
 		otherwise:
-			say "The only exit you can see is to the northeast.".
+			say "The only exits you can see are south and northeast of here.".
 			
 [behind the concession stand]
 instead of going when the location is Behind the Concession Stand:
@@ -781,6 +795,13 @@ instead of going when the location is Behind the Concession Stand:
 		continue the action;
 	otherwise:
 		say "The only exit is to the east.".
+		
+[carnival office]
+instead of going when the location is Carnival Office:
+	if the current action is going north:
+		continue the action;
+	otherwise:
+		say "The only exit is to the north. ".
 		
 [carousel]
 instead of going when the location is the CR-room:
@@ -1159,15 +1180,6 @@ Carry out displaying attendants:
 			say "[an item] is an attendant in [the location of the item].";
 	say "[C] items.".
 
-Displaying weights is an action out of world applying to nothing. Understand "display weights" as displaying weights.
-Carry out displaying weights:
-	let C be 0;
-	repeat with item running through things:
-		if the weight of the item is greater than 0kg:
-			increment C;
-			say "[weight of the item] [an item][line break]";
-	say "[C] items.".
-			
 Displaying containers is an action out of world applying to nothing. Understand "display containers" as displaying containers.
 Carry out displaying containers:
 	let C be 0;
@@ -1202,6 +1214,7 @@ Carry out displaying all things:
 		increment C;
 		say "[weight of item] *** [price of the item] *** [an item][line break]";
 	say "[C] items.".
+
 
 Chapter 8 - RNG Seed, Money, Dimes, Sounds - For Release Only
 
@@ -1347,7 +1360,7 @@ An aqua fuse called an fuse1 is in the merchandise stand. The fuse id of fuse1 i
 A crimson fuse called a fuse3 is carried by the Pitcher's Mound attendant. The fuse id of fuse3 is 3. The color of fuse3 is crimson. 
 An emerald fuse called an fuse5 is in the grate. The fuse id of fuse5 is 5. The color of fuse5  is emerald. 
 A gray fuse called a fuse7 is carried by the Bumper Cars attendant. The fuse id of fuse7 is 7. The color of fuse7 is gray. 
-An indigo fuse called an fuse9 is carried by the janitor. The fuse id of fuse9 is 9. The color of fuse9 is indigo. 
+An indigo fuse called an fuse9 is in the safe. The fuse id of fuse9 is 9. The color of fuse9 is indigo. 
 A khaki fuse called a fuse11 is in the trash can. The fuse id of fuse11 is 11. The color of fuse11 is khaki. 
 A magenta fuse called a fuse13 is carried by the Strongman attendant. The fuse id of fuse13 is 13. The color of fuse13 is magenta. 
 An orange fuse called an fuse15 is carried by the Dime Toss attendant. The fuse id of fuse15 is 15. The color of fuse15 is orange. 
@@ -1474,12 +1487,255 @@ Electrical Room is east of Electrical Closet Nine.
 Electrical Room is southeast of Electrical Closet Eleven.
 Electrical Room is north of the Storage Room. 
 
-Chapter 2 - The Midway
+Chapter 2 - Second Floor
+
+Section 1 - Dark Hallway
+
+Dark Hallway is a dark room. "This is a poorly lit hallway. Ahead to the west you can see the glow of an open door."
+	
+Section 2 - Control Room
+
+Control Room is a dark room. "The backstage control room is a plain, functional hub where the carnival’s rides, lights, and attractions are managed. Gray industrial walls, scuffed and greasy, surround a large monitor streaming live carnival feeds. Beneath them, control panels with labeled dials, colored buttons, and lights oversee the systems scattered about the room. Glancing at the control panels, you can see they are [if the switch count is 6]lit up like a Christmas tree[otherwise]dark[end if].
+
+The hum of electronics fills the air, punctuated by the crackle of a radio: 'Maintenance to Bumper Cars — wrench needed!' The worn floor is scattered with papers, tools, and coffee cups. A cluttered desk holds logs and schedules, while a cork board above displays charts and red-marked notes like 'Check Zipper circuit breakers.'
+
+A flickering light casts cold shadows as the metallic tang of machinery mixes with dampness. Functional yet essential, this hidden space ensures the carnival’s magic runs seamlessly. On one wall is a large switch[if the big switch is switched on] with sparks arcing out from it[end if].
+
+A dark hallway lies to the east." 
+
+The iron door is an openable and lockable door. it is closed and locked. The description of the iron door is "This is the door into the Control Room. It has the words 'Employees Only' written on it. The door is [if the item described is open]open[otherwise]closed[end if]. It is [if the item described is locked]locked[otherwise]unlocked[end if].". The brass key unlocks it. The iron door is east of the Control Room and west of the Dark Hallway. 
+
+A big switch is a device in the control room. The big switch is fixed in place. The big switch can be switched on or switched off. The big switch is switched on. 
+"[if the big switch is switched on]Currently there are sparks arcing out from the switch. It looks dangerous.[end if]".
+The description of the big switch is "This is a large switch. It[']s the kind Dr. Frankenstein might push to route the lightning to his creature. A label underneath the switch reads: 'Electrical Room'.".
+
+there is a label in the control room. it is scenery. The description is "It reads, 'Electrical Room'.".
+
+electrocuted is a truth state that varies. electrocuted is false.
+instead of switching off the big switch:
+	if the player is wearing the pair of gloves:
+		now the electrical room is not electromagnetic;
+		continue the action;
+	otherwise:
+		now electrocuted is true;
+		end the story finally.
+
+Instead of pushing or flipping or toggling a switched off big switch:
+	now the electrical room is not electromagnetic;
+	try switching on the noun.
+
+Instead of pushing or flipping or toggling a switched on big switch:
+	now the electrical room is electromagnetic;
+	try switching off the noun.
+
+a cluttered desk is in the control room. The cluttered desk is scenery. The description is "The desk is covered with all matter of detritus.".
+a cork board is in the control room. The cork board is scenery. The description is "The cork board displays charts and notes.".
+some charts are in the control room. They are scenery. understand "notes", "red", "red-marked" as charts. The description is "There is nothing interesting about the charts and notes.".
+some papers are here. they are scenery. understand "tools", "coffee", and "cups" as papers. the description is "The worn floor is scattered with papers, tools, and coffee cups.".
+some logs are here. they are scenery. understand "schedules" as logs. the description is "The cluttered desk holds logs and schedules.".
+
+instead of listening when the location is the control room, say "The hum of electronics fills the air, punctuated by the crackle of a radio: 'Maintenance to Bumper Cars — wrench needed!'".
+
+every turn when the location is the Control Room:
+	count the switches;
+	count the dials;
+	[say "switch count: [switch count], dial count: [dial count].";]
+	if switch count is not 6:
+		now all buttons are switched off;
+		repeat with item running through dials:		
+			now the dial setting of the item is 0		
+
+Section 3 - Control Panels
+
+[The main control panel contains control panels. Each control panel has a an indicator, dial, and a button. Colors and Id's inherit from the control panels panel and are referenced using the variable: [the color of holder of the noun]. Similarly, there are actions that return the corresponding indicator/dial/button of the indicator/dial/button. This allows us to reference which indicator belongs with which dial, etc. without the need to create a mass of individually named objects.]
+
+A control panel is a kind of open container. 
+Understand "control" and "panel" as a control panel.
+A control panel is scenery.
+A control panel has a color. Understand the color property as describing a control panel.
+A control panel has a number called a panel id. Understand the panel id property as describing a control panel.
+The description of a control panel is "This is a control panel."
+
+Control Panel One is a control panel in the Control Room. The panel id of Control Panel One is 1. The color of Control Panel One is aqua.
+Control Panel Three is a control panel in the Control Room. The panel id of Control Panel Three is 3. The color of Control Panel Three is crimson.
+Control Panel Five is a control panel in the Control Room. The panel id of Control Panel Five is 5. The color of Control Panel Five is emerald.
+Control Panel Seven is a control panel in the Control Room. The panel id of Control Panel Seven is 7. The color of Control Panel Seven is gray.
+Control Panel Nine is a control panel in the Control Room. The panel id of Control Panel Nine is 9. The color of Control Panel Nine is indigo.
+Control Panel Eleven is a control panel in the Control Room. The panel id of Control Panel Eleven is 11. The color of Control Panel Eleven is khaki.
+
+instead of examining a control panel:
+	say "Each control panel is populated with a dial, a button, and a light. From left to right, the colors are aqua, crimson, emerald, gray, indigo, and khaki. Below the lights is a row of similarly colored dials and below that is a row of buttons. The control panels are [if switch count is 6]lit up like a Christmas tree[otherwise]dark[end if].[paragraph break]";
+	say "[Noun] is [if switch count is 6]lit[otherwise]dark[end if]. The [color of the noun] dial is set to [the dial setting of the corresponding dial of the noun]. The [color of the noun] light is now [if the corresponding button of the noun is switched on]on[otherwise]off[end if].";
+	if switch count is 6 and every button is switched off:
+		display the figure of ControlPanel instead;
+		now the figure id of the monitor is 0;
+		stop the action;
+	otherwise:
+		let N be the panel id of the noun;
+		now the figure id of the monitor is N;
+		choose a row with a link number of N in the table of monitor descriptions;
+		now ControlPanelImage is figure choice entry;
+		if the corresponding dial of the noun is properly set and the corresponding button of the noun is switched on:
+			if show images is true, display figure choice entry.
+	
+Definition: A thing is control-fitted if it is incorporated by a control panel.
+
+[This will allow us to refer to the "corresponding" socket, switch, or indicator; i.e. the one from the same panel. This particular phrase works because there is only ever one each of these in a panel. If we decide later to have, say, three sockets per panel, only this phrase will have to be changed -- using more complex logic -- but the rest of the code could be left as-is.]
+To decide what thing is --/the corresponding (name of kind of value K) of --/the (CT - a control-fitted thing):
+	let H be the holder of CT;
+	decide on a random K that is part of H.[<- there will only ever be one of these]
+	
+To decide what thing is --/the corresponding (name of kind of value K) of --/the (T - a thing):
+	decide on a random K that is part of T.[<- there will only ever be one of these]
+	
+[The following won't actually give all the panel's components a color property matching the panel, but it will allow us to refer to a "shared color" of these components and get the desired result.]
+To decide what color is --/the shared color of --/a/the (CT - a control-fitted thing):
+	decide on the color of the holder of CT.
+
+Section 4 - Buttons
+
+A button is a kind of device.  A button is part of every control panel. 
+A button is usually switched off.
+A button is always fixed in place.
+
+The description of a button is "This is the [a color of the holder of the item described] colored button.".
+
+The printed name of a button is "the [a color of the holder of the item described] button".
+
+To decide what number is --/the button id of (B - a button):
+	decide on the panel id of the holder of B.
+	
+To decide what color is --/the color of (B - a button):
+	decide on the color of the holder of B.
+
+Understand "button [something related by reversed incorporation]" as a button.
+Understand "[something related by reversed incorporation] button" as a button.
+
+Instead of pushing a switched off button (this is the redirect push to button on rule):
+	try switching on the noun.
+
+Instead of pushing a switched on button (this is the redirect push to button off rule):
+	try switching off the noun.
+	
+last report switching on a button when the switch count is 6 and the dial count is 6 (this is the final report switching on a button rule):
+	let N be the panel id of the holder of the noun;
+	choose a row with a link number of N in the table of monitor descriptions;
+	now ControlPanelImage is figure choice entry;
+	say "The monitor flickers for a second and the scene it displays changes to something different.";
+	say "[description entry][line break]";
+	say "The [color of the holder of the noun] light is now on.";
+	now all buttons are switched off;
+	now the noun is switched on;
+	now the figure id of the monitor is N;
+	if the color of the holder of the noun is indigo:
+		end the story finally;
+
+Last report switching off a button (this is the final report switching off a button rule):	
+	choose a row with a link number of 0 in the table of monitor descriptions;
+	now ControlPanelImage is figure choice entry;
+	say "The monitor turns off and the screen goes black.";
+	say "[description entry][line break]";
+	say "The [color of the holder of the noun] light is now off.";
+	now the figure id of the monitor is 0;
+	now all buttons are switched off.
+
+Section 5 - Dials
+
+A dial is a kind of thing. A dial is part of every control panel.
+A dial is fixed in place.
+A dial has a number called a dial setting. 
+
+The description of a dial is "This is the [color of the holder of the item described] colored dial. It is currently set to [dial setting of the item described]. I bet you could SET it to a number.".
+
+The printed name of a dial is "the [color of the holder of the item described] dial".
+
+To decide if (D - a dial) is properly set:
+	if the panel id of the holder of D is the dial setting of D :
+		decide yes;
+	decide no.
+	
+To decide what number is --/the dial id of (D - a dial):
+	decide on the panel id of the holder of D.
+	
+To decide what color is --/the color of (D - a dial):
+	decide on the color of the holder of D.
+	
+To decide what number is --/the dial setting of (D - a dial):
+	decide on the dial setting of D.
+
+Understand "dial [something related by reversed incorporation]" as a dial.
+Understand "[something related by reversed incorporation] dial" as a dial.
+
+Does the player mean spinning a dial to a number when the location is the Control Room: it is very likely.
+Does the player mean spinning a control panel to a number when the location is the Control Room: it is very unlikely.
+
+Spinning it to is an action applying to one thing and one number. 
+Check spinning it to: if the noun is not a dial, say "[The noun] does not spin." instead. 
+Report spinning it to: 
+	if the noun is a dial:
+		if the number understood is less than 0 or the number understood is greater than 20:
+			say "The [color of the holder of the noun] colored dial can only be set from 0 to 20.";
+			stop the action;
+		otherwise:
+			say "The [color of the holder of the noun] colored dial is now set to [the number understood].";
+			if the switch count is not 6:
+				say "Before your eyes, the dial spins back to 0.";
+				now the dial setting of the noun is 0;
+			otherwise:
+				now the dial setting of the noun is the number understood;
+				
+Understand "spin [something] to [a number]" as spinning it to. Understand "turn [something] to [a number]" as spinning it to. Understand "set [something] to [a number]" as spinning it to.
+
+The dial count is a number that varies. The dial count is 0.
+To count the dials:
+	now the dial count is 0;
+	if control panel one's dial is properly set, increment the dial count;
+	if control panel three's dial is properly set, increment the dial count;
+	if control panel five's dial is properly set, increment the dial count;
+	if control panel seven's dial is properly set, increment the dial count;
+	if control panel nine's dial is properly set, increment the dial count;
+	if control panel eleven's dial is properly set, increment the dial count.
+
+Section 6 - Lights
+
+A light is a kind of thing. A light is part of every control panel.
+A light is fixed in place.
+
+The description of a light is "This is [a printed name of the item described]. The light is [if the corresponding button of the item described is switched on]on[otherwise]off[end if]."
+
+The printed name of a light is "the [a color of the holder of the item described] colored light".
+
+To decide what number is --/the socket id of (L - a light):
+	decide on the panel id of the holder of L.
+	
+To decide what color is --/the color of (L - a light):
+	decide on the color of the holder of L.
+	
+Understand "light [something related by reversed incorporation]" as a light.
+Understand "[something related by reversed incorporation] light" as a light.
+
+Section 7 - The Monitor
+
+ControlPanelImage is a figure name that varies. ControlPanelImage is Figure of ControlPanel.
+
+The monitor is in the Control Room. The monitor is scenery. Understand "screen" as monitor. The monitor has a number called the figure id. The figure id is 0. The description is "This is a monitor that displays the various scenes from Hell Ride.".
+
+instead of examining the monitor:
+	let N be the figure id of the monitor;
+	choose a row with a link number of N in the table of monitor descriptions;
+	say "The monitor flickers for a second and the scene it displays changes to something different.";
+	say "[description entry][line break]";
+	now ControlPanelImage is figure choice entry;
+	display ControlPanelImage.
+	
+
+Chapter 3 - The Midway
 
 Section 1 - Parking Lot
 
 When play begins:
-	say "Type 'Images off' to prevent the game from displaying images. Type 'Help' for hints about [story title] and general information about playing interactive fiction games.";
+	now show images is false;
+	say "Type 'Images On' to display images. Type 'Help' for hints about [story title] and general information about playing interactive fiction games.";
 	display the figure of Hell Ride;
 	say "Date night with your sweetie: dinner at your favorite restaurant and a night at the carnival. 
 
@@ -1632,7 +1888,7 @@ some playful illustrations are here. they are scenery. the description is "You c
 
 some pennant flags are here. they are scenery. the description is "Pennant flags flutter from the kiosk[’]s roof.".
 
-some lights are here. they are scenery. the description is "Twinkling lights outline its edges, blinking rhythmically to draw attention.".
+some kiosk lights are here. they are scenery. the description is "Twinkling lights outline its edges, blinking rhythmically to draw attention.".
 
 some rolls are here. they are scenery. understand "roll", "rolls of tickets", and "roll of tickets" as rolls. the description is "Neatly arranged rolls of colorful tickets are displayed behind the cashier.".
 
@@ -1660,7 +1916,9 @@ some families are here. they are scenery. understand "couples", "visitors", and 
 
 There is a signboard in the TB-room. The signboard is scenery. Understand "sign", "board", "price", and "list" as signboard. The description of the signboard is "It[']s a sign displaying the prices of the various rides".
 
-reading is an action applying to one thing. Understand "read" as reading.
+understand the command "read" as something new. reading is an action applying to one thing. Understand "read [something]" as reading.
+instead of reading the noun, try examining the noun.
+
 instead of reading or examining the signboard:
 	now sign table is Table of Tickets;
 	show a sign table.
@@ -1684,19 +1942,21 @@ The counter is lively with stacks of paper bags, napkins, and cups of cheese and
 
 In front of the stand, kids tug at their parents, teens share pretzels, and the crowd buzzes with energy. More than just a snack stop, the stand is a sensory delight, adding flavor and charm to the carnival experience.
 
-There is a menu to the right of the window. You can see the treats inside the stand. There is an exit to the northeast."
+To the south is the Carnival Office. The trailer’s exterior is painted in dull, peeling shades of red and white, with old carnival-themed advertisements that are barely legible due to sun damage. A string of dimly lit, flickering bulbs hang above the door, and an old 'Private' sign is half-hanging on the side, clearly neglected.
+
+There is a menu to the right of the window. You can see the treats inside the stand. There is an exit to the south and northeast. "
 
 The Concession Attendant is an attendant in the CS-room. 
 
 The concession stand is here. it is scenery. the description is "The Concession Stand, perched along the midway, is a colorful and bustling hub. Painted in bright reds, blues, and yellows, it features bold lettering announcing treats like 'SODA! POPCORN! CANDY APPLES!' Strings of twinkling lights frame the stand, making it a glowing beacon amid the carnival excitement."
 
-some treats are here. Treats are scenery. Understand "treat", "sweets", "snacks", "sugary" and "goodies" as treats. The description of treats is "There are a variety of things to eat here."
+some treats are here. Treats are scenery. Understand "treat/sweets/snacks/sugary/goodies" as treats. The description of treats is "There are a variety of things to eat here."
 
-a menu is here.  Understand "sign", "price", and "list", "chalk", "board", and "chalkboard" as menu. the Menu is fixed in place. The description of the menu is "It[']s a sign display the prices of the various concession items for sale."
+a menu is here.  Understand "sign/price/list/chalk/board/chalkboard" as menu. the Menu is fixed in place. The description of the menu is "It[']s a sign display the prices of the various concession items for sale."
 
 a Drink is here. The price of a drink is $2.00. The description of the drink is "This soda is ice cold."
 
-The drink is a fluid container. The liquid of the drink is Cola. understand "soda", "drink", "cola", and "Coke" as the drink. The current volume of the drink is 8.0 fl oz. 
+The drink is a fluid container. The liquid of the drink is Cola. understand "soda/drink/cola/Coke" as the drink. The current volume of the drink is 8.0 fl oz. 
 
 Instead of player drinking a fluid container:
 	if drink is empty:
@@ -1714,11 +1974,11 @@ instead of chewing:
 		say "[The noun] doesn[']t taste very good.";
 	otherwise:
 		say "You chew the bubblegum, blowing a few bubbles as you do so.";
-		now the printed name of the bubblegum is "chewed Bubblegum";
-		now the description of the bubblegum is "This is a pink ball of chewed Bubblegum.";
+		now the printed name of the bubblegum is "chewed bubblegum";
+		now the description of the bubblegum is "This is a pink ball of chewed bubblegum.";
 		now the bubblegum is chewed.
 
-some Bubblegum is here. The price of bubblegum is $1.00. Understand "bubble" and "gum" as bubblegum. The description of the bubblegum is "This is a square of Bazooka Joe Bubblegum. Really now, is there any other?". the bubblegum can be unchewed or chewed. the bubblegum is unchewed.
+some Bubblegum is here. The price of bubblegum is $1.00. Understand "bubble/gum" as bubblegum. The description of the bubblegum is "This is a square of Bazooka Joe Bubblegum. Really now, is there any other?". the bubblegum can be unchewed or chewed. the bubblegum is unchewed.
 
 a Bucket of Popcorn is here. The bucket of popcorn is edible. The price of a bucket of popcorn is $2.50. Understand "bucket", "buttered" as bucket of popcorn. The description of the bucket of popcorn is "The bucket of popcorn looks enormous!"
 
@@ -1733,28 +1993,102 @@ instead of reading or examining the menu:
 	show a sign table.
 	
 the counter is here. it is scenery . the description is "On the counter there are paper bags, napkins, and cups of cheese and sugar sprinkles.".
-the napkin dispenser is here. it is scenery. understand "napkin" and "napkins" as napkin dispenser. the description is "It[']s the kind of dispenser that doesn[']t allow you to take more than one at a time.".
+the napkin dispenser is here. it is scenery. understand "napkin/napkins" as napkin dispenser. the description is "It[']s the kind of dispenser that doesn[']t allow you to take more than one at a time.".
 some paper bags are here. they are scenery. the description is "The paper bags are used to send the customer off with their goodies.".
-some cups are here. they are scenery. understand "cheese", "sugar", and "sprinkles" as cups. the description is "The cups are full of cheese and sugar sprinkles Not together though. That[']s nasty!".
+some cups are here. they are scenery. understand "cheese/sugar/sprinkles" as cups. the description is "The cups are full of cheese and sugar sprinkles Not together though. That[']s nasty!".
 some concession workers are here. they are scenery. the description is "More bored teenagers doing their jobs.".
 a cooler is here. it is scenery. the description is "The cooler holds sodas.".
-some kids are here. they are scenery. understand "parents", "teens", and "crowd" as kids. the description is "In front of the stand, kids tug at their parents, teens share pretzels, and the crowd buzzes with energy.".
-the machine is here. it is scenery. understand "machines", "popcorn", "cotton", and "candy" as the machine. the description is "The machines faithfully prepares batch of batch of treats for the crowd.".
+some kids are here. they are scenery. understand "parents/teens/crowd" as kids. the description is "In front of the stand, kids tug at their parents, teens share pretzels, and the crowd buzzes with energy.".
+the machine is here. it is scenery. understand "machines/popcorn/cotton/candy" as the machine. the description is "The machines faithfully prepares batch of batch of treats for the crowd.".
 some aprons are here. they are scenery. the description is "These are full-sized aprons with the carnival[']s logo printed on them."
 
 Section 5 - Behind the Concession Stand
 
-The Behind the Concession Stand is a room. The Behind the Concession Stand is outdoors. Behind the Concession Stand is west of the CS-room. "Behind the concession stand, to one side is the trash generated from the day[']s activities and to the other side boxes of supplies. There is a chair here surrounded by cigarette butts."
+The Behind the Concession Stand is a room. The Behind the Concession Stand is outdoors. Behind the Concession Stand is west of the CS-room. "Behind the concession stand, to one side, is the trash generated from the day[']s activities and to the other side boxes of supplies. There is a chair here surrounded by cigarette butts. There is an exit to the east."
 
-a trash can is here. it is an openable closed container. it is fixed in place. understand "trash", "can", "trashcan", "garbage can", "garbage" as the trash can. the description is "This a garbage can overflowing with trash."
+a trash can is here. it is an openable closed container. it is fixed in place. understand "trash/can/trashcan/garbage can/garbage" as the trash can. the description is "This a garbage can overflowing with trash."
 
-some concession boxes are here. they are fixed in place. understand "supplies", "bucket", "buckets", and "cones" as the concession boxes. the description is "The boxes of supplies are stacked high behind the concession stand. They contain buckets for the popcorn and cones for the cotton candy. Stuff like that."
+some concession boxes are here. they are fixed in place. understand "supplies/bucket/buckets/cones" as the concession boxes. the description is "The boxes of supplies are stacked high behind the concession stand. They contain buckets for the popcorn and cones for the cotton candy. Stuff like that."
 
 a chair is enterable scenery in Behind the Concession Stand. it is a supporter. the description is "The employees sit in this chair while on break."
 
 some cigarette butts are here. they are scenery. understand "cigarettes" as the cigarette butts. the description is "The chair is surrounded by cigarette butts carelessly discarded on the ground."
 
-Section 6 - High Striker
+Section 6 - Carnival Office
+
+The Carnival Office is a room. The Carnival Office is indoors. "Dim, yellow light from an overhead bulb casts long shadows over the room, A single desk lamp, flickering provides additional light. A few carnival-themed knick-knacks sit atop the desk. A framed photograph hangs askew on the wall. 
+
+The desk is covered in stacks of paperwork, old receipts, invoices, and faded carnival brochures. A locked cabinet is tucked away against one wall. Next to it, there’s a small, heavy safe."
+
+the filing cabinet is here. it is a closed locked openable lockable container. it is fixed in place. the description is "A locked cabinet, likely filled with old carnival financial records, is tucked away against one wall.".
+
+a messy desk is here. it is a scenery supporter. the description is "The desk is covered in stacks of paperwork, old receipts, invoices, and faded carnival brochures.".
+
+some paperwork is on the messy desk. it is scenery. understand "stacks/piles/financial/statements/documents" as paperwork. the description is "Piles of invoices and old financial statements cover much of the desk, but the documents seem to be a mix of chaotic disorganization and purposeful concealment. Some of the invoices are stamped with the word 'PAID' in red ink, while others appear to have been hastily shoved aside. I wonder if the carnival is in some kind of financial trouble."
+
+some receipts are on the messy desk. understand "receipt" as receipts. the description is "These are receipts for regular day to day expenses for the carnival: paper goods, consumables, etc. Some are marked paid and others are not. Some are marked 'Overdue'. I wonder if the carnival is in some kind of financial trouble.".
+
+instead of reading the receipts, say "The receipt on the top of the pile reads:[fixed letter spacing][paragraph break]
+Cash [']N['] Carry.[line break]
+121 Maple St[line break]
+Wakefield, WA 98272[paragraph break]
+$82.50	Soda Cups[line break]
+$106.73	Popcorn Buckets	[line break]
+$56.41	Napkins[paragraph break]
+After the 10th of the month, this invoice will be assessed a finance charge of 3.75% per month, We appreciate your prompt payment.[roman type][line break]".
+
+some invoices are on the messy desk. understand "invoice" as invoices. the description is "The invoices are for the regular day to day supplies that the carnival orders. Closer inspection shows a steadily declining volume of goods ordered. Almost as if the carnival couldn[']t afford the full cost. Some are marked 'Paid'.  A surprising number are not."
+
+instead of reading the invoices, say "The invoice on the top of the stack reads:[fixed letter spacing][paragraph break]
+Mystic Industries, Inc.[line break]
+40 Elm St[line break]
+Monroe, MA 01880[paragraph break]
+For services rendered:[line break]
+Repairs to the Stake Room in the Hell Ride Attraction after Fire			$2,500.00[paragraph break]
+Please note that this invoice is overdue and will be assessed a finance charge of 2.5% per month, We appreciate your prompt payment.[roman type][line break]".
+
+some carnival brochures are here. understand "brochure" as carnival brochures. they are scenery. the description is "The brochures are meant to be left at convenience stores restaurants, and other businesses as a way to attract visitors to the carnival." .
+
+some knick-knacks are on the messy desk. they are scenery. understand "trinkets/knack/knick-knacks" or "knick knacks" as the knick-knacks. the description is "These are little bits of memorabilia from the carnival life. [if the mini ferris wheel is visible]There is a miniature Ferris wheel here.[end if][if the mini carousel is visible] You can also see a mini carousel here.".
+a mini Ferris wheel is on the messy desk. the description is "This is a miniature reproduction of the Ferris wheel.". 
+a mini carousel is on messy desk. the description is "This is a miniature replica of the Carousel.".
+
+a office bulb is here. the printed name is "bulb". it is scenery. understand "lightbulb/lamp" or "desk lamp" or "light bulb" as office bulb. the description is "The flickering light from the lamps casts a yellow hue about the office.".
+
+a framed photograph is here. understand "photo" as the framed photograph. the description is "This appears to be a photo of the carnival[']s opening night, a once proud moment lost in time. On the back reads a date: '03/22/62'.[if the maintenance office is visited] This looks like the same photo you found in the Maintenance Office.[end if]".
+
+The sturdy door is an openable and lockable door. it is closed and locked . The description of sturdy door is "This is the door into the Carnival Office. It has the word 'Private' written on it. The door is [if the item described is open]open[otherwise]closed[end if] and [if the item described is locked]locked[otherwise]unlocked[end if].". The brass key unlocks it. The sturdy door is south of the CS-room and north of the Carnival Office. 
+
+The initial appearance of a door is usually "Nearby [an item described] leads [if the other side of the item described is visited][direction of the item described from the location] to [the other side of the item described][otherwise][direction of the item described from the location][end if]."
+
+an insurance policy is in the safe. the description is "This is an insuance policy on the Whidby Amusements Carnival. It is for $1,000,000. That[']s an awfully high number and it was dated last month.".
+
+the safe is in the carnival office. it is a closed locked, openable, lockable container. it is fixed in place. understand "small/heavy/knob" as the safe. the description is "Next to the filing cabinet, there’s a small, heavy safe where the owner keeps more sensitive materials. There is a knob on the front of the safe".
+
+The safe has a list of numbers called the current combination.
+The safe has a list of numbers called the true combination. The true combination of the safe is {3, 22, 62}.
+
+Instead of examining the safe:
+	if the number of entries in the current combination of the safe is 0,
+		say "You haven't turned the knob to any combination yet.";
+	otherwise say "You have turned the knob to [the current combination of the safe].".
+
+Instead of spinning the safe to the number understood:
+	if the number understood is less than 0 or the number understood is greater than 100:
+		say "The knob can only be set to numbers between 0 and 100.";
+	otherwise:
+		truncate the current combination of the safe to the last 2 entries;
+		add the number understood to the current combination of the safe;
+		if the safe is locked and the current combination of the safe is the true combination of the safe:
+			say "You turn the knob to [the number understood], and you hear a click.";
+			now the safe is unlocked;
+		otherwise if safe is unlocked and the safe is closed and the current combination of the safe is not the true combination of the safe:
+			say "You spin the knob, and [the safe] snicks locked.";
+			now the safe is locked;
+		otherwise:
+			say "You turn the knob to [the number understood]."
+
+Section 7 - High Striker
 
 Before going east when the location is the TB-room and the HS-room is unvisited:
 	if show images is true, display Figure of HighStriker;
@@ -1882,7 +2216,7 @@ after reading a command when the location is the HS-room and HighStrikerWin is t
 		now HighStrikerWin is false;
 		stop the action.
 	
-Section 7 - Dime Toss
+Section 8 - Dime Toss
 
 Before going northeast when the location is the HS-room and the Dime Toss Game is unvisited:
 	if show images is true, display Figure of DimeToss;
@@ -1973,7 +2307,7 @@ The Dime Toss Attendant is an attendant in the the Dime Toss Game. understand "o
 after examining the Dime Toss attendant when the TossADimeWin is true, show the toss a dime prizes. 
 after looking when the TossADimeWin is true and the location is the Dime Toss Game, 	show the Toss A Dime prizes.
 
-Section 8 - Pitcher's Mound
+Section 9 - Pitcher's Mound
 
 Before going southeast when the location is the HS-room and the Pitcher's Mound is unvisited:
 	if show images is true, display Figure of MilkBottles;
@@ -2099,7 +2433,7 @@ after examining the pitcher's mound attendant:
 after looking when the PitchersMoundWin is true and the location is the Pitcher's Mound:
 	show the Pitcher's Mound prizes.
 
-Section 9 - Show Facade
+Section 10 - Show Facade
 
 Before going west when the location is the TB-room and the SF-room is unvisited:
 	if show images is true, display Figure of LittleEgyptFacade;
@@ -2145,7 +2479,7 @@ After giving when the noun is dime and the second noun is barker:
 instead of listening when the location is the SF-room, say "You hear the low, hypnotic music of a faraway land.".
 instead of smelling when the location is the SF-room, say "The smell of incense and spices wafts through the tent."
 
-Section 10 - Show Tent	
+Section 11 - Show Tent	
 
 Before going west when the location is the SF-room and the ST-room is unvisited and barker is carrying a dime:
 	if show images is true, display Figure of LittleEgyptShow;
@@ -2231,7 +2565,7 @@ instead of clapping, say "Your hands are sore from clapping so much!".
 the entryway is a thing in the ST-room. the entryway is scenery. The description of the entryway is "The show[']s facade and the barker are back to the east.". Understand "facade" as entryway.
 examining the entryway is an action applying to one thing. Understand "examine entryway" as examining the entryway.
 
-Section 11 - Ferris Wheel
+Section 12 - Ferris Wheel
 
 After going east from the HS-room when the FW-room is unvisited:
 	if show images is true, display Figure of FerrisWheel;
@@ -2288,7 +2622,7 @@ instead of taking the two dollar bill:
 	say "You now have [the price of the money].";
 	now the two dollar bill is nowhere.
 
-Section 12 - Bumper Cars
+Section 13 - Bumper Cars
 
 After going northwest from the TB-room when the BC-room is unvisited:
 	if show images is true, display Figure of BumperCars;
@@ -2336,7 +2670,7 @@ instead of giving the adjustable wrench to the bumper cars attendant:
 	now the fuse7 is in the location;
 	try taking the fuse7;
 
-Section 13 - Fortune Teller
+Section 14 - Fortune Teller
 
 After going southeast from the TB-room when the FT-room is unvisited:
 	if show images is true, display Figure of FortuneTeller;
@@ -2408,7 +2742,7 @@ every turn during Fortune Teller AutoPlay:
 
 instead of looking during the Fortune Teller AutoPlay, say "[bold type][last category]: [last card][roman type][line break][last card description][paragraph break]";
 
-Section 14 - Carousel
+Section 15 - Carousel
 
 After going northeast from the TB-room when the CR-room is unvisited:
 	if show images is true, display Figure of Carousel;
@@ -2449,7 +2783,7 @@ some sea dragons are here. They are scenery. The description is "The sea dragons
 some saddles are here. they are scenery. the description is "Each animal is painted in vivid colors, detailed with golden saddles and ribbons.".
 Some children are here. they are scenery. understand "adults" as children. the description is "Adults and children laugh in delight as they choose their noble steed.".
 
-Section 15 - Head of the Line
+Section 16 - Head of the Line
 
 Head of the Line is a room. Head of the Line is south of TB-room. Head of the Line is north of Ride Entrance. The Head of the Line is outdoors. "You are standing in front of an attendant[if hell ride attendant does not carry the hell ride ticket] with his hand open waiting for your ticket[end if]. The entrance to the ride is south of here. The ride operator tells you that you[']re lucky you showed up when you did because this will be the last trip through [story title] for the night. You notice that all the other cars are empty. The Ticket Kiosk is north of here."
 
@@ -2465,7 +2799,7 @@ Check going south when the location is Head of the Line and the Hell Ride attend
 	
 
 		
-Chapter 3 - Backstage
+Chapter 4 - Backstage
 
 Section 1 - Wooden Doors
 
@@ -2538,21 +2872,21 @@ some springs are here. they are scenery. understand "gears" as springs. The desc
 
 instead of listening when the location is the maintenance office, say "You can hear a clock ticking softly nearby.".
 
-The worn photo is here. Understand "picture" as the worn photo. The description of the worn photo is "This is a photo of the carnival in its heyday! A ragtag bunch of people are featured in the picture in front of the Hell Ride facade.. On the back reads a date: 'March, 1962'."
+The worn photo is here. Understand "picture" as the worn photo. The description of the worn photo is "This is a photo of the carnival in its heyday! A ragtag bunch of people are featured in the picture in front of the Hell Ride facade. On the back reads a date: '03/22/62'.[if the carnival office is visited] This looks like the same photo you found in the Carnival Office.[end if]"
 
-The coffee mug is on the desk. The coffee mug is edible. Understand "coffee" and "cup" as the coffee mug. The description of the coffee mug is "Who knows how long this has been sitting here. I wouldn[']t drink it if I were you." 
+The coffee mug is on the maintenance desk. The coffee mug is edible. Understand "coffee" and "cup" as the coffee mug. The description of the coffee mug is "Who knows how long this has been sitting here. I wouldn[']t drink it if I were you." 
 
 Instead of drinking the coffee mug for the first time: say "That looks nasty. There[']s something floating on the top. I wouldn[']t drink that if I was you." instead.
 Instead of drinking the coffee mug for the second time: say "You decide to drink it after all. Your stomach lurches as the cold, nasty coffee settles." instead.
 Instead of drinking the coffee mug for the third time: say "You[']ve learned your lesson and set the coffee cup down." instead.
 
-A desk is in the maintenance office. The desk is a supporter. The desk is fixed in place. The description of the desk is "It[']s a desk. There are coffee stains and cigarette burns from years of abuse. The single drawer is [if the drawer is open]open[otherwise]shut[end if]."
+A maintenance desk is in the maintenance office. The printed name of the maintenance desk is "desk". The maintenance desk is a supporter. The maintenance desk is fixed in place. The description of the maintenance desk is "It[']s a desk. There are coffee stains and cigarette burns from years of abuse. The single drawer is [if the drawer is open]open[otherwise]shut[end if]."
 
-A drawer is part of the desk. The drawer is a closed openable container. The drawer is scenery. The description of the drawer is "The single drawer is [if the drawer is open]open[otherwise]shut[end if]."
+A drawer is part of the maintenance desk. The drawer is a closed openable container. The drawer is scenery. The description of the drawer is "The single drawer is [if the drawer is open]open[otherwise]shut[end if]."
 
 Nearness relates a room (called A) to a room (called B) when the number of moves from B to A is less than 2. The verb to be near means the nearness relation.
 
-The radio is a device on the desk. The radio is switched off and fixed in place. The description of the radio is "[if switched on]The radio burbles on[otherwise]The radio is off[end if]." 
+The radio is a device on the maintenance desk. The radio is switched off and fixed in place. The description of the radio is "[if switched on]The radio burbles on[otherwise]The radio is off[end if]." 
 
 instead of listening when the radio is switched on and the location is in back stage:
 	if the location is near the maintenance office:
@@ -2636,7 +2970,7 @@ instead of listening when the location is the mechanical room north, say "You he
 some capacitors are here. they are scenery. understand "capacitor", "relay", and "relays" as the capacitors. the description is "The subdued hum of capacitors and relays fills the air.".
 some mechanical cables are here. they are scenery. the description is "The cables snake along the walls.".
 some circuit breaker panels are here. understand "breakers" as the circuit breaker panels. they are scenery. the description is "These are electrical panels for other parts of the carnival.".
-a bulb is here. it is scenery. The description is "This single bulb is feebly trying to light the room.".
+a mechanical bulb is here. the printed name is "bulb". it is scenery. The description is "This single bulb is feebly trying to light the room.".
 a hydraulic pump is here. It is scenery. The description is "This is some of the equipment that keeps the carnival running smoothly.".
 some gauges are here. They are scenery. The description is "The room is full of gauges reporting on the condition of the carnival.".
 some tools are here. They are scenery. The description is "Just some of the many tools used to maintain the carnival.".
@@ -2804,7 +3138,7 @@ A khaki colored door is a wooden door. The color of khaki colored door is khaki.
 	
 instead of smelling when the location is the storage room, say "The air hangs heavy with grease, dust, damp canvas, and a faint trace of stale popcorn.".
 
-Chapter 4 - Hell Ride
+Chapter 5 - Hell Ride
 
 Section 1 - Hell Ride Scene
 
@@ -3029,247 +3363,9 @@ some cobwebs are here. they are scenery. understand "plastic" and "skulls" as co
 instead of listening when the location is the ride exit, say "You hear the faint whispers and distant screams echoing softly in the background.".
 instead of smelling when the location is the ride exit, say "The air is cool and damp, carrying a faint metallic tang.".
 
-Chapter 5 - Second Floor
-
-Section 1 - Dark Hallway
-
-Dark Hallway is a dark room. "This is a poorly lit hallway. Ahead to the west you can see the glow of an open door."
-	
-Section 2 - Control Room
-
-Control Room is a dark room. The Control Room is west of the Dark Hallway. "The backstage control room is a plain, functional hub where the carnival’s rides, lights, and attractions are managed. Gray industrial walls, scuffed and greasy, surround a large monitor streaming live carnival feeds. Beneath them, control panels with labeled dials, colored buttons, and lights oversee the systems scattered about the room. Glancing at the control panels, you can see they are [if the switch count is 6]lit up like a Christmas tree[otherwise]dark[end if].
-
-The hum of electronics fills the air, punctuated by the crackle of a radio: 'Maintenance to Bumper Cars — wrench needed!' The worn floor is scattered with papers, tools, and coffee cups. A cluttered desk holds logs and schedules, while a cork board above displays charts and red-marked notes like 'Check Zipper circuit breakers.'
-
-A flickering light casts cold shadows as the metallic tang of machinery mixes with dampness. Functional yet essential, this hidden space ensures the carnival’s magic runs seamlessly. On one wall is a large switch[if the big switch is switched on] with sparks arcing out from it[end if].
-
-A dark hallway lies to the east." 
-
-A big switch is a device in the control room. The big switch is fixed in place. The big switch can be switched on or switched off. The big switch is switched on. 
-"[if the big switch is switched on]Currently there are sparks arcing out from the switch. It looks dangerous.[end if]".
-The description of the big switch is "This is a large switch. It[']s the kind Dr. Frankenstein might push to route the lightning to his creature. A label underneath the switch reads: 'Electrical Room'.".
-
-there is a label in the control room. it is scenery. The description is "It reads, 'Electrical Room'.".
-
-electrocuted is a truth state that varies. electrocuted is false.
-instead of switching off the big switch:
-	if the player is wearing the pair of gloves:
-		now the electrical room is not electromagnetic;
-		continue the action;
-	otherwise:
-		now electrocuted is true;
-		end the story finally.
-
-Instead of pushing or flipping or toggling a switched off big switch:
-	now the electrical room is not electromagnetic;
-	try switching on the noun.
-
-Instead of pushing or flipping or toggling a switched on big switch:
-	now the electrical room is electromagnetic;
-	try switching off the noun.
-
-a cluttered desk is in the control room. The cluttered desk is scenery. The description is "The desk is covered with all matter of detritus.".
-a cork board is in the control room. The cork board is scenery. The description is "The cork board displays charts and notes.".
-some charts are in the control room. They are scenery. understand "notes", "red", "red-marked" as charts. The description is "There is nothing interesting about the charts and notes.".
-some papers are here. they are scenery. understand "tools", "coffee", and "cups" as papers. the description is "The worn floor is scattered with papers, tools, and coffee cups.".
-some logs are here. they are scenery. understand "schedules" as logs. the description is "The cluttered desk holds logs and schedules.".
-
-instead of listening when the location is the control room, say "The hum of electronics fills the air, punctuated by the crackle of a radio: 'Maintenance to Bumper Cars — wrench needed!'".
-
-every turn when the location is the Control Room:
-	count the switches;
-	count the dials;
-	[say "switch count: [switch count], dial count: [dial count].";]
-	if switch count is not 6:
-		now all buttons are switched off;
-		repeat with item running through dials:		
-			now the dial setting of the item is 0		
-
-Section 3 - Control Panels
-
-[The main control panel contains control panels. Each control panel has a an indicator, dial, and a button. Colors and Id's inherit from the control panels panel and are referenced using the variable: [the color of holder of the noun]. Similarly, there are actions that return the corresponding indicator/dial/button of the indicator/dial/button. This allows us to reference which indicator belongs with which dial, etc. without the need to create a mass of individually named objects.]
-
-A control panel is a kind of open container. 
-Understand "control" and "panel" as a control panel.
-A control panel is scenery.
-A control panel has a color. Understand the color property as describing a control panel.
-A control panel has a number called a panel id. Understand the panel id property as describing a control panel.
-The description of a control panel is "This is a control panel."
-
-Control Panel One is a control panel in the Control Room. The panel id of Control Panel One is 1. The color of Control Panel One is aqua.
-Control Panel Three is a control panel in the Control Room. The panel id of Control Panel Three is 3. The color of Control Panel Three is crimson.
-Control Panel Five is a control panel in the Control Room. The panel id of Control Panel Five is 5. The color of Control Panel Five is emerald.
-Control Panel Seven is a control panel in the Control Room. The panel id of Control Panel Seven is 7. The color of Control Panel Seven is gray.
-Control Panel Nine is a control panel in the Control Room. The panel id of Control Panel Nine is 9. The color of Control Panel Nine is indigo.
-Control Panel Eleven is a control panel in the Control Room. The panel id of Control Panel Eleven is 11. The color of Control Panel Eleven is khaki.
-
-instead of examining a control panel:
-	say "Each control panel is populated with a dial, a button, and a light. From left to right, the colors are aqua, crimson, emerald, gray, indigo, and khaki. Below the lights is a row of similarly colored dials and below that is a row of buttons. The control panels are [if switch count is 6]lit up like a Christmas tree[otherwise]dark[end if].[paragraph break]";
-	say "[Noun] is [if switch count is 6]lit[otherwise]dark[end if]. The [color of the noun] dial is set to [the dial setting of the corresponding dial of the noun]. The [color of the noun] light is now [if the corresponding button of the noun is switched on]on[otherwise]off[end if].";
-	if switch count is 6 and every button is switched off:
-		display the figure of ControlPanel instead;
-		now the figure id of the monitor is 0;
-		stop the action;
-	otherwise:
-		let N be the panel id of the noun;
-		now the figure id of the monitor is N;
-		choose a row with a link number of N in the table of monitor descriptions;
-		now ControlPanelImage is figure choice entry;
-		if the corresponding dial of the noun is properly set and the corresponding button of the noun is switched on:
-			if show images is true, display figure choice entry.
-	
-Definition: A thing is control-fitted if it is incorporated by a control panel.
-
-[This will allow us to refer to the "corresponding" socket, switch, or indicator; i.e. the one from the same panel. This particular phrase works because there is only ever one each of these in a panel. If we decide later to have, say, three sockets per panel, only this phrase will have to be changed -- using more complex logic -- but the rest of the code could be left as-is.]
-To decide what thing is --/the corresponding (name of kind of value K) of --/the (CT - a control-fitted thing):
-	let H be the holder of CT;
-	decide on a random K that is part of H.[<- there will only ever be one of these]
-	
-To decide what thing is --/the corresponding (name of kind of value K) of --/the (T - a thing):
-	decide on a random K that is part of T.[<- there will only ever be one of these]
-	
-[The following won't actually give all the panel's components a color property matching the panel, but it will allow us to refer to a "shared color" of these components and get the desired result.]
-To decide what color is --/the shared color of --/a/the (CT - a control-fitted thing):
-	decide on the color of the holder of CT.
-
-Section 4 - Buttons
-
-A button is a kind of device.  A button is part of every control panel. 
-A button is usually switched off.
-A button is always fixed in place.
-
-The description of a button is "This is the [a color of the holder of the item described] colored button.".
-
-The printed name of a button is "the [a color of the holder of the item described] button".
-
-To decide what number is --/the button id of (B - a button):
-	decide on the panel id of the holder of B.
-	
-To decide what color is --/the color of (B - a button):
-	decide on the color of the holder of B.
-
-Understand "button [something related by reversed incorporation]" as a button.
-Understand "[something related by reversed incorporation] button" as a button.
-
-Instead of pushing a switched off button (this is the redirect push to button on rule):
-	try switching on the noun.
-
-Instead of pushing a switched on button (this is the redirect push to button off rule):
-	try switching off the noun.
-	
-last report switching on a button when the switch count is 6 and the dial count is 6 (this is the final report switching on a button rule):
-	let N be the panel id of the holder of the noun;
-	choose a row with a link number of N in the table of monitor descriptions;
-	now ControlPanelImage is figure choice entry;
-	say "The monitor flickers for a second and the scene it displays changes to something different.";
-	say "[description entry][line break]";
-	say "The [color of the holder of the noun] light is now on.";
-	now all buttons are switched off;
-	now the noun is switched on;
-	now the figure id of the monitor is N;
-	if the color of the holder of the noun is indigo:
-		end the story finally;
-
-Last report switching off a button (this is the final report switching off a button rule):	
-	choose a row with a link number of 0 in the table of monitor descriptions;
-	now ControlPanelImage is figure choice entry;
-	say "The monitor turns off and the screen goes black.";
-	say "[description entry][line break]";
-	say "The [color of the holder of the noun] light is now off.";
-	now the figure id of the monitor is 0;
-	now all buttons are switched off.
-
-Section 5 - Dials
-
-A dial is a kind of thing. A dial is part of every control panel.
-A dial is fixed in place.
-A dial has a number called a dial setting. 
-
-The description of a dial is "This is the [color of the holder of the item described] colored dial. It is currently set to [dial setting of the item described]. I bet you could SET it to a number.".
-
-The printed name of a dial is "the [color of the holder of the item described] dial".
-
-To decide if (D - a dial) is properly set:
-	if the panel id of the holder of D is the dial setting of D :
-		decide yes;
-	decide no.
-	
-To decide what number is --/the dial id of (D - a dial):
-	decide on the panel id of the holder of D.
-	
-To decide what color is --/the color of (D - a dial):
-	decide on the color of the holder of D.
-	
-To decide what number is --/the dial setting of (D - a dial):
-	decide on the dial setting of D.
-
-Understand "dial [something related by reversed incorporation]" as a dial.
-Understand "[something related by reversed incorporation] dial" as a dial.
-
-Does the player mean spinning a dial to a number when the location is the Control Room: it is very likely.
-Does the player mean spinning a control panel to a number when the location is the Control Room: it is very unlikely.
-
-Spinning it to is an action applying to one thing and one number. 
-Check spinning it to: if the noun is not a dial, say "[The noun] does not spin." instead. 
-Report spinning it to: 
-	if the number understood is less than 0 or the number understood is greater than 20:
-		say "The [color of the holder of the noun] colored dial can only be set from 0 to 20.";
-		stop the action;
-	otherwise:
-		say "The [color of the holder of the noun] colored dial is now set to [the number understood].";
-		if the switch count is not 6:
-			say "Before your eyes, the dial spins back to 0.";
-			now the dial setting of the noun is 0;
-		otherwise:
-			now the dial setting of the noun is the number understood.
-
-Understand "spin [something] to [a number]" as spinning it to. Understand "turn [something] to [a number]" as spinning it to. Understand "set [something] to [a number]" as spinning it to.
-
-The dial count is a number that varies. The dial count is 0.
-To count the dials:
-	now the dial count is 0;
-	if control panel one's dial is properly set, increment the dial count;
-	if control panel three's dial is properly set, increment the dial count;
-	if control panel five's dial is properly set, increment the dial count;
-	if control panel seven's dial is properly set, increment the dial count;
-	if control panel nine's dial is properly set, increment the dial count;
-	if control panel eleven's dial is properly set, increment the dial count.
-
-Section 6 - Lights
-
-A light is a kind of thing. A light is part of every control panel.
-A light is fixed in place.
-
-The description of a light is "This is [a printed name of the item described]. The light is [if the corresponding button of the item described is switched on]on[otherwise]off[end if]."
-
-The printed name of a light is "the [a color of the holder of the item described] colored light".
-
-To decide what number is --/the socket id of (L - a light):
-	decide on the panel id of the holder of L.
-	
-To decide what color is --/the color of (L - a light):
-	decide on the color of the holder of L.
-	
-Understand "light [something related by reversed incorporation]" as a light.
-Understand "[something related by reversed incorporation] light" as a light.
-
-Section 7 - The Monitor
-
-ControlPanelImage is a figure name that varies. ControlPanelImage is Figure of ControlPanel.
-
-The monitor is in the Control Room. The monitor is scenery. Understand "screen" as monitor. The monitor has a number called the figure id. The figure id is 0. The description is "This is a monitor that displays the various scenes from Hell Ride.".
-
-instead of examining the monitor:
-	let N be the figure id of the monitor;
-	choose a row with a link number of N in the table of monitor descriptions;
-	say "The monitor flickers for a second and the scene it displays changes to something different.";
-	say "[description entry][line break]";
-	now ControlPanelImage is figure choice entry;
-	display ControlPanelImage.
-	
 Part 3 - Regions
 
-The Midway is a region. PL-room, TB-room, CS-room, Behind the Concession Stand, HS-room, SF-room, ST-room, 
+The Midway is a region. PL-room, TB-room, CS-room, Behind the Concession Stand, Carnival Office, HS-room, SF-room, ST-room, 
 Head of the Line, FW-room, BC-room, FT-room, CR-room, Dime Toss Game, and the Pitcher's Mound are in the Midway. 
 The sky, music, Hell Ride, and the Ferris Wheel are in the Midway
 
@@ -3525,15 +3621,15 @@ key (number)	category (text)	card (text)	description (text)
 34	"Opportunity"	"Two of Swords (reversed)"	"Two of Swords reversed suggests that poor choices and hasty decision-making are likely to lead to movement in the wrong direction. It serves as a reminder that impulsive actions can often result in unfavorable outcomes, urging you to carefully consider your options and approach situations with thoughtfulness and patience. By taking the time to weigh your choices and make deliberate decisions, you can avoid the pitfalls that come with rushing into action without considering the potential consequences."
 35	"Future"	"Four of Wands (reversed)"	"Four of Wands reversed indicates the foundation not laid or not ready. Something has caused a disruption in your plans. This could be due to external factors, such as unexpected events that have thrown you off course. Alternatively, it could be self-sabotage, your wavering self-belief or lack of confidence in your abilities can be hindering you from achieving your goals."
 
-Section 13 - Table of Conversation Responses
+Section 13 - Table of Attendant Conversation Responses
 
-Table of Conversation Responses
+Table of Attendant Conversation Responses
 topic	response (text)
 "hell/ride" or "hell ride"	"[one of][story title] is scary. You won[']t catch me on it![or]Last time I rode [story title], I heard strange noises.[or][story title] is so old that It[']s falling apart. I wouldn[']t ride it.[or][story title] is behind on its maintenance schedule. Might want to skip that one.[at random]"
 "carousel/merry/go/round" or "merry-go-round" or "the carousel" or "the merry-go-round"	"[one of]I[']ve loved the carousel ever since I was a little kid![or]The lions are my favorite![or]I get dizzy when I ride the Merry Go Round[at random]"
 "bumper/car/cars" or "bumper cars" or "bumper car" or "the bumper cars" or "the bumper car"	"[one of]The bumper cars are so much fun. You[']re heading for someone[']s car and bam! you get hit instead![or]Last time I was on the bumper cars, I nailed everyone there![or]It[']s fun to knock other people[']s cars around![at random]"
 "Ferris/wheel" or "Ferris wheel" or "the Ferris wheel" or "the wheel"	"[one of]Isn[']t the Ferris wheel so romantic? I sure think so![or]Are you and your sweetie going to ride the Ferris wheel?[or]You can see the whole carnival from up there![at random]"
-"fortune/teller/Esmeralda/mysterious" or "fortune teller" or "the fortune teller"	"[one of]Esmeralda? She[']s down-right spooky. I asked her for a tarot reading, and boy, the things she told me![or]Esmeralda? She read my palm. I don[']t know how she knew the things she told me.[or]Esmeralda? She[']s been with the carnival for so long that no one knows how old she is. She[']s been here forever![at random]"
+"fortune/teller/Esmeralda/mysterious/woman" or "fortune teller" or "the fortune teller"	"[one of]Esmeralda? She[']s down-right spooky. I asked her for a tarot reading, and boy, the things she told me![or]Esmeralda? She read my palm. I don[']t know how she knew the things she told me.[or]Esmeralda? She[']s been with the carnival for so long that no one knows how old she is. She[']s been here forever![at random]"
 "high/striker" or "high striker" or "the high striker"	"[one of]You[']re a strong guy. Go for it![or]Win a prize for your sweetie![or]Swing the mallet and ring the bell![at random]"
 "dime/toss" or "dime toss" or "the dime toss"	"[one of]Careful now! Don[']t want it skidding off the other side.[or]It[']s just like skipping a stone.[or]Aim carefully and you should get it.[at random]"
 "pitcher's/mound" or "pitcher's mound" or "the pitcher's mound"	"[one of]Batter, batter, batter, swing batter![or]Pretend you[']re pitching for the Red Sox.[or]Knock [']em down and win a prize![at random]"
@@ -3553,7 +3649,19 @@ topic	response (text)
 "cotton/candy" or "cotton candy"	"[The noun] says, 'I love the way cotton candy melts in my mouth.'"
 "pretzel/pretzels/soft" or "soft pretzel" or "soft pretzels"	"[The noun] says, 'I prefer to eat my pretzels with mustard.'"
 
-Section 14 - Table of Janitor Movements
+Section 14 - Table of Janitor Conversation Responses
+
+Table of Janitor Conversation Responses
+topic	response (text)
+"hell/ride" or "hell ride"	"[one of][story title] is scary. You won[']t catch me on it![or]Last time I rode [story title], I heard strange noises.[or][story title] is so old that It[']s falling apart. I wouldn[']t ride it.[or][story title] is behind on its maintenance schedule. Might want to skip that one.[at random]"
+
+Section 15 - Table of Owner Conversation Responses
+
+Table of Owner Conversation Responses
+topic	response (text)
+"hell/ride" or "hell ride"	"[one of][story title] is scary. You won[']t catch me on it![or]Last time I rode [story title], I heard strange noises.[or][story title] is so old that It[']s falling apart. I wouldn[']t ride it.[or][story title] is behind on its maintenance schedule. Might want to skip that one.[at random]"
+
+Section 16 - Table of Janitor Movements
 
 Table of Janitor Movements
 mins (number)	destination (object)	
@@ -3571,7 +3679,7 @@ mins (number)	destination (object)
 0	Head of the Line
 
 
-Section 15 - Introduction to Hell Ride
+Section 17 - Introduction to Hell Ride
 
 When play begins:
 	choose row 1 in Table of Help Options;
@@ -3583,7 +3691,7 @@ After a lovely meal, you get into a big fight over the tip. Your date storms off
 
 As you explore the carnival, you learn (the hard way) that the Hell Ride attraction is malfunctioning with the potential for serious injuries to the riders. You must disable the ride and prevent any loss of life... including your own."
 
-Section 16 - Hell Ride Origins
+Section 18 - Hell Ride Origins
 
 When play begins:
 	 choose row 2 in Table of Help Options;
@@ -3603,54 +3711,57 @@ I hope you enjoy it.
 d.[line break]
 (dmontgom22@gmail.com)"
 
-Section 17 - Credits
+Section 19 - Credits
 
 Crediting is an action applying to nothing. Understand "Credits" as crediting.
-
-report crediting:
-	say "[story title], Copyright 2025 by Dana Montgomery and 1988 by No Shoes.[paragraph break]";
+instead of crediting:
+	say "[story title], Copyright 2025, Dana Montgomery.[paragraph break]";
 	say "Extensions used in [story title]:[line break]";
-	say "[complete list of extension credits]".
+	say "[complete list of extension credits][line break]";
+	say "Additional Credits:[line break]";
+	say "Caitlyn Caluya-Bilbrick for their editing and proofreading super powers.[paragraph break]";
+	say "The following for their beta testing, excellent feedback, and ideas:[line break]";
+	say "John Montgomery[line break]";
+	say "Andy Broding[line break]";
+	say "Joey Acrimonious[line break]";
+	say "RJ Kowalski[line break]";
+	say "Drew Cook[line break]".
 	
 Part 5 - Unit Tests
 
-Chapter 1 - Life and Death
-
-Test Life with "brief / Test Parking / Test Games / Test Attractions / Test Concession / Test Misc / Test Backstage".
-
-Test Death with "brief / Test Parking / Test Games / Test Attractions / Test Concession / Test Misc / Test Ride".
-
-Chapter 2 - Parking Lot
+Chapter 1 - Parking Lot
 
 Test Parking with "brief / get blueberries / eat blueberries / give coupon to operator / buy ticket / ask attendant about the ticket stub/ tell attendant about stub / show the stub to the attendant / talk to attendant / l at attendant  / kiss attendant / smell attendant / listen to attendant / touch attendant / taste attendant / screw attendant / darn / damn / get in car / look / l at seat / l under seat / get all dimes / get keys / open glove box / get string / get gloves / wear gloves / set stub on the dashboard / l at the dashboard / get air freshener / look at it / put keys in ignition / turn keys / exit".
 
-Test ToadAway with "brief / test parking / get parking stub / test games / test misc / z / z / z / z / z / z / z / z / z / z / z / z / z / z / z / z / z / z / z / z"
+Test ToadAway with "brief / test parking / get parking stub / test games"
 
-Chapter 3 - Games
+Chapter 2 - Games
 
 Test g1 with "brief / s / w / give dime to barker / w /  z / z / z / z / z / z / get lamp / turn it on / wear veil / e / e / n"
 
-Test g2 with "s / e / buy mallet / hit lever with mallet / g / g / g / g / 2 / w / n".
+Test g2 with "s / e / buy mallet / hit lever with mallet / g / g / g / g / w / n".
 
-Test g3 with "s / e  / ne / l at booth / l under booth / flip dime on plate / toss dime on plate / toss dime on plate / 1 / get mercury dime / sw / se / give mercury dime to attendant / throw baseball at bottles / 1 / nw / w / n"
+Test g3 with "s / e  / ne / l at booth / l under booth / flip dime on plate / toss dime on plate / get mercury dime / toss mercury dime on plate / 4 /  sw / se / give dime to attendant / throw baseball at bottle 1 / throw ball at bottle 4 / throw baseball at bottle 5 / 1 / nw / w"
 
-Test Games with "Test g1 / test g2 / test g3".
+Test g4 with "buy tickets / s / give ticket to attendant / s / e / l under junk / get flashlight / turn it on / s / s / s / open toolbox / get wrench / get sledgehammer / n / n / n / w / n / n / e / hit bullseye with sledgehammer / 2 / w / n"
 
+Test Games with "Test g1 / test g2 / test g3 / test g4".
 
-Chapter 4 - Attractions
+Chapter 3 - Attractions
 
-Test Attractions with "s / buy all tickets / e / e / e / l at two dollar bill / get two dollar bill / give Ferris wheel ticket to Ferris wheel operator / w / w / ne / give carousel ticket to carousel operator / sw / se / give fortune teller ticket to mysterious woman  / z / z / z / z / nw / nw / give bumper cars ticket to bumper cars operator / se / n"
+Test a1 with "s / buy all tickets / e / e / e / l at two dollar bill / get two dollar bill / give ticket to Ferris wheel operator / w / give flashlight to janitor / w "
 
-Chapter 5 - Back Stage
+Test a2 with "ne / give ticket to carousel operator / sw / se / give ticket to esmeralda / z / z / z / z / nw / nw / give ticket / give wrench to attendant / se / n"
+
+Test Attractions with "test a1 / test a2"
+
+Chapter 4 - Back Stage
 
 [get the key]
-Test b1 with "brief / s / buy hell ride ticket / s / give hell ride ticket to operator / s / e / l at piles / get flashlight / turn it on / s / turn on radio / u / w / flip switch / push switch / push switch / e / d / l at desk / open drawer / s / s / open toolbox / get wrench / s / chew bubblegum / tie bubblegum to string / put bubblegum in grate / s / s / ne / get silver key / l at panel / open panel / l at socket / sw / n / n / n / n / n"
-
-[take the wrench to the bumper cars]
-Test b1a with "n / w / n / n / nw / give the adjustable wrench to the attendant / se / s / s / e / s"
+Test b1 with "brief / s / steal brass ring / steal brass ring / steal brass ring / s /  s / e / s / turn on radio / u / w / flip switch / push switch / push switch / e / d / l at desk / open drawer / s / s / s / chew bubblegum / tie bubblegum to string / put bubblegum in grate / s / s / ne / drop mallet / get silver key / l at panel / open panel / l at socket / sw / n / n / n / n / n / i"
 
 [get the fuses]
-Test b2 with "w / e / s / w / e / s / w / l in pyre / get fuse / e / s / w / l under seat / take indigo fuse / e / s / w /  e / s / s / w / l in stand / buy aqua fuse / e / n"
+Test b2 with "w / e / s / w / e / s / w / l in pyre / get fuse / e / s / w / e / s / w /  e / s / s / w / l in stand / buy aqua fuse / e / n"
 
 [fill the sockets]
 Test b3 with "ne / open panel / put aqua fuse in socket / flip switch / sw / e / open panel / put crimson fuse in socket / flip switch / w / se / open panel / put emerald fuse in socket / toggle switch / nw / sw / open panel / put gray fuse in socket / toggle switch / ne / w / open panel / put indigo fuse in socket / push switch / e / nw / l at panel / unlock panel with knife / l at panel / open  panel / l at panel / l at switch. / l at indicator / l at socket / put khaki fuse in socket / push switch / l at socket / se"
@@ -3658,27 +3769,27 @@ Test b3 with "ne / open panel / put aqua fuse in socket / flip switch / sw / e /
 [turn the dials]
 test b4 with "n / n / n / n / n / climb ladder / w / l at control panel 1 / turn aqua dial to 1 / turn crimson dial to three / turn emerald dial to 5 / turn gray dial to seven / turn indigo dial to 9 / turn khaki dial to eleven / push aqua button / l at control panel 1 / push crimson button / l at control panel  3 / push emerald button / l at control panel 5 / push gray button / l at control panel 11 / push khaki button"
 
-Test Backstage with "test b1 / test b1a / test b2 / test b3 / test b4"
+Test Backstage with "test b1 / test b2 / test b3 / test b4"
 
-Chapter 6 - Concession Stand
+Chapter 5 - Concession Stand
 
-Test Concession with "brief / s / sw / l at treats / read menu / buy cola / buy popcorn / buy candy apple / buy cotton candy / buy pretzel / buy bubblegum / drink soda / g / g / g / g / w / open trash can / get khaki fuse / e / i / ne / n / i / score".
+Test Concession with "brief / s / sw / l at treats / read menu / buy cola / buy popcorn / buy candy apple / buy cotton candy / buy pretzel / buy bubblegum / drink soda / g / g / g / g / w / open trash can / get khaki fuse / e / ne / n / i / score".
 
-Chapter 7 - Hell Ride
+Chapter 6 - Hell Ride
 
 Test Ride with "brief / s / buy hell ride ticket / s / give hell ride ticket to operator / s / enter hell ride car / wait / z / z / z / z / z".
 
-Chapter 8 - Electrocution
+Chapter 7 - Electrocution
 
-Test Electrocution with "s / buy hell ride ticket / s / give hell ride ticket / s / e / l under junk / get flashlight / turn it on / s / u / w / remove gloves / switch the big switch off"
+Test Electrocution with "s / steal brass ring / steal brass ring / steal brass ring / steal brass ring / e / steal brass ring / steal brass ring / steal brass ring / w / buy hell ride ticket / s / give hell ride ticket / s / e / l under junk / get flashlight / turn it on / s / u / w / remove gloves / switch the big switch off"
 
-Chapter 9 - Grues
+Chapter 8 - Grues
 
 Test Grues with "s / buy hell ride ticket / s / give hell ride ticket to ride operator / s / e / s / s / s"
 
-Chapter 10 - Miscellaneous
+Chapter 9 - Miscellaneous
 
-Test Misc with "brief / xyzzy / plugh / hello sailor / please get the dime / i / score".
+Test Misc with "brief / xyzzy / plugh / hello sailor / please get the dime / i / score / bite fingernails / clip fingernails".
 
 Part 6 - Hints
 
@@ -3744,7 +3855,7 @@ title (text)	subtable (table name)	description (text)	toggle (rule)	used (number
 "The Control Room"	Table of Control Room Hints	--
 "How Points Are Awarded (Spoilers)"	--	""
 "Settings"	Table of Setting Options	--	
-"Credits"	--	"[story title], Copyright 2025 by Dana Montgomery and 1988 by No Shoes.[paragraph break]Extensions used in [story title]:[line break][complete list of extension credits]"
+"Credits"	--	"[story title], Copyright 2025, Dana Montgomery.[paragraph break]Extensions used in [story title]:[line break][complete list of extension credits][line break]Additional Credits:[line break]Caitlyn Caluya-Bilbrick for their editing and proofreading super powers.[paragraph break]The following for their beta testing, excellent feedback, and ideas:[line break]John Montgomery[line break]Andy Broding[line break]Joey Acrimonious[line break]RJ Kowalski[line break]Drew Cook[line break]".
 
 Chapter 3 - The Parking Lot
 
@@ -3884,11 +3995,9 @@ title (text)	subtable (table name)	description (text)	toggle (rule)	used (number
 "Where[']s the Gray fuse?"	table of hinting	"It[']s in the Bumper Cars attraction."
 "hint"	--	"The attendant has it."
 "hint"	--	"Bring him a wrench and he[']ll give you the fuse."
-"Where[']s the Indigo fuse?"	table of hinting	"The janitor has it."
-"hint"	--	"He[']s wandering around the midway."
-"hint"	--	"He wants something in exchange."
-"hint"	--	"It seems he[']s lost his flashlight."
-"hint"	--	"It[']s in the Dark Passage."
+"Where[']s the Indigo fuse?"	table of hinting	"It[']s locked up tight."
+"hint"	--	"It[']s in the Carnival Office."
+"hint"	--	"It[']s in the safe."
 "Where[']s the Khaki fuse?"	table of hinting	"In a secret location."
 "hint"	--	"Have you ridden the Ferris Wheel?"
 "hint"	--	"Can you see anything from the top of the Ferris Wheel?"
