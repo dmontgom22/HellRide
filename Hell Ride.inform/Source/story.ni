@@ -80,20 +80,6 @@ after reading a command:
 after reading a command:
 	if the player's command matches "load", try restoring the game instead.
 	
-stealing is an action applying to one thing. Understand "steal [something]" as stealing.
-instead of stealing something:
-	if the noun is for sale:
-		say "Stealing [an noun] is unbecoming for an adventurer.";
-	otherwise if the noun is the brass ring or the noun is the brass key:
-		if a random chance of 3 in 10 succeeds:
-			say "While the janitor is distracted, you manage to steal the brass ring from the janitor.";
-			now the brass ring is in the location;
-			try taking the brass ring;
-		otherwise:
-			say "[one of]Out of the corner of his eye, the janitor sees you reach for his key ring.[or]The janitor catches you as he turns to face you.[or]The janitor says, 'Hey! What do you think you[']re doing?![or]The jani slaps your hand away as you reach for the keys.[at random]";
-	otherwise:
-		say "There[']s no need to steal [an noun]: it[']s free.".
-	
 [time]
 when play begins:
 	now the left hand status line is "Score: [score] / Turns: [turn count] / [the player's surroundings]";
@@ -457,12 +443,6 @@ every turn:
 			move the janitor to the destination entry;
 			if the janitor can be seen by the player, say "The janitor arrives from [the last space].";
 			
-instead of taking the indigo fuse:
-	if the noun is carried by the janitor:
-		say "The janitor says, 'I[']ve lost my flashlight.'";
-	otherwise: 
-		continue the action.
-
 instead of asking the janitor about a topic listed in the Table of Janitor Conversation Responses, say "[response entry][paragraph break]".
 instead of telling the janitor about something: try asking the noun about it.
 
@@ -470,7 +450,7 @@ instead of giving the flashlight to the janitor:
 	say "Hey! Thanks, I really appreciate it. I[']ve been lost without my flashlight.";
 	now the flashlight is carried by the janitor.
 	
-The brass ring is a keychain. understand "key/chain/keychain" as the brass ring. The description is "A ring to hold keys." The brass key is a passkey. The brass key unlocks the sturdy door and the iron door. the brass key is on the brass ring. the description of the brass key is "This is a shiny brass key. It must be important if the janitor has it.". The brass ring is worn by the janitor. 
+The brass ring is a keychain. understand "chain/keychain" as the brass ring. The description is "A ring to hold keys." The brass key is a passkey. The brass key unlocks the sturdy door and the metal door. the brass key is on the brass ring. the description of the brass key is "This is a shiny brass key. It must be important if the janitor has it.". The brass ring is worn by the janitor. 
 
 Section 12 - Scoring
 
@@ -598,7 +578,119 @@ Check an actor singing (this is the block singing rule):
 singing is an action applying to nothing.
 Understand "sing" as singing.
 
-Section 15 - Talking/Asking/Telling/Showing
+Section 15 - Stealing
+
+stealing is an action applying to one thing. Understand "steal [something]" as stealing.
+	
+instead of stealing something:
+	if the noun is held by the player:
+		say "You[']re already holding [the noun].";
+	otherwise if the noun is for sale:
+		say "Stealing [an noun] is unbecoming for an adventurer.";
+	otherwise if the noun is the brass ring or the noun is the brass key:
+		if a random chance of 3 in 10 succeeds:
+			say "While the janitor is distracted, you manage to steal the brass ring from the janitor.";
+			now the brass ring is in the location;
+			try taking the brass ring;
+		otherwise:
+			say "[one of]Out of the corner of his eye, the janitor sees you reach for his key ring.[or]The janitor catches you as he turns to face you.[or]The janitor says, 'Hey! What do you think you[']re doing?![or]The janitor slaps your hand away as you reach for the key.[at random]";
+	otherwise:
+		say "Lowering yourself to a life of crime? You think better of it.".
+
+Section 16 - The Strings
+
+a thing has an object called tied to. the tied to of a thing is usually nothing. a thing can be tied or untied. a thing is usually untied. 
+
+a string is a kind of thing
+
+a long string is a string. understand "twine" as long string. The long string is inside the glove box. The description is "It[']s a 14' long piece of red and white striped baker[']s twine.[if the tied to of the item described is not nothing] (tied to [tied to of the item described])[end if]". the printed name is "14' long piece of string[if the tied to of the item described is not nothing] (tied to [an tied to of the item described])[end if]".
+
+a short string is a kind of string. two short strings are in the Holding Room. the description is "It[']s a 7' long piece of red and white striped baker[']s twine.[if the tied to of the item described is not nothing] (tied to [an tied to of the item described])[end if]". [the printed name is "[the printed name of the item described][if the tied to of the item described is not nothing] (tied to [tied to of the item described])[end if]".]
+
+untying it from is an action applying to two things. understand "untie [something] from [something]" as untying it from.
+instead of untying something from:
+	if the noun is untied:
+		say "[The noun] isn[']t tied to [the second noun].";
+	otherwise if the second noun is untied:
+		say "[The second noun] isn[']t tied to [the noun].";
+	otherwise if the tied to of the noun is not the second noun:
+		say "[The noun] isn[']t tied to [the second noun]." instead;
+	otherwise if the tied to of the noun is a string or the tied to of the second noun is a string:
+		say "You untie [the noun] from [the second noun].";
+		now the tied to of the noun is nothing;
+		now the tied to of the second noun is nothing;
+		now the noun is untied;
+		now the second noun is untied;
+	[otherwise if the tied to of the noun is a string or the tied to of the second noun is a string:]
+	otherwise:
+		say "You untie [the noun] from [the second noun].";
+		now the tied to of the noun is nothing;
+		now the tied to of the second noun is nothing;
+		now the noun is untied;
+		now the second noun is untied;
+	
+tying is an action applying to two things. understand "tie [something] to [something]" as tying it to.
+instead of tying something to:
+	if the noun is tied:
+		 say "[The noun] is already tied to [the tied to of the noun].";
+	otherwise if the second noun is tied:
+		 say "[The second noun] is already tied to [the tied to of the second noun].";
+	otherwise if the noun is the long string and the second noun is the long string:
+		say "You can[']t tie [the noun] to [the second noun].";
+	otherwise if the noun is not a string and the second noun is not a string:
+		say "You can[']t tie [the noun] to [the second noun].";
+	otherwise if the noun is a short string and the second noun is a short string:
+		say "You tie [the noun] to [the second noun].";
+		now all short strings are in the holding room;
+		now the long string is carried by the player;
+		now the tied to of the noun is the second noun;
+		now the tied to of the second noun is the noun;
+		now the noun is tied;
+		now the second noun is tied;
+	otherwise:
+		say "You tie [the noun] to [the second noun].";
+		now the tied to of the noun is the second noun;
+		now the tied to of the second noun is the noun;
+		now the noun is tied;
+		now the second noun is tied;
+	
+Instead of cutting something:
+	if the second noun is nothing:
+		if the player is holding the scissors:
+			say "(with the scissors)";
+			try cutting the noun with the scissors;
+		otherwise if the player is holding the fingernail clippers:
+			say "(with the fingernail clippers)";
+			try cutting the noun with the fingernail clippers;
+		otherwise:
+			continue the action;
+	otherwise if the second noun is the scissors or the second noun is the fingernail clippers:
+		if the second noun is held by the player:
+			try cutting the noun with the second noun;
+		otherwise:
+			say "Your fingernails are not sharp enough.";
+	otherwise:
+		say "You can[']t cut [the noun] with [the second noun].".
+
+cutting it with is an action applying to two things. understand "cut [something] with [something]" as cutting it with.
+
+check cutting it with:
+	if the noun is a person, say "That would hurt." instead;
+	if the noun is tied, say "You can[']t cut [the noun] while it is tied to [the tied to of the noun]." instead;
+	if the second noun is tied, say "You can[']t [the noun] while [the second noun] is tied to [the tied to of the second noun]." instead;
+	if the second noun is not the scissors and the second noun is not the fingernail clippers, say "[The second noun] hasn[']t got enough of a blade." instead;
+	if the noun is not a string or ( the the second noun is not the fingernail clippers and the second noun is not the scissors), say "You can[']t cut [the noun] with [the second noun]!" instead;
+	if the noun is a short string, say "You can't cut the string any shorter." instead.
+
+Carry out cutting it with:
+	if the noun is the long string:
+		now the long string is in the holding room;
+		now all short strings are carried by the player.
+
+Report cutting it with:
+	say "You cut [the noun] with [the second noun]."
+
+Section 17 - Talking/Asking/Telling/Showing
 
 Understand "talk about [text]" as talking randomly about. Talking randomly about is an action applying to one topic.
 instead of talking randomly about, say "No one wants to hear you prattle on about [the noun]."
@@ -616,7 +708,7 @@ Instead of telling an someone about something:
 Instead of showing something to an someone:
 	say "'[one of]Sorry,[or]I[']m afraid[or]Hmm,[at random] [one of]I don[']t know much about that[or]you[']ve got me there[or]I haven[']t the faintest[at random],' [the second noun] [one of]drawls[or]replies[or]comments[or]exclaims[at random].";
 
-Section 16 - Senses
+Section 18 - Senses
 
 instead of kissing, say "Oh, my! Why would you want to kiss [the noun]? Your sweetie wouldn[']t like that!".
 
@@ -646,7 +738,7 @@ instead of tasting something, say "Ew! You[']re weird!".
 a thing called music is a backdrop. the description of the music is "You can hear music in the air. Perhaps you should listen to it.".
 instead of listening to music, say "You can hear all the sounds of the carnival. The sounds of a calliope waft across the thoroughfare from the carousel. You can hear the laughter and screams as other patrons ride the rides and play the games.".
 
-Section 17 - Miscellaneous
+Section 19 - Miscellaneous
 
 [coins]
 a coin is a kind of thing. Understand "shiny" as a coin.
@@ -669,7 +761,7 @@ The ground is a backdrop. The ground is everywhere. Understand "floor" as the gr
 The carnival is a backdrop. it is everywhere. The description of the carnival is "The carnival is lively and colorful filled with fun attractions, games, and entertainment. It features rides like the Ferris Wheel and the Carousel, game booths offering prizes, live performances such as dancers and musicians, and a variety of food stands serving treats like cotton candy, popcorn, and pretzels. The atmosphere is vibrant, with bright lights, music, and the cheerful sounds of laughter and excitement.".
 
 [images]
-show images is a truth state that varies. show images is true.
+show images is a truth state that varies. show images is false.
 
 Images on is an action out of world applying to nothing. Understand "images on" as images on.
 carry out images on:
@@ -687,7 +779,7 @@ After reading a command (this is the ignore beta-comments rule):
 		say "(Noted.)";
 		reject the player's command.
 	
-Section 18 - Does The Player Mean
+Section 20 - Does The Player Mean
 
 [hell ride]
 Does the player mean doing something with Hell Ride when the location is outdoors: it is very likely.
@@ -714,34 +806,38 @@ Does the player mean doing something with the bumper cars ticket when the locati
 Does the player mean doing something with the bumper cars ticket when the location is Ride Entrance: it is very unlikely.
 Does the player mean doing something with the bumper cars ticket when the location is Guillotine Room: it is very unlikely.
 
+[mini knick-knacks]
 Does the player mean doing something with the mini ferris wheel when the player is carrying the mini ferris wheel: it is very likely.
 Does the player mean doing something with the mini carousel when the player is carrying the mini carousel: it is very likely.
 
+[brass key doors]
 Does the player mean doing something with the brass ring when the janitor is in the location of the player: it is very likely.
+Does the player mean doing something with the brass key when the location is the CS-room or the location is the dark hallway: it is very likely.
 
-Does the player mean doing something with the brass key when the location is behind the concession stand or the location is the dark hallway: it is very likely.
+[cutting w/o second noun]
+Does the player mean doing something with the scissors when the player holds the long string: it is very likely.
+Does the player mean doing something with the fingernail clippers when the player holds the long string: it is very likely.
 
-Does the player mean doing something with the indigo fuse when the janitor is in the location of the player: it is very likely.
-
+[generator]
 Does the player mean doing something with the main generator when the location is the generator room: it is very likely.
 
+[pitcher's mound]
 Does the player mean throwing a baseball when the location is the Pitcher's Mound: it is very likely.
 
+[high striker]
 Does the player mean doing something with the High Striker when the location is the HS-room: it is very likely.
-
 Does the player mean doing something with the mallet when the location is the HS-room: it is very likely.
 
+[mercury dime]
 Does the player mean doing something with the mercury dime when the location is the Dime Toss Game or the location is Pitcher's Mound: it is likely.
 
-Does the player mean doing something with the wooden stocks when the location is the Stocks Room: it is very likely.
-
-Does the player mean doing something with the stakes when the location is the Stake Room: it is very likely.
-
+[glove box]
 Does the player mean doing something with the glove box when the location is PL-room: it is very likely.
 
+[rolls of tickets in the ticket booth]
 Does the player mean doing something with the rolls when the location is the TB-room: it is very unlikely.
 
-Section 19 - Directions
+Section 21 - Directions
 
 [parking lot]
 instead of going when the location is the PL-room:
@@ -1489,11 +1585,15 @@ Electrical Room is north of the Storage Room.
 
 Chapter 2 - Second Floor
 
-Section 1 - Dark Hallway
+Section 1 - Holding Room
 
-Dark Hallway is a dark room. "This is a poorly lit hallway. Ahead to the west you can see the glow of an open door."
-	
-Section 2 - Control Room
+Holding Room is a room. "This is where we hold things.".
+
+Section 2 - Dark Hallway
+
+Dark Hallway is a dark room. "This is a poorly lit hallway. Ahead to the west you can see [if the metal door is open]the glow of an open[otherwise]a closed[end if] door."
+
+Section 3 - Control Room
 
 Control Room is a dark room. "The backstage control room is a plain, functional hub where the carnival’s rides, lights, and attractions are managed. Gray industrial walls, scuffed and greasy, surround a large monitor streaming live carnival feeds. Beneath them, control panels with labeled dials, colored buttons, and lights oversee the systems scattered about the room. Glancing at the control panels, you can see they are [if the switch count is 6]lit up like a Christmas tree[otherwise]dark[end if].
 
@@ -1503,7 +1603,7 @@ A flickering light casts cold shadows as the metallic tang of machinery mixes wi
 
 A dark hallway lies to the east." 
 
-The iron door is an openable and lockable door. it is closed and locked. The description of the iron door is "This is the door into the Control Room. It has the words 'Employees Only' written on it. The door is [if the item described is open]open[otherwise]closed[end if]. It is [if the item described is locked]locked[otherwise]unlocked[end if].". The brass key unlocks it. The iron door is east of the Control Room and west of the Dark Hallway. 
+The metal door is an openable and lockable door. it is closed and locked. The description of the metal door is "This is the door into the Control Room. It has the words 'Employees Only' written on it. The door is [if the item described is open]open[otherwise]closed[end if]. It is [if the item described is locked]locked[otherwise]unlocked[end if].". The brass key unlocks it. The metal door is east of the Control Room and west of the Dark Hallway. 
 
 A big switch is a device in the control room. The big switch is fixed in place. The big switch can be switched on or switched off. The big switch is switched on. 
 "[if the big switch is switched on]Currently there are sparks arcing out from the switch. It looks dangerous.[end if]".
@@ -1545,7 +1645,7 @@ every turn when the location is the Control Room:
 		repeat with item running through dials:		
 			now the dial setting of the item is 0		
 
-Section 3 - Control Panels
+Section 4 - Control Panels
 
 [The main control panel contains control panels. Each control panel has a an indicator, dial, and a button. Colors and Id's inherit from the control panels panel and are referenced using the variable: [the color of holder of the noun]. Similarly, there are actions that return the corresponding indicator/dial/button of the indicator/dial/button. This allows us to reference which indicator belongs with which dial, etc. without the need to create a mass of individually named objects.]
 
@@ -1592,7 +1692,7 @@ To decide what thing is --/the corresponding (name of kind of value K) of --/the
 To decide what color is --/the shared color of --/a/the (CT - a control-fitted thing):
 	decide on the color of the holder of CT.
 
-Section 4 - Buttons
+Section 5 - Buttons
 
 A button is a kind of device.  A button is part of every control panel. 
 A button is usually switched off.
@@ -1639,7 +1739,7 @@ Last report switching off a button (this is the final report switching off a but
 	now the figure id of the monitor is 0;
 	now all buttons are switched off.
 
-Section 5 - Dials
+Section 6 - Dials
 
 A dial is a kind of thing. A dial is part of every control panel.
 A dial is fixed in place.
@@ -1696,7 +1796,7 @@ To count the dials:
 	if control panel nine's dial is properly set, increment the dial count;
 	if control panel eleven's dial is properly set, increment the dial count.
 
-Section 6 - Lights
+Section 7 - Lights
 
 A light is a kind of thing. A light is part of every control panel.
 A light is fixed in place.
@@ -1714,7 +1814,7 @@ To decide what color is --/the color of (L - a light):
 Understand "light [something related by reversed incorporation]" as a light.
 Understand "[something related by reversed incorporation] light" as a light.
 
-Section 7 - The Monitor
+Section 8 - The Monitor
 
 ControlPanelImage is a figure name that varies. ControlPanelImage is Figure of ControlPanel.
 
@@ -1828,11 +1928,11 @@ An air freshener is in the beater car. The description of the air freshener is "
 
 instead of smelling the air freshener, say "It smells like fake pine trees. The odor is pretty strong.".
 
-A rear view mirror is part of the beater car. it is scenery. understand "rearview" as the rear view mirror. The description is "You catch a glimpse of yourself in the rear view mirror. 'Looking good!' you think."
+A rear view mirror is part of the beater car. it is scenery. understand "rearview/rear-view" as the rear view mirror. The description is "You catch a glimpse of yourself in the rear view mirror. 'Looking good!' you think."
 
 An ignition is part of the beater car. The ignition is a scenery container. The description is "It[']s an ignition. You put your car key here and start your car."
 
-A dashboard is part of the beater car. The dashboard is a supporter. Understand "dash" and "board" as the dashboard. The description of the dashboard is "It looks like you could set something there."
+A dashboard is part of the beater car. The dashboard is a supporter. Understand "dash/board" as the dashboard. The description of the dashboard is "It looks like you could set something there."
 
 A seat is part of the beater car. The seat is a supporter. It is fixed in place. Understand "car seat" as seat. The description of the seat is "A faux leather seat that looked great when it was new." The plural of seat is seats.
 
@@ -1840,12 +1940,9 @@ Your keys underlie the seat. Understand "car key", "car keys", and "key" as your
 
 instead of turning your keys, say "If you left now you would just end up in a bar, crying over a beer about your fight. You decide to stay and enjoy the carnival after all." instead.
 
-A glove box is part of the beater car. The glove box is a locked openable container. The description is "This glove box contains things like your registration and insurance information." Your keys unlock the glove box. Understand "glove compartment", "glovebox", and "compartment" as the glove box.
+A glove box is part of the beater car. The glove box is a locked openable container. The description is "This glove box contains things like your registration and insurance information." Your keys unlock the glove box. Understand "glove compartment", "glovebox/compartment" as the glove box.
 
 A pair of gloves are a thing. The pair of gloves are inside the glove box. The pair of gloves is wearable. The description of the pair of gloves is "A nice set of fur-lined leather gloves. They[']re very warm." The printed name of the pair of gloves is "pair of gloves".
-
-a thing has an object called tied to. the tied to of a thing is usually nothing. a thing can be tied or untied. a thing is usually untied. 
-a string is a thing. understand "twine" as string. The string is inside the glove box. The description is "It[']s a 14' long piece of red and white striped baker[']s twine.". the printed name is "14' long piece of string[if the tied to of the item described is not nothing] (tied to [tied to of the item described])[end if]".
 
 Understand "exit [a direction]" as a mistake ("Please try 'go [noun]' or just '[noun]' as a direction isn[']t necessarily an exit here.")
 
@@ -1870,7 +1967,7 @@ The TB-room is south of the PL-room.
 The TB-room is southeast of the BC-room.
 The TB-room is west of the HS-room. 
 
-The Cashier is an attendant in the TB-room. Understand "smiling" and "attendant" as cashier.
+The Cashier is an attendant in the TB-room. Understand "smiling/attendant" as cashier.
 
 The description of the TB-room is "The ticket kiosk stands at the carnival entrance, a compact booth painted in bright red and yellow stripes with bold letters above the window reading 'Tickets Here!' Twinkling lights outline its edges, blinking rhythmically to draw attention.
 
@@ -1942,7 +2039,7 @@ The counter is lively with stacks of paper bags, napkins, and cups of cheese and
 
 In front of the stand, kids tug at their parents, teens share pretzels, and the crowd buzzes with energy. More than just a snack stop, the stand is a sensory delight, adding flavor and charm to the carnival experience.
 
-To the south is the Carnival Office. The trailer’s exterior is painted in dull, peeling shades of red and white, with old carnival-themed advertisements that are barely legible due to sun damage. A string of dimly lit, flickering bulbs hang above the door, and an old 'Private' sign is half-hanging on the side, clearly neglected.
+To the south is the Carnival Office. The trailer’s exterior is painted in dull, peeling shades of red and white, with old carnival advertisements that are barely legible due to sun damage. A string of dimly lit, flickering bulbs hang above the door, and an old 'Private' sign is half-hanging on the side, clearly neglected.
 
 There is a menu to the right of the window. You can see the treats inside the stand. There is an exit to the south and northeast. "
 
@@ -2031,10 +2128,10 @@ some receipts are on the messy desk. understand "receipt" as receipts. the descr
 instead of reading the receipts, say "The receipt on the top of the pile reads:[fixed letter spacing][paragraph break]
 Cash [']N['] Carry.[line break]
 121 Maple St[line break]
-Wakefield, WA 98272[paragraph break]
-$82.50	Soda Cups[line break]
-$106.73	Popcorn Buckets	[line break]
-$56.41	Napkins[paragraph break]
+Stoneham, WA 98272[paragraph break]
+ $82.50     Soda Cups[line break]
+$106.73    Popcorn Buckets	[line break]
+ $56.41     Napkins[paragraph break]
 After the 10th of the month, this invoice will be assessed a finance charge of 3.75% per month, We appreciate your prompt payment.[roman type][line break]".
 
 some invoices are on the messy desk. understand "invoice" as invoices. the description is "The invoices are for the regular day to day supplies that the carnival orders. Closer inspection shows a steadily declining volume of goods ordered. Almost as if the carnival couldn[']t afford the full cost. Some are marked 'Paid'.  A surprising number are not."
@@ -2042,9 +2139,9 @@ some invoices are on the messy desk. understand "invoice" as invoices. the descr
 instead of reading the invoices, say "The invoice on the top of the stack reads:[fixed letter spacing][paragraph break]
 Mystic Industries, Inc.[line break]
 40 Elm St[line break]
-Monroe, MA 01880[paragraph break]
+Sultan, MA 01880[paragraph break]
 For services rendered:[line break]
-Repairs to the Stake Room in the Hell Ride Attraction after Fire			$2,500.00[paragraph break]
+Repairs to the Stake Room in the Hell Ride Attraction after Fire			$22,500.00[paragraph break]
 Please note that this invoice is overdue and will be assessed a finance charge of 2.5% per month, We appreciate your prompt payment.[roman type][line break]".
 
 some carnival brochures are here. understand "brochure" as carnival brochures. they are scenery. the description is "The brochures are meant to be left at convenience stores restaurants, and other businesses as a way to attract visitors to the carnival." .
@@ -2061,9 +2158,9 @@ The sturdy door is an openable and lockable door. it is closed and locked . The 
 
 The initial appearance of a door is usually "Nearby [an item described] leads [if the other side of the item described is visited][direction of the item described from the location] to [the other side of the item described][otherwise][direction of the item described from the location][end if]."
 
-an insurance policy is in the safe. the description is "This is an insuance policy on the Whidby Amusements Carnival. It is for $1,000,000. That[']s an awfully high number and it was dated last month.".
+an insurance policy is in the safe. the description is "This is an insurance policy on the Whidbey Amusements Carnival. It is for $1,000,000. That[']s an awfully high number and it was dated last month.".
 
-the safe is in the carnival office. it is a closed locked, openable, lockable container. it is fixed in place. understand "small/heavy/knob" as the safe. the description is "Next to the filing cabinet, there’s a small, heavy safe where the owner keeps more sensitive materials. There is a knob on the front of the safe".
+the safe is in the carnival office. it is a closed locked, openable, lockable container. it is fixed in place. understand "small/heavy/knob/dial" as the safe. the description is "Next to the filing cabinet, there’s a small, heavy safe where the owner keeps more sensitive materials. There is a knob on the front of the safe".
 
 The safe has a list of numbers called the current combination.
 The safe has a list of numbers called the true combination. The true combination of the safe is {3, 22, 62}.
@@ -2797,8 +2894,6 @@ Check going south when the location is Head of the Line and the Hell Ride attend
 	say "You[']ll need a ticket to go that way.";
 	stop the action.
 	
-
-		
 Chapter 4 - Backstage
 
 Section 1 - Wooden Doors
@@ -3015,6 +3110,8 @@ instead of inserting something into the grate:
 	if the noun is untied:
 		continue the action;
 	otherwise:
+		if the tied to of bubblegum is a short string:
+			say "The string isn[']t long enough to reach the fuse." instead;
 		if ((the noun is the bubblegum and the bubblegum is chewed) or the noun is the horseshoe magnet) and fuse5 is contained by the grate:
 			say "You drop [the noun] into the grate. The [fuse5] attaches to [the noun]. You quickly and carefully raise [the noun] and drop [fuse5] into your hand.";
 			now fuse5 is carried by the player;
@@ -3024,33 +3121,6 @@ instead of inserting something into the grate:
 			say "Nothing happens.".
 
 instead of taking when the noun is contained by the grate, say "Your fingers won[']t fit inside the grate. You can[']t reach [the noun].[if fuse5 is contained by the grate] If only you could grab [the noun] with something.[end if]".
-
-untying is an action applying to two things. understand "untie [something] from [something]" as untying.
-instead of untying:
-	if the noun is untied or the second noun is untied, say "[The noun] isn[']t tied to [the second noun].";
-	otherwise if the noun is not the string and the second noun is not the string:
-		say "[The noun] isn[']t tied to [the second noun].";
-	otherwise if the tied to of the noun is the string or the tied to of the second noun is the string:
-		say "You untie [the noun] from [the second noun].";
-		now the tied to of the noun is nothing;
-		now the tied to of the second noun is nothing;
-		now the noun is untied;
-		now the second noun is untied;
-	otherwise:
-		say "[The noun] isn[']t tied to [the second noun].".
-
-instead of tying:
-	if the noun is not the string and the second noun is not the string, say "You can[']t tie [the noun] to [the second noun].";
-	otherwise if the noun is tied:
-		say "[The noun] is already tied to something.";
-	otherwise if the second noun is tied:
-		say "[The second noun] is already tied to something.";
-	otherwise if the noun is the string or the second noun is the string:
-		say "You tie [the noun] to [the second noun].";
-		now the tied to of the noun is the second noun;
-		now the tied to of the second noun is the noun;
-		now the noun is tied;
-		now the second noun is tied.
 
 A gray colored door is a wooden door. The color of gray colored door is gray. understand "door" as gray colored door. The description of gray colored door is "It[']s [printed name of item described]. It has the word 'Dungeon' written on it." The silver key unlocks it. gray colored door is west of the Mechanical Room South and east of the Dungeon. 
 
@@ -3375,7 +3445,7 @@ Electrical Area is a region. Electrical Room, Electrical Closet One, Electrical 
 
 Back Stage is a region. Dark Passage, Maintenance Office, Crawl Space, Mechanical Room North, Mechanical Room South, Generator Room, Storage Room are in Back Stage.
 
-Second Floor is a region. Dark Hallway and Control Room are in the Second Floor.
+Second Floor is a region. Dark Hallway, Holding Room, and Control Room are in the Second Floor.
 
 Part 4 - Tables
 
@@ -3455,7 +3525,7 @@ Table of High Striker Prizes
 index (text)	object (an object)	description (text)
 "1"	teddy bear	"a teddy bear"
 "2"	Swiss army knife	"a Swiss Army knife"
-"3"	fuse13	"a magenta fuse"
+"3"	fuse13	"a [printed name of fuse13]"
 "4"	poster of Taylor Swift	"a poster of Taylor Swift"
 
 
@@ -3464,7 +3534,7 @@ Section 5 - Table of Dime Toss Prizes
 Table of Dime Toss Prizes
 index (text)	object (an object)	description (text)
 "1"	small plush monkey	"a stuffed monkey"
-"2"	fuse15	"an orange fuse"
+"2"	fuse15	"an [printed name of fuse15]"
 "3"	poster of Billie Eilish	"a poster of Billie Eilish"
 "4"	horseshoe magnet	"a horseshoe magnet"
 
@@ -3472,7 +3542,7 @@ Section 6 - Table of Pitcher's Mound Prizes
 
 Table of Pitcher's Mound Prizes
 index (text)	object (an object)	description (text)
-"1"	fuse3	"a crimson fuse"
+"1"	fuse3	"a [printed name of fuse3]"
 "2"	small plush donkey	"a plush donkey"
 "3"	goldfish	"a goldfish in a bowl"
 "4"	poster of Lourde	"a poster of Lourde"
@@ -3588,7 +3658,7 @@ A merchandise display glows red, selling items like Hell Ride Survivor t-shirts 
 
 The exit ensures Hell Ride isn’t just an experience — it lingers, blurring the line between thrill and fear.
 
-There is a price list next to the cash register. An attendant is here to assist you with your purchases. The stand has an [list of things contained by the merchandise stand] for sale."
+There is a price list next to the cash register. An attendant is here to assist you with your purchases. The stand has [list of things contained by the merchandise stand] for sale."
 
 Section 11 - Table of Little Egypt Events
 
@@ -3635,7 +3705,7 @@ topic	response (text)
 "pitcher's/mound" or "pitcher's mound" or "the pitcher's mound"	"[one of]Batter, batter, batter, swing batter![or]Pretend you[']re pitching for the Red Sox.[or]Knock [']em down and win a prize![at random]"
 "Hell Ride Ticket" or "Carousel Ticket" or "Bumper Cars Ticket" or "Ferris Wheel Ticket" or "Fortune Teller Ticket" or "ticket"	"[The noun] says, 'You need to buy a ticket in order to ride the attractions.'"
 "parking" or "the parking ticket" or "parking ticket"	"[The noun] says, 'You need a parking ticket to leave your car here.'"
-"fuse/fuses/aqua/crimson/emerald/gray/indigo/khaki/magenta/orange/quartz" 	"[if the player is carrying a fuse]That looks like a fuse. Perhaps there[']s an electrical panel where it fits.[otherwise if the janitor is in the location of the player and the janitor is carrying a fuse]This? It's a fuse. I suppose it's supposed to go somewhere important. Seems I've lost my flashlight. If you can find it, you can have the [the second noun][otherwise]What fuse?[end if]"
+"fuse/fuses/aqua/crimson/emerald/gray/indigo/khaki/magenta/orange/quartz" 	"[if the player is carrying a fuse]That looks like a fuse. Perhaps there[']s an electrical panel where it fits.[otherwise]What fuse?[end if]"
 "movies/cinema/theater"	"[The noun] says, 'There[']s a new horror movie opening on Friday. I want to take my sweetie. Perhaps they[']ll cling to me because they[']re scared.'"
 "brewski/brew/beer"	"[The noun] replies, 'A nice cold Coors Light would taste good about now.'"
 "big/game/football/soccer/basketball/hockey/baseball"	"[The noun] says, 'Friday night is the league championship. I hope we win!'"
@@ -3648,12 +3718,17 @@ topic	response (text)
 "candy/apple/apples" or "candy apple" or "candy apples"	"[The noun] says, 'I can[']t eat these. I have braces.'"
 "cotton/candy" or "cotton candy"	"[The noun] says, 'I love the way cotton candy melts in my mouth.'"
 "pretzel/pretzels/soft" or "soft pretzel" or "soft pretzels"	"[The noun] says, 'I prefer to eat my pretzels with mustard.'"
+"mr/owner/Whidbey"	"[The noun] says , 'Mr. Whidbey? I guess he[']s alright. He[']s not in any trouble is he?'"
+"invoices/receipts/paperwork"	"[The noun] says, 'Wow! These don[']t look good. Looks like the carnival owes a lot of money! I hope I don[']t lose my job!"
+
 
 Section 14 - Table of Janitor Conversation Responses
 
 Table of Janitor Conversation Responses
 topic	response (text)
-"hell/ride" or "hell ride"	"[one of][story title] is scary. You won[']t catch me on it![or]Last time I rode [story title], I heard strange noises.[or][story title] is so old that It[']s falling apart. I wouldn[']t ride it.[or][story title] is behind on its maintenance schedule. Might want to skip that one.[at random]"
+"hell/ride" or "hell ride"	"[one of][story title] is a finicky ride. I[']m fixing something there every week.[or]Last week, Mr. Whidbey asked me to skip [story title][']s maintenance slot.[or]There was a fire in the Stakes Room of [story title] last month.[or]It[']s almost as if Mr. Whidbey wants [story title] to break down.[cycling]"
+"owner/Whidbey"	"[The noun] says , 'Mr. Whidbey? He creeps me out. It always seems like he[']s hiding something."
+"invoices/receipts/paperwork"	"[The noun] says, 'Wow! These don[']t look good. Looks like the carnival owes a lot of money! I hope I don[']t lose my job!"
 
 Section 15 - Table of Owner Conversation Responses
 
@@ -3719,8 +3794,9 @@ instead of crediting:
 	say "Extensions used in [story title]:[line break]";
 	say "[complete list of extension credits][line break]";
 	say "Additional Credits:[line break]";
-	say "Caitlyn Caluya-Bilbrick for their editing and proofreading super powers.[paragraph break]";
-	say "The following for their beta testing, excellent feedback, and ideas:[line break]";
+	say "Caitlyn Caluya-Bilbrick for their editing and proofreading super powers.[line break]";
+	say "The amazing Inform community over at https://IntFiction.org[paragraph break]";
+	say "The following awesome individuals for their beta testing, excellent feedback, and ideas:[line break]";
 	say "John Montgomery[line break]";
 	say "Andy Broding[line break]";
 	say "Joey Acrimonious[line break]";
@@ -3773,7 +3849,7 @@ Test Backstage with "test b1 / test b2 / test b3 / test b4"
 
 Chapter 5 - Concession Stand
 
-Test Concession with "brief / s / sw / l at treats / read menu / buy cola / buy popcorn / buy candy apple / buy cotton candy / buy pretzel / buy bubblegum / drink soda / g / g / g / g / w / open trash can / get khaki fuse / e / ne / n / i / score".
+Test Concession with "brief / s / steal brass ring / s / steal brass key / n / sw / l at treats / read menu / buy cola / buy popcorn / buy candy apple / buy cotton candy / buy pretzel / buy bubblegum / drink soda / g / g / g / g / w / open trash can / get khaki fuse / e / s / x photo / x safe / turn dial to 3 / turn dial to 22 / turn dial to 62 / open safe / get indigo fuse / n / ne / n / i / score / ".
 
 Chapter 6 - Hell Ride
 
@@ -3855,7 +3931,7 @@ title (text)	subtable (table name)	description (text)	toggle (rule)	used (number
 "The Control Room"	Table of Control Room Hints	--
 "How Points Are Awarded (Spoilers)"	--	""
 "Settings"	Table of Setting Options	--	
-"Credits"	--	"[story title], Copyright 2025, Dana Montgomery.[paragraph break]Extensions used in [story title]:[line break][complete list of extension credits][line break]Additional Credits:[line break]Caitlyn Caluya-Bilbrick for their editing and proofreading super powers.[paragraph break]The following for their beta testing, excellent feedback, and ideas:[line break]John Montgomery[line break]Andy Broding[line break]Joey Acrimonious[line break]RJ Kowalski[line break]Drew Cook[line break]".
+"Credits"	--	"[story title], Copyright 2025, Dana Montgomery.[paragraph break]Extensions used in [story title]:[line break][complete list of extension credits][line break]Additional Credits:[line break]Caitlyn Caluya-Bilbrick for their editing and proofreading super powers.[line break]The amazing Inform community over at https://IntFiction.org.[paragraph break]The following awesome individuals for their beta testing, excellent feedback, and ideas:[line break]John Montgomery[line break]Andy Broding[line break]Joey Acrimonious[line break]RJ Kowalski[line break]Drew Cook[line break]".
 
 Chapter 3 - The Parking Lot
 
