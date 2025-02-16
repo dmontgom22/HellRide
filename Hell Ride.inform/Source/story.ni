@@ -41,7 +41,7 @@ After a lovely meal, you get into a big fight over the tip. Your date storms off
 
 As you explore the carnival, you learn (the hard way) that the Hell Ride attraction is malfunctioning with the potential for serious injuries to the riders. You must disable the ride off and prevent any loss of life... including your own."
 The story creation year is 2025.
-The release number is 200.
+The release number is 201.
 	
 Chapter 3 - Extensions
 
@@ -452,7 +452,25 @@ instead of giving the flashlight to the janitor:
 	
 The brass ring is a keychain. understand "chain/keychain" as the brass ring. The description is "A ring to hold keys." The brass key is a passkey. The brass key unlocks the sturdy door and the metal door. the brass key is on the brass ring. the description of the brass key is "This is a shiny brass key. It must be important if the janitor has it.". The brass ring is worn by the janitor. 
 
-Section 12 - Scoring
+Section 12 - The Owner
+
+Mr Whidbey is a male person. Mr Whidbey is in the Carnival Office. understand "mr/mister/Whidbey/owner" as Mr Whidbey. The description of Mr Whidbey is "The owner of the carnival, Mr. Whidbey, is dressed in s black tuxedo with a red and white striped vest. He is sporting a snazzy top hat.".
+
+[the owner walks]
+every turn:
+	let M be the minutes part of the time of day;
+	unless the carnival office is visited for the first time:
+		if there is a mins of M in the Table of Owner Movements:
+			choose a row with a mins of M in Table of Owner Movements;
+			let last space be the location of Mr Whidbey;
+			if Mr Whidbey can be seen by the player, say "The Mr Whidbey heads to [the destination entry].";
+			move Mr Whidbey to the destination entry;
+			if Mr Whidbey can be seen by the player, say "The Mr Whidbey arrives from [the last space].";
+			
+instead of asking Mr Whidbey about a topic listed in the Table of Owner Conversation Responses, say "[response entry][paragraph break]".
+instead of telling Mr Whidbey about something: try asking the noun about it.
+
+Section 13 - Scoring
 
 Table of Scored Circumstances
 criteria	point value	description	turn stamp
@@ -542,7 +560,7 @@ To receive a prize:
 		now prize taken is false;
 		continue the action.
 
-Section 13 - Swearing
+Section 14 - Swearing
 
 Swearing mildly is an action applying to nothing.
 The Swearing mildly action translates into I6 as "Mild".
@@ -569,7 +587,7 @@ Check an actor swearing obscenely (this is the block swearing obscenely rule):
 Understand "[swears]" as swearing obscenely.
 understand "shit", "piss", "fuck", "cunt", "cocksucker", "motherfucker", "tits", "cock sucker", "mother fucker", "prick", "cock", and "damn" as "[swears]".
 
-Section 14 - Singing
+Section 15 - Singing
 
 Check an actor singing (this is the block singing rule):
 	say "[one of]Your singing is abominable.[or]You open your mouth expecting a warble and getting a squawk instead.[or]Don[']t give up your day job.[or]You can[']t carry a tune in a bucket.[at random]";
@@ -578,7 +596,7 @@ Check an actor singing (this is the block singing rule):
 singing is an action applying to nothing.
 Understand "sing" as singing.
 
-Section 15 - Stealing
+Section 16 - Stealing
 
 stealing is an action applying to one thing. Understand "steal [something]" as stealing.
 	
@@ -597,7 +615,7 @@ instead of stealing something:
 	otherwise:
 		say "Lowering yourself to a life of crime? You think better of it.".
 
-Section 16 - The Strings
+Section 17 - The Strings
 
 a thing has an object called tied to. the tied to of a thing is usually nothing. a thing can be tied or untied. a thing is usually untied. 
 
@@ -690,7 +708,7 @@ Carry out cutting it with:
 Report cutting it with:
 	say "You cut [the noun] with [the second noun]."
 
-Section 17 - Talking/Asking/Telling/Showing
+Section 18 - Talking/Asking/Telling/Showing
 
 Understand "talk about [text]" as talking randomly about. Talking randomly about is an action applying to one topic.
 instead of talking randomly about, say "No one wants to hear you prattle on about [the noun]."
@@ -708,7 +726,7 @@ Instead of telling an someone about something:
 Instead of showing something to an someone:
 	say "'[one of]Sorry,[or]I[']m afraid[or]Hmm,[at random] [one of]I don[']t know much about that[or]you[']ve got me there[or]I haven[']t the faintest[at random],' [the second noun] [one of]drawls[or]replies[or]comments[or]exclaims[at random].";
 
-Section 18 - Senses
+Section 19 - Senses
 
 instead of kissing, say "Oh, my! Why would you want to kiss [the noun]? Your sweetie wouldn[']t like that!".
 
@@ -738,7 +756,7 @@ instead of tasting something, say "Ew! You[']re weird!".
 a thing called music is a backdrop. the description of the music is "You can hear music in the air. Perhaps you should listen to it.".
 instead of listening to music, say "You can hear all the sounds of the carnival. The sounds of a calliope waft across the thoroughfare from the carousel. You can hear the laughter and screams as other patrons ride the rides and play the games.".
 
-Section 19 - Miscellaneous
+Section 20 - Miscellaneous
 
 [coins]
 a coin is a kind of thing. Understand "shiny" as a coin.
@@ -779,7 +797,7 @@ After reading a command (this is the ignore beta-comments rule):
 		say "(Noted.)";
 		reject the player's command.
 	
-Section 20 - Does The Player Mean
+Section 21 - Does The Player Mean
 
 [hell ride]
 Does the player mean doing something with Hell Ride when the location is outdoors: it is very likely.
@@ -821,15 +839,15 @@ Does the player mean doing something with the fingernail clippers when the playe
 [generator]
 Does the player mean doing something with the main generator when the location is the generator room: it is very likely.
 
-[pitcher's mound]
-Does the player mean throwing a baseball when the location is the Pitcher's Mound: it is very likely.
+[pitchers mound]
+Does the player mean throwing a baseball when the location is the Pitchers Mound: it is very likely.
 
 [high striker]
 Does the player mean doing something with the High Striker when the location is the HS-room: it is very likely.
 Does the player mean doing something with the mallet when the location is the HS-room: it is very likely.
 
 [mercury dime]
-Does the player mean doing something with the mercury dime when the location is the Dime Toss Game or the location is Pitcher's Mound: it is likely.
+Does the player mean doing something with the mercury dime when the location is the Dime Toss Game or the location is Pitchers Mound: it is likely.
 
 [glove box]
 Does the player mean doing something with the glove box when the location is PL-room: it is very likely.
@@ -837,7 +855,7 @@ Does the player mean doing something with the glove box when the location is PL-
 [rolls of tickets in the ticket booth]
 Does the player mean doing something with the rolls when the location is the TB-room: it is very unlikely.
 
-Section 21 - Directions
+Section 22 - Directions
 
 [parking lot]
 instead of going when the location is the PL-room:
@@ -933,8 +951,8 @@ instead of going when the location is the Dime Toss Game:
 	otherwise:
 		say "The only exit is to the southwest.".
 		
-[pitcher's mound]
-instead of going when the location is the Pitcher's Mound:
+[pitchers mound]
+instead of going when the location is the Pitchers Mound:
 	if the current action is going northwest:
 		continue the action;
 	otherwise:
@@ -1453,7 +1471,7 @@ The printed name of a fuse is "[an color of the item described] colored fuse".
 Definition: a fuse is plugged-in rather than loose if it is contained by a socket.
 
 An aqua fuse called an fuse1 is in the merchandise stand. The fuse id of fuse1 is 1.The color of fuse1 is aqua. The price of fuse1 is $3.50.
-A crimson fuse called a fuse3 is carried by the Pitcher's Mound attendant. The fuse id of fuse3 is 3. The color of fuse3 is crimson. 
+A crimson fuse called a fuse3 is carried by the Pitchers Mound attendant. The fuse id of fuse3 is 3. The color of fuse3 is crimson. 
 An emerald fuse called an fuse5 is in the grate. The fuse id of fuse5 is 5. The color of fuse5  is emerald. 
 A gray fuse called a fuse7 is carried by the Bumper Cars attendant. The fuse id of fuse7 is 7. The color of fuse7 is gray. 
 An indigo fuse called an fuse9 is in the safe. The fuse id of fuse9 is 9. The color of fuse9 is indigo. 
@@ -2158,7 +2176,7 @@ The sturdy door is an openable and lockable door. it is closed and locked . The 
 
 The initial appearance of a door is usually "Nearby [an item described] leads [if the other side of the item described is visited][direction of the item described from the location] to [the other side of the item described][otherwise][direction of the item described from the location][end if]."
 
-an insurance policy is in the safe. the description is "This is an insurance policy on the Whidbey Amusements Carnival. It is for $1,000,000. That[']s an awfully high number and it was dated last month.".
+an insurance policy is in the safe. the description is "This is an insurance policy on the Whidbey Amusements. It is for $1,000,000. That[']s an awfully high number and it was dated last month.".
 
 the safe is in the carnival office. it is a closed locked, openable, lockable container. it is fixed in place. understand "small/heavy/knob/dial" as the safe. the description is "Next to the filing cabinet, there’s a small, heavy safe where the owner keeps more sensitive materials. There is a knob on the front of the safe".
 
@@ -2195,9 +2213,9 @@ Before looking when the location is the HS-room:
 	if show images is true, display Figure of HighStriker.
 
 [ this was a forward reference that Inform 7 couldn't resolve for some reason]
-A room called the Pitcher's Mound is southeast of the HS-room. 
+A room called the Pitchers Mound is southeast of the HS-room. 
 
-The HS-room is a room. The printed name is "High Striker". The HS-room is west of the FW-room, southwest of the Dime Toss Game, and northwest of the Pitcher's Mound. The printed name is "High Striker". The HS-room is outdoors. "This area features a tall, eye-catching machine adorned with bright, colorful lights, typically red, yellow, and blue. A large sign at the top reads 'Test Your Strength!' in bold, playful lettering. The machine[’]s base is made of polished wood, giving it a vintage appearance. At the center is a sturdy metal pole, with a large bell hanging at the top, signaling when a successful attempt has been made. Along the length of the pole are markings indicating how strong you are.  A nearby sign says, 'Buy a mallet, strike the bell, win a prize.'[if the strongman attendant contains the mallet] You can see an over-sized mallet here.[end if]
+The HS-room is a room. The printed name is "High Striker". The HS-room is west of the FW-room, southwest of the Dime Toss Game, and northwest of the Pitchers Mound. The printed name is "High Striker". The HS-room is outdoors. "This area features a tall, eye-catching machine adorned with bright, colorful lights, typically red, yellow, and blue. A large sign at the top reads 'Test Your Strength!' in bold, playful lettering. The machine[’]s base is made of polished wood, giving it a vintage appearance. At the center is a sturdy metal pole, with a large bell hanging at the top, signaling when a successful attempt has been made. Along the length of the pole are markings indicating how strong you are.  A nearby sign says, 'Buy a mallet, strike the bell, win a prize.'[if the strongman attendant contains the mallet] You can see an over-sized mallet here.[end if]
 
 Spectators gather around, cheering on participants and offering lighthearted jabs and encouragement, creating a lively, competitive atmosphere. The sound of the mallet hitting the target is followed by the resonant clang of the bell (if struck), alongside the buzz of carnival music in the background. 
 
@@ -2404,36 +2422,36 @@ The Dime Toss Attendant is an attendant in the the Dime Toss Game. understand "o
 after examining the Dime Toss attendant when the TossADimeWin is true, show the toss a dime prizes. 
 after looking when the TossADimeWin is true and the location is the Dime Toss Game, 	show the Toss A Dime prizes.
 
-Section 9 - Pitcher's Mound
+Section 9 - Pitchers Mound
 
-Before going southeast when the location is the HS-room and the Pitcher's Mound is unvisited:
+Before going southeast when the location is the HS-room and the Pitchers Mound is unvisited:
 	if show images is true, display Figure of MilkBottles;
 	continue the action.
 	
-Before looking when the location is the Pitcher's Mound:
+Before looking when the location is the Pitchers Mound:
 	if show images is true, display Figure of MilkBottles.
 
-A room called the Pitcher's Mound is southeast of the HS-room. "The milk bottle ball toss is a classic carnival game that combines skill, strength, and a bit of luck. The setup features a pyramid of brightly colored milk bottles stacked on a sturdy platform — three on the bottom, two in the middle, and one on top. Players stand behind a marked line and toss baseballs, aiming to knock down as many bottles as possible. Clearing the entire stack wins a prize.
+A room called the Pitchers Mound is southeast of the HS-room. "The milk bottle ball toss is a classic carnival game that combines skill, strength, and a bit of luck. The setup features a pyramid of brightly colored milk bottles stacked on a sturdy platform — three on the bottom, two in the middle, and one on top. Players stand behind a marked line and toss baseballs, aiming to knock down as many bottles as possible. Clearing the entire stack wins a prize.
 
 The booth buzzes with energy, its colorful banners and flashing lights drawing a lively crowd. The satisfying clatter of falling bottles mixes with cheers and groans from players and spectators. A carnival attendant calls out, 'Step right up and test your aim! Three balls for just a dime.' Prizes — ranging from small toys to giant stuffed animals — hang prominently, enticing players to take a shot. With every toss, the game delivers moments of suspense, joy, and fun, making it a favorite at the carnival.
 
 You[']re surprised to see that this game only costs a dime. The High Striker is to the northwest.".
 
-A small plush donkey is carried by the Pitcher's Mound attendant. Understand "stuffie" and "stuffed" as small plush donkey. The description is "You feel rather underwhelmed as you look at the small plush donkey on a key chain."
+A small plush donkey is carried by the Pitchers Mound attendant. Understand "stuffie" and "stuffed" as small plush donkey. The description is "You feel rather underwhelmed as you look at the small plush donkey on a key chain."
 
-A poster of Lourde is carried by the Pitcher's Mound attendant. The description of the poster of Lourde is "This is a poster of Lourde. You love her music."
+A poster of Lourde is carried by the Pitchers Mound attendant. The description of the poster of Lourde is "This is a poster of Lourde. You love her music."
 
-A goldfish is carried by the Pitcher's Mound attendant. Understand "bowl" as goldfish. The description of the goldfish is "This is a small goldfish in a bowl. A pet is just what you need."
+A goldfish is carried by the Pitchers Mound attendant. Understand "bowl" as goldfish. The description of the goldfish is "This is a small goldfish in a bowl. A pet is just what you need."
 
-a baseball is a kind of thing. Understand "ball" as baseball.The Pitcher's Mound attendant carries three baseballs. The description of a baseball is "This is a regulation MLB baseball."
+a baseball is a kind of thing. Understand "ball" as baseball.The Pitchers Mound attendant carries three baseballs. The description of a baseball is "This is a regulation MLB baseball."
 
-some Pitcher's Mound spectators are here. they are scenery. the description is "The satisfying clatter of falling bottles mixes with cheers and groans from players and spectators.".
+some Pitchers Mound spectators are here. they are scenery. the description is "The satisfying clatter of falling bottles mixes with cheers and groans from players and spectators.".
 
-the Pitcher's Mound booth is here. it is scenery. the description is "The booth buzzes with energy, its colorful banners and flashing lights drawing a lively crowd.".
+the Pitchers Mound booth is here. it is scenery. the description is "The booth buzzes with energy, its colorful banners and flashing lights drawing a lively crowd.".
 
 some banners are here. they are scenery. understand "flashing", and "lights" as the banners. the description is "The booth buzzes with energy, its colorful banners and flashing lights drawing a lively crowd.".
 
-instead of listening when the location is the Pitcher's Mound, say "The satisfying clatter of falling bottles mixes with cheers and groans from players and spectators.".
+instead of listening when the location is the Pitchers Mound, say "The satisfying clatter of falling bottles mixes with cheers and groans from players and spectators.".
 
 The futile to throw things at inanimate objects rule is not listed in the check throwing it at rules.
 
@@ -2447,21 +2465,21 @@ Understand "throw [something preferably held] at/on [something]" as throwing.
 
 Instead of buying a baseball, say "You don[']t need to buy the baseballs. Just give the attendant a dime.".
 
-some Pitcher's Mound prizes are here. Understand "toys", "toy", "stuffed", "stuffie", "stuffed animal", "animal", "animals", and "prizes" as Pitcher's Mound prizes. The description is "Prizes - ranging from small toys to giant stuffed animals - hang prominently.".
+some Pitchers Mound prizes are here. Understand "toys", "toy", "stuffed", "stuffie", "stuffed animal", "animal", "animals", and "prizes" as Pitchers Mound prizes. The description is "Prizes - ranging from small toys to giant stuffed animals - hang prominently.".
 
-instead of examining the Pitcher's Mound prizes:
+instead of examining the Pitchers Mound prizes:
 	say "The prizes are [run paragraph on]";
-	repeat with N running from 1 to the number of rows in the Table of Pitcher's Mound Prizes:
-		choose row N in the Table of Pitcher's Mound prizes;
-		if object entry is carried by the Pitcher's Mound attendant:
-			say "[description in row N of the Table of Pitcher's Mound Prizes][if N < number of rows in the Table of Pitcher's Mound Prizes], [end if][if N is the number of rows in the Table of Pitcher's Mound Prizes - 1]and [end if][if N is the number of rows in the Table of Pitcher's Mound Prizes].[end if]".
+	repeat with N running from 1 to the number of rows in the Table of Pitchers Mound Prizes:
+		choose row N in the Table of Pitchers Mound prizes;
+		if object entry is carried by the Pitchers Mound attendant:
+			say "[description in row N of the Table of Pitchers Mound Prizes][if N < number of rows in the Table of Pitchers Mound Prizes], [end if][if N is the number of rows in the Table of Pitchers Mound Prizes - 1]and [end if][if N is the number of rows in the Table of Pitchers Mound Prizes].[end if]".
 		
-To show the Pitcher's Mound prizes:
+To show the Pitchers Mound prizes:
 	say "[line break]Which prize would you like? [run paragraph on]";
-	repeat with N running from 1 to the number of rows in the Table of Pitcher's Mound Prizes:
-		say "[index in row N of the Table of Pitcher's Mound Prizes]) [description in row N of the Table of Pitcher's Mound Prizes][if N < number of rows in the Table of Pitcher's Mound Prizes], [otherwise]?[end if]";
+	repeat with N running from 1 to the number of rows in the Table of Pitchers Mound Prizes:
+		say "[index in row N of the Table of Pitchers Mound Prizes]) [description in row N of the Table of Pitchers Mound Prizes][if N < number of rows in the Table of Pitchers Mound Prizes], [otherwise]?[end if]";
 		
-instead of giving a dime to the pitcher's mound attendant:
+instead of giving a dime to the pitchers mound attendant:
 	say "The attendant gives you three baseballs in return and says, 'Throw the baseball at bottle X where X is the bottle number you want to hit. The bottles are numbered one to six'.";
 	now the noun is nowhere;
 	now the player carries every baseball;
@@ -2484,18 +2502,18 @@ instead of throwing a baseball at a bottle:
 		say "That seems futile to me.";
 		rule fails.
 		
-the milk bottles are in the Pitcher's Mound.  understand "pyramid" and "stack" as milk bottles."The milk bottles are stacked in three neat rows: three bottles on the bottom, two in the middle, and one on top.[paragraph break][fixed letter spacing]         1         [line break]       2   3     [line break]     4   5   6     [line break][roman type]". the description is "The milk bottles are stacked in three neat rows: three on the bottom, two in the middle, and one on top. [paragraph break][fixed letter spacing]         1         [line break]       2   3     [line break]     4   5   6     [line break][roman type]"
+the milk bottles are in the Pitchers Mound.  understand "pyramid" and "stack" as milk bottles."The milk bottles are stacked in three neat rows: three bottles on the bottom, two in the middle, and one on top.[paragraph break][fixed letter spacing]         1         [line break]       2   3     [line break]     4   5   6     [line break][roman type]". the description is "The milk bottles are stacked in three neat rows: three on the bottom, two in the middle, and one on top. [paragraph break][fixed letter spacing]         1         [line break]       2   3     [line break]     4   5   6     [line break][roman type]"
 
 a bottle is a kind of thing. 
 a bottle has a number called an Id. Understand the Id property as describing a bottle.
 the description is "This is a milk bottle marked with the number [an id of the item described].". the printed name is "bottle [id of the item described]".
 
-bottle 1 is a bottle in the pitcher's mound. it is scenery. the id of bottle 1 is 1.
-bottle 2 is a bottle in the pitcher's mound. it is scenery. the id of bottle 2 is 2.
-bottle 3 is a bottle in the pitcher's mound. it is scenery. the id of bottle 3 is 3.
-bottle 4 is a bottle in the pitcher's mound. it is scenery. the id of bottle 4 is 4.
-bottle 5 is a bottle in the pitcher's mound. it is scenery. the id of bottle 5 is 5.
-bottle 6 is a bottle in the pitcher's mound. it is scenery. the id of bottle 6 is 6.
+bottle 1 is a bottle in the pitchers mound. it is scenery. the id of bottle 1 is 1.
+bottle 2 is a bottle in the pitchers mound. it is scenery. the id of bottle 2 is 2.
+bottle 3 is a bottle in the pitchers mound. it is scenery. the id of bottle 3 is 3.
+bottle 4 is a bottle in the pitchers mound. it is scenery. the id of bottle 4 is 4.
+bottle 5 is a bottle in the pitchers mound. it is scenery. the id of bottle 5 is 5.
+bottle 6 is a bottle in the pitchers mound. it is scenery. the id of bottle 6 is 6.
 		
 PitchersMoundWin is a truth state that varies. PitchersMoundWin is false.
 instead of throwing a baseball at a bottle when the player carries the noun:
@@ -2503,7 +2521,7 @@ instead of throwing a baseball at a bottle when the player carries the noun:
 	if the second noun is bottle 5:
 		now PitchersMoundWin is true;	
 		say "The ball hits the bottles in the sweet spot and they topple over onto the platform. The attendant shouts out, 'Winner! Winner!'";
-		show the Pitcher's Mound prizes;
+		show the Pitchers Mound prizes;
 		now every baseball is nowhere;
 	otherwise:
 		let N be a random number between 1 and 5;
@@ -2515,20 +2533,20 @@ instead of throwing a baseball at a bottle when the player carries the noun:
 			-- 5: say "You knocked over five bottles. Better luck next time.";
 		now the noun is nowhere.
 
-after reading a command when the location is the Pitcher's Mound and PitchersMoundWin is true:
-	now prize table is Table of Pitcher's Mound Prizes;
+after reading a command when the location is the Pitchers Mound and PitchersMoundWin is true:
+	now prize table is Table of Pitchers Mound Prizes;
 	receive a prize;
 	if prize taken is true:
 		now PitchersMoundWin is false;
 		stop the action.
 			
-The Pitcher's Mound Attendant is an attendant in the Pitcher's Mound. 
+The Pitchers Mound Attendant is an attendant in the Pitchers Mound. 
 
-after examining the pitcher's mound attendant:
-	if PitchersMoundWin is true, show the pitcher's mound prizes. 
+after examining the pitchers mound attendant:
+	if PitchersMoundWin is true, show the pitchers mound prizes. 
 	
-after looking when the PitchersMoundWin is true and the location is the Pitcher's Mound:
-	show the Pitcher's Mound prizes.
+after looking when the PitchersMoundWin is true and the location is the Pitchers Mound:
+	show the Pitchers Mound prizes.
 
 Section 10 - Show Facade
 
@@ -3436,7 +3454,7 @@ instead of smelling when the location is the ride exit, say "The air is cool and
 Part 3 - Regions
 
 The Midway is a region. PL-room, TB-room, CS-room, Behind the Concession Stand, Carnival Office, HS-room, SF-room, ST-room, 
-Head of the Line, FW-room, BC-room, FT-room, CR-room, Dime Toss Game, and the Pitcher's Mound are in the Midway. 
+Head of the Line, FW-room, BC-room, FT-room, CR-room, Dime Toss Game, and the Pitchers Mound are in the Midway. 
 The sky, music, Hell Ride, and the Ferris Wheel are in the Midway
 
 HellRide is a region. Ride Entrance, Stocks Room, Gallows Room, Stake Room, Dungeon, Guillotine Room, Ride Exit are in HellRide.
@@ -3538,9 +3556,9 @@ index (text)	object (an object)	description (text)
 "3"	poster of Billie Eilish	"a poster of Billie Eilish"
 "4"	horseshoe magnet	"a horseshoe magnet"
 
-Section 6 - Table of Pitcher's Mound Prizes
+Section 6 - Table of Pitchers Mound Prizes
 
-Table of Pitcher's Mound Prizes
+Table of Pitchers Mound Prizes
 index (text)	object (an object)	description (text)
 "1"	fuse3	"a [printed name of fuse3]"
 "2"	small plush donkey	"a plush donkey"
@@ -3613,7 +3631,7 @@ Gallows Room	"Gallows Room"	figure of RideGallows	"The public square, slick with
 
 A hooded executioner, cloaked in black, adjusts the frayed noose with practiced precision, his cold presence exuding purpose. In front of him stands the condemned man, pale and trembling, his bound hands behind him. Beads of sweat mix with rain on his haunted face as his darting eyes search the indifferent crowd. Each shallow breath forms a fleeting cloud in the chilly air — a fragile reminder of his fleeting life.
 
-Vendors hawk bread and cider, while children strain for a better view. An old man clutches a rosary, whispering prayers, as others smirk and place bets. Above, the bell tower tolls, its mournful chime marking the passage of the man’s final moments. A raven perches on the gallows’ beam, its unblinking gaze fixed on the scene below.
+Vendors hawk bread and cider, while children strain for a better view. An old man clutches a rosary, whispering prayers, as others smirk and place bets. Above, the bell tower tolls, its mournful chime marking the passage of the man’s final moments. A raven perches on the gallows beam, its unblinking gaze fixed on the scene below.
 
 As the executioner adjusts the noose around the man’s neck, the crowd falls silent, the air thick with dread. Distant thunder rumbles faintly, as if the heavens themselves await the inevitable."
 Stake Room	"Stake Room"	figure of RideStake	"The public square is steeped in grim silence, broken only by the crackling of flames. At its center, three wooden stakes rise from a pyre of logs and kindling, darkened by smoke from past executions. Bound to the stakes are three women, their faces reflecting defiance, resignation, and terror.
@@ -3702,59 +3720,102 @@ topic	response (text)
 "fortune/teller/Esmeralda/mysterious/woman" or "fortune teller" or "the fortune teller"	"[one of]Esmeralda? She[']s down-right spooky. I asked her for a tarot reading, and boy, the things she told me![or]Esmeralda? She read my palm. I don[']t know how she knew the things she told me.[or]Esmeralda? She[']s been with the carnival for so long that no one knows how old she is. She[']s been here forever![at random]"
 "high/striker" or "high striker" or "the high striker"	"[one of]You[']re a strong guy. Go for it![or]Win a prize for your sweetie![or]Swing the mallet and ring the bell![at random]"
 "dime/toss" or "dime toss" or "the dime toss"	"[one of]Careful now! Don[']t want it skidding off the other side.[or]It[']s just like skipping a stone.[or]Aim carefully and you should get it.[at random]"
-"pitcher's/mound" or "pitcher's mound" or "the pitcher's mound"	"[one of]Batter, batter, batter, swing batter![or]Pretend you[']re pitching for the Red Sox.[or]Knock [']em down and win a prize![at random]"
+"pitchers/mound" or "pitchers mound"	"[one of]Batter, batter, batter, swing batter![or]Pretend you[']re pitching for the Red Sox.[or]Knock [']em down and win a prize![at random]"
 "Hell Ride Ticket" or "Carousel Ticket" or "Bumper Cars Ticket" or "Ferris Wheel Ticket" or "Fortune Teller Ticket" or "ticket"	"[The noun] says, 'You need to buy a ticket in order to ride the attractions.'"
 "parking" or "the parking ticket" or "parking ticket"	"[The noun] says, 'You need a parking ticket to leave your car here.'"
-"fuse/fuses/aqua/crimson/emerald/gray/indigo/khaki/magenta/orange/quartz" 	"[if the player is carrying a fuse]That looks like a fuse. Perhaps there[']s an electrical panel where it fits.[otherwise]What fuse?[end if]"
+"/fuse/fuses/aqua/crimson/emerald/gray/indigo/khaki/magenta/orange/quartz" or "aqua fuse " or "crimson fuse" or "emerald fuse" or "gray fuse" or "indigo fuse" or "khaki fuse" or "magenta fuse" or "orange fuse" or "quartz fuse" 	"[if the player is carrying a fuse]'That looks like a fuse. Perhaps there[']s an electrical panel where it fits.'[otherwise]'What fuse?'[end if] says [the noun]"
 "movies/cinema/theater"	"[The noun] says, 'There[']s a new horror movie opening on Friday. I want to take my sweetie. Perhaps they[']ll cling to me because they[']re scared.'"
-"brewski/brew/beer"	"[The noun] replies, 'A nice cold Coors Light would taste good about now.'"
+"brewski/brew/beer"	"'A nice cold Coors Light would taste good about now', [the noun] replies"
 "big/game/football/soccer/basketball/hockey/baseball"	"[The noun] says, 'Friday night is the league championship. I hope we win!'"
 "SAT/scores/college" or "SAT scores"	"[The noun] says, 'I hope I get accepted. I want to go to school on a football scholarship.'"
 "cheeseburger/lunch"	"[The noun] replies, 'I skipped breakfast this morning. Boy, am I hungry!'"
 "uniform"	"Wearing blue pants and a pink shirt, [the noun] says, 'This is just awful! I look like a lollipop.'"
-"little/egypt" or "little egypt"	"[one of]Little Egypt is so beautiful and a wonderful dancer too.[or]Did you know Little Egypt really IS from Egypt?[or]Maybe she[']d like to date you.[at random]"
+"little/egypt" or "little egypt"	"[one of]Little Egypt is so beautiful. She[']s a wonderful dancer too.[or]Did you know Little Egypt really IS from Egypt?[or]Maybe she[']d like to date you.[at random]"
 "popcorn/bucket/buttered" or "bucket of popcorn" or "buttered popcorn"	"[The noun] says, 'The popcorn is really good. It[']s hot and fresh.'"
-"bubblegum/bubble/gum"	"[The noun] says, 'It[']s Bazooka Joe! My favorite!'"
-"candy/apple/apples" or "candy apple" or "candy apples"	"[The noun] says, 'I can[']t eat these. I have braces.'"
-"cotton/candy" or "cotton candy"	"[The noun] says, 'I love the way cotton candy melts in my mouth.'"
+"bubblegum/bubble/gum"	"'It[']s Bazooka Joe! My favorite!', [the noun] says."
+"candy/apple/apples" or "candy apple" or "candy apples"	"[The noun] says, 'I can[']t eat these. They get stuck in my braces.'"
+"cotton/candy" or "cotton candy"	"'I love the way cotton candy melts in my mouth', says [the noun]."
 "pretzel/pretzels/soft" or "soft pretzel" or "soft pretzels"	"[The noun] says, 'I prefer to eat my pretzels with mustard.'"
 "mr/owner/Whidbey"	"[The noun] says , 'Mr. Whidbey? I guess he[']s alright. He[']s not in any trouble is he?'"
-"invoices/receipts/paperwork"	"[The noun] says, 'Wow! These don[']t look good. Looks like the carnival owes a lot of money! I hope I don[']t lose my job!"
-
+"invoices/receipts/paperwork"	"Oh, I don[']t know what any of that mumbo jumbo means', says [the noun]."
+"insurance/policy" or "insurance policy"	"'Gosh, I wish I had a million dollars!', [the noun] says."
 
 Section 14 - Table of Janitor Conversation Responses
 
 Table of Janitor Conversation Responses
 topic	response (text)
-"hell/ride" or "hell ride"	"[one of][story title] is a finicky ride. I[']m fixing something there every week.[or]Last week, Mr. Whidbey asked me to skip [story title][']s maintenance slot.[or]There was a fire in the Stakes Room of [story title] last month.[or]It[']s almost as if Mr. Whidbey wants [story title] to break down.[cycling]"
-"owner/Whidbey"	"[The noun] says , 'Mr. Whidbey? He creeps me out. It always seems like he[']s hiding something."
-"invoices/receipts/paperwork"	"[The noun] says, 'Wow! These don[']t look good. Looks like the carnival owes a lot of money! I hope I don[']t lose my job!"
+"hell/ride" or "hell ride"	"[story title] is a finicky ride. I[']m fixing something there every week. Last week, Mr. Whidbey asked me to skip [story title][']s maintenance slot. There was a fire in the Stakes Room last month. And just yesterday I caught him creeping around the guillotine room."
+"owner/Whidbey/mister/mr" or "Mr Whidbey"	"[The noun] says , 'Mr. Whidbey? He creeps me out. It always seems like he[']s hiding something. Just yesterday I caught him sneaking around the guillotine room in [story title]"
+"invoices/receipts/paperwork"	"[The noun] says, 'Wow! These don[']t look good. Looks like the carnival owes a lot of money! Cash [']N['] Carry provides every day supplies. Why is this overdue? The fire last month in [story title] was really bad. I hope I don[']t lose my job!'"
+"insurance/policy" or "insurance policy"	"An insurance policy? For a million bucks? Maybe that fire last month wasn[']t an accident."
+"carnival"	"[one of]The Whidbey family has owned this carnival since the 1950[']s', [the noun] says.[or]Mr. Whidbey is the last of his line. He has no one to leave the carnival to.[or]This once proud carnival has seen better days.[cycling]"
+"ferris/wheel" or "ferris wheel"	"The other day, I found a bolt on one of the gondolas so loose it had almost come off. That would have been a tragedy!"
+"bumper/car/cars" or "bumper cars" or "bumper car"	"That reminds me. Not long ago, one of the bumper cars was shorting out and electrifying the car. Boy, that would have been a shocking experience."
+"fortune/teller/esmeralda/esmerelda" or "fortune teller"	"Her fortunes are always crazy accurate. She[']s spooky. She[']s so pretty. I wonder if I should ask her out on a date."
+"carousel"	"The carousel is hard to maintain because of all the animals moving up and down. There[']s a lot of moving parts in that one."
+"dime/toss/plate" or "dime toss"	"The problem with that one is that a modern dime weighs 2.268 grams and isn[']t heavy enough to land on the plate. The trick with that one is to find a Mercury dime. It weighs 2.50 grams."
+"pitchers/mound/milk/bottles" or "pitchers mound" or "milk bottles"	"That[']s a tricky one. You have to aim at just the right bottle. Throw the baseball at bottle 5."
+"high/striker/strongman" or "high striker" or "strong man"	"Another rigged game. The mallet isn[']t heavy enough to strike the bell. Find something heavier."
+"fuse/fuses/aqua/crimson/emerald/gray/indigo/khaki/magenta/orange/quartz" or "aqua fuse " or "crimson fuse" or "emerald fuse" or "gray fuse" or "indigo fuse" or "khaki fuse" or "magenta fuse" or "orange fuse" or "quartz fuse" 	"Funny thing about that. The fuses that belong in the electrical panels in the electrical area of backstage seem to be missing. Finding them might help with disabling [story title]."
+"fire"	"The very real fire in the Stakes Room in [story title] was a scary event. I couldn[']t put it out with a fire extinguisher. We had to wait for the fire department and by then there was a lot of damage done."
+"accidents/mishaps"	"The fire, the Ferris wheel, the Bumper Cars... That[']s a lot of suspicious accidents."
+"rides/attractions"	"Almost every ride is falling apart. I do what I can to keep things in good repair but it[']s a lot of work."
+"games"	"Crooked! Everyone of them. There[']s a secret to each one of them."
 
 Section 15 - Table of Owner Conversation Responses
 
 Table of Owner Conversation Responses
 topic	response (text)
-"hell/ride" or "hell ride"	"[one of][story title] is scary. You won[']t catch me on it![or]Last time I rode [story title], I heard strange noises.[or][story title] is so old that It[']s falling apart. I wouldn[']t ride it.[or][story title] is behind on its maintenance schedule. Might want to skip that one.[at random]"
+"hell/ride" or "hell ride"	"[story title] is the premier attraction here at  Whidbey Amusements. It[']s both spooky and fun! The visitors love it! The fire last month was unfortunate and expensive."
+"invoices/receipts/paperwork"	"[The noun] says, 'I know this doesn[']t look good but the cost of consumables go up every week and attendance is down. I have to pinch pennies somehow, don[']t I? And that fire was very expensive to repair.'"
+"insurance/policy" or "insurance policy"	"An insurance policy? Of course, all reputable business have insurance. Even small time carnivals."
+"carnival"	"'The Whidbey family has owned this carnival since the 1950[']s', [the noun] says. Unfortunately, I am an only child and never married. Alas, the carnival will close when I am gone. But for now, it[']s making a comeback!"
+"ferris/wheel" or "ferris wheel"	"The Ferris Wheel is my favorite ride. It[']s always relaxing and romantic."
+"bumper/car/cars" or "bumper cars" or "bumper car"	"How fun! What could be better than crashing into your friends and family?"
+"fortune/teller/esmeralda/esmerelda" or "fortune teller"	"I see her regularly to have my fortune told. We[']re lucky to have her here. She[']s very beautiful. It[']s a wonder she[']s never been married."
+"carousel"	"'The carousel is just one of the many rides that thrill and delight our visitors every day,' says [the noun]"
+"dime/toss/plate" or "dime toss"	"'The Dime Toss is is one of the many games that thrill and delight our visitors every day!' says [the noun]."
+"pitchers/mound/milk/bottles" or "pitchers mound" or "milk bottles"	"'The Pitchers Mound is is one of the many games that thrill and delight our visitors every day!' says [the noun]."
+"high/striker/strongman" or "high striker" or "strong man"	"'The High Striker is is one of the many games that thrill and delight our visitors every day!' says [the noun]."
+"fuse/fuses/aqua/crimson/emerald/gray/indigo/khaki/magenta/orange/quartz" or "aqua fuse " or "crimson fuse" or "emerald fuse" or "gray fuse" or "indigo fuse" or "khaki fuse" or "magenta fuse" or "orange fuse" or "quartz fuse" 	"'I know nothing about fuses', [the noun] says."
+"fire"	"The fire was most unfortunate. It put [story title] out of commission for two weeks. Not only did it cost me $22,500 to repair but I lost revenue while it was closed."
+"accidents/mishaps"	"Oh, that[']s nothing to worry about. Little things happen all the time, right?"
 
 Section 16 - Table of Janitor Movements
 
 Table of Janitor Movements
 mins (number)	destination (object)	
-5	TB-room	
-10	BC-room	
-15	TB-room	
-20	CR-room	
-25	TB-room	
-30	HS-room	
-35	FW-room	
-40	HS-room	
-45	TB-room	
-50	CS-room	
-55	TB-room	
+5	TB-room
+10	BC-room
+15	TB-room
+20	CR-room
+25	TB-room
+30	HS-room
+35	FW-room
+40	HS-room
+45	TB-room
+50	CS-room
+55	TB-room
 0	Head of the Line
 
+Section 17 - Table of Owner Movements
 
-Section 17 - Introduction to Hell Ride
+Table of Owner Movements
+mins (number)	destination (object)	
+3	Carnival Office
+8	CS-room
+13	TB-room
+18	Head of the Line
+23	Ride Entrance
+28	Dark Passage
+33	Maintenance Office
+38	Stocks Room
+43	Gallows Room
+48	Stake Room
+53	Dungeon
+58	Guillotine Room
+
+Section 18 - Introduction to Hell Ride
 
 When play begins:
 	choose row 1 in Table of Help Options;
@@ -3766,7 +3827,7 @@ After a lovely meal, you get into a big fight over the tip. Your date storms off
 
 As you explore the carnival, you learn (the hard way) that the Hell Ride attraction is malfunctioning with the potential for serious injuries to the riders. You must disable the ride and prevent any loss of life... including your own."
 
-Section 18 - Hell Ride Origins
+Section 19 - Hell Ride Origins
 
 When play begins:
 	 choose row 2 in Table of Help Options;
@@ -3786,7 +3847,7 @@ I hope you enjoy it.
 d.[line break]
 (dmontgom22@gmail.com)"
 
-Section 19 - Credits
+Section 20 - Credits
 
 Crediting is an action applying to nothing. Understand "Credits" as crediting.
 instead of crediting:
