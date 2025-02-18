@@ -1160,6 +1160,7 @@
         <p class="tightin1"><img border=0 src=inform:/scene_icons/WhenC.png>&nbsp;&nbsp;Fortune Teller AutoPlay&nbsp;<a href=#A1><img border=0 src=inform:/doc_images/Below.png></a></p>
         <p class="tightin1"><img border=0 src=inform:/scene_icons/WhenC.png>&nbsp;&nbsp;Hell Ride AutoPlay&nbsp;<a href=#A2><img border=0 src=inform:/doc_images/Below.png></a></p>
         <p class="tightin1"><img border=0 src=inform:/scene_icons/WhenC.png>&nbsp;&nbsp;Little Egypt AutoPlay&nbsp;<a href=#A3><img border=0 src=inform:/doc_images/Below.png></a>&nbsp;&nbsp;<img border=0 src=inform:/scene_icons/Recurring.png></p>
+        <p class="tightin1"><img border=0 src=inform:/scene_icons/WhenC.png>&nbsp;&nbsp;Telephone Call AutoPlay&nbsp;<a href=#A4><img border=0 src=inform:/doc_images/Below.png></a></p>
         <p><i>Legend</i>: <img border=0 src=inform:/scene_icons/WPB.png>&nbsp;<i>Begins when play begins</i>; <img border=0 src=inform:/scene_icons/WhenC.png>&nbsp;<i>can begin whenever some condition holds</i>; <img border=0 src=inform:/scene_icons/Segue.png>&nbsp;<i>follows when a previous scene ends</i>; <img border=0 src=inform:/scene_icons/Simul.png>&nbsp;<i>begins simultaneously</i>; <img border=0 src=inform:/scene_icons/WNever.png>&nbsp;<i>never begins</i>; <img border=0 src=inform:/scene_icons/ENever.png>&nbsp;<i>never ends</i>; <img border=0 src=inform:/scene_icons/Recurring.png>&nbsp;<i>recurring (can happen more than once)</i>. <i>Scene names are italicised when and if they appear for a second
         	or subsequent time because the scene can begin in more than one way.</i></p>
         <a name=SDETAILS></a><hr>
@@ -1170,47 +1171,58 @@
         <p class="hangingin1"><i>Begins when:</i> the story has not ended</p>
         <p class="hangingin1"><i>Ends when:</i> the story has ended</p>
         <hr>
-        <p class="hangingin1"><a name=A1></a><b>The <i>Fortune Teller AutoPlay</i> scene</b>&nbsp;<a href="source:story.ni#line2829"><img border=0 src=inform:/doc_images/Reveal.png></a></p>
-        <p class="hangingin1"><i>Begins when:</i> Esmeralda the Mysterious carries the Fortune Teller ticket&nbsp;<a href="source:story.ni#line2830"><img border=0 src=inform:/doc_images/Reveal.png></a></p>
+        <p class="hangingin1"><a name=A1></a><b>The <i>Fortune Teller AutoPlay</i> scene</b>&nbsp;<a href="source:story.ni#line2949"><img border=0 src=inform:/doc_images/Reveal.png></a></p>
+        <p class="hangingin1"><i>Begins when:</i> Esmeralda the Mysterious carries the Fortune Teller ticket&nbsp;<a href="source:story.ni#line2950"><img border=0 src=inform:/doc_images/Reveal.png></a></p>
         <p class="hangingin1"><i>What happens</i>:</p>
-        <p class="indentin2">&nbsp;&nbsp;&nbsp;&nbsp;(now tarot reading is a random number between 1 and 3; ...)&nbsp;<a href="source:story.ni#line2838"><img border=0 src=inform:/doc_images/Reveal.png></a></p>
+        <p class="indentin2">&nbsp;&nbsp;&nbsp;&nbsp;(now tarot reading is a random number between 1 and 3; ...)&nbsp;<a href="source:story.ni#line2958"><img border=0 src=inform:/doc_images/Reveal.png></a></p>
         <p class="hangingin1"><i>During this scene:</i></p>
         <p class="hangingin2"><i>Every turn rulebook</i></p>
-        <p class="indentin2">&nbsp;&nbsp;&nbsp;&nbsp;<i>during Fortune Teller AutoPlay</i>&nbsp;&nbsp;(let K be (tarot reading * 10) + index; ...)&nbsp;<a href="source:story.ni#line2848"><img border=0 src=inform:/doc_images/Reveal.png></a></p>
+        <p class="indentin2">&nbsp;&nbsp;&nbsp;&nbsp;<i>during Fortune Teller AutoPlay</i>&nbsp;&nbsp;(let K be (tarot reading * 10) + index; ...)&nbsp;<a href="source:story.ni#line2968"><img border=0 src=inform:/doc_images/Reveal.png></a></p>
         <p class="hangingin2"><i>Instead rulebook</i></p>
-        <p class="indentin2">&nbsp;&nbsp;&nbsp;&nbsp;<i>looking</i>&nbsp;&nbsp;<i>during Fortune Teller AutoPlay</i>&nbsp;&nbsp;&nbsp;<a href="source:story.ni#line2858"><img border=0 src=inform:/doc_images/Reveal.png></a><p class="hangingin2"><i>default outcome is failure</i></p>
+        <p class="indentin2">&nbsp;&nbsp;&nbsp;&nbsp;<i>looking</i>&nbsp;&nbsp;<i>during Fortune Teller AutoPlay</i>&nbsp;&nbsp;&nbsp;<a href="source:story.ni#line2978"><img border=0 src=inform:/doc_images/Reveal.png></a><p class="hangingin2"><i>default outcome is failure</i></p>
         </p>
-        <p class="hangingin1"><i>Ends when:</i> the index is 6&nbsp;<a href="source:story.ni#line2831"><img border=0 src=inform:/doc_images/Reveal.png></a></p>
+        <p class="hangingin1"><i>Ends when:</i> the index is 6&nbsp;<a href="source:story.ni#line2951"><img border=0 src=inform:/doc_images/Reveal.png></a></p>
         <p class="hangingin1"><i>What happens</i>:</p>
-        <p class="indentin2">&nbsp;&nbsp;&nbsp;&nbsp;(say "As the reading concludes, Esmeralda gazes into your eyes with a cryptic smile and delivers their final words of wisdom: 'The order of things is important. Alphabetically and numerically; one follows another and provides the link between the two. If you will learn, think on this carefully.'Whether you leave with a sense of wonder, excitement, or unease, the encounter lingers with you - a touch of magic amid the carnival's chaos, as if you've glimpsed something beyond the ordinary."; ...)&nbsp;<a href="source:story.ni#line2842"><img border=0 src=inform:/doc_images/Reveal.png></a></p>
+        <p class="indentin2">&nbsp;&nbsp;&nbsp;&nbsp;(say "As the reading concludes, Esmeralda gazes into your eyes with a cryptic smile and delivers their final words of wisdom: 'The order of things is important. Alphabetically and numerically; one follows another and provides the link between the two. If you will learn, think on this carefully. Also, don[']t trust Whidbey. He[']s up to something.'Whether you leave with a sense of wonder, excitement, or unease, the encounter lingers with you - a touch of magic amid the carnival's chaos, as if you've glimpsed something beyond the ordinary."; ...)&nbsp;<a href="source:story.ni#line2962"><img border=0 src=inform:/doc_images/Reveal.png></a></p>
         <hr>
-        <p class="hangingin1"><a name=A2></a><b>The <i>Hell Ride AutoPlay</i> scene</b>&nbsp;<a href="source:story.ni#line3233"><img border=0 src=inform:/doc_images/Reveal.png></a></p>
-        <p class="hangingin1"><i>Begins when:</i> the player is in the hell ride car&nbsp;<a href="source:story.ni#line3234"><img border=0 src=inform:/doc_images/Reveal.png></a></p>
+        <p class="hangingin1"><a name=A2></a><b>The <i>Hell Ride AutoPlay</i> scene</b>&nbsp;<a href="source:story.ni#line3351"><img border=0 src=inform:/doc_images/Reveal.png></a></p>
+        <p class="hangingin1"><i>Begins when:</i> the player is in the hell ride car&nbsp;<a href="source:story.ni#line3352"><img border=0 src=inform:/doc_images/Reveal.png></a></p>
         <p class="hangingin1"><i>What happens</i>:</p>
-        <p class="indentin2">&nbsp;&nbsp;&nbsp;&nbsp;(now index is 1)&nbsp;<a href="source:story.ni#line3237"><img border=0 src=inform:/doc_images/Reveal.png></a></p>
+        <p class="indentin2">&nbsp;&nbsp;&nbsp;&nbsp;(now index is 1)&nbsp;<a href="source:story.ni#line3355"><img border=0 src=inform:/doc_images/Reveal.png></a></p>
         <p class="hangingin1"><i>During this scene:</i></p>
         <p class="hangingin2"><i>Every turn rulebook</i></p>
-        <p class="indentin2">&nbsp;&nbsp;&nbsp;&nbsp;<i>during Hell Ride AutoPlay</i>&nbsp;&nbsp;(choose row index in the Table of Hell Ride Events; ...)&nbsp;<a href="source:story.ni#line3244"><img border=0 src=inform:/doc_images/Reveal.png></a></p>
+        <p class="indentin2">&nbsp;&nbsp;&nbsp;&nbsp;<i>during Hell Ride AutoPlay</i>&nbsp;&nbsp;(choose row index in the Table of Hell Ride Events; ...)&nbsp;<a href="source:story.ni#line3362"><img border=0 src=inform:/doc_images/Reveal.png></a></p>
         <p class="hangingin2"><i>Instead rulebook</i></p>
-        <p class="indentin2">&nbsp;&nbsp;&nbsp;&nbsp;<i>doing something other than waiting, looking, listening, smelling or examining</i>&nbsp;&nbsp;<i>during Hell Ride AutoPlay</i>&nbsp;&nbsp;&nbsp;<a href="source:story.ni#line3240"><img border=0 src=inform:/doc_images/Reveal.png></a><p class="hangingin2"><i>default outcome is failure</i></p>
+        <p class="indentin2">&nbsp;&nbsp;&nbsp;&nbsp;<i>doing something other than waiting, looking, listening, smelling or examining</i>&nbsp;&nbsp;<i>during Hell Ride AutoPlay</i>&nbsp;&nbsp;&nbsp;<a href="source:story.ni#line3358"><img border=0 src=inform:/doc_images/Reveal.png></a><p class="hangingin2"><i>default outcome is failure</i></p>
         </p>
-        <p class="hangingin1"><i>Ends when:</i> index is the number of rows in the Table of Hell Ride Events&nbsp;<a href="source:story.ni#line3235"><img border=0 src=inform:/doc_images/Reveal.png></a></p>
+        <p class="hangingin1"><i>Ends when:</i> index is the number of rows in the Table of Hell Ride Events&nbsp;<a href="source:story.ni#line3353"><img border=0 src=inform:/doc_images/Reveal.png></a></p>
         <p class="hangingin1"><i>What happens</i>:</p>
-        <p class="indentin2">&nbsp;&nbsp;&nbsp;&nbsp;(end the story finally)&nbsp;<a href="source:story.ni#line3238"><img border=0 src=inform:/doc_images/Reveal.png></a></p>
+        <p class="indentin2">&nbsp;&nbsp;&nbsp;&nbsp;(end the story finally)&nbsp;<a href="source:story.ni#line3356"><img border=0 src=inform:/doc_images/Reveal.png></a></p>
         <hr>
-        <p class="hangingin1"><a name=A3></a><b>The <i>Little Egypt AutoPlay</i> scene</b>&nbsp;<a href="source:story.ni#line2649"><img border=0 src=inform:/doc_images/Reveal.png></a>&nbsp;&nbsp;<i>recurring</i></p>
-        <p class="hangingin1"><i>Begins when:</i> the location is the ST-room and (minutes part of time of day is 0 or minutes part of time of day is 15 or minutes part of time of day is 30 or minutes part of time of day is 45)&nbsp;<a href="source:story.ni#line2650"><img border=0 src=inform:/doc_images/Reveal.png></a></p>
+        <p class="hangingin1"><a name=A3></a><b>The <i>Little Egypt AutoPlay</i> scene</b>&nbsp;<a href="source:story.ni#line2769"><img border=0 src=inform:/doc_images/Reveal.png></a>&nbsp;&nbsp;<i>recurring</i></p>
+        <p class="hangingin1"><i>Begins when:</i> the location is the ST-room and (minutes part of time of day is 0 or minutes part of time of day is 15 or minutes part of time of day is 30 or minutes part of time of day is 45)&nbsp;<a href="source:story.ni#line2770"><img border=0 src=inform:/doc_images/Reveal.png></a></p>
         <p class="hangingin1"><i>What happens</i>:</p>
-        <p class="indentin2">&nbsp;&nbsp;&nbsp;&nbsp;(now index is 1)&nbsp;<a href="source:story.ni#line2653"><img border=0 src=inform:/doc_images/Reveal.png></a></p>
+        <p class="indentin2">&nbsp;&nbsp;&nbsp;&nbsp;(now index is 1)&nbsp;<a href="source:story.ni#line2773"><img border=0 src=inform:/doc_images/Reveal.png></a></p>
         <p class="hangingin1"><i>During this scene:</i></p>
         <p class="hangingin2"><i>Every turn rulebook</i></p>
-        <p class="indentin2">&nbsp;&nbsp;&nbsp;&nbsp;<i>during Little Egypt AutoPlay</i>&nbsp;&nbsp;(choose row index in the Table of Little Egypt Events; ...)&nbsp;<a href="source:story.ni#line2665"><img border=0 src=inform:/doc_images/Reveal.png></a></p>
+        <p class="indentin2">&nbsp;&nbsp;&nbsp;&nbsp;<i>during Little Egypt AutoPlay</i>&nbsp;&nbsp;(choose row index in the Table of Little Egypt Events; ...)&nbsp;<a href="source:story.ni#line2785"><img border=0 src=inform:/doc_images/Reveal.png></a></p>
         <p class="hangingin2"><i>Instead rulebook</i></p>
-        <p class="indentin2">&nbsp;&nbsp;&nbsp;&nbsp;<i>looking</i>&nbsp;&nbsp;<i>during Little Egypt AutoPlay</i>&nbsp;&nbsp;&nbsp;<a href="source:story.ni#line2672"><img border=0 src=inform:/doc_images/Reveal.png></a><br>&nbsp;&nbsp;&nbsp;&nbsp;<i>doing something other than waiting, looking, listening, smelling, or examining</i>&nbsp;&nbsp;<i>during Little Egypt AutoPlay</i>&nbsp;&nbsp;&nbsp;<a href="source:story.ni#line2674"><img border=0 src=inform:/doc_images/Reveal.png></a><p class="hangingin2"><i>default outcome is failure</i></p>
+        <p class="indentin2">&nbsp;&nbsp;&nbsp;&nbsp;<i>looking</i>&nbsp;&nbsp;<i>during Little Egypt AutoPlay</i>&nbsp;&nbsp;&nbsp;<a href="source:story.ni#line2792"><img border=0 src=inform:/doc_images/Reveal.png></a><br>&nbsp;&nbsp;&nbsp;&nbsp;<i>doing something other than waiting, looking, listening, smelling, or examining</i>&nbsp;&nbsp;<i>during Little Egypt AutoPlay</i>&nbsp;&nbsp;&nbsp;<a href="source:story.ni#line2794"><img border=0 src=inform:/doc_images/Reveal.png></a><p class="hangingin2"><i>default outcome is failure</i></p>
         </p>
-        <p class="hangingin1"><i>Ends when:</i> the index is the number of rows in the Table of Little Egypt Events plus 1&nbsp;<a href="source:story.ni#line2651"><img border=0 src=inform:/doc_images/Reveal.png></a></p>
+        <p class="hangingin1"><i>Ends when:</i> the index is the number of rows in the Table of Little Egypt Events plus 1&nbsp;<a href="source:story.ni#line2771"><img border=0 src=inform:/doc_images/Reveal.png></a></p>
         <p class="hangingin1"><i>What happens</i>:</p>
-        <p class="indentin2">&nbsp;&nbsp;&nbsp;&nbsp;(say "You applaud until your hands are sore. Did she just wink at you?[run paragraph on]"; ...)&nbsp;<a href="source:story.ni#line2655"><img border=0 src=inform:/doc_images/Reveal.png></a></p>
+        <p class="indentin2">&nbsp;&nbsp;&nbsp;&nbsp;(say "You applaud until your hands are sore. Did she just wink at you?[run paragraph on]"; ...)&nbsp;<a href="source:story.ni#line2775"><img border=0 src=inform:/doc_images/Reveal.png></a></p>
+        <hr>
+        <p class="hangingin1"><a name=A4></a><b>The <i>Telephone Call AutoPlay</i> scene</b>&nbsp;<a href="source:story.ni#line2312"><img border=0 src=inform:/doc_images/Reveal.png></a></p>
+        <p class="hangingin1"><i>Begins when:</i> the location is the Carnival Office and the Carnival Office is visited for the first time&nbsp;<a href="source:story.ni#line2313"><img border=0 src=inform:/doc_images/Reveal.png></a></p>
+        <p class="hangingin1"><i>What happens</i>:</p>
+        <p class="indentin2">&nbsp;&nbsp;&nbsp;&nbsp;(now index is 1)&nbsp;<a href="source:story.ni#line2315"><img border=0 src=inform:/doc_images/Reveal.png></a></p>
+        <p class="hangingin1"><i>During this scene:</i></p>
+        <p class="hangingin2"><i>Every turn rulebook</i></p>
+        <p class="indentin2">&nbsp;&nbsp;&nbsp;&nbsp;<i>during Telephone Call AutoPlay</i>&nbsp;&nbsp;(choose row index in the Table of Whidbey Telephone Call; ...)&nbsp;<a href="source:story.ni#line2321"><img border=0 src=inform:/doc_images/Reveal.png></a></p>
+        <p class="hangingin1"><i>Ends when:</i> the index is the number of rows in the Table of Whidbey Telephone Call plus 1&nbsp;<a href="source:story.ni#line2314"><img border=0 src=inform:/doc_images/Reveal.png></a></p>
+        <p class="hangingin1"><i>What happens</i>:</p>
+        <p class="indentin2">&nbsp;&nbsp;&nbsp;&nbsp;(now the player is in the CS-room; ...)&nbsp;<a href="source:story.ni#line2316"><img border=0 src=inform:/doc_images/Reveal.png></a></p>
     </div>
     <div id="segment2">
         <hr>

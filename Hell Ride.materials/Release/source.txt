@@ -454,21 +454,34 @@ The brass ring is a keychain. understand "chain/keychain" as the brass ring. The
 
 Section 12 - The Owner
 
-Mr Whidbey is a male person. Mr Whidbey is in the Carnival Office. understand "mr/mister/Whidbey/owner" as Mr Whidbey. The description of Mr Whidbey is "The owner of the carnival, Mr. Whidbey, is dressed in s black tuxedo with a red and white striped vest. He is sporting a snazzy top hat.".
+Mr Whidbey is a male person. Mr Whidbey is in the Carnival Office. understand "mr/mister/Whidbey/owner" and "carnival owner" as Mr Whidbey. The description of Mr Whidbey is "The owner of the carnival, Mr. Whidbey, is dressed in s black tuxedo with a red and white striped vest. He is sporting a snazzy top hat.".
 
 [the owner walks]
 every turn:
 	let M be the minutes part of the time of day;
-	unless the carnival office is visited for the first time:
-		if there is a mins of M in the Table of Owner Movements:
-			choose a row with a mins of M in Table of Owner Movements;
-			let last space be the location of Mr Whidbey;
-			if Mr Whidbey can be seen by the player, say "The Mr Whidbey heads to [the destination entry].";
-			move Mr Whidbey to the destination entry;
-			if Mr Whidbey can be seen by the player, say "The Mr Whidbey arrives from [the last space].";
+	if there is a mins of M in the Table of Owner Movements:
+		choose a row with a mins of M in Table of Owner Movements;
+		let last space be the location of Mr Whidbey;
+		if Mr Whidbey can be seen by the player, say "Mr Whidbey heads to [the destination entry].";
+		move Mr Whidbey to the destination entry;
+		if Mr Whidbey can be seen by the player, say "Mr Whidbey arrives from [the last space].";
 			
-instead of asking Mr Whidbey about a topic listed in the Table of Owner Conversation Responses, say "[response entry][paragraph break]".
+WhidbeyQuestions is a number which varies. WhidbeyQuestions is 0.
+instead of asking Mr Whidbey about a topic listed in the Table of Owner Conversation Responses:
+	say "[response entry][paragraph break]";
+	if  remainder after dividing WhidbeyQuestions by 4 is 0:
+		say "[one of]Mr. Whidbey[']s eye dart up and to the left.[or]Mr. Whidbey quickly changes the subject[or]Mr. Whidbey meets your eyes and quickly looks away.[cycling]";
+	increment WhidbeyQuestions;
+		
 instead of telling Mr Whidbey about something: try asking the noun about it.
+
+instead of showing something to Mr Whidbey:
+	if there is an object of the noun in the Table of Owner Object Responses:
+		choose a row with an object of noun in the Table of Owner Object Responses;	
+		say "[response entry][paragraph break]";
+		if  remainder after dividing WhidbeyQuestions by 4 is 0:
+			say "[one of]Mr. Whidbey[']s eye dart up and to the left.[or]Mr. Whidbey quickly changes the subject[or]Mr. Whidbey meets your eyes and quickly looks away.[cycling]";
+		increment WhidbeyQuestions;
 
 Section 13 - Scoring
 
@@ -717,7 +730,7 @@ Understand "talk about [something]" as talking about. Talking about is an action
 instead of talking about something :
 	say "No one wants to hear you prattle on about [the noun]."
 
-Instead of asking someone about something:
+instead of asking someone about something:
 	say "'[one of]Sorry,[or]I[']m afraid[or]Hmm,[at random] [one of]I don[']t know much about that[or]you[']ve got me there[or]I haven[']t the faintest[at random],' [the noun] [one of]drawls[or]replies[or]comments[or]exclaims[at random].";
 	
 Instead of telling an someone about something:
@@ -831,6 +844,9 @@ Does the player mean doing something with the mini carousel when the player is c
 [brass key doors]
 Does the player mean doing something with the brass ring when the janitor is in the location of the player: it is very likely.
 Does the player mean doing something with the brass key when the location is the CS-room or the location is the dark hallway: it is very likely.
+
+[stake room]
+Does the player mean doing something with the stakes public square: it is very unlikely.
 
 [cutting w/o second noun]
 Does the player mean doing something with the scissors when the player holds the long string: it is very likely.
@@ -2141,16 +2157,30 @@ a messy desk is here. it is a scenery supporter. the description is "The desk is
 
 some paperwork is on the messy desk. it is scenery. understand "stacks/piles/financial/statements/documents" as paperwork. the description is "Piles of invoices and old financial statements cover much of the desk, but the documents seem to be a mix of chaotic disorganization and purposeful concealment. Some of the invoices are stamped with the word 'PAID' in red ink, while others appear to have been hastily shoved aside. I wonder if the carnival is in some kind of financial trouble."
 
-some receipts are on the messy desk. understand "receipt" as receipts. the description is "These are receipts for regular day to day expenses for the carnival: paper goods, consumables, etc. Some are marked paid and others are not. Some are marked 'Overdue'. I wonder if the carnival is in some kind of financial trouble.".
+some receipts are on the messy desk. understand "receipt" as receipts. the description is "These are receipts for regular day to day expenses for the carnival: paper goods, consumables, etc. Some are marked paid and others are not. Some are marked 'Overdue'. I wonder if the carnival is in some kind of financial trouble. There are three receipts in the pile: one on top, one in the middle, and one on the bottom.".
 
-instead of reading the receipts, say "The receipt on the top of the pile reads:[fixed letter spacing][paragraph break]
+a top receipt is here. it is scenery. the description is "The receipt on the top of the pile reads:[fixed letter spacing][paragraph break]
 Cash [']N['] Carry.[line break]
 121 Maple St[line break]
 Stoneham, WA 98272[paragraph break]
  $82.50     Soda Cups[line break]
 $106.73    Popcorn Buckets	[line break]
  $56.41     Napkins[paragraph break]
+
 After the 10th of the month, this invoice will be assessed a finance charge of 3.75% per month, We appreciate your prompt payment.[roman type][line break]".
+
+a middle receipt is here. it is scenery. the description is "The middle receipt reads:[fixed letter spacing][paragraph break]
+Frank[']s Market Wholesale[line break]
+1 Market Pl[line break]
+Cambridge, WA 97125[paragraph break]
+8 dozen		Lemons			$85.00[line break]
+10 each		50 pound bags of flour	$200.00[line break]
+5 each		50 pound bags of sugar	$250.00[line break]
+5 each		Cases of Mexican Coca-Cola	$210.00[line break]
+					Total: $745,00[paragraph break]
+
+Notice: Your account has been closed. Kindly remit the balance due immediately![roman type][line break]".
+
 
 some invoices are on the messy desk. understand "invoice" as invoices. the description is "The invoices are for the regular day to day supplies that the carnival orders. Closer inspection shows a steadily declining volume of goods ordered. Almost as if the carnival couldn[']t afford the full cost. Some are marked 'Paid'.  A surprising number are not."
 
@@ -2181,7 +2211,7 @@ an insurance policy is in the safe. the description is "This is an insurance pol
 the safe is in the carnival office. it is a closed locked, openable, lockable container. it is fixed in place. understand "small/heavy/knob/dial" as the safe. the description is "Next to the filing cabinet, there’s a small, heavy safe where the owner keeps more sensitive materials. There is a knob on the front of the safe".
 
 The safe has a list of numbers called the current combination.
-The safe has a list of numbers called the true combination. The true combination of the safe is {3, 22, 62}.
+The safe has a list of numbers called the true combination. The true combination of the safe is {62, 22, 3}.
 
 Instead of examining the safe:
 	if the number of entries in the current combination of the safe is 0,
@@ -2840,7 +2870,7 @@ When Fortune Teller AutoPlay begins:
 	now index is 1.
 	
 When Fortune Teller AutoPlay ends:
-	say "As the reading concludes, Esmeralda gazes into your eyes with a cryptic smile and delivers their final words of wisdom: 'The order of things is important. Alphabetically and numerically; one follows another and provides the link between the two. If you will learn, think on this carefully.' 
+	say "As the reading concludes, Esmeralda gazes into your eyes with a cryptic smile and delivers their final words of wisdom: 'The order of things is important. Alphabetically and numerically; one follows another and provides the link between the two. If you will learn, think on this carefully. Also, don[']t trust Whidbey. He[']s up to something.' 
 
 Whether you leave with a sense of wonder, excitement, or unease, the encounter lingers with you — a touch of magic amid the carnival’s chaos, as if you’ve glimpsed something beyond the ordinary.";
 	now the fortune teller ticket is nowhere.
@@ -3769,7 +3799,7 @@ topic	response (text)
 "hell/ride" or "hell ride"	"[story title] is the premier attraction here at  Whidbey Amusements. It[']s both spooky and fun! The visitors love it! The fire last month was unfortunate and expensive."
 "invoices/receipts/paperwork"	"[The noun] says, 'I know this doesn[']t look good but the cost of consumables go up every week and attendance is down. I have to pinch pennies somehow, don[']t I? And that fire was very expensive to repair.'"
 "insurance/policy" or "insurance policy"	"An insurance policy? Of course, all reputable business have insurance. Even small time carnivals."
-"carnival"	"'The Whidbey family has owned this carnival since the 1950[']s', [the noun] says. Unfortunately, I am an only child and never married. Alas, the carnival will close when I am gone. But for now, it[']s making a comeback!"
+"carnival"	"'The Whidbey family has owned this carnival since the 1957', [the noun] says. 'Unfortunately, I am an only child and never married. Alas, the carnival will close when I am gone. But for now, it[']s making a comeback!'"
 "ferris/wheel" or "ferris wheel"	"The Ferris Wheel is my favorite ride. It[']s always relaxing and romantic."
 "bumper/car/cars" or "bumper cars" or "bumper car"	"How fun! What could be better than crashing into your friends and family?"
 "fortune/teller/esmeralda/esmerelda" or "fortune teller"	"I see her regularly to have my fortune told. We[']re lucky to have her here. She[']s very beautiful. It[']s a wonder she[']s never been married."
@@ -3781,7 +3811,25 @@ topic	response (text)
 "fire"	"The fire was most unfortunate. It put [story title] out of commission for two weeks. Not only did it cost me $22,500 to repair but I lost revenue while it was closed."
 "accidents/mishaps"	"Oh, that[']s nothing to worry about. Little things happen all the time, right?"
 
-Section 16 - Table of Janitor Movements
+Section 16 - Table of Owner Object Responses
+
+Table of Owner Object Responses
+object (object)	response (text)
+invoices	"[The second noun] says, 'I know this doesn[']t look good but the cost of consumables go up every week and attendance is down. I have to pinch pennies somehow, don[']t I? And that fire was very expensive to repair.'"
+receipts	"[The second noun] says, 'I know this doesn[']t look good but the cost of consumables go up every week and attendance is down. I have to pinch pennies somehow, don[']t I? And that fire was very expensive to repair.'"
+paperwork	"[The second noun] says, 'I know this doesn[']t look good but the cost of consumables go up every week and attendance is down. I have to pinch pennies somehow, don[']t I? And that fire was very expensive to repair.'"
+insurance policy	"'An insurance policy? Of course, all reputable business have insurance. Even small time carnivals', [the second noun] replies."
+fuse1	"'I know nothing about fuses', [the second noun] says."
+fuse3	"'I know nothing about fuses', [the second noun] says."
+fuse5	"'I know nothing about fuses', [the second noun] says."
+fuse7	"'I know nothing about fuses', [the second noun] says."
+fuse9	"'Oh, um, where did you get that?' [the second noun] asks."
+fuse11	"'I know nothing about fuses', [the second noun] says."
+fuse13	"'I know nothing about fuses', [the second noun] says."
+fuse15	"'I know nothing about fuses', [the second noun] says."
+fuse17	"'I know nothing about fuses', [the second noun] says."
+
+Section 17 - Table of Janitor Movements
 
 Table of Janitor Movements
 mins (number)	destination (object)	
@@ -3798,7 +3846,7 @@ mins (number)	destination (object)
 55	TB-room
 0	Head of the Line
 
-Section 17 - Table of Owner Movements
+Section 18 - Table of Owner Movements
 
 Table of Owner Movements
 mins (number)	destination (object)	
@@ -3815,7 +3863,7 @@ mins (number)	destination (object)
 53	Dungeon
 58	Guillotine Room
 
-Section 18 - Introduction to Hell Ride
+Section 19 - Introduction to Hell Ride
 
 When play begins:
 	choose row 1 in Table of Help Options;
@@ -3827,7 +3875,7 @@ After a lovely meal, you get into a big fight over the tip. Your date storms off
 
 As you explore the carnival, you learn (the hard way) that the Hell Ride attraction is malfunctioning with the potential for serious injuries to the riders. You must disable the ride and prevent any loss of life... including your own."
 
-Section 19 - Hell Ride Origins
+Section 20 - Hell Ride Origins
 
 When play begins:
 	 choose row 2 in Table of Help Options;
@@ -3847,7 +3895,7 @@ I hope you enjoy it.
 d.[line break]
 (dmontgom22@gmail.com)"
 
-Section 20 - Credits
+Section 21 - Credits
 
 Crediting is an action applying to nothing. Understand "Credits" as crediting.
 instead of crediting:
@@ -3855,14 +3903,15 @@ instead of crediting:
 	say "Extensions used in [story title]:[line break]";
 	say "[complete list of extension credits][line break]";
 	say "Additional Credits:[line break]";
-	say "Caitlyn Caluya-Bilbrick for their editing and proofreading super powers.[line break]";
+	say "Caitlyn Caluya-Bilbrick for her editing and proofreading super powers.[line break]";
 	say "The amazing Inform community over at https://IntFiction.org[paragraph break]";
 	say "The following awesome individuals for their beta testing, excellent feedback, and ideas:[line break]";
-	say "John Montgomery[line break]";
-	say "Andy Broding[line break]";
 	say "Joey Acrimonious[line break]";
+	say "Ryan Allocco[line break]";
+	say "Andy Broding[line break]";
+	say "Drew Cook[line break]";
 	say "RJ Kowalski[line break]";
-	say "Drew Cook[line break]".
+	say "John Montgomery[line break]";
 	
 Part 5 - Unit Tests
 
@@ -3910,7 +3959,7 @@ Test Backstage with "test b1 / test b2 / test b3 / test b4"
 
 Chapter 5 - Concession Stand
 
-Test Concession with "brief / s / steal brass ring / s / steal brass key / n / sw / l at treats / read menu / buy cola / buy popcorn / buy candy apple / buy cotton candy / buy pretzel / buy bubblegum / drink soda / g / g / g / g / w / open trash can / get khaki fuse / e / s / x photo / x safe / turn dial to 3 / turn dial to 22 / turn dial to 62 / open safe / get indigo fuse / n / ne / n / i / score / ".
+Test Concession with "brief / s / steal brass ring / s / steal brass key / n / sw / l at treats / read menu / buy cola / buy popcorn / buy candy apple / buy cotton candy / buy pretzel / buy bubblegum / drink soda / g / g / g / g / w / open trash can / get khaki fuse / e / s / x photo / x safe / turn dial to 62 / turn dial to 22 / turn dial to 3 / open safe / get indigo fuse / n / ne / n / i / score / ".
 
 Chapter 6 - Hell Ride
 
@@ -3952,7 +4001,7 @@ when play begins:
 	let T be "[fixed letter spacing]Note that not all of these points are awarded. Some are mutually exclusive of others.[paragraph break]";
 	repeat through Table of Scored Circumstances:
 		let T be "[T][point value entry] - [description entry][line break]";
-	choose row 12 from Table of Help Options;
+	choose row 16 from Table of Help Options;
 	now the description entry is T.
 
 [images]	
@@ -3982,17 +4031,19 @@ title (text)	subtable (table name)	description (text)	toggle (rule)	used (number
 "Introduction to Hell Ride"	--	""
 "Hell Ride Origins"	--	""
 "Introduction to Interactive Fiction"	Table of Instruction Options	--
+"Settings"	Table of Setting Options	--	
+"Credits"	--	"[story title], Copyright 2025, Dana Montgomery.[paragraph break]Extensions used in [story title]:[line break][complete list of extension credits][line break]Additional Credits:[line break]Caitlyn Caluya-Bilbrick for her editing and proofreading super powers.[line break]The amazing Inform community over at https://IntFiction.org.[paragraph break]The following awesome individuals for their beta testing, excellent feedback, and ideas:[line break]Joey Acrimonious[line break]Ryan Allocco[line break]Andy Broding[line break]Drew Cook[line break]RJ Kowalski[line break]John Montgomery[line break]"
+"----- These Hints Contain Out Right Spoilers -----"	--	"Part of the enjoyment of Interactive Fiction comes from the solving of the puzzles. For the most part all [story title] puzzles are solved within these hints. The hints are often blunt, especially at the end of a topic. I would, however, encourage you to play for the fun of it and reserve the hints for when you[']re truly stuck."
 "The Parking Lot"	Table of Parking Lot Hints	--
 "The Attractions"	Table of Attractions Hints	--
 "The Games"	Table of Games Hints	--
+"The Carnival Office"	Table of Carnival Office Hints	--
 "Back Stage"	Table of Back Stage Hints	--
 "Hell Ride"	Table of Hell Ride Hints	--
 "The Electrical Area"	Table of Electrical Area Hints	--
-"Where are the fuses?"	Table of Fuse Hints	--
+"Where Are The Fuses?"	Table of Fuse Hints	--
 "The Control Room"	Table of Control Room Hints	--
 "How Points Are Awarded (Spoilers)"	--	""
-"Settings"	Table of Setting Options	--	
-"Credits"	--	"[story title], Copyright 2025, Dana Montgomery.[paragraph break]Extensions used in [story title]:[line break][complete list of extension credits][line break]Additional Credits:[line break]Caitlyn Caluya-Bilbrick for their editing and proofreading super powers.[line break]The amazing Inform community over at https://IntFiction.org.[paragraph break]The following awesome individuals for their beta testing, excellent feedback, and ideas:[line break]John Montgomery[line break]Andy Broding[line break]Joey Acrimonious[line break]RJ Kowalski[line break]Drew Cook[line break]".
 
 Chapter 3 - The Parking Lot
 
@@ -4030,6 +4081,22 @@ title (text)	subtable (table name)	description (text)	toggle (rule)	used (number
 "The rides are boring."	table of hinting	"Surely not ALL the rides are boring."	
 "hint"	--	"It[']s a small carnival, what do you expect?"
 "hint"	--	"Have you ridden Hell Ride?"
+"The Carousel"	table of hinting	"What a wonderful childhood memory!"
+"hint"	--	"What animal did you choose to ride?"
+"hint"	--	"Sometimes I get dizzy on the merry-go-round."
+"The Bumper Cars"	table of hinting	"The bumper cars are a great way to get your aggression out."
+"hint"	--	"Great fun crashing into others."
+"hint"	--	"And getting hit by others."
+"hint"	--	"Just enjoy yourself"
+"The Ferris Wheel"	table of hinting	"Such a relaxing and romantic ride!"
+"hint"	--	"You can see the entire carnival from here."
+"hint"	--	"Do you see anything from the top of the Ferris wheel?"
+"hint"	--	"There is a hidden area in the carnival."
+"hint"	--	"It[']s to the west behind the Concession Stand."
+"Fortune Teller"	table of hinting	"Esmeralda the Mysterious is our most popular attraction after [story title]."
+"hint"	--	"You can buy a ticket at the ticket booth."
+"hint"	-- 	"Get a tarot reading and learn you fortune."
+"hint"	--	"Pay attention to any advice she may give you."
 
 Chapter 5 - The Games 
 
@@ -4061,7 +4128,24 @@ title (text)	subtable (table name)	description (text)	toggle (rule)	used (number
 "hint"	--	"You have to throw the baseball at the right bottle."
 "hint"	--	"Throw the baseball at bottle 5."
 
-Chapter 6 - Back Stage 
+Chapter 6 - Carnival Office
+
+Table of Carnival Office Hints
+title (text)	subtable (table name)	description (text)	toggle (rule)	used (number)	bookpage (number)	localpage (number)
+"What about the Invoices?"	table of hinting	"These are outstanding bills for services rendered."
+"hint"	--	"Many are marked overdue while a smaller number are stamped 'Paid'."
+"hint"	--	"Looks like the Whidbey Amusements might be in some financial trouble."
+"And the Receipts?"	table of hinting	"These are the receipts for supplies and goods delivered."
+"hint"	--	"Like the invoices, many of these are marked 'Overdue'."
+"hint"	-- 	"More evidence that the carnival is in trouble."
+"What About the Safe?"	table of hinting	"It[']s locked."
+"hint"	--	"Looks like it needs a three number combination."
+"hint"	--	"Have you seen three numbers around anywhere?"
+"hint"	--	"Maybe a date"
+"hint"	--	"Look at the photo."
+"hint"	--	"The combination is the date backwards."
+
+Chapter 7 - Back Stage 
 
 Table of Back Stage Hints
 title (text)	subtable (table name)	description (text)	toggle (rule)	used (number)	bookpage (number)	localpage (number)
@@ -4077,7 +4161,7 @@ title (text)	subtable (table name)	description (text)	toggle (rule)	used (number
 "hint"	--	"You have to find it"
 "hint"	--	"It[']s in Electrical Closet One"
 
-Chapter 7 - Hell Ride Hints
+Chapter 8 - Hell Ride Hints
 
 Table of Hell Ride Hints
 title (text)	subtable (table name)	description (text)	toggle (rule)	used (number)	bookpage (number)	localpage (number)
@@ -4093,7 +4177,7 @@ title (text)	subtable (table name)	description (text)	toggle (rule)	used (number
 "hint"	--	"There[']s the Stocks, the Gallows, the Stake, the Dungeon, and the Guillotine."
 "hint"	--	"Just your typical ride in the dark."
 
-Chapter 8 - The Electrical Area Hints
+Chapter 9 - The Electrical Area Hints
 
 Table of Electrical Area Hints
 title (text)	subtable (table name)	description (text)	toggle (rule)	used (number)	bookpage (number)	localpage (number)
@@ -4113,7 +4197,7 @@ title (text)	subtable (table name)	description (text)	toggle (rule)	used (number
 "hint"	--	"Have you seen those colors anywhere else?"
 "hint"	--	"Have you put a fuse in a socket?"
 
-Chapter 9 - Fuse Hints
+Chapter 10 - Fuse Hints
 
 Table of Fuse Hints
 title (text)	subtable (table name)	description (text)	toggle (rule)	used (number)	bookpage (number)	localpage (number)
@@ -4145,7 +4229,7 @@ title (text)	subtable (table name)	description (text)	toggle (rule)	used (number
 "Where[']s the Quartz fuse?"	table of hinting	"It[']s in the Stake Room."
 "hint"	--	"It's in the pyre."
 
-Chapter 10 - The Control Room Hints
+Chapter 11 - The Control Room Hints
 
 Table of Control Room Hints
 title (text)	subtable (table name)	description (text)	toggle (rule)	used (number)	bookpage (number)	localpage (number)
