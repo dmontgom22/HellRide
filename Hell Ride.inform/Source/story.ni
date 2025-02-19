@@ -35,7 +35,7 @@ The story headline is "The ride of a lifetime...".
 The story genre is "Horror".
 The story description is "[story title] - A ride to remember...
 
-You[']re a part-time reporter for The Tribune, the local paper. Earlier in the day, your editor called you and told you of a conversation he overheard between the Chief of Police and his Deputy about Whidbey Amusements. It seems there has been a rash of accidents and mishaps at the carnival. Sounds like there could be something suspicious going on. He wants you to collect evidence and write a hard hitting piece about it.
+You[']re a part-time reporter for The Tribune, the local paper. Earlier in the day, your editor called you and told you of a conversation he overheard between the Chief of Police and his Deputy about Whidbey Amusements. It seems there has been a rash of accidents and mishaps at the carnival. Sounds like there could be something suspicious going on. He wants you to collect evidence and write a hard hitting piece about it. If you do a good job, maybe the paper will hire you on full-time.
 
 As you explore the carnival, you learn (the hard way) that the Hell Ride attraction is malfunctioning with the potential for serious injuries to the riders. You must disable the ride off and prevent any loss of life... including your own."
 The story creation year is 2025.
@@ -85,6 +85,7 @@ when play begins:
 	
 The time of day is 7:53 PM.
 
+hell ride disabled is a truth state that varies. hell ride disabled is false.
 total evidence is a number that varies. total evidence is 0.
 total accusation is a number that varies. total accusation is 0.
 	
@@ -456,6 +457,14 @@ instead of asking the janitor about a topic listed in the Table of Janitor Conve
 		now total evidence is total evidence plus the evidence weight entry;
 		now the turn stamp entry is the turn count.
 		
+instead of showing something to the janitor:
+	if there is an object of the noun in the Table of Janitor Object Responses:
+		choose a row with an object of noun in the Table of Janitor Object Responses;	
+		say "[response entry][paragraph break]";
+		if the turn stamp entry is -1:
+			now total evidence is total evidence plus the evidence weight entry;
+			now the turn stamp entry is the turn count;
+		
 instead of telling the janitor about something: try asking the noun about it.
 
 instead of giving the flashlight to the janitor:
@@ -463,12 +472,12 @@ instead of giving the flashlight to the janitor:
 	now the flashlight is carried by the janitor.
 	
 instead of giving the pliers to the janitor:
-	say "Hey! Thanks, These have been missing from my tool box.";
+	say "Hey! Thanks, These have been missing from my tool box. Where did you find them?";
 	now the pliers are carried by the janitor.
 	
 The brass ring is a keychain. understand "chain/keychain" as the brass ring. The description is "A ring to hold keys." The brass key is a passkey. The brass key unlocks the sturdy door and the metal door. the brass key is on the brass ring. the description of the brass key is "This is a shiny brass key. It must be important if the janitor has it.". The brass ring is worn by the janitor. 
 
-Section 12 - The Owner
+Section 12 - Mr Whidbey
 
 Mr Whidbey is a male person. Mr Whidbey is in the Carnival Office. understand "mr/mister/Whidbey/owner" and "carnival owner" as Mr Whidbey. The description of Mr Whidbey is "The owner of the carnival, Mr. Whidbey, is dressed in s black tuxedo with a red and white striped vest. He is sporting a snazzy top hat.". Mr Whidbey can be active or passive. Mr Whidbey is active.
 
@@ -486,7 +495,7 @@ every turn when Mr Whidbey is passive, now Mr Whidbey is active.
 
 Before doing something to Mr Whidbey:
 	now Mr Whidbey is passive;
-	say "[one of]Mr Whidbey looks at you expectantly.[or]Mr Whidbey appears to be waiting for you to speak.[or]Mr Whidbey nervously shifts his weight from one foot to the other.[at random]".
+	say "[one of]Mr Whidbey looks at you expectantly.[or]Mr Whidbey waits for you to speak.[or]Mr Whidbey nervously shifts his weight from one foot to the other.[at random]".
 			
 WhidbeyQuestions is a number which varies. WhidbeyQuestions is 0.
 instead of asking Mr Whidbey about a topic listed in the Table of Owner Conversation Responses:
@@ -517,55 +526,88 @@ understand "accuse [someone] of/with [text]" as confronting it about.
 
 instead of confronting Mr Whidbey about a topic listed in the Table of Confrontation:
 	say "[response entry][paragraph break]";
-	now total accusation is total accusation plus the accusation weight entry.
-instead of confronting somebody about something, say "There['] no need to accuse [the noun] about [the topic understood].".
+	if the turn stamp entry is -1:
+		now total accusation is total accusation plus the accusation weight entry;
+		now the turn stamp entry is the turn count.
+		
+instead of confronting somebody about something, say "There['] no need to confront [the noun] about [the topic understood].".
 
-Section 13 - Scoring
+Section 13 - Evidence and Accusations
+
+displaying evidence is an action out of world applying to nothing. Understand "display evidence" as displaying evidence. understand "show evidence" as displaying evidence.
+carry out displaying evidence:
+[	say "total evidence: [total evidence].";]
+	say "Evidence acquired by asking the janitor about:[line break]";
+	sort the Table of Janitor Conversation Responses in turn stamp order;
+	repeat through Table of Janitor Conversation Responses:
+		if turn stamp entry is not -1 and the evidence weight entry is greater than 0:
+			say "•	[description entry].[line break]";
+	say "[line break]";
+	say "Evidence acquired by showing something to the janitor:[line break]";
+	sort the Table of Janitor Object Responses in turn stamp order;
+	repeat through Table of Janitor Object Responses:
+		if turn stamp entry is not -1 and the evidence weight entry is greater than 0:
+			say "•	[description entry][line break]";
+	say "[line break]";
+	say "Evidence acquired by asking Mr Whidbey about:[line break]";
+	sort the Table of Owner Conversation Responses in turn stamp order;
+	repeat through Table of Owner Conversation Responses:
+		if turn stamp entry is not -1  and the evidence weight entry is greater than 0:
+			say "•	[description entry][line break]";
+	say "[line break]";
+	say "Evidence acquired by showing something to Mr Whidbey:[line break]";
+	sort the Table of Owner Object Responses in turn stamp order;
+	repeat through Table of Owner Object Responses:
+		if turn stamp entry is not -1 and the evidence weight entry is greater than 0:
+			say "•	[description entry][line break]";
+
+
+Section 14 - Scoring
 
 Table of Scored Circumstances
 criteria	point value	description	turn stamp
-"[if the blueberries are consumed]Y[otherwise]N[end if]"	5	"Eating the blueberries"	-1
-"[if your keys are visible]Y[otherwise]N[end if]"	5	"Finding the coins and keys"	-1
-"[if the player is carrying the Hell Ride ticket]Y[otherwise]N[end if]"	5	"Buying the [story title] ticket"	-1
-"[if the player is wearing the sheer veil]Y[otherwise]N[end if]"	5	"Wearing the sheer veil"	-1
-"[if the player is holding the Cash 'N' Carry invoice]Y[otherwise]N[end if]"	5	"Finding the Cash [']N['] Carry invoice"	-1
-"[if the player is holding the Oriental Trading invoice]Y[otherwise]N[end if]"	5	"Finding the Oriental Trading invoice"	-1
-"[if the player is holding the Frank's Market invoice]Y[otherwise]N[end if]"	5	"Finding the Frank[']s Market invoice"	-1
-"[if the player is holding the Mystic Industries invoice]Y[otherwise]N[end if]"	5	"Finding the Mystic Industries invoice"	-1
-"[if the player is holding the insurance policy]Y[otherwise]N[end if]"	5	"Finding the insurance policy"	-1
-"[if the player is holding the brass key]Y[otherwise]N[end if]"	5	"Acquiring the brass key"	-1
-"[if the player is holding the cashier's check]Y[otherwise]N[end if]"	10	"Acquiring the cashier[']s check"	-1
-"[if the player is holding the pliers]Y[otherwise]N[end if]"	5	"Acquiring the pliers"	-1
-"[if the player is carrying the lantern]Y[otherwise]N[end if]"	5	"Taking the lantern"	-1
-"[if the player is carrying the flashlight]Y[otherwise]N[end if]"	5	"Taking the flashlight"	-1
-"[if the player is carrying the mercury dime]Y[otherwise]N[end if]"	5	"Taking the Mercury dime"	-1
-"[if the big switch is switched off]Y[otherwise]N[end if]"	10	"Turning off the big switch"	-1
-"[if the location is the Control Room]Y[otherwise]N[end if]"	5	"Finding the Control Room"	-1
-"[if the location is the Dark Passage]Y[otherwise]N[end if]"	5	"Finding the Dark Passage"	-1	
-"[if the bumper cars attendant is carrying the adjustable wrench]Y[otherwise]N[end if]"	5	"Bringing the wrench to the Bumper Cars"	-1
-"[if the player is carrying the aqua fuse]Y[otherwise]N[end if]"	10	"Acquiring the Aqua fuse"	-1
-"[if the player is carrying the emerald fuse]Y[otherwise]N[end if]"	10	"Acquiring the Emerald fuse"	-1
-"[if the player is carrying the gray fuse]Y[otherwise]N[end if]"	10	"Acquiring the Gray fuse"	-1
-"[if the player is carrying the indigo fuse]Y[otherwise]N[end if]"	10	"Acquiring the Indigo fuse"	-1
-"[if the player is carrying the khaki fuse]Y[otherwise]N[end if]"	10	"Acquiring the Khaki fuse"	-1
-"[if electrical closet one's electrical panel's switch is switched on]Y[otherwise]N[end if]"	5	"Flipping the Aqua switch"	-1
-"[if electrical closet three's electrical panel's switch is switched on]Y[otherwise]N[end if]"	5	"Flipping the Crimson switch"	-1
-"[if electrical closet five's electrical panel's switch is switched on]Y[otherwise]N[end if]"	5	"Flipping the Emerald switch"	-1
-"[if electrical closet seven's electrical panel's switch is switched on]Y[otherwise]N[end if]"	5	"Flipping the Gray switch"	-1
-"[if electrical closet nine's electrical panel's switch is switched on]Y[otherwise]N[end if]"	5	"Flipping the Indigo switch"	-1
-"[if electrical closet eleven's electrical panel's switch is switched on]Y[otherwise]N[end if]"	5	"Flipping the Khaki switch"	-1
-"[if the player is carrying the teddy bear]Y[otherwise]N[end if]"	5	"Winning the teddy bear"	-1
-"[if the player is carrying the Swiss Army knife]Y[otherwise]N[end if]"	10	"Winning the Swiss Army knife"	-1
-"[if the player is carrying the poster of Taylor Swift]Y[otherwise]N[end if]"	5	"Winning the poster of Taylor Swift"	-1
-"[if the player is carrying the magenta fuse]Y[otherwise]N[end if]"	5	"Winning the Magenta fuse"	-1
-"[if the player is carrying the small plush monkey]Y[otherwise]N[end if]"	5	"Winning the stuffed monkey"	-1
-"[if the player is carrying the orange fuse]Y[otherwise]N[end if]"	5	"Winning the Orange fuse"	-1
-"[if the player is carrying the poster of Billie Eilish]Y[otherwise]N[end if]"	5	"Winning the poster of Billie Eilish"	-1
-"[if the player is carrying the horseshoe magnet]Y[otherwise]N[end if]"	5	"Winning the horseshoe magnet"	-1
-"[if the player is carrying the crimson fuse]Y[otherwise]N[end if]"	5	"Winning the Crimson fuse"	-1
-"[if the player is carrying the small plush donkey]Y[otherwise]N[end if]"	5	"Winning the a plush donkey"	-1
-"[if the player is carrying the goldfish]Y[otherwise]N[end if]"	5	"Winning the goldfish in a bowl"	-1
-"[if the player is carrying the poster of Lourde]Y[otherwise]N[end if]"	5	"Winning the poster of Lourde"	-1
+"[if the blueberries are consumed]Y[otherwise]N[end if]"	5	"Eating the blueberries:                  "	-1
+"[if your keys are visible]Y[otherwise]N[end if]"	5	"Finding the coins and keys:              "	-1
+"[if the player is carrying the Hell Ride ticket]Y[otherwise]N[end if]"	5	"Buying the [story title] ticket:             "	-1
+"[if the player is wearing the sheer veil]Y[otherwise]N[end if]"	5	"Wearing the sheer veil:                  "	-1
+"[if the player is holding the Cash 'N' Carry invoice]Y[otherwise]N[end if]"	5	"Finding the Cash [']N['] Carry invoice:      "	-1
+"[if the player is holding the Oriental Trading invoice]Y[otherwise]N[end if]"	5	"Finding the Oriental Trading invoice:    "	-1
+"[if the player is holding the Frank's Market invoice]Y[otherwise]N[end if]"	5	"Finding the Frank[']s Market invoice:      "	-1
+"[if the player is holding the Mystic Industries invoice]Y[otherwise]N[end if]"	5	"Finding the Mystic Industries invoice:   "	-1
+"[if the player is holding the insurance policy]Y[otherwise]N[end if]"	5	"Finding the insurance policy:            "	-1
+"[if the player is holding the brass key]Y[otherwise]N[end if]"	5	"Acquiring the brass key:                 "	-1
+"[if the player is holding the cashier's check]Y[otherwise]N[end if]"	10	"Acquiring the cashier[']s check:           "	-1
+"[if the player is holding the pliers]Y[otherwise]N[end if]"	5	"Acquiring the pliers:                    "	-1
+"[if the player is carrying the lantern]Y[otherwise]N[end if]"	5	"Taking the lantern:                      "	-1
+"[if the player is carrying the flashlight]Y[otherwise]N[end if]"	5	"Taking the flashlight:                   "	-1
+"[if the player is carrying the mercury dime]Y[otherwise]N[end if]"	5	"Taking the Mercury dime:                 "	-1
+"[if the big switch is switched off]Y[otherwise]N[end if]"	10	"Turning off the big switch:              "	-1
+"[if the location is the Control Room]Y[otherwise]N[end if]"	5	"Finding the Control Room:                "	-1
+"[if the location is the Dark Passage]Y[otherwise]N[end if]"	5	"Finding the Dark Passage:                "	-1	
+"[if the bumper cars attendant is carrying the adjustable wrench]Y[otherwise]N[end if]"	5	"Bringing the wrench to the Bumper Cars:  "	-1
+"[if the player is carrying the aqua fuse]Y[otherwise]N[end if]"	10	"Acquiring the Aqua fuse:                 "	-1
+"[if the player is carrying the emerald fuse]Y[otherwise]N[end if]"	10	"Acquiring the Emerald fuse:              "	-1
+"[if the player is carrying the gray fuse]Y[otherwise]N[end if]"	10	"Acquiring the Gray fuse:                 "	-1
+"[if the player is carrying the indigo fuse]Y[otherwise]N[end if]"	10	"Acquiring the Indigo fuse:               "	-1
+"[if the player is carrying the khaki fuse]Y[otherwise]N[end if]"	10	"Acquiring the Khaki fuse:                "	-1
+"[if electrical closet one's electrical panel's switch is switched on]Y[otherwise]N[end if]"	5	"Flipping the Aqua switch:                "	-1
+"[if electrical closet three's electrical panel's switch is switched on]Y[otherwise]N[end if]"	5	"Flipping the Crimson switch:             "	-1
+"[if electrical closet five's electrical panel's switch is switched on]Y[otherwise]N[end if]"	5	"Flipping the Emerald switch:             "	-1
+"[if electrical closet seven's electrical panel's switch is switched on]Y[otherwise]N[end if]"	5	"Flipping the Gray switch:                "	-1
+"[if electrical closet nine's electrical panel's switch is switched on]Y[otherwise]N[end if]"	5	"Flipping the Indigo switch:              "	-1
+"[if electrical closet eleven's electrical panel's switch is switched on]Y[otherwise]N[end if]"	5	"Flipping the Khaki switch:               "	-1
+"[if the player is carrying the teddy bear]Y[otherwise]N[end if]"	5	"Winning the teddy bear:                  "	-1
+"[if the player is carrying the Swiss Army knife]Y[otherwise]N[end if]"	10	"Winning the Swiss Army knife:            "	-1
+"[if the player is carrying the poster of Taylor Swift]Y[otherwise]N[end if]"	5	"Winning the poster of Taylor Swift:      "	-1
+"[if the player is carrying the magenta fuse]Y[otherwise]N[end if]"	5	"Winning the Magenta fuse:                "	-1
+"[if the player is carrying the small plush monkey]Y[otherwise]N[end if]"	5	"Winning the stuffed monkey:              "	-1
+"[if the player is carrying the orange fuse]Y[otherwise]N[end if]"	5	"Winning the Orange fuse:                 "	-1
+"[if the player is carrying the poster of Billie Eilish]Y[otherwise]N[end if]"	5	"Winning the poster of Billie Eilish:     "	-1
+"[if the player is carrying the horseshoe magnet]Y[otherwise]N[end if]"	5	"Winning the horseshoe magnet:            "	-1
+"[if the player is carrying the crimson fuse]Y[otherwise]N[end if]"	5	"Winning the Crimson fuse:                "	-1
+"[if the player is carrying the small plush donkey]Y[otherwise]N[end if]"	5	"Winning the a plush donkey:              "	-1
+"[if the player is carrying the goldfish]Y[otherwise]N[end if]"	5	"Winning the goldfish in a bowl:          "	-1
+"[if the player is carrying the poster of Lourde]Y[otherwise]N[end if]"	5	"Winning the poster of Lourde:            "	-1
 
 Every turn (this is the award points rule), award points.
 
@@ -586,15 +628,16 @@ Check requesting the complete score:
 	if the score is 0, say "You have not yet achieved anything of note." instead.
 
 Carry out requesting the complete score:
-	if score is less than 100:
+	if score is less than 125:
 		say "Wow, you[']ve received [score] point[s] out of a possible [maximum score] in [turn count] moves! I[']m very proud of you. This was a triumph. I[']m being so sincere right now.[paragraph break]";
 	otherwise:
 		say "You[']ve received [score] point[s] out of a possible [maximum score] in [turn count] moves![paragraph break]";
-	say "You have received points for the following: [paragraph break]";
+	say "You have received points for the following: [paragraph break][fixed letter spacing]";
 	sort the Table of Scored Circumstances in turn stamp order;
 	repeat through the Table of Scored Circumstances:
 		if the turn stamp entry is greater than 0:
-			say "•  [description entry]: [point value entry] points.".
+			say "•  [description entry] [point value entry] points[line break]";
+	say "[roman type]".
 	
 check requesting the score:
 	try requesting the complete score instead;
@@ -618,7 +661,7 @@ To receive a prize:
 		now prize taken is false;
 		continue the action.
 
-Section 14 - Swearing
+Section 15 - Swearing
 
 Swearing mildly is an action applying to nothing.
 The Swearing mildly action translates into I6 as "Mild".
@@ -645,7 +688,7 @@ Check an actor swearing obscenely (this is the block swearing obscenely rule):
 Understand "[swears]" as swearing obscenely.
 understand "shit", "piss", "fuck", "cunt", "cocksucker", "motherfucker", "tits", "cock sucker", "mother fucker", "prick", "cock", and "damn" as "[swears]".
 
-Section 15 - Singing
+Section 16 - Singing
 
 Check an actor singing (this is the block singing rule):
 	say "[one of]Your singing is abominable.[or]You open your mouth expecting a warble and getting a squawk instead.[or]Don[']t give up your day job.[or]You can[']t carry a tune in a bucket.[at random]";
@@ -654,7 +697,7 @@ Check an actor singing (this is the block singing rule):
 singing is an action applying to nothing.
 Understand "sing" as singing.
 
-Section 16 - Stealing
+Section 17 - Stealing
 
 stealing is an action applying to one thing. Understand "steal [something]" as stealing.
 	
@@ -673,7 +716,7 @@ instead of stealing something:
 	otherwise:
 		say "Lowering yourself to a life of crime? You think better of it.".
 
-Section 17 - The Strings
+Section 18 - The Strings
 
 a thing has an object called tied to. the tied to of a thing is usually nothing. a thing can be tied or untied. a thing is usually untied. 
 
@@ -766,7 +809,7 @@ Carry out cutting it with:
 Report cutting it with:
 	say "You cut [the noun] with [the second noun]."
 
-Section 18 - Talking/Asking/Telling/Showing
+Section 19 - Talking/Asking/Telling/Showing
 
 Understand "talk about [text]" as talking randomly about. Talking randomly about is an action applying to one topic.
 instead of talking randomly about, say "No one wants to hear you prattle on about [the noun]."
@@ -784,7 +827,7 @@ Instead of telling an someone about something:
 Instead of showing something to an someone:
 	say "'[one of]Sorry,[or]I[']m afraid[or]Hmm,[at random] [one of]I don[']t know much about that[or]you[']ve got me there[or]I haven[']t the faintest[at random],' [the second noun] [one of]drawls[or]replies[or]comments[or]exclaims[at random].";
 
-Section 19 - Senses
+Section 20 - Senses
 
 instead of kissing, say "Oh, my! Why would you want to kiss [the noun]? Your sweetie wouldn[']t like that!".
 
@@ -814,7 +857,7 @@ instead of tasting something, say "Ew! You[']re weird!".
 a thing called music is a backdrop. the description of the music is "You can hear music in the air. Perhaps you should listen to it.".
 instead of listening to music, say "You can hear all the sounds of the carnival. The sounds of a calliope waft across the thoroughfare from the carousel. You can hear the laughter and screams as other patrons ride the rides and play the games.".
 
-Section 20 - Miscellaneous
+Section 21 - Miscellaneous
 
 [coins]
 a coin is a kind of thing. Understand "shiny" as a coin.
@@ -855,7 +898,7 @@ After reading a command (this is the ignore beta-comments rule):
 		say "(Noted.)";
 		reject the player's command.
 	
-Section 21 - Does The Player Mean
+Section 22 - Does The Player Mean
 
 [hell ride]
 Does the player mean doing something with Hell Ride when the location is outdoors: it is very likely.
@@ -916,7 +959,7 @@ Does the player mean doing something with the glove box when the location is PL-
 [rolls of tickets in the ticket booth]
 Does the player mean doing something with the rolls when the location is the TB-room: it is very unlikely.
 
-Section 22 - Directions
+Section 23 - Directions
 
 [parking lot]
 instead of going when the location is the PL-room:
@@ -1316,25 +1359,6 @@ five dimes underlie the seat.
 
 The carrying capacity of the fanny pack is 50.
 
-displaying evidence is an action out of world applying to nothing. Understand "display evidence" as displaying evidence.
-carry out displaying evidence:
-	say "evidence: [total evidence].";
-	say "Table of Janitor Conversation Responses[line break]";
-	sort the Table of Janitor Conversation Responses in turn stamp order;
-	repeat through Table of Janitor Conversation Responses:
-		if turn stamp entry is not -1:
-			say "[turn stamp entry] / [evidence weight entry]: Asking the janitor about [description entry].[line break]";
-	say "Table of Owner Conversation Responses[line break]";
-	sort the Table of Owner Conversation Responses in turn stamp order;
-	repeat through Table of Owner Conversation Responses:
-		if turn stamp entry is not -1:
-			say "[turn stamp entry] / [evidence weight entry]: Asking Mr Whidbey about [description entry].[line break]";
-	say "Table of Owner Object Responses[line break]";
-	sort the Table of Owner Object Responses in turn stamp order;
-	repeat through Table of Owner Object Responses:
-		if turn stamp entry is not -1:
-			say "[turn stamp entry] / [evidence weight entry]: Showing [description entry] to Mr Whidbey.[line break]";
-
 Displaying signs is an action out of world applying to nothing. Understand "display signs" as displaying signs.
 carry out displaying signs:
 	now sign table is Table of Tickets;
@@ -1554,7 +1578,7 @@ An aqua fuse called an fuse1 is in the merchandise stand. The fuse id of fuse1 i
 A crimson fuse called a fuse3 is carried by the Pitchers Mound attendant. The fuse id of fuse3 is 3. The color of fuse3 is crimson. 
 An emerald fuse called an fuse5 is in the grate. The fuse id of fuse5 is 5. The color of fuse5  is emerald. 
 A gray fuse called a fuse7 is carried by the Bumper Cars attendant. The fuse id of fuse7 is 7. The color of fuse7 is gray. 
-An indigo fuse called an fuse9 is in the safe. The fuse id of fuse9 is 9. The color of fuse9 is indigo. 
+An indigo fuse called an fuse9 is in the safe. The fuse id of fuse9 is 9. The color of fuse9 is indigo. The description is "This is [an color of the item described] colored electrical fuse. It was strange to find the indigo fuse in the safe. How did it get there? Mr Whidbey?".
 A khaki fuse called a fuse11 is in the trash can. The fuse id of fuse11 is 11. The color of fuse11 is khaki. 
 A magenta fuse called a fuse13 is carried by the Strongman attendant. The fuse id of fuse13 is 13. The color of fuse13 is magenta. 
 An orange fuse called an fuse15 is carried by the Dime Toss attendant. The fuse id of fuse15 is 15. The color of fuse15 is orange. 
@@ -1935,7 +1959,7 @@ When play begins:
 	now show images is false;
 	say "Type 'Images On' to display images. Type 'Help' for hints about [story title] and general information about playing interactive fiction games.";
 	display the figure of Hell Ride;
-	say "You[']re a part-time reporter for The Tribune, the local paper. Earlier in the day, your editor called you and told you of a conversation he overheard between the Chief of Police and his Deputy about Whidbey Amusements. It seems there has been a rash of accidents and mishaps at the carnival. Sounds like there could be something suspicious going on. He wants you to collect evidence and write a hard hitting piece about it.".
+	say "You[']re a part-time reporter for The Tribune, the local paper. Earlier in the day, your editor called you and told you of a conversation he overheard between the Chief of Police and his Deputy about Whidbey Amusements. It seems there has been a rash of accidents and mishaps at the carnival. Sounds like there could be something suspicious going on. He wants you to collect evidence and write a hard hitting piece about it. If you do a good job, maybe the paper will hire you on full-time.".
 
 The PL-room is a room. The printed name is "Parking Lot". The PL-room is north of the TB-room. The PL-room is outdoors. "The carnival parking lot stretches across an open field, its gravel crunching under arriving cars. Temporary floodlights and the carnival[']s colorful glow light the area, while distant laughter, music, and the hum of rides fill the air.
 
@@ -2312,11 +2336,20 @@ Instead of spinning the safe to the number understood:
 Telephone Call AutoPlay is a scene. 
 Telephone Call AutoPlay begins when the location is the Carnival Office and the Carnival Office is visited for the first time.
 Telephone Call AutoPlay ends when the index is the number of rows in the Table of Whidbey Telephone Call plus 1.
-When Telephone Call AutoPlay begins, now index is 1.
+
+When Telephone Call AutoPlay begins:
+	now index is 1;
+	say "As you enter the room, you see Mr Whidbey with his back to the door. He[']s talking on the telephone.";
+
 When Telephone Call AutoPlay ends:
 	now the player is in the CS-room;
-	say "You suddenly find yourself at the Concession Stand.[paragraph break]";
+	say "You suddenly find yourself unceremoniously out of the Carnival Office and into the Concession Stand.[paragraph break]";
 	now index is 1.
+	
+Instead of doing something other than waiting, looking, listening, or smelling during Telephone Call AutoPlay:
+	say "You[']re afraid if you move too much, Mr Whidbey will notice you!".
+	
+instead of listening during the Telephone Call Autoplay, say "You are completely focused on the conversation you are overhearing.".
 	
 every turn during Telephone Call AutoPlay:
 	choose row index in the Table of Whidbey Telephone Call;
@@ -3858,7 +3891,8 @@ description
 "'Hello? Oh, it[']s you.' says Mr. Whidbey."
 "Mr. Whidbey listens to the other end of the conversation."
 "'I know, I know, but what am I supposed to do. That Needleman kid isn[']t happy with the payout we gave him. He wants $15,000 more.'"
-"Mr. Whidbey says 'I need that money in a hurry or he[']s going to go to the authorities.'"
+"Isn[']t this why I buy insurance? Don[']t worry. You'll get your piece."
+"Mr. Whidbey says 'I need that money in a hurry though or he[']s going to go to the authorities. And then you[']re going down too.'"
 "'Ok, I'll try to stall him but I won[']t be able to do it for long.'"
 "'Hey! What are you doing here? This is an employees only area,' Mr. Whidbey shouts at you. 'Get out of here. Now!'"
 
@@ -3897,32 +3931,54 @@ Section 15 - Table of Janitor Conversation Responses
 
 Table of Janitor Conversation Responses
 topic	description (text)	turn stamp (number)	evidence weight (number)	response (text)
-"hell/ride" or "hell ride"	"Hell Ride"	-1	5	"'[story title] is a finicky ride. I[']m fixing something there every week. Last week, Mr. Whidbey asked me to skip [story title][']s maintenance slot. There was a fire in the Stakes Room last month. And just yesterday I caught him creeping around the guillotine room' says [the janitor]."
+"hell/ride" or "hell ride"	"Hell Ride"	-1	5	"'[story title] is a finicky ride. I[']m fixing something there every week. Last week, Mr. Whidbey asked me to skip [story title][']s maintenance slot. There was a real fire in the Stakes Room last month. And just yesterday I caught him creeping around the guillotine room' says [the janitor]."
 "owner/Whidbey/mister/mr" or "Mr Whidbey"	"Mr Whidbey"	-1	5	"[The noun] says , 'Mr. Whidbey? He creeps me out. It always seems like he[']s hiding something. Just yesterday I caught him sneaking around the guillotine room in [story title].'"
-"invoices/receipts/paperwork"	"Invoices"	-1	3	"[The noun] says, 'Wow! These don[']t look good. Looks like the carnival owes a lot of money! Cash [']N['] Carry provides every day supplies. Why is this overdue? The fire last month in [story title] was really bad. I hope I don[']t lose my job!'"
-"insurance/policy" or "insurance policy"	"Insurance Policy"	-1	5	"'An insurance policy? For a million bucks? Maybe that fire last month wasn[']t an accident' [the noun] says."
-"carnival"	"Carnival"	-1	3	"'[one of]The Whidbey family has owned this carnival since the 1950[']s[or]Mr. Whidbey is the last of his line. He has no one to leave the carnival to[or]This once proud carnival has seen better days[cycling]' says [the noun]."
-"ferris/wheel" or "ferris wheel"	"Ferris Wheel"	-1	5	"[The noun] says, 'The other day, I found a bolt on one of the gondolas so loose it had almost come off. That would have been a tragedy!'"
+"invoices/receipts/paperwork"	"Invoices"	-1	1	"[The noun] says, 'Wow! These don[']t look good. Looks like the carnival owes a lot of money! Cash [']N['] Carry provides every day supplies. Why is this overdue? I hope I don[']t lose my job!'"
+"insurance/policy" or "insurance policy"	"Insurance Policy"	-1	3	"'An insurance policy? For a million bucks? Maybe that fire last month wasn[']t an accident' [the noun] says."
+"carnival"	"Carnival"	-1	1	"'[one of]The Whidbey family has owned this carnival since the 1950[']s[or]Mr. Whidbey is the last of his line. He has no one to leave the carnival to[or]This once proud carnival has seen better days[cycling]' says [the noun]."
+"ferris/wheel" or "ferris wheel"	"Ferris Wheel"	-1	5	"[The noun] remarks, 'The other day, I found a bolt on one of the gondolas so loose it had almost come off. That would have been a tragedy!'"
 "bumper/car/cars" or "bumper cars" or "bumper car"	"Bumper Cars"	-1	5	"[The noun] says, 'That reminds me. Not long ago, one of the bumper cars was shorting out and electrifying the car. A visitor got hurt. A young lad, what was his name? Fred something, I think.'"
-"fortune/teller/esmeralda/esmerelda" or "fortune teller"	"Esmeralda"	-1	0	"'Her fortunes are always crazy accurate. She[']s spooky. She[']s so pretty. I wonder if I should ask her out on a date?' [the noun] asks." 
+"fortune/teller/esmeralda/esmerelda" or "fortune teller"	"Esmeralda"	-1	0	"'Her fortunes are always crazy accurate. She[']s spooky and so pretty. I wonder if I should ask her out on a date?' [the noun] asks." 
 "carousel"	"Carousel"	-1	0	"'The carousel is hard to maintain because of all the animals moving up and down. There[']s a lot of moving parts in that one', says [the noun]."
 "dime/toss/plate" or "dime toss"	"Dime Toss"	-1	0	"[The noun] says, 'The problem with that one is that a modern dime weighs 2.268 grams and isn[']t heavy enough to land on the plate. The trick with that one is to find a Mercury dime. It weighs 2.50 grams.'"
 "pitchers/mound/milk/bottles" or "pitchers mound" or "milk bottles"	"Pitcher[']s Mound"	-1	0	"[The noun] says 'That[']s a tricky one. You have to aim at just the right bottle. Throw the baseball at bottle 5.'"
 "high/striker/strongman" or "high striker" or "strong man"	"High Striker"	-1	0	"'Another rigged game. The mallet isn[']t heavy enough to strike the bell. Find something heavier' says [the noun]."
 "fuse/fuses/aqua/crimson/emerald/gray/indigo/khaki/magenta/orange/quartz" or "aqua fuse " or "crimson fuse" or "emerald fuse" or "gray fuse" or "indigo fuse" or "khaki fuse" or "magenta fuse" or "orange fuse" or "quartz fuse" 	"Fuses"	-1	0	"[The noun] says 'Funny thing about that. The fuses that belong in the electrical panels in the electrical area of backstage seem to be missing. Finding them might help with disabling [story title].'"
-"fire"	"The Stake Room Fire"	-1	0	"'The very real fire in the Stakes Room in [story title] was a scary event. I couldn[']t put it out with a fire extinguisher. We had to wait for the fire department and by then there was a lot of damage done' says [the noun]."
+"fire"	"The Stake Room Fire"	-1	3	"'The very real fire in the Stakes Room in [story title] was a scary event. I couldn[']t put it out with a fire extinguisher. We had to wait for the fire department and by then there was a lot of damage done' says [the noun]."
 "accidents/mishaps"	"Accidents"	-1	3	 "[The noun] says 'The fire, the Ferris wheel, the Bumper Cars... That[']s a lot of suspicious accidents.'"
-"rides/attractions"	"Attractions"	-1	3	"'Almost every ride is falling apart. I do what I can to keep things in good repair but it[']s a lot of work' says [the noun]."
+"rides/attractions"	"Attractions"	-1	1	"'Almost every ride is falling apart. I do what I can to keep things in good repair but it[']s a lot of work' says [the noun]."
 "games"	"Carnival Games"	-1	0	"'Crooked! Everyone of them. There[']s a secret to each one of them' [the noun] says."
 
-Section 16 - Table of Owner Conversation Responses
+Section 16 - Table of Janitor Object Responses
+
+Table of Janitor Object Responses
+object (object)	description (text)	turn stamp (number)	evidence weight (number)	response (text)
+Cash 'N' Carry invoice	"Cash [']N['] Carry Invoice"	-1	1	"[The second noun] says, 'Man, this doesn[']t look good for the carnival.'"
+Frank's Market invoice	"Frank[']s Market Invoice"	-1	1	"[The second noun] says, 'Looks like the carnival is in some financial trouble.'"
+Oriental Trading  invoice	"Oriental Trading Invoice"	-1	1	"[The second noun] says, 'These prizes are cheaper and flimsier than usual.'"
+Mystic Industries invoice	"Mystic Industries Invoice"	-1	3	"[The second noun] says, That fire in [story title] was very really bad. It took almost two weeks to get it fully repaired. But it shouldn't have cost this much. I think Mr Whidbey got ripped off.'"
+paperwork	"Paperwork"	-1	1	"[The second noun] says, 'This all points the finger at mismanagement. I sure hope Mr Whidbey has a plan.'"
+insurance policy	"Insurance Policy"	-1	3	"'An insurance policy? For a million dollars? SOmething is fishy for sure!' [the second noun] says."
+pliers	"The Pliers"	-1	5	"'I[']ve been missing those. Where did you find them?' asks [the second noun]."
+cashier's check	"Cashier's Check"	-1	5	"[The second noun] says 'What?! That[']s the name of the kid who got hurt in the Bumper Cars incident.'"
+fuse1	"Aqua Fuse"	-1	1	"'Hey! That[']s important. It should be in an electrical panel', [the second noun] says."
+fuse3	"Crimson Fuse"	-1	1	"'Hey! That[']s important. It should be in an electrical panel', [the second noun] says."
+fuse5	"Emerald Fuse"	-1	1	"'Hey! That[']s important. It should be in an electrical panel', [the second noun] says."
+fuse7	"Gray Fuse"	-1	1	"'Hey! That[']s important. It should be in an electrical panel', [the second noun] says."
+fuse9	"Indigo Fuse"	-1	1	"'Hey! That[']s important. It should be in an electrical panel' [the second noun] asks."
+fuse11	"Khaki Fuse"	-1	1	"'Hey! That[']s important. It should be in an electrical panel', [the second noun] says."
+fuse13	"Magenta Fuse"	-1	1	"'Hey! That[']s important. It should be in an electrical panel', [the second noun] says."
+fuse15	"Orange Fuse"	-1	1	"'Hey! That[']s important. It should be in an electrical panel', [the second noun] says."
+fuse17	"Quartz Fuse"	-1	1	"'Hey! That[']s important. It should be in an electrical panel', [the second noun] says."
+
+Section 17 - Table of Owner Conversation Responses
 
 Table of Owner Conversation Responses
 topic	description (text)	turn stamp (number)	evidence weight (number)	response (text)
 "hell/ride" or "hell ride"	"Hell Ride"	-1	0	"'[story title] is the premier attraction here at  Whidbey Amusements. It[']s both spooky and fun! The visitors love it! The fire last month was unfortunate and expensive' says [the noun]."
 "invoices/receipts/paperwork"	"Invoices"	-1	3	"[The noun] says, 'I know this doesn[']t look good but the cost of consumables go up every week and attendance is down. I have to pinch pennies somehow, don[']t I? And that fire was very expensive to repair.'"
-"insurance/policy" or "insurance policy"	"Insurance Policy"	-1	1	"'An insurance policy? Of course, all reputable businesses have insurance. Even small time carnivals' [the noun] says."
-"carnival"	"Carnival"	-1	3	"'The Whidbey family has owned this carnival since the 1957', [the noun] says. 'Unfortunately, I am an only child and never married. Alas, the carnival will close when I am gone. But for now, it[']s making a comeback!'"
+"insurance/policy" or "insurance policy"	"Insurance Policy"	-1	1	"'An insurance policy? Of course, all reputable businesses have insurance. Even small time carnivals' [the noun] stammers."
+"carnival"	"Carnival"	-1	1	"'The Whidbey family has owned this carnival since the 1957', [the noun] says. 'Unfortunately, I am an only child and never married. Alas, the carnival will close when I am gone. But for now, it[']s making a comeback!'"
 "ferris/wheel" or "ferris wheel"	"Ferris Wheel"	-1	0	"[The noun] says 'The Ferris Wheel is my favorite ride. It[']s always relaxing and romantic.'"
 "bumper/car/cars" or "bumper cars" or "bumper car"	"Bumper Cars"	-1	3	"'That incident the other week with that Needleman kids was unfortunate' says [the noun]."
 "fortune/teller/esmeralda/esmerelda" or "fortune teller"	"Esmeralda"	-1	0	"[The noun] says 'I see her regularly to have my fortune told. We[']re lucky to have her here. She[']s very beautiful. It[']s a wonder she[']s never been married.'"
@@ -3933,22 +3989,22 @@ topic	description (text)	turn stamp (number)	evidence weight (number)	response (
 "fuse/fuses/aqua/crimson/emerald/gray/khaki/magenta/orange/quartz" or "aqua fuse " or "crimson fuse" or "emerald fuse" or "gray fuse" or "khaki fuse" or "magenta fuse" or "orange fuse" or "quartz fuse" 	"Fuses"	-1	0	"'I know nothing about fuses', [the noun] says."
 "indigo" or "indigo fuse" 	"The Indigo Fuse"	-1	5	"'Where did you get that?' [the noun] asks."
 "fire"	"The Stake Room Fire"	-1	5	"The fire was most unfortunate. It put [story title] out of commission for two weeks. Not only did it cost me $22,500 to repair but I lost revenue while it was closed."
-"accidents/mishaps"	"Accidents"	-1	0	"[The noun] says, 'Oh, that[']s nothing to worry about. Little things happen all the time, right?'"
+"accidents/mishaps"	"Accidents"	-1	1	"[The noun] says, 'Oh, that[']s nothing to worry about. Little things happen all the time, right?'"
 "pliers"	"The Pliers"	-1	3	"'Oh! I thought I lost... um, those belong to the janitor. Where did you find them?' asks [the noun]."
-"cashier's/check/fred/needleman" or "fred needleman"	"Fred Needleman"	-1	1	"[The noun] says 'Uh, Fred is a special... contractor... We paid him. For services rendered.'"
+"cashier's/check/fred/needleman" or "fred needleman"	"Fred Needleman"	-1	3	"[The noun] says 'Uh, Fred is a special... contractor... We paid him. For services rendered.'"
 "services/rendered/special" or "services rendered"	"Services Rendered"	-1	1	"'Fred did some work over at the bumper cars' says [the noun]."
 
-Section 17 - Table of Owner Object Responses
+Section 18 - Table of Owner Object Responses
 
 Table of Owner Object Responses
 object (object)	description (text)	turn stamp (number)	evidence weight (number)	response (text)
-Cash 'N' Carry invoice	"Cash [']N['] Carry Invoice"	-1	3	"[The second noun] says, 'I know this doesn[']t look good but the cost of consumables go up every week and attendance is down. I have to pinch pennies somehow, don[']t I? And that fire was very expensive to repair.'"
-Frank's Market invoice	"Frank[']s Market Invoice"	-1	3	"[The second noun] says, 'I know this doesn[']t look good but the cost of consumables go up every week and attendance is down. I have to pinch pennies somehow, don[']t I? And that fire was very expensive to repair.'"
-Oriental Trading  invoice	"Oriental Trading Invoice"	-1	3	"[The second noun] says, 'I know this doesn[']t look good but the cost of consumables go up every week and attendance is down. I have to pinch pennies somehow, don[']t I? And that fire was very expensive to repair.'"
-Mystic Industries invoice	"Mystic Industries Invoice"	-1	5	"[The second noun] says, 'I know this doesn[']t look good but the cost of consumables go up every week and attendance is down. I have to pinch pennies somehow, don[']t I? And that fire was very expensive to repair.'"
+Cash 'N' Carry invoice	"Cash [']N['] Carry Invoice"	-1	3	"[The second noun] says, 'Money[']s a little tight. The cost of consumables go up every week.'"
+Frank's Market invoice	"Frank[']s Market Invoice"	-1	3	"[The second noun] says, 'I can[']t keep up with the cost of ingredients. Everything costs so much!'"
+Oriental Trading  invoice	"Oriental Trading Invoice"	-1	3	"[The second noun] says, 'There must be prizes for the games otherwise visitors wouldn[']t play them. Maybe people won[']t win so often.'"
+Mystic Industries invoice	"Mystic Industries Invoice"	-1	5	"[The second noun] says, That fire in [story title] was very expensive to repair. And it put the ride out of commission for two weeks.'"
 paperwork	"Paperwork"	-1	3	"[The second noun] says, 'I know this doesn[']t look good but the cost of consumables go up every week and attendance is down. I have to pinch pennies somehow, don[']t I? And that fire was very expensive to repair.'"
-insurance policy	"Insurance Policy"	-1	5	"'An insurance policy? Of course, all reputable business have insurance. Even small time carnivals', [the second noun] replies."
-pliers	"The Pliers"	-1	5	"'Oh! I thought I lost... um, those belong to the janitor. Where did you find them?' asks [the second noun]."
+insurance policy	"Insurance Policy"	-1	5	"'An insurance policy? Of course, all reputable business have insurance. Even small time carnivals', [the second noun] stammers."
+pliers	"The Pliers"	-1	5	"'Oh! I thought I lost... I mean those belong to the janitor. Where did you find them?' asks [the second noun]."
 cashier's check	"Cashier's Check"	-1	5	"[The second noun] says 'Uh, Fred is a special... contractor... We paid him. For services rendered.'"
 fuse1	"Aqua Fuse"	-1	0	"'I know nothing about fuses', [the second noun] says."
 fuse3	"Crimson Fuse"	-1	0	"'I know nothing about fuses', [the second noun] says."
@@ -3960,16 +4016,16 @@ fuse13	"Magenta Fuse"	-1	0	"'I know nothing about fuses', [the second noun] says
 fuse15	"Orange Fuse"	-1	0	"'I know nothing about fuses', [the second noun] says."
 fuse17	"Quartz Fuse"	-1	0	"'I know nothing about fuses', [the second noun] says."
 
-Section 18 - Table of Confrontation
+Section 19 - Table of Confrontation
 
 Table of Confrontation
 topic	turn stamp (number)	accusation weight (number)	response (text)
-"insurance/fraud" or "insurance fraud"	-1	5	"[if total evidence is greater than 0 and total evidence is less than 31]You have nothing on me.[end if][if total evidence is greater than 30 and total evidence is less than 61]OK, maybe there[']s enough evidence to have me charged with [the topic understood] but they[']ll never make it stick.[end if][if total evidence is greater than 60]Looks like you[']ve caught me red-handed.[end if]"
-"bribery"	-1	5	"The bumper cars shocked that Needleman kid. He was going to go to the authorities. So, I had to pay him off."
-"extortion/blackmail"	-1	5	"Now Needleman wants more money. His latest demand is $15,000."
-"insurance/policy" or "insurance policy"	-1	5	"I had to cover the money for Needleman somehow."
+"insurance/fraud" or "insurance fraud"	-1	5	"[if total evidence is greater than 0 and total evidence is less than 41]'You have nothing on me', says [the noun].[otherwise if total evidence is greater than 40 and total evidence is less than 81][The noun] says, 'OK, maybe there[']s enough evidence to have me charged with [the topic understood] but they[']ll never make it stick.'[otherwise if total evidence is greater than 80]'Looks like you[']ve caught me red-handed' says [the noun].[end if]"
+"bribery"	-1	5	"The bumper cars injured that Needleman kid with an electrical shock. He was going to report the carnival to the authorities. So, I had to pay him off to keep him quiet."
+"extortion/blackmail"	-1	5	"Not satisfied with the first payment, Needleman wanted more money. His latest demand is $15,000."
+"insurance/policy" or "insurance policy"	-1	5	"I needed the money to cover for Needleman somehow."
 
-Section 19 - Table of Janitor Movements
+Section 20 - Table of Janitor Movements
 
 Table of Janitor Movements
 mins (number)	destination (object)	
@@ -3986,7 +4042,7 @@ mins (number)	destination (object)
 55	TB-room
 0	Head of the Line
 
-Section 20 - Table of Owner Movements
+Section 21 - Table of Owner Movements
 
 Table of Owner Movements
 mins (number)	destination (object)	
@@ -4003,17 +4059,17 @@ mins (number)	destination (object)
 53	Dungeon
 58	Guillotine Room
 
-Section 21 - Introduction to Hell Ride
+Section 22 - Introduction to Hell Ride
 
 When play begins:
 	choose row 1 in Table of Help Options;
 	now description entry is "[story title] - A ride to remember...
 
-You[']re a part-time reporter for The Tribune, the local paper. Earlier in the day, your editor called you and told you of a conversation he overheard between the Chief of Police and his Deputy about Whidbey Amusements. It seems there has been a rash of accidents and mishaps at the carnival. Sounds like there could be something suspicious going on. He wants you to collect evidence and write a hard hitting piece about it.
+You[']re a part-time reporter for The Tribune, the local paper. Earlier in the day, your editor called you and told you of a conversation he overheard between the Chief of Police and his Deputy about Whidbey Amusements. It seems there has been a rash of accidents and mishaps at the carnival. Sounds like there could be something suspicious going on. He wants you to collect evidence and write a hard hitting piece about it. If you do a good job, maybe the paper will hire you on full-time.
 
 As you explore the carnival, you learn (the hard way) that the [story title] attraction is malfunctioning with the potential for serious injuries to the riders. You must disable the ride and prevent any loss of life... including your own."
 
-Section 22 - Hell Ride Origins
+Section 23 - Hell Ride Origins
 
 When play begins:
 	 choose row 2 in Table of Help Options;
@@ -4033,7 +4089,7 @@ I hope you enjoy it.
 d.[line break]
 (dmontgom22@gmail.com)"
 
-Section 23 - Credits
+Section 24 - Credits
 
 Crediting is an action applying to nothing. Understand "Credits" as crediting.
 instead of crediting:
@@ -4097,7 +4153,7 @@ Test Backstage with "test b1 / test b2 / test b3 / test b4"
 
 Chapter 5 - Concession Stand
 
-Test Concession with "brief / s / steal brass ring / s / steal brass key / n / sw / l at treats / read menu / buy cola / buy popcorn / buy candy apple / buy cotton candy / buy pretzel / buy bubblegum / drink soda / g / g / g / g / w / open trash can / get khaki fuse / e / s / x photo / x safe / turn dial to 62 / turn dial to 22 / turn dial to 3 / open safe / get indigo fuse / n / ne / n / i / score / ".
+Test Concession with "brief / s / steal brass ring / s / steal brass key / n / sw / l at treats / read menu / buy cola / buy popcorn / buy candy apple / buy cotton candy / buy pretzel / buy bubblegum / drink soda / g / g / g / g / w / open trash can / get khaki fuse / e / s / x photo / x safe / turn dial to 62 / turn dial to 22 / turn dial to 3 / open safe / s / open safe / get indigo fuse / n / ne / n / i / score / ".
 
 Chapter 6 - Hell Ride
 
@@ -4183,67 +4239,7 @@ title (text)	subtable (table name)	description (text)	toggle (rule)	used (number
 "The Control Room"	Table of Control Room Hints	--
 "How Points Are Awarded (Spoilers)"	--	""
 
-Chapter 3 - Table of IF Introduction
-
-Table of IF Introduction
-title (text)	subtable (table name)	description (text)	toggle (rule)	used (number)	bookpage (number)	localpage (number)
-"About Interactive Fiction"	--	"The game you are playing is a work of Interactive Fiction. In interactive fiction you play the main character of a story. You type commands which determine the actions of the character and the flow of the plot. Some IF games include graphics, but most do not: the imagery is provided courtesy of your imagination. On the other hand, there[']s a wide range of action available: whereas in other games you may be restricted to shooting, movement, or searching items you can click on with a mouse, IF allows you a wide range of verbs."
-"What to do with >"	--	"The > sign is where the game says, 'Okay, what do you want to do now?' You may respond by typing an instruction -- usually an imperative verb, possibly followed by prepositions and objects. So, for instance, LOOK, LOOK AT FISH, TAKE FISH."
-"Getting Started"	--	"The first thing you want to do when starting a game is acquaint yourself with your surroundings and get a sense of your goal. To this end, you should read the introductory text carefully. Sometimes it contains clues. You will also want to look at the room you are in. Notice where the exits from the room are, and what objects are described here. If any of these seem interesting, you may want to EXAMINE them. (You can abbreviate the EXAMINE command to just X, if you want.)
-
-You might also want to examine yourself (EXAMINE ME or X ME) to see whether the author has left you any clues about your character. INVENTORY (I for short) will tell you what you[']re carrying, as well.
-
-Once you[']ve gotten your bearings, you may want to explore. Move from room to room, and check out every location available."
-"Rooms and Travel"	--	"At any given time, you are in a specific location, or room. When you go into a room, the game will print a description of what you can see there. This description will contain two vital kinds of information: things in the room you can interact with or take, and a list of exits, or ways out. If you want to see the description again, you may just type LOOK (L for short). 
-
-When you want to leave a location and go to another one, you may communicate this to the game using compass directions: e.g., GO NORTH. For simplicity[']s sake, you are allowed to omit the word GO, and to abbreviate the compass directions. So you may use NORTH, SOUTH, EAST, WEST, NORTHEAST, SOUTHEAST, NORTHWEST, SOUTHWEST, UP, and DOWN, or in short form N, S, E, W, NE, SE, NW, SW, U, and D.
-
-In some locations, IN and OUT will also be useful."
-"Objects"	--	"Throughout the game there will be assorted objects that you can do things with. Most importantly, you may TAKE or GET items, and (when you are tired of them) DROP them again. INVENTORY (abbreviated I) will list the items you are currently holding. 
-
-There are usually assorted things you may do with these objects. OPEN, CLOSE, WEAR, EAT, LOCK, and UNLOCK are especially common.
-
-Occasionally, you will find that the game does not recognize the name of an object even though it has been described as being in the room with you. If this is the case, the object is just there for scenery, and you may assume that you do not need to interact with it."
-"Controlling the Game"	--	"There are a few simple commands for controlling the game itself. These are: 
-
-SAVE saves a snapshot of the game as it is now. 
-RESTORE puts the game back to a previous saved state. You may keep as many saved games as you like. 
-RESTART puts the game back to the way it was at the beginning. 
-QUIT ends the game."
-"How the World is Assembled"	table of world assembly	--
-"If You Get Stuck"	table of stuck	--
-
-Chapter 4 - How the World is Assembled
-
-Table of World Assembly
-title (text)	subtable (table name)	description (text)	toggle (rule)	used (number)	bookpage (number)	localpage (number)
-"Space"	--	"Most IF games are set in a world made up of rooms without internal division. Movement between rooms is possible, but movement within a room does not always amount to anything. >WALK OVER TO THE DESK is rarely a useful sort of command. On the other hand, if something is described as being high or out of reach, it is sometimes relevant to stand on an object to increase your height. This kind of activity tends to be important only if prompted by the game text."
-"Containment"	--	"One thing that IF does tend to model thoroughly is containment. Is something in or on something else? The game keeps track of this, and many puzzles have to do with where things are -- in the player[']s possession, lying on the floor of the room, on a table, in a box, etc."
-"Types of Actions"	--	"Most of the actions you can perform in the world of IF are brief and specific. >WALK WEST or >OPEN DOOR are likely to be provided. >TAKE A JOURNEY or >BUILD A TABLE are not. Things like >GO TO THE HOTEL are on the borderline: some games allow them, but most do not. In general, abstract, multi-stage behavior usually has to be broken down in order for the game to understand it."
-"Other Characters"	--	"Other characters in IF games are sometimes rather limited. On the other hand, there are also games in which character interaction is the main point of the game. You should be able to get a feel early on for the characters -- if they seem to respond to a lot of questions, remember what they[']re told, move around on their own, etc., then they may be fairly important. If they have a lot of stock responses and don[']t seem to have been the game designer[']s main concern, then they are most likely present either as local color or to provide the solution to a specific puzzle or set of puzzles. Characters in very puzzle-oriented games often have to be bribed, threatened, or cajoled into doing something that the player cannot do -- giving up a piece of information or an object, reaching something high, allowing the player into a restricted area, and so on."
-
-Chapter 5 - If You Get Stuck
-
-Table of Stuck
-title (text)	subtable (table name)	description (text)	toggle (rule)	used (number)	bookpage (number)	localpage (number)
-"Explore"	--	"Examine every object and look at everything in your inventory. Open all the doors you can find, and go through them. Look inside all closed containers. Make sure you[']ve exhausted all the options in your environment. 
-
-Try out all your senses. If the game mentions texture, odor, or sound, try touching, smelling, listening to, or tasting objects.
-
-Be thorough. If you still can[']t figure out what to do, try opening windows, looking under beds, etc. Sometimes objects are well-hidden."
-"Read Carefully"	--	"Reread. Look back at things you[']ve already looked at. Sometimes this will trigger an idea you hadn[']t thought of. 
-
-Take hints from the prose of the game. Things that are described in great detail are probably more important than things that are given one-liners. Play with those objects. If a machine is described as having component parts, look at the parts, and try manipulating them. Likewise, notice the verbs that the game itself uses. Try using those yourself. Games often include special verbs -- the names of magic spells, or other special commands. There[']s no harm in attempting something if the game mentions it.
-
-Check the whole screen. Are there extra windows besides the main window? What[']s going on in those? Check out the status window, if there is one -- it may contain the name of the room you[']re in, your score, the time of day, your character[']s state of health, or some other important information. If there[']s something up there, it[']s worth paying attention to that, too. When and where does it change? Why is it significant? If the bar is describing your character[']s health, you can bet there is probably a point at which that will be important."
-"Be Creative"	--	"Rephrase. If there[']s something you want to do, but the game doesn[']t seem to understand you, try alternative wordings. 
-
-Try variations. Sometimes an action doesn[']t work, but does produce some kind of unusual result. These are often indications that you[']re on the right track, even if you haven[']t figured out quite the right approach yet. Pressing the red button alone may only cause a grinding noise from inside the wall, so perhaps pressing the blue and then the red will open the secret door.
-
-Consider the genre of the game. Mysteries, romances, and thrillers all have their own types of action and motivation. What are you trying to do, and how do conventional characters go about doing that? What[']s the right sort of behavior for a detective/romance heroine/spy?"
-"Cooperate"	--	"Play with someone else. Two heads are often better than one. If that doesn[']t work, try emailing the author or (better yet) posting a request for hints on the 'Game Discussion, Hints and Reviews' forum at https://www.intfiction.org/forum/. For best results, put the name of the game you want help with in the subject line and describe your problem as clearly as possible in your post. Enclose the problem in the available spoiler tags (highlight the text and click the 'spoiler' button) so that no one will read about how you got to where you are in the game by accident. Someone on the forum will probably be able to tell you how to solve your problem or offer suggestions."
-
-Chapter 6 - The Parking Lot
+Chapter 3 - The Parking Lot
 
 Table of Parking Lot Hints
 title (text)	subtable (table name)	description (text)	toggle (rule)	used (number)	bookpage (number)	localpage (number)
@@ -4267,7 +4263,7 @@ title (text)	subtable (table name)	description (text)	toggle (rule)	used (number
 "hint"	--	"The parking attendant knows something about the stub"	
 "hint"	--	"Put the parking stub on the dashboard."
 
-Chapter 7 - The Attractions
+Chapter 4 - The Attractions
 
 Table of Attractions Hints
 title (text)	subtable (table name)	description (text)	toggle (rule)	used (number)	bookpage (number)	localpage (number)
@@ -4296,7 +4292,7 @@ title (text)	subtable (table name)	description (text)	toggle (rule)	used (number
 "hint"	-- 	"Get a tarot reading and learn you fortune."
 "hint"	--	"Pay attention to any advice she may give you."
 
-Chapter 8 - The Games 
+Chapter 5 - The Games 
 
 Table of Games Hints
 title (text)	subtable (table name)	description (text)	toggle (rule)	used (number)	bookpage (number)	localpage (number)
@@ -4327,7 +4323,7 @@ title (text)	subtable (table name)	description (text)	toggle (rule)	used (number
 "hint"	--	"You have to throw the baseball at the right bottle."
 "hint"	--	"Throw the baseball at bottle 5."
 
-Chapter 9 - Carnival Office
+Chapter 6 - Carnival Office
 
 Table of Carnival Office Hints
 title (text)	subtable (table name)	description (text)	toggle (rule)	used (number)	bookpage (number)	localpage (number)
@@ -4344,7 +4340,7 @@ title (text)	subtable (table name)	description (text)	toggle (rule)	used (number
 "hint"	--	"Look at the photo."
 "hint"	--	"The combination is the date backwards."
 
-Chapter 10 - Back Stage 
+Chapter 7 - Back Stage 
 
 Table of Back Stage Hints
 title (text)	subtable (table name)	description (text)	toggle (rule)	used (number)	bookpage (number)	localpage (number)
@@ -4360,7 +4356,7 @@ title (text)	subtable (table name)	description (text)	toggle (rule)	used (number
 "hint"	--	"You have to find it"
 "hint"	--	"It[']s in Electrical Closet One"
 
-Chapter 11 - Hell Ride Hints
+Chapter 8 - Hell Ride Hints
 
 Table of Hell Ride Hints
 title (text)	subtable (table name)	description (text)	toggle (rule)	used (number)	bookpage (number)	localpage (number)
@@ -4376,7 +4372,7 @@ title (text)	subtable (table name)	description (text)	toggle (rule)	used (number
 "hint"	--	"There[']s the Stocks, the Gallows, the Stake, the Dungeon, and the Guillotine."
 "hint"	--	"Just your typical ride in the dark."
 
-Chapter 12 - The Electrical Area Hints
+Chapter 9 - The Electrical Area Hints
 
 Table of Electrical Area Hints
 title (text)	subtable (table name)	description (text)	toggle (rule)	used (number)	bookpage (number)	localpage (number)
@@ -4396,7 +4392,7 @@ title (text)	subtable (table name)	description (text)	toggle (rule)	used (number
 "hint"	--	"Have you seen those colors anywhere else?"
 "hint"	--	"Have you put a fuse in a socket?"
 
-Chapter 13 - Fuse Hints
+Chapter 10 - Fuse Hints
 
 Table of Fuse Hints
 title (text)	subtable (table name)	description (text)	toggle (rule)	used (number)	bookpage (number)	localpage (number)
@@ -4428,7 +4424,7 @@ title (text)	subtable (table name)	description (text)	toggle (rule)	used (number
 "Where[']s the Quartz fuse?"	table of hinting	"It[']s in the Stake Room."
 "hint"	--	"It's in the pyre."
 
-Chapter 14 - The Control Room Hints
+Chapter 11 - The Control Room Hints
 
 Table of Control Room Hints
 title (text)	subtable (table name)	description (text)	toggle (rule)	used (number)	bookpage (number)	localpage (number)
@@ -4447,3 +4443,63 @@ title (text)	subtable (table name)	description (text)	toggle (rule)	used (number
 "hint"	--	"Is there a number that corresponds to each color?"
 "hint"	--	"Aqua = A = 1, Crimson = C = 3, etc."
 "hint"	--	"Push the indigo button."
+
+Chapter 12 - Table of IF Introduction
+
+Table of IF Introduction
+title (text)	subtable (table name)	description (text)	toggle (rule)	used (number)	bookpage (number)	localpage (number)
+"About Interactive Fiction"	--	"The game you are playing is a work of Interactive Fiction. In interactive fiction you play the main character of a story. You type commands which determine the actions of the character and the flow of the plot. Some IF games include graphics, but most do not: the imagery is provided courtesy of your imagination. On the other hand, there[']s a wide range of action available: whereas in other games you may be restricted to shooting, movement, or searching items you can click on with a mouse, IF allows you a wide range of verbs."
+"What to do with >"	--	"The > sign is where the game says, 'Okay, what do you want to do now?' You may respond by typing an instruction -- usually an imperative verb, possibly followed by prepositions and objects. So, for instance, LOOK, LOOK AT FISH, TAKE FISH."
+"Getting Started"	--	"The first thing you want to do when starting a game is acquaint yourself with your surroundings and get a sense of your goal. To this end, you should read the introductory text carefully. Sometimes it contains clues. You will also want to look at the room you are in. Notice where the exits from the room are, and what objects are described here. If any of these seem interesting, you may want to EXAMINE them. (You can abbreviate the EXAMINE command to just X, if you want.)
+
+You might also want to examine yourself (EXAMINE ME or X ME) to see whether the author has left you any clues about your character. INVENTORY (I for short) will tell you what you[']re carrying, as well.
+
+Once you[']ve gotten your bearings, you may want to explore. Move from room to room, and check out every location available."
+"Rooms and Travel"	--	"At any given time, you are in a specific location, or room. When you go into a room, the game will print a description of what you can see there. This description will contain two vital kinds of information: things in the room you can interact with or take, and a list of exits, or ways out. If you want to see the description again, you may just type LOOK (L for short). 
+
+When you want to leave a location and go to another one, you may communicate this to the game using compass directions: e.g., GO NORTH. For simplicity[']s sake, you are allowed to omit the word GO, and to abbreviate the compass directions. So you may use NORTH, SOUTH, EAST, WEST, NORTHEAST, SOUTHEAST, NORTHWEST, SOUTHWEST, UP, and DOWN, or in short form N, S, E, W, NE, SE, NW, SW, U, and D.
+
+In some locations, IN and OUT will also be useful."
+"Objects"	--	"Throughout the game there will be assorted objects that you can do things with. Most importantly, you may TAKE or GET items, and (when you are tired of them) DROP them again. INVENTORY (abbreviated I) will list the items you are currently holding. 
+
+There are usually assorted things you may do with these objects. OPEN, CLOSE, WEAR, EAT, LOCK, and UNLOCK are especially common.
+
+Occasionally, you will find that the game does not recognize the name of an object even though it has been described as being in the room with you. If this is the case, the object is just there for scenery, and you may assume that you do not need to interact with it."
+"Controlling the Game"	--	"There are a few simple commands for controlling the game itself. These are: 
+
+SAVE saves a snapshot of the game as it is now. 
+RESTORE puts the game back to a previous saved state. You may keep as many saved games as you like. 
+RESTART puts the game back to the way it was at the beginning. 
+QUIT ends the game."
+"How the World is Assembled"	table of world assembly	--
+"If You Get Stuck"	table of stuck	--
+
+Chapter 13 - How the World is Assembled
+
+Table of World Assembly
+title (text)	subtable (table name)	description (text)	toggle (rule)	used (number)	bookpage (number)	localpage (number)
+"Space"	--	"Most IF games are set in a world made up of rooms without internal division. Movement between rooms is possible, but movement within a room does not always amount to anything. >WALK OVER TO THE DESK is rarely a useful sort of command. On the other hand, if something is described as being high or out of reach, it is sometimes relevant to stand on an object to increase your height. This kind of activity tends to be important only if prompted by the game text."
+"Containment"	--	"One thing that IF does tend to model thoroughly is containment. Is something in or on something else? The game keeps track of this, and many puzzles have to do with where things are -- in the player[']s possession, lying on the floor of the room, on a table, in a box, etc."
+"Types of Actions"	--	"Most of the actions you can perform in the world of IF are brief and specific. >WALK WEST or >OPEN DOOR are likely to be provided. >TAKE A JOURNEY or >BUILD A TABLE are not. Things like >GO TO THE HOTEL are on the borderline: some games allow them, but most do not. In general, abstract, multi-stage behavior usually has to be broken down in order for the game to understand it."
+"Other Characters"	--	"Other characters in IF games are sometimes rather limited. On the other hand, there are also games in which character interaction is the main point of the game. You should be able to get a feel early on for the characters -- if they seem to respond to a lot of questions, remember what they[']re told, move around on their own, etc., then they may be fairly important. If they have a lot of stock responses and don[']t seem to have been the game designer[']s main concern, then they are most likely present either as local color or to provide the solution to a specific puzzle or set of puzzles. Characters in very puzzle-oriented games often have to be bribed, threatened, or cajoled into doing something that the player cannot do -- giving up a piece of information or an object, reaching something high, allowing the player into a restricted area, and so on."
+
+Chapter 14 - If You Get Stuck
+
+Table of Stuck
+title (text)	subtable (table name)	description (text)	toggle (rule)	used (number)	bookpage (number)	localpage (number)
+"Explore"	--	"Examine every object and look at everything in your inventory. Open all the doors you can find, and go through them. Look inside all closed containers. Make sure you[']ve exhausted all the options in your environment. 
+
+Try out all your senses. If the game mentions texture, odor, or sound, try touching, smelling, listening to, or tasting objects.
+
+Be thorough. If you still can[']t figure out what to do, try opening windows, looking under beds, etc. Sometimes objects are well-hidden."
+"Read Carefully"	--	"Reread. Look back at things you[']ve already looked at. Sometimes this will trigger an idea you hadn[']t thought of. 
+
+Take hints from the prose of the game. Things that are described in great detail are probably more important than things that are given one-liners. Play with those objects. If a machine is described as having component parts, look at the parts, and try manipulating them. Likewise, notice the verbs that the game itself uses. Try using those yourself. Games often include special verbs -- the names of magic spells, or other special commands. There[']s no harm in attempting something if the game mentions it.
+
+Check the whole screen. Are there extra windows besides the main window? What[']s going on in those? Check out the status window, if there is one -- it may contain the name of the room you[']re in, your score, the time of day, your character[']s state of health, or some other important information. If there[']s something up there, it[']s worth paying attention to that, too. When and where does it change? Why is it significant? If the bar is describing your character[']s health, you can bet there is probably a point at which that will be important."
+"Be Creative"	--	"Rephrase. If there[']s something you want to do, but the game doesn[']t seem to understand you, try alternative wordings. 
+
+Try variations. Sometimes an action doesn[']t work, but does produce some kind of unusual result. These are often indications that you[']re on the right track, even if you haven[']t figured out quite the right approach yet. Pressing the red button alone may only cause a grinding noise from inside the wall, so perhaps pressing the blue and then the red will open the secret door.
+
+Consider the genre of the game. Mysteries, romances, and thrillers all have their own types of action and motivation. What are you trying to do, and how do conventional characters go about doing that? What[']s the right sort of behavior for a detective/romance heroine/spy?"
+"Cooperate"	--	"Play with someone else. Two heads are often better than one. If that doesn[']t work, try emailing the author or (better yet) posting a request for hints on the 'Game Discussion, Hints and Reviews' forum at https://www.intfiction.org/forum/. For best results, put the name of the game you want help with in the subject line and describe your problem as clearly as possible in your post. Enclose the problem in the available spoiler tags (highlight the text and click the 'spoiler' button) so that no one will read about how you got to where you are in the game by accident. Someone on the forum will probably be able to tell you how to solve your problem or offer suggestions."
