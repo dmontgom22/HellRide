@@ -2,7 +2,7 @@ Start of a transcript of:
 
 Hell Ride
 The ride of a lifetime... by No Shoes
-Release 201 / Serial number 250218 / Inform 7 v10.1.2 / D
+Release 201 / Serial number 250221 / Inform 7 v10.1.2 / D
 Inform 7 v10.1.2
 Identification number: //E0A5AFB9-18BF-4485-B083-426CA51CCE70//
 Interpreter version 0.6.0 / VM 3.1.3
@@ -115,24 +115,48 @@ You lift the mallet high and bring it down on the lever with all your might! The
  
 You can't be sure of it but it seems as if the mallet isn't heavy enough to ring the bell.
 
->ne
+>se
 
-Dime Toss Game
-The game booth is adorned with vibrant colors - red-and-white striped awnings, twinkling lights, and eye-catching signage that reads "TOSS A DIME - WIN A PRIZE!". You can see prizes of all shapes and sizes hang around the booth, from stuffed animals and novelty toys to shiny trinkets and quirky collectibles. The larger prizes are prominently displayed to entice passersby. Rows of gleaming plates sparkle under overhead lights, their glass surfaces reflecting the surrounding glow.
+Pitchers Mound
+The milk bottle ball toss is a classic carnival game that combines skill, strength, and a bit of luck. The setup features a pyramid of brightly colored milk bottles stacked on a sturdy platform - three on the bottom, two in the middle, and one on top. Players stand behind a marked line and toss baseballs, aiming to knock down as many bottles as possible. Clearing the entire stack wins a prize.
 
-The distinctive "ping" of dimes hitting plates creates a rhythmic soundtrack, punctuated by the occasional satisfying "plop" when a dime lands perfectly. Victorious shouts mix with playful groans of near-misses, creating a symphony of excitement. Nearby, the hum of other booths, upbeat carnival music, and the distant laughter of children add to the lively backdrop. The booth operator calls out enthusiastically, "Step right up! Test your skill! Win big!" Their energetic pitch draws in curious onlookers. You thought you caught a flash of something coming from the area of the booth.
+The booth buzzes with energy, its colorful banners and flashing lights drawing a lively crowd. The satisfying clatter of falling bottles mixes with cheers and groans from players and spectators. A carnival attendant calls out, "Step right up and test your aim! Three balls for just a dime." Prizes - ranging from small toys to giant stuffed animals - hang prominently, enticing players to take a shot. With every toss, the game delivers moments of suspense, joy, and fun, making it a favorite at the carnival. The operator calls out, drawing in onlookers, as something catches your eye near the booth.
 
-You're surprised to see that this game only costs a dime. The exit is to the southwest.
+You're surprised to see that this game only costs a dime. The High Striker is to the northwest.
 
-You can see a Dime Toss attendant, some Dime Toss prizes, and a plate here.
+The milk bottles are stacked in three neat rows: three bottles on the bottom, two in the middle, and one on top.
 
->look under booth
+         1         
+       2   3     
+     4   5   6     
+
+
+You can also see a Pitchers Mound attendant and some Pitchers Mound prizes here.
+
+>l under booth
 You find the Mercury dime!
 
 >get mercury dime
 Taken.
 
 [Your score has just gone up by five points.]
+
+>nw
+
+High Striker
+You can see a Strongman attendant, a lever, and some High Striker prizes here.
+
+
+>ne
+
+Dime Toss Game
+The game booth is adorned with vibrant colors - red-and-white striped awnings, twinkling lights, and eye-catching signage that reads "TOSS A DIME - WIN A PRIZE!". You can see prizes of all shapes and sizes hang around the booth, from stuffed animals and novelty toys to shiny trinkets and quirky collectibles. The larger prizes are prominently displayed to entice passersby. Rows of gleaming plates sparkle under overhead lights, their glass surfaces reflecting the surrounding glow.
+
+The distinctive "ping" of dimes hitting plates creates a rhythmic soundtrack, punctuated by the occasional satisfying "plop" when a dime lands perfectly. Victorious shouts mix with playful groans of near-misses, creating a symphony of excitement. Nearby, the hum of other booths, upbeat carnival music, and the distant laughter of children add to the lively backdrop. The booth operator calls out enthusiastically, "Step right up! Test your skill! Win big!" Their energetic pitch draws in curious onlookers.
+
+You're surprised to see that this game only costs a dime. The exit is to the southwest.
+
+You can see a Dime Toss attendant, some Dime Toss prizes, and a plate here.
 
 >flip mercury dime on plate
 You toss the dime. The heavier Mercury dime hits the plate, starts to spins, and lands in the center of the plate. The attendant shouts out, "Winner! Winner!"
@@ -153,12 +177,6 @@ You can see a Strongman attendant, a lever, and some High Striker prizes here.
 >se
 
 Pitchers Mound
-The milk bottle ball toss is a classic carnival game that combines skill, strength, and a bit of luck. The setup features a pyramid of brightly colored milk bottles stacked on a sturdy platform - three on the bottom, two in the middle, and one on top. Players stand behind a marked line and toss baseballs, aiming to knock down as many bottles as possible. Clearing the entire stack wins a prize.
-
-The booth buzzes with energy, its colorful banners and flashing lights drawing a lively crowd. The satisfying clatter of falling bottles mixes with cheers and groans from players and spectators. A carnival attendant calls out, "Step right up and test your aim! Three balls for just a dime." Prizes - ranging from small toys to giant stuffed animals - hang prominently, enticing players to take a shot. With every toss, the game delivers moments of suspense, joy, and fun, making it a favorite at the carnival.
-
-You're surprised to see that this game only costs a dime. The High Striker is to the northwest.
-
 The milk bottles are stacked in three neat rows: three bottles on the bottom, two in the middle, and one on top.
 
          1         
@@ -169,7 +187,7 @@ The milk bottles are stacked in three neat rows: three bottles on the bottom, tw
 You can also see a Pitchers Mound attendant and some Pitchers Mound prizes here.
 
 >give dime to attendant
-The attendant gives you three baseballs in return and says, "Throw the baseball at bottle X where X is the bottle number you want to hit. The bottles are numbered one to six".
+The attendant gives you three baseballs in return.
 
 >throw baseball at bottle 5
 You wind up and throw the baseball at the milk bottles. The ball hits the bottles in the sweet spot and they topple over onto the platform. The attendant shouts out, "Winner! Winner!"
@@ -179,7 +197,11 @@ Which prize would you like? 1) a crimson colored fuse, 2) a plush donkey, 3) a g
 >1
 You are now holding a crimson colored fuse.
 
-[Your score has just gone up by five points.]
+[Your score has just gone up by ten points.]
+
+>give dime
+(to the Pitchers Mound attendant)
+The Pitchers Mound attendant says, "Sorry. You only get to play once."
 
 >nw
 
@@ -227,12 +249,7 @@ You can see a Strongman attendant, a lever, and some High Striker prizes here.
 >w
 
 Ticket Booth
-You can see a Cashier and a ticket kiosk here.
-
->z
-Time passes.
-
-The janitor arrives from the Carousel.
+You can see a janitor, a Cashier, and a ticket kiosk here.
 
 >steal brass ring
 The janitor says, "Hey! What do you think you're doing?!
@@ -243,6 +260,14 @@ The janitor slaps your hand away as you reach for the key.
 >steal brass ring
 Out of the corner of his eye, the janitor sees you reach for his key ring.
 
+The janitor heads to the High Striker.
+
+>e
+
+High Striker
+You can see a janitor, a Strongman attendant, a lever, and some High Striker prizes here.
+
+
 >steal brass ring
 The janitor catches you as he turns to face you.
 
@@ -251,7 +276,10 @@ While the janitor is distracted, you manage to steal the brass ring from the jan
 
 Taken.
 
-The janitor heads to the High Striker.
+>w
+
+Ticket Booth
+You can see a Cashier and a ticket kiosk here.
 
 >sw
 
@@ -390,7 +418,7 @@ You open the safe, revealing an indigo colored fuse, a gold key, and an insuranc
 >get all from safe
 indigo colored fuse: Taken.
 gold key: Taken.
-insurance policy: (putting the wallet into the fanny pack to make room)
+insurance policy: (putting the notebook into the fanny pack to make room)
 Taken.
 
 [Your score has just gone up by five points.]
@@ -403,7 +431,7 @@ Taken.
 You open the filing cabinet, revealing an envelope, a Cash 'N' Carry invoice, a Frank's Market invoice, an Oriental Trading invoice, and a Mystic Industries invoice.
 
 >get all invoices
-Cash 'N' Carry invoice: (putting the dime into the fanny pack to make room)
+Cash 'N' Carry invoice: (putting the wallet into the fanny pack to make room)
 Taken.
 Frank's Market invoice: (putting the dime into the fanny pack to make room)
 Taken.
@@ -446,7 +474,7 @@ You can also see a Concession Attendant, a menu, a Drink of Cola, a Bucket of Po
 >ne
 
 Ticket Booth
-You can see a janitor, a Cashier, and a ticket kiosk here.
+You can see a Cashier and a ticket kiosk here.
 
 >w
 The barker cries:
@@ -473,6 +501,39 @@ You hand over a dime, and the barker nods, waving you through. As you step past 
 
 Show Tent
 You are inside the Little Egypt Show. The attraction's facade is to the east. There are folding chairs organized neatly in rows. The show should start soon.
+
+>z
+Time passes.
+
+>z
+Time passes.
+
+>z
+Time passes.
+
+>z
+Time passes.
+
+>z
+Time passes.
+
+>z
+Time passes.
+
+>z
+Time passes.
+
+>z
+Time passes.
+
+>z
+Time passes.
+
+>z
+Time passes.
+
+>z
+Time passes.
 
 In the dimly lit tent, you see that the stage is decorated to resemble a Middle Eastern palace, featuring rich, colorful fabrics, brass ornaments, and lanterns casting a warm, flickering glow. Scents of incense waft through the air, enhancing the atmosphere of mystique. The backdrop displays painted scenes of pyramids, desert landscapes, and domed structures evoking a sense of being transported to the "Middle East". 
 
@@ -506,6 +567,9 @@ You applaud until your hands are sore. Did she just wink at you?
 As she leaves the stage, Little Egypt tosses one of her veils to you!
 
 
+>z
+Time passes.
+
 >wear veil
 You wrap the veil around your head, shrouding your eyes. The world is a lovely color pink as you look through the veil while her perfume fills your nostrils in the most delightful way. You look pretty!
 
@@ -529,8 +593,6 @@ You can see a Barker here.
 Ticket Booth
 You can see a janitor, a Cashier, and a ticket kiosk here.
 
-The janitor heads to the Bumper Cars.
-
 >s
 
 Head of the Line
@@ -538,8 +600,7 @@ You are standing in front of an attendant with his hand open waiting for your ti
 
 You can see a Hell Ride Attendant here.
 
->give ticket to attendant
-(the Hell Ride ticket to the Hell Ride Attendant)
+>give hell ride ticket to attendant
 You give the Hell Ride ticket to the Hell Ride Attendant.
 
 >s
@@ -558,6 +619,8 @@ You can see a Hell Ride car (empty) here.
 Dark Passage
 This room is backstage at the Hell Ride attraction. The room is littered with bags of trash, piles of junk, and dust bunnies so large they should be paying rent. There an exit to the south and west.
 
+You can see Mr Whidbey here.
+
 [Your score has just gone up by five points.]
 
 >x piles of junk
@@ -568,10 +631,14 @@ In the pile of junk is a flashlight.
 >get flashlight
 Taken.
 
+Over the loud speaker, an announcement blares: Attention please. There is a vehicle being towed from the parking lot for parking illegally. The license plate of the car is "862901". You breathe a sigh of relief as you realize that's not your license plate. I guess it's a good thing you remembered to place the parking stub on the dashboard.
+
 [Your score has just gone up by five points.]
 
 >turn it on
 You flip a switch. A strong, narrow beam of light shines from the lit flashlight.
+
+Mr Whidbey heads to the Maintenance Office.
 
 >w
 
@@ -581,25 +648,25 @@ You can see a Hell Ride car (empty) here.
 >n
 
 Head of the Line
-You can see Mr Whidbey and a Hell Ride Attendant here.
+You can see a Hell Ride Attendant here.
 
 >n
 
 Ticket Booth
-You can see a janitor, a Cashier, and a ticket kiosk here.
+You can see a Cashier and a ticket kiosk here.
 
-The janitor heads to the Carousel.
+>e
 
->ne
+High Striker
+You can see a Strongman attendant, a lever, and some High Striker prizes here.
 
-Carousel
-The carousel is a timeless carnival attraction, radiating charm and nostalgia with its brightly painted horses, vibrant lights, and cheerful music. The circular platform is adorned with a canopy of swirling colors, gold trim, and decorative mirrors that reflect the flickering bulbs lining its edges.
 
-Rows of hand-carved animals, most often horses with flowing manes, are arranged in a circle. Each is painted in vivid colors, detailed with golden saddles and ribbons. It also features creatures like lions, tigers, and sea dragons, adding whimsy to the ride. The animals rise and fall gently as the carousel spins, mimicking a galloping motion.
+>e
 
-The carousel's warm, playful tunes drift across the midway, inviting riders of all ages to enjoy its simple delight. Children laugh as they choose their favorite animals, while adults savor the nostalgia of the spinning ride. As it rotates, the carousel becomes a moving work of art, blending motion, color, and music into an enchanting centerpiece of the carnival. The Ticket Kiosk is back to the southwest; the way you came.
+Ferris Wheel
+Hey! Is that a two dollar bill on the ground?
 
-You can see a janitor and a Carousel Attendant here.
+You can also see a janitor and a Ferris Wheel Attendant here.
 
 >l at janitor
 The janitor looks at you and waits for you to proceed.
@@ -609,7 +676,15 @@ The janitor is a portly gentleman wearing dirty overalls, leaning on a broom. He
 >give flashlight to janitor
 Hey! Thanks, I really appreciate it. I've been lost without my flashlight.
 
->sw
+The janitor heads to the High Striker.
+
+>w
+
+High Striker
+You can see a janitor, a Strongman attendant, a lever, and some High Striker prizes here.
+
+
+>w
 
 Ticket Booth
 You can see a Cashier and a ticket kiosk here.
@@ -622,7 +697,7 @@ You can see a Hell Ride Attendant here.
 >s
 
 Ride Entrance
-You can see Mr Whidbey and a Hell Ride car (empty) here.
+You can see a Hell Ride car (empty) here.
 
 >e
 
@@ -681,7 +756,7 @@ Currently there are sparks arcing out from the switch. It looks dangerous.
 >flip switch
 You switch the big switch off.
 
-[Your score has just gone up by ten points.]
+[Your score has just gone up by five points.]
 
 >e
 
@@ -689,8 +764,6 @@ Dark Hallway
 Nearby a metal door leads west to Control Room.
 
 Nearby a ladder leads down to the Maintenance Office.
-
-Over the loud speaker, an announcement blares: Attention please. There is a vehicle being towed from the parking lot for parking illegally. The license plate of the car is "862901". You breathe a sigh of relief as you realize that's not your license plate. I guess it's a good thing you remembered to place the parking stub on the dashboard.
 
 >d
 
@@ -700,8 +773,6 @@ Nearby a ladder leads up to Dark Hallway.
 Nearby an aqua colored door leads west.
 
 You can also see a worn photo and a desk (on which are a coffee mug and a radio) here.
-
-Mr Whidbey arrives from Dark Passage.
 
 >s
 
@@ -767,7 +838,7 @@ You can see a Hell Ride car (empty) here.
 >n
 
 Head of the Line
-You can see a Hell Ride Attendant here.
+You can see a janitor and a Hell Ride Attendant here.
 
 >n
 
@@ -799,7 +870,9 @@ Taken.
 >se
 
 Ticket Booth
-You can see a janitor, a Cashier, and a ticket kiosk here.
+You can see a Cashier and a ticket kiosk here.
+
+The janitor arrives from the Head of the Line.
 
 >e
 
@@ -816,14 +889,23 @@ Which prize would you like? 1) a teddy bear, 2) a Swiss Army knife, 3) a magenta
 You are now holding a Swiss Army knife.
 (putting the Bumper Cars ticket into the fanny pack to make room)
 
-[Your score has just gone up by ten points.]
+[Your score has just gone up by five points.]
+
+>hit target with sledge
+As you swing, you feel the extra weight from the sledgehammer. As it comes down on the bullseye, you can't help but feel like the extra weight gives you an edge. The bell rings as the striker reaches the top of the pole. The attendant says, "You're a Muscle Man. Here's a prize for you."
+
+Which prize would you like? 1) a teddy bear, 3) a magenta colored fuse, 4) a poster of Taylor Swift?
+
+>3
+You are now holding a magenta colored fuse.
+(putting the Carousel ticket into the fanny pack to make room)
+
+[Your score has just gone up by five points.]
 
 >w
 
 Ticket Booth
 You can see a janitor, a Cashier, and a ticket kiosk here.
-
-The janitor heads to the Concession Stand.
 
 >s
 
@@ -988,7 +1070,7 @@ You fork over $3.50 for the aqua colored fuse, leaving yourself with $13.50.
 [Your score has just gone up by ten points.]
 
 >n
-As you enter the room, you can see Mr Whidbey across the way. He seems to be doing something around the guillotine platform. You walk closer to see what he is doing and startle him. Mr Whidbey spins around and stares at you. As he turns and walks out of the guillotine room, you think you saw him drop something.
+As you enter the room, you can see Mr Whidbey across the way. He seems to be doing something around the guillotine platform. You walk closer to see what he is doing and startle him. Mr Whidbey spins around and glares at you. As he turns and walks out of the room, you think you saw him drop something.
 
 Guillotine Room
 The public square buzzes with tense anticipation, a crowd gathered under gray skies that cast a somber light on the cobblestones. At the center, a stark wooden platform looms, its purpose grim and unavoidable.
@@ -1001,7 +1083,9 @@ The condemned flinches but remains silent as the executioner - a hooded figure i
 
 As the condemned approaches the guillotine, a crow caws sharply from a nearby rooftop, its cry echoing through the square like an omen. The crowd leans forward, breath held, as justice and mortality converge on the scene.
 
-There is just one problem: the guillotine is being raised and lowered by some mechanism. It appears that the timing of the guillotine is off and it is being lowered onto the cars instead of between them. If a person were to be in a car as it passed under the guillotine, they would be seriously injured.  You're glad you're not in one of those cars now. 
+There is just one problem: the guillotine is being raised and lowered by some mechanism. It appears that the timing of the guillotine is off and it is being lowered onto the cars instead of between them. If a person were to be in a car as it passed under the guillotine, they would be seriously injured.
+
+You're glad you're not in one of those cars now. You must do something to stop it before someone get's hurt! 
 
 Nearby an indigo colored door leads east to the Generator Room.
 
@@ -1271,14 +1355,8 @@ The indigo colored dial is now set to 9.
 >turn khaki dial to 11
 The khaki colored dial is now set to 11.
 
->display evidence
-Evidence acquired by asking the janitor about:
-
-Evidence acquired by showing something to the janitor:
-
-Evidence acquired by asking Mr Whidbey about:
-
-Evidence acquired by showing something to Mr Whidbey:
+>show evidence
+  Weight   Evidence collected:
 
 >push indigo button
 You switch the indigo button on.
@@ -1287,19 +1365,40 @@ The monitor flickers for a second and the scene it displays changes to something
 The monitor now shows a tableau of a guillotine rising and falling over the ride exit.
 The indigo light is now on.
 
-As you push the indigo button, the monitor switches to a view of the guillotine room. You can still see the blade rising and falling over the cars. Suddenly, you see the blade slowing down, taking longer and longer to fall. Until it finally comes to a complete rest.
+As you push the indigo button, the monitor switches to a view of the guillotine room. You still see the blade rising and falling over the cars. Suddenly, the blade starts slowing down, taking longer and longer to fall. Until it finally comes to a complete rest.
 
 The room is heavy with uneasy silence. Hell Ride, once a thrilling spectacle, now looms motionless, as the guillotine blade is frozen halfway down its track. Moments ago, chaos erupted as the malfunctioning mechanism sent the blade crashing unpredictably, ripping through the roofs of cars on the track.
 
 A single car, its roof gashed open, sits under the still blade - a grim reminder of the disaster narrowly averted. Above, a black crow lands on the guillotine's frame, its sharp caw cutting through the murmurs of anger and fear.
 
-Two mechanics climb the scaffolding with tools in hand, their appearance met with wary hope. A crowd has gathered and is watching, holding their breath, as the cursed ride's fate hangs in the balance.
+Two mechanics climb the scaffolding with tools in hand, their appearance met with wary hope. A crowd has gathered and is watching, holding their breath, as the cursed ride's fate hangs in the balance. After a moment, applause rises from the assembled crowd, cheering your accomplishment.
 
-As you exit the ride, the carnival owner and the mayor are present and extending their undying gratitude for saving the day, not to mention lives!
+Mr. Whidbey, the Mayor, and the Chief of Police arrive on the scene and extend their gratitude for saving the day, not to mention lives!
 
-*** You have won! ***
+"But wait", you say, "There is more afoot here than meets the eye. I think we need to talk to Mr Whidbey some more... confront him about a few things. Accusations might be made."
 
-You've received 200 points out of a possible 200 in 188 moves!
+Mr Whidbey exclaims, "Accusations? What accusations?
+
+The Police Chief listens with interest to what you have to say.
+
+>l
+Control Room
+The backstage control room is a plain, functional hub where the carnival's rides, lights, and attractions are managed. Gray industrial walls, scuffed and greasy, surround a large monitor streaming live carnival feeds. Beneath them, control panels with labeled dials, colored buttons, and lights oversee the systems scattered about the room. Glancing at the control panels, you can see they are lit up like a Christmas tree.
+
+The hum of electronics fills the air, punctuated by the crackle of a radio: "Maintenance to Bumper Cars - wrench needed!" The worn floor is scattered with papers, tools, and coffee cups. A cluttered desk holds logs and schedules, while a cork board above displays charts and red-marked notes like "Check Zipper circuit breakers."
+
+A flickering light casts cold shadows as the metallic tang of machinery mixes with dampness. Functional yet essential, this hidden space ensures the carnival's magic runs seamlessly. On one wall is a large switch.
+
+A dark hallway lies to the east.
+
+Nearby a metal door leads east to Dark Hallway.
+
+You can also see a janitor, Mayor, Chief of Police, Mr Whidbey, and a big switch here.
+
+The janitor heads to the Carousel.
+
+>score
+You've received 200 points out of a possible 200 in 209 moves!
 
 You have received points for the following: 
 
@@ -1308,7 +1407,7 @@ You have received points for the following:
 ?  Buying the Hell Ride ticket:              5 points
 ?  Taking the Mercury dime:                  5 points
 ?  Winning the horseshoe magnet:             5 points
-?  Winning the Crimson fuse:                 5 points
+?  Winning the Crimson fuse:                 10 points
 ?  Acquiring the Khaki fuse:                 10 points
 ?  Finding the insurance policy:             5 points
 ?  Acquiring the Indigo fuse:                10 points
@@ -1322,10 +1421,11 @@ You have received points for the following:
 ?  Finding the Dark Passage:                 5 points
 ?  Taking the flashlight:                    5 points
 ?  Finding the Control Room:                 5 points
-?  Turning off the big switch:               10 points
+?  Turning off the big switch:               5 points
 ?  Bringing the wrench to the Bumper Cars:   5 points
 ?  Acquiring the Gray fuse:                  10 points
-?  Winning the Swiss Army knife:             10 points
+?  Winning the Swiss Army knife:             5 points
+?  Winning the Magenta fuse:                 5 points
 ?  Acquiring the Emerald fuse:               10 points
 ?  Acquiring the Aqua fuse:                  10 points
 ?  Acquiring the pliers:                     5 points
@@ -1336,6 +1436,61 @@ You have received points for the following:
 ?  Flipping the Indigo switch:               5 points
 ?  Flipping the Khaki switch:                5 points
 
+>ask whidbey about indigo fuse
+Mr Whidbey looks at you expectantly.
 
-Would you like to RESTART, RESTORE a saved game, QUIT, or UNDO the last command?
-> 
+"Where did you get that?" Mr Whidbey asks.
+
+Mr. Whidbey's eyes dart up and to the left.
+
+You've discovered some evidence. To see a list and weighting of the evidence you've collected, type "SHOW EVIDENCE".
+
+>show the insurance policy to whidbey
+"An insurance policy? Of course, all reputable business have insurance. Even small time carnivals", Mr Whidbey stammers.
+
+>ask whidbey about insrance
+Mr Whidbey nervously shifts his weight from one foot to the other.
+
+"Sorry, I don't know much about that," Mr Whidbey exclaims.
+
+>ask whidbey about insurance
+Mr Whidbey looks at you expectantly.
+
+"An insurance policy? Of course, all reputable businesses have insurance. Even small time carnivals" Mr Whidbey stammers.
+
+>ask whidbey about cash 'n' carry
+Mr Whidbey nervously shifts his weight from one foot to the other.
+
+"Hmm, you've got me there," Mr Whidbey drawls.
+
+>ask whidbey about invoices
+Mr Whidbey looks at you expectantly.
+
+Mr Whidbey says, "I know this doesn't look good but the cost of consumables go up every week and attendance is down. I have to pinch pennies somehow, don't I? And that fire was very expensive to repair."
+
+>show cash 'n' carry to whidbey
+(first taking the Cash 'N' Carry invoice)
+Mr Whidbey says, "Money's a little tight. The cost of consumables go up every week."
+
+Mr. Whidbey's eyes dart up and to the left.
+
+>show frank's market to whidbey
+(first taking the Frank's Market invoice)
+Mr Whidbey says, "I can't keep up with the cost of ingredients. Everything costs so much!"
+
+>show oriental trading to whidbey
+(first taking the Oriental Trading invoice)
+Mr Whidbey says, "There must be prizes for the games otherwise visitors wouldn't play them. Maybe people won't win so often."
+
+>show mystic industries to whidbey
+(first taking the Mystic Industries invoice)
+Mr Whidbey says, That fire in Hell Ride was very expensive to repair. And it put the ride out of commission for two weeks."
+
+>show evidence
+  Weight   Evidence collected:
+?   12     Evidence concerning past due invoices
+?    6     Evidence concerning insurance
+?    5     Evidence concerning accidents with the attractions
+?    5     Evidence concerning fuses
+
+>

@@ -65,6 +65,8 @@ some fingernails are a thing. the fingernails are part of the player. the descri
 
 The coupon is in the wallet. The description of the coupon is "You found this in a stack of coupons on the counter of the gas station."
 
+The notebook is carried by the player. The description is "This is the notebook you use when investigating a report."
+
 before examining the coupon:
 	if show images is true, display Figure of Coupon.
 
@@ -85,9 +87,15 @@ when play begins:
 	
 The time of day is 7:53 PM.
 
+ferris wheel ridden is a truth state that varies. ferris wheel ridden is false. 
 hell ride disabled is a truth state that varies. hell ride disabled is false.
 total evidence is a number that varies. total evidence is 0.
 total accusation is a number that varies. total accusation is 0.
+
+evidence message is a truth state that varies. evidence message is false.
+every turn when total evidence is greater than 0 and evidence message is false:
+	now evidence message is true;
+	say "You[']ve discovered some evidence. To see a list and weighting of the evidence you[']ve collected, type 'SHOW EVIDENCE'.".
 	
 [obituary]
 Rule for printing the player's obituary:
@@ -351,7 +359,7 @@ every turn:
 		if the parking stub is on the dashboard:
 			say " You breathe a sigh of relief as you realize that[']s not your license plate. I guess it[']s a good thing you remembered to place the parking stub on the dashboard.";
 		if the parking stub is not on the dashboard:
-			say " Your heart sinks as you realize that is your license plate. You race to the parking lot in time to see the tow truck pull away with your car in tow";
+			say " Your heart sinks as you realize that is your license plate. You race to the parking lot in time to see the tow truck pull away with your car behind it";
 			now toadaway is true;
 			end the story finally.
 
@@ -445,7 +453,8 @@ every turn when the janitor is active:
 			move the janitor to the destination entry;
 			if the janitor can be seen by the player, say "The janitor arrives from [the last space].";
 			
-every turn when the janitor is passive, now the janitor is active.
+every turn when the janitor is passive and the location of the janitor is not the control room, now the janitor is active.
+every turn when the location of the janitor is the control room, now the janitor is passive.
 
 Before doing something to the janitor:
 	now the janitor is passive;
@@ -453,17 +462,25 @@ Before doing something to the janitor:
 
 instead of asking the janitor about a topic listed in the Table of Janitor Conversation Responses:
 	say "[response entry][paragraph break]";
-	if the turn stamp entry is -1:
-		now total evidence is total evidence plus the evidence weight entry;
-		now the turn stamp entry is the turn count.
+	if the turn stamp entry is -1 and the subject entry is not "NA":
+		now the turn stamp entry is the turn count;
+		let S be the subject entry;
+		let W be the weighting entry;
+		choose a row with a category of S in Table of Notebook;
+		now total entry is total entry plus W;
+		now total evidence is total evidence plus W.
 		
 instead of showing something to the janitor:
 	if there is an object of the noun in the Table of Janitor Object Responses:
 		choose a row with an object of noun in the Table of Janitor Object Responses;	
 		say "[response entry][paragraph break]";
-		if the turn stamp entry is -1:
-			now total evidence is total evidence plus the evidence weight entry;
+		let S be the subject entry;
+		let W be the weighting entry;
+		if the turn stamp entry is -1 and S is not "NA":
 			now the turn stamp entry is the turn count;
+			choose a row with an category of S in Table of Notebook;
+			now total entry is total entry plus W;
+			now total evidence is total evidence plus W.
 		
 instead of telling the janitor about something: try asking the noun about it.
 
@@ -484,14 +501,16 @@ Mr Whidbey is a male person. Mr Whidbey is in the Carnival Office. understand "m
 [the owner walks]
 every turn when Mr Whidbey is active:
 	let M be the minutes part of the time of day;
-	if there is a mins of M in the Table of Owner Movements:
-		choose a row with a mins of M in Table of Owner Movements;
-		let last space be the location of Mr Whidbey;
-		if Mr Whidbey can be seen by the player, say "Mr Whidbey heads to [the destination entry].";
-		move Mr Whidbey to the destination entry;
-		if Mr Whidbey can be seen by the player, say "Mr Whidbey arrives from [the last space].";
+	if hell ride disabled is false:
+		if there is a mins of M in the Table of Owner Movements:
+			choose a row with a mins of M in Table of Owner Movements;
+			let last space be the location of Mr Whidbey;
+			if Mr Whidbey can be seen by the player, say "Mr Whidbey heads to [the destination entry].";
+			move Mr Whidbey to the destination entry;
+			if Mr Whidbey can be seen by the player, say "Mr Whidbey arrives from [the last space].";
 		
-every turn when Mr Whidbey is passive, now Mr Whidbey is active.
+every turn when Mr Whidbey is passive:
+	now Mr Whidbey is active.
 
 Before doing something to Mr Whidbey:
 	now Mr Whidbey is passive;
@@ -502,9 +521,13 @@ instead of asking Mr Whidbey about a topic listed in the Table of Owner Conversa
 	say "[response entry][paragraph break]";
 	if  remainder after dividing WhidbeyQuestions by 4 is 0:
 		say "[one of]Mr. Whidbey[']s eyes dart up and to the left.[or]Mr. Whidbey quickly changes the subject[or]Mr. Whidbey meets your eyes and quickly looks away.[cycling]";
-	if the turn stamp entry is -1:
-		now total evidence is total evidence plus the evidence weight entry;
+	let S be the subject entry;
+	let W be the weighting entry;
+	if the turn stamp entry is -1 and S is not "NA":
 		now the turn stamp entry is the turn count;
+		choose a row with a category of S in Table of Notebook;
+		now total entry is total entry plus W;
+		now total evidence is total evidence plus W;
 	increment WhidbeyQuestions;
 		
 instead of showing something to Mr Whidbey:
@@ -513,9 +536,13 @@ instead of showing something to Mr Whidbey:
 		say "[response entry][paragraph break]";
 		if  remainder after dividing WhidbeyQuestions by 4 is 0:
 			say "[one of]Mr. Whidbey[']s eyes dart up and to the left.[or]Mr. Whidbey quickly changes the subject[or]Mr. Whidbey meets your eyes and quickly looks away.[cycling]";
-		if the turn stamp entry is -1:
-			now total evidence is total evidence plus the evidence weight entry;
+		let S be the subject entry;
+		let W be the weighting entry;
+		if the turn stamp entry is -1 and S is not "NA":
 			now the turn stamp entry is the turn count;
+			choose a row with an category of S in Table of Notebook;
+			now total entry is total entry plus W;
+			now total evidence is total evidence plus W;
 		increment WhidbeyQuestions;
 		
 instead of telling Mr Whidbey about something: try asking the noun about it.
@@ -525,42 +552,39 @@ understand "confront [someone] about/with [text]" as confronting it about.
 understand "accuse [someone] of/with [text]" as confronting it about.
 
 instead of confronting Mr Whidbey about a topic listed in the Table of Confrontation:
-	say "[response entry][paragraph break]";
-	if the turn stamp entry is -1:
-		now total accusation is total accusation plus the accusation weight entry;
-		now the turn stamp entry is the turn count.
-		
-instead of confronting somebody about something, say "There['] no need to confront [the noun] about [the topic understood].".
+	if total evidence is less than 41:
+		say "You don[']t have enough evidence to confront anyone about anything.";
+	otherwise if hell ride disabled is false:
+		say "As much as you would like to confront [the noun] about [the topic understood] you should probably take care of disabling [story title] first.";
+	otherwise:
+		say "[response entry][paragraph break]";
+		if the turn stamp entry is -1:
+			now total accusation is total accusation plus the accusation weight entry;
+			now the turn stamp entry is the turn count.
+	
+instead of confronting somebody about something, say "There[']s no need to confront [the noun] about [the topic understood].".
 
 Section 13 - Evidence and Accusations
 
-displaying evidence is an action out of world applying to nothing. Understand "display evidence" as displaying evidence. understand "show evidence" as displaying evidence.
-carry out displaying evidence:
-[	say "total evidence: [total evidence].";]
-	say "Evidence acquired by asking the janitor about:[line break]";
-	sort the Table of Janitor Conversation Responses in turn stamp order;
-	repeat through Table of Janitor Conversation Responses:
-		if turn stamp entry is not -1 and the evidence weight entry is greater than 0:
-			say "•	[description entry].[line break]";
-	say "[line break]";
-	say "Evidence acquired by showing something to the janitor:[line break]";
-	sort the Table of Janitor Object Responses in turn stamp order;
-	repeat through Table of Janitor Object Responses:
-		if turn stamp entry is not -1 and the evidence weight entry is greater than 0:
-			say "•	[description entry][line break]";
-	say "[line break]";
-	say "Evidence acquired by asking Mr Whidbey about:[line break]";
-	sort the Table of Owner Conversation Responses in turn stamp order;
-	repeat through Table of Owner Conversation Responses:
-		if turn stamp entry is not -1  and the evidence weight entry is greater than 0:
-			say "•	[description entry][line break]";
-	say "[line break]";
-	say "Evidence acquired by showing something to Mr Whidbey:[line break]";
-	sort the Table of Owner Object Responses in turn stamp order;
-	repeat through Table of Owner Object Responses:
-		if turn stamp entry is not -1 and the evidence weight entry is greater than 0:
-			say "•	[description entry][line break]";
+instead of examining the notebook:
+	sort the Table of Notebook in reverse total order;
+	say "[fixed letter spacing]  Weight   Evidence collected:[line break]";
+	repeat through the Table of Notebook:
+		if total entry is greater than 0:
+			say "[fixed letter spacing]•   [if total entry is less than 10] [end if][total entry]     [response entry][roman type][line break]";
 
+showing evidence is an action out of world applying to nothing. Understand "show evidence" as showing evidence.
+carry out showing evidence:
+	try examining notebook.
+
+displaying accusations is an action out of world applying to nothing. Understand "display accusations" as displaying accusations. understand "show accusations" as displaying accusations.
+carry out displaying accusations:
+[	say "total accusation: [total accusation].";]
+	say "Accusations made against Mr Whidbey:[line break]";
+	sort the Table of Confrontation in turn stamp order;
+	repeat through Table of Confrontation:
+		if turn stamp entry is not -1 and the accusation weight entry is greater than 0:
+			say "•	[description entry].[line break]";
 
 Section 14 - Scoring
 
@@ -581,7 +605,7 @@ criteria	point value	description	turn stamp
 "[if the player is carrying the lantern]Y[otherwise]N[end if]"	5	"Taking the lantern:                      "	-1
 "[if the player is carrying the flashlight]Y[otherwise]N[end if]"	5	"Taking the flashlight:                   "	-1
 "[if the player is carrying the mercury dime]Y[otherwise]N[end if]"	5	"Taking the Mercury dime:                 "	-1
-"[if the big switch is switched off]Y[otherwise]N[end if]"	10	"Turning off the big switch:              "	-1
+"[if the big switch is switched off]Y[otherwise]N[end if]"	5	"Turning off the big switch:              "	-1
 "[if the location is the Control Room]Y[otherwise]N[end if]"	5	"Finding the Control Room:                "	-1
 "[if the location is the Dark Passage]Y[otherwise]N[end if]"	5	"Finding the Dark Passage:                "	-1	
 "[if the bumper cars attendant is carrying the adjustable wrench]Y[otherwise]N[end if]"	5	"Bringing the wrench to the Bumper Cars:  "	-1
@@ -597,14 +621,14 @@ criteria	point value	description	turn stamp
 "[if electrical closet nine's electrical panel's switch is switched on]Y[otherwise]N[end if]"	5	"Flipping the Indigo switch:              "	-1
 "[if electrical closet eleven's electrical panel's switch is switched on]Y[otherwise]N[end if]"	5	"Flipping the Khaki switch:               "	-1
 "[if the player is carrying the teddy bear]Y[otherwise]N[end if]"	5	"Winning the teddy bear:                  "	-1
-"[if the player is carrying the Swiss Army knife]Y[otherwise]N[end if]"	10	"Winning the Swiss Army knife:            "	-1
+"[if the player is carrying the Swiss Army knife]Y[otherwise]N[end if]"	5	"Winning the Swiss Army knife:            "	-1
 "[if the player is carrying the poster of Taylor Swift]Y[otherwise]N[end if]"	5	"Winning the poster of Taylor Swift:      "	-1
 "[if the player is carrying the magenta fuse]Y[otherwise]N[end if]"	5	"Winning the Magenta fuse:                "	-1
 "[if the player is carrying the small plush monkey]Y[otherwise]N[end if]"	5	"Winning the stuffed monkey:              "	-1
 "[if the player is carrying the orange fuse]Y[otherwise]N[end if]"	5	"Winning the Orange fuse:                 "	-1
 "[if the player is carrying the poster of Billie Eilish]Y[otherwise]N[end if]"	5	"Winning the poster of Billie Eilish:     "	-1
 "[if the player is carrying the horseshoe magnet]Y[otherwise]N[end if]"	5	"Winning the horseshoe magnet:            "	-1
-"[if the player is carrying the crimson fuse]Y[otherwise]N[end if]"	5	"Winning the Crimson fuse:                "	-1
+"[if the player is carrying the crimson fuse]Y[otherwise]N[end if]"	10	"Winning the Crimson fuse:                "	-1
 "[if the player is carrying the small plush donkey]Y[otherwise]N[end if]"	5	"Winning the a plush donkey:              "	-1
 "[if the player is carrying the goldfish]Y[otherwise]N[end if]"	5	"Winning the goldfish in a bowl:          "	-1
 "[if the player is carrying the poster of Lourde]Y[otherwise]N[end if]"	5	"Winning the poster of Lourde:            "	-1
@@ -926,6 +950,7 @@ Does the player mean doing something with the bumper cars ticket when the locati
 Does the player mean doing something with the bumper cars ticket when the location is Guillotine Room: it is very unlikely.
 
 [mini knick-knacks]
+Does the player mean doing something with the mini ferris wheel when the mini ferris wheel is visible: it is likely.
 Does the player mean doing something with the mini ferris wheel when the player is carrying the mini ferris wheel: it is very likely.
 Does the player mean doing something with the mini carousel when the player is carrying the mini carousel: it is very likely.
 
@@ -944,14 +969,15 @@ Does the player mean doing something with the fingernail clippers when the playe
 Does the player mean doing something with the main generator when the location is the generator room: it is very likely.
 
 [pitchers mound]
-Does the player mean throwing a baseball when the location is the Pitchers Mound: it is very likely.
+Does the player mean throwing a baseball at something when the location is the Pitchers Mound: it is very likely.
 
 [high striker]
 Does the player mean doing something with the High Striker when the location is the HS-room: it is very likely.
 Does the player mean doing something with the mallet when the location is the HS-room: it is very likely.
 
 [mercury dime]
-Does the player mean doing something with the mercury dime when the location is the Dime Toss Game or the location is Pitchers Mound: it is likely.
+Does the player mean doing something with the mercury dime when the location is the Dime Toss Game: it is likely.
+Does the player mean doing something with the mercury dime when the location is the Pitchers Mound: it is very unlikely.
 
 [glove box]
 Does the player mean doing something with the glove box when the location is PL-room: it is very likely.
@@ -999,7 +1025,7 @@ instead of going when the location is the CS-room:
 		continue the action;
 	otherwise if the current action is going south:
 		continue the action;
-	otherwise if the current action is going west and the ferris wheel ticket is nowhere:
+	otherwise if the current action is going west and the ferris wheel ridden is true:
 		continue the action;
 	otherwise:
 		if Behind the Concession Stand is visited:
@@ -1359,6 +1385,32 @@ five dimes underlie the seat.
 
 The carrying capacity of the fanny pack is 50.
 
+displaying total evidence is an action out of world applying to nothing. Understand "display total evidence" as displaying total evidence.
+carry out displaying total evidence:
+	say "Evidence acquired by asking the janitor about:[line break]";
+	sort the Table of Janitor Conversation Responses in reverse weighting order;
+	repeat through Table of Janitor Conversation Responses:
+		if turn stamp entry is not -1 and the weighting entry is greater than 0:
+			say "•	[description entry].[line break]";
+	say "[line break]";
+	say "Evidence acquired by showing something to the janitor:[line break]";
+	sort the Table of Janitor Object Responses in reverse weighting order;
+	repeat through Table of Janitor Object Responses:
+		if turn stamp entry is not -1 and the weighting entry is greater than 0:
+			say "•	[description entry][line break]";
+	say "[line break]";
+	say "Evidence acquired by asking Mr Whidbey about:[line break]";
+	sort the Table of Owner Conversation Responses in reverse weighting order;
+	repeat through Table of Owner Conversation Responses:
+		if turn stamp entry is not -1  and the weighting entry is greater than 0:
+			say "•	[description entry][line break]";
+	say "[line break]";
+	say "Evidence acquired by showing something to Mr Whidbey:[line break]";
+	sort the Table of Owner Object Responses in reverse weighting order;
+	repeat through Table of Owner Object Responses:
+		if turn stamp entry is not -1 and the weighting entry is greater than 0:
+			say "•	[description entry][line break]";
+
 Displaying signs is an action out of world applying to nothing. Understand "display signs" as displaying signs.
 carry out displaying signs:
 	now sign table is Table of Tickets;
@@ -1669,8 +1721,11 @@ The electrical room is raw and utilitarian, revealing the fragile systems behind
 [if the location is electromagnetic]This room is oozing with electromagnetic energy. You can feel your hair stand on end and all your nerves twitching. This feels dangerous! There are exits in all directions.[otherwise]This room is eerily quiet, missing the ever present buzz of electricity. There are exits in all directions.[end if]".
 
 Instead of going from the Electrical Room:
-	if the big switch is switched on, move the player to a random adjacent room;
-	otherwise continue the action.
+	if the big switch is switched on:
+		now the player is in the generator room;
+		say "The electromagnetic energy in this room creates makes you confused and instead of going [the noun], you find yourself back in the Generator Room.";
+	otherwise:
+		continue the action.
 
 some metal panels are here. they are scenery. the description is "Some are polished, others are worn and streaked with grease.".
 a central breaker panel is here. It is scenery. The description is "This breaker panel controls various portions of the carnival.".
@@ -1845,12 +1900,33 @@ last report switching on a button when the switch count is 6 and the dial count 
 	now ControlPanelImage is figure choice entry;
 	say "The monitor flickers for a second and the scene it displays changes to something different.";
 	say "[description entry][line break]";
-	say "The [color of the holder of the noun] light is now on.";
+	say "The [color of the holder of the noun] light is now on.[paragraph break]";
 	now all buttons are switched off;
 	now the noun is switched on;
 	now the figure id of the monitor is N;
 	if the color of the holder of the noun is indigo:
-		end the story finally;
+		now hell ride disabled is true;
+		say "As you push the indigo button, the monitor switches to a view of the guillotine room. You still see the blade rising and falling over the cars. Suddenly, the blade starts slowing down, taking longer and longer to fall. Until it finally comes to a complete rest. 
+
+The room is heavy with uneasy silence. [story title], once a thrilling spectacle, now looms motionless, as the guillotine blade is frozen halfway down its track. Moments ago, chaos erupted as the malfunctioning mechanism sent the blade crashing unpredictably, ripping through the roofs of cars on the track.
+
+A single car, its roof gashed open, sits under the still blade — a grim reminder of the disaster narrowly averted. Above, a black crow lands on the guillotine’s frame, its sharp caw cutting through the murmurs of anger and fear.
+
+Two mechanics climb the scaffolding with tools in hand, their appearance met with wary hope. A crowd has gathered and is watching, holding their breath, as the cursed ride[’]s fate hangs in the balance. After a moment, applause rises from the assembled crowd, cheering your accomplishment.
+
+Mr. Whidbey, the Mayor, and the Chief of Police arrive on the scene and extend their gratitude for saving the day, not to mention lives![paragraph break]";
+		move Mr Whidbey to the Control Room;
+		move the Chief of Police to the Control Room;
+		move the Mayor to the Control Room;
+		move the janitor to the Control Room;
+		say "'But wait', you say, 'There is more afoot here than meets the eye. I think we need to talk to Mr Whidbey some more... confront him about a few things. Accusations might be made.'
+
+Mr Whidbey exclaims, 'Accusations? What accusations?
+
+The Police Chief listens with interest to what you have to say.".
+	
+Mayor is a male person in the holding room. The description is "The Mayor is present and ready to award you the keys to the city for your service.".
+Chief of Police is a male person in the holding room. The description is "The Chief of Police is here ready to investigate the problems with [story title].".
 
 Last report switching off a button (this is the final report switching off a button rule):	
 	choose a row with a link number of 0 in the table of monitor descriptions;
@@ -1948,7 +2024,7 @@ instead of examining the monitor:
 	say "The monitor flickers for a second and the scene it displays changes to something different.";
 	say "[description entry][line break]";
 	now ControlPanelImage is figure choice entry;
-	display ControlPanelImage.
+	if show images is true, display ControlPanelImage.
 	
 
 Chapter 3 - The Midway
@@ -1957,7 +2033,7 @@ Section 1 - Parking Lot
 
 When play begins:
 	now show images is false;
-	say "Type 'Images On' to display images. Type 'Help' for hints about [story title] and general information about playing interactive fiction games.";
+	say "Type 'Help' for hints about [story title] and general information about playing interactive fiction games.";
 	display the figure of Hell Ride;
 	say "You[']re a part-time reporter for The Tribune, the local paper. Earlier in the day, your editor called you and told you of a conversation he overheard between the Chief of Police and his Deputy about Whidbey Amusements. It seems there has been a rash of accidents and mishaps at the carnival. Sounds like there could be something suspicious going on. He wants you to collect evidence and write a hard hitting piece about it. If you do a good job, maybe the paper will hire you on full-time.".
 
@@ -2256,32 +2332,32 @@ a Cash 'N' Carry invoice is an invoice in the filing cabinet. the description is
 Cash [']N['] Carry.[line break]
 121 Maple St[line break]
 Stoneham, WA 98132[paragraph break]
-2 cases of Soda Cups			 					$82.50[line break]
-1 case of Popcorn Buckets			$106.73[line break]
-3 cases of Napkins											$56.41[line break]
-Total:																						$245.64[paragraph break]
+2 cases of Soda Cups                   $82.50[line break]
+1 case of Popcorn Buckets             $106.73[line break]
+3 cases of Napkins                     $56.41[line break]
+Total:                                $245.64[paragraph break]
 After the 10th of the month, this invoice will be assessed a finance charge of 3.75% per month, We appreciate your prompt payment.[roman type]".
 
 a Frank's Market invoice is an invoice in the filing cabinet. the description is "Frank[']s Market invoice reads:[fixed letter spacing][paragraph break]
 Frank[']s Market Wholesale[line break]
 1 Market Pl[line break]
 Cambridge, WA 98325[paragraph break]
-8 dozen lemons																					$85.00[line break]
-10 bags of flour (50 pounds)						$200.00[line break]
-5 bags of sugar (50 pounds)							$250.00[line break]
-5 Cases of Mexican Coca-Cola						$210.00[line break]
-Total: 																											$745.00[paragraph break]
+8 dozen lemons                                $85.00[line break]
+10 bags of flour (50 pounds)                 $200.00[line break]
+5 bags of sugar (50 pounds)                  $250.00[line break]
+10 Cases of Coca-Cola                        $210.00[line break]
+Total:                                       $745.00[paragraph break]
 Notice: Your account has been closed. Kindly remit the balance due immediately![roman type]".
 
 an Oriental Trading invoice is an invoice in the filing cabinet. the description is "The Oriental Trading invoice reads:[fixed letter spacing][paragraph break]
 Oriental Trading Company[line break]
 P.O. Box 2308[line break]
 Omaha, NE 68103-2308[paragraph break]
-Mega Bulk 1000 Pc. Multicolor Toy & Novelty Handout Assortment				$184.99[line break]
-19' x 11' Bulk 500 Pc. Everyday Toy Treasure Chest Assortment					$119.98[line break]
-7' Bulk 72 Pc. Mini Solid Color Plastic Outdoor Bubble Wands							$77.98[line break]
-2' Bulk 100 Pc. Mega Everyday Fun Yellow Rubber Ducks Assortment			$44.99[line break]
-Total:																																																												$427.94[paragraph break]
+Mega Bulk 1000 Pc. Multicolor Toy & Novelty Handout Assortment             $184.99[line break]
+19' x 11' Bulk 500 Pc. Everyday Toy Treasure Chest Assortment              $119.98[line break]
+7' Bulk 72 Pc. Mini Solid Color Plastic Outdoor Bubble Wands                $77.98[line break]
+2' Bulk 100 Pc. Mega Everyday Fun Yellow Rubber Ducks Assortment            $44.99[line break]
+Total:                                                                     $427.94[paragraph break]
 Your account is past due. Please pay immediately![roman type]"
 
 a Mystic Industries invoice is an invoice in the filing cabinet. the description is "The Mystic Industries invoice reads:[fixed letter spacing][paragraph break]
@@ -2429,17 +2505,21 @@ instead of punching:
 instead of asking the strongman attendant about "mallet/lever/bullseye/striker/target", say "Use the mallet to strike the bullseye. Ring the bell to win a prize.".
 
 understand the command "hit" as something new. understand the command "swing" as something new.
-hitting relates one thing to one thing. The verb to hit means the hitting relation.
-Hitting is an action applying to two visible things. 
-Understand "hit [something] with [something preferably held]" as hitting.
-Understand "strike [something] with [something preferably held]" as hitting.
-Understand "swing [something preferably held] at [something]" as hitting (with nouns reversed).  
+hitting it with relates one thing to one thing. The verb to hit means the hitting it with relation.
+Hitting it with is an action applying to two visible things. 
+Understand "hit [something] with [something preferably held]" as hitting it with.
+Understand "strike [something] with [something preferably held]" as hitting it with.
+Understand "swing [something preferably held] at [something]" as hitting it with (with nouns reversed).  
 
-Rule for supplying a missing second noun while hitting:
-	if the mallet is carried, now the second noun is the mallet;
-	otherwise say "You will have to specify what to hit [the noun] with."
+Rule for supplying a missing second noun when hitting:
+	if the mallet is carried:
+		now the second noun is the mallet;
+	otherwise if the sledgehammer is carried:
+		now the second noun is the sledgehammer;
+	otherwise:
+		say "You will have to specify what to hit [the noun] with."
 
-Check hitting:
+Check hitting it with:
 	if noun is an attendant:
 		say "[The noun] blocks your swing and takes [the second noun] from you!";
 		now the second noun is nowhere;
@@ -2460,22 +2540,28 @@ instead of examining the high striker prizes:
 To show the High Striker prizes:
 	say "[line break]Which prize would you like? [run paragraph on]";
 	repeat with N running from 1 to the number of rows in the Table of High Striker Prizes:
-		say "[index in row N of the Table of High Striker Prizes]) [description in row N of the Table of High Striker Prizes][if N < number of rows in the Table of High Striker Prizes], [otherwise]?[end if]".
+		choose row N in the Table of High Striker Prizes;
+		if object entry is carried by the strongman attendant:
+			say "[N]) [description entry][if N < number of rows in the Table of High Striker Prizes], [otherwise]?[end if]".
 
-Carry out hitting when the noun is the lever and the second noun is the mallet and the player is carrying the mallet:
+Carry out hitting the lever with the mallet when the player is carrying the mallet:
 	say "You lift the mallet high and bring it down on the lever with all your might! The striker rises towards the bell stopping at '[a random strength pattern between weakling and almost there]'.[line break] ";
 	
-after hitting the lever when the second noun is the mallet for the fourth time:
+after hitting the lever with the mallet for the fourth time:
 	say "You can[']t be sure of it but it seems as if the mallet isn[']t heavy enough to ring the bell.".
-after hitting the lever when the second noun is the mallet for the seventh time:
+after hitting the lever with the mallet for the seventh time:
 	say "This mallet is definitely not heavy enough to ring the bell.".
 	
 HighStrikerWin is a truth state that varies. HighStrikerWin is false.
-After hitting the lever when second noun is the sledgehammer:
+After hitting the lever with the sledgehammer:
 	play the sound of Bell;
 	now HighStrikerWin is true;
 	say "As you swing, you feel the extra weight from the sledgehammer. As it comes down on the bullseye, you can[']t help but feel like the extra weight gives you an edge. The bell rings as the striker reaches the top of the pole. The attendant says, 'You[']re a Muscle Man. Here[']s a prize for you.'";
 	show the high striker prizes.
+	
+check hitting the lever with the sledgehammer for the third time:
+	say "[The strongman attendant] takes the sledgehammer away from you exclaiming, 'Hey! What are you doing? I[']m not going to let you cheat again!'";
+	now the sledgehammer is nowhere.
 
 after reading a command when the location is the HS-room and HighStrikerWin is true:
 	now prize table is Table of High Striker Prizes;
@@ -2495,26 +2581,21 @@ Before looking when the location is the Dime Toss Game:
 
 A room called the Dime Toss Game is northeast of the HS-room. "The game booth is adorned with vibrant colors — red-and-white striped awnings, twinkling lights, and eye-catching signage that reads 'TOSS A DIME — WIN A PRIZE!'. You can see prizes of all shapes and sizes hang around the booth, from stuffed animals and novelty toys to shiny trinkets and quirky collectibles. The larger prizes are prominently displayed to entice passersby. Rows of gleaming plates sparkle under overhead lights, their glass surfaces reflecting the surrounding glow.
 
-The distinctive 'ping' of dimes hitting plates creates a rhythmic soundtrack, punctuated by the occasional satisfying 'plop' when a dime lands perfectly. Victorious shouts mix with playful groans of near-misses, creating a symphony of excitement. Nearby, the hum of other booths, upbeat carnival music, and the distant laughter of children add to the lively backdrop. The booth operator calls out enthusiastically, 'Step right up! Test your skill! Win big!' Their energetic pitch draws in curious onlookers.[if a dime underlies the Dime Toss  booth] You thought you caught a flash of something coming from the area of the booth.[end if]
+The distinctive 'ping' of dimes hitting plates creates a rhythmic soundtrack, punctuated by the occasional satisfying 'plop' when a dime lands perfectly. Victorious shouts mix with playful groans of near-misses, creating a symphony of excitement. Nearby, the hum of other booths, upbeat carnival music, and the distant laughter of children add to the lively backdrop. The booth operator calls out enthusiastically, 'Step right up! Test your skill! Win big!' Their energetic pitch draws in curious onlookers.
 
 You[']re surprised to see that this game only costs a dime. The exit is to the southwest."
 
-the Dime Toss booth is a thing in the Dime Toss Game. the Dime Toss booth is scenery. understand "game" as the dime toss booth. The description of the Dime Toss booth is "The game booth is adorned with vibrant colors — red-and-white striped awnings, twinkling lights, and eye-catching signage. [if a dime underlies the Dime Toss booth] You can see something shiny on the ground under the booth.[end if]". understand "awning", "awnings", "twinkling", and "lights" as the dime toss booth.
+the Dime Toss booth is a thing in the Dime Toss Game. the Dime Toss booth is scenery. understand "game" as the dime toss booth. The description of the Dime Toss booth is "The game booth is adorned with vibrant colors — red-and-white striped awnings, twinkling lights, and eye-catching signage.". understand "awning", "awnings", "twinkling", and "lights" as the dime toss booth.
 
-a Mercury dime is a dime. it underlies the Dime Toss booth. The description is "The Mercury dime is a ten-cent coin struck by the United States Mint from late 1916 to 1945. Designed by Adolph Weinman and also referred to as the Winged Liberty Head dime, it gained its common name because the obverse depiction of a young Liberty, identifiable by her winged Phrygian cap, was confused with the Roman god Mercury. It is 90% silver, 10% copper, and has a weight of 2.50 grams."
+Tossing it on relates one thing to another.
+The verb to toss means the tossing it on relation.
 
-before examining the mercury dime:
-	if show images is true, display Figure of MercuryDime.
-
-Tossing relates one thing to another.
-The verb to toss means the tossing relation.
-
-Tossing is an action applying to two things.
-Understand "toss [something preferably held] at/on [something]" as tossing.
-Understand "flip [something preferably held] at/on [something]" as tossing.
-Understand "throw [a dime] at/on [something]" as tossing.
+Tossing it on is an action applying to two things.
+Understand "toss [something preferably held] at/on [something]" as tossing it on.
+Understand "flip [something preferably held] at/on [something]" as tossing it on.
+Understand "throw [a dime] at/on [something]" as tossing it on.
 		
-check tossing a dime when the location is the Dime Toss Game:
+instead of tossing a dime on something when the location is the Dime Toss Game:
 	if the player carries a dime:
 		continue the action;
 	otherwise:
@@ -2543,14 +2624,15 @@ instead of listening when the location is the Dime Toss Game, say "The distincti
 To show the Toss A Dime prizes:
 	say "[line break]Which prize would you like? [run paragraph on]";
 	repeat with N running from 1 to the number of rows in the Table of Dime Toss Prizes:
-		say "[index in row N of the Table of Dime Toss Prizes]) [description in row N of the Table of Dime Toss Prizes][if N < number of rows in the Table of Dime Toss Prizes], [otherwise]?[end if]".
+		choose row N in Table of Dime Toss Prizes;
+		say "[N]) [description entry][if N < number of rows in the Table of Dime Toss Prizes], [otherwise]?[end if]".
 
 TossADimeWin is a truth state that varies. TossADimeWin is false.
-instead of tossing a dime when the second noun is the plate and the player carries the noun:
+instead of tossing a dime on plate when the player carries the noun:
+	now the noun is nowhere;
 	say "You toss the dime. [run paragraph on]";
 	if the noun is the mercury dime:
 		now TossADimeWin is true;
-		now noun is nowhere;
 		say "The heavier Mercury dime hits the plate, starts to spins, and lands in the center of the plate. The attendant shouts out, 'Winner! Winner!'";
 		show the Toss A Dime prizes;
 	otherwise:
@@ -2559,7 +2641,6 @@ instead of tossing a dime when the second noun is the plate and the player carri
 			-- 1: say "The dime hits the plate and bounces straight off.";
 			-- 2: say "Like skipping a stone in water, the dime skitters off the plate.";
 			-- 3: say "The dime lands on the edge of the plate. You watch in anticipation until the dime falls off the plate.";
-		now the noun is nowhere.
 
 after reading a command when the location is the Dime Toss Game and TossADimeWin is true:
 	now prize table is Table of Dime Toss Prizes;
@@ -2573,7 +2654,7 @@ The plate is a supporter in the Dime Toss Game. Understand "plates" as plate. Th
 The Dime Toss Attendant is an attendant in the the Dime Toss Game. understand "operator" as dime toss attendant.
 
 after examining the Dime Toss attendant when the TossADimeWin is true, show the toss a dime prizes. 
-after looking when the TossADimeWin is true and the location is the Dime Toss Game, 	show the Toss A Dime prizes.
+after looking when the TossADimeWin is true and the location is the Dime Toss Game, show the Toss A Dime prizes.
 
 Section 9 - Pitchers Mound
 
@@ -2586,7 +2667,7 @@ Before looking when the location is the Pitchers Mound:
 
 A room called the Pitchers Mound is southeast of the HS-room. "The milk bottle ball toss is a classic carnival game that combines skill, strength, and a bit of luck. The setup features a pyramid of brightly colored milk bottles stacked on a sturdy platform — three on the bottom, two in the middle, and one on top. Players stand behind a marked line and toss baseballs, aiming to knock down as many bottles as possible. Clearing the entire stack wins a prize.
 
-The booth buzzes with energy, its colorful banners and flashing lights drawing a lively crowd. The satisfying clatter of falling bottles mixes with cheers and groans from players and spectators. A carnival attendant calls out, 'Step right up and test your aim! Three balls for just a dime.' Prizes — ranging from small toys to giant stuffed animals — hang prominently, enticing players to take a shot. With every toss, the game delivers moments of suspense, joy, and fun, making it a favorite at the carnival.
+The booth buzzes with energy, its colorful banners and flashing lights drawing a lively crowd. The satisfying clatter of falling bottles mixes with cheers and groans from players and spectators. A carnival attendant calls out, 'Step right up and test your aim! Three balls for just a dime.' Prizes — ranging from small toys to giant stuffed animals — hang prominently, enticing players to take a shot. With every toss, the game delivers moments of suspense, joy, and fun, making it a favorite at the carnival. The operator calls out, drawing in onlookers[if a dime underlies the pitchers mound booth], as something catches your eye near the booth[end if].
 
 You[']re surprised to see that this game only costs a dime. The High Striker is to the northwest.".
 
@@ -2600,7 +2681,12 @@ a baseball is a kind of thing. Understand "ball" as baseball.The Pitchers Mound 
 
 some Pitchers Mound spectators are here. they are scenery. the description is "The satisfying clatter of falling bottles mixes with cheers and groans from players and spectators.".
 
-the Pitchers Mound booth is here. it is scenery. the description is "The booth buzzes with energy, its colorful banners and flashing lights drawing a lively crowd.".
+the Pitchers Mound booth is here. it is scenery. the description is "The booth buzzes with energy, its colorful banners and flashing lights drawing a lively crowd. [if a dime underlies the pitchers mound booth] You can see something shiny on the ground under the booth.[end if].".
+
+a Mercury dime is a dime. it underlies the pitchers mound booth. The description is "The Mercury dime is a ten-cent coin struck by the United States Mint from late 1916 to 1945. Designed by Adolph Weinman and also referred to as the Winged Liberty Head dime, it gained its common name because the obverse depiction of a young Liberty, identifiable by her winged Phrygian cap, was confused with the Roman god Mercury. It is 90% silver, 10% copper, and has a weight of 2.50 grams.".
+
+before examining the mercury dime:
+	if show images is true, display Figure of MercuryDime.
 
 some banners are here. they are scenery. understand "flashing", and "lights" as the banners. the description is "The booth buzzes with energy, its colorful banners and flashing lights drawing a lively crowd.".
 
@@ -2613,8 +2699,7 @@ The block throwing at people rule is listed instead of the block throwing at rul
 This is the block throwing at people rule:
 	if the second noun is a person, say "That might be construed as an attack." instead.
 
-Throwing is an action applying to two things.
-Understand "throw [something preferably held] at/on [something]" as throwing.
+Understand "throw [something preferably held] at/on [something]" as throwing it at.
 
 Instead of buying a baseball, say "You don[']t need to buy the baseballs. Just give the attendant a dime.".
 
@@ -2625,17 +2710,25 @@ instead of examining the Pitchers Mound prizes:
 	repeat with N running from 1 to the number of rows in the Table of Pitchers Mound Prizes:
 		choose row N in the Table of Pitchers Mound prizes;
 		if object entry is carried by the Pitchers Mound attendant:
-			say "[description in row N of the Table of Pitchers Mound Prizes][if N < number of rows in the Table of Pitchers Mound Prizes], [end if][if N is the number of rows in the Table of Pitchers Mound Prizes - 1]and [end if][if N is the number of rows in the Table of Pitchers Mound Prizes].[end if]".
+			say "[description entry][if N < number of rows in the Table of Pitchers Mound Prizes], [end if][if N is the number of rows in the Table of Pitchers Mound Prizes - 1]and [end if][if N is the number of rows in the Table of Pitchers Mound Prizes].[end if]".
 		
 To show the Pitchers Mound prizes:
 	say "[line break]Which prize would you like? [run paragraph on]";
 	repeat with N running from 1 to the number of rows in the Table of Pitchers Mound Prizes:
-		say "[index in row N of the Table of Pitchers Mound Prizes]) [description in row N of the Table of Pitchers Mound Prizes][if N < number of rows in the Table of Pitchers Mound Prizes], [otherwise]?[end if]";
+		choose row N in the Table of Pitchers Mound Prizes;
+		if the object entry is carried by the Pitchers Mound Attendant:
+			say "[N]) [description entry][if N < number of rows in the Table of Pitchers Mound Prizes], [otherwise]?[end if]";
 		
 instead of giving a dime to the pitchers mound attendant:
-	say "The attendant gives you three baseballs in return and says, 'Throw the baseball at bottle X where X is the bottle number you want to hit. The bottles are numbered one to six'.";
+	say "The attendant gives you three baseballs in return.";
 	now the noun is nowhere;
 	now the player carries every baseball;
+	stop the action.
+	
+instead of giving a dime to the pitchers mound attendant for the second time:
+	say "[The pitchers mound attendant] says, 'Sorry. You only get to play once.'";
+	now the noun is nowhere;
+	now every baseball is in the holding room;
 	stop the action.
 
 understand "throw [baseball] at [milk bottles]" as a mistake ("THROW baseball at BOTTLE X where X is the bottle number you want to hit. The bottles are numbered one to six'.")
@@ -2675,7 +2768,7 @@ instead of throwing a baseball at a bottle when the player carries the noun:
 		now PitchersMoundWin is true;	
 		say "The ball hits the bottles in the sweet spot and they topple over onto the platform. The attendant shouts out, 'Winner! Winner!'";
 		show the Pitchers Mound prizes;
-		now every baseball is nowhere;
+		now every baseball is in the holding room;
 	otherwise:
 		let N be a random number between 1 and 5;
 		if N is:
@@ -2684,7 +2777,7 @@ instead of throwing a baseball at a bottle when the player carries the noun:
 			-- 3: say "You knocked over three bottles. So close.";
 			-- 4: say "You knocked over four bottles. So sad.";
 			-- 5: say "You knocked over five bottles. Better luck next time.";
-		now the noun is nowhere.
+		now the noun is in the holding room.
 
 after reading a command when the location is the Pitchers Mound and PitchersMoundWin is true:
 	now prize table is Table of Pitchers Mound Prizes;
@@ -2793,10 +2886,6 @@ A lantern is an electric lamp. It is in the wall. Understand "lamp" and "lantern
 
 a  musical instrument is here. it is scenery. understand "instruments", "oud", "darbuka", and "zurna" as musical instrument. the description is "[The noun] is of traditional Middle Eastern origins.".
 
-after taking the lantern for the first time:
-	now the player is carrying the lantern;
-	say "Taken.".
-
 The folding chair is a enterable scenery supporter in the ST-room. The description of the Folding Chair is "This is one of many folding chairs in the tent tonight." Understand "chairs" as folding chair.
 
 Little Egypt AutoPlay is a recurring scene. 
@@ -2856,7 +2945,10 @@ The Ferris Wheel Attendant is an attendant in the FW-room.
 
 instead of giving the Ferris wheel ticket to the Ferris wheel attendant:
 	say "You give [the noun] to [the second noun].";
-	now the Ferris wheel ticket is nowhere;
+	choose a row with an object of the noun in the Table of Tickets;	
+	now the price of the noun is the price entry;
+	now the noun is carried by the cashier;
+	now ferris wheel ridden is true;
 	say "[line break]As you step into the gently swaying gondola, a faint creak accompanies the safety bar locking into place. The Ferris wheel begins its slow ascent, the hum of its machinery blending with the distant sounds of carnival games and laughter below. A soft breeze brushes against your face as the gondola rises higher, offering an ever-expanding view of the fairgrounds.
 
 With each rotation, the world transforms. At the peak, the carnival sprawls beneath you like a miniature village, its vibrant lights twinkling against the twilight sky. The sound of the midway fades into a soft murmur, replaced by the serene quiet of being high above the bustling crowd. Beyond the carnival, the horizon stretches endlessly, framed by the glow of distant city lights.
@@ -2911,7 +3003,9 @@ The Bumper Cars Attendant is an attendant in the BC-room.
 
 instead of giving the bumper cars ticket to the bumper cars attendant:
 	say "You give [the noun] to [the second noun].";
-	now the bumper cars ticket is nowhere;
+	choose a row with an object of the noun in the Table of Tickets;	
+	now the price of the noun is the price entry;
+	now the noun is carried by the cashier;
 	say "[line break]Sliding into the snug seat of the bumper car, your hands grip the steering wheel, anticipation buzzing in the air. Around you, the arena is alive with flashing lights, bursts of laughter, and the hum of electric currents running through the overhead poles. A quick glance shows other riders locking eyes, playful grins spreading as everyone braces for the chaos about to unfold.
 
 As the ride starts, your car jolts forward, and you steer into the fray. The slick metal floor beneath makes every turn feel smooth yet unpredictable. Suddenly, bam! — another car collides into you from the side, sending your car into a spin. You laugh, recovering quickly to aim your vehicle at a friend across the arena.
@@ -2971,6 +3065,8 @@ a thing called a fortune is here. it is scenery. the description is "You ponder 
 
 instead of giving the fortune teller ticket to Esmeralda the Mysterious:
 	say "You give [the noun] to [the second noun].";
+	choose a row with an object of the noun in the Table of Tickets;	
+	now the price of the noun is the price entry;
 	now Esmeralda the Mysterious carries the fortune teller ticket;
 	say "[line break]Stepping inside, you’re greeted by the Esmeralda, a figure cloaked in flowing robes with a jeweled headpiece catching the flickering light. Her piercing eyes seem to look right through you as they gesture for you to sit at a small round table covered in an ornate cloth. At its center rests a glowing crystal ball, surrounded by tarot cards and mysterious trinkets.
 
@@ -2996,7 +3092,7 @@ When Fortune Teller AutoPlay ends:
 	say "As the reading concludes, Esmeralda gazes into your eyes with a cryptic smile and delivers their final words of wisdom: 'The order of things is important. Alphabetically and numerically; one follows another and provides the link between the two. If you will learn, think on this carefully. Also, don[']t trust Whidbey. He[']s up to something.' 
 
 Whether you leave with a sense of wonder, excitement, or unease, the encounter lingers with you — a touch of magic amid the carnival’s chaos, as if you’ve glimpsed something beyond the ordinary.";
-	now the fortune teller ticket is nowhere.
+	now the fortune teller ticket is carried by the cashier.
 
 every turn during Fortune Teller AutoPlay:
 	let K be (tarot reading * 10) + index;
@@ -3029,7 +3125,9 @@ The carousel[’]s warm, playful tunes drift across the midway, inviting riders 
 
 instead of giving the carousel ticket to the carousel attendant:
 	say "You give [the noun] to [the second noun].";
-	now the carousel ticket is nowhere;
+	choose a row with an object of the noun in the Table of Tickets;	
+	now the price of the noun is the price entry;
+	now the noun is carried by the cashier;
 	say "[line break]Stepping onto the carousel[']s spinning platform, you’re greeted by a kaleidoscope of color — brightly painted horses, glittering lights, and golden trim. The cheerful melody of calliope music fills the air. What will you choose as your mount, perhaps a galloping horse with a flowing mane, a majestic lion, or a whimsical giraffe. Gripping the polished pole, you settle onto the saddle, feeling the smooth rise and fall as the carousel begins to turn.
 
 As the ride picks up speed, the world outside becomes a blur of glowing carnival lights and swirling colors. The gentle up-and-down motion mimics a playful gallop, and the rhythmic whir of the carousel’s machinery adds a soothing backdrop to the cheerful atmosphere. Laughter and the sound of children’s chatter mix with the music, creating a sense of nostalgia and joy.
@@ -3091,11 +3189,6 @@ instead of looking under when the noun is the pile of junk:
 	try examining the pile of junk instead. 
 
 The flashlight is an electric lamp. understand "light" and "torch" as flashlight. The description of the flashlight is "This is a flashlight. It[']s a nice one."
-
-after taking the flashlight for the first time:
-	now the player is carrying the flashlight;
-	say "Taken.".
-
 
 Section 3 - Maintenance Office
 
@@ -3228,7 +3321,7 @@ The toolbox is a closed openable container in the Mechanical Room North. The too
 an adjustable wrench is in the toolbox. The description of the adjustable wrench is "Just one of the many tools used to maintain the carnival.".
 some channel locks are in the toolbox. The description of the channel locks is "Just one of the many tools used to maintain the carnival.".
 a hammer is in the toolbox. The description of the hammer is "Just one of the many tools used to maintain the carnival.".
-a sledgehammer is here. The description of the sledgehammer is "This is an eight pound sledgehammer. Feels really hefty.".
+a sledgehammer is here. understand "sledge" as sledgehammer. The description of the sledgehammer is "This is an eight pound sledgehammer. Feels really hefty.".
 
 instead of listening when the location is the mechanical room north, say "You hear the subdued hum of capacitors and relays.".
 
@@ -3558,19 +3651,22 @@ After going north from the Ride Exit when the Guillotine Room is unvisited:
 	
 Before looking when the location is the Guillotine Room:
 	if show images is true, display Figure of RideGuillotine.
-
-after going south from the dungeon when the guillotine room is unvisited:
-	say "As you enter the room, you can see Mr Whidbey across the way. He seems to be doing something around the guillotine platform. You walk closer to see what he is doing and startle him. Mr Whidbey spins around and stares at you. As he turns and walks out of the guillotine room, you think you saw him drop something.";
+	
+after going south from the dungeon:
+	if the guillotine room is unvisited:
+		say "As you enter the room, you can see Mr Whidbey across the way. He seems to be doing something around the guillotine platform. You walk closer to see what he is doing and startle him. Mr Whidbey spins around and glares at you. As he turns and walks out of the room, you think you saw him drop something.";
 	continue the action.
-after going north from the ride exit when the guillotine room is unvisited:
-	say "As you enter the room, you can see Mr Whidbey across the way. He seems to be doing something around the guillotine platform. You walk closer to see what he is doing and startle him. Mr Whidbey spins around and stares at you. As he turns and walks out of the guillotine room, you think you saw him drop something.";
+
+after going north from the ride exit:
+	if the guillotine room is unvisited:
+		say "As you enter the room, you can see Mr Whidbey across the way. He seems to be doing something around the guillotine platform. You walk closer to see what he is doing and startle him. Mr Whidbey spins around and glares at you. As he turns and walks out of the room, you think you saw him drop something.";
 	continue the action.
 
 The Guillotine Room is south of the Dungeon. "[description corresponding to the locale of Guillotine Room in the Table of Hell Ride Events]"
 
 The guillotine platform is in the Guillotine Room. The guillotine platform is a supporter. Understand "scaffold" as guillotine platform. The description of the guillotine platform is "At the center of the square stands a raised wooden platform, stark and imposing, where the grim sentence is to be carried out. You can just make out something underneath the platform in the dark." 
 
-some pliers underlie the guillotine platform. The description of the pliers is "It[']s an ordinary pair of pliers but you can['] help but wonder why they are in the guillotine room and not in a tool box somewhere.".
+some pliers underlie the guillotine platform. The description of the pliers is "It[']s an ordinary pair of pliers but you can[']t help but wonder why they are in the guillotine room and not in a tool box somewhere.".
 
 a thing called a guillotine is here. it is scenery. The description is "The guillotine looms over the public square, its blade gleaming faintly in the dim light.".
 
@@ -3835,11 +3931,12 @@ The condemned flinches but remains silent as the executioner — a hooded figure
 
 As the condemned approaches the guillotine, a crow caws sharply from a nearby rooftop, its cry echoing through the square like an omen. The crowd leans forward, breath held, as justice and mortality converge on the scene.
 
-There is just one problem: the guillotine is being raised and lowered by some mechanism. It appears that the timing of the guillotine is off and it is being lowered onto the cars instead of between them. If a person were to be in a car as it passed under the guillotine, they would be seriously injured.
-[if the player is not in the hell ride car]
-You[']re glad you[']re not in one of those cars now.
-[otherwise]
+[if hell ride disabled is true]
+The guillotine is now completely still. You have managed to disable it before anyone was seriously injured. The authorities are most grateful and cheer your heroics.
+[otherwise if the player is not in the hell ride car]There is just one problem: the guillotine is being raised and lowered by some mechanism. It appears that the timing of the guillotine is off and it is being lowered onto the cars instead of between them. If a person were to be in a car as it passed under the guillotine, they would be seriously injured. 
 
+You[']re glad you[']re not in one of those cars now. You must do something to stop it before someone get[']s hurt!
+[otherwise ]
 Looks like your goose is cooked. Say 'Goodnight, Gracie!' 
 
 You are stupefied as you sit watching guillotine rising and falling, dropping like a stone on the cars in front of you. Thank goodness they are empty. As your turn comes, you raise your hands in a feeble attempt to stop the inevitable.[end if]"
@@ -3927,105 +4024,119 @@ topic	response (text)
 "invoices/receipts/paperwork"	"'Oh, I don[']t know what any of that mumbo jumbo means', says [the noun]."
 "insurance/policy" or "insurance policy"	"'Gosh, I wish I had a million dollars!', [the noun] says."
 
-Section 15 - Table of Janitor Conversation Responses
+Section 15 - Table of Notebook
+
+evidence is a kind of thing. evidence has a number called weighting. 
+
+Table of Notebook
+category (text)	total (number)	response (text)
+"Accidents"	0	"Evidence concerning accidents with the attractions"
+"Invoices"	0	"Evidence concerning past due invoices"
+"Whidbey"	0	"Evidence concerning Mr Whidbey"
+"Insurance"	0	"Evidence concerning insurance"
+"Fuses"	0	"Evidence concerning fuses"
+
+
+
+Section 16 - Table of Janitor Conversation Responses
 
 Table of Janitor Conversation Responses
-topic	description (text)	turn stamp (number)	evidence weight (number)	response (text)
-"hell/ride" or "hell ride"	"Hell Ride"	-1	5	"'[story title] is a finicky ride. I[']m fixing something there every week. Last week, Mr. Whidbey asked me to skip [story title][']s maintenance slot. There was a real fire in the Stakes Room last month. And just yesterday I caught him creeping around the guillotine room' says [the janitor]."
-"owner/Whidbey/mister/mr" or "Mr Whidbey"	"Mr Whidbey"	-1	5	"[The noun] says , 'Mr. Whidbey? He creeps me out. It always seems like he[']s hiding something. Just yesterday I caught him sneaking around the guillotine room in [story title].'"
-"invoices/receipts/paperwork"	"Invoices"	-1	1	"[The noun] says, 'Wow! These don[']t look good. Looks like the carnival owes a lot of money! Cash [']N['] Carry provides every day supplies. Why is this overdue? I hope I don[']t lose my job!'"
-"insurance/policy" or "insurance policy"	"Insurance Policy"	-1	3	"'An insurance policy? For a million bucks? Maybe that fire last month wasn[']t an accident' [the noun] says."
-"carnival"	"Carnival"	-1	1	"'[one of]The Whidbey family has owned this carnival since the 1950[']s[or]Mr. Whidbey is the last of his line. He has no one to leave the carnival to[or]This once proud carnival has seen better days[cycling]' says [the noun]."
-"ferris/wheel" or "ferris wheel"	"Ferris Wheel"	-1	5	"[The noun] remarks, 'The other day, I found a bolt on one of the gondolas so loose it had almost come off. That would have been a tragedy!'"
-"bumper/car/cars" or "bumper cars" or "bumper car"	"Bumper Cars"	-1	5	"[The noun] says, 'That reminds me. Not long ago, one of the bumper cars was shorting out and electrifying the car. A visitor got hurt. A young lad, what was his name? Fred something, I think.'"
-"fortune/teller/esmeralda/esmerelda" or "fortune teller"	"Esmeralda"	-1	0	"'Her fortunes are always crazy accurate. She[']s spooky and so pretty. I wonder if I should ask her out on a date?' [the noun] asks." 
-"carousel"	"Carousel"	-1	0	"'The carousel is hard to maintain because of all the animals moving up and down. There[']s a lot of moving parts in that one', says [the noun]."
-"dime/toss/plate" or "dime toss"	"Dime Toss"	-1	0	"[The noun] says, 'The problem with that one is that a modern dime weighs 2.268 grams and isn[']t heavy enough to land on the plate. The trick with that one is to find a Mercury dime. It weighs 2.50 grams.'"
-"pitchers/mound/milk/bottles" or "pitchers mound" or "milk bottles"	"Pitcher[']s Mound"	-1	0	"[The noun] says 'That[']s a tricky one. You have to aim at just the right bottle. Throw the baseball at bottle 5.'"
-"high/striker/strongman" or "high striker" or "strong man"	"High Striker"	-1	0	"'Another rigged game. The mallet isn[']t heavy enough to strike the bell. Find something heavier' says [the noun]."
-"fuse/fuses/aqua/crimson/emerald/gray/indigo/khaki/magenta/orange/quartz" or "aqua fuse " or "crimson fuse" or "emerald fuse" or "gray fuse" or "indigo fuse" or "khaki fuse" or "magenta fuse" or "orange fuse" or "quartz fuse" 	"Fuses"	-1	0	"[The noun] says 'Funny thing about that. The fuses that belong in the electrical panels in the electrical area of backstage seem to be missing. Finding them might help with disabling [story title].'"
-"fire"	"The Stake Room Fire"	-1	3	"'The very real fire in the Stakes Room in [story title] was a scary event. I couldn[']t put it out with a fire extinguisher. We had to wait for the fire department and by then there was a lot of damage done' says [the noun]."
-"accidents/mishaps"	"Accidents"	-1	3	 "[The noun] says 'The fire, the Ferris wheel, the Bumper Cars... That[']s a lot of suspicious accidents.'"
-"rides/attractions"	"Attractions"	-1	1	"'Almost every ride is falling apart. I do what I can to keep things in good repair but it[']s a lot of work' says [the noun]."
-"games"	"Carnival Games"	-1	0	"'Crooked! Everyone of them. There[']s a secret to each one of them' [the noun] says."
+topic	description (text)	subject (text)	turn stamp (number)	weighting (number)	response (text)
+"hell/ride" or "hell ride"	"Hell Ride"	"Accidents"	-1	5	"'[story title] is a finicky ride. I[']m fixing something there every week. Last week, Mr. Whidbey asked me to skip [story title][']s maintenance slot. There was a real fire in the Stakes Room last month. And just yesterday I caught him creeping around the guillotine room' says [the janitor]."
+"owner/Whidbey/mister/mr" or "Mr Whidbey"	"Mr Whidbey"	"Whidbey"	-1	5	"[The noun] says , 'Mr. Whidbey? He creeps me out. It always seems like he[']s hiding something. Just yesterday I caught him sneaking around the guillotine room in [story title].'"
+"invoices/receipts/paperwork"	"Invoices"	"Invoices"	-1	1	"[The noun] says, 'Wow! These don[']t look good. Looks like the carnival owes a lot of money! Cash [']N['] Carry provides every day supplies. Why is this overdue? I hope I don[']t lose my job!'"
+"insurance/policy" or "insurance policy"	"Insurance Policy"	"Insurance"	-1	3	"'An insurance policy? For a million bucks? Maybe that fire last month wasn[']t an accident' [the noun] remarks."
+"carnival"	"Carnival"	"Whidbey"	-1	1	"'[one of]The Whidbey family has owned this carnival since the 1950[']s[or]Mr. Whidbey is the last of his line. He has no one to leave the carnival to[or]This once proud carnival has seen better days[cycling]' says [the noun]."
+"ferris/wheel" or "ferris wheel"	"Ferris Wheel"	"Accidents"	-1	5	"[The noun] remarks, 'The other day, I found a bolt on one of the gondolas so loose it had almost come off. That would have been a tragedy!'"
+"bumper/car/cars" or "bumper cars" or "bumper car"	"Bumper Cars"	"Accidents"	-1	5	"[The noun] says, 'That reminds me. Not long ago, one of the bumper cars was shorting out and electrifying the car. A visitor got hurt. A young lad, what was his name? Fred something, I think.'"
+"fortune/teller/esmeralda/esmerelda" or "fortune teller"	"Esmeralda"	"NA"	-1	0	"'Her fortunes are always crazy accurate. She[']s spooky and so pretty. I wonder if I should ask her out on a date?' [the noun] asks." 
+"carousel"	"Carousel"	"NA"	-1	0	"'The carousel is hard to maintain because of all the animals moving up and down. There[']s a lot of moving parts in that one', says [the noun]."
+"dime/toss/plate" or "dime toss"	"Dime Toss"	"NA"	-1	0	"[The noun] says, 'The problem with that one is that a modern dime weighs 2.268 grams and isn[']t heavy enough to land on the plate. The trick with that one is to find a Mercury dime. It weighs 2.50 grams.'"
+"pitchers/mound/milk/bottles" or "pitchers mound" or "milk bottles"	"Pitcher[']s Mound"	"NA"	-1	0	"[The noun] says 'That[']s a tricky one. You have to aim at just the right bottle. Throw the baseball at bottle 5.'"
+"high/striker/strongman" or "high striker" or "strong man"	"High Striker"	"NA"	-1	0	"'Another rigged game. The mallet isn[']t heavy enough to strike the bell. Find something heavier' says [the noun]."
+"fuse/fuses/aqua/crimson/emerald/gray/indigo/khaki/magenta/orange/quartz" or "aqua fuse " or "crimson fuse" or "emerald fuse" or "gray fuse" or "indigo fuse" or "khaki fuse" or "magenta fuse" or "orange fuse" or "quartz fuse" 	"Fuses"	"Fuses"	-1	0	"[The noun] says 'Funny thing about that. The fuses that belong in the electrical panels in the electrical area of backstage seem to be missing. Finding them might help with disabling [story title].'"
+"fire"	"The Stake Room Fire"	"Accidents"	-1	3	"'The very real fire in the Stakes Room in [story title] was a scary event. I couldn[']t put it out with a fire extinguisher. We had to wait for the fire department and by then there was a lot of damage done' says [the noun]."
+"accidents/mishaps"	"Accidents"	"Accidents"	-1	3	 "[The noun] says 'The fire, the Ferris wheel, the Bumper Cars... That[']s a lot of suspicious accidents.'"
+"rides/attractions"	"Attractions"	"Accidents"	-1	1	"'Almost every ride is falling apart. I do what I can to keep things in good repair but it[']s a lot of work' says [the noun]."
+"games"	"Carnival Games"	"NA"	-1	0	"'Crooked! Everyone of them. There[']s a secret to each one of them' [the noun] says."
 
-Section 16 - Table of Janitor Object Responses
+Section 17 - Table of Janitor Object Responses
 
 Table of Janitor Object Responses
-object (object)	description (text)	turn stamp (number)	evidence weight (number)	response (text)
-Cash 'N' Carry invoice	"Cash [']N['] Carry Invoice"	-1	1	"[The second noun] says, 'Man, this doesn[']t look good for the carnival.'"
-Frank's Market invoice	"Frank[']s Market Invoice"	-1	1	"[The second noun] says, 'Looks like the carnival is in some financial trouble.'"
-Oriental Trading  invoice	"Oriental Trading Invoice"	-1	1	"[The second noun] says, 'These prizes are cheaper and flimsier than usual.'"
-Mystic Industries invoice	"Mystic Industries Invoice"	-1	3	"[The second noun] says, That fire in [story title] was very really bad. It took almost two weeks to get it fully repaired. But it shouldn't have cost this much. I think Mr Whidbey got ripped off.'"
-paperwork	"Paperwork"	-1	1	"[The second noun] says, 'This all points the finger at mismanagement. I sure hope Mr Whidbey has a plan.'"
-insurance policy	"Insurance Policy"	-1	3	"'An insurance policy? For a million dollars? SOmething is fishy for sure!' [the second noun] says."
-pliers	"The Pliers"	-1	5	"'I[']ve been missing those. Where did you find them?' asks [the second noun]."
-cashier's check	"Cashier's Check"	-1	5	"[The second noun] says 'What?! That[']s the name of the kid who got hurt in the Bumper Cars incident.'"
-fuse1	"Aqua Fuse"	-1	1	"'Hey! That[']s important. It should be in an electrical panel', [the second noun] says."
-fuse3	"Crimson Fuse"	-1	1	"'Hey! That[']s important. It should be in an electrical panel', [the second noun] says."
-fuse5	"Emerald Fuse"	-1	1	"'Hey! That[']s important. It should be in an electrical panel', [the second noun] says."
-fuse7	"Gray Fuse"	-1	1	"'Hey! That[']s important. It should be in an electrical panel', [the second noun] says."
-fuse9	"Indigo Fuse"	-1	1	"'Hey! That[']s important. It should be in an electrical panel' [the second noun] asks."
-fuse11	"Khaki Fuse"	-1	1	"'Hey! That[']s important. It should be in an electrical panel', [the second noun] says."
-fuse13	"Magenta Fuse"	-1	1	"'Hey! That[']s important. It should be in an electrical panel', [the second noun] says."
-fuse15	"Orange Fuse"	-1	1	"'Hey! That[']s important. It should be in an electrical panel', [the second noun] says."
-fuse17	"Quartz Fuse"	-1	1	"'Hey! That[']s important. It should be in an electrical panel', [the second noun] says."
+object (object)	description (text)	subject (text)	turn stamp (number)	weighting (number)	response (text)
+Cash 'N' Carry invoice	"Cash [']N['] Carry Invoice"	"Invoices"	-1	1	"[The second noun] says, 'Man, this doesn[']t look good for the carnival.'"
+Frank's Market invoice	"Frank[']s Market Invoice"	"Invoices"	-1	1	"[The second noun] says, 'Looks like the carnival is in some financial trouble.'"
+Oriental Trading  invoice	"Oriental Trading Invoice"	"Invoices"	-1	1	"[The second noun] says, 'These prizes are cheaper and flimsier than usual.'"
+Mystic Industries invoice	"Mystic Industries Invoice"	"Accidents"	-1	3	"[The second noun] says, That fire in [story title] was very really bad. It took almost two weeks to get it fully repaired. But it shouldn't have cost this much. I think Mr Whidbey got ripped off.'"
+paperwork	"Paperwork"	"Invoices"	-1	1	"[The second noun] says, 'This all points the finger at mismanagement. I sure hope Mr Whidbey has a plan.'"
+insurance policy	"Insurance Policy"	"Insurance"	-1	3	"'An insurance policy? For a million dollars? SOmething is fishy for sure!' [the second noun] says."
+pliers	"The Pliers"	"Accidents"	-1	5	"'I[']ve been missing those. Where did you find them?' asks [the second noun]."
+cashier's check	"Cashier's Check"	"Insurance"	-1	5	"[The second noun] says 'What?! That[']s the name of the kid who got hurt in the Bumper Cars incident.'"
+fuse1	"Aqua Fuse"	"Fuses"	-1	1	"'Hey! That[']s important. It should be in an electrical panel', [the second noun] says."
+fuse3	"Crimson Fuse"	"Fuses"	-1	1	"'Hey! That[']s important. It should be in an electrical panel', [the second noun] says."
+fuse5	"Emerald Fuse"	"Fuses"	-1	1	"'Hey! That[']s important. It should be in an electrical panel', [the second noun] says."
+fuse7	"Gray Fuse"	"Fuses"	-1	1	"'Hey! That[']s important. It should be in an electrical panel', [the second noun] says."
+fuse9	"Indigo Fuse"	"Fuses"	-1	1	"'Hey! That[']s important. It should be in an electrical panel' [the second noun] asks."
+fuse11	"Khaki Fuse"	"Fuses"	-1	1	"'Hey! That[']s important. It should be in an electrical panel', [the second noun] says."
+fuse13	"Magenta Fuse"	"Fuses"	-1	1	"'Hey! That[']s important. It should be in an electrical panel', [the second noun] says."
+fuse15	"Orange Fuse"	"Fuses"	-1	1	"'Hey! That[']s important. It should be in an electrical panel', [the second noun] says."
+fuse17	"Quartz Fuse"	"Fuses"	-1	1	"'Hey! That[']s important. It should be in an electrical panel', [the second noun] says."
 
-Section 17 - Table of Owner Conversation Responses
+Section 18 - Table of Owner Conversation Responses
 
 Table of Owner Conversation Responses
-topic	description (text)	turn stamp (number)	evidence weight (number)	response (text)
-"hell/ride" or "hell ride"	"Hell Ride"	-1	0	"'[story title] is the premier attraction here at  Whidbey Amusements. It[']s both spooky and fun! The visitors love it! The fire last month was unfortunate and expensive' says [the noun]."
-"invoices/receipts/paperwork"	"Invoices"	-1	3	"[The noun] says, 'I know this doesn[']t look good but the cost of consumables go up every week and attendance is down. I have to pinch pennies somehow, don[']t I? And that fire was very expensive to repair.'"
-"insurance/policy" or "insurance policy"	"Insurance Policy"	-1	1	"'An insurance policy? Of course, all reputable businesses have insurance. Even small time carnivals' [the noun] stammers."
-"carnival"	"Carnival"	-1	1	"'The Whidbey family has owned this carnival since the 1957', [the noun] says. 'Unfortunately, I am an only child and never married. Alas, the carnival will close when I am gone. But for now, it[']s making a comeback!'"
-"ferris/wheel" or "ferris wheel"	"Ferris Wheel"	-1	0	"[The noun] says 'The Ferris Wheel is my favorite ride. It[']s always relaxing and romantic.'"
-"bumper/car/cars" or "bumper cars" or "bumper car"	"Bumper Cars"	-1	3	"'That incident the other week with that Needleman kids was unfortunate' says [the noun]."
-"fortune/teller/esmeralda/esmerelda" or "fortune teller"	"Esmeralda"	-1	0	"[The noun] says 'I see her regularly to have my fortune told. We[']re lucky to have her here. She[']s very beautiful. It[']s a wonder she[']s never been married.'"
-"carousel"	"Carousel"	-1	0	"'The carousel is just one of the many rides that thrill and delight our visitors every day,' says [the noun]"
-"dime/toss/plate" or "dime toss"	"Dime Toss"	-1	0	"'The Dime Toss is is one of the many games that thrill and delight our visitors every day!' says [the noun]."
-"pitchers/mound/milk/bottles" or "pitchers mound" or "milk bottles"	"Pitcher's Mound"	-1	0	"'The Pitchers Mound is is one of the many games that thrill and delight our visitors every day!' says [the noun]."
-"high/striker/strongman" or "high striker" or "strong man"	"High Striker"	-1	0	"'The High Striker is is one of the many games that thrill and delight our visitors every day!' says [the noun]."
-"fuse/fuses/aqua/crimson/emerald/gray/khaki/magenta/orange/quartz" or "aqua fuse " or "crimson fuse" or "emerald fuse" or "gray fuse" or "khaki fuse" or "magenta fuse" or "orange fuse" or "quartz fuse" 	"Fuses"	-1	0	"'I know nothing about fuses', [the noun] says."
-"indigo" or "indigo fuse" 	"The Indigo Fuse"	-1	5	"'Where did you get that?' [the noun] asks."
-"fire"	"The Stake Room Fire"	-1	5	"The fire was most unfortunate. It put [story title] out of commission for two weeks. Not only did it cost me $22,500 to repair but I lost revenue while it was closed."
-"accidents/mishaps"	"Accidents"	-1	1	"[The noun] says, 'Oh, that[']s nothing to worry about. Little things happen all the time, right?'"
-"pliers"	"The Pliers"	-1	3	"'Oh! I thought I lost... um, those belong to the janitor. Where did you find them?' asks [the noun]."
-"cashier's/check/fred/needleman" or "fred needleman"	"Fred Needleman"	-1	3	"[The noun] says 'Uh, Fred is a special... contractor... We paid him. For services rendered.'"
-"services/rendered/special" or "services rendered"	"Services Rendered"	-1	1	"'Fred did some work over at the bumper cars' says [the noun]."
+topic	description (text)	subject (text)	turn stamp (number)	weighting (number)	response (text)
+"hell/ride" or "hell ride"	"Hell Ride"	"NA"	-1	0	"'[story title] is the premier attraction here at  Whidbey Amusements. It[']s both spooky and fun! The visitors love it! The fire last month was unfortunate and expensive' says [the noun]."
+"invoices/receipts/paperwork"	"Invoices"	"Invoices"	-1	3	"[The noun] says, 'I know this doesn[']t look good but the cost of consumables go up every week and attendance is down. I have to pinch pennies somehow, don[']t I? And that fire was very expensive to repair.'"
+"insurance/policy" or "insurance policy"	"Insurance Policy"	"Insurance"	-1	1	"'An insurance policy? Of course, all reputable businesses have insurance. Even small time carnivals' [the noun] stammers."
+"carnival"	"Carnival"	"Whidbey"	-1	1	"'The Whidbey family has owned this carnival since the 1957', [the noun] says. 'Unfortunately, I am an only child and never married. Alas, the carnival will close when I am gone. But for now, it[']s making a comeback!'"
+"ferris/wheel" or "ferris wheel"	"Ferris Wheel"	"NA"	-1	0	"[The noun] says 'The Ferris Wheel is my favorite ride. It[']s always relaxing and romantic.'"
+"bumper/car/cars" or "bumper cars" or "bumper car"	"Bumper Cars"	"Accidents"	-1	3	"'That incident the other week with that Needleman kids was unfortunate' says [the noun]."
+"fortune/teller/esmeralda/esmerelda" or "fortune teller"	"Esmeralda"	"NA"	-1	0	"[The noun] says 'I see her regularly to have my fortune told. We[']re lucky to have her here. She[']s very beautiful. It[']s a wonder she[']s never been married.'"
+"carousel"	"Carousel"	"NA"	-1	0	"'The carousel is just one of the many rides that thrill and delight our visitors every day,' says [the noun]"
+"dime/toss/plate" or "dime toss"	"Dime Toss"	"NA"	-1	0	"'The Dime Toss is is one of the many games that thrill and delight our visitors every day!' says [the noun]."
+"pitchers/mound/milk/bottles" or "pitchers mound" or "milk bottles"	"Pitcher's Mound"	"NA"	-1	0	"'The Pitchers Mound is is one of the many games that thrill and delight our visitors every day!' says [the noun]."
+"high/striker/strongman" or "high striker" or "strong man"	"High Striker"	"NA"	-1	0	"'The High Striker is is one of the many games that thrill and delight our visitors every day!' says [the noun]."
+"fuse/fuses/aqua/crimson/emerald/gray/khaki/magenta/orange/quartz" or "aqua fuse " or "crimson fuse" or "emerald fuse" or "gray fuse" or "khaki fuse" or "magenta fuse" or "orange fuse" or "quartz fuse" 	"Fuses"	"NA"	-1	0	"'I know nothing about fuses', [the noun] says."
+"indigo" or "indigo fuse" 	"The Indigo Fuse"	"Fuses"	-1	5	"'Where did you get that?' [the noun] asks."
+"fire"	"The Stake Room Fire"	"Accidents"	-1	5	"The fire was most unfortunate. It put [story title] out of commission for two weeks. Not only did it cost me $22,500 to repair but I lost revenue while it was closed."
+"accidents/mishaps"	"Accidents"	"Accidents"	-1	1	"[The noun] says, 'Oh, that[']s nothing to worry about. Little things happen all the time, right?'"
+"pliers"	"The Pliers"	"Accidents"	-1	3	"'Oh! I thought I lost... um, those belong to the janitor. Where did you find them?' asks [the noun]."
+"cashier's/check/fred/needleman" or "fred needleman"	"Fred Needleman"	"Insurance"	-1	3	"[The noun] says 'Uh, Fred is a special... contractor... We paid him. For services rendered.'"
+"services/rendered/special" or "services rendered"	"Services Rendered"	"Insurance"	-1	1	"'Fred did some work over at the bumper cars' says [the noun]."
+"extortion/blackmail"	"Blackmail"	"Insurance"	-1	5	"Not satisfied with the first payment, Needleman wanted more money. His latest demand is $15,000."
 
-Section 18 - Table of Owner Object Responses
+Section 19 - Table of Owner Object Responses
 
 Table of Owner Object Responses
-object (object)	description (text)	turn stamp (number)	evidence weight (number)	response (text)
-Cash 'N' Carry invoice	"Cash [']N['] Carry Invoice"	-1	3	"[The second noun] says, 'Money[']s a little tight. The cost of consumables go up every week.'"
-Frank's Market invoice	"Frank[']s Market Invoice"	-1	3	"[The second noun] says, 'I can[']t keep up with the cost of ingredients. Everything costs so much!'"
-Oriental Trading  invoice	"Oriental Trading Invoice"	-1	3	"[The second noun] says, 'There must be prizes for the games otherwise visitors wouldn[']t play them. Maybe people won[']t win so often.'"
-Mystic Industries invoice	"Mystic Industries Invoice"	-1	5	"[The second noun] says, That fire in [story title] was very expensive to repair. And it put the ride out of commission for two weeks.'"
-paperwork	"Paperwork"	-1	3	"[The second noun] says, 'I know this doesn[']t look good but the cost of consumables go up every week and attendance is down. I have to pinch pennies somehow, don[']t I? And that fire was very expensive to repair.'"
-insurance policy	"Insurance Policy"	-1	5	"'An insurance policy? Of course, all reputable business have insurance. Even small time carnivals', [the second noun] stammers."
-pliers	"The Pliers"	-1	5	"'Oh! I thought I lost... I mean those belong to the janitor. Where did you find them?' asks [the second noun]."
-cashier's check	"Cashier's Check"	-1	5	"[The second noun] says 'Uh, Fred is a special... contractor... We paid him. For services rendered.'"
-fuse1	"Aqua Fuse"	-1	0	"'I know nothing about fuses', [the second noun] says."
-fuse3	"Crimson Fuse"	-1	0	"'I know nothing about fuses', [the second noun] says."
-fuse5	"Emerald Fuse"	-1	0	"'I know nothing about fuses', [the second noun] says."
-fuse7	"Gray Fuse"	-1	0	"'I know nothing about fuses', [the second noun] says."
-fuse9	"Indigo Fuse"	-1	5	"'Oh, um, where did you get that?' [the second noun] asks."
-fuse11	"Khaki Fuse"	-1	0	"'I know nothing about fuses', [the second noun] says."
-fuse13	"Magenta Fuse"	-1	0	"'I know nothing about fuses', [the second noun] says."
-fuse15	"Orange Fuse"	-1	0	"'I know nothing about fuses', [the second noun] says."
-fuse17	"Quartz Fuse"	-1	0	"'I know nothing about fuses', [the second noun] says."
+object (object)	description (text)	subject (text)	turn stamp (number)	weighting (number)	response (text)
+Cash 'N' Carry invoice	"Cash [']N['] Carry Invoice"	"Invoices"	-1	3	"[The second noun] says, 'Money[']s a little tight. The cost of consumables go up every week.'"
+Frank's Market invoice	"Frank[']s Market Invoice"	"Invoices"	-1	3	"[The second noun] says, 'I can[']t keep up with the cost of ingredients. Everything costs so much!'"
+Oriental Trading  invoice	"Oriental Trading Invoice"	"Invoices"	-1	3	"[The second noun] says, 'There must be prizes for the games otherwise visitors wouldn[']t play them. Maybe people won[']t win so often.'"
+Mystic Industries invoice	"Mystic Industries Invoice"	"Accidents"	-1	5	"[The second noun] says, That fire in [story title] was very expensive to repair. And it put the ride out of commission for two weeks.'"
+paperwork	"Paperwork"	"Invoices"	-1	3	"[The second noun] says, 'I know this doesn[']t look good but the cost of consumables go up every week and attendance is down. I have to pinch pennies somehow, don[']t I? And that fire was very expensive to repair.'"
+insurance policy	"Insurance Policy"	"Insurance"	-1	5	"'An insurance policy? Of course, all reputable business have insurance. Even small time carnivals', [the second noun] stammers."
+pliers	"The Pliers"	"Accidents"	-1	5	"'Oh! I thought I lost... I mean those belong to the janitor. Where did you find them?' asks [the second noun]."
+cashier's check	"Cashier's Check"	"Insurance"	-1	5	"[The second noun] says 'Uh, Fred is a special... contractor... We paid him. For services rendered.'"
+fuse1	"Aqua Fuse"	"NA"	-1	0	"'I know nothing about fuses', [the second noun] says."
+fuse3	"Crimson Fuse"	"NA"	-1	0	"'I know nothing about fuses', [the second noun] says."
+fuse5	"Emerald Fuse"	"NA"	-1	0	"'I know nothing about fuses', [the second noun] says."
+fuse7	"Gray Fuse"	"NA"	-1	0	"'I know nothing about fuses', [the second noun] says."
+fuse9	"Indigo Fuse"	"NA"	-1	5	"'Oh, um, where did you get that?' [the second noun] asks."
+fuse11	"Khaki Fuse"	"NA"	-1	0	"'I know nothing about fuses', [the second noun] says."
+fuse13	"Magenta Fuse"	"NA"	-1	0	"'I know nothing about fuses', [the second noun] says."
+fuse15	"Orange Fuse"	"NA"	-1	0	"'I know nothing about fuses', [the second noun] says."
+fuse17	"Quartz Fuse"	"NA"	-1	0	"'I know nothing about fuses', [the second noun] says."
 
-Section 19 - Table of Confrontation
+Section 20 - Table of Confrontation
 
 Table of Confrontation
 topic	turn stamp (number)	accusation weight (number)	response (text)
 "insurance/fraud" or "insurance fraud"	-1	5	"[if total evidence is greater than 0 and total evidence is less than 41]'You have nothing on me', says [the noun].[otherwise if total evidence is greater than 40 and total evidence is less than 81][The noun] says, 'OK, maybe there[']s enough evidence to have me charged with [the topic understood] but they[']ll never make it stick.'[otherwise if total evidence is greater than 80]'Looks like you[']ve caught me red-handed' says [the noun].[end if]"
 "bribery"	-1	5	"The bumper cars injured that Needleman kid with an electrical shock. He was going to report the carnival to the authorities. So, I had to pay him off to keep him quiet."
-"extortion/blackmail"	-1	5	"Not satisfied with the first payment, Needleman wanted more money. His latest demand is $15,000."
 "insurance/policy" or "insurance policy"	-1	5	"I needed the money to cover for Needleman somehow."
 
-Section 20 - Table of Janitor Movements
+Section 21 - Table of Janitor Movements
 
 Table of Janitor Movements
 mins (number)	destination (object)	
@@ -4042,7 +4153,7 @@ mins (number)	destination (object)
 55	TB-room
 0	Head of the Line
 
-Section 21 - Table of Owner Movements
+Section 22 - Table of Owner Movements
 
 Table of Owner Movements
 mins (number)	destination (object)	
@@ -4059,7 +4170,7 @@ mins (number)	destination (object)
 53	Dungeon
 58	Guillotine Room
 
-Section 22 - Introduction to Hell Ride
+Section 23 - Introduction to Hell Ride
 
 When play begins:
 	choose row 1 in Table of Help Options;
@@ -4069,7 +4180,7 @@ You[']re a part-time reporter for The Tribune, the local paper. Earlier in the d
 
 As you explore the carnival, you learn (the hard way) that the [story title] attraction is malfunctioning with the potential for serious injuries to the riders. You must disable the ride and prevent any loss of life... including your own."
 
-Section 23 - Hell Ride Origins
+Section 24 - Hell Ride Origins
 
 When play begins:
 	 choose row 2 in Table of Help Options;
@@ -4089,7 +4200,7 @@ I hope you enjoy it.
 d.[line break]
 (dmontgom22@gmail.com)"
 
-Section 24 - Credits
+Section 25 - Credits
 
 Crediting is an action applying to nothing. Understand "Credits" as crediting.
 instead of crediting:
@@ -4113,7 +4224,7 @@ Chapter 1 - Parking Lot
 
 Test Parking with "brief / get blueberries / eat blueberries / give coupon to operator / buy ticket / ask attendant about the ticket stub/ tell attendant about stub / show the stub to the attendant / talk to attendant / l at attendant  / kiss attendant / smell attendant / listen to attendant / touch attendant / taste attendant / screw attendant / darn / damn / get in car / look / l at seat / l under seat / get all dimes / get keys / open glove box / get string / get gloves / wear gloves / set stub on the dashboard / l at the dashboard / get air freshener / look at it / put keys in ignition / turn keys / exit".
 
-Test ToadAway with "brief / test parking / get parking stub / test games"
+Test ToadAway with "brief / test parking / get parking stub / test games / z"
 
 Chapter 2 - Games
 
@@ -4138,7 +4249,7 @@ Test Attractions with "test a1 / test a2"
 Chapter 4 - Back Stage
 
 [get the key]
-Test b1 with "brief / s / steal brass ring / steal brass ring / steal brass ring / s /  s / e / s / turn on radio / u / w / flip switch / push switch / push switch / e / d / l at desk / open drawer / s / s / s / chew bubblegum / tie bubblegum to string / put bubblegum in grate / s / s / ne / drop mallet / get silver key / l at panel / open panel / l at socket / sw / n / n / n / n / n / i"
+Test b1 with "brief / s / s /  s / e / s / turn on radio / u / w / flip switch / push switch / push switch / e / d / l at desk / open drawer / s / s / s / chew bubblegum / tie bubblegum to string / put bubblegum in grate / s / s / ne / drop mallet / get silver key / l at panel / open panel / l at socket / sw / n / n / n / n / n / i"
 
 [get the fuses]
 Test b2 with "w / e / s / w / e / s / w / l in pyre / get fuse / e / s / w / e / s / w /  e / s / s / w / l in stand / buy aqua fuse / e / n"
@@ -4153,7 +4264,7 @@ Test Backstage with "test b1 / test b2 / test b3 / test b4"
 
 Chapter 5 - Concession Stand
 
-Test Concession with "brief / s / steal brass ring / s / steal brass key / n / sw / l at treats / read menu / buy cola / buy popcorn / buy candy apple / buy cotton candy / buy pretzel / buy bubblegum / drink soda / g / g / g / g / w / open trash can / get khaki fuse / e / s / x photo / x safe / turn dial to 62 / turn dial to 22 / turn dial to 3 / open safe / s / open safe / get indigo fuse / n / ne / n / i / score / ".
+Test Concession with "brief / s / steal brass ring / z / z / steal brass key / sw / l at treats / read menu / buy cola / buy popcorn / buy candy apple / buy cotton candy / buy pretzel / buy bubblegum / drink soda / g / g / g / g / w / open trash can / get khaki fuse / e / s / x photo / x safe / turn dial to 62 / turn dial to 22 / turn dial to 3 / open safe / s / open safe / get indigo fuse / n / ne / n / i / score / ".
 
 Chapter 6 - Hell Ride
 
@@ -4179,13 +4290,13 @@ A permission is a kind of value. The permissions are allowed and denied.
 Hint usage is a permission that varies. Hint usage is allowed.
 
 Check asking for help for the first time:
-	say "Sometimes the temptation to rely on hints becomes overwhelming, and you may prefer to turn off hints now. If you do so, your further requests for guidance will be denied. Turn off hints? >";
+	say "Sometimes the temptation to rely on hints becomes overwhelming, and you may prefer to turn off hints now. If you do so, the hints will be removed from the help menu. Turn off hints? >";
 	if player consents:
 		now hint usage is denied;
-		say "[line break]Truly, a real adventurer does not need hints." instead.
-		
-Check asking for help:
-	if hint usage is denied, say "You have chosen to forego hints in this game. Be strong! Persevere!" instead.
+		repeat with N running from 6 to the number of rows in the Table of Help Options:
+			choose row N in the Table of Help Options;
+			blank out the whole row;
+		try asking for help.
 	
 when play begins:
 	 now mn_master_table is the Table of Help Options.
@@ -4194,7 +4305,7 @@ when play begins:
 when play begins:
 	let T be "[fixed letter spacing]Note that not all of these points are awarded. Some are mutually exclusive of others.[paragraph break]";
 	repeat through Table of Scored Circumstances:
-		let T be "[T][point value entry] - [description entry][line break]";
+		let T be "[fixed letter spacing][T][point value entry] - [description entry][roman type][line break]";
 	choose row 16 from Table of Help Options;
 	now the description entry is T.
 
@@ -4223,11 +4334,11 @@ Chapter 2 - Help Options
 Table of Help Options
 title (text)	subtable (table name)	description (text)	toggle (rule)	used (number)	bookpage (number)	localpage (number)
 "Introduction to [story title]"	--	""
-"Hell Ride Origins"	--	""
+"[story title] Origins"	--	""
 "Introduction to Interactive Fiction"	Table of IF Introduction	--
 "Settings"	Table of Setting Options	--	
 "Credits"	--	"[story title], Copyright 2025, Dana Montgomery.[paragraph break]Extensions used in [story title]:[line break][complete list of extension credits][line break]Additional Credits:[line break]Caitlyn Caluya-Bilbrick for her editing and proofreading super powers.[line break]The amazing Inform community over at https://IntFiction.org.[paragraph break]The following awesome individuals for their beta testing, excellent feedback, and ideas:[line break]Joey Acrimonious[line break]Ryan Allocco[line break]Andy Broding[line break]Drew Cook[line break]RJ Kowalski[line break]John Montgomery[line break]"
-"----- These Hints Below Contain Out Right Spoilers -----"	--	"Part of the enjoyment of Interactive Fiction comes from the solving of the puzzles. For the most part all [story title] puzzles are solved within these hints. The hints are often blunt, especially at the end of a topic. I would, however, encourage you to play for the fun of it and reserve the hints for when you[']re truly stuck."
+"----- The Hints Below May Contain Out Right Solutions -----"	--	"Part of the enjoyment of Interactive Fiction comes from the solving of the puzzles. For the most part all [story title] puzzles are solved within these hints. The hints are often blunt, especially at the end of a topic. I would, however, encourage you to play for the fun of it and reserve the hints for when you[']re truly stuck."
 "The Parking Lot"	Table of Parking Lot Hints	--
 "The Attractions"	Table of Attractions Hints	--
 "The Games"	Table of Games Hints	--
