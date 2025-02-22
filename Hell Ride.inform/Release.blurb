@@ -15,7 +15,7 @@ storyfile "C:\HellRide\Hell Ride.inform\Build\output.ulx" include
 ifiction "C:\HellRide\Hell Ride.inform\Metadata.iFiction" include
 cover "C:\HellRide\Hell Ride.materials\Cover.png"
 picture 1 "C:\HellRide\Hell Ride.materials\Cover.png"
-picture 3 "C:\HellRide\Hell Ride.materials\Figures\HellRide.png" "The entrance to Hell Ride"
+picture 3 "C:\HellRide\Hell Ride.materials\Figures\HellRide.png" "The entrance to [story title]"
 picture 4 "C:\HellRide\Hell Ride.materials\Figures\TicketBooth.png" "A ticket kiosk"
 picture 5 "C:\HellRide\Hell Ride.materials\Figures\ConcessionStand.png" "A concession stand"
 picture 6 "C:\HellRide\Hell Ride.materials\Figures\LittleEgyptFacade.png" "The Little Egypt facade"
@@ -27,7 +27,7 @@ picture 11 "C:\HellRide\Hell Ride.materials\Figures\ControlPanelGallows.png" "Co
 picture 12 "C:\HellRide\Hell Ride.materials\Figures\ControlPanelStake.png" "Control panel displaying the Stakes Room"
 picture 13 "C:\HellRide\Hell Ride.materials\Figures\ControlPanelDungeon.png" "Control panel displaying the Dungeon"
 picture 14 "C:\HellRide\Hell Ride.materials\Figures\ControlPanelGuillotine.png" "Control panel displaying the Guillotine Room"
-picture 15 "C:\HellRide\Hell Ride.materials\Figures\ControlPanelExit.png" "Control panel displaying the Hell Ride Exit"
+picture 15 "C:\HellRide\Hell Ride.materials\Figures\ControlPanelExit.png" "Control panel displaying the [story title] Exit"
 picture 16 "C:\HellRide\Hell Ride.materials\Figures\Coupon.png" "A carnival parking coupon. Saves two dollars"
 picture 17 "C:\HellRide\Hell Ride.materials\Figures\MaintenanceOffice.png" "A carnival maintenance office"
 picture 18 "C:\HellRide\Hell Ride.materials\Figures\FerrisWheel.png" "A Ferris Wheel ride"
@@ -41,18 +41,18 @@ picture 25 "C:\HellRide\Hell Ride.materials\Figures\RideGallows.png" "The Gallow
 picture 26 "C:\HellRide\Hell Ride.materials\Figures\RideStake.png" "The Stake Room"
 picture 27 "C:\HellRide\Hell Ride.materials\Figures\RideDungeon.png" "The Dungeon"
 picture 28 "C:\HellRide\Hell Ride.materials\Figures\RideGuillotine.png" "The Guillotine Room"
-picture 29 "C:\HellRide\Hell Ride.materials\Figures\RideExit.png" "The Hell Ride Exit"
+picture 29 "C:\HellRide\Hell Ride.materials\Figures\RideExit.png" "The [story title] Exit"
 picture 30 "C:\HellRide\Hell Ride.materials\Figures\MercuryDime.png" "A Mercury dime"
 sound 31 "C:\HellRide\Hell Ride.materials\Sounds\Bell.ogg" "The sound of a bell"
 
 ! Placeholder variables
 
 placeholder [IFID] = "E0A5AFB9-18BF-4485-B083-426CA51CCE70"
-placeholder [RELEASE] = "200"
+placeholder [RELEASE] = "201"
 placeholder [YEAR] = "2025"
 placeholder [TITLE] = "Hell Ride"
 placeholder [AUTHOR] = "No Shoes"
-placeholder [BLURB] = "Hell Ride - A ride to remember...<br/>Date night with your sweetie: dinner at your favorite restaurant and a night at the carnival.<br/>After a lovely meal, you get into a big fight over the tip. Your date storms off, ruining your chances of that romantic evening you had hoped for. You decide to stay and enjoy the carnival anyway.<br/>As you explore the carnival, you learn (the hard way) that the Hell Ride attraction is malfunctioning with the potential for serious injuries to the riders. You must disable the ride off and prevent any loss of life... including your own."
+placeholder [BLURB] = "[story title] - A ride to remember...<br/>You're a part-time reporter for The Tribune, the local paper. Earlier in the day, your editor called you and told you of a conversation he overheard between the Chief of Police and his Deputy about Whidbey Amusements. It seems there has been a rash of accidents and mishaps at the carnival. Sounds like there could be something suspicious going on. He wants you to collect evidence and write a hard hitting piece about it. If you do a good job, maybe the paper will hire you on full-time.<br/>As you explore the carnival, you learn (the hard way) that the Hell Ride attraction is malfunctioning with the potential for serious injuries to the riders. You must disable the ride off and prevent any loss of life... including your own."
 
 ! Other material to release
 
