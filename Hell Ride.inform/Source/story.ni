@@ -39,7 +39,7 @@ You[']re a part-time reporter for The Tribune, the local paper. Earlier in the d
 
 As you explore the carnival, you learn (the hard way) that the Hell Ride attraction is malfunctioning with the potential for serious injuries to the riders. You must disable the ride off and prevent any loss of life... including your own."
 The story creation year is 2025.
-The release number is 201.
+The release number is 202.
 	
 Chapter 3 - Extensions
 
@@ -101,15 +101,6 @@ every turn when total evidence is greater than 0 and evidence message is false:
 Rule for printing the player's obituary:
 	[winning move]
 	if Control Panel Nine's button is switched on and Control Panel Nine's dial is properly set:
-		say "As you push the indigo button, the monitor switches to a view of the guillotine room. You can still see the blade rising and falling over the cars. Suddenly, you see the blade slowing down, taking longer and longer to fall. Until it finally comes to a complete rest. 
-
-The room is heavy with uneasy silence. [story title], once a thrilling spectacle, now looms motionless, as the guillotine blade is frozen halfway down its track. Moments ago, chaos erupted as the malfunctioning mechanism sent the blade crashing unpredictably, ripping through the roofs of cars on the track.
-
-A single car, its roof gashed open, sits under the still blade — a grim reminder of the disaster narrowly averted. Above, a black crow lands on the guillotine’s frame, its sharp caw cutting through the murmurs of anger and fear.
-
-Two mechanics climb the scaffolding with tools in hand, their appearance met with wary hope. A crowd has gathered and is watching, holding their breath, as the cursed ride[’]s fate hangs in the balance.
-
-As you exit the ride, the carnival owner and the mayor are present and extending their undying gratitude for saving the day, not to mention lives![paragraph break]";
 		say "*** You have won! ***";
 		say paragraph break;
 		rule succeeds;
@@ -551,18 +542,26 @@ confronting it about is an action applying to one thing and one topic.
 understand "confront [someone] about/with [text]" as confronting it about. 
 understand "accuse [someone] of/with [text]" as confronting it about.
 
+confession is a truth state that varies. confession is false.
 instead of confronting Mr Whidbey about a topic listed in the Table of Confrontation:
 	if total evidence is less than 31:
-		say "You don[']t have enough evidence to confront anyone about anything.";
+		say "[The noun] says. 'You don[']t have enough evidence to confront anyone about anything.'";
 	if total evidence is less than 61:
-		say "Any evidence you have is circumstantial. It[']ll be thrown out on day one of the trial!";
+		say "'Any evidence you have is circumstantial. It[']ll be thrown out on day one of the trial!', says [the noun]";
 	otherwise if hell ride disabled is false:
 		say "As much as you would like to confront [the noun] about [the topic understood] you should probably take care of disabling [story title] first.";
 	otherwise:
 		say "[response entry][paragraph break]";
 		if the turn stamp entry is -1:
 			now total accusation is total accusation plus the accusation weight entry;
-			now the turn stamp entry is the turn count.
+			now the turn stamp entry is the turn count;
+			now confession is true.
+			
+every turn when confession is true:
+	say "The Chief of Police pays particular attention to Mr. Whidbey[']s confession. He approaches Whidbey and says 'You have the right to remain silent. Anything you say will be used against you in a court of law. You have the right to an attorney during interrogation; if you cannot afford an attorney, one will be appointed to you.'
+
+He handcuffs Whidbey, thanks you for your serivce to the community, and leads Mr Whidbey away to jail.";
+	end the story finally.
 			
 instead of confronting somebody about something, say "There[']s no need to confront [the noun] about [the topic understood].".
 
@@ -580,15 +579,6 @@ instead of examining the notebook:
 showing evidence is an action out of world applying to nothing. Understand "show evidence" as showing evidence.
 carry out showing evidence:
 	try examining notebook.
-
-displaying accusations is an action out of world applying to nothing. Understand "display accusations" as displaying accusations. understand "show accusations" as displaying accusations.
-carry out displaying accusations:
-[	say "total accusation: [total accusation].";]
-	say "Accusations made against Mr Whidbey:[line break]";
-	sort the Table of Confrontation in turn stamp order;
-	repeat through Table of Confrontation:
-		if turn stamp entry is not -1 and the accusation weight entry is greater than 0:
-			say "•	[description entry].[line break]";
 
 Section 14 - Scoring
 
@@ -1712,15 +1702,13 @@ To count the switches:
 	
 Section 8 - Electrical Room
 
-Electrical Room is a dark room.  The electrical room can be electromagnetic. The electrical room is electromagnetic. "The electrical room is a small but essential space hidden behind the carnival’s bright attractions. The air vibrates with electric energy, carrying the acrid scent of overheated wires and metal. Metal panels line the walls, some polished, others worn and streaked with grease.
+Electrical Room is a dark room.  The electrical room can be electromagnetic. The electrical room is electromagnetic. "The electrical room is small, hidden behind the carnival’s attractions. The air smells of overheated wires and metal.
 
-A central breaker panel, labeled with destinations like 'Ferris Wheel Lights' and 'Carousel Motors,' dominates one wall. Colored indicator lights blink intermittently, reflecting off steel surfaces. Overhead, thick cable bundles snake across the ceiling, connecting to the carnival’s power network.
+A central breaker panel dominates one wall, with labels like 'Ferris Wheel Lights' and 'Carousel Motors.' Indicator lights blink intermittently. Thick cables hang from the ceiling, connected to the carnival’s power network.
 
-In a corner, an open junction box spills wires onto the wall, while a workbench holds scattered tools and a smudged wiring diagram pinned above. The dirt floor bears scratches, oil stains, and wire clippings. A faint vibration, carried from the generator or nearby rides, pulses through the room.
+A junction box spills wires, and a workbench holds tools and a smudged wiring diagram. The floor is scratched and stained. A faint vibration pulses in the air.
 
-An emergency shutdown panel painted bright red stands near a fire extinguisher and a faded safety poster. A small fan on the workbench oscillates weakly, barely cooling the room’s warmth. Flickering fluorescent tubes overhead cast harsh, shifting shadows.
-
-The electrical room is raw and utilitarian, revealing the fragile systems behind the carnival’s magic — a humbling reminder of the power sustaining the midway’s enchantment.
+An emergency shutdown panel and fire extinguisher sit nearby. Fluorescent lights cast shifting shadows. The room is raw and essential, a behind-the-scenes look at the carnival’s power.
 
 [if the location is electromagnetic]This room is oozing with electromagnetic energy. You can feel your hair stand on end and all your nerves twitching. This feels dangerous! There are exits in all directions.[otherwise]This room is eerily quiet, missing the ever present buzz of electricity. There are exits in all directions.[end if]".
 
@@ -1776,11 +1764,13 @@ Dark Hallway is a dark room. "This is a poorly lit hallway. Ahead to the west yo
 
 Section 3 - Control Room
 
-Control Room is a dark room. "The backstage control room is a plain, functional hub where the carnival’s rides, lights, and attractions are managed. Gray industrial walls, scuffed and greasy, surround a large monitor streaming live carnival feeds. Beneath them, control panels with labeled dials, colored buttons, and lights oversee the systems scattered about the room. Glancing at the control panels, you can see they are [if the switch count is 6]lit up like a Christmas tree[otherwise]dark[end if].
+Control Room is a dark room. "The backstage control room is a functional space with gray, scuffed walls. A large monitor shows live feeds while control panels with dials, buttons, and lights manage the rides and systems. Some panels remain oddly dark.
 
-The hum of electronics fills the air, punctuated by the crackle of a radio: 'Maintenance to Bumper Cars — wrench needed!' The worn floor is scattered with papers, tools, and coffee cups. A cluttered desk holds logs and schedules, while a cork board above displays charts and red-marked notes like 'Check Zipper circuit breakers.'
+The hum of electronics is interrupted by a crackling radio: 'Maintenance to Bumper Cars - wrench needed!' Papers, tools, and coffee cups clutter the floor. A desk holds logs and schedules, and a corkboard displays charts and red-marked notes, including one that says 'Check Zipper circuit breakers.'
 
-A flickering light casts cold shadows as the metallic tang of machinery mixes with dampness. Functional yet essential, this hidden space ensures the carnival’s magic runs seamlessly. On one wall is a large switch[if the big switch is switched on] with sparks arcing out from it[end if].
+A single light casts harsh shadows, and the air smells of lubricant and burnt wires, mingling with dampness. The room is hidden but vital, keeping the carnival running. On one wall, a switch sparks with blue and white arcs.
+
+On one wall is a large switch[if the big switch is switched on] with sparks arcing out from it[end if].
 
 A dark hallway lies to the east." 
 
@@ -1918,7 +1908,7 @@ A single car, its roof gashed open, sits under the still blade — a grim remind
 
 Two mechanics climb the scaffolding with tools in hand, their appearance met with wary hope. A crowd has gathered and is watching, holding their breath, as the cursed ride[’]s fate hangs in the balance. After a moment, applause rises from the assembled crowd, cheering your accomplishment.
 
-Mr. Whidbey, the Mayor, and the Chief of Police arrive on the scene and extend their gratitude for saving the day, not to mention lives![paragraph break]";
+Mr. Whidbey, the Mayor, Chief of Police, and the janitor arrive on the scene and extend their gratitude for saving the day, not to mention lives![paragraph break]";
 		move Mr Whidbey to the Control Room;
 		move the Chief of Police to the Control Room;
 		move the Mayor to the Control Room;
@@ -2041,15 +2031,11 @@ When play begins:
 	display the figure of Hell Ride;
 	say "You[']re a part-time reporter for The Tribune, the local paper. Earlier in the day, your editor called you and told you of a conversation he overheard between the Chief of Police and his Deputy about Whidbey Amusements. It seems there has been a rash of accidents and mishaps at the carnival. Sounds like there could be something suspicious going on. The editor wants you to collect evidence and write a hard hitting piece about this story. If you do a good job, maybe the paper will hire you on full-time.".
 
-The PL-room is a room. The printed name is "Parking Lot". The PL-room is north of the TB-room. The PL-room is outdoors. "The carnival parking lot stretches across an open field, its gravel crunching under arriving cars. Temporary floodlights and the carnival[']s colorful glow light the area, while distant laughter, music, and the hum of rides fill the air.
+The PL-room is a room. The printed name is "Parking Lot". The PL-room is north of the TB-room. The PL-room is outdoors. "The lot stretches across an open field, gravel crunching under the tires of arriving cars. Floodlights and the carnival's colorful glow light the area, accompanied by distant laughter, music, and the hum of rides.
 
-Cars park haphazardly, guided by makeshift signs and fluttering flags. Families unload strollers and blankets, their chatter mixing with the carnival sounds. Others linger in vehicles, preparing for the chilly evening.
+Cars park haphazardly, guided by makeshift signs and fluttering flags. Families and visitors mingle, some lingering in vehicles, preparing for the chilly evening ahead. Shadows from encroaching trees are pierced by the occasional flash of a flashlight. At the entrance, an attendant collects fees in a weathered booth, making change from a cash box.
 
-Shadows from nearby trees create dark pockets pierced by the occasional flashlight. Near the entrance, an attendant collects fees at a weathered booth, coins jingling in the cash box.
-
-Puddles from recent rain shimmer with reflected lights, while patches of mud cling to unwary shoes. At the far end, RVs and trailers sit quietly, their occupants watching the Ferris wheel spin lazily against the sky.
-
-Alive with anticipation, the parking lot marks the transition from the ordinary to the magic of the carnival.
+Puddles from recent rain shimmer under the lights, while patches of mud cling to shoes. In the distance, RVs and trailers sit quietly, their occupants watching the Ferris wheel turn against the evening sky. The lot serves as a boundary, marking the transition between the mundane and the magical world inside the carnival.
 
 The midway is to the south. There is a blueberry bush here. [if blueberry bush contains blueberries]There are blueberries on the bush.[otherwise]The bush has been picked clean.[end if][paragraph break]Your car is here. It[']s a bit of a beater. Inside the car, you can see [the list of things which are part of the beater car]."
 
@@ -2169,13 +2155,11 @@ The TB-room is west of the HS-room.
 
 The Cashier is an attendant in the TB-room. Understand "smiling/attendant" as cashier.
 
-The description of the TB-room is "The ticket kiosk stands at the carnival entrance, a compact booth painted in bright red and yellow stripes with bold letters above the window reading 'Tickets Here!' Twinkling lights outline its edges, blinking rhythmically to draw attention.
+The description of the TB-room is "The ticket kiosk stands at the entrance, painted in bright red and yellow stripes, with flickering lights to draw attention. A grinning cashier hands out tickets, while the cash drawer jingles. A digital payment system sits unused in the corner. Too bad you don’t have a debit card.
 
-A single window serves visitors, where a smiling cashier dispenses colorful tickets from neatly arranged rolls. Beside the tickets, a cash drawer jingles as change is counted, and a digital payment system glows faintly for modern convenience. Too bad you don[']t have a debit card.
+To the right, a signboard displays ticket prices alongside illustrations of the rides. Pennant flags flutter, adding to the festive atmosphere. The air is filled with the scent of popcorn, pretzels, and grease.
 
-Next to the kiosk, a vibrant signboard lists ticket prices with playful illustrations of rides. Pennant flags flutter from the kiosk’s roof, adding to the festive atmosphere, while the smell of popcorn and pretzels wafts from the southwest.
-
-The worn ground around the kiosk shows the passage of eager carnival-goers. Families, couples, and friends form a buzzing line, their excitement building as they approach this first step into the magic of the carnival.
+The ground is worn from the steps of families, couples, and friends, eagerly waiting in line, excitement building as they approach the carnival.
 
 The midway continues in all directions from here. There is a cashier here. A price list for attraction tickets is on the signboard. The cashier has [list of things carried by the cashier]."
 
@@ -2231,15 +2215,11 @@ Before going southwest when the location is the TB-room and the CS-room is unvis
 Before looking when the location is the CS-room:
 	if show images is true, display Figure of ConcessionStand.
 
-The CS-room is a room. The printed name is "Concession Stand". The CS-room is outdoors. The CS-Room is east of Behind the Concession Stand. "The concession stand, perched along the midway, is a colorful and bustling hub. Painted in bright reds, blues, and yellows, it features bold lettering announcing treats like 'SODA! POPCORN! CANDY APPLES!' Strings of twinkling lights frame the stand, making it a glowing beacon amid the carnival excitement.
+The CS-room is a room. The printed name is "Concession Stand". The CS-room is outdoors. The CS-Room is east of Behind the Concession Stand. "The concession stand is a vibrant hub along the midway, with bright red, blue, and yellow stripes. Twinkling lights frame the stand, making it glow amid the carnival's buzz.
 
-Behind the counter, a popcorn machine churns out golden kernels, filling the air with a buttery aroma. Candy apples gleam under the lights, and cotton candy machines spin fluffy clouds of pink and blue. Warm pretzels sit under a heat lamp, their buttery, salted scent mingling with the sugary treats. A cooler holds sodas, their colorful labels visible through the frosted glass.
+Behind the counter, popcorn churns in the machine, candy apples gleam, and cotton candy spins in clouds. Warm pretzels sit under a heat lamp, while sodas chill in a frosted cooler. The counter is cluttered with bags, napkins, and sprinkled cups.
 
-The counter is lively with stacks of paper bags, napkins, and cups of cheese and sugar sprinkles. A handwritten chalkboard menu lists prices in playful lettering. Workers in colorful aprons quickly hand out snacks, their movements efficient amid the cheerful chaos.
-
-In front of the stand, kids tug at their parents, teens share pretzels, and the crowd buzzes with energy. More than just a snack stop, the stand is a sensory delight, adding flavor and charm to the carnival experience.
-
-To the south is the Carnival Office. The trailer’s exterior is painted in dull, peeling shades of red and white, with old carnival advertisements that are barely legible due to sun damage. A string of dimly lit, flickering bulbs hang above the door, and an old 'Private' sign is half-hanging on the side, clearly neglected.
+Kids tug at parents, teens share pretzels, and the crowd buzzes with energy. More than just a snack stop, the stand is a sensory delight.
 
 There is a menu to the right of the window. You can see the treats inside the stand. There is an exit to the south and northeast. "
 
@@ -2454,9 +2434,7 @@ Before looking when the location is the HS-room:
 [ this was a forward reference that Inform 7 couldn't resolve for some reason]
 A room called the Pitchers Mound is southeast of the HS-room. 
 
-The HS-room is a room. The printed name is "High Striker". The HS-room is west of the FW-room, southwest of the Dime Toss Game, and northwest of the Pitchers Mound. The printed name is "High Striker". The HS-room is outdoors. "This area features a tall, eye-catching machine adorned with bright, colorful lights, typically red, yellow, and blue. A large sign at the top reads 'Test Your Strength!' in bold, playful lettering. The machine[’]s base is made of polished wood, giving it a vintage appearance. At the center is a sturdy metal pole, with a large bell hanging at the top, signaling when a successful attempt has been made. Along the length of the pole are markings indicating how strong you are.  A nearby sign says, 'Buy a mallet, strike the bell, win a prize.'[if the strongman attendant contains the mallet] You can see an over-sized mallet here.[end if]
-
-Spectators gather around, cheering on participants and offering lighthearted jabs and encouragement, creating a lively, competitive atmosphere. The sound of the mallet hitting the target is followed by the resonant clang of the bell (if struck), alongside the buzz of carnival music in the background. 
+The HS-room is a room. The printed name is "High Striker". The HS-room is west of the FW-room, southwest of the Dime Toss Game, and northwest of the Pitchers Mound. The printed name is "High Striker". The HS-room is outdoors. "A tall machine stands with bright red, yellow, and blue lights, a sign at the top reading 'Test Your Strength!' The base is dark, polished wood, with a sturdy metal pole and a bell at the top. Markings along the pole indicate strength. A smaller sign says, 'Buy a mallet, strike the bell, win a prize.' Spectators cheer as the sound of the mallet hitting the target echoes, followed by the clang of the bell and carnival music.
 
 The Ticket Kiosk is to the west. Other games are northeast and southeast of here. The Ferris Wheel lies to the east."
 
@@ -2589,9 +2567,7 @@ Before going northeast when the location is the HS-room and the Dime Toss Game i
 Before looking when the location is the Dime Toss Game:
 	if show images is true, display Figure of DimeToss.
 
-A room called the Dime Toss Game is northeast of the HS-room. "The game booth is adorned with vibrant colors — red-and-white striped awnings, twinkling lights, and eye-catching signage that reads 'TOSS A DIME — WIN A PRIZE!'. You can see prizes of all shapes and sizes hang around the booth, from stuffed animals and novelty toys to shiny trinkets and quirky collectibles. The larger prizes are prominently displayed to entice passersby. Rows of gleaming plates sparkle under overhead lights, their glass surfaces reflecting the surrounding glow.
-
-The distinctive 'ping' of dimes hitting plates creates a rhythmic soundtrack, punctuated by the occasional satisfying 'plop' when a dime lands perfectly. Victorious shouts mix with playful groans of near-misses, creating a symphony of excitement. Nearby, the hum of other booths, upbeat carnival music, and the distant laughter of children add to the lively backdrop. The booth operator calls out enthusiastically, 'Step right up! Test your skill! Win big!' Their energetic pitch draws in curious onlookers.
+A room called the Dime Toss Game is northeast of the HS-room. "The booth is brightly colored with red-and-white stripes, twinkling lights, and a sign reading 'TOSS A DIME - WIN A PRIZE!' Prizes hang around the booth, from stuffed animals to shiny trinkets. Gleaming plates reflect the light, waiting for dimes. The 'ping' of dimes hitting plates is followed by the satisfying 'plop' when they land. Shouts of victory and playful groans mix with carnival music and laughter. The operator calls out, drawing in onlookers.
 
 You[']re surprised to see that this game only costs a dime. The exit is to the southwest."
 
@@ -2675,9 +2651,7 @@ Before going southeast when the location is the HS-room and the Pitchers Mound i
 Before looking when the location is the Pitchers Mound:
 	if show images is true, display Figure of MilkBottles.
 
-A room called the Pitchers Mound is southeast of the HS-room. "The milk bottle ball toss is a classic carnival game that combines skill, strength, and a bit of luck. The setup features a pyramid of brightly colored milk bottles stacked on a sturdy platform — three on the bottom, two in the middle, and one on top. Players stand behind a marked line and toss baseballs, aiming to knock down as many bottles as possible. Clearing the entire stack wins a prize.
-
-The booth buzzes with energy, its colorful banners and flashing lights drawing a lively crowd. The satisfying clatter of falling bottles mixes with cheers and groans from players and spectators. A carnival attendant calls out, 'Step right up and test your aim! Three balls for just a dime.' Prizes — ranging from small toys to giant stuffed animals — hang prominently, enticing players to take a shot. With every toss, the game delivers moments of suspense, joy, and fun, making it a favorite at the carnival. The operator calls out, drawing in onlookers[if a dime underlies the pitchers mound booth], as something catches your eye near the booth[end if].
+A room called the Pitchers Mound is southeast of the HS-room. "The milk bottle toss is a classic game of skill and luck. A pyramid of colorful bottles sits on a sturdy platform – three on the bottom, two in the middle, and one at the top. Players throw baseballs to knock down the stack and win a prize. The booth is lively, with cheering and the clatter of falling bottles. The attendant calls, 'Step right up! Three balls for a dime!' Prizes from toys to stuffed animals hang nearby, adding to the excitement. A carnival favorite, every toss is filled with suspense and joy. [if a dime underlies the pitchers mound booth] You thought you caught a flash of something coming from the area of the booth.[end if]
 
 You[']re surprised to see that this game only costs a dime. The High Striker is to the northwest.".
 
@@ -2813,14 +2787,14 @@ Before going west when the location is the TB-room and the SF-room is unvisited:
 Before looking when the location is the SF-room:
 	if show images is true, display Figure of LittleEgyptFacade.
 
-SF-room is a room. SF-room is east of ST-room. The printed name is "Show Facade". SF-room is outdoors. "You head west through the midway, the bright lights of the carnival fading behind you as you approach a tent. A sign above the entrance reads 'Little Egypt Show — A Journey Into the Mysterious and the Unknown!' A rotund barker, wearing a fez and a dazzling smile, gestures to a small sign beside him. The Ticket Kiosk is back the way you came.
+SF-room is a room. SF-room is east of ST-room. The printed name is "Show Facade". SF-room is outdoors. "As you walk west through the midway, the lights fade to a soft glow, leading you to a tent. A sign reads 'Little Egypt Show - A Journey Into the Mysterious and Unknown!' The barker, wearing a fez and smiling, points to another sign: 'Little Egypt - Dime Admission.' The ticket kiosk is behind you.
 
-There is a stage in front of the tent. The Barker is encouraging you to step up and enjoy the Little Egypt Show."
+There is a stage in front of the tent. The Barker is encouraging you to step up and enjoy."
 
-the facade is in the SF-room. it is scenery. the description is "You are standing in front of a dark and mysterious tent filled with illusions and mysterious performers. Perhaps there’s a bearded lady inside, offering cryptic clues about your journey or a hidden artifact that can be collected. There is a stage in front of the tent. The Barker is encouraging you to step up, pay for, and enjoy the Little Egypt Show."
+the facade is in the SF-room. it is scenery. the description is "You are standing in front of a dark and mysterious tent filled with illusions and mysterious performers. There is a stage in front of the tent. The Barker is encouraging you to step up, pay for, and enjoy the Little Egypt Show."
 
 To say the barker's cry:
-	say "The barker cries:[paragraph break]Ladies and gentlemen, boys and girls, gather [']round! [line break]Step right up and witness the spectacle that[’]s taken the world by storm! [line break]She walks, she talks, she crawls on her belly like a reptile. [line break]Behold the one, the only Little Egypt, performing her legendary Dance of the Pyramids — a dazzling display of mystery, grace, and allure! [line break]For just a dime, a mere one tenth of a dollar, prepare to be transported to the sands of Cairo, where enchantment and wonder await!"
+	say "In front of the tent, the barker gestures excitedly, calling out:[paragraph break]Ladies and gentlemen, boys and girls, gather [']round! [line break]Step right up and witness the spectacle that[’]s taken the world by storm! [line break]She walks, she talks, she crawls on her belly like a reptile. [line break]Behold the one, the only Little Egypt, performing her legendary Dance of the Pyramids — a dazzling display of mystery, grace, and allure! [line break]For just a dime, a mere one tenth of a dollar, prepare to be transported to the sands of Cairo, where enchantment and wonder await!"
 	
 some facade incense is here. they are scenery. the description is "The smell of incense and spices wafts through the tent.". understand "spices" as facade incense.
 instead of smelling when the location is the ST-room, try examining the incense instead.
@@ -2845,7 +2819,7 @@ Check going west when the location is the SF-room and the barker is not carrying
 	stop the action.
 
 After giving when the noun is dime and the second noun is barker:
-	say "You hand over a dime, and the barker nods, waving you through. As you step past the entrance, the air feels thicker, almost humid, and the sounds of the carnival fade away. You’ve entered an entirely different world now — one filled with the scents of incense and unfamiliar spices, and the low, hypnotic music of a faraway land. Before you, a series of dimly lit tents stretch out, their flaps slightly swaying in the breeze. Intrigued, you take your first step into the Little Egypt Show. You can now head west into the show."
+	say "You hand over a dime, and the barker nods, waving you through. As you step past the entrance, the air feels thicker and the sounds of the carnival fade away. You’ve entered an entirely different world now. Before you, there is a tent. Intrigued, you take your first step into the Little Egypt Show. You can now head west into the show."
 	
 instead of listening when the location is the SF-room, say "You hear the low, hypnotic music of a faraway land.".
 instead of smelling when the location is the SF-room, say "The smell of incense and spices wafts through the tent."
@@ -2859,7 +2833,7 @@ Before going west when the location is the SF-room and the ST-room is unvisited 
 Before looking when the location is the the ST-room:
 	if show images is true, display Figure of LittleEgyptShow.		
 
-The ST-room is a room. The printed name is "Show Tent". The ST-room is west of SF-room. "You are inside the Little Egypt Show. The attraction[']s facade is to the east. There are folding chairs organized neatly in rows. The show should start soon."
+The ST-room is a room. The printed name is "Show Tent". The ST-room is west of SF-room. "You are inside the Little Egypt Show. The attraction's facade is to the East. There are folding chairs standing vigil in neat in rows. The show should start soon."
 
 Little Egypt is a woman. Little Egypt is in the ST-room. Little Egypt is scenery. The description of Little Egypt is "Little Egypt is a beautiful woman who is draped in flowing silk veils which she skillfully uses as part of the dance. Her attire consists of a sparkling, sequined bodice and a flowing skirt, adorned with jingling coin belts and jewelry that accentuate her movements.". understand "silk", "veils", "bodice", "sequined", "sequins", "flowing", "skirt", "jingling", "coins", "belts", "belt" and "jewelry" as Little Egypt.
 
@@ -2941,15 +2915,7 @@ After going east from the HS-room when the FW-room is unvisited:
 Before looking when the location is the FW-room:
 	if show images is true, display Figure of FerrisWheel.
 
-A room called the FW-room is outdoors. The printed name of the FW-room is "Ferris Wheel". The FW-room is east of the HS-room. "The Ferris wheel is the towering centerpiece of the carnival, its vibrant lights and graceful rotations drawing the attention of visitors from every corner of the fairgrounds. The wheel[']s massive steel frame arches high into the sky, its intricate network of beams glinting under the colorful glow of bulbs strung along its circumference. Each gondola, painted in bright hues like red, yellow, and blue, dangles from the wheel, swaying gently as it turns.
-
-At night, the Ferris wheel transforms into a dazzling spectacle, with hundreds of synchronized lights creating patterns and ripples that pulse outward like waves. The bulbs flash in bursts of red, green, and white, casting playful reflections on nearby attractions and the surrounding crowd.
-
-The air around the wheel is filled with a mix of excited chatter, the hum of its motor, and the occasional squeal of laughter or nervousness from riders high above. The ride operator, standing in a small booth at the base, keeps a steady rhythm of loading and unloading passengers, their voice occasionally calling out, 'Step right up! The best view of the carnival awaits!'
-
-The Ferris wheel offers an ever-changing perspective of the carnival below. From its peak, riders can see the entire fairground: the spinning lights of the rides, the colorful stripes of game booths, and the winding paths of visitors navigating the midway. Beyond the carnival, the view stretches to the horizon, with city lights adding to the magical experience.
-
-Whether it[']s a romantic ride for couples, a thrilling adventure for friends, or a calming retreat for families, the Ferris wheel captures the spirit of the carnival — an iconic blend of excitement, wonder, and timeless charm."
+A room called the FW-room is outdoors. The printed name of the FW-room is "Ferris Wheel". The FW-room is east of the HS-room. "The Ferris wheel dominates the carnival, its bright lights and rotations visible from every corner. Its massive steel frame arches high, with colorful gondolas swaying as it turns. At night, the wheel dazzles with synchronized lights, flashing in bursts of red, green, and white. The air buzzes with chatter, laughter, and the hum of the motor. The operator calls, 'Step right up! The best view of the carnival awaits!' From its peak, riders get a panoramic view of the fairgrounds, with city lights stretching to the horizon. The Ferris wheel offers a magical experience for all."
 
 The Ferris Wheel Attendant is an attendant in the FW-room. 
 
@@ -2959,15 +2925,7 @@ instead of giving the Ferris wheel ticket to the Ferris wheel attendant:
 	now the price of the noun is the price entry;
 	now the noun is carried by the cashier;
 	now ferris wheel ridden is true;
-	say "[line break]As you step into the gently swaying gondola, a faint creak accompanies the safety bar locking into place. The Ferris wheel begins its slow ascent, the hum of its machinery blending with the distant sounds of carnival games and laughter below. A soft breeze brushes against your face as the gondola rises higher, offering an ever-expanding view of the fairgrounds.
-
-With each rotation, the world transforms. At the peak, the carnival sprawls beneath you like a miniature village, its vibrant lights twinkling against the twilight sky. The sound of the midway fades into a soft murmur, replaced by the serene quiet of being high above the bustling crowd. Beyond the carnival, the horizon stretches endlessly, framed by the glow of distant city lights.
-
-From the top you can see something to the west behind the concession stand. 
-
-The gondola sways gently, adding a hint of thrill to the tranquil ride. You exchange smiles with your companions, pointing out tiny figures darting between booths and the dizzying motion of other rides below. The Ferris wheel begins its descent, and the lively carnival sounds grow louder once again, bringing you back into the heart of the action.
-
-Whether you’re seeking a moment of calm, a romantic view, or the sheer wonder of seeing the world from above, the Ferris wheel delivers an unforgettable ride that captures the magic of the carnival."
+	say "[line break]As you enter the gondola, the safety bar clicks into place, and the Ferris wheel begins its slow ascent. The sounds of the carnival fade, replaced by the hum of machinery and a soft breeze. At the peak, the carnival sprawls below, its lights twinkling against the twilight sky. The world falls quiet, and the horizon stretches endlessly. The gondola sways gently, adding excitement to the serene view. From the top you can see something to the west of the Concession Stand. As you descend, the lively sounds of the carnival return, bringing you back to the action. The Ferris wheel offers a unique, unforgettable perspective of the carnival."
 
 a Ferris Wheel safety bar is here. it is scenery. the description is "The safety bar is locks into place ensuring you don[']t tumble out of the gondola.".
 instead of examining the Ferris Wheel safety bar, say "The safety bar is locked in place.".
@@ -3001,13 +2959,7 @@ After going northwest from the TB-room when the BC-room is unvisited:
 Before looking when the location is the BC-room:
 	if show images is true, display Figure of BumperCars.
 	
-The BC-room is a room. The printed name is "Bumper Cars". The BC-room is northwest of the TB-room. The BC-room is outdoors. "The bumper cars is a bustling hub of excitement and laughter, set beneath a canopy of flashing lights and colorful decorations. The rectangular arena is surrounded by padded barriers, ensuring a safe yet thrilling experience for riders. The floor, slick and metallic, allows the brightly colored cars — painted in shades of red, blue, yellow, and green — to glide effortlessly in all directions.
-
-Each car is equipped with a steering wheel and a padded bumper, designed to absorb the impact of playful collisions. As the ride begins, drivers of all ages eagerly maneuver their cars, aiming for friends, family, or strangers with mischievous grins. The air is filled with the sound of bumpers colliding, laughter, and the occasional squeal of surprise.
-
-Overhead, a web of electric poles connects the cars to the ceiling, sparking faintly as they supply power to the vehicles. The ride operator watches from a booth, ensuring everyone enjoys the chaos safely. Surrounding the bumper cars are cheering onlookers, carnival lights, and the lively hum of the fairground.
-
-The bumper cars perfectly captures the playful spirit of the carnival, offering a mix of harmless competition, shared laughter, and nostalgic fun for all ages. The Ticket Kiosk is southeast of here."
+The BC-room is a room. The printed name is "Bumper Cars". The BC-room is northwest of the TB-room. The BC-room is outdoors. "The bumper cars are a lively scene, full of flashing lights and vibrant decorations. The arena is surrounded by padded barriers, ensuring safe collisions. Cars in faded reds, blues, yellows, and greens glide across the slick floor, each equipped with a steering wheel and padded bumper. Riders maneuver their cars with gleeful intensity, creating a cacophony of bumps and laughter. Overhead, electric poles hum with energy. The ride operator ensures both chaos and safety, while onlookers cheer from the sidelines. The bumper cars offer playful competition and nostalgic fun for all. The Ticket Kiosk is southeast of here."
 
 The Bumper Cars Attendant is an attendant in the BC-room. 
 
@@ -3016,13 +2968,10 @@ instead of giving the bumper cars ticket to the bumper cars attendant:
 	choose a row with an object of the noun in the Table of Tickets;	
 	now the price of the noun is the price entry;
 	now the noun is carried by the cashier;
-	say "[line break]Sliding into the snug seat of the bumper car, your hands grip the steering wheel, anticipation buzzing in the air. Around you, the arena is alive with flashing lights, bursts of laughter, and the hum of electric currents running through the overhead poles. A quick glance shows other riders locking eyes, playful grins spreading as everyone braces for the chaos about to unfold.
+	say "[line break]You hand your ticket to the attendant and slide into the bucket seat, gripping the wheel as the arena comes alive with flashing lights, laughter, and the hum of electric currents. Riders lock eyes, eager for the chaos to begin.
 
-As the ride starts, your car jolts forward, and you steer into the fray. The slick metal floor beneath makes every turn feel smooth yet unpredictable. Suddenly, bam! — another car collides into you from the side, sending your car into a spin. You laugh, recovering quickly to aim your vehicle at a friend across the arena.
-
-The thrill of the bumper cars is in the collisions — every thud and jolt accompanied by squeals of delight or mock indignation. The impact is cushioned by the padded bumpers, keeping the fun safe but exhilarating. You swerve, dodge, and sometimes reverse in a desperate attempt to avoid being cornered, all while plotting your next playful crash.
-
-The ride is a whirlwind of laughter, harmless competition, and shared joy. As the music fades and the cars slow to a stop, you climb out with a wide grin, already looking forward to your next turn in the driver’s seat."
+The car jolts forward, and you steer into the fray. A sudden crash spins you around, but you recover and aim for a friend. Each collision is met with laughs, and the padded bumpers make the impact thrilling yet safe. You dodge, swerve, and plot your next move in the chaos.
+"
 
 A thing called the Bumper Cars are in the BC-room. The Bumper Cars are scenery. understand "car" as the bumper cars. The description of the Bumper Cars is "The Bumper Cars are small, colorful, electric-powered vehicles equipped with a padded outer rim to absorb impacts, allowing riders to safely bump into each other as part of the game. The ceiling has a conductive surface that powers the cars. Riders are thrilled by chaotic collisions, laughter, and the challenge of maneuvering away from — or into — other drivers."
 
@@ -3051,7 +3000,7 @@ After going southeast from the TB-room when the FT-room is unvisited:
 Before looking when the location is the FT-room and Fortune Teller AutoPlay is not happening:
 	if show images is true, display Figure of FortuneTeller.
 	
-FT-room is a room. The printed name is "Fortune Teller". The FT-room is outdoors. The FT-room is southeast of the TB-room. "Approaching the fortune teller[’]s booth, you’re drawn in by its mysterious allure. Draped in deep purple curtains adorned with golden moons and stars, the booth glows with the soft, inviting light of candles. The air is heavy with the scent of incense, mingling with the sweet aroma of carnival treats. A sign sways slightly in the evening breeze."
+FT-room is a room. The printed name is "Fortune Teller". The FT-room is outdoors. The FT-room is southeast of the TB-room. "Approaching the fortune teller's booth, drawn in by its mysterious allure and inky softness. Draped in deep purple curtains adorned with golden moons and stars, the booth is lit only with the flickering of candles. The air is heavy with the scent of incense, mingling, then overpowering the ever-present sugary odor of treats. A sign sways slightly in the evening breeze"
 
 some candles are here. The candles are scenery. The description of the candles is "The candles flicker in the soft breeze casting light on Esmeralda[']s face.". Understand "candle" as candles. instead of taking the candles, say "Esmeralda says, 'Hey! I need those!'".
 
@@ -3127,22 +3076,20 @@ Before looking when the location is the CR-room:
 
 The Carousel Attendant is an attendant in the CR-room. 
 
-The CR-room is a room. The CR-room is outdoors. The printed name is "Carousel". The CR-room is northeast of the TB-room. "The carousel is a timeless carnival attraction, radiating charm and nostalgia with its brightly painted horses, vibrant lights, and cheerful music. The circular platform is adorned with a canopy of swirling colors, gold trim, and decorative mirrors that reflect the flickering bulbs lining its edges.
+The CR-room is a room. The CR-room is outdoors. The printed name is "Carousel". The CR-room is northeast of the TB-room. "The carousel radiates charm with its brightly painted horses, lights, and cheerful music. The platform features a canopy of swirling colors and decorative mirrors, reflecting the flickering bulbs. Hand-carved animals, including horses, lions, tigers, and sea dragons, circle as the carousel spins. The animals rise and fall gently, adding to the motion's charm. The warm, playful tunes drift across the midway, inviting riders of all ages to enjoy the simple joy of the ride. It's a delightful, nostalgic centerpiece of the carnival.
 
-Rows of hand-carved animals, most often horses with flowing manes, are arranged in a circle. Each is painted in vivid colors, detailed with golden saddles and ribbons. It also features creatures like lions, tigers, and sea dragons, adding whimsy to the ride. The animals rise and fall gently as the carousel spins, mimicking a galloping motion.
-
-The carousel[’]s warm, playful tunes drift across the midway, inviting riders of all ages to enjoy its simple delight. Children laugh as they choose their favorite animals, while adults savor the nostalgia of the spinning ride. As it rotates, the carousel becomes a moving work of art, blending motion, color, and music into an enchanting centerpiece of the carnival. The Ticket Kiosk is back to the southwest; the way you came."
+The Ticket Kiosk is back to the southwest; the way you came."
 
 instead of giving the carousel ticket to the carousel attendant:
 	say "You give [the noun] to [the second noun].";
 	choose a row with an object of the noun in the Table of Tickets;	
 	now the price of the noun is the price entry;
 	now the noun is carried by the cashier;
-	say "[line break]Stepping onto the carousel[']s spinning platform, you’re greeted by a kaleidoscope of color — brightly painted horses, glittering lights, and golden trim. The cheerful melody of calliope music fills the air. What will you choose as your mount, perhaps a galloping horse with a flowing mane, a majestic lion, or a whimsical giraffe. Gripping the polished pole, you settle onto the saddle, feeling the smooth rise and fall as the carousel begins to turn.
+	say "[line break]Stepping onto the carousel, you're surrounded by colorful beasts, glittering lights, and carved details. The cheerful calliope music fills the air as you choose your mount – a galloping horse, a snarling lion, or a graceful giraffe. Gripping the pole, you settle into the saddle as the carousel begins to spin.
 
-As the ride picks up speed, the world outside becomes a blur of glowing carnival lights and swirling colors. The gentle up-and-down motion mimics a playful gallop, and the rhythmic whir of the carousel’s machinery adds a soothing backdrop to the cheerful atmosphere. Laughter and the sound of children’s chatter mix with the music, creating a sense of nostalgia and joy.
+As it speeds up, the world blurs in a swirl of colors, and the gentle rise and fall mimics a playful gallop. Laughter and chatter mix with the music, creating a nostalgic atmosphere.
 
-For a few moments, you’re transported into a magical world, the worries of the day fading away with each graceful rotation. Whether you’re enjoying the ride alone, with friends, or sharing a special moment with family, the carousel[’]s charm captures a timeless blend of whimsy and wonder. As it slows to a stop, you step off with a smile, the music lingering in your ears as you rejoin the bustling carnival."
+Each rotation transports you into a whimsical, carefree world. As the ride slows, you step off smiling, the music still echoing in your ears, and return to the bustling carnival."
 
 Understand "merry-go-round" and "merry go round" as carousel.
 A thing called the Carousel is in the CR-room. The Carousel is scenery. The description of the Carousel is "The carousel features intricately decorated, moving figures such as horses, chariots, and sea dragons, all mounted on poles. The figures move up and down in an endless chase accompaniment of cheerful, calliope music. Illuminated by bright, twinkling lights, the carousel creates a magical and timeless atmosphere.".
@@ -3209,15 +3156,11 @@ After going south from the dark passage when the Maintenance Office is unvisited
 Before looking when the location is the Maintenance Office and the the player carries a lit electric lamp:
 	if show images is true, display Figure of MaintenanceOffice.
 
-The Maintenance Office is a dark room. The maintenance office is south of the dark passage. "The maintenance office, hidden behind the carnival’s bright facade, is a dim and cluttered space reeking of grease, sweat, and faint traces of popcorn from the midway. The air hangs heavy with oil and stirred-up dust.
+The Maintenance Office is a dark room. The maintenance office is south of the dark passage. "The maintenance office is a dim, cluttered space, filled with the smells of grease, sweat, and popcorn. Shelves are lined with disorganized tools and parts, while paint cans and grease jars clutter the workbenches. A battered desk holds wires, gears, and springs, with a bent piece of metal in a vise.
 
-The walls are lined with shelves holding tools and parts in disarray — screws and mismatched jars with faded labels. Paint cans and grease jars clutter the workbenches, many left half-open. In the center, a battered desk is strewn with wires, gears, and springs, a bent piece of metal held in a vise. Overhead, a single flickering fluorescent light struggles to illuminate the room.
+A flickering fluorescent light barely brightens the room. In one corner, a disassembled ride mechanism hangs with chains and pulleys. A greasy manual and a half-empty coffee mug sit on a nearby stool.
 
-In one corner, a disassembled ride mechanism lies exposed, chains and pulleys dangling from hooks above, faintly clinking with the vibrations of the rides. A grease-stained manual and a half-drained mug of coffee sit abandoned on a nearby stool.
-
-The walls display faded safety posters, a cork board with maintenance schedules and notes[if the worn photo is in the location], and a worn photo of the carnival in its prime[end if]. A clock ticks faintly, its hands out of sync with reality. The floor, gritty with dust and scattered nails, adds to the room’s chaotic charm.
-
-Despite the mess, the room buzzes with purpose — a hidden hub where the carnival’s magic is sustained through sweat, ingenuity, and the hum of machinery.
+Faded safety posters and a worn photo of the carnival decorate the walls, along with a corkboard full of schedules and notes[if the worn photo is in the location], and a worn photo of the carnival in its prime[end if]. The floor is gritty with dust and scattered nails. Despite the mess, the room buzzes with purpose and keeps the carnival running, fueled by sweat and ingenuity.
 
 Exits lead north and south." 
 
@@ -3295,9 +3238,9 @@ Instead of climbing a ladder:
 
 Section 4 - Crawl Space
 
-The Crawl Space is a dark room. The Crawl Space is south of Maintenance Office. "The crawl space beneath the carnival ride is a tight, claustrophobic tunnel shrouded in darkness and filled with the hum of machinery above. The air is stale and heavy, carrying the sharp metallic scent of oil and the faint tang of rust. Every sound is amplified in the confined space — the groaning of steel beams, the clanking of chains, and the rhythmic thrum of motors driving the ride above.
+The Crawl Space is a dark room. The Crawl Space is south of Maintenance Office. "The crawl space beneath the ride is cramped and dark, filled with the hum of machinery above. The air is thick with oil and rust. Sounds echo—groaning steel, clanking chains, and the rhythmic thrum of motors.
 
-The ground is uneven, a mix of packed dirt and loose gravel scattered with forgotten tools, scraps of metal, and tangled wires. Overhead, a network of pipes crisscross the space, some wrapped in fraying insulation that crackles faintly as you crawl past. Small puddles of murky water collect in dips on the floor, their surfaces rippling with vibrations from the ride’s movement.
+The ground is uneven, a mix of dirt, gravel, and scattered tools. Pipes overhead are wrapped in fraying insulation, crackling as you move. Small puddles of murky water collect in dips, rippling with the ride's vibrations.
 
 The backstage area continues north and south."
 
@@ -3316,13 +3259,11 @@ instead of smelling when the location is the crawl space, say "The air is stale 
 
 Section 5 - Mechanical Room North
 
-The Mechanical Room North is a dark room. The Mechanical Room North is south of the Crawl Space. "The north mechanical room is compact and specialized, housing auxiliary systems that keep the ride running smoothly. A subdued hum of capacitors and relays fills the space, its quiet rhythm broken only by the occasional hiss of hydraulic fluid.
+The Mechanical Room North is a dark room. The Mechanical Room North is south of the Crawl Space. "The north mechanical room is compact, housing auxiliary systems for the ride. A soft hum of capacitors and relays fills the space, interrupted only by occasional hissing hydraulic fluid.
 
-Circuit breaker panels line the walls, labeled for functions like 'Lighting Controls' and 'Brake Systems'. Smaller cables and conduits snake along the walls, linking these systems to the main hub. In one corner, a hydraulic pump and reservoir manage lifting arms and rotating platforms, their gauges flickering as they work. 
+Circuit breaker panels line the walls, labeled for different functions. Cables and conduits connect the systems to the main hub. A hydraulic pump in the corner manages lifting arms and platforms, with flickering gauges.
 
-A small workbench against the eastern wall is cluttered with tools and coiled wires, while shelves above hold neatly labeled spare parts — cables, and hydraulic tubing. A faded ride diagram pinned nearby is marked with red annotations from past repairs.
-
-Dimly lit by a single hanging bulb, the room feels cooler and slightly damp, the metallic tang of machinery mixing with a hint of mildew. Though quieter and less prominent than the south mechanical room, this space plays a vital role in supporting the ride’s operation and ensuring its emergency systems are always prepared.
+A small workbench is cluttered with parts, while shelves above hold spare parts like cables and hydraulic tubing. A faded ride diagram with red annotations is pinned nearby. Dimly lit, the room feels cool and damp, essential to the ride's operation.
 
 There are exists north and south." 
 
@@ -3350,15 +3291,11 @@ An emerald colored door is a wooden door. The color of emerald colored door is e
 
 Section 6 - Mechanical Room South
 
-The Mechanical Room South is a dark room. The Mechanical Room South is south of the Mechanical Room North. "The south mechanical room is the operational core of the carnival ride, a bustling, noisy space dominated by a massive motor. Its steady hum drives the thick belts, pulleys, and gears that work in perfect unison to power the ride.
+The Mechanical Room South is a dark room. The Mechanical Room South is south of the Mechanical Room North. "The south mechanical room is the heart of the ride, with a massive motor powering the thick belts, pulleys, and gears. Electrical panels line the walls, flashing 'High Voltage' and colorful indicator lights.
 
-Heavy-duty electrical panels line the walls, adorned with warning labels like 'High Voltage' and blinking indicator lights in an array of colors. Overhead, labeled conduits and wires snake across the ceiling, connecting systems with meticulous precision.
+Conduits and wires snake across the ceiling, connecting systems. A cluttered table holds tools, spare parts, and maintenance logs stained with grease. The air smells of oil, metal, and ozone.
 
-A cluttered table holds tools and spare parts — bolts and lubricants — alongside open maintenance logs marked with greasy fingerprints. The air is thick with the smell of oil, metal, and a faint trace of ozone from the electrics.
-
-A cooling fan spins in the corner, barely cutting through the room’s warmth. The hum of machinery is occasionally punctuated by clinking chains and the sharp hiss of hydraulic fluid. The floor, a mix of metal grates and worn concrete, reflects years of use and maintenance.
-
-Bright fluorescent lights in wire cages illuminate the space, highlighting the intricate systems at work. The south mechanical room is the ride’s powerhouse, where every movement is controlled with precision to deliver its thrilling experience.
+A cooling fan struggles to cut the warmth as the hum of machinery mixes with the hiss of hydraulics and clinking chains. The floor is a patchwork of metal grates and worn concrete. Fluorescent lights illuminate the room, where every movement is precise and controlled.
 
 You can travel north and south from here." 
 
@@ -3399,16 +3336,12 @@ A gray colored door is a wooden door. The color of gray colored door is gray. un
 
 Section 7 - Generator Room
 
-The Generator Room is a dark room. The Generator Room is south of the Mechanical Room South. "
-The generator room is a compact, utilitarian space where the lifeblood of the carnival’s power is produced. Its reinforced concrete walls bear grime, oil streaks, and faint graffiti from past workers. The air carries a mix of diesel, hot metal, ozone, and damp earth, creating a distinctly industrial scent.
+The Generator Room is a dark room. The Generator Room is south of the Mechanical Room South. "The generator room is small, with concrete walls stained by oil and grime. The air smells of diesel, metal, and damp earth.
 
-At the center, the main generator hums steadily, its scuffed steel casing evidence of years of service. Thick rubberized cables extend from it like veins, connecting to junction boxes and circuit breakers along the walls. A large panel nearby is cluttered with buttons, switches, and gauges, many with faded labels like 'Fuel Intake' and 'Emergency Shutoff.' A flickering display screen shows power levels and load distribution.
+The main generator hums, connected by thick cables to circuit breakers and a cluttered panel with switches and gauges. A flickering display shows power levels.
+The cracked floor is littered with puddles. Shelves hold spare parts and manuals, and a workbench sits next to a grease canister. A faintly whirring fan and diesel canisters add to the atmosphere.
 
-The rough concrete floor is uneven, marked by small puddles of spilled fuel or condensation. Shelves along the walls hold spare parts — filters, spark plugs, and wire coils — while a work area sits beside a grease canister and a worn maintenance manual.
-
-A single industrial bulb in a protective cage casts harsh light, leaving deep shadows across the machinery. In the corner, a vent fan whirs faintly, struggling to cool the warm, vibrating air. A row of diesel canisters gleams beneath a faded safety sign that warns, 'Fuel Safely — No Open Flames!'
-
-Though isolated and utilitarian, the generator room is the carnival’s heartbeat, powering its lights, rides, and sounds. Its quiet separation from the carnival’s chaos serves as a stark reminder of the machinery driving the magic.
+The room is the carnival's power source, hidden but essential.
 
 The backstage area continues north and south of here." 
 
@@ -3438,17 +3371,13 @@ An indigo colored door is a wooden door. The color of indigo colored door is ind
 
 Section 8 - Storage Room
 
-The Storage Room is a dark room. The Storage Room is south of the Electrical Room. "The carnival storage room is a cramped yet essential space, tucked away from the bustling grounds. Its rusted metal and peeling wooden walls bear the marks of years of use, while the air hangs heavy with grease, dust, damp canvas, and a faint trace of stale popcorn.
+The Storage Room is a dark room. The Storage Room is south of the Electrical Room. "TThe storage room is cramped and hidden, with rusted walls and peeling wood. The air smells of dust, damp canvas, and stale popcorn.
 
-Shelves overflow with supplies — boxes of light bulbs, spools of wire, and assorted ride parts — piled without order. Tangled flags and strings of lights dangle from hooks, while crates labeled 'GAME PRIZES' and 'RIDE PARTS' hold items like stuffed animals and plastic toys. Folded tarps and tent poles teeter in one corner.
+Shelves are packed with light bulbs, wire, and old ride parts. Flags, lights, and crates of toys clutter the space. In one corner, tarps and tent poles are stacked.
 
-The room’s center is dominated by larger objects: spare ride seats, unassembled booths, and faded attraction pieces like a scratched carousel horse, all hidden beneath protective tarps.
+Spare ride seats and an old carousel horse sit under tarps in the center. A cluttered desk holds schedules and coffee cups, with a bulletin board full of flyers. A flickering bulb casts uneven shadows.
 
-Near the entrance, a battered desk is cluttered with empty coffee cups. Above it, a bulletin board brims with ride schedules and repair requests. A flickering fluorescent bulb casts uneven shadows, adding an eerie atmosphere.
-
-The floor, a rough blend of concrete and dirt, is littered with nuts and wire scraps. In the dim corners, the scuttle of rats and the glint of cobwebs underline the room[']s gritty nature.
-
-Chaotic yet indispensable, this hidden space powers the carnival’s magic, ensuring every ride and booth runs seamlessly.
+The concrete floor is littered with scraps and dirt. Rats scurry and cobwebs move. This forgotten room stores the remnants of the carnival, waiting to be revived.
 
 There is an exit to the north."
 
@@ -3896,50 +3825,38 @@ Section 10 - Table of Hell Ride Events
 
 Table of Hell Ride Events
 locale	locale text	figure	description
-Ride Entrance	"Ride Entrance"	figure of Hell Ride	"The cars that will take you into the fearsome [story title] stop here for you to board and then move forward, the safety bar locked in place, as the entrance to [story title] looms ahead — a grotesque facade of twisted metal and carved wood, illuminated by flickering blood-red lights. The air carries a faint sulfuric tang mingled with the sweet aroma of carnival popcorn.
+Ride Entrance	"Ride Entrance"	figure of Hell Ride	"The cars for Hell Ride stop here, and you board as the safety bar clicks into place. Ahead, the grotesque entrance looms—a twisted metal archway adorned with spikes, skulls, and flickering blood-red lights. A faint sulfuric smell mixes with the scent of popcorn.
 
-A towering archway of flames, spikes, and grinning skulls frames the entrance, crowned by flickering letters that read 'HELL RIDE', pulsing like a heartbeat. Below, crouching demon sculptures extend clawed hands in a sinister invitation. Wooden doors cover the entrance, whispering with faint, menacing chuckles as distorted organ music grows louder, punctuated by shrieks and grinding machinery.
+The 'HELL RIDE' sign pulses above the door, while demon statues with clawed hands seem to beckon. The entrance is shrouded in darkness, broken only by eerie green flashes, revealing twisted paths. Faint whispers and distant organ music grow louder, mixing with unsettling noises. To one side, the darkness looks a little bit darker than the rest of the room."
+Stocks Room	"Stocks Room"		figure of RideStocks	"The public square is a cobblestone stretch surrounded by weathered buildings. The air smells of smoke, damp earth, and a nearby smithy. At the center, old stocks stand with iron clasps holding captives in shameful positions. Their tattered clothes offer little against the cold wind.
 
-Inside, near-total darkness is broken by flashes of sickly green light revealing twisted paths and grotesque shapes. Beyond the threshold lies only uncertainty and terror. To one side, the darkness looks a little bit darker than the rest of the room."
-Stocks Room	"Stocks Room"		figure of RideStocks	"The public square is a cobblestone expanse bordered by weathered timber-framed buildings. The air carries the mingling scents of chimney smoke, damp earth, and the faint tang of a nearby smithy. At its center, crude wooden stocks stand as a grim focal point, their beams weathered and stained from years of use. Iron clasps lock captives in degrading postures, their tattered clothing offering little protection from the biting wind.
+The animatronics are lifelike, enhancing the grim atmosphere. The crowd mocks the prisoners, hurling insults and rotten food, their laughter mixed with jeers. The square hums with noise, the sky darkening as the spectacle continues, unnoticed by the crowd."
+Gallows Room	"Gallows Room"	figure of RideGallows	"The public square, wet from morning drizzle, lies under a dark sky. At its center, the gallows loom, ropes swaying. The crowd stands in silence, their eyes fixed on the scene.
 
-The animatronics and wax figures are extremely life like. [story title] sure lives up to its name.
+A hooded executioner, cold and focused, adjusts the noose. The condemned man, pale and bound, trembles, his eyes darting around the crowd. Sweat and rain mix on his face as he breathes shallowly.
 
-The punished individuals hang their heads in shame, their faces etched with despair. Around them, the crowd revels in cruelty — a wiry man spits insults with gleeful laughter, while a stout woman throws overripe vegetables, each impact sparking jeers. Even children join in, pointing and mocking with mischievous delight.
+Vendors shout, children push forward, and an old man whispers prayers. Above, the bell tolls, marking the man’s final moments. A raven watches from the gallows beam. The air is heavy as distant thunder rumbles."
+Stake Room	"Stake Room"	figure of RideStake	"The public square is silent, broken only by crackling flames. At its center, three women are bound to wooden stakes, their faces showing defiance, resignation, and terror.
 
-The square hums with noise: the crowd’s taunts, the crack of objects hitting wood, and the quiet murmurs of the suffering captives. Overhead, a gray sky threatens rain, indifferent to the spectacle below. The jeering mob ignores its ominous weight, too engrossed in their shared cruelty to notice nature’s disapproval."
-Gallows Room	"Gallows Room"	figure of RideGallows	"The public square, slick with morning drizzle, lies under a brooding, overcast sky. At its center looms the gallows, a weathered wooden platform with thick ropes swaying ominously. The crowd stands in somber silence, broken by the shuffle of feet or faint murmurs, their eyes fixed on the grim scene.
+A crowd watches, some jeering, others praying or looking away. The executioner steps forward, torch in hand, igniting the pyre. Flames roar as the women cry out, their voices lost in the heat.
 
-A hooded executioner, cloaked in black, adjusts the frayed noose with practiced precision, his cold presence exuding purpose. In front of him stands the condemned man, pale and trembling, his bound hands behind him. Beads of sweat mix with rain on his haunted face as his darting eyes search the indifferent crowd. Each shallow breath forms a fleeting cloud in the chilly air — a fragile reminder of his fleeting life.
+Gray clouds loom above as a raven caws. Church bells toll, marking the tragedy. Some onlookers stay, others quietly leave, the square heavy with smoke and ash."
+Dungeon	"Dungeon"		figure of RideDungeon	"The dungeon is dark and damp, the air thick with sweat, blood, and mildew. Lanterns flicker on rusted sconces, casting twisted shadows.
 
-Vendors hawk bread and cider, while children strain for a better view. An old man clutches a rosary, whispering prayers, as others smirk and place bets. Above, the bell tower tolls, its mournful chime marking the passage of the man’s final moments. A raven perches on the gallows beam, its unblinking gaze fixed on the scene below.
+Chains rattle, mixed with distant moans and screams. Water drips from a cracked ceiling, pooling on the blood-dark floor.
 
-As the executioner adjusts the noose around the man’s neck, the crowd falls silent, the air thick with dread. Distant thunder rumbles faintly, as if the heavens themselves await the inevitable."
-Stake Room	"Stake Room"	figure of RideStake	"The public square is steeped in grim silence, broken only by the crackling of flames. At its center, three wooden stakes rise from a pyre of logs and kindling, darkened by smoke from past executions. Bound to the stakes are three women, their faces reflecting defiance, resignation, and terror.
+Instruments of torture clutter the room: a broken rack, a brazier with bloodstained tools, and a spiked chair. Prisoners endure, bound or writhing in agony.
 
-A crowd encircles the scene, expressions ranging from morbid fascination to righteous fury. Children cling to their mothers, while elders nod solemnly. Some jeer and throw stones; others murmur prayers or avert their gaze.
+The torturer moves with cold precision, ignoring the suffering. Above, rats scurry in the shadows, and the heavy, oppressive air thickens with despair."
+Guillotine Room	"Guillotine Room"		figure of RideGuillotine	"The public square hums with tension under gray skies. A wooden platform stands at the center, a grim focal point.
 
-The executioner, hooded and clad in a leather apron, steps forward with a blazing torch, igniting the pyre in a sudden roar. Flames climb rapidly as thick smoke coils upward. The condemned cry out, their voices mingling with the crackle of fire. The oppressive heat radiates outward, pressing against the silent, uneasy crowd.
+A lone figure, hands bound and head bowed, stands on the scaffold. Their tattered clothes reveal a once-gilded past.
 
-Gray clouds loom overhead, nature’s somber backdrop to the grim spectacle. A raven caws from the bell tower as slow church bells toll, each strike punctuating the tragedy. As the pyre burns, some onlookers remain transfixed while others quietly slip away, the square heavy with ash, smoke, and the echoes of the condemned."
-Dungeon	"Dungeon"		figure of RideDungeon	"The dungeon is a dark, suffocating chamber carved into the earth, its stone walls slick with moisture and grime. The air reeks of sweat, blood, mildew, and burning oil from flickering torches mounted on rusted sconces. Shadows twist on the walls, creating grotesque, unsettling shapes in the dim light.
+The crowd jeers, some grimly silent, while children watch wide-eyed. The town crier proclaims, 'High treason against the crown!'
 
-Chains hang from walls and ceilings, their faint clinking blending with the moans and occasional screams of prisoners. Water drips rhythmically from a cracked ceiling, adding to the chamber[’]s eerie ambiance.
+The condemned remains silent as the executioner, robed in black, stands beside the guillotine. The blade gleams in the dim light. The crowd’s murmurs die, replaced by silence.
 
-The room is littered with instruments of torment: a splintered rack, a glowing brazier holding bloodstained tools, and a spiked chair gleaming faintly in the light. Prisoners endure their own horrors — one stretched on the rack, another hanging limply from manacles, and a third gasping weakly in the spiked chair.
-
-The hooded torturer moves with detached precision, their leather apron stained with the evidence of countless victims. They work silently, indifferent to the agony surrounding them.
-
-Above, rats scuttle in the shadows, and the low ceiling presses down like the weight of despair. This is a realm of suffering and hopelessness, where life and death blur, and torment is the only certainty."
-Guillotine Room	"Guillotine Room"		figure of RideGuillotine	"The public square buzzes with tense anticipation, a crowd gathered under gray skies that cast a somber light on the cobblestones. At the center, a stark wooden platform looms, its purpose grim and unavoidable.
-
-A lone figure stands on the scaffold, bound hands behind their back and head bowed low, avoiding the crowd’s gaze. Their tattered clothing, once fine, reflects the fall that led them to this moment.
-
-The crowd encircles the platform, emotions ranging from jeers and curses to silent, grim observation. Children sit on shoulders, their curious eyes unaware of the event’s gravity. Near the edge of the platform, the town crier proclaims the crime: 'High treason against the crown. Let this be a warning to all who defy the realm!'
-
-The condemned flinches but remains silent as the executioner — a hooded figure in black — stands ready beside the guillotine, its blade gleaming faintly in the dim light. The murmurs of the crowd fall into silence at the executioner’s signal, leaving only the rustle of wind and the creak of the scaffold.
-
-As the condemned approaches the guillotine, a crow caws sharply from a nearby rooftop, its cry echoing through the square like an omen. The crowd leans forward, breath held, as justice and mortality converge on the scene.
+As the condemned approaches, the guillotine’s timing falters. Instead of falling on the scaffold, the blade swings over the cars, threatening any unlucky passenger who passes beneath.
 
 [if hell ride disabled is true]
 The guillotine is now completely still. You have managed to disable it before anyone was seriously injured. The authorities are most grateful and cheer your heroics.
@@ -3950,11 +3867,11 @@ You[']re glad you[']re not in one of those cars now. You must do something to st
 Looks like your goose is cooked. Say 'Goodnight, Gracie!' 
 
 You are stupefied as you sit watching guillotine rising and falling, dropping like a stone on the cars in front of you. Thank goodness they are empty. As your turn comes, you raise your hands in a feeble attempt to stop the inevitable.[end if]"
-Ride Exit	"Ride Exit"	figure of RideExit	"The exit of [story title] is designed to leave riders with lingering unease. Emerging from a dark corridor with peeling black and red-streaked walls, flickering lights cast erratic shadows on the uneven floor. The air is cool and damp, carrying a faint metallic tang, while faint whispers and distant screams echo softly in the background.
+Ride Exit	"Ride Exit"	figure of RideExit	"The exit of Hell Ride leaves you unsettled. You emerge from a dark corridor, the walls peeling and streaked with black and red. Flickering lights cast shifting shadows on the sloped floor, and the air is damp with a metallic tang. Whispers and distant screams echo softly in the background.
 
-Riders step into a small courtyard enclosed by jagged, rusted fencing draped with cobwebs and plastic skulls. Overhead, a weathered sign reads, 'You[']ve Survived… For Now.' Nearby, carnival workers in tattered costumes watch silently, occasionally muttering cryptic remarks like, 'Not everyone makes it out.'
+In a small courtyard, a rusted fence draped with cobwebs and plastic bones encloses the area. A worn sign reads, 'You’ve Survived? For Now.' Nearby, carnival workers in tattered costumes watch quietly, muttering, 'Not everyone makes it out.'
 
-A merchandise display glows red, selling items like [story title] Survivor t-shirts and key chains. Beyond the fencing, the cheerful carnival lights and sounds feel jarring, contrasting sharply with the ride’s oppressive atmosphere. 
+The nearby gift shop glows red. The bright lights and sounds of the carnival feel distant and jarring after the oppressive atmosphere of the ride.
 
 The exit ensures [story title] isn’t just an experience — it lingers, blurring the line between thrill and fear.
 
@@ -3964,12 +3881,12 @@ Section 11 - Table of Little Egypt Events
 
 Table of Little Egypt Events
 description
-"In the dimly lit tent, you see that the stage is decorated to resemble a Middle Eastern palace, featuring rich, colorful fabrics, brass ornaments, and lanterns casting a warm, flickering glow. Scents of incense waft through the air, enhancing the atmosphere of mystique. The backdrop displays painted scenes of pyramids, desert landscapes, and domed structures evoking a sense of being transported to the 'Middle East'. "
-"Little Egypt emerges draped in flowing silk veils which she skillfully uses as part of the dance. Her attire consists of a sparkling, sequined bodice and a flowing skirt, adorned with jingling coin belts and jewelry that accentuate her movements."
-"The performance begins with slow, undulating movements, drawing you into the rhythm of unfamiliar live music played on traditional instruments like the oud, darbuka, or zurna. As the tempo builds, her hips, torso, and hands move in intricate, mesmerizing patterns, demonstrating remarkable control and fluidity. She incorporates dramatic spins, drops, and shimmies, often accentuating the beat of the music with a quick jingle of her coin belt."
-"Little Egypt makes eye contact with you and smiles enigmatically. During her performance she balances a sword on her head and accents her dance with finger cymbals."
-"The music alternates between hauntingly slow melodies and rapid, energetic drum beats, creating an emotional arc that keeps you entranced. Little Egypt relies on the music[']s dynamic changes to tell a story with movements reflecting joy, sorrow, seduction, and celebration."
-"The performance concludes with a dramatic flourish of a fast-paced shimmy, a bold spin, and Little Egypt dramatically casts off her veils. The dancer takes a bow to enthusiastic applause, leaving you spellbound by the sensual yet artful display."
+"The tent is dimly lit, the stage is fully decorated an emulation of some Middle Eastern palace, featuring rich, colorful fabrics, brass ornaments, and lanterns casting a warm, flickering glow. Heady incense wafting through the air, softening everything around the edges, enhancing the mystique. The backdrop displays painted scenes of pyramids, desert landscapes, and  domed structures. The colorful onion topped buildings and jewel tones set to the sepia drenched landscape have you transported far away."
+"Little Egypt emerges, draped in flowing silken veils. Skillfully she twirls and undulates, using them as part of the dance. A sparkling, sequined bodice opens into a gauze skirt, adorned with jingling coin belts and jewelry that accentuate her dance."
+"The performance begins with slow, undulating movements, drawing you into the rhythm of the music. Traditional instruments like the oud, darbuka, or zurna an accompanying chorus. As the tempo builds, her hips, torso, and hands twisting in an intricate, mesmerizing pattern. Little Egypt demonstrates remarkable control and fluidity. She dramatically spins, drops, and shimmies, often punctuating the beat with a quick jingle of her coin belt."
+"Little Egypt makes eye contact with you and smiles enigmatically. In her performance she balances a fine silver sword on her head and accents her dance with tinkling finger cymbals."
+"The music oscillates between hauntingly slow melodies and rapid, energetic drum beats, an emotional arc that leaves you entranced. Little Egypt relies on the music's dynamic changes to tell a story with movements reflecting joy, sorrow, seduction, and celebration."
+"The performance concludes with a dramatic flourish, an energetic shimmy, a bold spin, and Little Egypt casts off her veils. The dancer takes a bow to thunderous applause, leaving you spellbound by the sensual display."
 
 Section 12 - Table of Tarot Readings
 
@@ -3985,7 +3902,7 @@ key (number)	category (text)	card (text)	description (text)
 23	"Challenge"	"Queen of Swords (reversed)"	"Queen of Swords reversed exudes an air of manipulation, deception, and cruelty. Her once discerning and judicious nature has turned into a cold hearted determination to achieve her own agenda, regardless of the consequences. She wields her intellectual prowess as a weapon, using it to strip others of their power and inflict emotional harm. With her cutting words and dismissive actions, she creates an atmosphere of hostility and mistrust. The Queen of Swords Reversed serves as a reminder to be cautious of those who may mask their malicious intentions with intelligence and charm."
 24	"Opportunity"	"Two of Swords (upright)"	"Two of Swords encourages you to remove the blindfold and honestly assess the situation at hand. It may be necessary to weigh the pros and cons of different options, gather more information, or seek guidance from others to help you make an informed decision. However, prolonged indecision can lead to stagnation, and it[']s important to eventually address the issue at hand. The crossed swords symbolize the need to find a balance between opposing forces and find a way to reconcile conflicting aspects."
 25	"Future"	"The Lovers (reversed)"	"Lovers reversed indicates a breakup between partners, families or friends. Lovers reversed can also indicate a wrong choice being made. It represents disharmony and conflicts within relationships, a lack of balance, and difficult choices. In its reversed form, this card serves as a reminder to evaluate the foundations of your relationships and address any underlying issues. It urges you to explore your desires, fears, and doubts, as well as to reflect upon the consequences of your choices."
-31	"Past"	"Ten of Wands (upright)"	"Ten of Wands suggests that you may be shouldering too many responsibilities or taking on more than you can handle. You may feel overwhelmed, exhausted, or weighed down by the tasks and obligations in your life. This card serves as a reminder to evaluate your commitments and consider whether you need to delegate, seek support, or let go of some burdens."
+31	"Past"	"Ten of Wands (upright)"	"Ten of Wands suggests that you may be shouldering too many responsibilities or taking on more than you can handle. You may feel overwhelmed, exhausted, or weighed down by the tasks and obligations in your life. This card serves as a reminder to evaluate your commitments and consider whether you need to delegate, seek support,or let go of some burdens."
 32	"Present"	"Nine of Wands (upright)"	"Nine of Wands is the card for strength, courage, resilience and endurance. Never give up and never surrender. It suggests that while you may be tired or worn out from the struggles you[']ve faced, it[']s important to remain alert and prepared for any further challenges that may arise. This card encourages you to draw upon your past experiences and learn from them, using them as sources of wisdom and guidance."
 33	"Challenge"	"The World (upright)"	"World is the final Major Arcana card and represents fulfillment and successful completion of a cycle. You know your place in the world, and your life lessons have served you well. It serves as a gentle reminder that the universe is aligning perfectly in your favor, propelling you forward towards the triumphant realization of your ambitions. The world is at your feet. You[']re on the right path towards the attainment of your long-cherished aspirations and dreams."
 34	"Opportunity"	"Two of Swords (reversed)"	"Two of Swords reversed suggests that poor choices and hasty decision-making are likely to lead to movement in the wrong direction. It serves as a reminder that impulsive actions can often result in unfavorable outcomes, urging you to carefully consider your options and approach situations with thoughtfulness and patience. By taking the time to weigh your choices and make deliberate decisions, you can avoid the pitfalls that come with rushing into action without considering the potential consequences."
