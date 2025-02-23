@@ -35,7 +35,7 @@ The story headline is "The ride of a lifetime...".
 The story genre is "Horror".
 The story description is "[story title] - A ride to remember...
 
-You[']re a part-time reporter for The Tribune, the local paper. Earlier in the day, your editor called you and told you of a conversation he overheard between the Chief of Police and his Deputy about Whidbey Amusements. It seems there has been a rash of accidents and mishaps at the carnival. Sounds like there could be something suspicious going on. He wants you to collect evidence and write a hard hitting piece about it. If you do a good job, maybe the paper will hire you on full-time.
+You[']re a part-time reporter for The Tribune, the local paper. Earlier in the day, your editor called you and told you of a conversation he overheard between the Chief of Police and his Deputy about Whidbey Amusements. It seems there has been a rash of accidents and mishaps at the carnival. Sounds like there could be something suspicious going on. The editor wants you to collect evidence and write a hard hitting piece about this story. If you do a good job, maybe the paper will hire you on full-time.
 
 As you explore the carnival, you learn (the hard way) that the Hell Ride attraction is malfunctioning with the potential for serious injuries to the riders. You must disable the ride off and prevent any loss of life... including your own."
 The story creation year is 2025.
@@ -57,7 +57,7 @@ Chapter 4 - The Player, Global Code
 
 The player is in the PL-room. 
 The carrying capacity of the player is 20.
-The description of the player is "You are determined to investigate this report, collect evidence, and give that evidence to the authorities." 
+The description of the player is "You are determined to investigate this story, collect evidence, and give that evidence to the authorities." 
 
 hair is a thing. the hair is part of the player. the description is "Your hair is clean, well styled, and smells nice.".
 
@@ -65,7 +65,7 @@ some fingernails are a thing. the fingernails are part of the player. the descri
 
 The coupon is in the wallet. The description of the coupon is "You found this in a stack of coupons on the counter of the gas station."
 
-The notebook is carried by the player. The description is "This is the notebook you use when investigating a report."
+The notebook is carried by the player. The description is "This is the notebook you use when investigating a story."
 
 before examining the coupon:
 	if show images is true, display Figure of Coupon.
@@ -445,7 +445,7 @@ the janitor is an a male person. the janitor is in the Head of the Line. The des
 [the janitor walks]
 every turn when the janitor is active:
 	let M be the minutes part of the time of day;
-	if the remainder after dividing M by 5 is 0:
+	if the remainder after dividing M by 5 is 0 and the location of the janitor is not the control room:
 		if there is a mins of M in the Table of Janitor Movements:
 			choose a row with a mins of M in Table of Janitor Movements;
 			let last space be the location of the janitor;
@@ -502,7 +502,7 @@ Mr Whidbey is a male person. Mr Whidbey is in the Carnival Office. understand "m
 every turn when Mr Whidbey is active:
 	let M be the minutes part of the time of day;
 	if hell ride disabled is false:
-		if there is a mins of M in the Table of Owner Movements:
+		if there is a mins of M in the Table of Owner Movements and Telephone Call Autoplay is not happening and the location is not the control room:
 			choose a row with a mins of M in Table of Owner Movements;
 			let last space be the location of Mr Whidbey;
 			if Mr Whidbey can be seen by the player, say "Mr Whidbey heads to [the destination entry].";
@@ -520,7 +520,7 @@ WhidbeyQuestions is a number which varies. WhidbeyQuestions is 0.
 instead of asking Mr Whidbey about a topic listed in the Table of Owner Conversation Responses:
 	say "[response entry][paragraph break]";
 	if  remainder after dividing WhidbeyQuestions by 4 is 0:
-		say "[one of]Mr. Whidbey[']s eyes dart up and to the left.[or]Mr. Whidbey quickly changes the subject[or]Mr. Whidbey meets your eyes and quickly looks away.[cycling]";
+		say "[one of]Mr. Whidbey[']s eyes dart up and to the left.[or]Mr. Whidbey quickly changes the subject[or]Mr. Whidbey meets your eyes and quickly looks away.[cycling][line break]";
 	let S be the subject entry;
 	let W be the weighting entry;
 	if the turn stamp entry is -1 and S is not "NA":
@@ -535,7 +535,7 @@ instead of showing something to Mr Whidbey:
 		choose a row with an object of noun in the Table of Owner Object Responses;	
 		say "[response entry][paragraph break]";
 		if  remainder after dividing WhidbeyQuestions by 4 is 0:
-			say "[one of]Mr. Whidbey[']s eyes dart up and to the left.[or]Mr. Whidbey quickly changes the subject[or]Mr. Whidbey meets your eyes and quickly looks away.[cycling]";
+			say "[one of]Mr. Whidbey[']s eyes dart up and to the left.[or]Mr. Whidbey quickly changes the subject[or]Mr. Whidbey meets your eyes and quickly looks away.[cycling][line break]";
 		let S be the subject entry;
 		let W be the weighting entry;
 		if the turn stamp entry is -1 and S is not "NA":
@@ -552,8 +552,10 @@ understand "confront [someone] about/with [text]" as confronting it about.
 understand "accuse [someone] of/with [text]" as confronting it about.
 
 instead of confronting Mr Whidbey about a topic listed in the Table of Confrontation:
-	if total evidence is less than 41:
+	if total evidence is less than 31:
 		say "You don[']t have enough evidence to confront anyone about anything.";
+	if total evidence is less than 61:
+		say "Any evidence you have is circumstantial. It[']ll be thrown out on day one of the trial!";
 	otherwise if hell ride disabled is false:
 		say "As much as you would like to confront [the noun] about [the topic understood] you should probably take care of disabling [story title] first.";
 	otherwise:
@@ -561,7 +563,7 @@ instead of confronting Mr Whidbey about a topic listed in the Table of Confronta
 		if the turn stamp entry is -1:
 			now total accusation is total accusation plus the accusation weight entry;
 			now the turn stamp entry is the turn count.
-	
+			
 instead of confronting somebody about something, say "There[']s no need to confront [the noun] about [the topic understood].".
 
 Section 13 - Evidence and Accusations
@@ -569,9 +571,11 @@ Section 13 - Evidence and Accusations
 instead of examining the notebook:
 	sort the Table of Notebook in reverse total order;
 	say "[fixed letter spacing]  Weight   Evidence collected:[line break]";
+	say "  ------   --------------------------------------------------------[line break]";
 	repeat through the Table of Notebook:
 		if total entry is greater than 0:
 			say "[fixed letter spacing]•   [if total entry is less than 10] [end if][total entry]     [response entry][roman type][line break]";
+	say "[fixed letter spacing][line break][if total evidence is less than 31]You haven[']t enough evidence for an arrest.[otherwise if total evidence is less than 61]You have enough evidence to press charges.[otherwise]You[']ve got enough evidence for a strong case.[end if][roman type]".
 
 showing evidence is an action out of world applying to nothing. Understand "show evidence" as showing evidence.
 carry out showing evidence:
@@ -1491,13 +1495,13 @@ Chapter 8 - RNG Seed, Money, Dimes, Sounds - For Release Only
 When play begins:
 	seed the random-number generator with 0.
 
-The price of the money is $20.00. 
+The price of the money is $25.00. 
 
 Sound of Bell is the file "Bell.ogg" ("The sound of a bell").
 
 three dimes underlie the seat.
 
-The carrying capacity of the fanny pack is 15.
+The carrying capacity of the fanny pack is 20.
 
 Part 2 - The Game
 
@@ -2035,7 +2039,7 @@ When play begins:
 	now show images is false;
 	say "Type 'Help' for hints about [story title] and general information about playing interactive fiction games.";
 	display the figure of Hell Ride;
-	say "You[']re a part-time reporter for The Tribune, the local paper. Earlier in the day, your editor called you and told you of a conversation he overheard between the Chief of Police and his Deputy about Whidbey Amusements. It seems there has been a rash of accidents and mishaps at the carnival. Sounds like there could be something suspicious going on. He wants you to collect evidence and write a hard hitting piece about it. If you do a good job, maybe the paper will hire you on full-time.".
+	say "You[']re a part-time reporter for The Tribune, the local paper. Earlier in the day, your editor called you and told you of a conversation he overheard between the Chief of Police and his Deputy about Whidbey Amusements. It seems there has been a rash of accidents and mishaps at the carnival. Sounds like there could be something suspicious going on. The editor wants you to collect evidence and write a hard hitting piece about this story. If you do a good job, maybe the paper will hire you on full-time.".
 
 The PL-room is a room. The printed name is "Parking Lot". The PL-room is north of the TB-room. The PL-room is outdoors. "The carnival parking lot stretches across an open field, its gravel crunching under arriving cars. Temporary floodlights and the carnival[']s colorful glow light the area, while distant laughter, music, and the hum of rides fill the air.
 
@@ -2382,7 +2386,7 @@ The sturdy door is an openable and lockable door. it is closed and locked . The 
 
 The initial appearance of a door is usually "Nearby [an item described] leads [if the other side of the item described is visited][direction of the item described from the location] to [the other side of the item described][otherwise][direction of the item described from the location][end if]."
 
-an insurance policy is in the safe. the description is "This is an insurance policy on the Whidbey Amusements. It is for $1,000,000. That[']s an awfully high number and it was dated last month.".
+an insurance policy is in the safe. the description is "This is an insurance policy on the Whidbey Amusements. It is for $1,000,000. That[']s an awfully high number and it was dated last month. It says here that insurance paid will be doubled for incidents involving bodily injury.".
 
 the safe is in the carnival office. it is a closed locked, openable, lockable container. it is fixed in place. understand "small/heavy/knob/dial" as the safe. the description is "Next to the filing cabinet, there’s a small, heavy safe where the owner keeps more sensitive materials. There is a knob on the front of the safe".
 
@@ -2419,7 +2423,7 @@ When Telephone Call AutoPlay begins:
 
 When Telephone Call AutoPlay ends:
 	now the player is in the CS-room;
-	say "You suddenly find yourself unceremoniously out of the Carnival Office and into the Concession Stand.[paragraph break]";
+	say "You suddenly find yourself escorted outside the Carnival Office unceremoniously only to find yourself in the Concession Stand.[paragraph break]";
 	now index is 1.
 	
 Instead of doing something other than waiting, looking, listening, or smelling during Telephone Call AutoPlay:
@@ -2431,6 +2435,12 @@ every turn during Telephone Call AutoPlay:
 	choose row index in the Table of Whidbey Telephone Call;
 	say "[description entry][line break]";
 	increment index;
+	
+every turn when Telephone Call AutoPlay is not happening and the location of the player is the carnival office and the location of mr whidbey is the location of the player:
+	say "[Mr Whidbey] shouts, 'Hey! Get out of here! Can[']t you read the sign? Employees only!'";
+	now the player is in the CS-room;
+	say "You suddenly find yourself escorted outside the Carnival Office unceremoniously only to find yourself in the Concession Stand.[paragraph break]".
+	
 
 Section 7 - High Striker
 
@@ -3987,11 +3997,11 @@ Table of Whidbey Telephone Call
 description
 "'Hello? Oh, it[']s you.' says Mr. Whidbey."
 "Mr. Whidbey listens to the other end of the conversation."
-"'I know, I know, but what am I supposed to do. That Needleman kid isn[']t happy with the payout we gave him. He wants $15,000 more.'"
-"Isn[']t this why I buy insurance? Don[']t worry. You'll get your piece."
-"Mr. Whidbey says 'I need that money in a hurry though or he[']s going to go to the authorities. And then you[']re going down too.'"
-"'Ok, I'll try to stall him but I won[']t be able to do it for long.'"
-"'Hey! What are you doing here? This is an employees only area,' Mr. Whidbey shouts at you. 'Get out of here. Now!'"
+"'I know, I know, but what am I supposed to do. We have to get that Needleman kid more money. Another $15,000 ought to do it.'"
+"Isn[']t this why I buy insurance? Don[']t worry. You'll get your piece. Everyone will get their piece."
+"Mr. Whidbey says 'I need that money in a hurry though before anyone gets suspicious. If anything happens then you[']re going down too.'"
+"'Ok, I'll try to stall for a bit but I won[']t be able to do it for long.'"
+"'Hey! What are you doing here? This is area is for employees only,' Mr. Whidbey shouts at you. 'Get out of here. Now!'"
 
 Section 14 - Table of Attendant Conversation Responses
 
@@ -4069,7 +4079,7 @@ Frank's Market invoice	"Frank[']s Market Invoice"	"Invoices"	-1	1	"[The second n
 Oriental Trading  invoice	"Oriental Trading Invoice"	"Invoices"	-1	1	"[The second noun] says, 'These prizes are cheaper and flimsier than usual.'"
 Mystic Industries invoice	"Mystic Industries Invoice"	"Accidents"	-1	3	"[The second noun] says, That fire in [story title] was very really bad. It took almost two weeks to get it fully repaired. But it shouldn't have cost this much. I think Mr Whidbey got ripped off.'"
 paperwork	"Paperwork"	"Invoices"	-1	1	"[The second noun] says, 'This all points the finger at mismanagement. I sure hope Mr Whidbey has a plan.'"
-insurance policy	"Insurance Policy"	"Insurance"	-1	3	"'An insurance policy? For a million dollars? SOmething is fishy for sure!' [the second noun] says."
+insurance policy	"Insurance Policy"	"Insurance"	-1	3	"'An insurance policy? For a million dollars? Something is fishy for sure!' [the second noun] says."
 pliers	"The Pliers"	"Accidents"	-1	5	"'I[']ve been missing those. Where did you find them?' asks [the second noun]."
 cashier's check	"Cashier's Check"	"Insurance"	-1	5	"[The second noun] says 'What?! That[']s the name of the kid who got hurt in the Bumper Cars incident.'"
 fuse1	"Aqua Fuse"	"Fuses"	-1	1	"'Hey! That[']s important. It should be in an electrical panel', [the second noun] says."
@@ -4091,7 +4101,7 @@ topic	description (text)	subject (text)	turn stamp (number)	weighting (number)	r
 "insurance/policy" or "insurance policy"	"Insurance Policy"	"Insurance"	-1	1	"'An insurance policy? Of course, all reputable businesses have insurance. Even small time carnivals' [the noun] stammers."
 "carnival"	"Carnival"	"Whidbey"	-1	1	"'The Whidbey family has owned this carnival since the 1957', [the noun] says. 'Unfortunately, I am an only child and never married. Alas, the carnival will close when I am gone. But for now, it[']s making a comeback!'"
 "ferris/wheel" or "ferris wheel"	"Ferris Wheel"	"NA"	-1	0	"[The noun] says 'The Ferris Wheel is my favorite ride. It[']s always relaxing and romantic.'"
-"bumper/car/cars" or "bumper cars" or "bumper car"	"Bumper Cars"	"Accidents"	-1	3	"'That incident the other week with that Needleman kids was unfortunate' says [the noun]."
+"bumper/car/cars" or "bumper cars" or "bumper car"	"Bumper Cars"	"Accidents"	-1	3	"'That incident the other week with that Needleman kid was unfortunate' says [the noun]."
 "fortune/teller/esmeralda/esmerelda" or "fortune teller"	"Esmeralda"	"NA"	-1	0	"[The noun] says 'I see her regularly to have my fortune told. We[']re lucky to have her here. She[']s very beautiful. It[']s a wonder she[']s never been married.'"
 "carousel"	"Carousel"	"NA"	-1	0	"'The carousel is just one of the many rides that thrill and delight our visitors every day,' says [the noun]"
 "dime/toss/plate" or "dime toss"	"Dime Toss"	"NA"	-1	0	"'The Dime Toss is is one of the many games that thrill and delight our visitors every day!' says [the noun]."
@@ -4104,7 +4114,6 @@ topic	description (text)	subject (text)	turn stamp (number)	weighting (number)	r
 "pliers"	"The Pliers"	"Accidents"	-1	3	"'Oh! I thought I lost... um, those belong to the janitor. Where did you find them?' asks [the noun]."
 "cashier's/check/fred/needleman" or "fred needleman"	"Fred Needleman"	"Insurance"	-1	3	"[The noun] says 'Uh, Fred is a special... contractor... We paid him. For services rendered.'"
 "services/rendered/special" or "services rendered"	"Services Rendered"	"Insurance"	-1	1	"'Fred did some work over at the bumper cars' says [the noun]."
-"extortion/blackmail"	"Blackmail"	"Insurance"	-1	5	"Not satisfied with the first payment, Needleman wanted more money. His latest demand is $15,000."
 
 Section 19 - Table of Owner Object Responses
 
@@ -4132,9 +4141,16 @@ Section 20 - Table of Confrontation
 
 Table of Confrontation
 topic	turn stamp (number)	accusation weight (number)	response (text)
-"insurance/fraud" or "insurance fraud"	-1	5	"[if total evidence is greater than 0 and total evidence is less than 41]'You have nothing on me', says [the noun].[otherwise if total evidence is greater than 40 and total evidence is less than 81][The noun] says, 'OK, maybe there[']s enough evidence to have me charged with [the topic understood] but they[']ll never make it stick.'[otherwise if total evidence is greater than 80]'Looks like you[']ve caught me red-handed' says [the noun].[end if]"
-"bribery"	-1	5	"The bumper cars injured that Needleman kid with an electrical shock. He was going to report the carnival to the authorities. So, I had to pay him off to keep him quiet."
-"insurance/policy" or "insurance policy"	-1	5	"I needed the money to cover for Needleman somehow."
+"insurance/fraud" or "insurance fraud"	-1	5	"[if total evidence is less than 31]'You have nothing on me', says [the noun].[otherwise if total evidence is less than 61][The noun] says, 'OK, maybe there[']s enough evidence to have me charged with [the topic understood] but you[']ll never make it stick.'[otherwise ]'Ok, I guess you got me. The carnival was losing money and we were going to go out of business. I was desparate to turn things around. 
+
+Then that Needleman kid got hurt on the bumper cars. We filed an insurance claim for it. When he got paid, Needleman asked if we could get more and split it. 
+
+It seemed like a good idea at the time. I could get some extra cash to pay the carnival[']s bills. Then the thought of the money got overwhelming and I thought, 'What if there was a fire and the estimate for repairs was, let[']s shall we say, generous. We could take the extra money, pay bills, and pocket the rest.[end if]"
+"insurance/policy" or "insurance policy"	-1	5	"[if total evidence is less than 31]'You have nothing on me', says [the noun].[otherwise if total evidence is less than 61][The noun] says, 'OK, maybe there[']s enough evidence to have me charged with [the topic understood] but you[']ll never make it stick.'[otherwise ]'Ok, I guess you got me. The carnival was losing money and we were going to go out of business. I was desparate to turn things around. 
+
+Then that Needleman kid got hurt on the bumper cars. We filed an insurance claim for it. When he got paid, Needleman asked if we could get more and split it. 
+
+It seemed like a good idea at the time. I could get some extra cash to pay the carnival[']s bills. Then the thought of the money got overwhelming and I thought, 'What if there was a fire and the estimate for repairs was, let[']s shall we say, generous. We could take the extra money, pay bills, and pocket the rest.[end if]"
 
 Section 21 - Table of Janitor Movements
 
@@ -4176,7 +4192,7 @@ When play begins:
 	choose row 1 in Table of Help Options;
 	now description entry is "[story title] - A ride to remember...
 
-You[']re a part-time reporter for The Tribune, the local paper. Earlier in the day, your editor called you and told you of a conversation he overheard between the Chief of Police and his Deputy about Whidbey Amusements. It seems there has been a rash of accidents and mishaps at the carnival. Sounds like there could be something suspicious going on. He wants you to collect evidence and write a hard hitting piece about it. If you do a good job, maybe the paper will hire you on full-time.
+You[']re a part-time reporter for The Tribune, the local paper. Earlier in the day, your editor called you and told you of a conversation he overheard between the Chief of Police and his Deputy about Whidbey Amusements. It seems there has been a rash of accidents and mishaps at the carnival. Sounds like there could be something suspicious going on. The editor wants you to collect evidence and write a hard hitting piece about this story. If you do a good job, maybe the paper will hire you on full-time.
 
 As you explore the carnival, you learn (the hard way) that the [story title] attraction is malfunctioning with the potential for serious injuries to the riders. You must disable the ride and prevent any loss of life... including your own."
 
