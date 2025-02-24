@@ -3545,6 +3545,7 @@
     <changed>NO</changed>
     <children>
       <child nodeId="node-2920"/>
+      <child nodeId="node-3057"/>
       <child nodeId="node-289"/>
     </children>
   </item>
@@ -4388,6 +4389,309 @@
   <item nodeId="node-3026">
     <command xml:space="preserve">accuse whidbey of insurance fraud</command>
     <result xml:space="preserve">Mr Whidbey waits for you to speak.&#x000A;&#x000A;"Ok, I guess you got me. The carnival was losing money and we were going to go out of business. I was desparate to turn things around.&#x000A;&#x000A;Then that Needleman kid got hurt on the bumper cars. We filed an insurance claim for it. When he got paid, Needleman asked if we could get more and split it.&#x000A;&#x000A;It seemed like a good idea at the time. I could get some extra cash to pay the carnival's bills. Then the thought of the money got overwhelming and I thought, "What if there was a fire and the estimate for repairs was, let's shall we say, generous. We could take the extra money, pay bills, and pocket the rest.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+  </item>
+  <item nodeId="node-3057">
+    <command xml:space="preserve">s</command>
+    <result xml:space="preserve">Ticket Booth&#x000A;The ticket kiosk stands at the entrance, painted in bright red and yellow stripes, with flickering lights to draw attention. A grinning cashier hands out tickets, while the cash drawer jingles. A digital payment system sits unused in the corner. Too bad you don't have a debit card.&#x000A;&#x000A;To the right, a signboard displays ticket prices alongside illustrations of the rides. Pennant flags flutter, adding to the festive atmosphere. The air is filled with the scent of popcorn, pretzels, and grease.&#x000A;&#x000A;The ground is worn from the steps of families, couples, and friends, eagerly waiting in line, excitement building as they approach the carnival.&#x000A;&#x000A;The midway continues in all directions from here. There is a cashier here. A price list for attraction tickets is on the signboard. The cashier has Hell Ride ticket, Fortune Teller ticket, Ferris Wheel ticket, Bumper Cars ticket, and Carousel ticket.&#x000A;&#x000A;You can see a janitor, a Cashier, and a ticket kiosk here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-3058"/>
+    </children>
+  </item>
+  <item nodeId="node-3058">
+    <command xml:space="preserve">w</command>
+    <result xml:space="preserve">In front of the tent, the barker gestures excitedly, calling out:&#x000A;&#x000A;Ladies and gentlemen, boys and girls, gather 'round! &#x000A;Step right up and witness the spectacle that's taken the world by storm! &#x000A;She walks, she talks, she crawls on her belly like a reptile. &#x000A;Behold the one, the only Little Egypt, performing her legendary Dance of the Pyramids - a dazzling display of mystery, grace, and allure! &#x000A;For just a dime, a mere one tenth of a dollar, prepare to be transported to the sands of Cairo, where enchantment and wonder await!&#x000A;&#x000A;Show Facade&#x000A;As you walk west through the midway, the lights fade to a soft glow, leading you to a tent. A sign reads "Little Egypt Show - A Journey Into the Mysterious and Unknown!" The barker, wearing a fez and smiling, points to another sign: "Little Egypt - Dime Admission." The ticket kiosk is behind you.&#x000A;&#x000A;There is a stage in front of the tent. The Barker is encouraging you to step up and enjoy.&#x000A;&#x000A;You can see a Barker here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-3059"/>
+    </children>
+  </item>
+  <item nodeId="node-3059">
+    <command xml:space="preserve">give dime</command>
+    <result xml:space="preserve">(to the Barker)&#x000A;You hand over a dime, and the barker nods, waving you through. As you step past the entrance, the air feels thicker and the sounds of the carnival fade away. You've entered an entirely different world now. Before you, there is a tent. Intrigued, you take your first step into the Little Egypt Show. You can now head west into the show.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-3060"/>
+    </children>
+  </item>
+  <item nodeId="node-3060">
+    <command xml:space="preserve">w</command>
+    <result xml:space="preserve">Show Tent&#x000A;You are inside the Little Egypt Show. The attraction's facade is to the East. There are folding chairs standing vigil in neat in rows. The show should start soon.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-3061"/>
+    </children>
+  </item>
+  <item nodeId="node-3061">
+    <command xml:space="preserve">z</command>
+    <result xml:space="preserve">Time passes.&#x000A;&#x000A;The tent is dimly lit, the stage is fully decorated an emulation of some Middle Eastern palace, featuring rich, colorful fabrics, brass ornaments, and lanterns casting a warm, flickering glow. Heady incense wafting through the air, softening everything around the edges, enhancing the mystique. The backdrop displays painted scenes of pyramids, desert landscapes, and  domed structures. The colorful onion topped buildings and jewel tones set to the sepia drenched landscape have you transported far away.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-3062"/>
+    </children>
+  </item>
+  <item nodeId="node-3062">
+    <command xml:space="preserve">z</command>
+    <result xml:space="preserve">Time passes.&#x000A;&#x000A;Little Egypt emerges, draped in flowing silken veils. Skillfully she twirls and undulates, using them as part of the dance. A sparkling, sequined bodice opens into a gauze skirt, adorned with jingling coin belts and jewelry that accentuate her dance.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-3063"/>
+    </children>
+  </item>
+  <item nodeId="node-3063">
+    <command xml:space="preserve">z</command>
+    <result xml:space="preserve">Time passes.&#x000A;&#x000A;The performance begins with slow, undulating movements, drawing you into the rhythm of the music. Traditional instruments like the oud, darbuka, or zurna an accompanying chorus. As the tempo builds, her hips, torso, and hands twisting in an intricate, mesmerizing pattern. Little Egypt demonstrates remarkable control and fluidity. She dramatically spins, drops, and shimmies, often punctuating the beat with a quick jingle of her coin belt.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-3064"/>
+    </children>
+  </item>
+  <item nodeId="node-3064">
+    <command xml:space="preserve">z</command>
+    <result xml:space="preserve">Time passes.&#x000A;&#x000A;Little Egypt makes eye contact with you and smiles enigmatically. In her performance she balances a fine silver sword on her head and accents her dance with tinkling finger cymbals.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-3065"/>
+    </children>
+  </item>
+  <item nodeId="node-3065">
+    <command xml:space="preserve">z</command>
+    <result xml:space="preserve">Time passes.&#x000A;&#x000A;The music oscillates between hauntingly slow melodies and rapid, energetic drum beats, an emotional arc that leaves you entranced. Little Egypt relies on the music's dynamic changes to tell a story with movements reflecting joy, sorrow, seduction, and celebration.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-3066"/>
+    </children>
+  </item>
+  <item nodeId="node-3066">
+    <command xml:space="preserve">z</command>
+    <result xml:space="preserve">Time passes.&#x000A;&#x000A;The performance concludes with a dramatic flourish, an energetic shimmy, a bold spin, and Little Egypt casts off her veils. The dancer takes a bow to thunderous applause, leaving you spellbound by the sensual display.&#x000A;&#x000A;You applaud until your hands are sore. Did she just wink at you?&#x000A;&#x000A;As she leaves the stage, Little Egypt tosses one of her veils to you!&#x000A;&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-3067"/>
+    </children>
+  </item>
+  <item nodeId="node-3067">
+    <command xml:space="preserve">wear veil</command>
+    <result xml:space="preserve">You wrap the veil around your head, shrouding your eyes. The world is a lovely color pink as you look through the veil while her perfume fills your nostrils in the most delightful way. You look pretty!&#x000A;&#x000A;[Your score has just gone up by five points.]&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-3068"/>
+    </children>
+  </item>
+  <item nodeId="node-3068">
+    <command xml:space="preserve">l at sword</command>
+    <result xml:space="preserve">This is a beautiful steel sword with a filigreed handle and blade.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-3069"/>
+    </children>
+  </item>
+  <item nodeId="node-3069">
+    <command xml:space="preserve">l</command>
+    <result xml:space="preserve">Show Tent&#x000A;You are inside the Little Egypt Show. The attraction's facade is to the East. There are folding chairs standing vigil in neat in rows. The show should start soon.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-3070"/>
+    </children>
+  </item>
+  <item nodeId="node-3070">
+    <command xml:space="preserve">e</command>
+    <result xml:space="preserve">Show Facade&#x000A;You can see a Barker here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-3071"/>
+    </children>
+  </item>
+  <item nodeId="node-3071">
+    <command xml:space="preserve">e</command>
+    <result xml:space="preserve">Ticket Booth&#x000A;You can see a Cashier and a ticket kiosk here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-3072"/>
+    </children>
+  </item>
+  <item nodeId="node-3072">
+    <command xml:space="preserve">buy tickets</command>
+    <result xml:space="preserve">Hell Ride ticket: You fork over $4.00 for the Hell Ride ticket, leaving yourself with $28.00.&#x000A;Fortune Teller ticket: You fork over $3.00 for the Fortune Teller ticket, leaving yourself with $25.00.&#x000A;Ferris Wheel ticket: You fork over $2.00 for the Ferris Wheel ticket, leaving yourself with $23.00.&#x000A;Bumper Cars ticket: You fork over $2.00 for the Bumper Cars ticket, leaving yourself with $21.00.&#x000A;Carousel ticket: You fork over $1.00 for the Carousel ticket, leaving yourself with $20.00.&#x000A;&#x000A;[Your score has just gone up by five points.]&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-3073"/>
+    </children>
+  </item>
+  <item nodeId="node-3073">
+    <command xml:space="preserve">nw</command>
+    <result xml:space="preserve">Bumper Cars&#x000A;The bumper cars are a lively scene, full of flashing lights and vibrant decorations. The arena is surrounded by padded barriers, ensuring safe collisions. Cars in faded reds, blues, yellows, and greens glide across the slick floor, each equipped with a steering wheel and padded bumper. Riders maneuver their cars with gleeful intensity, creating a cacophony of bumps and laughter. Overhead, electric poles hum with energy. The ride operator ensures both chaos and safety, while onlookers cheer from the sidelines. The bumper cars offer playful competition and nostalgic fun for all. The Ticket Kiosk is southeast of here.&#x000A;&#x000A;You can see a Bumper Cars attendant here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-3074"/>
+    </children>
+  </item>
+  <item nodeId="node-3074">
+    <command xml:space="preserve">give ticket</command>
+    <result xml:space="preserve">(the Bumper Cars ticket to the Bumper Cars attendant)&#x000A;You give the Bumper Cars ticket to the Bumper Cars attendant.&#x000A;&#x000A;You hand your ticket to the attendant and slide into the bucket seat, gripping the wheel as the arena comes alive with flashing lights, laughter, and the hum of electric currents. Riders lock eyes, eager for the chaos to begin.&#x000A;&#x000A;The car jolts forward, and you steer into the fray. A sudden crash spins you around, but you recover and aim for a friend. Each collision is met with laughs, and the padded bumpers make the impact thrilling yet safe. You dodge, swerve, and plot your next move in the chaos. &#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-3075"/>
+    </children>
+  </item>
+  <item nodeId="node-3075">
+    <command xml:space="preserve">se</command>
+    <result xml:space="preserve">Ticket Booth&#x000A;You can see a Cashier and a ticket kiosk here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-3076"/>
+    </children>
+  </item>
+  <item nodeId="node-3076">
+    <command xml:space="preserve">ne</command>
+    <result xml:space="preserve">Carousel&#x000A;The carousel radiates charm with its brightly painted horses, lights, and cheerful music. The platform features a canopy of swirling colors and decorative mirrors, reflecting the flickering bulbs. Hand-carved animals, including horses, lions, tigers, and sea dragons, circle as the carousel spins. The animals rise and fall gently, adding to the motion's charm. The warm, playful tunes drift across the midway, inviting riders of all ages to enjoy the simple joy of the ride. It's a delightful, nostalgic centerpiece of the carnival.&#x000A;&#x000A;The Ticket Kiosk is back to the southwest; the way you came.&#x000A;&#x000A;You can see a Carousel Attendant here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-3077"/>
+    </children>
+  </item>
+  <item nodeId="node-3077">
+    <command xml:space="preserve">give ticket</command>
+    <result xml:space="preserve">(the Carousel ticket to the Carousel Attendant)&#x000A;You give the Carousel ticket to the Carousel Attendant.&#x000A;&#x000A;Stepping onto the carousel, you're surrounded by colorful beasts, glittering lights, and carved details. The cheerful calliope music fills the air as you choose your mount - a galloping horse, a snarling lion, or a graceful giraffe. Gripping the pole, you settle into the saddle as the carousel begins to spin.&#x000A;&#x000A;As it speeds up, the world blurs in a swirl of colors, and the gentle rise and fall mimics a playful gallop. Laughter and chatter mix with the music, creating a nostalgic atmosphere.&#x000A;&#x000A;Each rotation transports you into a whimsical, carefree world. As the ride slows, you step off smiling, the music still echoing in your ears, and return to the bustling carnival.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-3078"/>
+    </children>
+  </item>
+  <item nodeId="node-3078">
+    <command xml:space="preserve">sw</command>
+    <result xml:space="preserve">Ticket Booth&#x000A;You can see a janitor, a Cashier, and a ticket kiosk here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-3079"/>
+    </children>
+  </item>
+  <item nodeId="node-3079">
+    <command xml:space="preserve">se</command>
+    <result xml:space="preserve">Fortune Teller&#x000A;Approaching the fortune teller's booth, drawn in by its mysterious allure and inky softness. Draped in deep purple curtains adorned with golden moons and stars, the booth is lit only with the flickering of candles. The air is heavy with the scent of incense, mingling, then overpowering the ever-present sugary odor of treats. A sign sways slightly in the evening breeze&#x000A;&#x000A;You can see Esmeralda the Mysterious here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-3080"/>
+    </children>
+  </item>
+  <item nodeId="node-3080">
+    <command xml:space="preserve">read sign</command>
+    <result xml:space="preserve">"Fortunes Told - What Does Your Future Hold?" Underneath that it says "Ticket Required"&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-3081"/>
+    </children>
+  </item>
+  <item nodeId="node-3081">
+    <command xml:space="preserve">give ticket</command>
+    <result xml:space="preserve">(the Fortune Teller ticket to Esmeralda the Mysterious)&#x000A;You give the Fortune Teller ticket to Esmeralda the Mysterious.&#x000A;&#x000A;Stepping inside, you're greeted by the Esmeralda, a figure cloaked in flowing robes with a jeweled headpiece catching the flickering light. Her piercing eyes seem to look right through you as they gesture for you to sit at a small round table covered in an ornate cloth. At its center rests a glowing crystal ball, surrounded by tarot cards and mysterious trinkets.&#x000A;&#x000A;Esmeralda's voice is low and melodic, weaving an air of intrigue as they ask you to focus on a question and offer you a tarot reading. The room seems to shrink, the bustling carnival outside fading into the background as they reveal your fate. Each card turned  feels significant, as though unlocking a secret you didn't know you carried.&#x000A;&#x000A;Past: Ten of Wands (upright)&#x000A;Ten of Wands suggests that you may be shouldering too many responsibilities or taking on more than you can handle. You may feel overwhelmed, exhausted, or weighed down by the tasks and obligations in your life. This card serves as a reminder to evaluate your commitments and consider whether you need to delegate, seek support,or let go of some burdens.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-3082"/>
+    </children>
+  </item>
+  <item nodeId="node-3082">
+    <command xml:space="preserve">z</command>
+    <result xml:space="preserve">Time passes.&#x000A;&#x000A;Present: Nine of Wands (upright)&#x000A;Nine of Wands is the card for strength, courage, resilience and endurance. Never give up and never surrender. It suggests that while you may be tired or worn out from the struggles you've faced, it's important to remain alert and prepared for any further challenges that may arise. This card encourages you to draw upon your past experiences and learn from them, using them as sources of wisdom and guidance.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-3083"/>
+    </children>
+  </item>
+  <item nodeId="node-3083">
+    <command xml:space="preserve">z</command>
+    <result xml:space="preserve">Time passes.&#x000A;&#x000A;Challenge: The World (upright)&#x000A;World is the final Major Arcana card and represents fulfillment and successful completion of a cycle. You know your place in the world, and your life lessons have served you well. It serves as a gentle reminder that the universe is aligning perfectly in your favor, propelling you forward towards the triumphant realization of your ambitions. The world is at your feet. You're on the right path towards the attainment of your long-cherished aspirations and dreams.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-3084"/>
+    </children>
+  </item>
+  <item nodeId="node-3084">
+    <command xml:space="preserve">z</command>
+    <result xml:space="preserve">Time passes.&#x000A;&#x000A;Opportunity: Two of Swords (reversed)&#x000A;Two of Swords reversed suggests that poor choices and hasty decision-making are likely to lead to movement in the wrong direction. It serves as a reminder that impulsive actions can often result in unfavorable outcomes, urging you to carefully consider your options and approach situations with thoughtfulness and patience. By taking the time to weigh your choices and make deliberate decisions, you can avoid the pitfalls that come with rushing into action without considering the potential consequences.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-3085"/>
+    </children>
+  </item>
+  <item nodeId="node-3085">
+    <command xml:space="preserve">z</command>
+    <result xml:space="preserve">Time passes.&#x000A;&#x000A;Future: Four of Wands (reversed)&#x000A;Four of Wands reversed indicates the foundation not laid or not ready. Something has caused a disruption in your plans. This could be due to external factors, such as unexpected events that have thrown you off course. Alternatively, it could be self-sabotage, your wavering self-belief or lack of confidence in your abilities can be hindering you from achieving your goals.&#x000A;&#x000A;As the reading concludes, Esmeralda gazes into your eyes with a cryptic smile and delivers their final words of wisdom: "The order of things is important. Alphabetically and numerically; one follows another and provides the link between the two. If you will learn, think on this carefully. Also, don't trust Whidbey. He's up to something."&#x000A;&#x000A;Whether you leave with a sense of wonder, excitement, or unease, the encounter lingers with you - a touch of magic amid the carnival's chaos, as if you've glimpsed something beyond the ordinary.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-3086"/>
+    </children>
+  </item>
+  <item nodeId="node-3086">
+    <command xml:space="preserve">nw</command>
+    <result xml:space="preserve">Ticket Booth&#x000A;You can see a Cashier and a ticket kiosk here.&#x000A;&#x000A;The janitor arrives from the Concession Stand.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-3087"/>
+    </children>
+  </item>
+  <item nodeId="node-3087">
+    <command xml:space="preserve">ask janitor about hell ride</command>
+    <result xml:space="preserve">The janitor looks bored as he waits for you to speak.&#x000A;&#x000A;"Hell Ride is a finicky ride. I'm fixing something there every week. Last week, Mr. Whidbey asked me to skip Hell Ride's maintenance slot. There was a real fire in the Stakes Room last month. And just yesterday I caught him creeping around the guillotine room" says the janitor.&#x000A;&#x000A;You've discovered some evidence. To see a list and weighting of the evidence you've collected, type "SHOW EVIDENCE".&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-3088"/>
+    </children>
+  </item>
+  <item nodeId="node-3088">
+    <command xml:space="preserve">ask janitor about fire</command>
+    <result xml:space="preserve">The janitor looks at you expectantly.&#x000A;&#x000A;"The very real fire in the Stakes Room in Hell Ride was a scary event. I couldn't put it out with a fire extinguisher. We had to wait for the fire department and by then there was a lot of damage done" says the janitor.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-3089"/>
+    </children>
+  </item>
+  <item nodeId="node-3089">
+    <command xml:space="preserve">ask janitor about the ferris wheel</command>
+    <result xml:space="preserve">The janitor looks bored as he waits for you to speak.&#x000A;&#x000A;"Sorry, you've got me there," the janitor comments.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-3090"/>
+    </children>
+  </item>
+  <item nodeId="node-3090">
+    <command xml:space="preserve">ask janitor about ferris wheel</command>
+    <result xml:space="preserve">The janitor looks at you expectantly.&#x000A;&#x000A;The janitor remarks, "The other day, I found a bolt on one of the gondolas so loose it had almost come off. That would have been a tragedy!"&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
   </item>
