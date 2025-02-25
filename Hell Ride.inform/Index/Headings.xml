@@ -458,14 +458,14 @@
     </dict>
     <key>65</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.inform\Source\story.ni</string>
-        <key>Line</key><integer>2909</integer>
+        <key>Line</key><integer>2910</integer>
         <key>Title</key><string>Section 12 - Ferris Wheel</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
     <key>66</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.inform\Source\story.ni</string>
-        <key>Line</key><integer>2953</integer>
+        <key>Line</key><integer>2954</integer>
         <key>Title</key><string>Section 13 - Bumper Cars</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>

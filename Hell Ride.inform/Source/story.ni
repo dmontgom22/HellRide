@@ -2035,7 +2035,7 @@ The PL-room is a room. The printed name is "Parking Lot". The PL-room is north o
 
 Cars park haphazardly, guided by makeshift signs and fluttering flags. Families and visitors mingle, some lingering in vehicles, preparing for the chilly evening ahead. Shadows from encroaching trees are pierced by the occasional flash of a flashlight. At the entrance, an attendant collects fees in a weathered booth, making change from a cash box.
 
-Puddles from recent rain shimmer under the lights, while patches of mud cling to shoes. In the distance, RVs and trailers sit quietly, their occupants watching the Ferris wheel turn against the evening sky. The lot serves as a boundary, marking the transition between the mundane and the magical world inside the carnival.
+Puddles from recent rain shimmer under the lights, while patches of mud cling to shoes. In the distance, RVs and trailers sit quietly, their occupants watching the Ferris wheel turn against the evening sky. The lot serves as a transition between the mundane and the magical world inside the carnival.
 
 The midway is to the south. There is a blueberry bush here. [if blueberry bush contains blueberries]There are blueberries on the bush.[otherwise]The bush has been picked clean.[end if][paragraph break]Your car is here. It[']s a bit of a beater. Inside the car, you can see [the list of things which are part of the beater car]."
 
@@ -2157,9 +2157,9 @@ The Cashier is an attendant in the TB-room. Understand "smiling/attendant" as ca
 
 The description of the TB-room is "The ticket kiosk stands at the entrance, painted in bright red and yellow stripes, with flickering lights to draw attention. A grinning cashier hands out tickets, while the cash drawer jingles. A digital payment system sits unused in the corner. Too bad you don’t have a debit card.
 
-To the right, a signboard displays ticket prices alongside illustrations of the rides. Pennant flags flutter, adding to the festive atmosphere. The air is filled with the scent of popcorn, pretzels, and grease.
+To the right, a signboard displays ticket prices alongside illustrations of the rides. Pennant flags flutter and the air is filled with the scent of popcorn, pretzels, and grease.
 
-The ground is worn from the steps of families, couples, and friends, eagerly waiting in line, excitement building as they approach the carnival.
+The ground is worn from the steps of families, couples, and friends, eagerly waiting in line as they approach the carnival.
 
 The midway continues in all directions from here. There is a cashier here. A price list for attraction tickets is on the signboard. The cashier has [list of things carried by the cashier]."
 
@@ -2833,7 +2833,8 @@ Before going west when the location is the SF-room and the ST-room is unvisited 
 Before looking when the location is the the ST-room:
 	if show images is true, display Figure of LittleEgyptShow.		
 
-The ST-room is a room. The printed name is "Show Tent". The ST-room is west of SF-room. "You are inside the Little Egypt Show. The attraction's facade is to the East. There are folding chairs standing vigil in neat in rows. The show should start soon."
+The ST-room is a room. The printed name is "Show Tent". The ST-room is west of SF-room. "You are inside the Little Egypt Show. The attraction's facade is to the ez
+ast. There are folding chairs standing vigil in neat in rows. The show should start soon."
 
 Little Egypt is a woman. Little Egypt is in the ST-room. Little Egypt is scenery. The description of Little Egypt is "Little Egypt is a beautiful woman who is draped in flowing silk veils which she skillfully uses as part of the dance. Her attire consists of a sparkling, sequined bodice and a flowing skirt, adorned with jingling coin belts and jewelry that accentuate her movements.". understand "silk", "veils", "bodice", "sequined", "sequins", "flowing", "skirt", "jingling", "coins", "belts", "belt" and "jewelry" as Little Egypt.
 
@@ -2959,7 +2960,7 @@ After going northwest from the TB-room when the BC-room is unvisited:
 Before looking when the location is the BC-room:
 	if show images is true, display Figure of BumperCars.
 	
-The BC-room is a room. The printed name is "Bumper Cars". The BC-room is northwest of the TB-room. The BC-room is outdoors. "The bumper cars are a lively scene, full of flashing lights and vibrant decorations. The arena is surrounded by padded barriers, ensuring safe collisions. Cars in faded reds, blues, yellows, and greens glide across the slick floor, each equipped with a steering wheel and padded bumper. Riders maneuver their cars with gleeful intensity, creating a cacophony of bumps and laughter. Overhead, electric poles hum with energy. The ride operator ensures both chaos and safety, while onlookers cheer from the sidelines. The bumper cars offer playful competition and nostalgic fun for all. The Ticket Kiosk is southeast of here."
+The BC-room is a room. The printed name is "Bumper Cars". The BC-room is northwest of the TB-room. The BC-room is outdoors. "The bumper cars are a lively scene, full of flashing lights and vibrant decorations. The arena is surrounded by padded barriers, ensuring safe collisions. Cars in faded reds, blues, yellows, and greens glide across the slick floor, each equipped with a steering wheel and padded bumper. Riders maneuver their cars with gleeful intensity, creating a cacophony of bumps and laughter. Overhead, electric poles hum with energy. While onlookers cheer from the sidelines, the bumper cars offer playful competition and nostalgic fun for all. The Ticket Kiosk is southeast of here."
 
 The Bumper Cars Attendant is an attendant in the BC-room. 
 
@@ -2968,15 +2969,14 @@ instead of giving the bumper cars ticket to the bumper cars attendant:
 	choose a row with an object of the noun in the Table of Tickets;	
 	now the price of the noun is the price entry;
 	now the noun is carried by the cashier;
-	say "[line break]You hand your ticket to the attendant and slide into the bucket seat, gripping the wheel as the arena comes alive with flashing lights, laughter, and the hum of electric currents. Riders lock eyes, eager for the chaos to begin.
+	say "[line break]You hand your ticket to the attendant and slide into the bucket seat, gripping the wheel as the arena comes alive with flashing lights and the hum of electric currents. Riders lock eyes, eager for the ride to begin.
 
-The car jolts forward, and you steer into the fray. A sudden crash spins you around, but you recover and aim for a friend. Each collision is met with laughs, and the padded bumpers make the impact thrilling yet safe. You dodge, swerve, and plot your next move in the chaos.
-"
+The car jolts forward, and you steer into the fray. A sudden crash spins you around, but you recover and aim for a friend. Each collision is met with laughs as you dodge, swerve, and plot your next move in the chaos."
 
-A thing called the Bumper Cars are in the BC-room. The Bumper Cars are scenery. understand "car" as the bumper cars. The description of the Bumper Cars is "The Bumper Cars are small, colorful, electric-powered vehicles equipped with a padded outer rim to absorb impacts, allowing riders to safely bump into each other as part of the game. The ceiling has a conductive surface that powers the cars. Riders are thrilled by chaotic collisions, laughter, and the challenge of maneuvering away from — or into — other drivers."
+A thing called the Bumper Cars are in the BC-room. The Bumper Cars are scenery. understand "car" as the bumper cars. The description of the Bumper Cars is "The Bumper Cars are small, colorful, electric-powered vehicles equipped with a padded outer rim to absorb impacts, allowing riders to safely bump into each other as part of the game. The ceiling has a conductive surface that powers the cars. Riders are thrilled by chaotic collisions and the challenge of maneuvering away from — or into — other drivers."
 
-some padded barriers are here. they are scenery. the description is "The padded barriers ensure a safe yet thrilling experience for riders. ".
-some padded bumpers are here. they are scenery. the description is "The padded bumper on each car is designed to absorb the impact of playful collisions.".
+some padded barriers are here. they are scenery. the description is "The padded barriers ensure a safe yet thrilling experience for the riders. ".
+some padded bumpers are here. they are scenery. the description is "The padded bumper on each car is designed to absorb the impact of collisions.".
 some drivers are here. they are scenery. understand "riders", "strangers", "family", and "friends" as drivers. the description is "Drivers of all ages eagerly maneuver their cars, aiming for others.".
 some electric poles are here. they are scenery. the description is "The electric poles connects the cars to the ceiling, sparking faintly as they supply power to the vehicles.".
 some onlookers are here. they are scenery. the description is "Surrounding the bumper cars are cheering onlookers.".
@@ -3029,7 +3029,7 @@ instead of giving the fortune teller ticket to Esmeralda the Mysterious:
 	now Esmeralda the Mysterious carries the fortune teller ticket;
 	say "[line break]Stepping inside, you’re greeted by the Esmeralda, a figure cloaked in flowing robes with a jeweled headpiece catching the flickering light. Her piercing eyes seem to look right through you as they gesture for you to sit at a small round table covered in an ornate cloth. At its center rests a glowing crystal ball, surrounded by tarot cards and mysterious trinkets.
 
-Esmeralda[’]s voice is low and melodic, weaving an air of intrigue as they ask you to focus on a question and offer you a tarot reading. The room seems to shrink, the bustling carnival outside fading into the background as they reveal your fate. Each card turned  feels significant, as though unlocking a secret you didn’t know you carried."
+Esmeralda[’]s voice is low and melodic, weaving an air of intrigue as they ask you to focus on a question and offer you a tarot reading. The room seems to shrink, the bustling carnival outside fading into the background as they reveal your fate. Each card turned feels significant, as though unlocking a secret you didn’t know you carried."
 
 instead of asking Esmeralda the Mysterious about "fortune", say "You[']ll need a ticket if you want me to reveal your future.".
 instead of asking Esmeralda the Mysterious about "me", say "You[']ll need a ticket if you want me to reveal your future.".
@@ -3038,7 +3038,7 @@ Fortune Teller AutoPlay is a scene.
 Fortune Teller AutoPlay begins when Esmeralda the Mysterious carries the Fortune Teller ticket.
 Fortune Teller AutoPlay ends when the index is 6.
 
-last category is text that varies. last category is usually ""..
+last category is text that varies. last category is usually "".
 last card is text that varies. last card is usually "".
 last card description is text that varies. last card description is usually "".
 tarot reading is a number that varies. tarot reading is usually 1;
@@ -3050,7 +3050,7 @@ When Fortune Teller AutoPlay begins:
 When Fortune Teller AutoPlay ends:
 	say "As the reading concludes, Esmeralda gazes into your eyes with a cryptic smile and delivers their final words of wisdom: 'The order of things is important. Alphabetically and numerically; one follows another and provides the link between the two. If you will learn, think on this carefully. Also, don[']t trust Whidbey. He[']s up to something.' 
 
-Whether you leave with a sense of wonder, excitement, or unease, the encounter lingers with you — a touch of magic amid the carnival’s chaos, as if you’ve glimpsed something beyond the ordinary.";
+Whether you leave with a sense of wonder or unease, the encounter lingers with you — a touch of magic amid the bustling carnival, as if you’ve glimpsed something beyond the ordinary.";
 	now the fortune teller ticket is carried by the cashier.
 
 every turn during Fortune Teller AutoPlay:
@@ -3076,7 +3076,7 @@ Before looking when the location is the CR-room:
 
 The Carousel Attendant is an attendant in the CR-room. 
 
-The CR-room is a room. The CR-room is outdoors. The printed name is "Carousel". The CR-room is northeast of the TB-room. "The carousel radiates charm with its brightly painted horses, lights, and cheerful music. The platform features a canopy of swirling colors and decorative mirrors, reflecting the flickering bulbs. Hand-carved animals, including horses, lions, tigers, and sea dragons, circle as the carousel spins. The animals rise and fall gently, adding to the motion's charm. The warm, playful tunes drift across the midway, inviting riders of all ages to enjoy the simple joy of the ride. It's a delightful, nostalgic centerpiece of the carnival.
+The CR-room is a room. The CR-room is outdoors. The printed name is "Carousel". The CR-room is northeast of the TB-room. "The carousel radiates charm with its brightly painted horses, lights, and calliope music. The platform features a canopy of swirling colors and decorative mirrors, reflecting the flickering bulbs. Hand-carved animals, including horses, lions, tigers, and sea dragons, circle as the carousel spins. The animals rise and fall gently, adding to the charm. The music rises from the Carousel inviting riders of all ages to enjoy this simple joy of the carnival.
 
 The Ticket Kiosk is back to the southwest; the way you came."
 
@@ -3087,9 +3087,9 @@ instead of giving the carousel ticket to the carousel attendant:
 	now the noun is carried by the cashier;
 	say "[line break]Stepping onto the carousel, you're surrounded by colorful beasts, glittering lights, and carved details. The cheerful calliope music fills the air as you choose your mount – a galloping horse, a snarling lion, or a graceful giraffe. Gripping the pole, you settle into the saddle as the carousel begins to spin.
 
-As it speeds up, the world blurs in a swirl of colors, and the gentle rise and fall mimics a playful gallop. Laughter and chatter mix with the music, creating a nostalgic atmosphere.
+As it speeds up, the world blurs in a swirl of colors, and the gentle rise and fall mimics a playful gallop. Laughter mixes with the music, creating a nostalgic atmosphere.
 
-Each rotation transports you into a whimsical, carefree world. As the ride slows, you step off smiling, the music still echoing in your ears, and return to the bustling carnival."
+As the ride slows, you step off smiling, the music still echoing in your ears, and return to the bustling carnival."
 
 Understand "merry-go-round" and "merry go round" as carousel.
 A thing called the Carousel is in the CR-room. The Carousel is scenery. The description of the Carousel is "The carousel features intricately decorated, moving figures such as horses, chariots, and sea dragons, all mounted on poles. The figures move up and down in an endless chase accompaniment of cheerful, calliope music. Illuminated by bright, twinkling lights, the carousel creates a magical and timeless atmosphere.".
@@ -3882,8 +3882,8 @@ Section 11 - Table of Little Egypt Events
 Table of Little Egypt Events
 description
 "The tent is dimly lit, the stage is fully decorated an emulation of some Middle Eastern palace, featuring rich, colorful fabrics, brass ornaments, and lanterns casting a warm, flickering glow. Heady incense wafting through the air, softening everything around the edges, enhancing the mystique. The backdrop displays painted scenes of pyramids, desert landscapes, and  domed structures. The colorful onion topped buildings and jewel tones set to the sepia drenched landscape have you transported far away."
-"Little Egypt emerges, draped in flowing silken veils. Skillfully she twirls and undulates, using them as part of the dance. A sparkling, sequined bodice opens into a gauze skirt, adorned with jingling coin belts and jewelry that accentuate her dance."
-"The performance begins with slow, undulating movements, drawing you into the rhythm of the music. Traditional instruments like the oud, darbuka, or zurna an accompanying chorus. As the tempo builds, her hips, torso, and hands twisting in an intricate, mesmerizing pattern. Little Egypt demonstrates remarkable control and fluidity. She dramatically spins, drops, and shimmies, often punctuating the beat with a quick jingle of her coin belt."
+"Little Egypt emerges, draped in flowing silken veils. Skillfully she twirls using them as part of the dance. A sparkling, sequined bodice opens into a gauze skirt, adorned with jingling coin belts and jewelry that accentuate her dance."
+"The performance begins with slow, undulating movements, drawing you into the rhythm of the music. Traditional instruments like the oud, darbuka, or zurna are an accompanying chorus. As the tempo builds, her hips, torso, and hands twisting in an intricate, mesmerizing pattern. Little Egypt demonstrates remarkable control and fluidity. She dramatically spins, drops, and shimmies, often punctuating the beat with a quick jingle of her coin belt."
 "Little Egypt makes eye contact with you and smiles enigmatically. In her performance she balances a fine silver sword on her head and accents her dance with tinkling finger cymbals."
 "The music oscillates between hauntingly slow melodies and rapid, energetic drum beats, an emotional arc that leaves you entranced. Little Egypt relies on the music's dynamic changes to tell a story with movements reflecting joy, sorrow, seduction, and celebration."
 "The performance concludes with a dramatic flourish, an energetic shimmy, a bold spin, and Little Egypt casts off her veils. The dancer takes a bow to thunderous applause, leaving you spellbound by the sensual display."
@@ -3971,21 +3971,21 @@ Table of Janitor Conversation Responses
 topic	description (text)	subject (text)	turn stamp (number)	weighting (number)	response (text)
 "hell/ride" or "hell ride"	"Hell Ride"	"Accidents"	-1	5	"'[story title] is a finicky ride. I[']m fixing something there every week. Last week, Mr. Whidbey asked me to skip [story title][']s maintenance slot. There was a real fire in the Stakes Room last month. And just yesterday I caught him creeping around the guillotine room' says [the janitor]."
 "owner/Whidbey/mister/mr" or "Mr Whidbey"	"Mr Whidbey"	"Whidbey"	-1	5	"[The noun] says , 'Mr. Whidbey? He creeps me out. It always seems like he[']s hiding something. Just yesterday I caught him sneaking around the guillotine room in [story title].'"
-"invoices/receipts/paperwork"	"Invoices"	"Invoices"	-1	1	"[The noun] says, 'Wow! These don[']t look good. Looks like the carnival owes a lot of money! Cash [']N['] Carry provides every day supplies. Why is this overdue? I hope I don[']t lose my job!'"
-"insurance/policy" or "insurance policy"	"Insurance Policy"	"Insurance"	-1	3	"'An insurance policy? For a million bucks? Maybe that fire last month wasn[']t an accident' [the noun] remarks."
-"carnival"	"Carnival"	"Whidbey"	-1	1	"'[one of]The Whidbey family has owned this carnival since the 1950[']s[or]Mr. Whidbey is the last of his line. He has no one to leave the carnival to[or]This once proud carnival has seen better days[cycling]' says [the noun]."
-"ferris/wheel" or "ferris wheel"	"Ferris Wheel"	"Accidents"	-1	5	"[The noun] remarks, 'The other day, I found a bolt on one of the gondolas so loose it had almost come off. That would have been a tragedy!'"
-"bumper/car/cars" or "bumper cars" or "bumper car"	"Bumper Cars"	"Accidents"	-1	5	"[The noun] says, 'That reminds me. Not long ago, one of the bumper cars was shorting out and electrifying the car. A visitor got hurt. A young lad, what was his name? Fred something, I think.'"
-"fortune/teller/esmeralda/esmerelda" or "fortune teller"	"Esmeralda"	"NA"	-1	0	"'Her fortunes are always crazy accurate. She[']s spooky and so pretty. I wonder if I should ask her out on a date?' [the noun] asks." 
-"carousel"	"Carousel"	"NA"	-1	0	"'The carousel is hard to maintain because of all the animals moving up and down. There[']s a lot of moving parts in that one', says [the noun]."
-"dime/toss/plate" or "dime toss"	"Dime Toss"	"NA"	-1	0	"[The noun] says, 'The problem with that one is that a modern dime weighs 2.268 grams and isn[']t heavy enough to land on the plate. The trick with that one is to find a Mercury dime. It weighs 2.50 grams.'"
-"pitchers/mound/milk/bottles" or "pitchers mound" or "milk bottles"	"Pitcher[']s Mound"	"NA"	-1	0	"[The noun] says 'That[']s a tricky one. You have to aim at just the right bottle. Throw the baseball at bottle 5.'"
-"high/striker/strongman" or "high striker" or "strong man"	"High Striker"	"NA"	-1	0	"'Another rigged game. The mallet isn[']t heavy enough to strike the bell. Find something heavier' says [the noun]."
+"invoices/receipts/paperwork"or "the invoices"	"Invoices"	"Invoices"	-1	1	"[The noun] says, 'Wow! These don[']t look good. Looks like the carnival owes a lot of money! Cash [']N['] Carry provides every day supplies. Why is this overdue? I hope I don[']t lose my job!'"
+"insurance/policy" or "insurance policy"or "the insurance policy"	"Insurance Policy"	"Insurance"	-1	3	"'An insurance policy? For a million bucks? Maybe that fire last month wasn[']t an accident' [the noun] remarks."
+"carnival"	"Carnival" or "the carnival"	"Whidbey"	-1	1	"'[one of]The Whidbey family has owned this carnival since the 1950[']s[or]Mr. Whidbey is the last of his line. He has no one to leave the carnival to[or]This once proud carnival has seen better days[cycling]' says [the noun]."
+"ferris/wheel" or "ferris wheel" or "the ferris wheel"	"Ferris Wheel"	"Accidents"	-1	5	"[The noun] remarks, 'The other day, I found a bolt on one of the gondolas so loose it had almost come off. That would have been a tragedy!'"
+"bumper/car/cars" or "bumper cars" or "bumper car" or "the bumper cars"	"Bumper Cars"	"Accidents"	-1	5	"[The noun] says, 'That reminds me. Not long ago, one of the bumper cars was shorting out and electrifying the car. A visitor got hurt. A young lad, what was his name? Fred something, I think.'"
+"fortune/teller/esmeralda/esmerelda/mysterious" or "fortune teller" or "the fortune teller"	"Esmeralda"	"NA"	-1	0	"'Her fortunes are always crazy accurate. She[']s spooky and so pretty. I wonder if I should ask her out on a date?' [the noun] asks." 
+"carousel/merry/go/round" or "the carousel" or "merry go round" or "the merry go round" or "merry-go-round" or "the merry-go-round"	"Carousel"	"NA"	-1	0	"'The carousel is hard to maintain because of all the animals moving up and down. There[']s a lot of moving parts in that one', says [the noun]."
+"dime/toss/plate" or "dime toss"or "the dime toss"	"Dime Toss"	"NA"	-1	0	"[The noun] says, 'The problem with that one is that a modern dime weighs 2.268 grams and isn[']t heavy enough to land on the plate. The trick with that one is to find a Mercury dime. It weighs 2.50 grams.'"
+"pitchers/mound/milk/bottles" or "pitchers mound" or "milk bottles" or "the pitcher's mound" or "pitchers mound" or "the pitchers mound" or "the milk bottles"	"Pitcher[']s Mound"	"NA"	-1	0	"[The noun] says 'That[']s a tricky one. You have to aim at just the right bottle. Throw the baseball at bottle 5.'"
+"high/striker/strongman" or "high striker" or "strong man" or "the high striker" or "the strong man"	"High Striker"	"NA"	-1	0	"'Another rigged game. The mallet isn[']t heavy enough to strike the bell. Find something heavier' says [the noun]."
 "fuse/fuses/aqua/crimson/emerald/gray/indigo/khaki/magenta/orange/quartz" or "aqua fuse " or "crimson fuse" or "emerald fuse" or "gray fuse" or "indigo fuse" or "khaki fuse" or "magenta fuse" or "orange fuse" or "quartz fuse" 	"Fuses"	"Fuses"	-1	0	"[The noun] says 'Funny thing about that. The fuses that belong in the electrical panels in the electrical area of backstage seem to be missing. Finding them might help with disabling [story title].'"
-"fire"	"The Stake Room Fire"	"Accidents"	-1	3	"'The very real fire in the Stakes Room in [story title] was a scary event. I couldn[']t put it out with a fire extinguisher. We had to wait for the fire department and by then there was a lot of damage done' says [the noun]."
-"accidents/mishaps"	"Accidents"	"Accidents"	-1	3	 "[The noun] says 'The fire, the Ferris wheel, the Bumper Cars... That[']s a lot of suspicious accidents.'"
-"rides/attractions"	"Attractions"	"Accidents"	-1	1	"'Almost every ride is falling apart. I do what I can to keep things in good repair but it[']s a lot of work' says [the noun]."
-"games"	"Carnival Games"	"NA"	-1	0	"'Crooked! Everyone of them. There[']s a secret to each one of them' [the noun] says."
+"fire"or "the fire"	"The Stake Room Fire"	"Accidents"	-1	3	"'The very real fire in the Stakes Room in [story title] was a scary event. I couldn[']t put it out with a fire extinguisher. We had to wait for the fire department and by then there was a lot of damage done' says [the noun]."
+"accidents/mishaps" or "the accidents"	"Accidents"	"Accidents"	-1	3	 "[The noun] says 'The fire, the Ferris wheel, the Bumper Cars... That[']s a lot of suspicious accidents.'"
+"rides/attractions" or "the attractions"	"Attractions"	"Accidents"	-1	1	"'Almost every ride is falling apart. I do what I can to keep things in good repair but it[']s a lot of work' says [the noun]."
+"games/carnival" or "the carnival games"	"Carnival Games"	"NA"	-1	0	"'Crooked! Everyone of them. There[']s a secret to each one of them' [the noun] says."
 
 Section 17 - Table of Janitor Object Responses
 
@@ -4014,22 +4014,22 @@ Section 18 - Table of Owner Conversation Responses
 Table of Owner Conversation Responses
 topic	description (text)	subject (text)	turn stamp (number)	weighting (number)	response (text)
 "hell/ride" or "hell ride"	"Hell Ride"	"NA"	-1	0	"'[story title] is the premier attraction here at  Whidbey Amusements. It[']s both spooky and fun! The visitors love it! The fire last month was unfortunate and expensive' says [the noun]."
-"invoices/receipts/paperwork"	"Invoices"	"Invoices"	-1	3	"[The noun] says, 'I know this doesn[']t look good but the cost of consumables go up every week and attendance is down. I have to pinch pennies somehow, don[']t I? And that fire was very expensive to repair.'"
-"insurance/policy" or "insurance policy"	"Insurance Policy"	"Insurance"	-1	1	"'An insurance policy? Of course, all reputable businesses have insurance. Even small time carnivals' [the noun] stammers."
-"carnival"	"Carnival"	"Whidbey"	-1	1	"'The Whidbey family has owned this carnival since the 1957', [the noun] says. 'Unfortunately, I am an only child and never married. Alas, the carnival will close when I am gone. But for now, it[']s making a comeback!'"
-"ferris/wheel" or "ferris wheel"	"Ferris Wheel"	"NA"	-1	0	"[The noun] says 'The Ferris Wheel is my favorite ride. It[']s always relaxing and romantic.'"
-"bumper/car/cars" or "bumper cars" or "bumper car"	"Bumper Cars"	"Accidents"	-1	3	"'That incident the other week with that Needleman kid was unfortunate' says [the noun]."
-"fortune/teller/esmeralda/esmerelda" or "fortune teller"	"Esmeralda"	"NA"	-1	0	"[The noun] says 'I see her regularly to have my fortune told. We[']re lucky to have her here. She[']s very beautiful. It[']s a wonder she[']s never been married.'"
-"carousel"	"Carousel"	"NA"	-1	0	"'The carousel is just one of the many rides that thrill and delight our visitors every day,' says [the noun]"
-"dime/toss/plate" or "dime toss"	"Dime Toss"	"NA"	-1	0	"'The Dime Toss is is one of the many games that thrill and delight our visitors every day!' says [the noun]."
-"pitchers/mound/milk/bottles" or "pitchers mound" or "milk bottles"	"Pitcher's Mound"	"NA"	-1	0	"'The Pitchers Mound is is one of the many games that thrill and delight our visitors every day!' says [the noun]."
-"high/striker/strongman" or "high striker" or "strong man"	"High Striker"	"NA"	-1	0	"'The High Striker is is one of the many games that thrill and delight our visitors every day!' says [the noun]."
+"invoices/receipts/paperwork" or "the invoices" or "the receipts" or "the paperwork"	"Invoices"	"Invoices"	-1	3	"[The noun] says, 'I know this doesn[']t look good but the cost of consumables go up every week and attendance is down. I have to pinch pennies somehow, don[']t I? And that fire was very expensive to repair.'"
+"insurance/policy" or "insurance policy" or "the insurance policy"	"Insurance Policy"	"Insurance"	-1	1	"'An insurance policy? Of course, all reputable businesses have insurance. Even small time carnivals' [the noun] stammers."
+"carnival" or "the carnival"	"Carnival"	"Whidbey"	-1	1	"'The Whidbey family has owned this carnival since the 1957', [the noun] says. 'Unfortunately, I am an only child and never married. Alas, the carnival will close when I am gone. But for now, it[']s making a comeback!'"
+"ferris/wheel" or "ferris wheel" or "the ferris wheel"	"Ferris Wheel"	"NA"	-1	0	"[The noun] says 'The Ferris Wheel is my favorite ride. It[']s always relaxing and romantic.'"
+"bumper/car/cars" or "bumper cars" or "bumper car" or "the bumper cars" or "the bumper car"	"Bumper Cars"	"Accidents"	-1	3	"'That incident the other week with that Needleman kid was unfortunate' says [the noun]."
+"fortune/teller/esmeralda/esmerelda/mysterious" or "fortune teller" or "the fortune teller" or "esmeralda the mysterious"	"Esmeralda"	"NA"	-1	0	"[The noun] says 'I see her regularly to have my fortune told. We[']re lucky to have her here. She[']s very beautiful. It[']s a wonder she[']s never been married.'"
+"carousel/merry/go/round/merry-go-round" or "the carousel" or "the merry-go-round" or "the merry go round"	"Carousel"	"NA"	-1	0	"'The carousel is just one of the many rides that thrill and delight our visitors every day,' says [the noun]"
+"dime/toss/plate" or "dime toss" or "the dime toss"  or "the plate"	"Dime Toss"	"NA"	-1	0	"'The Dime Toss is is one of the many games that thrill and delight our visitors every day!' says [the noun]."
+"pitchers/mound/milk/bottles" or "pitchers mound" or "milk bottles" or "pitcher's mound" or "the pitchers mound" or "the milk bottles" or "the pitcher's mound"	"Pitcher's Mound"	"NA"	-1	0	"'The Pitchers Mound is is one of the many games that thrill and delight our visitors every day!' says [the noun]."
+"high/striker/strongman" or "high striker" or "strong man" or "the high striker" or "the strongman" or "the strong man"	"High Striker"	"NA"	-1	0	"'The High Striker is is one of the many games that thrill and delight our visitors every day!' says [the noun]."
 "fuse/fuses/aqua/crimson/emerald/gray/khaki/magenta/orange/quartz" or "aqua fuse " or "crimson fuse" or "emerald fuse" or "gray fuse" or "khaki fuse" or "magenta fuse" or "orange fuse" or "quartz fuse" 	"Fuses"	"NA"	-1	0	"'I know nothing about fuses', [the noun] says."
-"indigo" or "indigo fuse" 	"The Indigo Fuse"	"Fuses"	-1	5	"'Where did you get that?' [the noun] asks."
-"fire"	"The Stake Room Fire"	"Accidents"	-1	5	"The fire was most unfortunate. It put [story title] out of commission for two weeks. Not only did it cost me $22,500 to repair but I lost revenue while it was closed."
-"accidents/mishaps"	"Accidents"	"Accidents"	-1	1	"[The noun] says, 'Oh, that[']s nothing to worry about. Little things happen all the time, right?'"
-"pliers"	"The Pliers"	"Accidents"	-1	3	"'Oh! I thought I lost... um, those belong to the janitor. Where did you find them?' asks [the noun]."
-"cashier's/check/fred/needleman" or "fred needleman"	"Fred Needleman"	"Insurance"	-1	3	"[The noun] says 'Uh, Fred is a special... contractor... We paid him. For services rendered.'"
+"indigo" or "indigo fuse" or "the indigo fuse" 	"The Indigo Fuse"	"Fuses"	-1	5	"'Where did you get that?' [the noun] asks."
+"fire" or "the fire"	"The Stake Room Fire"	"Accidents"	-1	5	"The fire was most unfortunate. It put [story title] out of commission for two weeks. Not only did it cost me $22,500 to repair but I lost revenue while it was closed."
+"accidents/mishaps" or "the accidents"	"Accidents"	"Accidents"	-1	1	"[The noun] says, 'Oh, that[']s nothing to worry about. Little things happen all the time, right?'"
+"pliers"or "the pliers"	"The Pliers"	"Accidents"	-1	3	"'Oh! I thought I lost... um, those belong to the janitor. Where did you find them?' asks [the noun]."
+"cashier's/check/fred/needleman" or "fred needleman" or "the check" or "the cashier's check"	"Fred Needleman"	"Insurance"	-1	3	"[The noun] says 'Uh, Fred is a special... contractor... We paid him. For services rendered.'"
 "services/rendered/special" or "services rendered"	"Services Rendered"	"Insurance"	-1	1	"'Fred did some work over at the bumper cars' says [the noun]."
 
 Section 19 - Table of Owner Object Responses
