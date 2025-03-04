@@ -2,7 +2,7 @@ Start of a transcript of:
 
 Hell Ride
 The ride of a lifetime... by No Shoes
-Release 202 / Serial number 250223 / Inform 7 v10.1.2 / D
+Release 202 / Serial number 250304 / Inform 7 v10.1.2 / D
 Inform 7 v10.1.2
 Identification number: //E0A5AFB9-18BF-4485-B083-426CA51CCE70//
 Interpreter version 0.6.0 / VM 3.1.3
@@ -16,7 +16,7 @@ The lot stretches across an open field, gravel crunching under the tires of arri
 
 Cars park haphazardly, guided by makeshift signs and fluttering flags. Families and visitors mingle, some lingering in vehicles, preparing for the chilly evening ahead. Shadows from encroaching trees are pierced by the occasional flash of a flashlight. At the entrance, an attendant collects fees in a weathered booth, making change from a cash box.
 
-Puddles from recent rain shimmer under the lights, while patches of mud cling to shoes. In the distance, RVs and trailers sit quietly, their occupants watching the Ferris wheel turn against the evening sky. The lot serves as a boundary, marking the transition between the mundane and the magical world inside the carnival.
+Puddles from recent rain shimmer under the lights, while patches of mud cling to shoes. In the distance, RVs and trailers sit quietly, their occupants watching the Ferris wheel turn against the evening sky. The lot serves as a transition between the mundane and the magical world inside the carnival.
 
 The midway is to the south. There is a blueberry bush here. There are blueberries on the bush.
 
@@ -162,11 +162,11 @@ If you left now you would just end up in a bar, crying over a beer about your fi
 >s
 
 Ticket Booth
-The ticket kiosk stands at the entrance, painted in bright red and yellow stripes, with flickering lights to draw attention. A grinning cashier hands out tickets, while the cash drawer jingles. A digital payment system sits unused in the corner. Too bad you don't have a debit card.
+Painted in bright red and yellow stripes, the ticket kiosk stands at the entrance with flickering lights to draw attention. A smiling cashier hands out tickets, while the cash drawer jingles. A digital payment system sits in the corner. Too bad you don't have a debit card.
 
-To the right, a signboard displays ticket prices alongside illustrations of the rides. Pennant flags flutter, adding to the festive atmosphere. The air is filled with the scent of popcorn, pretzels, and grease.
+To the right, a signboard displays ticket prices alongside illustrations of the rides. Pennant flags flutter and the air is filled with the scent of popcorn, pretzels, and grease.
 
-The ground is worn from the steps of families, couples, and friends, eagerly waiting in line, excitement building as they approach the carnival.
+The ground is worn from the steps of carnival goers eagerly waiting in line as they approach the midway.
 
 The midway continues in all directions from here. There is a cashier here. A price list for attraction tickets is on the signboard. The cashier has Hell Ride ticket, Fortune Teller ticket, Ferris Wheel ticket, Bumper Cars ticket, and Carousel ticket.
 
@@ -220,7 +220,7 @@ Families, couples, and friends form a buzzing line, their excitement building as
 >ne
 
 Carousel
-The carousel radiates charm with its brightly painted horses, lights, and cheerful music. The platform features a canopy of swirling colors and decorative mirrors, reflecting the flickering bulbs. Hand-carved animals, including horses, lions, tigers, and sea dragons, circle as the carousel spins. The animals rise and fall gently, adding to the motion's charm. The warm, playful tunes drift across the midway, inviting riders of all ages to enjoy the simple joy of the ride. It's a delightful, nostalgic centerpiece of the carnival.
+The carousel radiates charm with its brightly painted horses, lights, and calliope music. The platform features a canopy of colors and decorative mirrors. Hand-carved animals, including horses, lions, tigers, and sea dragons, circle as the carousel spins. The animals rise and fall gently, adding to the charm. The music rises from the Carousel inviting riders of all ages to enjoy this most basic symbol of the carnival.
 
 The Ticket Kiosk is back to the southwest; the way you came.
 
@@ -232,9 +232,9 @@ You give the Carousel ticket to the Carousel Attendant.
 
 Stepping onto the carousel, you're surrounded by colorful beasts, glittering lights, and carved details. The cheerful calliope music fills the air as you choose your mount - a galloping horse, a snarling lion, or a graceful giraffe. Gripping the pole, you settle into the saddle as the carousel begins to spin.
 
-As it speeds up, the world blurs in a swirl of colors, and the gentle rise and fall mimics a playful gallop. Laughter and chatter mix with the music, creating a nostalgic atmosphere.
+As it speeds up, the world blurs in a swirl of colors, and the gentle rise and fall mimics a playful gallop. Laughter mixes with the music, creating a nostalgic atmosphere.
 
-Each rotation transports you into a whimsical, carefree world. As the ride slows, you step off smiling, the music still echoing in your ears, and return to the bustling carnival.
+As the ride slows, you step off smiling, the music still echoing in your ears, and return to the bustling carnival.
 
 >l at horses
 The horses are mounted on poles which go up and down as the Carousel turns.
@@ -273,11 +273,9 @@ The janitor heads to the Concession Stand.
 >sw
 
 Concession Stand
-The concession stand is a vibrant hub along the midway, with bright red, blue, and yellow stripes. Twinkling lights frame the stand, making it glow amid the carnival's buzz.
+The concession stand is a destination for many along the midway. Twinkling lights frame the stand making it glow amid the carnival's buzz.
 
-Behind the counter, popcorn churns in the machine, candy apples gleam, and cotton candy spins in clouds. Warm pretzels sit under a heat lamp, while sodas chill in a frosted cooler. The counter is cluttered with bags, napkins, and sprinkled cups.
-
-Kids tug at parents, teens share pretzels, and the crowd buzzes with energy. More than just a snack stop, the stand is a sensory delight.
+Behind the counter, popcorn churns in the machine, candy apples gleam, and cotton candy spins in clouds. Warm pretzels sit under a heat lamp, while sodas chill in a frosted cooler. The counter is cluttered with bags, napkins, and sprinkle cups. Kids tug at parents, teens share pretzels, and the crowd buzzes with energy.
 
 There is a menu to the right of the window. You can see the treats inside the stand. There is an exit to the south and northeast. 
 
@@ -364,20 +362,20 @@ The janitor arrives from the Head of the Line.
 >nw
 
 Bumper Cars
-The bumper cars are a lively scene, full of flashing lights and vibrant decorations. The arena is surrounded by padded barriers, ensuring safe collisions. Cars in faded reds, blues, yellows, and greens glide across the slick floor, each equipped with a steering wheel and padded bumper. Riders maneuver their cars with gleeful intensity, creating a cacophony of bumps and laughter. Overhead, electric poles hum with energy. The ride operator ensures both chaos and safety, while onlookers cheer from the sidelines. The bumper cars offer playful competition and nostalgic fun for all. The Ticket Kiosk is southeast of here.
+The bumper cars are a lively scene of  flashing lights and vibrant decorations. The arena is surrounded by padded barriers, ensuring the rider's safety. Cars in faded reds, blues, yellows, and greens glide across the slick floor, each equipped with a steering wheel and padded bumper. Riders maneuver their cars with intensity, creating a din of bumps and laughter. Overhead, electric poles hum with energy. While onlookers cheer from the sidelines, the bumper cars offer playful competition and nostalgic fun for all. The Ticket Kiosk is southeast of here.
 
 You can see a Bumper Cars attendant here.
 
 >l at cars
 (the Bumper Cars)
-The Bumper Cars are small, colorful, electric-powered vehicles equipped with a padded outer rim to absorb impacts, allowing riders to safely bump into each other as part of the game. The ceiling has a conductive surface that powers the cars. Riders are thrilled by chaotic collisions, laughter, and the challenge of maneuvering away from - or into - other drivers.
+The Bumper Cars are small, colorful, electric-powered vehicles equipped with a padded outer rim to absorb impacts. This allows riders to safely bump into each other as part of the game. The ceiling has a conductive surface that powers the cars. Riders enjoy the challenge of maneuvering away from - or into - other drivers.
 
 >l at riders
 Drivers of all ages eagerly maneuver their cars, aiming for others.
 
 >l at bumper
 (the Bumper Cars)
-The Bumper Cars are small, colorful, electric-powered vehicles equipped with a padded outer rim to absorb impacts, allowing riders to safely bump into each other as part of the game. The ceiling has a conductive surface that powers the cars. Riders are thrilled by chaotic collisions, laughter, and the challenge of maneuvering away from - or into - other drivers.
+The Bumper Cars are small, colorful, electric-powered vehicles equipped with a padded outer rim to absorb impacts. This allows riders to safely bump into each other as part of the game. The ceiling has a conductive surface that powers the cars. Riders enjoy the challenge of maneuvering away from - or into - other drivers.
 
 >l at steering wheel
 The steering wheel turns 360 degrees adding to the fun and excitement.
@@ -401,7 +399,7 @@ You can see Mr Whidbey, a Cashier, and a ticket kiosk here.
 >se
 
 Fortune Teller
-Approaching the fortune teller's booth, drawn in by its mysterious allure and inky softness. Draped in deep purple curtains adorned with golden moons and stars, the booth is lit only with the flickering of candles. The air is heavy with the scent of incense, mingling, then overpowering the ever-present sugary odor of treats. A sign sways slightly in the evening breeze
+Approaching the fortune teller's booth, you are drawn in by its mysterious allure and inky softness. Draped in deep purple curtains adorned with golden moons and stars, the booth is lit only with the flickering of candles. The air is heavy with the scent of incense, mingling with and then overpowering the ever-present sugary odor of carnival treats. A sign sways slightly in the evening breeze
 
 You can see Esmeralda the Mysterious here.
 
@@ -418,7 +416,7 @@ The smell of incense wafts through the air mixed with the scent of fresh, butter
 You can hear all the sounds of the carnival. The sounds of a calliope waft across the thoroughfare from the carousel. You can hear the laughter and screams as other patrons ride the rides and play the games.
 
 >l at esmeralda
-The fortune teller sits in a dimly lit booth, draped in rich fabrics of deep purple and gold, adorned with celestial patterns of stars and moons. Her appearance is enigmatic, with piercing eyes that seem to look right through you and a knowing smile that hints at secrets yet untold. She wears flowing robes embellished with shimmering beads, and a jeweled headpiece catches the flickering light of nearby candles.
+The fortune teller sits in a dimly lit booth, draped in rich fabrics of deep purple and gold adorned with celestial patterns of stars and moons. Her appearance is enigmatic, with piercing eyes that seem to look right through you and a knowing smile that hints at secrets yet untold. She wears flowing robes embellished with shimmering beads, and a jeweled headpiece catches the flickering light of nearby candles.
 
 >l at robes
 Esmeralda wears flowing robes embellished with shimmering beads, and a jeweled headpiece.
@@ -436,9 +434,9 @@ Esmeralda says, "Hey! I need those!"
 (the Fortune Teller ticket to Esmeralda the Mysterious)
 You give the Fortune Teller ticket to Esmeralda the Mysterious.
 
-Stepping inside, you're greeted by the Esmeralda, a figure cloaked in flowing robes with a jeweled headpiece catching the flickering light. Her piercing eyes seem to look right through you as they gesture for you to sit at a small round table covered in an ornate cloth. At its center rests a glowing crystal ball, surrounded by tarot cards and mysterious trinkets.
+Stepping inside, you're greeted by the Esmeralda, a figure cloaked in flowing robes with a jeweled headpiece catching the flickering light. Her piercing eyes seem to look right through you as they gesture for you to sit at a small round table. At its center rests a glowing crystal ball, surrounded by tarot cards and mysterious trinkets.
 
-Esmeralda's voice is low and melodic, weaving an air of intrigue as they ask you to focus on a question and offer you a tarot reading. The room seems to shrink, the bustling carnival outside fading into the background as they reveal your fate. Each card turned  feels significant, as though unlocking a secret you didn't know you carried.
+Esmeralda's voice is low and melodic, weaving an air of intrigue as they ask you to focus on a question and offer you a tarot reading. The room seems to shrink, the bustling carnival outside fading into the background as she reveals your fate. Each card turned feels significant, as though unlocking a secret you didn't know you carried.
 
 Past: The High Priestess (reversed)
 High Priestess reversed indicates blocked psychic abilities, and little to no awareness of the subconscious influence on your reality. This reversal suggests a lack of trust in your inner voice and a disconnection from spiritual realms. It may indicate a struggle to access your intuition, leading to confusion and indecision. The reversed High Priestess also urges caution in matters of secrecy and deception. It is important to exercise discernment as there may be hidden agendas or deceitful individuals around. It is crucial for you to seek inner clarity now.
@@ -469,7 +467,7 @@ Lovers reversed indicates a breakup between partners, families or friends. Lover
 
 As the reading concludes, Esmeralda gazes into your eyes with a cryptic smile and delivers their final words of wisdom: "The order of things is important. Alphabetically and numerically; one follows another and provides the link between the two. If you will learn, think on this carefully. Also, don't trust Whidbey. He's up to something."
 
-Whether you leave with a sense of wonder, excitement, or unease, the encounter lingers with you - a touch of magic amid the carnival's chaos, as if you've glimpsed something beyond the ordinary.
+Whether you leave with a sense of wonder or unease, the encounter lingers with you - it's a touch of magic amid the bustling carnival, as if you've glimpsed something beyond the ordinary.
 
 >nw
 
@@ -481,7 +479,7 @@ The janitor heads to the High Striker.
 >e
 
 High Striker
-A tall machine stands with bright red, yellow, and blue lights, a sign at the top reading "Test Your Strength!" The base is dark, polished wood, with a sturdy metal pole and a bell at the top. Markings along the pole indicate strength. A smaller sign says, "Buy a mallet, strike the bell, win a prize." Spectators cheer as the sound of the mallet hitting the target echoes, followed by the clang of the bell and carnival music.
+A tall machine stands with bright red, yellow, and blue lights. A sign sits at the top reading "Test Your Strength!" The base is dark, polished wood, with a sturdy metal pole and a bell at the top. Markings along the pole indicate strength. A smaller sign says, "Buy a mallet, strike the bell, win a prize." Spectators cheer as the sound of the mallet hitting the target fills the night.
 
 The Ticket Kiosk is to the west. Other games are northeast and southeast of here. The Ferris Wheel lies to the east.
 
@@ -492,7 +490,7 @@ The attendant is holding a mallet.
 >e
 
 Ferris Wheel
-The Ferris wheel dominates the carnival, its bright lights and rotations visible from every corner. Its massive steel frame arches high, with colorful gondolas swaying as it turns. At night, the wheel dazzles with synchronized lights, flashing in bursts of red, green, and white. The air buzzes with chatter, laughter, and the hum of the motor. The operator calls, "Step right up! The best view of the carnival awaits!" From its peak, riders get a panoramic view of the fairgrounds, with city lights stretching to the horizon. The Ferris wheel offers a magical experience for all.
+The Ferris wheel dominates the carnival, its bright lights visible from every corner. Its massive steel frame arches high, with colorful gondolas swaying as it turns. At night, flashing in bursts of red, green, and white, the wheel dazzles with lights. The air buzzes with the hum of the motor. The operator calls, "Step right up! The best view of the carnival awaits!" From the top, riders get a panoramic view of the fairgrounds, with city lights stretching to the horizon
 
 Hey! Is that a two dollar bill on the ground?
 
@@ -504,7 +502,7 @@ Over the loud speaker, an announcement blares: Attention please. There is a vehi
 (the Ferris Wheel ticket to the Ferris Wheel Attendant)
 You give the Ferris Wheel ticket to the Ferris Wheel Attendant.
 
-As you enter the gondola, the safety bar clicks into place, and the Ferris wheel begins its slow ascent. The sounds of the carnival fade, replaced by the hum of machinery and a soft breeze. At the peak, the carnival sprawls below, its lights twinkling against the twilight sky. The world falls quiet, and the horizon stretches endlessly. The gondola sways gently, adding excitement to the serene view. From the top you can see something to the west of the Concession Stand. As you descend, the lively sounds of the carnival return, bringing you back to the action. The Ferris wheel offers a unique, unforgettable perspective of the carnival.
+As you enter the gondola, the safety bar clicks into place, and the Ferris wheel begins its ascent. The sounds of the carnival fade, replaced by the hum of machinery and a soft breeze. At the peak, the carnival sprawls below, its lights twinkling against the twilight sky. The world falls quiet up here. The gondola sways gently, adding excitement to the serene view. From the top you can see something to the west of the concession stand. As you descend, the sounds of the carnival return, bringing you back to the fun.
 
 >l at beams
 The Ferris wheel towers above the carnival and is illuminated with vibrant lights, creating a dazzling display. As the wheel turns slowly, the gondolas remain upright, offering riders a thrilling yet gentle experience and spectacular views from the top.
@@ -542,7 +540,7 @@ The attendant is holding a mallet.
 
 >l
 High Striker
-A tall machine stands with bright red, yellow, and blue lights, a sign at the top reading "Test Your Strength!" The base is dark, polished wood, with a sturdy metal pole and a bell at the top. Markings along the pole indicate strength. A smaller sign says, "Buy a mallet, strike the bell, win a prize." Spectators cheer as the sound of the mallet hitting the target echoes, followed by the clang of the bell and carnival music.
+A tall machine stands with bright red, yellow, and blue lights. A sign sits at the top reading "Test Your Strength!" The base is dark, polished wood, with a sturdy metal pole and a bell at the top. Markings along the pole indicate strength. A smaller sign says, "Buy a mallet, strike the bell, win a prize." Spectators cheer as the sound of the mallet hitting the target fills the night.
 
 The Ticket Kiosk is to the west. Other games are northeast and southeast of here. The Ferris Wheel lies to the east.
 
@@ -602,7 +600,7 @@ You lift the mallet high and bring it down on the lever with all your might! The
 >se
 
 Pitchers Mound
-The milk bottle toss is a classic game of skill and luck. A pyramid of colorful bottles sits on a sturdy platform - three on the bottom, two in the middle, and one at the top. Players throw baseballs to knock down the stack and win a prize. The booth is lively, with cheering and the clatter of falling bottles. The attendant calls, "Step right up! Three balls for a dime!" Prizes from toys to stuffed animals hang nearby, adding to the excitement. A carnival favorite, every toss is filled with suspense and joy.  You thought you caught a flash of something coming from the area of the booth.
+The milk bottle toss is a classic game of skill and luck. A pyramid of colorful bottles sits on a sturdy platform - three on the bottom, two in the middle, and one at the top. Players throw baseballs to knock down the stack and win a prize. The booth is lively, with cheering and the clatter of falling bottles. The attendant calls, "Step right up! Three balls for a dime!" Prizes from toys to stuffed animals hang nearby. With this carnival favorite, every toss is filled with suspense.  You thought you caught a flash of something coming from the area of the booth.
 
 You're surprised to see that this game only costs a dime. The High Striker is to the northwest.
 
@@ -616,7 +614,7 @@ The milk bottles are stacked in three neat rows: three bottles on the bottom, tw
 You can also see a Pitchers Mound attendant and some Pitchers Mound prizes here.
 
 >l at booth
-The booth buzzes with energy, its colorful banners and flashing lights drawing a lively crowd.  You can see something shiny on the ground under the booth..
+With its colorful banners and flashing lights, the booth buzzes with energy, drawing a crowd.  You can see something shiny on the ground under the booth..
 
 >l under booth
 You find the Mercury dime!
@@ -887,7 +885,7 @@ Isn't this why I buy insurance? Don't worry. You'll get your piece. Everyone wil
 >n
 You're afraid if you move too much, Mr Whidbey will notice you!
 
-Mr. Whidbey says "I need that money in a hurry though before anyone gets suspicious. If anything happens then you're going down too."
+Mr. Whidbey says "I need that money in a hurry though before anyone gets suspicious. If anything happens then you'll go down too."
 
 >z
 Time passes.
@@ -900,11 +898,9 @@ Time passes.
 "Hey! What are you doing here? This is area is for employees only," Mr. Whidbey shouts at you. "Get out of here. Now!"
 
 Concession Stand
-The concession stand is a vibrant hub along the midway, with bright red, blue, and yellow stripes. Twinkling lights frame the stand, making it glow amid the carnival's buzz.
+The concession stand is a destination for many along the midway. Twinkling lights frame the stand making it glow amid the carnival's buzz.
 
-Behind the counter, popcorn churns in the machine, candy apples gleam, and cotton candy spins in clouds. Warm pretzels sit under a heat lamp, while sodas chill in a frosted cooler. The counter is cluttered with bags, napkins, and sprinkled cups.
-
-Kids tug at parents, teens share pretzels, and the crowd buzzes with energy. More than just a snack stop, the stand is a sensory delight.
+Behind the counter, popcorn churns in the machine, candy apples gleam, and cotton candy spins in clouds. Warm pretzels sit under a heat lamp, while sodas chill in a frosted cooler. The counter is cluttered with bags, napkins, and sprinkle cups. Kids tug at parents, teens share pretzels, and the crowd buzzes with energy.
 
 There is a menu to the right of the window. You can see the treats inside the stand. There is an exit to the south and northeast. 
 
@@ -963,11 +959,9 @@ You open the filing cabinet, revealing an envelope, a Cash 'N' Carry invoice, a 
 Mr Whidbey shouts, "Hey! Get out of here! Can't you read the sign? Employees only!"
 
 Concession Stand
-The concession stand is a vibrant hub along the midway, with bright red, blue, and yellow stripes. Twinkling lights frame the stand, making it glow amid the carnival's buzz.
+The concession stand is a destination for many along the midway. Twinkling lights frame the stand making it glow amid the carnival's buzz.
 
-Behind the counter, popcorn churns in the machine, candy apples gleam, and cotton candy spins in clouds. Warm pretzels sit under a heat lamp, while sodas chill in a frosted cooler. The counter is cluttered with bags, napkins, and sprinkled cups.
-
-Kids tug at parents, teens share pretzels, and the crowd buzzes with energy. More than just a snack stop, the stand is a sensory delight.
+Behind the counter, popcorn churns in the machine, candy apples gleam, and cotton candy spins in clouds. Warm pretzels sit under a heat lamp, while sodas chill in a frosted cooler. The counter is cluttered with bags, napkins, and sprinkle cups. Kids tug at parents, teens share pretzels, and the crowd buzzes with energy.
 
 There is a menu to the right of the window. You can see the treats inside the stand. There is an exit to the south and northeast. 
 
@@ -995,11 +989,9 @@ You can also see Mr Whidbey, a safe (empty), a filing cabinet (in which are an e
 Mr Whidbey shouts, "Hey! Get out of here! Can't you read the sign? Employees only!"
 
 Concession Stand
-The concession stand is a vibrant hub along the midway, with bright red, blue, and yellow stripes. Twinkling lights frame the stand, making it glow amid the carnival's buzz.
+The concession stand is a destination for many along the midway. Twinkling lights frame the stand making it glow amid the carnival's buzz.
 
-Behind the counter, popcorn churns in the machine, candy apples gleam, and cotton candy spins in clouds. Warm pretzels sit under a heat lamp, while sodas chill in a frosted cooler. The counter is cluttered with bags, napkins, and sprinkled cups.
-
-Kids tug at parents, teens share pretzels, and the crowd buzzes with energy. More than just a snack stop, the stand is a sensory delight.
+Behind the counter, popcorn churns in the machine, candy apples gleam, and cotton candy spins in clouds. Warm pretzels sit under a heat lamp, while sodas chill in a frosted cooler. The counter is cluttered with bags, napkins, and sprinkle cups. Kids tug at parents, teens share pretzels, and the crowd buzzes with energy.
 
 There is a menu to the right of the window. You can see the treats inside the stand. There is an exit to the south and northeast. 
 
@@ -1192,12 +1184,12 @@ The sign reads, "Little Egypt Show - Dime Admission". Underneath it says "The sh
 
 >give dime to barker
 (first taking the dime)
-You hand over a dime, and the barker nods, waving you through. As you step past the entrance, the air feels thicker and the sounds of the carnival fade away. You've entered an entirely different world now. Before you, there is a tent. Intrigued, you take your first step into the Little Egypt Show. You can now head west into the show.
+You hand over a dime, and the barker nods, waving you through. As you step up to the entrance, the air feels thicker and the sounds of the carnival fade away. You've entered an entirely different world now. Before you, there is a tent. Intrigued, you take your first step towards the Little Egypt Show. You can now head west into the show.
 
 >w
 
 Show Tent
-You are inside the Little Egypt Show. The attraction's facade is to the East. There are folding chairs standing vigil in neat in rows. The show should start soon.
+You are inside the Little Egypt Show. The attraction's facade is to the east. There are folding chairs standing vigil in neat in rows. The show should start soon.
 
 >sit in chair
 You get onto the folding chair.
@@ -1225,17 +1217,17 @@ This is a highly polished brass lantern.
 
 It is currently switched off.
 
-The tent is dimly lit, the stage is fully decorated an emulation of some exotic Middle Eastern palace, featuring rich, colorful fabrics, brass ornaments, and lanterns casting a warm, flickering glow. Heady incense wafting through the air, softening everything around the edges, enhancing the mystique. The backdrop displays painted scenes of pyramids, desert landscapes, and  domed structures. The colorful onion topped buildings and jewel tones set to the sepia drenched landscape have you transported far away.
+The tent is dimly lit, the stage is a fully decorated representation of some Middle Eastern palace, featuring rich, colorful fabrics, brass ornaments, and lanterns casting a warm, flickering glow. Heady incense wafts through the air, softening everything around the edges. Enhancing the mystique, the backdrop displays painted scenes of pyramids, desert landscapes, and  domed structures. The colorful onion topped buildings and jewel tones set to the sepia colored landscape have you transported far away.
 
 >get lantern
 You're much too entranced by the show to do anything other than watch the show. You are riveted!
 
-Little Egypt emerges, draped in flowing silken veils. Skillfully she twirls and undulates, using them as part of the dance. A sparkling, sequined bodice opens into a gauze skirt, adorned with jingling coin belts and jewelry that accentuate her dance.
+Little Egypt emerges, draped in flowing silken veils. Skillfully she twirls using them as part of the dance. A sparkling, sequined bodice opens into a gauze skirt, adorned with jingling coin belts and jewelry that accentuate her dance.
 
 >turn it on
 You're much too entranced by the show to do anything other than watch the show. You are riveted!
 
-The performance begins with slow, undulating movements, drawing you into the rhythm of the music. Traditional instruments like the oud, darbuka, or zurna an accompanying chorus. As the tempo builds, her hips, torso, and hands twisting in an intricate, mesmerizing pattern. Little Egypt demonstrates remarkable control and fluidity. She dramatically spins, drops, and shimmies, often punctuating the beat with a quick jingle of her coin belt.
+The performance begins with slow, undulating movements, drawing you into the rhythm of the music. Traditional instruments like the oud, darbuka, or zurna are an accompanying chorus. As the tempo builds, her hips, torso, and hands twist in an intricate and mesmerizing pattern. Little Egypt demonstrates remarkable control and fluidity. She dramatically spins, drops, and shimmies, often punctuating the beat with a quick jingle of her coin belt.
 
 >l at backdrop
 Elegantly painted on linen, the backdrop shows scenes of Middle Eastern life.
@@ -1245,7 +1237,7 @@ Little Egypt makes eye contact with you and smiles enigmatically. In her perform
 >look at veils
 Little Egypt is a beautiful woman who is draped in flowing silk veils which she skillfully uses as part of the dance. Her attire consists of a sparkling, sequined bodice and a flowing skirt, adorned with jingling coin belts and jewelry that accentuate her movements.
 
-The music oscillates between hauntingly slow melodies and rapid, energetic drum beats, an emotional arc that leaves you entranced. Little Egypt relies on the music's dynamic changes to tell a story with movements reflecting joy, sorrow, seduction, and celebration.
+The music oscillates between hauntingly slow melodies and rapid, energetic drum beats, a roller coaster of emotion that leaves you entranced. Little Egypt relies on the music's dynamic changes to tell a story with movements reflecting joy, sorrow, seduction, and celebration.
 
 >l at scenes
 The canvas displays painted scenes of pyramids, desert landscapes, and domed structures .
@@ -1291,17 +1283,17 @@ Elegantly painted on linen, the backdrop shows scenes of Middle Eastern life.
 >l at backdrop
 Elegantly painted on linen, the backdrop shows scenes of Middle Eastern life.
 
-The tent is dimly lit, the stage is fully decorated an emulation of some exotic Middle Eastern palace, featuring rich, colorful fabrics, brass ornaments, and lanterns casting a warm, flickering glow. Heady incense wafting through the air, softening everything around the edges, enhancing the mystique. The backdrop displays painted scenes of pyramids, desert landscapes, and  domed structures. The colorful onion topped buildings and jewel tones set to the sepia drenched landscape have you transported far away.
+The tent is dimly lit, the stage is a fully decorated representation of some Middle Eastern palace, featuring rich, colorful fabrics, brass ornaments, and lanterns casting a warm, flickering glow. Heady incense wafts through the air, softening everything around the edges. Enhancing the mystique, the backdrop displays painted scenes of pyramids, desert landscapes, and  domed structures. The colorful onion topped buildings and jewel tones set to the sepia colored landscape have you transported far away.
 
 >l at cymbals
 The cymbals are placed on the thumb and index finger of each hand. Tapping them together produces a ringing sound.
 
-Little Egypt emerges, draped in flowing silken veils. Skillfully she twirls and undulates, using them as part of the dance. A sparkling, sequined bodice opens into a gauze skirt, adorned with jingling coin belts and jewelry that accentuate her dance.
+Little Egypt emerges, draped in flowing silken veils. Skillfully she twirls using them as part of the dance. A sparkling, sequined bodice opens into a gauze skirt, adorned with jingling coin belts and jewelry that accentuate her dance.
 
 >l at sword
-This is a beautiful steel sword with a filigreed handle and blade.
+This is a beautiful silver sword with a filigreed handle and blade.
 
-The performance begins with slow, undulating movements, drawing you into the rhythm of the music. Traditional instruments like the oud, darbuka, or zurna an accompanying chorus. As the tempo builds, her hips, torso, and hands twisting in an intricate, mesmerizing pattern. Little Egypt demonstrates remarkable control and fluidity. She dramatically spins, drops, and shimmies, often punctuating the beat with a quick jingle of her coin belt.
+The performance begins with slow, undulating movements, drawing you into the rhythm of the music. Traditional instruments like the oud, darbuka, or zurna are an accompanying chorus. As the tempo builds, her hips, torso, and hands twist in an intricate and mesmerizing pattern. Little Egypt demonstrates remarkable control and fluidity. She dramatically spins, drops, and shimmies, often punctuating the beat with a quick jingle of her coin belt.
 
 >l at wall
 You see nothing special about the wall.
@@ -1311,7 +1303,7 @@ Little Egypt makes eye contact with you and smiles enigmatically. In her perform
 >l at instruments
 The musical instrument is of traditional Middle Eastern origins.
 
-The music oscillates between hauntingly slow melodies and rapid, energetic drum beats, an emotional arc that leaves you entranced. Little Egypt relies on the music's dynamic changes to tell a story with movements reflecting joy, sorrow, seduction, and celebration.
+The music oscillates between hauntingly slow melodies and rapid, energetic drum beats, a roller coaster of emotion that leaves you entranced. Little Egypt relies on the music's dynamic changes to tell a story with movements reflecting joy, sorrow, seduction, and celebration.
 
 >z
 Time passes.
@@ -1460,9 +1452,9 @@ That seems to belong to the Hell Ride Attendant.
 >s
 
 Ride Entrance
-The cars for Hell Ride stop here, and you board as the safety bar clicks into place. Ahead, the grotesque entrance looms-a twisted metal archway adorned with spikes, skulls, and flickering blood-red lights. A faint sulfuric smell mixes with the scent of popcorn.
+The cars for Hell Ride stop here, and the safety bar clicks into place as riders board the cars. Ahead, the grotesque entrance looms-a twisted metal archway adorned with spikes, skulls, and flickering blood-red lights. A faint sulfuric smell mixes with the scent of popcorn.
 
-The "HELL RIDE" sign pulses above the door, while demon statues with clawed hands seem to beckon. The entrance is shrouded in darkness, broken only by eerie green flashes, revealing twisted paths. Faint whispers and distant organ music grow louder, mixing with unsettling noises. To one side, the darkness looks a little bit darker than the rest of the room.
+The "HELL RIDE" sign pulses above the door, while demon statues with clawed hands seem to beckon. The entrance is shrouded in darkness, broken only by eerie green flashes that reveal twisted paths. Faint whispers and distant organ music grow louder. To one side, the darkness looks a little bit darker than the rest of the room.
 
 You can see a Hell Ride car (empty) here.
 
@@ -1597,7 +1589,7 @@ These are some massive dust bunnies. Be careful, I've heard they bite.
 >s
 
 Maintenance Office
-The maintenance office is a dim, cluttered space, filled with the smells of grease, sweat, and popcorn. Shelves are lined with disorganized tools and parts, while paint cans and grease jars clutter the workbenches. A battered desk holds wires, gears, and springs, with a bent piece of metal in a vise.
+The maintenance office is a dim, cluttered space, filled with the smells of grease, sweat, and popcorn. Disorganized shelves are lined with tools and parts, while paint cans and grease jars clutter the workbenches. A battered desk holds wires, gears, and springs, with a bent piece of metal in a vise.
 
 A flickering fluorescent light barely brightens the room. In one corner, a disassembled ride mechanism hangs with chains and pulleys. A greasy manual and a half-empty coffee mug sit on a nearby stool.
 
@@ -1663,7 +1655,7 @@ You sing along to R.E.M.'s "Losing My Religion".
 
 >look
 Maintenance Office
-The maintenance office is a dim, cluttered space, filled with the smells of grease, sweat, and popcorn. Shelves are lined with disorganized tools and parts, while paint cans and grease jars clutter the workbenches. A battered desk holds wires, gears, and springs, with a bent piece of metal in a vise.
+The maintenance office is a dim, cluttered space, filled with the smells of grease, sweat, and popcorn. Disorganized shelves are lined with tools and parts, while paint cans and grease jars clutter the workbenches. A battered desk holds wires, gears, and springs, with a bent piece of metal in a vise.
 
 A flickering fluorescent light barely brightens the room. In one corner, a disassembled ride mechanism hangs with chains and pulleys. A greasy manual and a half-empty coffee mug sit on a nearby stool.
 
@@ -1727,15 +1719,13 @@ Nearby a metal door leads west.
 (with the brass key)
 
 Control Room
-The backstage control room is a functional space with gray, scuffed walls. A large monitor shows live feeds while control panels with dials, buttons, and lights manage the rides and systems. Some panels remain oddly dark.
+The backstage control room is a functional space with gray, scuffed walls. A large monitor shows live feeds while control panels with dials, buttons, and lights manage the rides and systems. The panels remain oddly dark.
 
 The hum of electronics is interrupted by a crackling radio: "Maintenance to Bumper Cars - wrench needed!" Papers, tools, and coffee cups clutter the floor. A desk holds logs and schedules, and a corkboard displays charts and red-marked notes, including one that says "Check Zipper circuit breakers."
 
 A single light casts harsh shadows, and the air smells of lubricant and burnt wires, mingling with dampness. The room is hidden but vital, keeping the carnival running. On one wall, a switch sparks with blue and white arcs.
 
 On one wall is a large switch with sparks arcing out from it.
-
-A dark hallway lies to the east.
 
 Nearby a metal door leads east to Dark Hallway.
 
@@ -1795,7 +1785,7 @@ This is a photo of the carnival in its heyday! A ragtag bunch of people are feat
 Crawl Space
 The crawl space beneath the ride is cramped and dark, filled with the hum of machinery above. The air is thick with oil and rust. Sounds echo-groaning steel, clanking chains, and the rhythmic thrum of motors.
 
-The ground is uneven, a mix of dirt, gravel, and scattered tools. Pipes overhead are wrapped in fraying insulation, crackling as you move. Small puddles of murky water collect in dips, rippling with the ride's vibrations.
+The ground is uneven, a mix of dirt, gravel, and scattered tools. Pipes overhead are wrapped in fraying insulation, crackling as you move. Small puddles of murky water collect.
 
 The backstage area continues north and south.
 
@@ -1828,11 +1818,11 @@ You move gingerly to avoid the puddles. It's much more pleasant to be dry.
 >s
 
 Mechanical Room North
-The north mechanical room is compact, housing auxiliary systems for the ride. A soft hum of capacitors and relays fills the space, interrupted only by occasional hissing hydraulic fluid.
+The north mechanical room is compact, housing auxiliary systems for the ride. A soft hum of capacitors and relays fills the space, interrupted only by the occasional hissing of hydraulic fluid.
 
-Circuit breaker panels line the walls, labeled for different functions. Cables and conduits connect the systems to the main hub. A hydraulic pump in the corner manages lifting arms and platforms, with flickering gauges.
+Circuit breaker panels line the walls, labeled for different functions. Cables and conduits connect the systems to the main hub. Flickering with gauges, a hydraulic pump in the corner manages lifting arms and platforms.
 
-A small workbench is cluttered with parts, while shelves above hold spare parts like cables and hydraulic tubing. A faded ride diagram with red annotations is pinned nearby. Dimly lit, the room feels cool and damp, essential to the ride's operation.
+A small workbench is cluttered with parts, while shelves above hold spare parts like cables and hydraulic tubing. A faded ride diagram with red annotations is pinned nearby. Dimly lit, the room feels cool and damp.
 
 There are exists north and south.
 
@@ -2090,9 +2080,12 @@ Taken.
 (first taking the Bumper Cars ticket)
 You give the Bumper Cars ticket to the Bumper Cars attendant.
 
-You hand your ticket to the attendant and slide into the bucket seat, gripping the wheel as the arena comes alive with flashing lights, laughter, and the hum of electric currents. Riders lock eyes, eager for the chaos to begin.
+You hand your ticket to the attendant and slide into the bucket seat, gripping the wheel as the arena comes alive with flashing lights and the hum of electric currents. Riders lock eyes, eager for the ride to begin.
 
-The car jolts forward, and you steer into the fray. A sudden crash spins you around, but you recover and aim for a friend. Each collision is met with laughs, and the padded bumpers make the impact thrilling yet safe. You dodge, swerve, and plot your next move in the chaos. 
+The car jolts forward, and you steer into the fray. A sudden crash spins you around, but you recover and aim for a friend. Each collision is met with laughs as you dodge, swerve, and plot your next move in the chaos.
+
+You find yourself giddy as you exit the ride.
+
 >i
 You are carrying:
   a gray colored fuse
@@ -2212,7 +2205,7 @@ You can also see a grate (in which is a parking ticket) here.
 Generator Room
 The generator room is small, with concrete walls stained by oil and grime. The air smells of diesel, metal, and damp earth.
 
-The main generator hums, connected by thick cables to circuit breakers and a cluttered panel with switches and gauges. A flickering display shows power levels. The cracked floor is littered with puddles. Shelves hold spare parts and manuals, and a workbench sits next to a grease canister. A faintly whirring fan and diesel canisters add to the atmosphere.
+The main generator hums, connected by thick cables to circuit breakers and a cluttered panel with switches and gauges. A flickering display shows power levels. The cracked floor is littered with puddles. Shelves hold spare parts and manuals, and a workbench sits next to a grease canister.
 
 The room is the carnival's power source, hidden but essential.
 
@@ -2313,7 +2306,7 @@ These are various tools you might use to repair electrical equipment.
 >s
 
 Storage Room
-TThe storage room is cramped and hidden, with rusted walls and peeling wood. The air smells of dust, damp canvas, and stale popcorn.
+The storage room is cramped and hidden, with rusted walls and peeling wood. The air smells of dust, damp canvas, and stale popcorn.
 
 Shelves are packed with light bulbs, wire, and old ride parts. Flags, lights, and crates of toys clutter the space. In one corner, tarps and tent poles are stacked.
 
@@ -2482,7 +2475,7 @@ The public square hums with tension under gray skies. A wooden platform stands a
 
 A lone figure, hands bound and head bowed, stands on the scaffold. Their tattered clothes reveal a once-gilded past.
 
-The crowd jeers, some grimly silent, while children watch wide-eyed. The town crier proclaims, "High treason against the crown!"
+The crowd jeers while children watch wide-eyed. The town crier proclaims, "High treason against the crown!"
 
 The condemned remains silent as the executioner, robed in black, stands beside the guillotine. The blade gleams in the dim light. The crowd's murmurs die, replaced by silence.
 
@@ -2543,7 +2536,7 @@ The dungeon is dark and damp, the air thick with sweat, blood, and mildew. Lante
 
 Chains rattle, mixed with distant moans and screams. Water drips from a cracked ceiling, pooling on the blood-dark floor.
 
-Instruments of torture clutter the room: a broken rack, a brazier with bloodstained tools, and a spiked chair. Prisoners endure, bound or writhing in agony.
+Instruments of torture clutter the room: a broken rack, a brazier with bloodstained tools, and a spiked chair. Prisoners endure all these things, bound or writhing in agony.
 
 The torturer moves with cold precision, ignoring the suffering. Above, rats scurry in the shadows, and the heavy, oppressive air thickens with despair.
 
@@ -2595,9 +2588,9 @@ You see rats scurry in all directions fleeing from the light cast by you.
 Stake Room
 The public square is silent, broken only by crackling flames. At its center, three women are bound to wooden stakes, their faces showing defiance, resignation, and terror.
 
-A crowd watches, some jeering, others praying or looking away. The executioner steps forward, torch in hand, igniting the pyre. Flames roar as the women cry out, their voices lost in the heat.
+A crowd watches, some jeering, others praying or looking away. Torch in hand, the executioner steps forward igniting the pyre. Flames roar as the women cry out, their voices lost in the heat.
 
-Gray clouds loom above as a raven caws. Church bells toll, marking the tragedy. Some onlookers stay, others quietly leave, the square heavy with smoke and ash.
+Gray clouds loom above as a raven caws. Church bells toll, marking the tragedy. Some onlookers stay, others quietly leave.
 
 Nearby an emerald colored door leads east to the Mechanical Room North.
 
@@ -2652,9 +2645,9 @@ The executioner carries the torch to light the pyre.
 >n
 
 Gallows Room
-The public square, wet from morning drizzle, lies under a dark sky. At its center, the gallows loom, ropes swaying. The crowd stands in silence, their eyes fixed on the scene.
+The public square, wet from morning drizzle, lies under a dark sky. At its center, the gallows loom, ropes swaying. Their eyes fixed on the scene, the crowd stands in silence.
 
-A hooded executioner, cold and focused, adjusts the noose. The condemned man, pale and bound, trembles, his eyes darting around the crowd. Sweat and rain mix on his face as he breathes shallowly.
+A hooded executioner, cold and focused, adjusts the noose. Pale and bound, the condemned man trembles as his eyes dart around the crowd. Sweat and rain mix on his face as he breathes shallowly.
 
 Vendors shout, children push forward, and an old man whispers prayers. Above, the bell tolls, marking the man's final moments. A raven watches from the gallows beam. The air is heavy as distant thunder rumbles.
 
@@ -2737,9 +2730,9 @@ You are carrying:
 
 >l
 Gallows Room
-The public square, wet from morning drizzle, lies under a dark sky. At its center, the gallows loom, ropes swaying. The crowd stands in silence, their eyes fixed on the scene.
+The public square, wet from morning drizzle, lies under a dark sky. At its center, the gallows loom, ropes swaying. Their eyes fixed on the scene, the crowd stands in silence.
 
-A hooded executioner, cold and focused, adjusts the noose. The condemned man, pale and bound, trembles, his eyes darting around the crowd. Sweat and rain mix on his face as he breathes shallowly.
+A hooded executioner, cold and focused, adjusts the noose. Pale and bound, the condemned man trembles as his eyes dart around the crowd. Sweat and rain mix on his face as he breathes shallowly.
 
 Vendors shout, children push forward, and an old man whispers prayers. Above, the bell tolls, marking the man's final moments. A raven watches from the gallows beam. The air is heavy as distant thunder rumbles.
 
@@ -2791,7 +2784,7 @@ The noose has been tied and hangs from the gallows proper.
 Stocks Room
 The public square is a cobblestone stretch surrounded by weathered buildings. The air smells of smoke, damp earth, and a nearby smithy. At the center, old stocks stand with iron clasps holding captives in shameful positions. Their tattered clothes offer little against the cold wind.
 
-The animatronics are lifelike, enhancing the grim atmosphere. The crowd mocks the prisoners, hurling insults and rotten food, their laughter mixed with jeers. The square hums with noise, the sky darkening as the spectacle continues, unnoticed by the crowd.
+The animatronics are lifelike, enhancing the grim atmosphere. The crowd mocks the prisoners, hurling insults and rotten food. Jeers mix with their laughter. The square hums with noise. Unnoticed by the crowd, the sky darkens as the spectacle continues.
 
 Nearby an aqua colored door leads east to the Maintenance Office.
 
@@ -3150,7 +3143,7 @@ The public square hums with tension under gray skies. A wooden platform stands a
 
 A lone figure, hands bound and head bowed, stands on the scaffold. Their tattered clothes reveal a once-gilded past.
 
-The crowd jeers, some grimly silent, while children watch wide-eyed. The town crier proclaims, "High treason against the crown!"
+The crowd jeers while children watch wide-eyed. The town crier proclaims, "High treason against the crown!"
 
 The condemned remains silent as the executioner, robed in black, stands beside the guillotine. The blade gleams in the dim light. The crowd's murmurs die, replaced by silence.
 
@@ -3374,7 +3367,7 @@ Mr Whidbey says "Uh, Fred is a special... contractor... We paid him. For service
 
 >gonear whidbey
 Maintenance Office
-The maintenance office is a dim, cluttered space, filled with the smells of grease, sweat, and popcorn. Shelves are lined with disorganized tools and parts, while paint cans and grease jars clutter the workbenches. A battered desk holds wires, gears, and springs, with a bent piece of metal in a vise.
+The maintenance office is a dim, cluttered space, filled with the smells of grease, sweat, and popcorn. Disorganized shelves are lined with tools and parts, while paint cans and grease jars clutter the workbenches. A battered desk holds wires, gears, and springs, with a bent piece of metal in a vise.
 
 A flickering fluorescent light barely brightens the room. In one corner, a disassembled ride mechanism hangs with chains and pulleys. A greasy manual and a half-empty coffee mug sit on a nearby stool.
 
