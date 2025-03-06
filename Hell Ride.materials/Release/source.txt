@@ -39,7 +39,7 @@ You[']re a part-time reporter for The Tribune, the local paper. Earlier in the d
 
 As you explore the carnival, you learn (the hard way) that the Hell Ride attraction is malfunctioning with the potential for serious injuries to the riders. You must disable the ride off and prevent any loss of life... including your own."
 The story creation year is 2025.
-The release number is 202.
+The release number is 203.
 	
 Chapter 3 - Extensions
 
@@ -91,11 +91,13 @@ ferris wheel ridden is a truth state that varies. ferris wheel ridden is false.
 hell ride disabled is a truth state that varies. hell ride disabled is false.
 total evidence is a number that varies. total evidence is 0.
 total accusation is a number that varies. total accusation is 0.
+janitor walking is a truth state that varies. janitor walking is true.
+whidbey walking is a truth state that varies. whidbey walking is true.
 
 evidence message is a truth state that varies. evidence message is false.
 every turn when total evidence is greater than 0 and evidence message is false:
 	now evidence message is true;
-	say "You[']ve discovered some evidence. To see a list and weighting of the evidence you[']ve collected, type 'SHOW EVIDENCE'.".
+	say "You[']ve discovered some evidence. To see a list and weighting of the evidence you[']ve collected, type 'SHOW EVIDENCE'. To collect more evidence, try to ASK someone ABOUT something. Or SHOW something TO someone.".
 	
 [obituary]
 Rule for printing the player's obituary:
@@ -434,9 +436,9 @@ Section 11 - The Janitor
 the janitor is an a male person. the janitor is in the Head of the Line. The description of the janitor is "The janitor is a portly gentleman wearing dirty overalls, leaning on a broom.[if the janitor is wearing the brass ring] The janitor is wearing a brass ring with a key on it.[end if][if the janitor does not carry the flashlight] He complains that he[']s missing his flashlight.[end if][if the janitor does not carry the pliers] 'My pliers are missing too!' he says.[end if]". the janitor can be active or passive. the janitor is active.
 
 [the janitor walks]
-every turn when the janitor is active:
+every turn when the janitor is active and janitor walking is true:
 	let M be the minutes part of the time of day;
-	if the remainder after dividing M by 5 is 0 and the location of the janitor is not the control room:
+	if the remainder after dividing M by 5 is 0 :
 		if there is a mins of M in the Table of Janitor Movements:
 			choose a row with a mins of M in Table of Janitor Movements;
 			let last space be the location of the janitor;
@@ -444,8 +446,8 @@ every turn when the janitor is active:
 			move the janitor to the destination entry;
 			if the janitor can be seen by the player, say "The janitor arrives from [the last space].";
 			
-every turn when the janitor is passive and the location of the janitor is not the control room, now the janitor is active.
-every turn when the location of the janitor is the control room, now the janitor is passive.
+every turn when the janitor is passive:
+	now the janitor is active.
 
 Before doing something to the janitor:
 	now the janitor is passive;
@@ -489,12 +491,12 @@ Section 12 - Mr Whidbey
 
 Mr Whidbey is a male person. Mr Whidbey is in the Carnival Office. understand "mr/mister/Whidbey/owner" and "carnival owner" as Mr Whidbey. The description of Mr Whidbey is "The owner of the carnival, Mr. Whidbey, is dressed in s black tuxedo with a red and white striped vest. He is sporting a snazzy top hat.". Mr Whidbey can be active or passive. Mr Whidbey is active.
 
-[the owner walks]
-every turn when Mr Whidbey is active:
+[Whidbey walks]
+every turn when Mr Whidbey is active and whidbey walking is true:
 	let M be the minutes part of the time of day;
 	if hell ride disabled is false:
-		if there is a mins of M in the Table of Owner Movements and Telephone Call Autoplay is not happening and the location is not the control room:
-			choose a row with a mins of M in Table of Owner Movements;
+		if there is a mins of M in the Table of Whidbey Movements and Telephone Call Autoplay is not happening:
+			choose a row with a mins of M in Table of Whidbey Movements;
 			let last space be the location of Mr Whidbey;
 			if Mr Whidbey can be seen by the player, say "Mr Whidbey heads to [the destination entry].";
 			move Mr Whidbey to the destination entry;
@@ -508,7 +510,7 @@ Before doing something to Mr Whidbey:
 	say "[one of]Mr Whidbey looks at you expectantly.[or]Mr Whidbey waits for you to speak.[or]Mr Whidbey nervously shifts his weight from one foot to the other.[at random]".
 			
 WhidbeyQuestions is a number which varies. WhidbeyQuestions is 0.
-instead of asking Mr Whidbey about a topic listed in the Table of Owner Conversation Responses:
+instead of asking Mr Whidbey about a topic listed in the Table of Whidbey Conversation Responses:
 	say "[response entry][paragraph break]";
 	if  remainder after dividing WhidbeyQuestions by 4 is 0:
 		say "[one of]Mr. Whidbey[']s eyes dart up and to the left.[or]Mr. Whidbey quickly changes the subject[or]Mr. Whidbey meets your eyes and quickly looks away.[cycling][line break]";
@@ -522,8 +524,8 @@ instead of asking Mr Whidbey about a topic listed in the Table of Owner Conversa
 	increment WhidbeyQuestions;
 		
 instead of showing something to Mr Whidbey:
-	if there is an object of the noun in the Table of Owner Object Responses:
-		choose a row with an object of noun in the Table of Owner Object Responses;	
+	if there is an object of the noun in the Table of Whidbey Object Responses:
+		choose a row with an object of noun in the Table of Whidbey Object Responses;	
 		say "[response entry][paragraph break]";
 		if  remainder after dividing WhidbeyQuestions by 4 is 0:
 			say "[one of]Mr. Whidbey[']s eyes dart up and to the left.[or]Mr. Whidbey quickly changes the subject[or]Mr. Whidbey meets your eyes and quickly looks away.[cycling][line break]";
@@ -546,7 +548,7 @@ confession is a truth state that varies. confession is false.
 instead of confronting Mr Whidbey about a topic listed in the Table of Confrontation:
 	if total evidence is less than 31:
 		say "[The noun] says. 'You don[']t have enough evidence to confront anyone about anything.'";
-	if total evidence is less than 61:
+	if total evidence is less than 76:
 		say "'Any evidence you have is circumstantial. It[']ll be thrown out on day one of the trial!', says [the noun]";
 	otherwise if hell ride disabled is false:
 		say "As much as you would like to confront [the noun] about [the topic understood] you should probably take care of disabling [story title] first.";
@@ -560,7 +562,7 @@ instead of confronting Mr Whidbey about a topic listed in the Table of Confronta
 every turn when confession is true:
 	say "The Chief of Police pays particular attention to Mr. Whidbey[']s confession. He approaches Whidbey and says 'You have the right to remain silent. Anything you say will be used against you in a court of law. You have the right to an attorney during interrogation; if you cannot afford an attorney, one will be appointed to you.'
 
-He handcuffs Whidbey, thanks you for your serivce to the community, and leads Mr Whidbey away to jail.";
+He handcuffs Whidbey, thanks you for your service to the community, and leads Mr Whidbey away to jail.";
 	end the story finally.
 			
 instead of confronting somebody about something, say "There[']s no need to confront [the noun] about [the topic understood].".
@@ -574,7 +576,7 @@ instead of examining the notebook:
 	repeat through the Table of Notebook:
 		if total entry is greater than 0:
 			say "[fixed letter spacing]•   [if total entry is less than 10] [end if][total entry]     [response entry][roman type][line break]";
-	say "[fixed letter spacing][line break][if total evidence is less than 31]You haven[']t got enough evidence for an arrest.[otherwise if total evidence is less than 61]You have enough evidence to press charges.[otherwise]You[']ve got enough evidence for a strong case.[end if][roman type]".
+	say "[fixed letter spacing][line break][if total evidence is less than 36]You haven[']t got enough evidence for an arrest.[otherwise if total evidence is less than 76]You have enough evidence to press charges.[otherwise]You[']ve got enough evidence for a strong case.[end if][roman type]".
 
 showing evidence is an action out of world applying to nothing. Understand "show evidence" as showing evidence.
 carry out showing evidence:
@@ -615,7 +617,7 @@ criteria	point value	description	turn stamp
 "[if electrical closet nine's electrical panel's switch is switched on]Y[otherwise]N[end if]"	5	"Flipping the Indigo switch:              "	-1
 "[if electrical closet eleven's electrical panel's switch is switched on]Y[otherwise]N[end if]"	5	"Flipping the Khaki switch:               "	-1
 "[if the player is carrying the teddy bear]Y[otherwise]N[end if]"	5	"Winning the teddy bear:                  "	-1
-"[if the player is carrying the Swiss Army knife]Y[otherwise]N[end if]"	5	"Winning the Swiss Army knife:            "	-1
+"[if the player is carrying the knock-off Swiss Army knife]Y[otherwise]N[end if]"	5	"Winning the knock-off Swiss Army knife:            "	-1
 "[if the player is carrying the poster of Taylor Swift]Y[otherwise]N[end if]"	5	"Winning the poster of Taylor Swift:      "	-1
 "[if the player is carrying the magenta fuse]Y[otherwise]N[end if]"	5	"Winning the Magenta fuse:                "	-1
 "[if the player is carrying the small plush monkey]Y[otherwise]N[end if]"	5	"Winning the stuffed monkey:              "	-1
@@ -928,7 +930,7 @@ Does the player mean doing something with the Ferris Wheel ticket when (the loca
 
 [fortune teller]
 Does the player mean doing something with the fortune when the location is the FT-room: it is very likely.
-Does the player mean doing something with the Fortune Teller ticket when (the location of the player is the FT-room) and (Esmeralda the Mysterious is in the location of the player): it is likely.
+Does the player mean doing something with the Fortune Teller ticket when (the location of the player is the FT-room) and (Esmeralda is in the location of the player): it is likely.
 
 [bumper cars]
 Does the player mean doing something with the Bumper Cars when the location is the BC-room: it is very likely.
@@ -1379,6 +1381,26 @@ five dimes underlie the seat.
 
 The carrying capacity of the fanny pack is 50.
 
+Whidbey on is an action out of world applying to nothing. Understand "whidbey on" as whidbey on.
+carry out whidbey on:
+	say "Whidbey walks!.";
+	now whidbey walking is true.
+	
+Whidbey off is an action out of world applying to nothing. Understand "whidbey off" as whidbey off.
+carry out whidbey off:
+	say "Whidbey stands still.";
+	now whidbey walking is false.
+	
+Janitor on is an action out of world applying to nothing. Understand "janitor on" as janitor on.
+carry out janitor on:
+	say "The janitor walks!.";
+	now janitor walking is true.
+	
+Janitor off is an action out of world applying to nothing. Understand "janitor off" as janitor off.
+carry out janitor off:
+	say "The janitor stands still.";
+	now janitor walking is false.
+
 displaying total evidence is an action out of world applying to nothing. Understand "display total evidence" as displaying total evidence.
 carry out displaying total evidence:
 	say "Evidence acquired by asking the janitor about:[line break]";
@@ -1394,14 +1416,14 @@ carry out displaying total evidence:
 			say "•	[description entry][line break]";
 	say "[line break]";
 	say "Evidence acquired by asking Mr Whidbey about:[line break]";
-	sort the Table of Owner Conversation Responses in reverse weighting order;
-	repeat through Table of Owner Conversation Responses:
+	sort the Table of Whidbey Conversation Responses in reverse weighting order;
+	repeat through Table of Whidbey Conversation Responses:
 		if turn stamp entry is not -1  and the weighting entry is greater than 0:
 			say "•	[description entry][line break]";
 	say "[line break]";
 	say "Evidence acquired by showing something to Mr Whidbey:[line break]";
-	sort the Table of Owner Object Responses in reverse weighting order;
-	repeat through Table of Owner Object Responses:
+	sort the Table of Whidbey Object Responses in reverse weighting order;
+	repeat through Table of Whidbey Object Responses:
 		if turn stamp entry is not -1 and the weighting entry is greater than 0:
 			say "•	[description entry][line break]";
 
@@ -1531,7 +1553,7 @@ The description of an electrical panel is "Electrical Panel [the panel id] is a 
 
 The printed name of an electrical panel is "Electrical Panel [the panel id]".
 
-every electrical panel is unlocked by the Swiss Army knife. understand "screwdriver" as Swiss Army knife.
+every electrical panel is unlocked by the knock-off Swiss Army knife. understand "screwdriver" as knock-off Swiss Army knife.
 
 Definition: A thing is panel-fitted if it is incorporated by an electrical panel.
 
@@ -1545,7 +1567,7 @@ To decide what color is --/the shared color of --/a/the (PT - a panel-fitted thi
 	decide on the color of the holder of PT.
 
 After unlocking an electrical panel with something (this is the report unlocking an electrical panel rule):
-	say "Using the screwdriver on the Swiss Army knife, you remove the screws holding the electrical panel shut.".
+	say "Using the screwdriver on the knock-off Swiss Army knife, you remove the screws holding the electrical panel shut.".
 
 Every electrical closet contains an electrical panel (called its electrical panel).
 The panel id of Electrical Closet One's electrical panel is 1. The color of Electrical Closet One's electrical panel is aqua.
@@ -1906,11 +1928,13 @@ A single car, its roof gashed open, sits under the still blade — a grim remind
 
 Two mechanics climb the scaffolding with tools in hand, their appearance met with wary hope. A crowd has gathered and is watching, holding their breath, as the cursed ride[’]s fate hangs in the balance. After a moment, applause rises from the assembled crowd, cheering your accomplishment.
 
-Mr. Whidbey, the Mayor, Chief of Police, and the janitor arrive on the scene and extend their gratitude for saving the day, not to mention lives![paragraph break]";
+Mr. Whidbey, the Mayor, the Chief of Police, and the janitor arrive on the scene and extend their gratitude for saving the day, not to mention lives![paragraph break]";
 		move Mr Whidbey to the Control Room;
 		move the Chief of Police to the Control Room;
 		move the Mayor to the Control Room;
 		move the janitor to the Control Room;
+		now whidbey walking is false;
+		now janitor walking is false;
 		say "'But wait', you say, 'There is more afoot here than meets the eye. I think we need to talk to Mr Whidbey some more... confront him about a few things. Accusations might be made.'
 
 Mr Whidbey exclaims, 'Accusations? What accusations?
@@ -2037,7 +2061,7 @@ Puddles from recent rain shimmer under the lights, while patches of mud cling to
 
 The midway is to the south. There is a blueberry bush here. [if blueberry bush contains blueberries]There are blueberries on the bush.[otherwise]The bush has been picked clean.[end if][paragraph break]Your car is here. It[']s a bit of a beater. Inside the car, you can see [the list of things which are part of the beater car]."
 
-The Parking Attendant is an attendant in the the PL-room. The parking attendant carries a parking ticket. The price of the parking ticket is $5.00. The description of the parking ticket is "This is your receipt for parking."
+The Parking attendant is an attendant in the the PL-room. The parking attendant carries a parking ticket. The price of the parking ticket is $5.00. The description of the parking ticket is "This is your receipt for parking."
 
 The parking attendant carries a parking stub. The description of the parking stub is "This stub is meant to be placed on your dashboard to indicate you paid for parking.". Understand "stub" or "ticket stub" as the parking stub.
 
@@ -2219,7 +2243,7 @@ Behind the counter, popcorn churns in the machine, candy apples gleam, and cotto
 
 There is a menu to the right of the window. You can see the treats inside the stand. There is an exit to the south and northeast. "
 
-The Concession Attendant is an attendant in the CS-room. 
+The Concession attendant is an attendant in the CS-room. 
 
 The concession stand is here. it is scenery. the description is "The Concession Stand, perched along the midway, is a colorful and bustling hub. Painted in bright reds, blues, and yellows, it features bold lettering announcing treats like 'SODA! POPCORN! CANDY APPLES!' Strings of twinkling lights frame the stand, making it a glowing beacon amid the carnival excitement."
 
@@ -2436,7 +2460,7 @@ The Ticket Kiosk is to the west. Other games are northeast and southeast of here
 
 The markings are here. The markings are scenery. Understand "marking" and "sign", "signs", and "pole" as markings. The description of markings is "There are five levels marked on the pole: Weakling, Getting There, Average, Almost There, and Muscle Man."
 
-The Strongman Attendant is an attendant in the HS-room. 
+The Strongman attendant is an attendant in the HS-room. 
 
 after looking when the location is the HS-room:
 	say "[if the strongman attendant carries the mallet]The attendant is holding a mallet.[end if]";
@@ -2456,15 +2480,15 @@ some High Striker spectators are here. they are scenery. understand "participant
 
 A teddy bear is carried by the Strongman attendant. The description of the teddy bear is "This is a teddy bear like you had when you were a kid. Right down to the red bow around its neck." 
 
-A Swiss Army knife is carried by the Strongman attendant. The description of the Swiss army knife is "This is the standard issue Swiss Army knife. It has [a list of things which are part of the item described]."  The printed name of the Swiss Army knife is "Swiss Army knife". 
+A knock-off Swiss Army knife is carried by the Strongman attendant. The description is "This is a knock-off Swiss Army knife. It has [a list of things which are part of the item described]."  The printed name of the knock-off Swiss Army knife is "knock-off Swiss Army knife". 
 
-A screwdriver is part of the Swiss army knife. The description of the screwdriver is "It[']s a handy tool that[']s part of the Swiss Army knife."
-An awl is part of the Swiss army knife. The description of the awl is "It[']s a handy tool that[']s part of the Swiss Army knife."
-A fingernail clippers is part of the Swiss army knife. The description of the fingernail clippers is "It[']s a handy tool that[']s part of the Swiss Army knife."
-A can opener is part of the Swiss army knife. The description of the can opener is "It[']s a handy tool that[']s part of the Swiss Army knife."
-A corkscrew is part of the Swiss army knife. The description of the corkscrew is "It[']s a handy tool that[']s part of the Swiss Army knife."
+A screwdriver is part of the knock-off Swiss army knife. The description of the screwdriver is "It[']s a handy tool that[']s part of the knock-off Swiss Army knife."
+An awl is part of the knock-off Swiss army knife. The description of the awl is "It[']s a handy tool that[']s part of the knock-off Swiss Army knife."
+A fingernail clippers is part of the knock-off Swiss army knife. The description of the fingernail clippers is "It[']s a handy tool that[']s part of the knock-off Swiss Army knife."
+A can opener is part of the knock-off Swiss army knife. The description of the can opener is "It[']s a handy tool that[']s part of the knock-off Swiss Army knife."
+A corkscrew is part of the knock-off Swiss army knife. The description of the corkscrew is "It[']s a handy tool that[']s part of the knock-off Swiss Army knife."
 
-instead of taking when the noun is part of the Swiss army knife, say "That[']s part of the Swiss Army knife. You can[']t take that!" instead.
+instead of taking when the noun is part of the knock-off Swiss army knife, say "That[']s part of the knock-off Swiss Army knife. You can[']t take that!" instead.
 
 clipping is an action applying to one thing. understand "clip [something]" as clipping. understand "trim [something]" as clipping. understand "cut [something]" as clipping.
 instead of clipping fingernails, say "Your fingernails look much neater now that you[']ve trimmed them.".
@@ -2633,7 +2657,7 @@ after reading a command when the location is the Dime Toss Game and TossADimeWin
 			
 The plate is a supporter in the Dime Toss Game. Understand "plates" as plate. The description of the plate is "These are small, flat plates, almost saucers. You are meant to toss a dime on these plates to win a prize!"
 
-The Dime Toss Attendant is an attendant in the the Dime Toss Game. understand "operator" as dime toss attendant.
+The Dime Toss attendant is an attendant in the the Dime Toss Game. understand "operator" as dime toss attendant.
 
 after examining the Dime Toss attendant when the TossADimeWin is true, show the toss a dime prizes. 
 after looking when the TossADimeWin is true and the location is the Dime Toss Game, show the Toss A Dime prizes.
@@ -2696,7 +2720,7 @@ To show the Pitchers Mound prizes:
 	say "[line break]Which prize would you like? [run paragraph on]";
 	repeat with N running from 1 to the number of rows in the Table of Pitchers Mound Prizes:
 		choose row N in the Table of Pitchers Mound Prizes;
-		if the object entry is carried by the Pitchers Mound Attendant:
+		if the object entry is carried by the Pitchers Mound attendant:
 			say "[N]) [description entry][if N < number of rows in the Table of Pitchers Mound Prizes], [otherwise]?[end if]";
 		
 instead of giving a dime to the pitchers mound attendant:
@@ -2766,7 +2790,7 @@ after reading a command when the location is the Pitchers Mound and PitchersMoun
 		now PitchersMoundWin is false;
 		stop the action.
 			
-The Pitchers Mound Attendant is an attendant in the Pitchers Mound. 
+The Pitchers Mound attendant is an attendant in the Pitchers Mound. 
 
 after examining the pitchers mound attendant:
 	if PitchersMoundWin is true, show the pitchers mound prizes. 
@@ -2819,6 +2843,30 @@ After giving when the noun is dime and the second noun is barker:
 	
 instead of listening when the location is the SF-room, say "You hear the low, hypnotic music of a faraway land.".
 instead of smelling when the location is the SF-room, say "The smell of incense and spices wafts through the tent."
+
+instead of asking the barker about a topic listed in the Table of Barker Conversation Responses:
+	say "[response entry][paragraph break]";
+	if the turn stamp entry is -1 and the subject entry is not "NA":
+		now the turn stamp entry is the turn count;
+		let S be the subject entry;
+		let W be the weighting entry;
+		choose a row with a category of S in Table of Notebook;
+		now total entry is total entry plus W;
+		now total evidence is total evidence plus W.
+		
+instead of showing something to the barker:
+	if there is an object of the noun in the Table of Barker Object Responses:
+		choose a row with an object of noun in the Table of Barker Object Responses;	
+		say "[response entry][paragraph break]";
+		let S be the subject entry;
+		let W be the weighting entry;
+		if the turn stamp entry is -1 and S is not "NA":
+			now the turn stamp entry is the turn count;
+			choose a row with an category of S in Table of Notebook;
+			now total entry is total entry plus W;
+			now total evidence is total evidence plus W.
+		
+instead of telling the barker about something: try asking the noun about it.
 
 Section 11 - Show Tent	
 
@@ -2913,7 +2961,7 @@ Before looking when the location is the FW-room:
 
 A room called the FW-room is outdoors. The printed name of the FW-room is "Ferris Wheel". The FW-room is east of the HS-room. "The Ferris wheel dominates the carnival, its bright lights visible from every corner. Its massive steel frame arches high, with colorful gondolas swaying as it turns. At night, flashing in bursts of red, green, and white, the wheel dazzles with lights. The air buzzes with the hum of the motor. The operator calls, 'Step right up! The best view of the carnival awaits!' From the top, riders get a panoramic view of the fairgrounds, with city lights stretching to the horizon"
 
-The Ferris Wheel Attendant is an attendant in the FW-room. 
+The Ferris Wheel attendant is an attendant in the FW-room. 
 
 instead of giving the Ferris wheel ticket to the Ferris wheel attendant:
 	say "You give [the noun] to [the second noun].";
@@ -2957,7 +3005,7 @@ Before looking when the location is the BC-room:
 	
 The BC-room is a room. The printed name is "Bumper Cars". The BC-room is northwest of the TB-room. The BC-room is outdoors. "The bumper cars are a lively scene of  flashing lights and vibrant decorations. The arena is surrounded by padded barriers, ensuring the rider[']s safety. Cars in faded reds, blues, yellows, and greens glide across the slick floor, each equipped with a steering wheel and padded bumper. Riders maneuver their cars with intensity, creating a din of bumps and laughter. Overhead, electric poles hum with energy. While onlookers cheer from the sidelines, the bumper cars offer playful competition and nostalgic fun for all. The Ticket Kiosk is southeast of here."
 
-The Bumper Cars Attendant is an attendant in the BC-room. 
+The Bumper Cars attendant is an attendant in the BC-room. 
 
 instead of giving the bumper cars ticket to the bumper cars attendant:
 	say "You give [the noun] to [the second noun].";
@@ -3015,24 +3063,24 @@ some tarot cards are on the round table. they are scenery. understand "card" as 
 some trinkets are on the round table. they are scenery. the description is "The purpose of the trinkets remains a mystery.".
 your palm is here. it is scenery. the description is "It[']s your palm, in the middle of your hand.".
 
-Esmeralda the Mysterious is a woman in the FT-room. Understand "mysterious", "woman", "fortune teller", and "Esmerelda" as Esmeralda the Mysterious. The description of Esmeralda the Mysterious is "The fortune teller sits in a dimly lit booth, draped in rich fabrics of deep purple and gold adorned with celestial patterns of stars and moons. Her appearance is enigmatic, with piercing eyes that seem to look right through you and a knowing smile that hints at secrets yet untold. She wears flowing robes embellished with shimmering beads, and a jeweled headpiece catches the flickering light of nearby candles."
+Esmeralda is a woman in the FT-room. Understand "mysterious/woman/esmerelda", and "fortune teller" as Esmeralda. The description of Esmeralda is "The fortune teller sits in a dimly lit booth, draped in rich fabrics of deep purple and gold adorned with celestial patterns of stars and moons. Her appearance is enigmatic, with piercing eyes that seem to look right through you and a knowing smile that hints at secrets yet untold. She wears flowing robes embellished with shimmering beads, and a jeweled headpiece catches the flickering light of nearby candles."
 
 a thing called a fortune is here. it is scenery. the description is "You ponder the ramifications of having your fortune told.".
 
-instead of giving the fortune teller ticket to Esmeralda the Mysterious:
+instead of giving the fortune teller ticket to Esmeralda:
 	say "You give [the noun] to [the second noun].";
 	choose a row with an object of the noun in the Table of Tickets;	
 	now the price of the noun is the price entry;
-	now Esmeralda the Mysterious carries the fortune teller ticket;
+	now Esmeralda carries the fortune teller ticket;
 	say "[line break]Stepping inside, you’re greeted by the Esmeralda, a figure cloaked in flowing robes with a jeweled headpiece catching the flickering light. Her piercing eyes seem to look right through you as they gesture for you to sit at a small round table. At its center rests a glowing crystal ball, surrounded by tarot cards and mysterious trinkets.
 
 Esmeralda[’]s voice is low and melodic, weaving an air of intrigue as they ask you to focus on a question and offer you a tarot reading. The room seems to shrink, the bustling carnival outside fading into the background as she reveals your fate. Each card turned feels significant, as though unlocking a secret you didn’t know you carried."
 
-instead of asking Esmeralda the Mysterious about "fortune", say "You[']ll need a ticket if you want me to reveal your future.".
-instead of asking Esmeralda the Mysterious about "me", say "You[']ll need a ticket if you want me to reveal your future.".
+instead of asking Esmeralda about "fortune", say "You[']ll need a ticket if you want me to reveal your future.".
+instead of asking Esmeralda about "me", say "You[']ll need a ticket if you want me to reveal your future.".
 
 Fortune Teller AutoPlay is a scene. 
-Fortune Teller AutoPlay begins when Esmeralda the Mysterious carries the Fortune Teller ticket.
+Fortune Teller AutoPlay begins when Esmeralda carries the Fortune Teller ticket.
 Fortune Teller AutoPlay ends when the index is 6.
 
 last category is text that varies. last category is usually "".
@@ -3062,6 +3110,30 @@ every turn during Fortune Teller AutoPlay:
 
 instead of looking during the Fortune Teller AutoPlay, say "[bold type][last category]: [last card][roman type][line break][last card description][paragraph break]";
 
+instead of asking Esmeralda about a topic listed in the Table of Esmeralda Conversation Responses:
+	say "[response entry][paragraph break]";
+	if the turn stamp entry is -1 and the subject entry is not "NA":
+		now the turn stamp entry is the turn count;
+		let S be the subject entry;
+		let W be the weighting entry;
+		choose a row with a category of S in Table of Notebook;
+		now total entry is total entry plus W;
+		now total evidence is total evidence plus W.
+		
+instead of showing something to the Esmeralda:
+	if there is an object of the noun in the Table of Esmeralda Object Responses:
+		choose a row with an object of noun in the Table of Esmeralda Object Responses;	
+		say "[response entry][paragraph break]";
+		let S be the subject entry;
+		let W be the weighting entry;
+		if the turn stamp entry is -1 and S is not "NA":
+			now the turn stamp entry is the turn count;
+			choose a row with an category of S in Table of Notebook;
+			now total entry is total entry plus W;
+			now total evidence is total evidence plus W.
+		
+instead of telling Esmeralda about something: try asking the noun about it.
+
 Section 15 - Carousel
 
 After going northeast from the TB-room when the CR-room is unvisited:
@@ -3071,7 +3143,7 @@ After going northeast from the TB-room when the CR-room is unvisited:
 Before looking when the location is the CR-room:
 	if show images is true, display Figure of Carousel.
 
-The Carousel Attendant is an attendant in the CR-room. 
+The Carousel attendant is an attendant in the CR-room. 
 
 The CR-room is a room. The CR-room is outdoors. The printed name is "Carousel". The CR-room is northeast of the TB-room. "The carousel radiates charm with its brightly painted horses, lights, and calliope music. The platform features a canopy of colors and decorative mirrors. Hand-carved animals, including horses, lions, tigers, and sea dragons, circle as the carousel spins. The animals rise and fall gently, adding to the charm. The music rises from the Carousel inviting riders of all ages to enjoy this most basic symbol of the carnival.
 
@@ -3111,7 +3183,7 @@ a thing called Hell Ride is a backdrop. Understand "hell ride" and "ride" as hel
 
 the hell ride cars are here. they are scenery. understand "car" as hell ride cars. the description is "These cars ferry carnival goers into the depths of [story title].".
 
-The Hell Ride Attendant is an attendant in Head of the Line. 
+The Hell Ride attendant is an attendant in Head of the Line. 
 
 Check going south when the location is Head of the Line and the Hell Ride attendant does not have the hell ride ticket:
 	say "You[']ll need a ticket to go that way.";
@@ -3235,7 +3307,7 @@ Instead of climbing a ladder:
 
 Section 4 - Crawl Space
 
-The Crawl Space is a dark room. The Crawl Space is south of Maintenance Office. "The crawl space beneath the ride is cramped and dark, filled with the hum of machinery above. The air is thick with oil and rust. Sounds echo—groaning steel, clanking chains, and the rhythmic thrum of motors.
+The Crawl Space is a dark room. The Crawl Space is south of Maintenance Office. "The crawl space beneath the ride is cramped and dark, filled with the hum of machinery above. The air is thick with oil and rust. Sounds echo — groaning steel, clanking chains, and the rhythmic thrum of motors.
 
 The ground is uneven, a mix of dirt, gravel, and scattered tools. Pipes overhead are wrapped in fraying insulation, crackling as you move. Small puddles of murky water collect.
 
@@ -3630,7 +3702,7 @@ Before looking when the location is the Ride Exit:
 
 The Ride Exit is south of the Guillotine Room. "[description corresponding to the locale of Ride Exit in the Table of Hell Ride Events]"
 
-The Merchandise Attendant is an attendant in the ride exit.
+The Merchandise attendant is an attendant in the ride exit.
 
 The merchandise stand is scenery in the Ride Exit. The merchandise stand is a container. Understand "display" as merchandise stand. The description of the merchandise stand is "The stand is bathed in red light, adding to the ominous mood." 
 
@@ -3749,7 +3821,7 @@ Section 4 - Table of High Striker Prizes
 Table of High Striker Prizes
 index (text)	object (an object)	description (text)
 "1"	teddy bear	"a teddy bear"
-"2"	Swiss army knife	"a Swiss Army knife"
+"2"	knock-off Swiss army knife	"a knock-off Swiss Army knife"
 "3"	fuse13	"a [printed name of fuse13]"
 "4"	poster of Taylor Swift	"a poster of Taylor Swift"
 
@@ -3822,7 +3894,7 @@ Section 10 - Table of Hell Ride Events
 
 Table of Hell Ride Events
 locale	locale text	figure	description
-Ride Entrance	"Ride Entrance"	figure of Hell Ride	"The cars for Hell Ride stop here, and the safety bar clicks into place as riders board the cars. Ahead, the grotesque entrance looms—a twisted metal archway adorned with spikes, skulls, and flickering blood-red lights. A faint sulfuric smell mixes with the scent of popcorn.
+Ride Entrance	"Ride Entrance"	figure of Hell Ride	"The cars for Hell Ride stop here, and the safety bar clicks into place as riders board the cars. Ahead, the grotesque entrance looms — a twisted metal archway adorned with spikes, skulls, and flickering blood-red lights. A faint sulfuric smell mixes with the scent of popcorn.
 
 The 'HELL RIDE' sign pulses above the door, while demon statues with clawed hands seem to beckon. The entrance is shrouded in darkness, broken only by eerie green flashes that reveal twisted paths. Faint whispers and distant organ music grow louder. To one side, the darkness looks a little bit darker than the rest of the room."
 Stocks Room	"Stocks Room"		figure of RideStocks	"The public square is a cobblestone stretch surrounded by weathered buildings. The air smells of smoke, damp earth, and a nearby smithy. At the center, old stocks stand with iron clasps holding captives in shameful positions. Their tattered clothes offer little against the cold wind.
@@ -3914,7 +3986,7 @@ description
 "'I know, I know, but what am I supposed to do. We have to get that Needleman kid more money. Another $15,000 ought to do it.'"
 "Isn[']t this why I buy insurance? Don[']t worry. You'll get your piece. Everyone will get their piece."
 "Mr. Whidbey says 'I need that money in a hurry though before anyone gets suspicious. If anything happens then you[']ll go down too.'"
-"'Ok, I'll try to stall for a bit but I won[']t be able to do it for long.'"
+"'Ok, I[']ll try to stall for a bit but I won[']t be able to do it for long.'"
 "'Hey! What are you doing here? This is area is for employees only,' Mr. Whidbey shouts at you. 'Get out of here. Now!'"
 
 Section 14 - Table of Attendant Conversation Responses
@@ -3960,8 +4032,6 @@ category (text)	total (number)	response (text)
 "Insurance"	0	"Evidence concerning insurance"
 "Fuses"	0	"Evidence concerning fuses"
 
-
-
 Section 16 - Table of Janitor Conversation Responses
 
 Table of Janitor Conversation Responses
@@ -3991,7 +4061,7 @@ object (object)	description (text)	subject (text)	turn stamp (number)	weighting 
 Cash 'N' Carry invoice	"Cash [']N['] Carry Invoice"	"Invoices"	-1	1	"[The second noun] says, 'Man, this doesn[']t look good for the carnival.'"
 Frank's Market invoice	"Frank[']s Market Invoice"	"Invoices"	-1	1	"[The second noun] says, 'Looks like the carnival is in some financial trouble.'"
 Oriental Trading  invoice	"Oriental Trading Invoice"	"Invoices"	-1	1	"[The second noun] says, 'These prizes are cheaper and flimsier than usual.'"
-Mystic Industries invoice	"Mystic Industries Invoice"	"Accidents"	-1	3	"[The second noun] says, That fire in [story title] was very really bad. It took almost two weeks to get it fully repaired. But it shouldn't have cost this much. I think Mr Whidbey got ripped off.'"
+Mystic Industries invoice	"Mystic Industries Invoice"	"Accidents"	-1	3	"[The second noun] says, That fire in [story title] was very really bad. It took almost two weeks to get it fully repaired. But it shouldn't have cost this much. I think Mr Whidbey got ripped off. Or, he got it fixed on the cheap and pocketed the rest.'"
 paperwork	"Paperwork"	"Invoices"	-1	1	"[The second noun] says, 'This all points the finger at mismanagement. I sure hope Mr Whidbey has a plan.'"
 insurance policy	"Insurance Policy"	"Insurance"	-1	3	"'An insurance policy? For a million dollars? Something is fishy for sure!' [the second noun] says."
 pliers	"The Pliers"	"Accidents"	-1	5	"'I[']ve been missing those. Where did you find them?' asks [the second noun]."
@@ -4006,17 +4076,65 @@ fuse13	"Magenta Fuse"	"Fuses"	-1	1	"'Hey! That[']s important. It should be in an
 fuse15	"Orange Fuse"	"Fuses"	-1	1	"'Hey! That[']s important. It should be in an electrical panel', [the second noun] says."
 fuse17	"Quartz Fuse"	"Fuses"	-1	1	"'Hey! That[']s important. It should be in an electrical panel', [the second noun] says."
 
-Section 18 - Table of Owner Conversation Responses
+Section 18 - Table of Esmeralda Conversation Responses
 
-Table of Owner Conversation Responses
+Table of Esmeralda Conversation Responses
 topic	description (text)	subject (text)	turn stamp (number)	weighting (number)	response (text)
-"hell/ride" or "hell ride"	"Hell Ride"	"NA"	-1	0	"'[story title] is the premier attraction here at  Whidbey Amusements. It[']s both spooky and fun! The visitors love it! The fire last month was unfortunate and expensive' says [the noun]."
+"hell/ride" or "hell ride"	"Hell Ride"	"Accidents"	-1	1	"'[story title] is the flagship ride at Whidbey Amusements. It[']s always made me feel nervous,' says [the noun]."
+"owner/Whidbey/mister/mr" or "Mr Whidbey"	"Mr Whidbey"	"Whidbey"	-1	1	"[The noun] says , 'Mr. Whidbey? He creeps me out. He[']s up to something.'"
+"invoices/receipts/paperwork"or "the invoices"	"Invoices"	"Invoices"	-1	1	"[The noun] says, 'I knew Whidbey was driving this carnival into the ground. Looks like we[']re all going to have to pay for it now.'"
+"insurance/policy" or "insurance policy"or "the insurance policy"	"Insurance Policy"	"Insurance"	-1	1	"'An insurance policy? Looks like Mr Whidbey is up to no good,' [the noun] remarks."
+"bumper/car/cars" or "bumper cars" or "bumper car" or "the bumper cars"	"Bumper Cars"	"Accidents"	-1	5	"[The noun] says, 'There was an accident on the bumper cars a couple of weeks ago. One of the riders got a good shock.'"
+"fire"or "the fire"	"The Stake Room Fire"	"Accidents"	-1	3	"'There was a fire in one of the rooms in [story title],' says [the noun]."
+"accidents/mishaps" or "the accidents"	"Accidents"	"Accidents"	-1	3	 "[The noun] says 'Things sure seem vulnerable at this time.'"
+"rides/attractions" or "the attractions"	"Attractions"	"Accidents"	-1	1	"'This carnival seems cursed with bad luck when it comes to the rides,' says [the noun]."
+
+Section 19 - Table of Esmeralda Object Responses
+
+Table of Esmeralda Object Responses
+object (object)	description (text)	subject (text)	turn stamp (number)	weighting (number)	response (text)
+Cash 'N' Carry invoice	"Cash [']N['] Carry Invoice"	"Invoices"	-1	1	"[The second noun] says, 'Seems like the carnival is in trouble financially.'"
+Frank's Market invoice	"Frank[']s Market Invoice"	"Invoices"	-1	1	"[The second noun] says, 'Seems like the carnival is in trouble financially.'"
+Oriental Trading  invoice	"Oriental Trading Invoice"	"Invoices"	-1	1	"[The second noun] says, 'Seems like the carnival is in trouble financially..'"
+Mystic Industries invoice	"Mystic Industries Invoice"	"Accidents"	-1	1	"[The second noun] says, 'Seems like the carnival is in trouble financially.'"
+insurance policy	"Insurance Policy"	"Insurance"	-1	3	"'An insurance policy? For a million dollars? Something is fishy for sure!' [the second noun] says."
+cashier's check	"Cashier's Check"	"Insurance"	-1	0	"[The second noun] says 'I know nothing about that.'"
+
+Section 20 - Table of Barker Conversation Responses
+
+Table of Barker Conversation Responses
+topic	description (text)	subject (text)	turn stamp (number)	weighting (number)	response (text)
+"hell/ride" or "hell ride"	"Hell Ride"	"Accidents"	-1	1	"'[story title] is our most popular attraction but there always seems to be something wrong with it,' says [the noun]."
+"owner/Whidbey/mister/mr" or "Mr Whidbey"	"Mr Whidbey"	"Whidbey"	-1	0	"[The noun] says , 'Mr. Whidbey? He[']s always done right by me.'"
+"invoices/receipts/paperwork"or "the invoices"	"Invoices"	"Invoices"	-1	1	"[The noun] says, 'These are pretty disturbing. I wonder if the carnival will close.'"
+"insurance/policy" or "insurance policy"or "the insurance policy"	"Insurance Policy"	"Insurance"	-1	1	"What[']s that? An insurance policy? That seems suspicious to me,' [the noun] remarks."
+"bumper/car/cars" or "bumper cars" or "bumper car" or "the bumper cars"	"Bumper Cars"	"Accidents"	-1	5	"[The noun] says, 'There was an unfortunate accident on the bumper cars a couple of weeks ago.'"
+"fire"or "the fire"	"The Stake Room Fire"	"Accidents"	-1	3	"'There was a fire in one of the rooms in [story title],' says [the noun]."
+"accidents/mishaps" or "the accidents"	"Accidents"	"Accidents"	-1	3	 "[The noun] says 'Things sure seem vulnerable at this time.'"
+"rides/attractions" or "the attractions"	"Attractions"	"Accidents"	-1	1	"'This carnival seems cursed with bad luck when it comes to the rides,' says [the noun]."
+
+Section 21 - Table of Barker Object Responses
+
+Table of Barker Object Responses
+object (object)	description (text)	subject (text)	turn stamp (number)	weighting (number)	response (text)
+Cash 'N' Carry invoice	"Cash [']N['] Carry Invoice"	"Invoices"	-1	1	"[The second noun] says, 'Seems like the carnival is in trouble financially.'"
+Frank's Market invoice	"Frank[']s Market Invoice"	"Invoices"	-1	1	"[The second noun] says, 'Seems like the carnival is in trouble financially.'"
+Oriental Trading  invoice	"Oriental Trading Invoice"	"Invoices"	-1	1	"[The second noun] says, 'Seems like the carnival is in trouble financially..'"
+Mystic Industries invoice	"Mystic Industries Invoice"	"Accidents"	-1	1	"[The second noun] says, 'Seems like the carnival is in trouble financially.'"
+insurance policy	"Insurance Policy"	"Insurance"	-1	3	"'An insurance policy? For a million dollars? Something is fishy for sure!' [the second noun] says."
+cashier's check	"Cashier's Check"	"Insurance"	-1	0	"[The second noun] says 'I know nothing about that.'"
+
+Section 22 - Table of Whidbey Conversation Responses
+
+Table of Whidbey Conversation Responses
+topic	description (text)	subject (text)	turn stamp (number)	weighting (number)	response (text)
+"hell/ride" or "hell ride"	"Hell Ride"	"NA"	-1	2	"'[story title] is the premier attraction here at  Whidbey Amusements. It[']s both spooky and fun! The visitors love it! The fire last month was unfortunate and expensive' says [the noun]."
 "invoices/receipts/paperwork" or "the invoices" or "the receipts" or "the paperwork"	"Invoices"	"Invoices"	-1	3	"[The noun] says, 'I know this doesn[']t look good but the cost of consumables go up every week and attendance is down. I have to pinch pennies somehow, don[']t I? And that fire was very expensive to repair.'"
 "insurance/policy" or "insurance policy" or "the insurance policy"	"Insurance Policy"	"Insurance"	-1	1	"'An insurance policy? Of course, all reputable businesses have insurance. Even small time carnivals' [the noun] stammers."
 "carnival" or "the carnival"	"Carnival"	"Whidbey"	-1	1	"'The Whidbey family has owned this carnival since the 1957', [the noun] says. 'Unfortunately, I am an only child and never married. Alas, the carnival will close when I am gone. But for now, it[']s making a comeback!'"
 "ferris/wheel" or "ferris wheel" or "the ferris wheel"	"Ferris Wheel"	"NA"	-1	0	"[The noun] says 'The Ferris Wheel is my favorite ride. It[']s always relaxing and romantic.'"
 "bumper/car/cars" or "bumper cars" or "bumper car" or "the bumper cars" or "the bumper car"	"Bumper Cars"	"Accidents"	-1	3	"'That incident the other week with that Needleman kid was unfortunate' says [the noun]."
-"fortune/teller/esmeralda/esmerelda/mysterious" or "fortune teller" or "the fortune teller" or "esmeralda the mysterious"	"Esmeralda"	"NA"	-1	0	"[The noun] says 'I see her regularly to have my fortune told. We[']re lucky to have her here. She[']s very beautiful. It[']s a wonder she[']s never been married.'"
+"fortune/teller/esmeralda/esmerelda/mysterious" or "fortune teller" or "the fortune teller" or "esmeralda"	"Esmeralda"	"NA"	-1	0	"[The noun] says 'I see her regularly to have my fortune told. We[']re lucky to have her here. She[']s very beautiful. It[']s a wonder she[']s never been married.'"
 "carousel/merry/go/round/merry-go-round" or "the carousel" or "the merry-go-round" or "the merry go round"	"Carousel"	"NA"	-1	0	"'The carousel is just one of the many rides that thrill and delight our visitors every day,' says [the noun]"
 "dime/toss/plate" or "dime toss" or "the dime toss"  or "the plate"	"Dime Toss"	"NA"	-1	0	"'The Dime Toss is is one of the many games that thrill and delight our visitors every day!' says [the noun]."
 "pitchers/mound/milk/bottles" or "pitchers mound" or "milk bottles" or "pitcher's mound" or "the pitchers mound" or "the milk bottles" or "the pitcher's mound"	"Pitcher's Mound"	"NA"	-1	0	"'The Pitchers Mound is is one of the many games that thrill and delight our visitors every day!' says [the noun]."
@@ -4029,9 +4147,9 @@ topic	description (text)	subject (text)	turn stamp (number)	weighting (number)	r
 "cashier's/check/fred/needleman" or "fred needleman" or "the check" or "the cashier's check"	"Fred Needleman"	"Insurance"	-1	3	"[The noun] says 'Uh, Fred is a special... contractor... We paid him. For services rendered.'"
 "services/rendered/special" or "services rendered"	"Services Rendered"	"Insurance"	-1	1	"'Fred did some work over at the bumper cars' says [the noun]."
 
-Section 19 - Table of Owner Object Responses
+Section 23 - Table of Whidbey Object Responses
 
-Table of Owner Object Responses
+Table of Whidbey Object Responses
 object (object)	description (text)	subject (text)	turn stamp (number)	weighting (number)	response (text)
 Cash 'N' Carry invoice	"Cash [']N['] Carry Invoice"	"Invoices"	-1	3	"[The second noun] says, 'Money[']s a little tight. The cost of consumables go up every week.'"
 Frank's Market invoice	"Frank[']s Market Invoice"	"Invoices"	-1	3	"[The second noun] says, 'I can[']t keep up with the cost of ingredients. Everything costs so much!'"
@@ -4051,22 +4169,17 @@ fuse13	"Magenta Fuse"	"NA"	-1	0	"'I know nothing about fuses', [the second noun]
 fuse15	"Orange Fuse"	"NA"	-1	0	"'I know nothing about fuses', [the second noun] says."
 fuse17	"Quartz Fuse"	"NA"	-1	0	"'I know nothing about fuses', [the second noun] says."
 
-Section 20 - Table of Confrontation
+Section 24 - Table of Confrontation
 
 Table of Confrontation
 topic	turn stamp (number)	accusation weight (number)	response (text)
-"insurance/fraud" or "insurance fraud"	-1	5	"[if total evidence is less than 31]'You have nothing on me', says [the noun].[otherwise if total evidence is less than 61][The noun] says, 'OK, maybe there[']s enough evidence to have me charged with [the topic understood] but you[']ll never make it stick.'[otherwise ]'Ok, I guess you got me. The carnival was losing money and we were going to go out of business. I was desparate to turn things around. 
-
-Then that Needleman kid got hurt on the bumper cars. We filed an insurance claim for it. When he got paid, Needleman asked if we could get more and split it. 
-
-It seemed like a good idea at the time. I could get some extra cash to pay the carnival[']s bills. Then the thought of the money got overwhelming and I thought, 'What if there was a fire and the estimate for repairs was, let[']s shall we say, generous. We could take the extra money, pay bills, and pocket the rest.[end if]"
-"insurance/policy" or "insurance policy"	-1	5	"[if total evidence is less than 31]'You have nothing on me', says [the noun].[otherwise if total evidence is less than 61][The noun] says, 'OK, maybe there[']s enough evidence to have me charged with [the topic understood] but you[']ll never make it stick.'[otherwise ]'Ok, I guess you got me. The carnival was losing money and we were going to go out of business. I was desparate to turn things around. 
+"insurance/fraud/policy/corruption/embezzlement" or "insurance fraud" or "insurance policy"	-1	5	"[if total evidence is less than 36]'You have nothing on me', says [the noun].[otherwise if total evidence is less than 76][The noun] says, 'OK, maybe there[']s enough evidence to have me charged with [the topic understood] but you[']ll never make it stick.'[otherwise ]'Ok, I guess you got me. The carnival was losing money and we were going to go out of business. I was desperate to turn things around. 
 
 Then that Needleman kid got hurt on the bumper cars. We filed an insurance claim for it. When he got paid, Needleman asked if we could get more and split it. 
 
 It seemed like a good idea at the time. I could get some extra cash to pay the carnival[']s bills. Then the thought of the money got overwhelming and I thought, 'What if there was a fire and the estimate for repairs was, let[']s shall we say, generous. We could take the extra money, pay bills, and pocket the rest.[end if]"
 
-Section 21 - Table of Janitor Movements
+Section 25 - Table of Janitor Movements
 
 Table of Janitor Movements
 mins (number)	destination (object)	
@@ -4083,9 +4196,9 @@ mins (number)	destination (object)
 55	TB-room
 0	Head of the Line
 
-Section 22 - Table of Owner Movements
+Section 26 - Table of Whidbey Movements
 
-Table of Owner Movements
+Table of Whidbey Movements
 mins (number)	destination (object)	
 3	Carnival Office
 8	CS-room
@@ -4100,7 +4213,7 @@ mins (number)	destination (object)
 53	Dungeon
 58	Guillotine Room
 
-Section 23 - Introduction to Hell Ride
+Section 27 - Introduction to Hell Ride
 
 When play begins:
 	choose row 1 in Table of Help Options;
@@ -4110,7 +4223,7 @@ You[']re a part-time reporter for The Tribune, the local paper. Earlier in the d
 
 As you explore the carnival, you learn (the hard way) that the [story title] attraction is malfunctioning with the potential for serious injuries to the riders. You must disable the ride and prevent any loss of life... including your own."
 
-Section 24 - Hell Ride Origins
+Section 28 - Hell Ride Origins
 
 When play begins:
 	 choose row 2 in Table of Help Options;
@@ -4130,7 +4243,7 @@ I hope you enjoy it.
 d.[line break]
 (dmontgom22@gmail.com)"
 
-Section 25 - Credits
+Section 29 - Credits
 
 Crediting is an action applying to nothing. Understand "Credits" as crediting.
 instead of crediting:
@@ -4138,7 +4251,7 @@ instead of crediting:
 	say "Extensions used in [story title]:[line break]";
 	say "[complete list of extension credits][line break]";
 	say "Additional Credits:[line break]";
-	say "Caitlyn Caluya-Bilbrick for her editing and proofreading super powers.[line break]";
+	say "Caitlyn Caluya-Bilbruck for her editing and proofreading super powers.[line break]";
 	say "The amazing Inform community over at https://IntFiction.org[paragraph break]";
 	say "The following awesome individuals for their beta testing, excellent feedback, and ideas:[line break]";
 	say "Joey Acrimonious[line break]";
@@ -4267,7 +4380,7 @@ title (text)	subtable (table name)	description (text)	toggle (rule)	used (number
 "[story title] Origins"	--	""
 "Introduction to Interactive Fiction"	Table of IF Introduction	--
 "Settings"	Table of Setting Options	--	
-"Credits"	--	"[story title], Copyright 2025, Dana Montgomery.[paragraph break]Extensions used in [story title]:[line break][complete list of extension credits][line break]Additional Credits:[line break]Caitlyn Caluya-Bilbrick for her editing and proofreading super powers.[line break]The amazing Inform community over at https://IntFiction.org.[paragraph break]The following awesome individuals for their beta testing, excellent feedback, and ideas:[line break]Joey Acrimonious[line break]Ryan Allocco[line break]Andy Broding[line break]Drew Cook[line break]RJ Kowalski[line break]John Montgomery[line break]"
+"Credits"	--	"[story title], Copyright 2025, Dana Montgomery.[paragraph break]Extensions used in [story title]:[line break][complete list of extension credits][line break]Additional Credits:[line break]Caitlyn Caluya-Bilbruck for her editing and proofreading super powers.[line break]The amazing Inform community over at https://IntFiction.org.[paragraph break]The following awesome individuals for their beta testing, excellent feedback, and ideas:[line break]Joey Acrimonious[line break]Ryan Allocco[line break]Andy Broding[line break]Drew Cook[line break]RJ Kowalski[line break]John Montgomery[line break]"
 "----- The Hints Below Contain Out Right Solutions -----"	--	"Part of the enjoyment of Interactive Fiction comes from the solving of the puzzles. For the most part all [story title] puzzles are solved within these hints. The hints are often blunt, especially at the end of a topic. I would, however, encourage you to play for the fun of it and reserve the hints for when you[']re truly stuck."
 "The Parking Lot"	Table of Parking Lot Hints	--
 "The Attractions"	Table of Attractions Hints	--
@@ -4328,7 +4441,7 @@ title (text)	subtable (table name)	description (text)	toggle (rule)	used (number
 "hint"	--	"Do you see anything from the top of the Ferris wheel?"
 "hint"	--	"There is a hidden area in the carnival."
 "hint"	--	"It[']s to the west behind the Concession Stand."
-"Fortune Teller"	table of hinting	"Esmeralda the Mysterious is our most popular attraction after [story title]."
+"Fortune Teller"	table of hinting	"Esmeralda the Fortune Teller is our most popular attraction after [story title]."
 "hint"	--	"You can buy a ticket at the ticket booth."
 "hint"	-- 	"Get a tarot reading and learn you fortune."
 "hint"	--	"Pay attention to any advice she may give you."

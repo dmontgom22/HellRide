@@ -43,12 +43,12 @@ picture 27 "C:\HellRide\Hell Ride.materials\Figures\RideDungeon.png" "The Dungeo
 picture 28 "C:\HellRide\Hell Ride.materials\Figures\RideGuillotine.png" "The Guillotine Room"
 picture 29 "C:\HellRide\Hell Ride.materials\Figures\RideExit.png" "The [story title] Exit"
 picture 30 "C:\HellRide\Hell Ride.materials\Figures\MercuryDime.png" "A Mercury dime"
-sound 31 "C:\HellRide\Hell Ride.materials\Sounds\Bell.ogg" "The sound of a bell"
+sound 31 "C:\HellRide\Hell Ride.materials\Sounds\Silence.ogg" "The sound of silence"
 
 ! Placeholder variables
 
 placeholder [IFID] = "E0A5AFB9-18BF-4485-B083-426CA51CCE70"
-placeholder [RELEASE] = "202"
+placeholder [RELEASE] = "203"
 placeholder [YEAR] = "2025"
 placeholder [TITLE] = "Hell Ride"
 placeholder [AUTHOR] = "No Shoes"
