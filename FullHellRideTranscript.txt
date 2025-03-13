@@ -2,12 +2,17 @@ Start of a transcript of:
 
 Hell Ride
 The ride of a lifetime... by No Shoes
-Release 202 / Serial number 250305 / Inform 7 v10.1.2 / D
+Release 203 / Serial number 250312 / Inform 7 v10.1.2 / D
 Inform 7 v10.1.2
 Identification number: //E0A5AFB9-18BF-4485-B083-426CA51CCE70//
 Interpreter version 0.6.0 / VM 3.1.3
 Basic Help Menu version 4 by Wade Clarke
 Menus version 5 by Wade Clarke
+Undo Output Control version 6.0.220529 by Nathanael Nerode (based on the extension by Erik Temple;
+integrates Empty Command Handling by Daniel Stelzer based on code by Matt Weiner)
+Command Preloading version 1.0.20230916 by Daniel Stelzer (based on I6 code by Andrew Plotkin)
+Autosave version 2.0.231013 by Daniel Stelzer (based on I6 code from Ultra Undo by Danii Willis)
+Story Mode version 2.0.1 by Drew Cook
 Object Response Tests version 7 by Juhana Leinonen
 
 >look
@@ -40,6 +45,8 @@ This is another bored teenager. He's thinking about the big game on Friday night
 
 >ask attendant about hell ride
 Hell Ride is behind on its maintenance schedule. Might want to skip that one.
+
+You've discovered some evidence. To see a list and weighting of the evidence you've collected, type "SHOW EVIDENCE". To collect more evidence, try to ASK someone ABOUT something. Or SHOW something TO someone.
 
 >talk to attendant about ferris wheel
 You can see the whole carnival from up there!
@@ -299,8 +306,6 @@ The janitor looks at you and waits for you to proceed.
 
 "Hell Ride is a finicky ride. I'm fixing something there every week. Last week, Mr. Whidbey asked me to skip Hell Ride's maintenance slot. There was a real fire in the Stakes Room last month. And just yesterday I caught him creeping around the guillotine room" says the janitor.
 
-You've discovered some evidence. To see a list and weighting of the evidence you've collected, type "SHOW EVIDENCE". To collect more evidence, try to ASK someone ABOUT something. Or SHOW something TO someone.
-
 >ne
 
 Ticket Booth
@@ -412,7 +417,7 @@ Esmeralda says, "Hey! I need those!"
 (the Fortune Teller ticket to Esmeralda)
 You give the Fortune Teller ticket to Esmeralda.
 
-Stepping inside, you're greeted by the Esmeralda, a figure cloaked in flowing robes with a jeweled headpiece catching the flickering light. Her piercing eyes seem to look right through you as they gesture for you to sit at a small round table. At its center rests a glowing crystal ball, surrounded by tarot cards and mysterious trinkets.
+Stepping inside, you're greeted by Esmeralda, a figure cloaked in flowing robes with a jeweled headpiece catching the flickering light. Her piercing eyes seem to look right through you as they gesture for you to sit at a small round table. At its center rests a glowing crystal ball, surrounded by tarot cards and mysterious trinkets.
 
 Esmeralda's voice is low and melodic, weaving an air of intrigue as they ask you to focus on a question and offer you a tarot reading. The room seems to shrink, the bustling carnival outside fading into the background as she reveals your fate. Each card turned feels significant, as though unlocking a secret you didn't know you carried.
 
@@ -1332,7 +1337,7 @@ The janitor says, "Looks like the carnival is in some financial trouble."
 The janitor says, That fire in Hell Ride was very really bad. It took almost two weeks to get it fully repaired. But it shouldn't have cost this much. I think Mr Whidbey got ripped off. Or, he got it fixed on the cheap and pocketed the rest."
 
 >se
-You can't go that way.
+There are exits are to the north and south.
 
 >show oriental trading to janitor
 The janitor says, "These prizes are cheaper and flimsier than usual."
@@ -1349,7 +1354,7 @@ The janitor says "What?! That's the name of the kid who got hurt in the Bumper C
 >display evidence
   Weight   Evidence collected:
   ------   --------------------------------------------------------
-?    8     Evidence concerning accidents with the attractions
+?   11     Evidence concerning accidents with the attractions
 ?    8     Evidence concerning insurance
 ?    3     Evidence concerning past due invoices
 
@@ -2642,10 +2647,19 @@ You have received points for the following:
 ?  Acquiring the Emerald fuse:               10 points
 ?  Bringing the wrench to the Bumper Cars:   5 points
 ?  Acquiring the Gray fuse:                  10 points
-?  Winning the knock-off Swiss Army knife:             5 points
+?  Winning the knock-off Swiss Army knife:   5 points
 ?  Winning the Magenta fuse:                 5 points
 ?  Acquiring the Aqua fuse:                  10 points
 ?  Acquiring the pliers:                     5 points
+
+
+  Weight   Evidence collected:
+  ------   --------------------------------------------------------
+?   11     Evidence concerning accidents with the attractions
+?    8     Evidence concerning insurance
+?    3     Evidence concerning past due invoices
+
+You haven't got enough evidence for an arrest.
 
 >i
 You are carrying:
@@ -3361,15 +3375,44 @@ The Police Chief listens with interest to what you have to say.
 >show evidence
   Weight   Evidence collected:
   ------   --------------------------------------------------------
-?   30     Evidence concerning accidents with the attractions
+?   33     Evidence concerning accidents with the attractions
 ?   23     Evidence concerning insurance
 ?   12     Evidence concerning past due invoices
 ?    5     Evidence concerning fuses
 ?    1     Evidence concerning Mr Whidbey
 
-You've got enough evidence for a strong case.
+You have enough evidence to press charges.
 
->accuse whidbey of fraud
+>ask janitor about hell ride
+The janitor looks bored as he waits for you to speak.
+
+"Hell Ride is a finicky ride. I'm fixing something there every week. Last week, Mr. Whidbey asked me to skip Hell Ride's maintenance slot. There was a real fire in the Stakes Room last month. And just yesterday I caught him creeping around the guillotine room" says the janitor.
+
+>ask janitor about mystic 
+The janitor looks at you expectantly.
+
+"Sorry, I don't know much about that," the janitor drawls.
+
+>show mystic invoice to janitor
+The janitor says, That fire in Hell Ride was very really bad. It took almost two weeks to get it fully repaired. But it shouldn't have cost this much. I think Mr Whidbey got ripped off. Or, he got it fixed on the cheap and pocketed the rest."
+
+>ask janitor about bumper cars
+The janitor looks at you and waits for you to proceed.
+
+The janitor says, "That reminds me. Not long ago, one of the bumper cars was shorting out and electrifying the car. A visitor got hurt. A young lad, what was his name? Fred something, I think."
+
+>show evidence
+  Weight   Evidence collected:
+  ------   --------------------------------------------------------
+?   38     Evidence concerning accidents with the attractions
+?   23     Evidence concerning insurance
+?   12     Evidence concerning past due invoices
+?    5     Evidence concerning fuses
+?    1     Evidence concerning Mr Whidbey
+
+You've got enough evidence for a conviction.
+
+>accuse whidbey of insurance fraud
 Mr Whidbey nervously shifts his weight from one foot to the other.
 
 "Ok, I guess you got me. The carnival was losing money and we were going to go out of business. I was desperate to turn things around.
@@ -3384,7 +3427,7 @@ He handcuffs Whidbey, thanks you for your service to the community, and leads Mr
 
 *** You have won! ***
 
-You've received 200 points out of a possible 200 in 641 moves!
+You've received 200 points out of a possible 200 in 645 moves!
 
 You have received points for the following: 
 
@@ -3411,7 +3454,7 @@ You have received points for the following:
 ?  Acquiring the Emerald fuse:               10 points
 ?  Bringing the wrench to the Bumper Cars:   5 points
 ?  Acquiring the Gray fuse:                  10 points
-?  Winning the knock-off Swiss Army knife:             5 points
+?  Winning the knock-off Swiss Army knife:   5 points
 ?  Winning the Magenta fuse:                 5 points
 ?  Acquiring the Aqua fuse:                  10 points
 ?  Acquiring the pliers:                     5 points
@@ -3421,6 +3464,17 @@ You have received points for the following:
 ?  Flipping the Gray switch:                 5 points
 ?  Flipping the Indigo switch:               5 points
 ?  Flipping the Khaki switch:                5 points
+
+
+  Weight   Evidence collected:
+  ------   --------------------------------------------------------
+?   38     Evidence concerning accidents with the attractions
+?   23     Evidence concerning insurance
+?   12     Evidence concerning past due invoices
+?    5     Evidence concerning fuses
+?    1     Evidence concerning Mr Whidbey
+
+You've got enough evidence for a conviction.
 
 
 Would you like to RESTART, RESTORE a saved game, QUIT, or UNDO the last command?

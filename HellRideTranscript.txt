@@ -2,12 +2,17 @@ Start of a transcript of:
 
 Hell Ride
 The ride of a lifetime... by No Shoes
-Release 202 / Serial number 250305 / Inform 7 v10.1.2 / D
+Release 203 / Serial number 250312 / Inform 7 v10.1.2 / D
 Inform 7 v10.1.2
 Identification number: //E0A5AFB9-18BF-4485-B083-426CA51CCE70//
 Interpreter version 0.6.0 / VM 3.1.3
 Basic Help Menu version 4 by Wade Clarke
 Menus version 5 by Wade Clarke
+Undo Output Control version 6.0.220529 by Nathanael Nerode (based on the extension by Erik Temple;
+integrates Empty Command Handling by Daniel Stelzer based on code by Matt Weiner)
+Command Preloading version 1.0.20230916 by Daniel Stelzer (based on I6 code by Andrew Plotkin)
+Autosave version 2.0.231013 by Daniel Stelzer (based on I6 code from Ultra Undo by Danii Willis)
+Story Mode version 2.0.1 by Drew Cook
 Object Response Tests version 7 by Juhana Leinonen
 
 >brief
@@ -58,7 +63,7 @@ You fork over $3.00 for the parking ticket, leaving yourself with $32.00.
 >put stub on dashboard
 You put the parking stub on the dashboard.
 
->s
+>south
 
 Ticket Booth
 Painted in bright red and yellow stripes, the ticket kiosk stands at the entrance with flickering lights to draw attention. A smiling cashier hands out tickets, while the cash drawer jingles. A digital payment system sits in the corner. Too bad you don't have a debit card.
@@ -80,7 +85,7 @@ Carousel ticket: You fork over $1.00 for the Carousel ticket, leaving yourself w
 
 [Your score has just gone up by five points.]
 
->e
+>east
 
 High Striker
 A tall machine stands with bright red, yellow, and blue lights. A sign sits at the top reading "Test Your Strength!" The base is dark, polished wood, with a sturdy metal pole and a bell at the top. Markings along the pole indicate strength. A smaller sign says, "Buy a mallet, strike the bell, win a prize." Spectators cheer as the sound of the mallet hitting the target fills the night.
@@ -91,7 +96,7 @@ You can see a Strongman attendant, a lever, and some High Striker prizes here.
 
 The attendant is holding a mallet.
 
->l at prizes
+>look at prizes
 The prizes are a teddy bear, a knock-off Swiss Army knife, a magenta colored fuse, and a poster of Taylor Swift.
 
 >buy mallet
@@ -100,18 +105,18 @@ You fork over $2.00 for the mallet, leaving yourself with $18.00.
 >hit bullseye with mallet
 You lift the mallet high and bring it down on the lever with all your might! The striker rises towards the bell stopping at "Weakling".
  
->g
+>again
 You lift the mallet high and bring it down on the lever with all your might! The striker rises towards the bell stopping at "Getting Stronger".
  
->g
+>again
 You lift the mallet high and bring it down on the lever with all your might! The striker rises towards the bell stopping at "Getting Stronger".
  
->g
+>again
 You lift the mallet high and bring it down on the lever with all your might! The striker rises towards the bell stopping at "Average".
  
 You can't be sure of it but it seems as if the mallet isn't heavy enough to ring the bell.
 
->se
+>southeast
 
 Pitchers Mound
 The milk bottle toss is a classic game of skill and luck. A pyramid of colorful bottles sits on a sturdy platform - three on the bottom, two in the middle, and one at the top. Players throw baseballs to knock down the stack and win a prize. The booth is lively, with cheering and the clatter of falling bottles. The attendant calls, "Step right up! Three balls for a dime!" Prizes from toys to stuffed animals hang nearby. With this carnival favorite, every toss is filled with suspense.  You thought you caught a flash of something coming from the area of the booth.
@@ -127,7 +132,7 @@ The milk bottles are stacked in three neat rows: three bottles on the bottom, tw
 
 You can also see a Pitchers Mound attendant and some Pitchers Mound prizes here.
 
->l under booth
+>look under booth
 You find the Mercury dime!
 
 >get mercury dime
@@ -135,13 +140,13 @@ Taken.
 
 [Your score has just gone up by five points.]
 
->nw
+>northwest
 
 High Striker
 You can see a Strongman attendant, a lever, and some High Striker prizes here.
 
 
->ne
+>northeast
 
 Dime Toss Game
 The booth is brightly colored with red-and-white stripes, twinkling lights, and a sign reading "TOSS A DIME - WIN A PRIZE!" Prizes hang around the booth, from stuffed animals to shiny trinkets. Gleaming plates reflect the light, waiting for dimes. The "ping" of dimes hitting plates is followed by the satisfying "plop" when they land. Shouts of victory and playful groans mix with carnival music and laughter. The operator calls out, drawing in onlookers.
@@ -160,13 +165,13 @@ You are now holding a horseshoe magnet.
 
 [Your score has just gone up by five points.]
 
->sw
+>southwest
 
 High Striker
 You can see a Strongman attendant, a lever, and some High Striker prizes here.
 
 
->se
+>southeast
 
 Pitchers Mound
 The milk bottles are stacked in three neat rows: three bottles on the bottom, two in the middle, and one on top.
@@ -195,13 +200,13 @@ You are now holding a crimson colored fuse.
 (to the Pitchers Mound attendant)
 The Pitchers Mound attendant says, "Sorry. You only get to play once."
 
->nw
+>northwest
 
 High Striker
 You can see a Strongman attendant, a lever, and some High Striker prizes here.
 
 
->e
+>east
 
 Ferris Wheel
 The Ferris wheel dominates the carnival, its bright lights visible from every corner. Its massive steel frame arches high, with colorful gondolas swaying as it turns. At night, flashing in bursts of red, green, and white, the wheel dazzles with lights. The air buzzes with the hum of the motor. The operator calls, "Step right up! The best view of the carnival awaits!" From the top, riders get a panoramic view of the fairgrounds, with city lights stretching to the horizon
@@ -216,13 +221,13 @@ You give the Ferris Wheel ticket to the Ferris Wheel attendant.
 
 As you enter the gondola, the safety bar clicks into place, and the Ferris wheel begins its ascent. The sounds of the carnival fade, replaced by the hum of machinery and a soft breeze. At the peak, the carnival sprawls below, its lights twinkling against the twilight sky. The world falls quiet up here. The gondola sways gently, adding excitement to the serene view. From the top you can see something to the west of the concession stand. As you descend, the sounds of the carnival return, bringing you back to the fun.
 
->w
+>west
 
 High Striker
 You can see a Strongman attendant, a lever, and some High Striker prizes here.
 
 
->w
+>west
 
 Ticket Booth
 You can see a janitor, a Cashier, and a ticket kiosk here.
@@ -238,7 +243,7 @@ Out of the corner of his eye, the janitor sees you reach for his key ring.
 
 The janitor heads to the High Striker.
 
->e
+>east
 
 High Striker
 You can see a janitor, a Strongman attendant, a lever, and some High Striker prizes here.
@@ -252,12 +257,12 @@ While the janitor is distracted, you manage to steal the brass ring from the jan
 
 Taken.
 
->w
+>west
 
 Ticket Booth
 You can see a Cashier and a ticket kiosk here.
 
->sw
+>southwest
 
 Concession Stand
 The concession stand is a destination for many along the midway. Twinkling lights frame the stand making it glow amid the carnival's buzz.
@@ -273,7 +278,7 @@ You can also see a Concession attendant, a menu, a Drink of Cola, some Bubblegum
 >buy bubblegum
 You fork over $1.00 for the Bubblegum, leaving yourself with $17.00.
 
->w
+>west
 
 Behind the Concession Stand
 Behind the concession stand, to one side, is the trash generated from the day's activities and to the other side boxes of supplies. There is a chair here surrounded by cigarette butts. There is an exit to the east.
@@ -288,14 +293,14 @@ Taken.
 
 [Your score has just gone up by ten points.]
 
->e
+>east
 
 Concession Stand
 Nearby a sturdy door leads south.
 
 You can also see a Concession attendant, a menu, a Drink of Cola, a Bucket of Popcorn, a Candy Apple, Cotton Candy, and a Soft Pretzel here.
 
->s
+>south
 (first opening the sturdy door)
 (first unlocking the sturdy door)
 (with the brass key)
@@ -315,7 +320,7 @@ As you enter the room, you see Mr Whidbey with his back to the door. He's talkin
 
 "Hello? Oh, it's you." says Mr. Whidbey.
 
->z
+>wait
 Time passes.
 
 Mr. Whidbey listens to the other end of the conversation.
@@ -325,22 +330,22 @@ You are completely focused on the conversation you are overhearing.
 
 "I know, I know, but what am I supposed to do. We have to get that Needleman kid more money. Another $15,000 ought to do it."
 
->z
+>wait
 Time passes.
 
 Isn't this why I buy insurance? Don't worry. You'll get your piece. Everyone will get their piece.
 
->z
+>wait
 Time passes.
 
 Mr. Whidbey says "I need that money in a hurry though before anyone gets suspicious. If anything happens then you'll go down too."
 
->n
+>north
 You're afraid if you move too much, Mr Whidbey will notice you!
 
 "Ok, I'll try to stall for a bit but I won't be able to do it for long."
 
->z
+>wait
 Time passes.
 
 "Hey! What are you doing here? This is area is for employees only," Mr. Whidbey shouts at you. "Get out of here. Now!"
@@ -358,7 +363,7 @@ You can also see a Concession attendant, a menu, a Drink of Cola, a Bucket of Po
 
 You suddenly find yourself escorted outside the Carnival Office unceremoniously only to find yourself in the Concession Stand.
 
->s
+>south
 
 Carnival Office
 Nearby a sturdy door leads north to the Concession Stand.
@@ -425,22 +430,22 @@ Taken.
 
 [Your score has just gone up by ten points.]
 
->l at check
+>look at check
 This cashier's check is made payable to "Fred Needleman". The amount is $10,000 and the memo line reads "For services rendered."
 
->n
+>north
 
 Concession Stand
 Nearby a sturdy door leads south to the Carnival Office.
 
 You can also see a Concession attendant, a menu, a Drink of Cola, a Bucket of Popcorn, a Candy Apple, Cotton Candy, and a Soft Pretzel here.
 
->ne
+>northeast
 
 Ticket Booth
 You can see a Cashier and a ticket kiosk here.
 
->w
+>west
 In front of the tent, the barker gestures excitedly, calling out:
 
 Ladies and gentlemen, boys and girls, gather 'round! 
@@ -461,67 +466,67 @@ You can see a Barker here.
 (putting the parking ticket into the fanny pack to make room)
 You hand over a dime, and the barker nods, waving you through. As you step up to the entrance, the air feels thicker and the sounds of the carnival fade away. You've entered an entirely different world now. Before you, there is a tent. Intrigued, you take your first step towards the Little Egypt Show. You can now head west into the show.
 
->w
+>west
 
 Show Tent
 You are inside the Little Egypt Show. The attraction's facade is to the east. There are folding chairs standing vigil in neat in rows. The show should start soon.
 
->z
+>wait
 Time passes.
 
->z
+>wait
 Time passes.
 
->z
+>wait
 Time passes.
 
->z
+>wait
 Time passes.
 
->z
+>wait
 Time passes.
 
->z
+>wait
 Time passes.
 
->z
+>wait
 Time passes.
 
->z
+>wait
 Time passes.
 
->z
+>wait
 Time passes.
 
->z
+>wait
 Time passes.
 
->z
+>wait
 Time passes.
 
 The tent is dimly lit, the stage is a fully decorated representation of some Middle Eastern palace, featuring rich, colorful fabrics, brass ornaments, and lanterns casting a warm, flickering glow. Heady incense wafts through the air, softening everything around the edges. Enhancing the mystique, the backdrop displays painted scenes of pyramids, desert landscapes, and  domed structures. The colorful onion topped buildings and jewel tones set to the sepia colored landscape have you transported far away.
 
->z
+>wait
 Time passes.
 
 Little Egypt emerges, draped in flowing silken veils. Skillfully she twirls using them as part of the dance. A sparkling, sequined bodice opens into a gauze skirt, adorned with jingling coin belts and jewelry that accentuate her dance.
 
->z
+>wait
 Time passes.
 
 The performance begins with slow, undulating movements, drawing you into the rhythm of the music. Traditional instruments like the oud, darbuka, or zurna are an accompanying chorus. As the tempo builds, her hips, torso, and hands twist in an intricate and mesmerizing pattern. Little Egypt demonstrates remarkable control and fluidity. She dramatically spins, drops, and shimmies, often punctuating the beat with a quick jingle of her coin belt.
 
->z
+>wait
 Time passes.
 
 Little Egypt makes eye contact with you and smiles enigmatically. In her performance she balances a fine silver sword on her head and accents her dance with tinkling finger cymbals.
 
->z
+>wait
 Time passes.
 
 The music oscillates between hauntingly slow melodies and rapid, energetic drum beats, a roller coaster of emotion that leaves you entranced. Little Egypt relies on the music's dynamic changes to tell a story with movements reflecting joy, sorrow, seduction, and celebration.
 
->z
+>wait
 Time passes.
 
 The performance concludes with a dramatic flourish, an energetic shimmy, a bold spin, and Little Egypt casts off her veils. The dancer takes a bow to thunderous applause, leaving you spellbound by the sensual display.
@@ -531,7 +536,7 @@ You applaud until your hands are sore. Did she just wink at you?
 As she leaves the stage, Little Egypt tosses one of her veils to you!
 
 
->z
+>wait
 Time passes.
 
 >wear veil
@@ -547,17 +552,17 @@ Taken.
 >turn it on
 You flip a switch. A strong, narrow beam of light shines from the lit lantern.
 
->e
+>east
 
 Show Facade
 You can see a Barker here.
 
->e
+>east
 
 Ticket Booth
 You can see a janitor, a Cashier, and a ticket kiosk here.
 
->s
+>south
 
 Head of the Line
 You are standing in front of an attendant with his hand open waiting for your ticket. The entrance to the ride is south of here. The ride operator tells you that you're lucky you showed up when you did because this will be the last trip through Hell Ride for the night. You notice that all the other cars are empty. The Ticket Kiosk is north of here.
@@ -567,7 +572,7 @@ You can see a Hell Ride attendant here.
 >give hell ride ticket to attendant
 You give the Hell Ride ticket to the Hell Ride attendant.
 
->s
+>south
 
 Ride Entrance
 The cars for Hell Ride stop here, and the safety bar clicks into place as riders board the cars. Ahead, the grotesque entrance looms - a twisted metal archway adorned with spikes, skulls, and flickering blood-red lights. A faint sulfuric smell mixes with the scent of popcorn.
@@ -576,7 +581,7 @@ The "HELL RIDE" sign pulses above the door, while demon statues with clawed hand
 
 You can see a Hell Ride car (empty) here.
 
->e
+>east
 
 Dark Passage
 This room is backstage at the Hell Ride attraction. The room is littered with bags of trash, piles of junk, and dust bunnies so large they should be paying rent. There an exit to the south and west.
@@ -585,7 +590,7 @@ You can see Mr Whidbey here.
 
 [Your score has just gone up by five points.]
 
->x piles of junk
+>examine piles of junk
 This is a pile of assorted flotsam and jetsam from the carnival. None of it looks very interesting.
 
 In the pile of junk is a flashlight.
@@ -602,35 +607,35 @@ You flip a switch. A strong, narrow beam of light shines from the lit flashlight
 
 Mr Whidbey heads to the Maintenance Office.
 
->w
+>west
 
 Ride Entrance
 You can see a Hell Ride car (empty) here.
 
->n
+>north
 
 Head of the Line
 You can see a Hell Ride attendant here.
 
->n
+>north
 
 Ticket Booth
 You can see a Cashier and a ticket kiosk here.
 
->e
+>east
 
 High Striker
 You can see a Strongman attendant, a lever, and some High Striker prizes here.
 
 
->e
+>east
 
 Ferris Wheel
 Hey! Is that a two dollar bill on the ground?
 
 You can also see a janitor and a Ferris Wheel attendant here.
 
->l at janitor
+>look at janitor
 The janitor looks at you and waits for you to proceed.
 
 The janitor is a portly gentleman wearing dirty overalls, leaning on a broom. He complains that he's missing his flashlight. "My pliers are missing too!" he says.
@@ -640,32 +645,32 @@ Hey! Thanks, I really appreciate it. I've been lost without my flashlight.
 
 The janitor heads to the High Striker.
 
->w
+>west
 
 High Striker
 You can see a janitor, a Strongman attendant, a lever, and some High Striker prizes here.
 
 
->w
+>west
 
 Ticket Booth
 You can see a Cashier and a ticket kiosk here.
 
->s
+>south
 
 Head of the Line
 You can see a Hell Ride attendant here.
 
->s
+>south
 
 Ride Entrance
 You can see a Hell Ride car (empty) here.
 
->e
+>east
 
 Dark Passage
 
->s
+>south
 
 Maintenance Office
 The maintenance office is a dim, cluttered space, filled with the smells of grease, sweat, and popcorn. Disorganized shelves are lined with tools and parts, while paint cans and grease jars clutter the workbenches. A battered desk holds wires, gears, and springs, with a bent piece of metal in a vise.
@@ -682,7 +687,7 @@ Nearby an aqua colored door leads west.
 
 You can also see a worn photo and a desk (on which are a coffee mug and a radio) here.
 
->u
+>up
 
 Dark Hallway
 This is a poorly lit hallway. Ahead to the west you can see a closed door.
@@ -691,7 +696,7 @@ Nearby a ladder leads down to the Maintenance Office.
 
 Nearby a metal door leads west.
 
->w
+>west
 (first opening the metal door)
 (first unlocking the metal door)
 (with the brass key)
@@ -716,14 +721,14 @@ You switch the big switch off.
 
 [Your score has just gone up by five points.]
 
->e
+>east
 
 Dark Hallway
 Nearby a metal door leads west to Control Room.
 
 Nearby a ladder leads down to the Maintenance Office.
 
->d
+>down
 
 Maintenance Office
 Nearby a ladder leads up to Dark Hallway.
@@ -732,7 +737,7 @@ Nearby an aqua colored door leads west.
 
 You can also see a worn photo and a desk (on which are a coffee mug and a radio) here.
 
->s
+>south
 
 Crawl Space
 The crawl space beneath the ride is cramped and dark, filled with the hum of machinery above. The air is thick with oil and rust. Sounds echo - groaning steel, clanking chains, and the rhythmic thrum of motors.
@@ -743,7 +748,7 @@ The backstage area continues north and south.
 
 Nearby a crimson colored door leads west.
 
->s
+>south
 
 Mechanical Room North
 The north mechanical room is compact, housing auxiliary systems for the ride. A soft hum of capacitors and relays fills the space, interrupted only by the occasional hissing of hydraulic fluid.
@@ -768,12 +773,12 @@ Taken.
 (putting the Fortune Teller ticket into the fanny pack to make room)
 Taken.
 
->n
+>north
 
 Crawl Space
 Nearby a crimson colored door leads west.
 
->n
+>north
 
 Maintenance Office
 Nearby a ladder leads up to Dark Hallway.
@@ -782,26 +787,26 @@ Nearby an aqua colored door leads west.
 
 You can also see a worn photo and a desk (on which are a coffee mug and a radio) here.
 
->n
+>north
 
 Dark Passage
 
->w
+>west
 
 Ride Entrance
 You can see a Hell Ride car (empty) here.
 
->n
+>north
 
 Head of the Line
 You can see a janitor and a Hell Ride attendant here.
 
->n
+>north
 
 Ticket Booth
 You can see a Cashier and a ticket kiosk here.
 
->nw
+>northwest
 
 Bumper Cars
 The bumper cars are a lively scene of  flashing lights and vibrant decorations. The arena is surrounded by padded barriers, ensuring the rider's safety. Cars in faded reds, blues, yellows, and greens glide across the slick floor, each equipped with a steering wheel and padded bumper. Riders maneuver their cars with intensity, creating a din of bumps and laughter. Overhead, electric poles hum with energy. While onlookers cheer from the sidelines, the bumper cars offer playful competition and nostalgic fun for all. The Ticket Kiosk is southeast of here.
@@ -817,14 +822,14 @@ Taken.
 
 [Your score has just gone up by ten points.]
 
->se
+>southeast
 
 Ticket Booth
 You can see a Cashier and a ticket kiosk here.
 
 The janitor arrives from the Head of the Line.
 
->e
+>east
 
 High Striker
 You can see a Strongman attendant, a lever, and some High Striker prizes here.
@@ -852,26 +857,26 @@ You are now holding a magenta colored fuse.
 
 [Your score has just gone up by five points.]
 
->w
+>west
 
 Ticket Booth
 You can see a janitor, a Cashier, and a ticket kiosk here.
 
->s
+>south
 
 Head of the Line
 You can see a Hell Ride attendant here.
 
->s
+>south
 
 Ride Entrance
 You can see a Hell Ride car (empty) here.
 
->e
+>east
 
 Dark Passage
 
->s
+>south
 
 Maintenance Office
 Nearby a ladder leads up to Dark Hallway.
@@ -880,19 +885,19 @@ Nearby an aqua colored door leads west.
 
 You can also see a worn photo and a desk (on which are a coffee mug and a radio) here.
 
->s
+>south
 
 Crawl Space
 Nearby a crimson colored door leads west.
 
->s
+>south
 
 Mechanical Room North
 Nearby an emerald colored door leads west.
 
 You can also see a toolbox (in which are some channel locks and a hammer) here.
 
->s
+>south
 
 Mechanical Room South
 The south mechanical room is the heart of the ride, with a massive motor powering the thick belts, pulleys, and gears. Electrical panels line the walls, flashing "High Voltage" and colorful indicator lights.
@@ -918,7 +923,7 @@ You drop the chewed bubblegum into the grate. The emerald colored fuse attaches 
 
 [Your score has just gone up by ten points.]
 
->s
+>south
 
 Generator Room
 The generator room is small, with concrete walls stained by oil and grime. The air smells of diesel, metal, and damp earth.
@@ -931,7 +936,7 @@ The backstage area continues north and south of here.
 
 Nearby an indigo colored door leads west.
 
->s
+>south
 
 Electrical Room
 The electrical room is small, hidden behind the carnival's attractions. The air smells of overheated wires and metal.
@@ -944,7 +949,7 @@ An emergency shutdown panel and fire extinguisher sit nearby. Fluorescent lights
 
 This room is eerily quiet, missing the ever present buzz of electricity. There are exits in all directions.
 
->ne
+>northeast
 
 Electrical Closet One
 This is Electrical Closet One. There's an electrical panel here and an exit to the southwest.
@@ -961,11 +966,11 @@ Cash 'N' Carry invoice: Done.
 (the silver key)
 Taken.
 
->sw
+>southwest
 
 Electrical Room
 
->s
+>south
 
 Storage Room
 The storage room is cramped and hidden, with rusted walls and peeling wood. The air smells of dust, damp canvas, and stale popcorn.
@@ -980,7 +985,7 @@ There is an exit to the north.
 
 Nearby a khaki colored door leads west.
 
->w
+>west
 (first opening the khaki colored door)
 (first unlocking the khaki colored door)
 (with the silver key)
@@ -1005,7 +1010,7 @@ You fork over $3.50 for the aqua colored fuse, leaving yourself with $13.50.
 
 [Your score has just gone up by ten points.]
 
->n
+>north
 As you enter the room, you can see Mr Whidbey across the way. He seems to be doing something around the guillotine platform. You walk closer to see what he is doing and startle him. Mr Whidbey spins around and glares at you. As he turns and walks out of the room, you think you saw him drop something.
 
 Guillotine Room
@@ -1027,7 +1032,7 @@ Nearby an indigo colored door leads east to the Generator Room.
 
 You can also see a guillotine platform here.
 
->l under platform
+>look under platform
 You find the pliers!
 
 >get pliers
@@ -1035,7 +1040,7 @@ Taken.
 
 [Your score has just gone up by five points.]
 
->n
+>north
 
 Dungeon
 The dungeon is dark and damp, the air thick with sweat, blood, and mildew. Lanterns flicker on rusted sconces, casting twisted shadows.
@@ -1050,7 +1055,7 @@ Nearby a gray colored door leads east to the Mechanical Room South.
 
 You can also see an iron chair, a splintered rack, and a glowing brazier here.
 
->e
+>east
 (first opening the gray colored door)
 (first unlocking the gray colored door)
 (with the silver key)
@@ -1060,16 +1065,16 @@ Nearby a gray colored door leads west to the Dungeon.
 
 You can also see a grate (empty) here.
 
->s
+>south
 
 Generator Room
 Nearby an indigo colored door leads west to the Guillotine Room.
 
->s
+>south
 
 Electrical Room
 
->ne
+>northeast
 
 Electrical Closet One
 
@@ -1090,11 +1095,11 @@ The aqua indicator's light goes on.
 
 [Your score has just gone up by five points.]
 
->sw
+>southwest
 
 Electrical Room
 
->e
+>east
 
 Electrical Closet Three
 This is Electrical Closet Three. There's an electrical panel here and an exit to the west.
@@ -1116,11 +1121,11 @@ The crimson indicator's light goes on.
 
 [Your score has just gone up by five points.]
 
->w
+>west
 
 Electrical Room
 
->se
+>southeast
 
 Electrical Closet Five
 This is Electrical Closet Five. There's an electrical panel here and an exit to the northwest.
@@ -1142,11 +1147,11 @@ The emerald indicator's light goes on.
 
 [Your score has just gone up by five points.]
 
->nw
+>northwest
 
 Electrical Room
 
->sw
+>southwest
 
 Electrical Closet Seven
 This is Electrical Closet Seven. There's an electrical panel here and an exit to the northeast.
@@ -1168,11 +1173,11 @@ The gray indicator's light goes on.
 
 [Your score has just gone up by five points.]
 
->ne
+>northeast
 
 Electrical Room
 
->w
+>west
 
 Electrical Closet Nine
 This is Electrical Closet Nine. There's an electrical panel here and an exit to the east.
@@ -1194,11 +1199,11 @@ The indigo indicator's light goes on.
 
 [Your score has just gone up by five points.]
 
->e
+>east
 
 Electrical Room
 
->nw
+>northwest
 
 Electrical Closet Eleven
 This is Electrical Closet Eleven. There's an electrical panel here and an exit to the southeast.
@@ -1220,35 +1225,35 @@ The khaki indicator's light goes on.
 
 [Your score has just gone up by five points.]
 
->se
+>southeast
 
 Electrical Room
 
->n
+>north
 
 Generator Room
 Nearby an indigo colored door leads west to the Guillotine Room.
 
->n
+>north
 
 Mechanical Room South
 Nearby a gray colored door leads west to the Dungeon.
 
 You can also see a grate (empty) here.
 
->n
+>north
 
 Mechanical Room North
 Nearby an emerald colored door leads west.
 
 You can also see a toolbox (in which are some channel locks and a hammer) here.
 
->n
+>north
 
 Crawl Space
 Nearby a crimson colored door leads west.
 
->n
+>north
 
 Maintenance Office
 Nearby a ladder leads up to Dark Hallway.
@@ -1257,14 +1262,14 @@ Nearby an aqua colored door leads west.
 
 You can also see a worn photo and a desk (on which are a coffee mug and a radio) here.
 
->u
+>up
 
 Dark Hallway
 Nearby a ladder leads down to the Maintenance Office.
 
 Nearby a metal door leads west to Control Room.
 
->w
+>west
 
 Control Room
 Nearby a metal door leads east to Dark Hallway.
@@ -1318,7 +1323,7 @@ Mr Whidbey exclaims, "Accusations? What accusations?
 
 The Police Chief listens with interest to what you have to say.
 
->l
+>look
 Control Room
 The backstage control room is a functional space with gray, scuffed walls. A large monitor shows live feeds while control panels with dials, buttons, and lights manage the rides and systems. The panels are lit.
 
@@ -1359,7 +1364,7 @@ You have received points for the following:
 ?  Turning off the big switch:               5 points
 ?  Bringing the wrench to the Bumper Cars:   5 points
 ?  Acquiring the Gray fuse:                  10 points
-?  Winning the knock-off Swiss Army knife:             5 points
+?  Winning the knock-off Swiss Army knife:   5 points
 ?  Winning the Magenta fuse:                 5 points
 ?  Acquiring the Emerald fuse:               10 points
 ?  Acquiring the Aqua fuse:                  10 points
@@ -1370,6 +1375,12 @@ You have received points for the following:
 ?  Flipping the Gray switch:                 5 points
 ?  Flipping the Indigo switch:               5 points
 ?  Flipping the Khaki switch:                5 points
+
+
+  Weight   Evidence collected:
+  ------   --------------------------------------------------------
+
+You haven't got enough evidence for an arrest.
 
 >ask whidbey about indigo fuse
 Mr Whidbey looks at you expectantly.
@@ -1433,4 +1444,148 @@ Mr Whidbey says, That fire in Hell Ride was very expensive to repair. And it put
 
 You haven't got enough evidence for an arrest.
 
->
+>show check to whidbey
+Mr Whidbey says "Uh, Fred is a special... contractor... We paid him. For services rendered."
+
+Mr. Whidbey quickly changes the subject
+
+>ask whidbey about hell ride
+Mr Whidbey waits for you to speak.
+
+"Hell Ride is the premier attraction here at  Whidbey Amusements. It's both spooky and fun! The visitors love it! The fire last month was unfortunate and expensive" says Mr Whidbey.
+
+>ask whidbey about pliers
+Mr Whidbey looks at you expectantly.
+
+"Oh! I thought I lost... um, those belong to the janitor. Where did you find them?" asks Mr Whidbey.
+
+>show indigo fuse to whidbey
+You can only do that to something animate.
+
+>ask janitor about hell ride
+The janitor looks at you expectantly.
+
+"Hell Ride is a finicky ride. I'm fixing something there every week. Last week, Mr. Whidbey asked me to skip Hell Ride's maintenance slot. There was a real fire in the Stakes Room last month. And just yesterday I caught him creeping around the guillotine room" says the janitor.
+
+>ask janitor about ferris wheel
+The janitor looks at you and waits for you to proceed.
+
+The janitor remarks, "The other day, I found a bolt on one of the gondolas so loose it had almost come off. That would have been a tragedy!"
+
+>ask janitor about bumper cars
+The janitor looks bored as he waits for you to speak.
+
+The janitor says, "That reminds me. Not long ago, one of the bumper cars was shorting out and electrifying the car. A visitor got hurt. A young lad, what was his name? Fred something, I think."
+
+>ask janitor about whidbey
+The janitor looks at you and waits for you to proceed.
+
+The janitor says , "Mr. Whidbey? He creeps me out. It always seems like he's hiding something. Just yesterday I caught him sneaking around the guillotine room in Hell Ride."
+
+>show cash 'n' carry to janitor
+The janitor says, "Man, this doesn't look good for the carnival."
+
+>show frank's to janitor
+The janitor says, "Looks like the carnival is in some financial trouble."
+
+>show oriental to janitor
+The janitor says, "These prizes are cheaper and flimsier than usual."
+
+>show mystic to janitor
+The janitor says, That fire in Hell Ride was very really bad. It took almost two weeks to get it fully repaired. But it shouldn't have cost this much. I think Mr Whidbey got ripped off. Or, he got it fixed on the cheap and pocketed the rest."
+
+>show policy to janitor
+"An insurance policy? For a million dollars? Something is fishy for sure!" the janitor says.
+
+>show check to janitor
+The janitor says "What?! That's the name of the kid who got hurt in the Bumper Cars incident."
+
+>ask janitor about needleman
+The janitor looks at you expectantly.
+
+The janitor says, "That was the kid that got hurt on the bumper cars. It's a wonder he didn't sue the carnival for that."
+
+>show pliers to janitor
+"I've been missing those. Where did you find them?" asks the janitor.
+
+>show pliers to whidbey
+"Oh! I thought I lost... I mean those belong to the janitor. Where did you find them?" asks Mr Whidbey.
+
+>show evidence
+  Weight   Evidence collected:
+  ------   --------------------------------------------------------
+?   41     Evidence concerning accidents with the attractions
+?   19     Evidence concerning insurance
+?   15     Evidence concerning past due invoices
+?    5     Evidence concerning fuses
+?    5     Evidence concerning Mr Whidbey
+
+You've got enough evidence for a conviction.
+
+>accuse whidbey of fraud
+Mr Whidbey nervously shifts his weight from one foot to the other.
+
+"Ok, I guess you got me. The carnival was losing money and we were going to go out of business. I was desperate to turn things around.
+
+Then that Needleman kid got hurt on the bumper cars. We filed an insurance claim for it. When he got paid, Needleman asked if we could get more and split it.
+
+It seemed like a good idea at the time. I could get some extra cash to pay the carnival's bills. Then the thought of the money got overwhelming and I thought, "What if there was a fire and the estimate for repairs was, let's shall we say, generous. We could take the extra money, pay bills, and pocket the rest.
+
+The Chief of Police pays particular attention to Mr. Whidbey's confession. He approaches Whidbey and says "You have the right to remain silent. Anything you say will be used against you in a court of law. You have the right to an attorney during interrogation; if you cannot afford an attorney, one will be appointed to you."
+
+He handcuffs Whidbey, thanks you for your service to the community, and leads Mr Whidbey away to jail.
+
+*** You have won! ***
+
+You've received 200 points out of a possible 200 in 235 moves!
+
+You have received points for the following: 
+
+?  Eating the blueberries:                   5 points
+?  Finding the coins and keys:               5 points
+?  Buying the Hell Ride ticket:              5 points
+?  Taking the Mercury dime:                  5 points
+?  Winning the horseshoe magnet:             5 points
+?  Winning the Crimson fuse:                 10 points
+?  Acquiring the Khaki fuse:                 10 points
+?  Finding the insurance policy:             5 points
+?  Acquiring the Indigo fuse:                10 points
+?  Finding the Cash 'N' Carry invoice:       5 points
+?  Finding the Oriental Trading invoice:     5 points
+?  Finding the Frank's Market invoice:       5 points
+?  Finding the Mystic Industries invoice:    5 points
+?  Acquiring the cashier's check:            10 points
+?  Wearing the sheer veil:                   5 points
+?  Taking the lantern:                       5 points
+?  Finding the Dark Passage:                 5 points
+?  Taking the flashlight:                    5 points
+?  Finding the Control Room:                 5 points
+?  Turning off the big switch:               5 points
+?  Bringing the wrench to the Bumper Cars:   5 points
+?  Acquiring the Gray fuse:                  10 points
+?  Winning the knock-off Swiss Army knife:   5 points
+?  Winning the Magenta fuse:                 5 points
+?  Acquiring the Emerald fuse:               10 points
+?  Acquiring the Aqua fuse:                  10 points
+?  Acquiring the pliers:                     5 points
+?  Flipping the Aqua switch:                 5 points
+?  Flipping the Crimson switch:              5 points
+?  Flipping the Emerald switch:              5 points
+?  Flipping the Gray switch:                 5 points
+?  Flipping the Indigo switch:               5 points
+?  Flipping the Khaki switch:                5 points
+
+
+  Weight   Evidence collected:
+  ------   --------------------------------------------------------
+?   41     Evidence concerning accidents with the attractions
+?   19     Evidence concerning insurance
+?   15     Evidence concerning past due invoices
+?    5     Evidence concerning fuses
+?    5     Evidence concerning Mr Whidbey
+
+You've got enough evidence for a conviction.
+
+
+Would you like to RESTART, RESTORE a saved game, QUIT, or UNDO the last command?
+> 

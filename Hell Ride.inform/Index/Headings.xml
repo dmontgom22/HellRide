@@ -52,2556 +52,2794 @@
     </dict>
     <key>7</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.inform\Source\story.ni</string>
-        <key>Line</key><integer>136</integer>
+        <key>Line</key><integer>140</integer>
         <key>Title</key><string>Chapter 5 - New Mechanics, Actions, Phrases</string>
         <key>Level</key><integer>4</integer>
         <key>Indentation</key><integer>2</integer>
     </dict>
     <key>8</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.inform\Source\story.ni</string>
-        <key>Line</key><integer>138</integer>
+        <key>Line</key><integer>142</integer>
         <key>Title</key><string>Section 1 - Money Mechanics</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
     <key>9</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.inform\Source\story.ni</string>
-        <key>Line</key><integer>186</integer>
+        <key>Line</key><integer>190</integer>
         <key>Title</key><string>Section 2 - Drink Mechanics</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
     <key>10</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.inform\Source\story.ni</string>
-        <key>Line</key><integer>268</integer>
+        <key>Line</key><integer>272</integer>
         <key>Title</key><string>Section 3 - Underlying Mechanics</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
     <key>11</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.inform\Source\story.ni</string>
-        <key>Line</key><integer>292</integer>
+        <key>Line</key><integer>296</integer>
         <key>Title</key><string>Section 4 - Flashlight Mechanics</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
     <key>12</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.inform\Source\story.ni</string>
-        <key>Line</key><integer>331</integer>
+        <key>Line</key><integer>335</integer>
         <key>Title</key><string>Section 5 - Weight Mechanics</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
     <key>13</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.inform\Source\story.ni</string>
-        <key>Line</key><integer>346</integer>
+        <key>Line</key><integer>350</integer>
         <key>Title</key><string>Section 6 - Toad Away</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
     <key>14</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.inform\Source\story.ni</string>
-        <key>Line</key><integer>359</integer>
+        <key>Line</key><integer>363</integer>
         <key>Title</key><string>Section 7 - Grues</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
     <key>15</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.inform\Source\story.ni</string>
-        <key>Line</key><integer>374</integer>
+        <key>Line</key><integer>378</integer>
         <key>Title</key><string>Section 8 - Hello Sailor</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
     <key>16</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.inform\Source\story.ni</string>
-        <key>Line</key><integer>390</integer>
+        <key>Line</key><integer>394</integer>
         <key>Title</key><string>Section 9 - xyzzy</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
     <key>17</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.inform\Source\story.ni</string>
-        <key>Line</key><integer>406</integer>
+        <key>Line</key><integer>410</integer>
         <key>Title</key><string>Section 10 - Attendants</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
     <key>18</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.inform\Source\story.ni</string>
-        <key>Line</key><integer>434</integer>
+        <key>Line</key><integer>447</integer>
         <key>Title</key><string>Section 11 - The Janitor</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
     <key>19</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.inform\Source\story.ni</string>
-        <key>Line</key><integer>490</integer>
+        <key>Line</key><integer>503</integer>
         <key>Title</key><string>Section 12 - Mr Whidbey</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
     <key>20</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.inform\Source\story.ni</string>
-        <key>Line</key><integer>570</integer>
+        <key>Line</key><integer>583</integer>
         <key>Title</key><string>Section 13 - Evidence and Accusations</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
     <key>21</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.inform\Source\story.ni</string>
-        <key>Line</key><integer>585</integer>
+        <key>Line</key><integer>598</integer>
         <key>Title</key><string>Section 14 - Scoring</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
     <key>22</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.inform\Source\story.ni</string>
-        <key>Line</key><integer>684</integer>
+        <key>Line</key><integer>698</integer>
         <key>Title</key><string>Section 15 - Swearing</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
     <key>23</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.inform\Source\story.ni</string>
-        <key>Line</key><integer>711</integer>
+        <key>Line</key><integer>725</integer>
         <key>Title</key><string>Section 16 - Singing</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
     <key>24</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.inform\Source\story.ni</string>
-        <key>Line</key><integer>720</integer>
+        <key>Line</key><integer>734</integer>
         <key>Title</key><string>Section 17 - Stealing</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
     <key>25</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.inform\Source\story.ni</string>
-        <key>Line</key><integer>739</integer>
+        <key>Line</key><integer>753</integer>
         <key>Title</key><string>Section 18 - The Strings</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
     <key>26</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.inform\Source\story.ni</string>
-        <key>Line</key><integer>832</integer>
+        <key>Line</key><integer>846</integer>
         <key>Title</key><string>Section 19 - Talking/Asking/Telling/Showing</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
     <key>27</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.inform\Source\story.ni</string>
-        <key>Line</key><integer>850</integer>
+        <key>Line</key><integer>864</integer>
         <key>Title</key><string>Section 20 - Senses</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
     <key>28</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.inform\Source\story.ni</string>
-        <key>Line</key><integer>880</integer>
+        <key>Line</key><integer>894</integer>
         <key>Title</key><string>Section 21 - Miscellaneous</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
     <key>29</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.inform\Source\story.ni</string>
-        <key>Line</key><integer>921</integer>
+        <key>Line</key><integer>935</integer>
         <key>Title</key><string>Section 22 - Does The Player Mean</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
     <key>30</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.inform\Source\story.ni</string>
-        <key>Line</key><integer>984</integer>
+        <key>Line</key><integer>1000</integer>
         <key>Title</key><string>Section 23 - Directions</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
     <key>31</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.inform\Source\story.ni</string>
-        <key>Line</key><integer>1313</integer>
+        <key>Line</key><integer>1338</integer>
         <key>Title</key><string>Chapter 6 - Figures</string>
         <key>Level</key><integer>4</integer>
         <key>Indentation</key><integer>2</integer>
     </dict>
     <key>32</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.inform\Source\story.ni</string>
-        <key>Line</key><integer>1371</integer>
+        <key>Line</key><integer>1396</integer>
         <key>Title</key><string>Chapter 7 - RNG Seed, Money, Dimes, Sounds -</string>
         <key>Level</key><integer>4</integer>
         <key>Indentation</key><integer>2</integer>
     </dict>
     <key>33</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.inform\Source\story.ni</string>
-        <key>Line</key><integer>1505</integer>
+        <key>Line</key><integer>1532</integer>
         <key>Title</key><string>Chapter 8 - RNG Seed, Money, Dimes, Sounds -</string>
         <key>Level</key><integer>4</integer>
         <key>Indentation</key><integer>2</integer>
     </dict>
     <key>34</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.inform\Source\story.ni</string>
-        <key>Line</key><integer>1518</integer>
+        <key>Line</key><integer>1545</integer>
         <key>Title</key><string>Part 2 - The Game</string>
         <key>Level</key><integer>3</integer>
         <key>Indentation</key><integer>1</integer>
     </dict>
     <key>35</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.inform\Source\story.ni</string>
-        <key>Line</key><integer>1520</integer>
+        <key>Line</key><integer>1547</integer>
         <key>Title</key><string>Chapter 1 - Electrical Area</string>
         <key>Level</key><integer>4</integer>
         <key>Indentation</key><integer>2</integer>
     </dict>
     <key>36</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.inform\Source\story.ni</string>
-        <key>Line</key><integer>1522</integer>
+        <key>Line</key><integer>1549</integer>
         <key>Title</key><string>Section 1 - Colors</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
     <key>37</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.inform\Source\story.ni</string>
-        <key>Line</key><integer>1529</integer>
+        <key>Line</key><integer>1556</integer>
         <key>Title</key><string>Section 2 - Electrical Closets</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
     <key>38</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.inform\Source\story.ni</string>
-        <key>Line</key><integer>1544</integer>
+        <key>Line</key><integer>1571</integer>
         <key>Title</key><string>Section 3 - Electrical Panels</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
     <key>39</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.inform\Source\story.ni</string>
-        <key>Line</key><integer>1580</integer>
+        <key>Line</key><integer>1607</integer>
         <key>Title</key><string>Section 4 - Sockets</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
     <key>40</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.inform\Source\story.ni</string>
-        <key>Line</key><integer>1610</integer>
+        <key>Line</key><integer>1637</integer>
         <key>Title</key><string>Section 5 - Indicators</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
     <key>41</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.inform\Source\story.ni</string>
-        <key>Line</key><integer>1629</integer>
+        <key>Line</key><integer>1656</integer>
         <key>Title</key><string>Section 6 - Fuses</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
     <key>42</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.inform\Source\story.ni</string>
-        <key>Line</key><integer>1666</integer>
+        <key>Line</key><integer>1693</integer>
         <key>Title</key><string>Section 7 - Switches</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
     <key>43</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.inform\Source\story.ni</string>
-        <key>Line</key><integer>1725</integer>
+        <key>Line</key><integer>1752</integer>
         <key>Title</key><string>Section 8 - Electrical Room</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
     <key>44</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.inform\Source\story.ni</string>
-        <key>Line</key><integer>1777</integer>
+        <key>Line</key><integer>1804</integer>
         <key>Title</key><string>Chapter 2 - Second Floor</string>
         <key>Level</key><integer>4</integer>
         <key>Indentation</key><integer>2</integer>
     </dict>
     <key>45</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.inform\Source\story.ni</string>
-        <key>Line</key><integer>1779</integer>
+        <key>Line</key><integer>1806</integer>
         <key>Title</key><string>Section 1 - Holding Room</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
     <key>46</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.inform\Source\story.ni</string>
-        <key>Line</key><integer>1783</integer>
+        <key>Line</key><integer>1810</integer>
         <key>Title</key><string>Section 2 - Dark Hallway</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
     <key>47</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.inform\Source\story.ni</string>
-        <key>Line</key><integer>1787</integer>
+        <key>Line</key><integer>1814</integer>
         <key>Title</key><string>Section 3 - Control Room</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
     <key>48</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.inform\Source\story.ni</string>
-        <key>Line</key><integer>1839</integer>
+        <key>Line</key><integer>1866</integer>
         <key>Title</key><string>Section 4 - Control Panels</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
     <key>49</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.inform\Source\story.ni</string>
-        <key>Line</key><integer>1886</integer>
+        <key>Line</key><integer>1913</integer>
         <key>Title</key><string>Section 5 - Buttons</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
     <key>50</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.inform\Source\story.ni</string>
-        <key>Line</key><integer>1956</integer>
+        <key>Line</key><integer>1983</integer>
         <key>Title</key><string>Section 6 - Dials</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
     <key>51</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.inform\Source\story.ni</string>
-        <key>Line</key><integer>2013</integer>
+        <key>Line</key><integer>2040</integer>
         <key>Title</key><string>Section 7 - Lights</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
     <key>52</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.inform\Source\story.ni</string>
-        <key>Line</key><integer>2031</integer>
+        <key>Line</key><integer>2058</integer>
         <key>Title</key><string>Section 8 - The Monitor</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
     <key>53</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.inform\Source\story.ni</string>
-        <key>Line</key><integer>2046</integer>
+        <key>Line</key><integer>2073</integer>
         <key>Title</key><string>Chapter 3 - The Midway</string>
         <key>Level</key><integer>4</integer>
         <key>Indentation</key><integer>2</integer>
     </dict>
     <key>54</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.inform\Source\story.ni</string>
-        <key>Line</key><integer>2048</integer>
+        <key>Line</key><integer>2075</integer>
         <key>Title</key><string>Section 1 - Parking Lot</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
     <key>55</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.inform\Source\story.ni</string>
-        <key>Line</key><integer>2127</integer>
+        <key>Line</key><integer>2156</integer>
         <key>Title</key><string>Section 2 - Car Interior</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
     <key>56</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.inform\Source\story.ni</string>
-        <key>Line</key><integer>2159</integer>
+        <key>Line</key><integer>2188</integer>
         <key>Title</key><string>Section 3 - Ticket Booth</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
     <key>57</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.inform\Source\story.ni</string>
-        <key>Line</key><integer>2231</integer>
+        <key>Line</key><integer>2260</integer>
         <key>Title</key><string>Section 4 - Concession Stand</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
     <key>58</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.inform\Source\story.ni</string>
-        <key>Line</key><integer>2302</integer>
+        <key>Line</key><integer>2331</integer>
         <key>Title</key><string>Section 5 - Behind the Concession Stand</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
     <key>59</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.inform\Source\story.ni</string>
-        <key>Line</key><integer>2314</integer>
+        <key>Line</key><integer>2343</integer>
         <key>Title</key><string>Section 6 - Carnival Office</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
     <key>60</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.inform\Source\story.ni</string>
-        <key>Line</key><integer>2445</integer>
+        <key>Line</key><integer>2474</integer>
         <key>Title</key><string>Section 7 - High Striker</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
     <key>61</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.inform\Source\story.ni</string>
-        <key>Line</key><integer>2581</integer>
+        <key>Line</key><integer>2610</integer>
         <key>Title</key><string>Section 8 - Dime Toss</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
     <key>62</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.inform\Source\story.ni</string>
-        <key>Line</key><integer>2665</integer>
+        <key>Line</key><integer>2694</integer>
         <key>Title</key><string>Section 9 - Pitchers Mound</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
     <key>63</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.inform\Source\story.ni</string>
-        <key>Line</key><integer>2801</integer>
+        <key>Line</key><integer>2830</integer>
         <key>Title</key><string>Section 10 - Show Facade</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
     <key>64</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.inform\Source\story.ni</string>
-        <key>Line</key><integer>2871</integer>
+        <key>Line</key><integer>2900</integer>
         <key>Title</key><string>Section 11 - Show Tent</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
     <key>65</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.inform\Source\story.ni</string>
-        <key>Line</key><integer>2953</integer>
+        <key>Line</key><integer>2982</integer>
         <key>Title</key><string>Section 12 - Ferris Wheel</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
     <key>66</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.inform\Source\story.ni</string>
-        <key>Line</key><integer>2997</integer>
+        <key>Line</key><integer>3026</integer>
         <key>Title</key><string>Section 13 - Bumper Cars</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
     <key>67</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.inform\Source\story.ni</string>
-        <key>Line</key><integer>3039</integer>
+        <key>Line</key><integer>3068</integer>
         <key>Title</key><string>Section 14 - Fortune Teller</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
     <key>68</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.inform\Source\story.ni</string>
-        <key>Line</key><integer>3137</integer>
+        <key>Line</key><integer>3166</integer>
         <key>Title</key><string>Section 15 - Carousel</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
     <key>69</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.inform\Source\story.ni</string>
-        <key>Line</key><integer>3178</integer>
+        <key>Line</key><integer>3207</integer>
         <key>Title</key><string>Section 16 - Head of the Line</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
     <key>70</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.inform\Source\story.ni</string>
-        <key>Line</key><integer>3192</integer>
+        <key>Line</key><integer>3221</integer>
         <key>Title</key><string>Chapter 4 - Backstage</string>
         <key>Level</key><integer>4</integer>
         <key>Indentation</key><integer>2</integer>
     </dict>
     <key>71</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.inform\Source\story.ni</string>
-        <key>Line</key><integer>3194</integer>
+        <key>Line</key><integer>3223</integer>
         <key>Title</key><string>Section 1 - Wooden Doors</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
     <key>72</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.inform\Source\story.ni</string>
-        <key>Line</key><integer>3204</integer>
+        <key>Line</key><integer>3233</integer>
         <key>Title</key><string>Section 2 - Dark Passage</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
     <key>73</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.inform\Source\story.ni</string>
-        <key>Line</key><integer>3219</integer>
+        <key>Line</key><integer>3248</integer>
         <key>Title</key><string>Section 3 - Maintenance Office</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
     <key>74</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.inform\Source\story.ni</string>
-        <key>Line</key><integer>3308</integer>
+        <key>Line</key><integer>3337</integer>
         <key>Title</key><string>Section 4 - Crawl Space</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
     <key>75</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.inform\Source\story.ni</string>
-        <key>Line</key><integer>3329</integer>
+        <key>Line</key><integer>3358</integer>
         <key>Title</key><string>Section 5 - Mechanical Room North</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
     <key>76</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.inform\Source\story.ni</string>
-        <key>Line</key><integer>3361</integer>
+        <key>Line</key><integer>3390</integer>
         <key>Title</key><string>Section 6 - Mechanical Room South</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
     <key>77</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.inform\Source\story.ni</string>
-        <key>Line</key><integer>3406</integer>
+        <key>Line</key><integer>3435</integer>
         <key>Title</key><string>Section 7 - Generator Room</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
     <key>78</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.inform\Source\story.ni</string>
-        <key>Line</key><integer>3441</integer>
+        <key>Line</key><integer>3470</integer>
         <key>Title</key><string>Section 8 - Storage Room</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
     <key>79</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.inform\Source\story.ni</string>
-        <key>Line</key><integer>3481</integer>
+        <key>Line</key><integer>3510</integer>
         <key>Title</key><string>Chapter 5 - Hell Ride</string>
         <key>Level</key><integer>4</integer>
         <key>Indentation</key><integer>2</integer>
     </dict>
     <key>80</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.inform\Source\story.ni</string>
-        <key>Line</key><integer>3483</integer>
+        <key>Line</key><integer>3512</integer>
         <key>Title</key><string>Section 1 - Hell Ride Scene</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
     <key>81</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.inform\Source\story.ni</string>
-        <key>Line</key><integer>3503</integer>
+        <key>Line</key><integer>3532</integer>
         <key>Title</key><string>Section 2 - Ride Entrance</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
     <key>82</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.inform\Source\story.ni</string>
-        <key>Line</key><integer>3541</integer>
+        <key>Line</key><integer>3570</integer>
         <key>Title</key><string>Section 3 - Stocks Room</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
     <key>83</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.inform\Source\story.ni</string>
-        <key>Line</key><integer>3566</integer>
+        <key>Line</key><integer>3595</integer>
         <key>Title</key><string>Section 4 - Gallows Room</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
     <key>84</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.inform\Source\story.ni</string>
-        <key>Line</key><integer>3593</integer>
+        <key>Line</key><integer>3622</integer>
         <key>Title</key><string>Section 5 - Stake Room</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
     <key>85</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.inform\Source\story.ni</string>
-        <key>Line</key><integer>3622</integer>
+        <key>Line</key><integer>3651</integer>
         <key>Title</key><string>Section 6 - Dungeon</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
     <key>86</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.inform\Source\story.ni</string>
-        <key>Line</key><integer>3651</integer>
+        <key>Line</key><integer>3680</integer>
         <key>Title</key><string>Section 7 - Guillotine Room</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
     <key>87</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.inform\Source\story.ni</string>
-        <key>Line</key><integer>3694</integer>
+        <key>Line</key><integer>3723</integer>
         <key>Title</key><string>Section 8 - Ride Exit</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
     <key>88</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.inform\Source\story.ni</string>
-        <key>Line</key><integer>3733</integer>
+        <key>Line</key><integer>3762</integer>
         <key>Title</key><string>Part 3 - Regions</string>
         <key>Level</key><integer>3</integer>
         <key>Indentation</key><integer>1</integer>
     </dict>
     <key>89</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.inform\Source\story.ni</string>
-        <key>Line</key><integer>3747</integer>
+        <key>Line</key><integer>3776</integer>
         <key>Title</key><string>Part 4 - Tables</string>
         <key>Level</key><integer>3</integer>
         <key>Indentation</key><integer>1</integer>
     </dict>
     <key>90</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.inform\Source\story.ni</string>
-        <key>Line</key><integer>3749</integer>
+        <key>Line</key><integer>3778</integer>
         <key>Title</key><string>Section 1 - Table of Bored Responses</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>2</integer>
     </dict>
     <key>91</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.inform\Source\story.ni</string>
-        <key>Line</key><integer>3762</integer>
+        <key>Line</key><integer>3791</integer>
         <key>Title</key><string>Section 2 - Table of Songs</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>2</integer>
     </dict>
     <key>92</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.inform\Source\story.ni</string>
-        <key>Line</key><integer>3807</integer>
+        <key>Line</key><integer>3836</integer>
         <key>Title</key><string>Section 3 - Table of Monitor Descriptions</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>2</integer>
     </dict>
     <key>93</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.inform\Source\story.ni</string>
-        <key>Line</key><integer>3819</integer>
+        <key>Line</key><integer>3848</integer>
         <key>Title</key><string>Section 4 - Table of High Striker Prizes</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>2</integer>
     </dict>
     <key>94</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.inform\Source\story.ni</string>
-        <key>Line</key><integer>3829</integer>
+        <key>Line</key><integer>3858</integer>
         <key>Title</key><string>Section 5 - Table of Dime Toss Prizes</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>2</integer>
     </dict>
     <key>95</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.inform\Source\story.ni</string>
-        <key>Line</key><integer>3838</integer>
+        <key>Line</key><integer>3867</integer>
         <key>Title</key><string>Section 6 - Table of Pitchers Mound Prizes</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>2</integer>
     </dict>
     <key>96</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.inform\Source\story.ni</string>
-        <key>Line</key><integer>3847</integer>
+        <key>Line</key><integer>3876</integer>
         <key>Title</key><string>Section 7 - Table of Tickets</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>2</integer>
     </dict>
     <key>97</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.inform\Source\story.ni</string>
-        <key>Line</key><integer>3872</integer>
+        <key>Line</key><integer>3901</integer>
         <key>Title</key><string>Section 8 - Table of Concessions</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>2</integer>
     </dict>
     <key>98</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.inform\Source\story.ni</string>
-        <key>Line</key><integer>3883</integer>
+        <key>Line</key><integer>3912</integer>
         <key>Title</key><string>Section 9 - Table of Merchandise</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>2</integer>
     </dict>
     <key>99</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.inform\Source\story.ni</string>
-        <key>Line</key><integer>3893</integer>
+        <key>Line</key><integer>3922</integer>
         <key>Title</key><string>Section 10 - Table of Hell Ride Events</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>2</integer>
     </dict>
     <key>100</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.inform\Source\story.ni</string>
-        <key>Line</key><integer>3949</integer>
+        <key>Line</key><integer>3978</integer>
         <key>Title</key><string>Section 11 - Table of Little Egypt Events</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>2</integer>
     </dict>
     <key>101</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.inform\Source\story.ni</string>
-        <key>Line</key><integer>3960</integer>
+        <key>Line</key><integer>3989</integer>
         <key>Title</key><string>Section 12 - Table of Tarot Readings</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>2</integer>
     </dict>
     <key>102</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.inform\Source\story.ni</string>
-        <key>Line</key><integer>3980</integer>
+        <key>Line</key><integer>4009</integer>
         <key>Title</key><string>Section 13 - Table of Whidbey Telephone Call</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>2</integer>
     </dict>
     <key>103</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.inform\Source\story.ni</string>
-        <key>Line</key><integer>3992</integer>
+        <key>Line</key><integer>4021</integer>
         <key>Title</key><string>Section 14 - Table of Attendant Conversation Responses</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>2</integer>
     </dict>
     <key>104</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.inform\Source\story.ni</string>
-        <key>Line</key><integer>4023</integer>
+        <key>Line</key><integer>4054</integer>
         <key>Title</key><string>Section 15 - Table of Notebook</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>2</integer>
     </dict>
     <key>105</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.inform\Source\story.ni</string>
-        <key>Line</key><integer>4035</integer>
+        <key>Line</key><integer>4066</integer>
         <key>Title</key><string>Section 16 - Table of Janitor Conversation Responses</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>2</integer>
     </dict>
     <key>106</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.inform\Source\story.ni</string>
-        <key>Line</key><integer>4057</integer>
+        <key>Line</key><integer>4091</integer>
         <key>Title</key><string>Section 17 - Table of Janitor Object Responses</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>2</integer>
     </dict>
     <key>107</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.inform\Source\story.ni</string>
-        <key>Line</key><integer>4079</integer>
+        <key>Line</key><integer>4113</integer>
         <key>Title</key><string>Section 18 - Table of Esmeralda Conversation Responses</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>2</integer>
     </dict>
     <key>108</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.inform\Source\story.ni</string>
-        <key>Line</key><integer>4092</integer>
+        <key>Line</key><integer>4126</integer>
         <key>Title</key><string>Section 19 - Table of Esmeralda Object Responses</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>2</integer>
     </dict>
     <key>109</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.inform\Source\story.ni</string>
-        <key>Line</key><integer>4103</integer>
+        <key>Line</key><integer>4137</integer>
         <key>Title</key><string>Section 20 - Table of Barker Conversation Responses</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>2</integer>
     </dict>
     <key>110</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.inform\Source\story.ni</string>
-        <key>Line</key><integer>4116</integer>
+        <key>Line</key><integer>4150</integer>
         <key>Title</key><string>Section 21 - Table of Barker Object Responses</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>2</integer>
     </dict>
     <key>111</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.inform\Source\story.ni</string>
-        <key>Line</key><integer>4127</integer>
+        <key>Line</key><integer>4161</integer>
         <key>Title</key><string>Section 22 - Table of Whidbey Conversation Responses</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>2</integer>
     </dict>
     <key>112</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.inform\Source\story.ni</string>
-        <key>Line</key><integer>4150</integer>
+        <key>Line</key><integer>4185</integer>
         <key>Title</key><string>Section 23 - Table of Whidbey Object Responses</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>2</integer>
     </dict>
     <key>113</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.inform\Source\story.ni</string>
-        <key>Line</key><integer>4172</integer>
+        <key>Line</key><integer>4207</integer>
         <key>Title</key><string>Section 24 - Table of Confrontation</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>2</integer>
     </dict>
     <key>114</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.inform\Source\story.ni</string>
-        <key>Line</key><integer>4182</integer>
+        <key>Line</key><integer>4217</integer>
         <key>Title</key><string>Section 25 - Table of Janitor Movements</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>2</integer>
     </dict>
     <key>115</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.inform\Source\story.ni</string>
-        <key>Line</key><integer>4199</integer>
+        <key>Line</key><integer>4234</integer>
         <key>Title</key><string>Section 26 - Table of Whidbey Movements</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>2</integer>
     </dict>
     <key>116</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.inform\Source\story.ni</string>
-        <key>Line</key><integer>4216</integer>
+        <key>Line</key><integer>4251</integer>
         <key>Title</key><string>Section 27 - Introduction to Hell Ride</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>2</integer>
     </dict>
     <key>117</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.inform\Source\story.ni</string>
-        <key>Line</key><integer>4226</integer>
+        <key>Line</key><integer>4261</integer>
         <key>Title</key><string>Section 28 - Hell Ride Origins</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>2</integer>
     </dict>
     <key>118</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.inform\Source\story.ni</string>
-        <key>Line</key><integer>4246</integer>
+        <key>Line</key><integer>4281</integer>
         <key>Title</key><string>Section 29 - Credits</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>2</integer>
     </dict>
     <key>119</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.inform\Source\story.ni</string>
-        <key>Line</key><integer>4264</integer>
+        <key>Line</key><integer>4299</integer>
         <key>Title</key><string>Part 5 - Unit Tests</string>
         <key>Level</key><integer>3</integer>
         <key>Indentation</key><integer>1</integer>
     </dict>
     <key>120</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.inform\Source\story.ni</string>
-        <key>Line</key><integer>4266</integer>
+        <key>Line</key><integer>4301</integer>
         <key>Title</key><string>Chapter 1 - Parking Lot</string>
         <key>Level</key><integer>4</integer>
         <key>Indentation</key><integer>2</integer>
     </dict>
     <key>121</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.inform\Source\story.ni</string>
-        <key>Line</key><integer>4272</integer>
+        <key>Line</key><integer>4307</integer>
         <key>Title</key><string>Chapter 2 - Games</string>
         <key>Level</key><integer>4</integer>
         <key>Indentation</key><integer>2</integer>
     </dict>
     <key>122</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.inform\Source\story.ni</string>
-        <key>Line</key><integer>4284</integer>
+        <key>Line</key><integer>4319</integer>
         <key>Title</key><string>Chapter 3 - Attractions</string>
         <key>Level</key><integer>4</integer>
         <key>Indentation</key><integer>2</integer>
     </dict>
     <key>123</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.inform\Source\story.ni</string>
-        <key>Line</key><integer>4292</integer>
+        <key>Line</key><integer>4327</integer>
         <key>Title</key><string>Chapter 4 - Back Stage</string>
         <key>Level</key><integer>4</integer>
         <key>Indentation</key><integer>2</integer>
     </dict>
     <key>124</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.inform\Source\story.ni</string>
-        <key>Line</key><integer>4308</integer>
+        <key>Line</key><integer>4343</integer>
         <key>Title</key><string>Chapter 5 - Concession Stand</string>
         <key>Level</key><integer>4</integer>
         <key>Indentation</key><integer>2</integer>
     </dict>
     <key>125</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.inform\Source\story.ni</string>
-        <key>Line</key><integer>4312</integer>
+        <key>Line</key><integer>4347</integer>
         <key>Title</key><string>Chapter 6 - Hell Ride</string>
         <key>Level</key><integer>4</integer>
         <key>Indentation</key><integer>2</integer>
     </dict>
     <key>126</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.inform\Source\story.ni</string>
-        <key>Line</key><integer>4316</integer>
+        <key>Line</key><integer>4351</integer>
         <key>Title</key><string>Chapter 7 - Electrocution</string>
         <key>Level</key><integer>4</integer>
         <key>Indentation</key><integer>2</integer>
     </dict>
     <key>127</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.inform\Source\story.ni</string>
-        <key>Line</key><integer>4320</integer>
+        <key>Line</key><integer>4355</integer>
         <key>Title</key><string>Chapter 8 - Grues</string>
         <key>Level</key><integer>4</integer>
         <key>Indentation</key><integer>2</integer>
     </dict>
     <key>128</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.inform\Source\story.ni</string>
-        <key>Line</key><integer>4324</integer>
+        <key>Line</key><integer>4359</integer>
         <key>Title</key><string>Chapter 9 - Miscellaneous</string>
         <key>Level</key><integer>4</integer>
         <key>Indentation</key><integer>2</integer>
     </dict>
     <key>129</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.inform\Source\story.ni</string>
-        <key>Line</key><integer>4328</integer>
+        <key>Line</key><integer>4363</integer>
         <key>Title</key><string>Part 6 - Hints</string>
         <key>Level</key><integer>3</integer>
         <key>Indentation</key><integer>1</integer>
     </dict>
     <key>130</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.inform\Source\story.ni</string>
-        <key>Line</key><integer>4330</integer>
+        <key>Line</key><integer>4365</integer>
         <key>Title</key><string>Chapter 1 - Hint Values and Code</string>
         <key>Level</key><integer>4</integer>
         <key>Indentation</key><integer>2</integer>
     </dict>
     <key>131</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.inform\Source\story.ni</string>
-        <key>Line</key><integer>4375</integer>
+        <key>Line</key><integer>4420</integer>
         <key>Title</key><string>Chapter 2 - Help Options</string>
         <key>Level</key><integer>4</integer>
         <key>Indentation</key><integer>2</integer>
     </dict>
     <key>132</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.inform\Source\story.ni</string>
-        <key>Line</key><integer>4396</integer>
+        <key>Line</key><integer>4442</integer>
         <key>Title</key><string>Chapter 3 - The Parking Lot</string>
         <key>Level</key><integer>4</integer>
         <key>Indentation</key><integer>2</integer>
     </dict>
     <key>133</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.inform\Source\story.ni</string>
-        <key>Line</key><integer>4420</integer>
+        <key>Line</key><integer>4466</integer>
         <key>Title</key><string>Chapter 4 - The Attractions</string>
         <key>Level</key><integer>4</integer>
         <key>Indentation</key><integer>2</integer>
     </dict>
     <key>134</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.inform\Source\story.ni</string>
-        <key>Line</key><integer>4449</integer>
+        <key>Line</key><integer>4495</integer>
         <key>Title</key><string>Chapter 5 - The Games</string>
         <key>Level</key><integer>4</integer>
         <key>Indentation</key><integer>2</integer>
     </dict>
     <key>135</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.inform\Source\story.ni</string>
-        <key>Line</key><integer>4480</integer>
+        <key>Line</key><integer>4526</integer>
         <key>Title</key><string>Chapter 6 - Carnival Office</string>
         <key>Level</key><integer>4</integer>
         <key>Indentation</key><integer>2</integer>
     </dict>
     <key>136</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.inform\Source\story.ni</string>
-        <key>Line</key><integer>4497</integer>
+        <key>Line</key><integer>4543</integer>
         <key>Title</key><string>Chapter 7 - Back Stage</string>
         <key>Level</key><integer>4</integer>
         <key>Indentation</key><integer>2</integer>
     </dict>
     <key>137</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.inform\Source\story.ni</string>
-        <key>Line</key><integer>4513</integer>
+        <key>Line</key><integer>4559</integer>
         <key>Title</key><string>Chapter 8 - Hell Ride Hints</string>
         <key>Level</key><integer>4</integer>
         <key>Indentation</key><integer>2</integer>
     </dict>
     <key>138</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.inform\Source\story.ni</string>
-        <key>Line</key><integer>4529</integer>
+        <key>Line</key><integer>4575</integer>
         <key>Title</key><string>Chapter 9 - The Electrical Area Hints</string>
         <key>Level</key><integer>4</integer>
         <key>Indentation</key><integer>2</integer>
     </dict>
     <key>139</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.inform\Source\story.ni</string>
-        <key>Line</key><integer>4549</integer>
+        <key>Line</key><integer>4595</integer>
         <key>Title</key><string>Chapter 10 - Fuse Hints</string>
         <key>Level</key><integer>4</integer>
         <key>Indentation</key><integer>2</integer>
     </dict>
     <key>140</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.inform\Source\story.ni</string>
-        <key>Line</key><integer>4581</integer>
+        <key>Line</key><integer>4627</integer>
         <key>Title</key><string>Chapter 11 - The Control Room Hints</string>
         <key>Level</key><integer>4</integer>
         <key>Indentation</key><integer>2</integer>
     </dict>
     <key>141</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.inform\Source\story.ni</string>
-        <key>Line</key><integer>4602</integer>
-        <key>Title</key><string>Chapter 12 - Table of IF Introduction</string>
+        <key>Line</key><integer>4648</integer>
+        <key>Title</key><string>Chapter 12 - Table of Evidence Hints</string>
         <key>Level</key><integer>4</integer>
         <key>Indentation</key><integer>2</integer>
     </dict>
     <key>142</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.inform\Source\story.ni</string>
-        <key>Line</key><integer>4632</integer>
-        <key>Title</key><string>Chapter 13 - How the World is Assembled</string>
+        <key>Line</key><integer>4665</integer>
+        <key>Title</key><string>Chapter 13 - Table of IF Introduction</string>
         <key>Level</key><integer>4</integer>
         <key>Indentation</key><integer>2</integer>
     </dict>
     <key>143</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.inform\Source\story.ni</string>
-        <key>Line</key><integer>4641</integer>
-        <key>Title</key><string>Chapter 14 - If You Get Stuck</string>
+        <key>Line</key><integer>4695</integer>
+        <key>Title</key><string>Chapter 14 - How the World is Assembled</string>
         <key>Level</key><integer>4</integer>
         <key>Indentation</key><integer>2</integer>
     </dict>
     <key>144</key><dict>
+        <key>Filename</key><string>C:\HellRide\Hell Ride.inform\Source\story.ni</string>
+        <key>Line</key><integer>4704</integer>
+        <key>Title</key><string>Chapter 15 - If You Get Stuck</string>
+        <key>Level</key><integer>4</integer>
+        <key>Indentation</key><integer>2</integer>
+    </dict>
+    <key>145</key><dict>
+        <key>Filename</key><string>C:\HellRide\Hell Ride.inform\Source\story.ni</string>
+        <key>Line</key><integer>4725</integer>
+        <key>Title</key><string>Part 7 - Walkthrough</string>
+        <key>Level</key><integer>3</integer>
+        <key>Indentation</key><integer>1</integer>
+    </dict>
+    <key>146</key><dict>
+        <key>Filename</key><string>C:\HellRide\Hell Ride.inform\Source\story.ni</string>
+        <key>Line</key><integer>4727</integer>
+        <key>Title</key><string>Chapter 1 - Table of Story Steps</string>
+        <key>Level</key><integer>4</integer>
+        <key>Indentation</key><integer>2</integer>
+    </dict>
+    <key>147</key><dict>
         <key>Line</key><integer>1</integer>
         <key>Title</key><string>--</string>
         <key>Level</key><integer>0</integer>
         <key>Indentation</key><integer>0</integer>
     </dict>
-    <key>145</key><dict>
+    <key>148</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Graham Nelson\Basic Inform.i7x</string>
         <key>Line</key><integer>1</integer>
         <key>Title</key><string>--</string>
         <key>Level</key><integer>0</integer>
         <key>Indentation</key><integer>0</integer>
     </dict>
-    <key>146</key><dict>
+    <key>149</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Graham Nelson\Basic Inform.i7x</string>
         <key>Line</key><integer>6</integer>
         <key>Title</key><string>Part One - Preamble</string>
         <key>Level</key><integer>3</integer>
         <key>Indentation</key><integer>1</integer>
     </dict>
-    <key>147</key><dict>
+    <key>150</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Graham Nelson\Basic Inform.i7x</string>
         <key>Line</key><integer>107</integer>
         <key>Title</key><string>Part Two - Miscellaneous Definitions</string>
         <key>Level</key><integer>3</integer>
         <key>Indentation</key><integer>1</integer>
     </dict>
-    <key>148</key><dict>
+    <key>151</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Graham Nelson\Basic Inform.i7x</string>
         <key>Line</key><integer>154</integer>
         <key>Title</key><string>Part Three - Phrasebook</string>
         <key>Level</key><integer>3</integer>
         <key>Indentation</key><integer>1</integer>
     </dict>
-    <key>149</key><dict>
+    <key>152</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Graham Nelson\Basic Inform.i7x</string>
         <key>Line</key><integer>156</integer>
         <key>Title</key><string>Chapter 1 - Saying</string>
         <key>Level</key><integer>4</integer>
         <key>Indentation</key><integer>2</integer>
     </dict>
-    <key>150</key><dict>
+    <key>153</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Graham Nelson\Basic Inform.i7x</string>
         <key>Line</key><integer>158</integer>
         <key>Title</key><string>Section 1 - Saying Values</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
-    <key>151</key><dict>
+    <key>154</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Graham Nelson\Basic Inform.i7x</string>
         <key>Line</key><integer>174</integer>
         <key>Title</key><string>Section 2 - Saying Names</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
-    <key>152</key><dict>
+    <key>155</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Graham Nelson\Basic Inform.i7x</string>
         <key>Line</key><integer>195</integer>
         <key>Title</key><string>Section 3 - Saying Special Characters</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
-    <key>153</key><dict>
+    <key>156</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Graham Nelson\Basic Inform.i7x</string>
         <key>Line</key><integer>210</integer>
         <key>Title</key><string>Section 4 - Saying Line and Paragraph Breaks</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
-    <key>154</key><dict>
+    <key>157</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Graham Nelson\Basic Inform.i7x</string>
         <key>Line</key><integer>231</integer>
         <key>Title</key><string>Section 5 - Saying If and Otherwise</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
-    <key>155</key><dict>
+    <key>158</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Graham Nelson\Basic Inform.i7x</string>
         <key>Line</key><integer>266</integer>
         <key>Title</key><string>Section 6 - Saying one of</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
-    <key>156</key><dict>
+    <key>159</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Graham Nelson\Basic Inform.i7x</string>
         <key>Line</key><integer>307</integer>
         <key>Title</key><string>Section 7 - Saying Fonts and Visual Effects</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
-    <key>157</key><dict>
+    <key>160</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Graham Nelson\Basic Inform.i7x</string>
         <key>Line</key><integer>325</integer>
         <key>Title</key><string>Section 8 - Saying Lists of Values</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
-    <key>158</key><dict>
+    <key>161</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Graham Nelson\Basic Inform.i7x</string>
         <key>Line</key><integer>337</integer>
         <key>Title</key><string>Chapter 2 - Conditions and Variables</string>
         <key>Level</key><integer>4</integer>
         <key>Indentation</key><integer>2</integer>
     </dict>
-    <key>159</key><dict>
+    <key>162</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Graham Nelson\Basic Inform.i7x</string>
         <key>Line</key><integer>339</integer>
         <key>Title</key><string>Section 1 - Conditions</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
-    <key>160</key><dict>
+    <key>163</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Graham Nelson\Basic Inform.i7x</string>
         <key>Line</key><integer>348</integer>
         <key>Title</key><string>Section 2 - Assigning Temporary Variables</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
-    <key>161</key><dict>
+    <key>164</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Graham Nelson\Basic Inform.i7x</string>
         <key>Line</key><integer>386</integer>
         <key>Title</key><string>Section 3 - Increase and Decrease</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
-    <key>162</key><dict>
+    <key>165</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Graham Nelson\Basic Inform.i7x</string>
         <key>Line</key><integer>407</integer>
         <key>Title</key><string>Chapter 2 - Arithmetic</string>
         <key>Level</key><integer>4</integer>
         <key>Indentation</key><integer>2</integer>
     </dict>
-    <key>163</key><dict>
+    <key>166</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Graham Nelson\Basic Inform.i7x</string>
         <key>Line</key><integer>409</integer>
         <key>Title</key><string>Section 1 - Arithmetic Operations</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
-    <key>164</key><dict>
+    <key>167</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Graham Nelson\Basic Inform.i7x</string>
         <key>Line</key><integer>470</integer>
         <key>Title</key><string>Section 2 - Saying Real Numbers</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
-    <key>165</key><dict>
+    <key>168</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Graham Nelson\Basic Inform.i7x</string>
         <key>Line</key><integer>488</integer>
         <key>Title</key><string>Section 3 - Real Arithmetic</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
-    <key>166</key><dict>
+    <key>169</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Graham Nelson\Basic Inform.i7x</string>
         <key>Line</key><integer>519</integer>
         <key>Title</key><string>Section 4 - Exponential Functions</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
-    <key>167</key><dict>
+    <key>170</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Graham Nelson\Basic Inform.i7x</string>
         <key>Line</key><integer>536</integer>
         <key>Title</key><string>Section 5 - Trigonometric Functions</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
-    <key>168</key><dict>
+    <key>171</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Graham Nelson\Basic Inform.i7x</string>
         <key>Line</key><integer>567</integer>
         <key>Title</key><string>Section 6 - Trigonometric Functions</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
-    <key>169</key><dict>
+    <key>172</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Graham Nelson\Basic Inform.i7x</string>
         <key>Line</key><integer>597</integer>
         <key>Title</key><string>Chapter 3 - Control</string>
         <key>Level</key><integer>4</integer>
         <key>Indentation</key><integer>2</integer>
     </dict>
-    <key>170</key><dict>
+    <key>173</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Graham Nelson\Basic Inform.i7x</string>
         <key>Line</key><integer>599</integer>
         <key>Title</key><string>Section 1 - Deciding Outcomes</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
-    <key>171</key><dict>
+    <key>174</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Graham Nelson\Basic Inform.i7x</string>
         <key>Line</key><integer>615</integer>
         <key>Title</key><string>Section 2 - If and Unless</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
-    <key>172</key><dict>
+    <key>175</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Graham Nelson\Basic Inform.i7x</string>
         <key>Line</key><integer>630</integer>
         <key>Title</key><string>Section 3 - While and Repeat</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
-    <key>173</key><dict>
+    <key>176</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Graham Nelson\Basic Inform.i7x</string>
         <key>Line</key><integer>692</integer>
         <key>Title</key><string>Section 4 - Loop Flow</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
-    <key>174</key><dict>
+    <key>177</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Graham Nelson\Basic Inform.i7x</string>
         <key>Line</key><integer>701</integer>
         <key>Title</key><string>Chapter 4 - Values</string>
         <key>Level</key><integer>4</integer>
         <key>Indentation</key><integer>2</integer>
     </dict>
-    <key>175</key><dict>
+    <key>178</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Graham Nelson\Basic Inform.i7x</string>
         <key>Line</key><integer>703</integer>
         <key>Title</key><string>Section 1 - Enumerations</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
-    <key>176</key><dict>
+    <key>179</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Graham Nelson\Basic Inform.i7x</string>
         <key>Line</key><integer>721</integer>
         <key>Title</key><string>Section 2 - Randomness</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
-    <key>177</key><dict>
+    <key>180</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Graham Nelson\Basic Inform.i7x</string>
         <key>Line</key><integer>745</integer>
         <key>Title</key><string>Section 3 - Default Values</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
-    <key>178</key><dict>
+    <key>181</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Graham Nelson\Basic Inform.i7x</string>
         <key>Line</key><integer>751</integer>
         <key>Title</key><string>Chapter 5 - Text</string>
         <key>Level</key><integer>4</integer>
         <key>Indentation</key><integer>2</integer>
     </dict>
-    <key>179</key><dict>
+    <key>182</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Graham Nelson\Basic Inform.i7x</string>
         <key>Line</key><integer>753</integer>
         <key>Title</key><string>Section 1 - Breaking down text</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
-    <key>180</key><dict>
+    <key>183</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Graham Nelson\Basic Inform.i7x</string>
         <key>Line</key><integer>797</integer>
         <key>Title</key><string>Section 2 - Matching and Replacing</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
-    <key>181</key><dict>
+    <key>184</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Graham Nelson\Basic Inform.i7x</string>
         <key>Line</key><integer>849</integer>
         <key>Title</key><string>Section 3 - Regular Expressions</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
-    <key>182</key><dict>
+    <key>185</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Graham Nelson\Basic Inform.i7x</string>
         <key>Line</key><integer>875</integer>
         <key>Title</key><string>Section 4 - Casing of Text</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
-    <key>183</key><dict>
+    <key>186</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Graham Nelson\Basic Inform.i7x</string>
         <key>Line</key><integer>896</integer>
         <key>Title</key><string>Section 5 - Adaptive Text</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
-    <key>184</key><dict>
+    <key>187</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Graham Nelson\Basic Inform.i7x</string>
         <key>Line</key><integer>935</integer>
         <key>Title</key><string>Chapter 6 - Data Structures</string>
         <key>Level</key><integer>4</integer>
         <key>Indentation</key><integer>2</integer>
     </dict>
-    <key>185</key><dict>
+    <key>188</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Graham Nelson\Basic Inform.i7x</string>
         <key>Line</key><integer>937</integer>
         <key>Title</key><string>Section 1 - Tables</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
-    <key>186</key><dict>
+    <key>189</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Graham Nelson\Basic Inform.i7x</string>
         <key>Line</key><integer>993</integer>
         <key>Title</key><string>Section 2 - Sorting Tables</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
-    <key>187</key><dict>
+    <key>190</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Graham Nelson\Basic Inform.i7x</string>
         <key>Line</key><integer>1005</integer>
         <key>Title</key><string>Section 3 - Lists</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
-    <key>188</key><dict>
+    <key>191</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Graham Nelson\Basic Inform.i7x</string>
         <key>Line</key><integer>1051</integer>
         <key>Title</key><string>Section 4 - Length of lists</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
-    <key>189</key><dict>
+    <key>192</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Graham Nelson\Basic Inform.i7x</string>
         <key>Line</key><integer>1072</integer>
         <key>Title</key><string>Section 5 - List operations</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
-    <key>190</key><dict>
+    <key>193</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Graham Nelson\Basic Inform.i7x</string>
         <key>Line</key><integer>1099</integer>
         <key>Title</key><string>Section 6 - Relations</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
-    <key>191</key><dict>
+    <key>194</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Graham Nelson\Basic Inform.i7x</string>
         <key>Line</key><integer>1169</integer>
         <key>Title</key><string>Chapter 7 - Functional Programming</string>
         <key>Level</key><integer>4</integer>
         <key>Indentation</key><integer>2</integer>
     </dict>
-    <key>192</key><dict>
+    <key>195</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Graham Nelson\Basic Inform.i7x</string>
         <key>Line</key><integer>1171</integer>
         <key>Title</key><string>Section 1 - Applying Functions</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
-    <key>193</key><dict>
+    <key>196</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Graham Nelson\Basic Inform.i7x</string>
         <key>Line</key><integer>1215</integer>
         <key>Title</key><string>Section 2 - Working with Lists</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
-    <key>194</key><dict>
+    <key>197</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Graham Nelson\Basic Inform.i7x</string>
         <key>Line</key><integer>1244</integer>
         <key>Title</key><string>Chapter 8 - Rulebooks and Activities</string>
         <key>Level</key><integer>4</integer>
         <key>Indentation</key><integer>2</integer>
     </dict>
-    <key>195</key><dict>
+    <key>198</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Graham Nelson\Basic Inform.i7x</string>
         <key>Line</key><integer>1246</integer>
         <key>Title</key><string>Section 1 - Carrying out Activities</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
-    <key>196</key><dict>
+    <key>199</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Graham Nelson\Basic Inform.i7x</string>
         <key>Line</key><integer>1258</integer>
         <key>Title</key><string>Section 2 - Advanced Activities</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
-    <key>197</key><dict>
+    <key>200</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Graham Nelson\Basic Inform.i7x</string>
         <key>Line</key><integer>1285</integer>
         <key>Title</key><string>Section 3 - Following Rules</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
-    <key>198</key><dict>
+    <key>201</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Graham Nelson\Basic Inform.i7x</string>
         <key>Line</key><integer>1316</integer>
         <key>Title</key><string>Section 4 - Success and Failure</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
-    <key>199</key><dict>
+    <key>202</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Graham Nelson\Basic Inform.i7x</string>
         <key>Line</key><integer>1339</integer>
         <key>Title</key><string>Chapter 9 - External Files</string>
         <key>Level</key><integer>4</integer>
         <key>Indentation</key><integer>2</integer>
     </dict>
-    <key>200</key><dict>
+    <key>203</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Graham Nelson\Basic Inform.i7x</string>
         <key>Line</key><integer>1341</integer>
         <key>Title</key><string>Section 1 - Files of Text</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
-    <key>201</key><dict>
+    <key>204</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Graham Nelson\Basic Inform.i7x</string>
         <key>Line</key><integer>1353</integer>
         <key>Title</key><string>Section 2 - Files of Data</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
-    <key>202</key><dict>
+    <key>205</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Graham Nelson\Basic Inform.i7x</string>
         <key>Line</key><integer>1362</integer>
         <key>Title</key><string>Section 3 - File Handling</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
-    <key>203</key><dict>
+    <key>206</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Graham Nelson\Basic Inform.i7x</string>
         <key>Line</key><integer>1377</integer>
         <key>Title</key><string>Part Four - Adjectival Definitions</string>
         <key>Level</key><integer>3</integer>
         <key>Indentation</key><integer>1</integer>
     </dict>
-    <key>204</key><dict>
+    <key>207</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Graham Nelson\Basic Inform.i7x</string>
         <key>Line</key><integer>1379</integer>
         <key>Title</key><string>Section 1 - Miscellaneous Useful Adjectives</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>2</integer>
     </dict>
-    <key>205</key><dict>
+    <key>208</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Graham Nelson\Basic Inform.i7x</string>
         <key>Line</key><integer>1417</integer>
         <key>Title</key><string>Section 2 - Adjectives for Relations</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>2</integer>
     </dict>
-    <key>206</key><dict>
+    <key>209</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Graham Nelson\Basic Inform.i7x</string>
         <key>Line</key><integer>1449</integer>
         <key>Title</key><string>Section 3 - Adjectives for Real Numbers</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>2</integer>
     </dict>
-    <key>207</key><dict>
+    <key>210</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Graham Nelson\English Language.i7x</string>
         <key>Line</key><integer>1</integer>
         <key>Title</key><string>--</string>
         <key>Level</key><integer>0</integer>
         <key>Indentation</key><integer>0</integer>
     </dict>
-    <key>208</key><dict>
+    <key>211</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Graham Nelson\English Language.i7x</string>
         <key>Line</key><integer>7</integer>
         <key>Title</key><string>Section 1 - Modal verbs and contractions</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>1</integer>
     </dict>
-    <key>209</key><dict>
+    <key>212</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Graham Nelson\English Language.i7x</string>
         <key>Line</key><integer>31</integer>
         <key>Title</key><string>Section 2 - Fallback definitions</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>1</integer>
     </dict>
-    <key>210</key><dict>
+    <key>213</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Graham Nelson\English Language.i7x</string>
         <key>Line</key><integer>35</integer>
         <key>Title</key><string>Section 1 - Grammatical definitions</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>1</integer>
     </dict>
-    <key>211</key><dict>
+    <key>214</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Graham Nelson\English Language.i7x</string>
         <key>Line</key><integer>80</integer>
         <key>Title</key><string>Section 2 - Saying pronouns</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>1</integer>
     </dict>
-    <key>212</key><dict>
+    <key>215</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Graham Nelson\English Language.i7x</string>
         <key>Line</key><integer>262</integer>
         <key>Title</key><string>Section 3 - Further pronouns</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>1</integer>
     </dict>
-    <key>213</key><dict>
+    <key>216</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Graham Nelson\Standard Rules.i7x</string>
         <key>Line</key><integer>1</integer>
         <key>Title</key><string>--</string>
         <key>Level</key><integer>0</integer>
         <key>Indentation</key><integer>0</integer>
     </dict>
-    <key>214</key><dict>
+    <key>217</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Graham Nelson\Standard Rules.i7x</string>
         <key>Line</key><integer>6</integer>
         <key>Title</key><string>Part One - Preamble</string>
         <key>Level</key><integer>3</integer>
         <key>Indentation</key><integer>1</integer>
     </dict>
-    <key>215</key><dict>
+    <key>218</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Graham Nelson\Standard Rules.i7x</string>
         <key>Line</key><integer>31</integer>
         <key>Title</key><string>Part Two - The Physical World Model</string>
         <key>Level</key><integer>3</integer>
         <key>Indentation</key><integer>1</integer>
     </dict>
-    <key>216</key><dict>
+    <key>219</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Graham Nelson\Standard Rules.i7x</string>
         <key>Line</key><integer>33</integer>
         <key>Title</key><string>Chapter 1 - Verbs and Relations</string>
         <key>Level</key><integer>4</integer>
         <key>Indentation</key><integer>2</integer>
     </dict>
-    <key>217</key><dict>
+    <key>220</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Graham Nelson\Standard Rules.i7x</string>
         <key>Line</key><integer>82</integer>
         <key>Title</key><string>Chapter 2 - Kinds for the Physical World</string>
         <key>Level</key><integer>4</integer>
         <key>Indentation</key><integer>2</integer>
     </dict>
-    <key>218</key><dict>
+    <key>221</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Graham Nelson\Standard Rules.i7x</string>
         <key>Line</key><integer>84</integer>
         <key>Title</key><string>Section 1 - Kind Definitions</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
-    <key>219</key><dict>
+    <key>222</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Graham Nelson\Standard Rules.i7x</string>
         <key>Line</key><integer>97</integer>
         <key>Title</key><string>Section 2 - Rooms</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
-    <key>220</key><dict>
+    <key>223</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Graham Nelson\Standard Rules.i7x</string>
         <key>Line</key><integer>127</integer>
         <key>Title</key><string>Section 3 - Things</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
-    <key>221</key><dict>
+    <key>224</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Graham Nelson\Standard Rules.i7x</string>
         <key>Line</key><integer>154</integer>
         <key>Title</key><string>Section 4 - Directions</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
-    <key>222</key><dict>
+    <key>225</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Graham Nelson\Standard Rules.i7x</string>
         <key>Line</key><integer>202</integer>
         <key>Title</key><string>Section 5 - Doors</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
-    <key>223</key><dict>
+    <key>226</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Graham Nelson\Standard Rules.i7x</string>
         <key>Line</key><integer>219</integer>
         <key>Title</key><string>Section 6 - Containers</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
-    <key>224</key><dict>
+    <key>227</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Graham Nelson\Standard Rules.i7x</string>
         <key>Line</key><integer>231</integer>
         <key>Title</key><string>Section 7 - Supporters</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
-    <key>225</key><dict>
+    <key>228</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Graham Nelson\Standard Rules.i7x</string>
         <key>Line</key><integer>243</integer>
         <key>Title</key><string>Section 8 - Openability</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
-    <key>226</key><dict>
+    <key>229</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Graham Nelson\Standard Rules.i7x</string>
         <key>Line</key><integer>251</integer>
         <key>Title</key><string>Section 9 - Lockability</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
-    <key>227</key><dict>
+    <key>230</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Graham Nelson\Standard Rules.i7x</string>
         <key>Line</key><integer>270</integer>
         <key>Title</key><string>Section 10 - Backdrops</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
-    <key>228</key><dict>
+    <key>231</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Graham Nelson\Standard Rules.i7x</string>
         <key>Line</key><integer>280</integer>
         <key>Title</key><string>Section 11 - People</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
-    <key>229</key><dict>
+    <key>232</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Graham Nelson\Standard Rules.i7x</string>
         <key>Line</key><integer>304</integer>
         <key>Title</key><string>Section 12 - Animals, men and women</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
-    <key>230</key><dict>
+    <key>233</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Graham Nelson\Standard Rules.i7x</string>
         <key>Line</key><integer>322</integer>
         <key>Title</key><string>Section 13 - Devices</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
-    <key>231</key><dict>
+    <key>234</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Graham Nelson\Standard Rules.i7x</string>
         <key>Line</key><integer>331</integer>
         <key>Title</key><string>Section 14 - Vehicles</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
-    <key>232</key><dict>
+    <key>235</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Graham Nelson\Standard Rules.i7x</string>
         <key>Line</key><integer>344</integer>
         <key>Title</key><string>Section 15 - Player's holdall</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
-    <key>233</key><dict>
+    <key>236</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Graham Nelson\Standard Rules.i7x</string>
         <key>Line</key><integer>355</integer>
         <key>Title</key><string>Section 16 - Inter identifier equivalents</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
-    <key>234</key><dict>
+    <key>237</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Graham Nelson\Standard Rules.i7x</string>
         <key>Line</key><integer>388</integer>
         <key>Title</key><string>Part Three - Variables and Rulebooks</string>
         <key>Level</key><integer>3</integer>
         <key>Indentation</key><integer>1</integer>
     </dict>
-    <key>235</key><dict>
+    <key>238</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Graham Nelson\Standard Rules.i7x</string>
         <key>Line</key><integer>390</integer>
         <key>Title</key><string>Chapter 1 - Variables</string>
         <key>Level</key><integer>4</integer>
         <key>Indentation</key><integer>2</integer>
     </dict>
-    <key>236</key><dict>
+    <key>239</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Graham Nelson\Standard Rules.i7x</string>
         <key>Line</key><integer>392</integer>
         <key>Title</key><string>Section 1 - Situation</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
-    <key>237</key><dict>
+    <key>240</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Graham Nelson\Standard Rules.i7x</string>
         <key>Line</key><integer>412</integer>
         <key>Title</key><string>Section 2 - Current action</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
-    <key>238</key><dict>
+    <key>241</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Graham Nelson\Standard Rules.i7x</string>
         <key>Line</key><integer>427</integer>
         <key>Title</key><string>Section 3 - Used when ruling on accessibility</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
-    <key>239</key><dict>
+    <key>242</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Graham Nelson\Standard Rules.i7x</string>
         <key>Line</key><integer>439</integer>
         <key>Title</key><string>Section 4 - Used when understanding typed commands</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
-    <key>240</key><dict>
+    <key>243</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Graham Nelson\Standard Rules.i7x</string>
         <key>Line</key><integer>452</integer>
         <key>Title</key><string>Section 5 - Presentation on screen</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
-    <key>241</key><dict>
+    <key>244</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Graham Nelson\Standard Rules.i7x</string>
         <key>Line</key><integer>466</integer>
         <key>Title</key><string>Section 6 - Language generation</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
-    <key>242</key><dict>
+    <key>245</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Graham Nelson\Standard Rules.i7x</string>
         <key>Line</key><integer>472</integer>
         <key>Title</key><string>Section 7 - Unindexed Standard Rules variables -</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
-    <key>243</key><dict>
+    <key>246</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Graham Nelson\Standard Rules.i7x</string>
         <key>Line</key><integer>484</integer>
         <key>Title</key><string>Section SR2/6b - Unindexed Standard Rules variables -</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
-    <key>244</key><dict>
+    <key>247</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Graham Nelson\Standard Rules.i7x</string>
         <key>Line</key><integer>488</integer>
         <key>Title</key><string>Section 8 - Unindexed Standard Rules variables -</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
-    <key>245</key><dict>
+    <key>248</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Graham Nelson\Standard Rules.i7x</string>
         <key>Line</key><integer>505</integer>
         <key>Title</key><string>Chapter 2 - Rulebooks</string>
         <key>Level</key><integer>4</integer>
         <key>Indentation</key><integer>2</integer>
     </dict>
-    <key>246</key><dict>
+    <key>249</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Graham Nelson\Standard Rules.i7x</string>
         <key>Line</key><integer>507</integer>
         <key>Title</key><string>Section 1 - The Standard Rulebooks</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
-    <key>247</key><dict>
+    <key>250</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Graham Nelson\Standard Rules.i7x</string>
         <key>Line</key><integer>556</integer>
         <key>Title</key><string>Section 2 - The Standard Rules</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
-    <key>248</key><dict>
+    <key>251</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Graham Nelson\Standard Rules.i7x</string>
         <key>Line</key><integer>640</integer>
         <key>Title</key><string>Section 3 - The Entire Game scene</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
-    <key>249</key><dict>
+    <key>252</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Graham Nelson\Standard Rules.i7x</string>
         <key>Line</key><integer>646</integer>
         <key>Title</key><string>Section 4 - Action processing</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
-    <key>250</key><dict>
+    <key>253</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Graham Nelson\Standard Rules.i7x</string>
         <key>Line</key><integer>735</integer>
         <key>Title</key><string>Section 5 - Accessibility</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
-    <key>251</key><dict>
+    <key>254</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Graham Nelson\Standard Rules.i7x</string>
         <key>Line</key><integer>768</integer>
         <key>Title</key><string>Section 6 - Adjectival definitions</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
-    <key>252</key><dict>
+    <key>255</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Graham Nelson\Standard Rules.i7x</string>
         <key>Line</key><integer>773</integer>
         <key>Title</key><string>Section 7 - Scene descriptions</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
-    <key>253</key><dict>
+    <key>256</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Graham Nelson\Standard Rules.i7x</string>
         <key>Line</key><integer>780</integer>
         <key>Title</key><string>Section 8 - Command parser errors</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
-    <key>254</key><dict>
+    <key>257</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Graham Nelson\Standard Rules.i7x</string>
         <key>Line</key><integer>812</integer>
         <key>Title</key><string>Section 9 - Responses for internal rules</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
-    <key>255</key><dict>
+    <key>258</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Graham Nelson\Standard Rules.i7x</string>
         <key>Line</key><integer>930</integer>
         <key>Title</key><string>Part Four - Activities</string>
         <key>Level</key><integer>3</integer>
         <key>Indentation</key><integer>1</integer>
     </dict>
-    <key>256</key><dict>
+    <key>259</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Graham Nelson\Standard Rules.i7x</string>
         <key>Line</key><integer>932</integer>
         <key>Title</key><string>Section 1 - Responses</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>2</integer>
     </dict>
-    <key>257</key><dict>
+    <key>260</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Graham Nelson\Standard Rules.i7x</string>
         <key>Line</key><integer>943</integer>
         <key>Title</key><string>Section 2 - Naming and Listing</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>2</integer>
     </dict>
-    <key>258</key><dict>
+    <key>261</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Graham Nelson\Standard Rules.i7x</string>
         <key>Line</key><integer>986</integer>
         <key>Title</key><string>Section 3 - Command parsing</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>2</integer>
     </dict>
-    <key>259</key><dict>
+    <key>262</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Graham Nelson\Standard Rules.i7x</string>
         <key>Line</key><integer>1032</integer>
         <key>Title</key><string>Section 4 - Posthumous activities</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>2</integer>
     </dict>
-    <key>260</key><dict>
+    <key>263</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Graham Nelson\Standard Rules.i7x</string>
         <key>Line</key><integer>1070</integer>
         <key>Title</key><string>Section 5 - The Final Question</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>2</integer>
     </dict>
-    <key>261</key><dict>
+    <key>264</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Graham Nelson\Standard Rules.i7x</string>
         <key>Line</key><integer>1107</integer>
         <key>Title</key><string>Section 6 - Final question options</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>2</integer>
     </dict>
-    <key>262</key><dict>
+    <key>265</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Graham Nelson\Standard Rules.i7x</string>
         <key>Line</key><integer>1117</integer>
         <key>Title</key><string>Section 7 - Locale descriptions -</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>2</integer>
     </dict>
-    <key>263</key><dict>
+    <key>266</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Graham Nelson\Standard Rules.i7x</string>
         <key>Line</key><integer>1325</integer>
         <key>Title</key><string>Part Five - Actions</string>
         <key>Level</key><integer>3</integer>
         <key>Indentation</key><integer>1</integer>
     </dict>
-    <key>264</key><dict>
+    <key>267</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Graham Nelson\Standard Rules.i7x</string>
         <key>Line</key><integer>1327</integer>
         <key>Title</key><string>Section 1 - Verbs needed for adaptive text</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>2</integer>
     </dict>
-    <key>265</key><dict>
+    <key>268</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Graham Nelson\Standard Rules.i7x</string>
         <key>Line</key><integer>1343</integer>
         <key>Title</key><string>Section 2 - Standard actions concerning the actor's possessions</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>2</integer>
     </dict>
-    <key>266</key><dict>
+    <key>269</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Graham Nelson\Standard Rules.i7x</string>
         <key>Line</key><integer>1788</integer>
         <key>Title</key><string>Section 3 - Standard actions which move the actor</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>2</integer>
     </dict>
-    <key>267</key><dict>
+    <key>270</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Graham Nelson\Standard Rules.i7x</string>
         <key>Line</key><integer>2189</integer>
         <key>Title</key><string>Section 4 - Standard actions concerning the actor's vision</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>2</integer>
     </dict>
-    <key>268</key><dict>
+    <key>271</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Graham Nelson\Standard Rules.i7x</string>
         <key>Line</key><integer>2486</integer>
         <key>Title</key><string>Section 5 - Standard actions which change the state of things</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>2</integer>
     </dict>
-    <key>269</key><dict>
+    <key>272</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Graham Nelson\Standard Rules.i7x</string>
         <key>Line</key><integer>2884</integer>
         <key>Title</key><string>Section 6 - Standard actions concerning other people</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>2</integer>
     </dict>
-    <key>270</key><dict>
+    <key>273</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Graham Nelson\Standard Rules.i7x</string>
         <key>Line</key><integer>3201</integer>
         <key>Title</key><string>Section 7 - Standard actions which are checked but then do nothing unless rules intervene</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>2</integer>
     </dict>
-    <key>271</key><dict>
+    <key>274</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Graham Nelson\Standard Rules.i7x</string>
         <key>Line</key><integer>3481</integer>
         <key>Title</key><string>Section 8 - Standard actions which always do nothing unless rules intervene</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>2</integer>
     </dict>
-    <key>272</key><dict>
+    <key>275</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Graham Nelson\Standard Rules.i7x</string>
         <key>Line</key><integer>3802</integer>
         <key>Title</key><string>Section 9 - Standard actions which happen out of world</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>2</integer>
     </dict>
-    <key>273</key><dict>
+    <key>276</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Graham Nelson\Standard Rules.i7x</string>
         <key>Line</key><integer>3964</integer>
         <key>Title</key><string>Part Six - Grammar</string>
         <key>Level</key><integer>3</integer>
         <key>Indentation</key><integer>1</integer>
     </dict>
-    <key>274</key><dict>
+    <key>277</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Graham Nelson\Standard Rules.i7x</string>
         <key>Line</key><integer>4189</integer>
         <key>Title</key><string>Part Seven - Phrasebook</string>
         <key>Level</key><integer>3</integer>
         <key>Indentation</key><integer>1</integer>
     </dict>
-    <key>275</key><dict>
+    <key>278</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Graham Nelson\Standard Rules.i7x</string>
         <key>Line</key><integer>4191</integer>
         <key>Title</key><string>Chapter 1 - Saying</string>
         <key>Level</key><integer>4</integer>
         <key>Indentation</key><integer>2</integer>
     </dict>
-    <key>276</key><dict>
+    <key>279</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Graham Nelson\Standard Rules.i7x</string>
         <key>Line</key><integer>4193</integer>
         <key>Title</key><string>Section 1 - Time Values</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
-    <key>277</key><dict>
+    <key>280</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Graham Nelson\Standard Rules.i7x</string>
         <key>Line</key><integer>4205</integer>
         <key>Title</key><string>Section 2 - Boxed quotations</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
-    <key>278</key><dict>
+    <key>281</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Graham Nelson\Standard Rules.i7x</string>
         <key>Line</key><integer>4211</integer>
         <key>Title</key><string>Section 3 - Some built-in texts</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
-    <key>279</key><dict>
+    <key>282</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Graham Nelson\Standard Rules.i7x</string>
         <key>Line</key><integer>4232</integer>
         <key>Title</key><string>Section 4 - Responses</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
-    <key>280</key><dict>
+    <key>283</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Graham Nelson\Standard Rules.i7x</string>
         <key>Line</key><integer>4238</integer>
         <key>Title</key><string>Section 5 - Saying lists of things</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
-    <key>281</key><dict>
+    <key>284</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Graham Nelson\Standard Rules.i7x</string>
         <key>Line</key><integer>4345</integer>
         <key>Title</key><string>Section 6 - Group in and omit from lists</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
-    <key>282</key><dict>
+    <key>285</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Graham Nelson\Standard Rules.i7x</string>
         <key>Line</key><integer>4372</integer>
         <key>Title</key><string>Section 7 - Filtering contents of lists -</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
-    <key>283</key><dict>
+    <key>286</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Graham Nelson\Standard Rules.i7x</string>
         <key>Line</key><integer>4379</integer>
         <key>Title</key><string>Chapter 2 - Multimedia</string>
         <key>Level</key><integer>4</integer>
         <key>Indentation</key><integer>2</integer>
     </dict>
-    <key>284</key><dict>
+    <key>287</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Graham Nelson\Standard Rules.i7x</string>
         <key>Line</key><integer>4381</integer>
         <key>Title</key><string>Section 1 - Figures</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
-    <key>285</key><dict>
+    <key>288</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Graham Nelson\Standard Rules.i7x</string>
         <key>Line</key><integer>4390</integer>
         <key>Title</key><string>Section 2 - Sound effects</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
-    <key>286</key><dict>
+    <key>289</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Graham Nelson\Standard Rules.i7x</string>
         <key>Line</key><integer>4399</integer>
         <key>Title</key><string>Chapter 3 - Actions, activities and rules</string>
         <key>Level</key><integer>4</integer>
         <key>Indentation</key><integer>2</integer>
     </dict>
-    <key>287</key><dict>
+    <key>290</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Graham Nelson\Standard Rules.i7x</string>
         <key>Line</key><integer>4401</integer>
         <key>Title</key><string>Section 1 - Trying actions</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
-    <key>288</key><dict>
+    <key>291</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Graham Nelson\Standard Rules.i7x</string>
         <key>Line</key><integer>4415</integer>
         <key>Title</key><string>Section 2 - Action requirements</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
-    <key>289</key><dict>
+    <key>292</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Graham Nelson\Standard Rules.i7x</string>
         <key>Line</key><integer>4455</integer>
         <key>Title</key><string>Section 3 - Stop or continue</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
-    <key>290</key><dict>
+    <key>293</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Graham Nelson\Standard Rules.i7x</string>
         <key>Line</key><integer>4464</integer>
         <key>Title</key><string>Section 4 - Actions as values</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
-    <key>291</key><dict>
+    <key>294</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Graham Nelson\Standard Rules.i7x</string>
         <key>Line</key><integer>4488</integer>
         <key>Title</key><string>Chapter 4 - The Model World</string>
         <key>Level</key><integer>4</integer>
         <key>Indentation</key><integer>2</integer>
     </dict>
-    <key>292</key><dict>
+    <key>295</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Graham Nelson\Standard Rules.i7x</string>
         <key>Line</key><integer>4490</integer>
         <key>Title</key><string>Section 1 - Ending the story</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
-    <key>293</key><dict>
+    <key>296</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Graham Nelson\Standard Rules.i7x</string>
         <key>Line</key><integer>4520</integer>
         <key>Title</key><string>Section 2 - Times of day</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
-    <key>294</key><dict>
+    <key>297</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Graham Nelson\Standard Rules.i7x</string>
         <key>Line</key><integer>4542</integer>
         <key>Title</key><string>Section 3 - Durations</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
-    <key>295</key><dict>
+    <key>298</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Graham Nelson\Standard Rules.i7x</string>
         <key>Line</key><integer>4551</integer>
         <key>Title</key><string>Section 4 - Timed events</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
-    <key>296</key><dict>
+    <key>299</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Graham Nelson\Standard Rules.i7x</string>
         <key>Line</key><integer>4563</integer>
         <key>Title</key><string>Section 5 - Scenes</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
-    <key>297</key><dict>
+    <key>300</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Graham Nelson\Standard Rules.i7x</string>
         <key>Line</key><integer>4578</integer>
         <key>Title</key><string>Section 6 - Timing of scenes</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
-    <key>298</key><dict>
+    <key>301</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Graham Nelson\Standard Rules.i7x</string>
         <key>Line</key><integer>4593</integer>
         <key>Title</key><string>Section 7 - Player's identity and location</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
-    <key>299</key><dict>
+    <key>302</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Graham Nelson\Standard Rules.i7x</string>
         <key>Line</key><integer>4599</integer>
         <key>Title</key><string>Section 8 - Moving and removing things</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
-    <key>300</key><dict>
+    <key>303</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Graham Nelson\Standard Rules.i7x</string>
         <key>Line</key><integer>4617</integer>
         <key>Title</key><string>Section 9 - The map</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
-    <key>301</key><dict>
+    <key>304</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Graham Nelson\Standard Rules.i7x</string>
         <key>Line</key><integer>4653</integer>
         <key>Title</key><string>Section 10 - Route-finding</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
-    <key>302</key><dict>
+    <key>305</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Graham Nelson\Standard Rules.i7x</string>
         <key>Line</key><integer>4674</integer>
         <key>Title</key><string>Section 11 - The object tree</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
-    <key>303</key><dict>
+    <key>306</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Graham Nelson\Standard Rules.i7x</string>
         <key>Line</key><integer>4686</integer>
         <key>Title</key><string>Chapter 5 - Understanding</string>
         <key>Level</key><integer>4</integer>
         <key>Indentation</key><integer>2</integer>
     </dict>
-    <key>304</key><dict>
+    <key>307</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Graham Nelson\Standard Rules.i7x</string>
         <key>Line</key><integer>4688</integer>
         <key>Title</key><string>Section 1 - Asking yes/no questions</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
-    <key>305</key><dict>
+    <key>308</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Graham Nelson\Standard Rules.i7x</string>
         <key>Line</key><integer>4694</integer>
         <key>Title</key><string>Section 2 - The player's command</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
-    <key>306</key><dict>
+    <key>309</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Graham Nelson\Standard Rules.i7x</string>
         <key>Line</key><integer>4709</integer>
         <key>Title</key><string>Section 3 - Changing the player's command</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
-    <key>307</key><dict>
+    <key>310</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Graham Nelson\Standard Rules.i7x</string>
         <key>Line</key><integer>4724</integer>
         <key>Title</key><string>Section 4 - Scope and pronouns</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
-    <key>308</key><dict>
+    <key>311</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Graham Nelson\Standard Rules.i7x</string>
         <key>Line</key><integer>4736</integer>
         <key>Title</key><string>Section 5 - The multiple object list</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
-    <key>309</key><dict>
+    <key>312</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Graham Nelson\Standard Rules.i7x</string>
         <key>Line</key><integer>4745</integer>
         <key>Title</key><string>Section SR5/8/1 - Message support - Issuance -</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
-    <key>310</key><dict>
+    <key>313</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Graham Nelson\Standard Rules.i7x</string>
         <key>Line</key><integer>4762</integer>
         <key>Title</key><string>Chapter 6 - Deprecated or private phrases -</string>
         <key>Level</key><integer>4</integer>
         <key>Indentation</key><integer>2</integer>
     </dict>
-    <key>311</key><dict>
+    <key>314</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Graham Nelson\Standard Rules.i7x</string>
         <key>Line</key><integer>4764</integer>
         <key>Title</key><string>Section 1 - Spatial modelling -</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
-    <key>312</key><dict>
+    <key>315</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Graham Nelson\Standard Rules.i7x</string>
         <key>Line</key><integer>4785</integer>
         <key>Title</key><string>Section 2 - Room descriptions -</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
-    <key>313</key><dict>
+    <key>316</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Graham Nelson\Standard Rules.i7x</string>
         <key>Line</key><integer>4800</integer>
         <key>Title</key><string>Section 3 - Action conversion -</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
-    <key>314</key><dict>
+    <key>317</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Graham Nelson\Standard Rules.i7x</string>
         <key>Line</key><integer>4810</integer>
         <key>Title</key><string>Section 4 - Surreptitious violation of invariants -</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
-    <key>315</key><dict>
+    <key>318</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Graham Nelson\Standard Rules.i7x</string>
         <key>Line</key><integer>4819</integer>
         <key>Title</key><string>Section 5 - Capitalised list-writing -</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
-    <key>316</key><dict>
+    <key>319</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Graham Nelson\Standard Rules.i7x</string>
         <key>Line</key><integer>4828</integer>
         <key>Title</key><string>Section 6 - Printing names -</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
-    <key>317</key><dict>
+    <key>320</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Graham Nelson\Standard Rules.i7x</string>
         <key>Line</key><integer>4833</integer>
         <key>Title</key><string>Section 7 - Command parsing -</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
-    <key>318</key><dict>
+    <key>321</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Graham Nelson\Standard Rules.i7x</string>
         <key>Line</key><integer>4838</integer>
         <key>Title</key><string>Section 8 - Deprecated Inform -</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
-    <key>319</key><dict>
+    <key>322</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Graham Nelson\Standard Rules.i7x</string>
         <key>Line</key><integer>4847</integer>
         <key>Title</key><string>Section 9 - Debugging Inform -</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
-    <key>320</key><dict>
+    <key>323</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.materials\Extensions\Emily Short\Modified Exit-v6.i7x</string>
         <key>Line</key><integer>1</integer>
         <key>Title</key><string>--</string>
         <key>Level</key><integer>0</integer>
         <key>Indentation</key><integer>0</integer>
     </dict>
-    <key>321</key><dict>
+    <key>324</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.materials\Extensions\Emily Short\Modified Exit-v6.i7x</string>
         <key>Line</key><integer>9</integer>
         <key>Title</key><string>Section 1 - Leaving a named object</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>1</integer>
     </dict>
-    <key>322</key><dict>
+    <key>325</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.materials\Extensions\Emily Short\Modified Exit-v6.i7x</string>
         <key>Line</key><integer>22</integer>
         <key>Title</key><string>Section 2 - Getting out before taking something</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>1</integer>
     </dict>
-    <key>323</key><dict>
+    <key>326</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.materials\Extensions\Emily Short\Modified Exit-v6.i7x</string>
         <key>Line</key><integer>31</integer>
         <key>Title</key><string>Section 3 - Getting up before walking away</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>1</integer>
     </dict>
-    <key>324</key><dict>
+    <key>327</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.materials\Extensions\Emily Short\Modified Exit-v6.i7x</string>
         <key>Line</key><integer>37</integer>
         <key>Title</key><string>Section 4a - Rising before departure</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>1</integer>
     </dict>
-    <key>325</key><dict>
+    <key>328</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.materials\Extensions\Emily Short\Modified Exit-v6.i7x</string>
         <key>Line</key><integer>45</integer>
         <key>Title</key><string>Section 4b - Rising before departure</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>1</integer>
     </dict>
-    <key>326</key><dict>
+    <key>329</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.materials\Extensions\Emily Short\Modified Exit-v6.i7x</string>
         <key>Line</key><integer>55</integer>
         <key>Title</key><string>Section 5 - Implicit exiting defined</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>1</integer>
     </dict>
-    <key>327</key><dict>
+    <key>330</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.materials\Extensions\Emily Short\Modified Exit-v6.i7x</string>
         <key>Line</key><integer>65</integer>
         <key>Title</key><string>Section 6 - Bare Exit Means OUT</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>1</integer>
     </dict>
-    <key>328</key><dict>
+    <key>331</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.materials\Extensions\Emily Short\Modified Exit-v6.i7x</string>
         <key>Line</key><integer>73</integer>
         <key>Title</key><string>Section 7 - Stand Up does NOT mean OUT</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>1</integer>
     </dict>
-    <key>329</key><dict>
+    <key>332</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.materials\Extensions\Emily Short\Modified Exit-v6.i7x</string>
         <key>Line</key><integer>92</integer>
         <key>Title</key><string>Section 7a - Stand UP does NOT mean OUT</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>1</integer>
     </dict>
-    <key>330</key><dict>
+    <key>333</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.materials\Extensions\Emily Short\Modified Exit-v6.i7x</string>
         <key>Line</key><integer>96</integer>
         <key>Title</key><string>Section 8 - Sequential Action Suppresses Room Description On Exit</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>1</integer>
     </dict>
-    <key>331</key><dict>
+    <key>334</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Emily Short\Locksmith.i7x</string>
         <key>Line</key><integer>1</integer>
         <key>Title</key><string>--</string>
         <key>Level</key><integer>0</integer>
         <key>Indentation</key><integer>0</integer>
     </dict>
-    <key>332</key><dict>
+    <key>335</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Emily Short\Locksmith.i7x</string>
         <key>Line</key><integer>9</integer>
         <key>Title</key><string>Volume 1 - Automatic locking and unlocking with necessary actions</string>
         <key>Level</key><integer>1</integer>
         <key>Indentation</key><integer>1</integer>
     </dict>
-    <key>333</key><dict>
+    <key>336</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Emily Short\Locksmith.i7x</string>
         <key>Line</key><integer>61</integer>
         <key>Title</key><string>Volume 2 - Default locking and unlocking</string>
         <key>Level</key><integer>1</integer>
         <key>Indentation</key><integer>1</integer>
     </dict>
-    <key>334</key><dict>
+    <key>337</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Emily Short\Locksmith.i7x</string>
         <key>Line</key><integer>63</integer>
         <key>Title</key><string>Part 1 - The matching key rule</string>
         <key>Level</key><integer>3</integer>
         <key>Indentation</key><integer>2</integer>
     </dict>
-    <key>335</key><dict>
+    <key>338</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Emily Short\Locksmith.i7x</string>
         <key>Line</key><integer>89</integer>
         <key>Title</key><string>Part 2 - Unlocking</string>
         <key>Level</key><integer>3</integer>
         <key>Indentation</key><integer>2</integer>
     </dict>
-    <key>336</key><dict>
+    <key>339</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Emily Short\Locksmith.i7x</string>
         <key>Line</key><integer>91</integer>
         <key>Title</key><string>Section 1 - Regular unlocking</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
-    <key>337</key><dict>
+    <key>340</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Emily Short\Locksmith.i7x</string>
         <key>Line</key><integer>115</integer>
         <key>Title</key><string>Section 2 - Keylessly</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
-    <key>338</key><dict>
+    <key>341</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Emily Short\Locksmith.i7x</string>
         <key>Line</key><integer>139</integer>
         <key>Title</key><string>Part 3 - Locking</string>
         <key>Level</key><integer>3</integer>
         <key>Indentation</key><integer>2</integer>
     </dict>
-    <key>339</key><dict>
+    <key>342</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Emily Short\Locksmith.i7x</string>
         <key>Line</key><integer>141</integer>
         <key>Title</key><string>Section 1 - Regular locking</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
-    <key>340</key><dict>
+    <key>343</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Emily Short\Locksmith.i7x</string>
         <key>Line</key><integer>154</integer>
         <key>Title</key><string>Section 2 - Keylessly</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
-    <key>341</key><dict>
+    <key>344</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Emily Short\Locksmith.i7x</string>
         <key>Line</key><integer>178</integer>
         <key>Title</key><string>Volume 3 - The Passkey kind, needed only if you want keys to name themselves</string>
         <key>Level</key><integer>1</integer>
         <key>Indentation</key><integer>1</integer>
     </dict>
-    <key>342</key><dict>
+    <key>345</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Emily Short\Locksmith.i7x</string>
         <key>Line</key><integer>211</integer>
         <key>Title</key><string>Volume 4 - The Keychain kind, needed only if you want a keychain</string>
         <key>Level</key><integer>1</integer>
         <key>Indentation</key><integer>1</integer>
     </dict>
-    <key>343</key><dict>
+    <key>346</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Emily Short\Locksmith.i7x</string>
         <key>Line</key><integer>235</integer>
         <key>Title</key><string>Volume 5 - Support Materials</string>
         <key>Level</key><integer>1</integer>
         <key>Indentation</key><integer>1</integer>
     </dict>
-    <key>344</key><dict>
+    <key>347</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Emily Short\Locksmith.i7x</string>
         <key>Line</key><integer>289</integer>
         <key>Title</key><string>Volume 6 - Unlocking all -</string>
         <key>Level</key><integer>1</integer>
         <key>Indentation</key><integer>1</integer>
     </dict>
-    <key>345</key><dict>
+    <key>348</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.materials\Extensions\Wade Clarke\Basic Help Menu-v4.i7x</string>
         <key>Line</key><integer>1</integer>
         <key>Title</key><string>--</string>
         <key>Level</key><integer>0</integer>
         <key>Indentation</key><integer>0</integer>
     </dict>
-    <key>346</key><dict>
+    <key>349</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.materials\Extensions\Wade Clarke\Menus-v5.i7x</string>
         <key>Line</key><integer>1</integer>
         <key>Title</key><string>--</string>
         <key>Level</key><integer>0</integer>
         <key>Indentation</key><integer>0</integer>
     </dict>
-    <key>347</key><dict>
+    <key>350</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.materials\Extensions\Wade Clarke\Menus-v5.i7x</string>
         <key>Line</key><integer>5</integer>
         <key>Title</key><string>Section 1 - Inclusions and main hook</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>1</integer>
     </dict>
-    <key>348</key><dict>
+    <key>351</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.materials\Extensions\Wade Clarke\Menus-v5.i7x</string>
         <key>Line</key><integer>19</integer>
         <key>Title</key><string>Section 2 - The Author-Configurable Variables</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>1</integer>
     </dict>
-    <key>349</key><dict>
+    <key>352</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.materials\Extensions\Wade Clarke\Menus-v5.i7x</string>
         <key>Line</key><integer>44</integer>
         <key>Title</key><string>Section 3 - Key Assignments</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>1</integer>
     </dict>
-    <key>350</key><dict>
+    <key>353</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.materials\Extensions\Wade Clarke\Menus-v5.i7x</string>
         <key>Line</key><integer>67</integer>
         <key>Title</key><string>Section 3.1</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>1</integer>
     </dict>
-    <key>351</key><dict>
+    <key>354</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.materials\Extensions\Wade Clarke\Menus-v5.i7x</string>
         <key>Line</key><integer>79</integer>
         <key>Title</key><string>Section 3.2</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>1</integer>
     </dict>
-    <key>352</key><dict>
+    <key>355</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.materials\Extensions\Wade Clarke\Menus-v5.i7x</string>
         <key>Line</key><integer>89</integer>
         <key>Title</key><string>Section 3.3</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>1</integer>
     </dict>
-    <key>353</key><dict>
+    <key>356</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.materials\Extensions\Wade Clarke\Menus-v5.i7x</string>
         <key>Line</key><integer>132</integer>
         <key>Title</key><string>Section 4 - Printed Messages</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>1</integer>
     </dict>
-    <key>354</key><dict>
+    <key>357</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.materials\Extensions\Wade Clarke\Menus-v5.i7x</string>
         <key>Line</key><integer>245</integer>
         <key>Title</key><string>Section 5 - Main Tables and variables</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>1</integer>
     </dict>
-    <key>355</key><dict>
+    <key>358</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.materials\Extensions\Wade Clarke\Menus-v5.i7x</string>
         <key>Line</key><integer>288</integer>
         <key>Title</key><string>Section 6 - Boot Time Menu Scanning Routine</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>1</integer>
     </dict>
-    <key>356</key><dict>
+    <key>359</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.materials\Extensions\Wade Clarke\Menus-v5.i7x</string>
         <key>Line</key><integer>533</integer>
         <key>Title</key><string>Section 7 - Menu System Logic</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>1</integer>
     </dict>
-    <key>357</key><dict>
+    <key>360</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.materials\Extensions\Wade Clarke\Menus-v5.i7x</string>
         <key>Line</key><integer>851</integer>
         <key>Title</key><string>Section 8 - The Menu Action Rules</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>1</integer>
     </dict>
-    <key>358</key><dict>
+    <key>361</key><dict>
         <key>Filename</key><string>C:\HellRide\Hell Ride.materials\Extensions\Wade Clarke\Menus-v5.i7x</string>
         <key>Line</key><integer>1032</integer>
         <key>Title</key><string>Section 9 - Status Window Logic</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>1</integer>
     </dict>
-    <key>359</key><dict>
+    <key>362</key><dict>
+        <key>Filename</key><string>C:\Users\danamont\Documents\Inform\Extensions\Drew Cook\Story Mode.i7x</string>
+        <key>Line</key><integer>1</integer>
+        <key>Title</key><string>--</string>
+        <key>Level</key><integer>0</integer>
+        <key>Indentation</key><integer>0</integer>
+    </dict>
+    <key>363</key><dict>
+        <key>Filename</key><string>C:\Users\danamont\Documents\Inform\Extensions\Drew Cook\Story Mode.i7x</string>
+        <key>Line</key><integer>45</integer>
+        <key>Title</key><string>Chapter 1 - naming some values</string>
+        <key>Level</key><integer>4</integer>
+        <key>Indentation</key><integer>1</integer>
+    </dict>
+    <key>364</key><dict>
+        <key>Filename</key><string>C:\Users\danamont\Documents\Inform\Extensions\Drew Cook\Story Mode.i7x</string>
+        <key>Line</key><integer>128</integer>
+        <key>Title</key><string>Chapter 1 - data</string>
+        <key>Level</key><integer>4</integer>
+        <key>Indentation</key><integer>1</integer>
+    </dict>
+    <key>365</key><dict>
+        <key>Filename</key><string>C:\Users\danamont\Documents\Inform\Extensions\Drew Cook\Story Mode.i7x</string>
+        <key>Line</key><integer>130</integer>
+        <key>Title</key><string>Section 1a - walkthrough information/steps</string>
+        <key>Level</key><integer>5</integer>
+        <key>Indentation</key><integer>2</integer>
+    </dict>
+    <key>366</key><dict>
+        <key>Filename</key><string>C:\Users\danamont\Documents\Inform\Extensions\Drew Cook\Story Mode.i7x</string>
+        <key>Line</key><integer>169</integer>
+        <key>Title</key><string>Section 1b - the whitelist</string>
+        <key>Level</key><integer>5</integer>
+        <key>Indentation</key><integer>2</integer>
+    </dict>
+    <key>367</key><dict>
+        <key>Filename</key><string>C:\Users\danamont\Documents\Inform\Extensions\Drew Cook\Story Mode.i7x</string>
+        <key>Line</key><integer>214</integer>
+        <key>Title</key><string>Chapter 2 - decisions</string>
+        <key>Level</key><integer>4</integer>
+        <key>Indentation</key><integer>1</integer>
+    </dict>
+    <key>368</key><dict>
+        <key>Filename</key><string>C:\Users\danamont\Documents\Inform\Extensions\Drew Cook\Story Mode.i7x</string>
+        <key>Line</key><integer>230</integer>
+        <key>Title</key><string>Chapter 3 - before reading a command</string>
+        <key>Level</key><integer>4</integer>
+        <key>Indentation</key><integer>1</integer>
+    </dict>
+    <key>369</key><dict>
+        <key>Filename</key><string>C:\Users\danamont\Documents\Inform\Extensions\Drew Cook\Story Mode.i7x</string>
+        <key>Line</key><integer>347</integer>
+        <key>Title</key><string>Chapter 4 - after reading a command</string>
+        <key>Level</key><integer>4</integer>
+        <key>Indentation</key><integer>1</integer>
+    </dict>
+    <key>370</key><dict>
+        <key>Filename</key><string>C:\Users\danamont\Documents\Inform\Extensions\Drew Cook\Story Mode.i7x</string>
+        <key>Line</key><integer>409</integer>
+        <key>Title</key><string>Chapter 5 - other stuff</string>
+        <key>Level</key><integer>4</integer>
+        <key>Indentation</key><integer>1</integer>
+    </dict>
+    <key>371</key><dict>
+        <key>Filename</key><string>C:\Users\danamont\Documents\Inform\Extensions\Drew Cook\Story Mode.i7x</string>
+        <key>Line</key><integer>411</integer>
+        <key>Title</key><string>section 1 - resume</string>
+        <key>Level</key><integer>5</integer>
+        <key>Indentation</key><integer>2</integer>
+    </dict>
+    <key>372</key><dict>
+        <key>Filename</key><string>C:\Users\danamont\Documents\Inform\Extensions\Drew Cook\Story Mode.i7x</string>
+        <key>Line</key><integer>431</integer>
+        <key>Title</key><string>section 3 - leaving story mode</string>
+        <key>Level</key><integer>5</integer>
+        <key>Indentation</key><integer>2</integer>
+    </dict>
+    <key>373</key><dict>
+        <key>Filename</key><string>C:\Users\danamont\Documents\Inform\Extensions\Drew Cook\Story Mode.i7x</string>
+        <key>Line</key><integer>448</integer>
+        <key>Title</key><string>Chapter 6 - text substitutions</string>
+        <key>Level</key><integer>4</integer>
+        <key>Indentation</key><integer>1</integer>
+    </dict>
+    <key>374</key><dict>
+        <key>Filename</key><string>C:\Users\danamont\Documents\Inform\Extensions\Drew Cook\Story Mode.i7x</string>
+        <key>Line</key><integer>491</integer>
+        <key>Title</key><string>Section 7 (switch undo/resume as needed at end of game)</string>
+        <key>Level</key><integer>5</integer>
+        <key>Indentation</key><integer>2</integer>
+    </dict>
+    <key>375</key><dict>
+        <key>Filename</key><string>C:\Users\danamont\Documents\Inform\Extensions\Drew Cook\Story Mode.i7x</string>
+        <key>Line</key><integer>554</integer>
+        <key>Title</key><string>Chapter 8 - culled from an arcane grimoire</string>
+        <key>Level</key><integer>4</integer>
+        <key>Indentation</key><integer>1</integer>
+    </dict>
+    <key>376</key><dict>
         <key>Filename</key><string>C:\Users\danamont\Documents\Inform\Extensions\Juhana Leinonen\Object Response Tests.i7x</string>
         <key>Line</key><integer>1</integer>
         <key>Title</key><string>--</string>
         <key>Level</key><integer>0</integer>
         <key>Indentation</key><integer>0</integer>
     </dict>
-    <key>360</key><dict>
+    <key>377</key><dict>
         <key>Filename</key><string>C:\Users\danamont\Documents\Inform\Extensions\Juhana Leinonen\Object Response Tests.i7x</string>
         <key>Line</key><integer>6</integer>
         <key>Title</key><string>Book 1 - Testing actor</string>
         <key>Level</key><integer>2</integer>
         <key>Indentation</key><integer>1</integer>
     </dict>
-    <key>361</key><dict>
+    <key>378</key><dict>
         <key>Filename</key><string>C:\Users\danamont\Documents\Inform\Extensions\Juhana Leinonen\Object Response Tests.i7x</string>
         <key>Line</key><integer>16</integer>
         <key>Title</key><string>Book 2 - Testing rules</string>
         <key>Level</key><integer>2</integer>
         <key>Indentation</key><integer>1</integer>
     </dict>
-    <key>362</key><dict>
+    <key>379</key><dict>
         <key>Filename</key><string>C:\Users\danamont\Documents\Inform\Extensions\Juhana Leinonen\Object Response Tests.i7x</string>
         <key>Line</key><integer>309</integer>
         <key>Title</key><string>Book 3 - Analyzing action</string>
         <key>Level</key><integer>2</integer>
         <key>Indentation</key><integer>1</integer>
     </dict>
-    <key>363</key><dict>
+    <key>380</key><dict>
         <key>Filename</key><string>C:\Users\danamont\Documents\Inform\Extensions\Juhana Leinonen\Object Response Tests.i7x</string>
         <key>Line</key><integer>311</integer>
         <key>Title</key><string>Part 1 - Table of analyzing actions</string>
         <key>Level</key><integer>3</integer>
         <key>Indentation</key><integer>2</integer>
     </dict>
-    <key>364</key><dict>
+    <key>381</key><dict>
         <key>Filename</key><string>C:\Users\danamont\Documents\Inform\Extensions\Juhana Leinonen\Object Response Tests.i7x</string>
         <key>Line</key><integer>369</integer>
         <key>Title</key><string>Book 4 - Actions -</string>
         <key>Level</key><integer>2</integer>
         <key>Indentation</key><integer>1</integer>
     </dict>
-    <key>365</key><dict>
+    <key>382</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Emily Short\Basic Screen Effects.i7x</string>
         <key>Line</key><integer>1</integer>
         <key>Title</key><string>--</string>
         <key>Level</key><integer>0</integer>
         <key>Indentation</key><integer>0</integer>
     </dict>
-    <key>366</key><dict>
+    <key>383</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Emily Short\Basic Screen Effects.i7x</string>
         <key>Line</key><integer>9</integer>
         <key>Title</key><string>Section - Clearing the screen</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>1</integer>
     </dict>
-    <key>367</key><dict>
+    <key>384</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Emily Short\Basic Screen Effects.i7x</string>
         <key>Line</key><integer>22</integer>
         <key>Title</key><string>Section - Waiting for key-presses, quitting suddenly</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>1</integer>
     </dict>
-    <key>368</key><dict>
+    <key>385</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Emily Short\Basic Screen Effects.i7x</string>
         <key>Line</key><integer>87</integer>
         <key>Title</key><string>Section - Showing the current quotation</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>1</integer>
     </dict>
-    <key>369</key><dict>
+    <key>386</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Emily Short\Basic Screen Effects.i7x</string>
         <key>Line</key><integer>94</integer>
         <key>Title</key><string>Section - Centering text on-screen</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>1</integer>
     </dict>
-    <key>370</key><dict>
+    <key>387</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Emily Short\Basic Screen Effects.i7x</string>
         <key>Line</key><integer>148</integer>
         <key>Title</key><string>Section - Customizing the status line</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>1</integer>
     </dict>
-    <key>371</key><dict>
+    <key>388</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform\Internal\Extensions\Emily Short\Basic Screen Effects.i7x</string>
         <key>Line</key><integer>215</integer>
         <key>Title</key><string>Section - Color effects</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>1</integer>
+    </dict>
+    <key>389</key><dict>
+        <key>Filename</key><string>C:\Users\danamont\Documents\Inform\Extensions\Nathanael Nerode\Undo Output Control.i7x</string>
+        <key>Line</key><integer>1</integer>
+        <key>Title</key><string>--</string>
+        <key>Level</key><integer>0</integer>
+        <key>Indentation</key><integer>0</integer>
+    </dict>
+    <key>390</key><dict>
+        <key>Filename</key><string>C:\Users\danamont\Documents\Inform\Extensions\Nathanael Nerode\Undo Output Control.i7x</string>
+        <key>Line</key><integer>8</integer>
+        <key>Title</key><string>Volume - High Level Stuff</string>
+        <key>Level</key><integer>1</integer>
+        <key>Indentation</key><integer>1</integer>
+    </dict>
+    <key>391</key><dict>
+        <key>Filename</key><string>C:\Users\danamont\Documents\Inform\Extensions\Nathanael Nerode\Undo Output Control.i7x</string>
+        <key>Line</key><integer>10</integer>
+        <key>Title</key><string>Section - Rulebooks</string>
+        <key>Level</key><integer>5</integer>
+        <key>Indentation</key><integer>2</integer>
+    </dict>
+    <key>392</key><dict>
+        <key>Filename</key><string>C:\Users\danamont\Documents\Inform\Extensions\Nathanael Nerode\Undo Output Control.i7x</string>
+        <key>Line</key><integer>52</integer>
+        <key>Title</key><string>Section - Control over saving undo state</string>
+        <key>Level</key><integer>5</integer>
+        <key>Indentation</key><integer>2</integer>
+    </dict>
+    <key>393</key><dict>
+        <key>Filename</key><string>C:\Users\danamont\Documents\Inform\Extensions\Nathanael Nerode\Undo Output Control.i7x</string>
+        <key>Line</key><integer>59</integer>
+        <key>Title</key><string>Section - Invoking Undo</string>
+        <key>Level</key><integer>5</integer>
+        <key>Indentation</key><integer>2</integer>
+    </dict>
+    <key>394</key><dict>
+        <key>Filename</key><string>C:\Users\danamont\Documents\Inform\Extensions\Nathanael Nerode\Undo Output Control.i7x</string>
+        <key>Line</key><integer>64</integer>
+        <key>Title</key><string>Section - Empty Command Handling</string>
+        <key>Level</key><integer>5</integer>
+        <key>Indentation</key><integer>2</integer>
+    </dict>
+    <key>395</key><dict>
+        <key>Filename</key><string>C:\Users\danamont\Documents\Inform\Extensions\Nathanael Nerode\Undo Output Control.i7x</string>
+        <key>Line</key><integer>68</integer>
+        <key>Title</key><string>Section - Undo Suspension</string>
+        <key>Level</key><integer>5</integer>
+        <key>Indentation</key><integer>2</integer>
+    </dict>
+    <key>396</key><dict>
+        <key>Filename</key><string>C:\Users\danamont\Documents\Inform\Extensions\Nathanael Nerode\Undo Output Control.i7x</string>
+        <key>Line</key><integer>83</integer>
+        <key>Title</key><string>Volume - Low Level Stuff</string>
+        <key>Level</key><integer>1</integer>
+        <key>Indentation</key><integer>1</integer>
+    </dict>
+    <key>397</key><dict>
+        <key>Filename</key><string>C:\Users\danamont\Documents\Inform\Extensions\Nathanael Nerode\Undo Output Control.i7x</string>
+        <key>Line</key><integer>85</integer>
+        <key>Title</key><string>Part - PerformUndo</string>
+        <key>Level</key><integer>3</integer>
+        <key>Indentation</key><integer>2</integer>
+    </dict>
+    <key>398</key><dict>
+        <key>Filename</key><string>C:\Users\danamont\Documents\Inform\Extensions\Nathanael Nerode\Undo Output Control.i7x</string>
+        <key>Line</key><integer>87</integer>
+        <key>Title</key><string>Section - Patches to PerformUndo</string>
+        <key>Level</key><integer>5</integer>
+        <key>Indentation</key><integer>3</integer>
+    </dict>
+    <key>399</key><dict>
+        <key>Filename</key><string>C:\Users\danamont\Documents\Inform\Extensions\Nathanael Nerode\Undo Output Control.i7x</string>
+        <key>Line</key><integer>139</integer>
+        <key>Title</key><string>Part - Keyboard</string>
+        <key>Level</key><integer>3</integer>
+        <key>Indentation</key><integer>2</integer>
+    </dict>
+    <key>400</key><dict>
+        <key>Filename</key><string>C:\Users\danamont\Documents\Inform\Extensions\Nathanael Nerode\Undo Output Control.i7x</string>
+        <key>Line</key><integer>141</integer>
+        <key>Title</key><string>Section - Patches to Keyboard</string>
+        <key>Level</key><integer>5</integer>
+        <key>Indentation</key><integer>3</integer>
+    </dict>
+    <key>401</key><dict>
+        <key>Filename</key><string>C:\Users\danamont\Documents\Inform\Extensions\Nathanael Nerode\Undo Output Control.i7x</string>
+        <key>Line</key><integer>289</integer>
+        <key>Title</key><string>Part - ParserInput</string>
+        <key>Level</key><integer>3</integer>
+        <key>Indentation</key><integer>2</integer>
+    </dict>
+    <key>402</key><dict>
+        <key>Filename</key><string>C:\Users\danamont\Documents\Inform\Extensions\Nathanael Nerode\Undo Output Control.i7x</string>
+        <key>Line</key><integer>291</integer>
+        <key>Title</key><string>Chapter - Patching ParserInput</string>
+        <key>Level</key><integer>4</integer>
+        <key>Indentation</key><integer>3</integer>
+    </dict>
+    <key>403</key><dict>
+        <key>Filename</key><string>C:\Users\danamont\Documents\Inform\Extensions\Nathanael Nerode\Undo Output Control.i7x</string>
+        <key>Line</key><integer>293</integer>
+        <key>Title</key><string>Section - Patched ParserInput</string>
+        <key>Level</key><integer>5</integer>
+        <key>Indentation</key><integer>4</integer>
+    </dict>
+    <key>404</key><dict>
+        <key>Filename</key><string>C:\Users\danamont\Documents\Inform\Extensions\Daniel Stelzer\Command Preloading.i7x</string>
+        <key>Line</key><integer>1</integer>
+        <key>Title</key><string>--</string>
+        <key>Level</key><integer>0</integer>
+        <key>Indentation</key><integer>0</integer>
+    </dict>
+    <key>405</key><dict>
+        <key>Filename</key><string>C:\HellRide\Hell Ride.materials\Extensions\Daniel Stelzer\Autosave-v2.i7x</string>
+        <key>Line</key><integer>1</integer>
+        <key>Title</key><string>--</string>
+        <key>Level</key><integer>0</integer>
+        <key>Indentation</key><integer>0</integer>
     </dict>
 </dict></plist>

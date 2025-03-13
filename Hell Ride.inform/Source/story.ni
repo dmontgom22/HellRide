@@ -35,7 +35,7 @@ The story headline is "The ride of a lifetime...".
 The story genre is "Horror".
 The story description is "[story title] - A ride to remember...
 
-You[']re a part-time reporter for The Tribune, the local paper. Earlier in the day, your editor called you and told you of a conversation he overheard between the Chief of Police and his Deputy about Whidbey Amusements. It seems there has been a rash of accidents and mishaps at the carnival. Sounds like there could be something suspicious going on. The editor wants you to collect evidence and write a hard hitting piece about this story. If you do a good job, maybe the paper will hire you on full-time.
+You[']re a part-time reporter for The Tribune, the local newspaper. Earlier in the day, your editor called you and told you of a conversation he overheard between the Chief of Police and his Deputy about Whidbey Amusements. It seems there has been a rash of accidents and mishaps at the carnival. Sounds like there could be something suspicious going on. The editor wants you to collect evidence and write a hard hitting piece about this story. If you do a good job, maybe the paper will hire you on full-time.
 
 As you explore the carnival, you learn (the hard way) that the Hell Ride attraction is malfunctioning with the potential for serious injuries to the riders. You must disable the ride off and prevent any loss of life... including your own."
 The story creation year is 2025.
@@ -51,7 +51,7 @@ Include Basic Help Menu by Wade Clarke.
 
 Include Menus by Wade Clarke.
 
-Include Object Response Tests by Juhana Leinonen.
+Include Story Mode by Drew Cook. 
 
 Chapter 4 - The Player, Global Code
 
@@ -94,10 +94,14 @@ total accusation is a number that varies. total accusation is 0.
 janitor walking is a truth state that varies. janitor walking is true.
 whidbey walking is a truth state that varies. whidbey walking is true.
 
+Understand "who" or "what" or "when" or "where" or "why" or "how" or "who's" or "what's" or "when's" or "where's" or "why's" or "how's" as "[query]".
+
+Understand "[query] [text]" as a mistake ("[story title] understands commands, such as '[command prompt]examine [an random thing that can be seen by the player]', but not questions. For more instructions, type [bold type]'HELP'[roman type].").
+
 evidence message is a truth state that varies. evidence message is false.
 every turn when total evidence is greater than 0 and evidence message is false:
 	now evidence message is true;
-	say "You[']ve discovered some evidence. To see a list and weighting of the evidence you[']ve collected, type 'SHOW EVIDENCE'. To collect more evidence, try to ASK someone ABOUT something. Or SHOW something TO someone.".
+	say "You[']ve discovered some evidence. To see a list and weighting of the evidence you[']ve collected, type [bold type]'SHOW EVIDENCE'[roman type]. To collect more evidence, try to [bold type]ASK someone ABOUT something[roman type]. Or [bold type]SHOW something TO someone[roman type].".
 	
 [obituary]
 Rule for printing the player's obituary:
@@ -178,8 +182,8 @@ Instead of buying something free when the player carries the noun:
 Instead of buying the money:
 	say "The money belongs to you; you buy things with it."
 
-Understand "offer [price] to [someone]" as a mistake ("Try PAY FOR something or BUY something instead.").
-Understand "pay [someone]" as a mistake ("Try PAY FOR something or BUY something instead.").
+Understand "offer [price] to [someone]" as a mistake ("Try [bold type]PAY FOR something[roman type] or [bold type]BUY something[roman type] instead.").
+Understand "pay [someone]" as a mistake ("Try [bold type]PAY FOR something[roman type] or [bold type]BUY something[roman type] instead.").
 paying for is an action applying to one thing. Understand "pay for [something]" as paying for.
 instead of paying for something, try buying the noun instead.
 	
@@ -411,10 +415,19 @@ Understand the command "tell" as something new.
 Understand "talk to [someone] about [text]" as telling it about.
 Understand "tell [someone] about [text]" as telling it about.
 
-instead of asking an attendant about a topic listed in the Table of Attendant Conversation Responses, say "[response entry][paragraph break]".
+instead of asking an attendant about a topic listed in the Table of Attendant Conversation Responses:
+	say "[response entry][paragraph break]";
+	if the turn stamp entry is -1 and the subject entry is not "NA":
+		now the turn stamp entry is the turn count;
+		let S be the subject entry;
+		let W be the weighting entry;
+		choose a row with a category of S in Table of Notebook;
+		now total entry is total entry plus W;
+		now total evidence is total evidence plus W.
+
 instead of telling an attendant about something: try asking the noun about it.
 
-Understand "talk to [someone]" as a mistake ("To start a conversation, try to ASK [the noun] ABOUT something or TELL [the noun] ABOUT something.").
+Understand "talk to [someone]" as a mistake ("To start a conversation, try to [bold type]ASK [the noun] ABOUT something[roman type] or [bold type]TELL [the noun] ABOUT something[roman type].").
 
 Persuasion rule for asking an attendant to try going:
 	say "[The actor] says, 'I can[']t leave my post or I[']ll get fired!'";
@@ -489,7 +502,7 @@ The brass ring is a keychain. understand "chain/keychain" as the brass ring. The
 
 Section 12 - Mr Whidbey
 
-Mr Whidbey is a male person. Mr Whidbey is in the Carnival Office. understand "mr/mister/Whidbey/owner" and "carnival owner" as Mr Whidbey. The description of Mr Whidbey is "The owner of the carnival, Mr. Whidbey, is dressed in s black tuxedo with a red and white striped vest. He is sporting a snazzy top hat.". Mr Whidbey can be active or passive. Mr Whidbey is active.
+Mr Whidbey is a male person. Mr Whidbey is in the Carnival Office. understand "mr/mister/Whidbey/owner" and "carnival owner" as Mr Whidbey. The description of Mr Whidbey is "The owner of the carnival, Mr. Whidbey, is dressed in a black tuxedo with a red and white striped vest. He is sporting a snazzy top hat.". Mr Whidbey can be active or passive. Mr Whidbey is active.
 
 [Whidbey walks]
 every turn when Mr Whidbey is active and whidbey walking is true:
@@ -576,7 +589,7 @@ instead of examining the notebook:
 	repeat through the Table of Notebook:
 		if total entry is greater than 0:
 			say "[fixed letter spacing]•   [if total entry is less than 10] [end if][total entry]     [response entry][roman type][line break]";
-	say "[fixed letter spacing][line break][if total evidence is less than 36]You haven[']t got enough evidence for an arrest.[otherwise if total evidence is less than 76]You have enough evidence to press charges.[otherwise]You[']ve got enough evidence for a strong case.[end if][roman type]".
+	say "[fixed letter spacing][line break][if total evidence is less than 36]You haven[']t got enough evidence for an arrest.[otherwise if total evidence is less than 76]You have enough evidence to press charges.[otherwise]You[']ve got enough evidence for a conviction.[end if][roman type]".
 
 showing evidence is an action out of world applying to nothing. Understand "show evidence" as showing evidence.
 carry out showing evidence:
@@ -617,7 +630,7 @@ criteria	point value	description	turn stamp
 "[if electrical closet nine's electrical panel's switch is switched on]Y[otherwise]N[end if]"	5	"Flipping the Indigo switch:              "	-1
 "[if electrical closet eleven's electrical panel's switch is switched on]Y[otherwise]N[end if]"	5	"Flipping the Khaki switch:               "	-1
 "[if the player is carrying the teddy bear]Y[otherwise]N[end if]"	5	"Winning the teddy bear:                  "	-1
-"[if the player is carrying the knock-off Swiss Army knife]Y[otherwise]N[end if]"	5	"Winning the knock-off Swiss Army knife:            "	-1
+"[if the player is carrying the knock-off Swiss Army knife]Y[otherwise]N[end if]"	5	"Winning the knock-off Swiss Army knife:  "	-1
 "[if the player is carrying the poster of Taylor Swift]Y[otherwise]N[end if]"	5	"Winning the poster of Taylor Swift:      "	-1
 "[if the player is carrying the magenta fuse]Y[otherwise]N[end if]"	5	"Winning the Magenta fuse:                "	-1
 "[if the player is carrying the small plush monkey]Y[otherwise]N[end if]"	5	"Winning the stuffed monkey:              "	-1
@@ -657,7 +670,8 @@ Carry out requesting the complete score:
 	repeat through the Table of Scored Circumstances:
 		if the turn stamp entry is greater than 0:
 			say "•  [description entry] [point value entry] points[line break]";
-	say "[roman type]".
+	say "[roman type][paragraph break]";
+	try showing evidence.
 	
 check requesting the score:
 	try requesting the complete score instead;
@@ -669,8 +683,8 @@ prize taken is a truth state that varies. prize taken is false.
 points awarded is a number that varies.
 To receive a prize:
 	let C be "[the player's command]";
-	if there is an index of C in the prize table:
-		choose a row with an index of C in prize table;
+	if there is an txtindex of C in the prize table:
+		choose a row with an txtindex of C in prize table;
 		say "You are now holding [description entry].";
 		now the object entry is in the location;
 		silently try taking the object entry;
@@ -972,8 +986,10 @@ Does the player mean doing something with the High Striker when the location is 
 Does the player mean doing something with the mallet when the location is the HS-room: it is very likely.
 
 [mercury dime]
-Does the player mean doing something with the mercury dime when the location is the Dime Toss Game: it is likely.
+Does the player mean doing something with the mercury dime when the location is the Dime Toss Game: it is very likely.
+Does the player mean doing something with a dime when the location is the Dime Toss Game: it is likely.
 Does the player mean doing something with the mercury dime when the location is the Pitchers Mound: it is very unlikely.
+Does the player mean doing something with a dime when the location is the Pitchers Mound: it is very likely.
 
 [glove box]
 Does the player mean doing something with the glove box when the location is PL-room: it is very likely.
@@ -1126,7 +1142,7 @@ instead of going when the location is the Maintenance Office:
 		continue the action;
 	otherwise:
 		if not in darkness:
-			say "There are exits are to the north, south, west, and up.";
+			say "There are exits to the north, south, west, and up.";
 		otherwise:
 			say "It[']s too dark to see.".
 		
@@ -1140,7 +1156,7 @@ instead of going when the location is the Crawl Space:
 		continue the action;
 	otherwise:
 		if not in darkness:
-			say "There are exits are to the north, south, and west.";
+			say "There are exits to the north, south, and west.";
 		otherwise:
 			say "It[']s too dark to see.".
 		
@@ -1153,7 +1169,7 @@ instead of going when the location is the Mechanical Room North:
 	if the current action is going west:
 		continue the action;
 	otherwise:
-		say "There are exits are to the north, south, and west.".
+		say "There are exits to the north, south, and west.".
 		
 [mechanical room south]
 instead of going when the location is the Mechanical Room South:
@@ -1164,7 +1180,7 @@ instead of going when the location is the Mechanical Room South:
 	if the current action is going west:
 		continue the action;
 	otherwise:
-		say "There are exits are to the north, south, and west.".
+		say "There are exits to the north, south, and west.".
 		
 [generator room]
 instead of going when the location is the Generator Room:
@@ -1175,7 +1191,7 @@ instead of going when the location is the Generator Room:
 	if the current action is going west:
 		continue the action;
 	otherwise:
-		say "There are exits are to the north, south, and west.".
+		say "There are exits to the north, south, and west.".
 		
 [storage room]
 instead of going when the location is Storage Room:
@@ -1184,7 +1200,16 @@ instead of going when the location is Storage Room:
 	if the current action is going west:
 		continue the action;
 	otherwise:
-		say "There are exits are to the north and west.".
+		say "There are exits to the north and west.".
+		
+[head of the line]
+instead of going when the location is Head of the Line:
+	if the current action is going north:
+		continue the action;
+	if the current action is going south:
+		continue the action;
+	otherwise:
+		say "There are exits to the north and south.".
 		
 [dark hallway]
 instead of going when the location is Dark Hallway:
@@ -1195,7 +1220,7 @@ instead of going when the location is Dark Hallway:
 	if the current action is going the ladder:
 		continue the action;
 	otherwise:
-		say "There are exits are to the west and down.".
+		say "There are exits to the west and down.".
 		
 [control room]
 instead of going when the location is Control Room:
@@ -1213,7 +1238,7 @@ instead of going when the location is the Stocks Room:
 	if the current action is going east:
 		continue the action;
 	otherwise:
-		say "There are exits are to the north, south, and east.".
+		say "There are exits to the north, south, and east.".
 		
 [gallows room]
 instead of going when the location is the Gallows Room:
@@ -1224,7 +1249,7 @@ instead of going when the location is the Gallows Room:
 	if the current action is going east:
 		continue the action;
 	otherwise:
-		say "There are exits are to the north, south, and east.".
+		say "There are exits to the north, south, and east.".
 		
 [stake room]
 instead of going when the location is the Stake Room:
@@ -1235,7 +1260,7 @@ instead of going when the location is the Stake Room:
 	if the current action is going east:
 		continue the action;
 	otherwise:
-		say "There are exits are to the north, south, and east.".
+		say "There are exits to the north, south, and east.".
 		
 [dungeon]
 instead of going when the location is the Dungeon:
@@ -1246,7 +1271,7 @@ instead of going when the location is the Dungeon:
 	if the current action is going east:
 		continue the action;
 	otherwise:
-		say "There are exits are to the north, south, and east.".
+		say "There are exits to the north, south, and east.".
 		
 [guillotine room]
 instead of going when the location is the Guillotine Room:
@@ -1257,7 +1282,7 @@ instead of going when the location is the Guillotine Room:
 	if the current action is going east:
 		continue the action;
 	otherwise:
-		say "There are exits are to the north, south, and east.".
+		say "There are exits to the north, south, and east.".
 		
 [ride exit]
 instead of going when the location is the Ride Exit:
@@ -1266,7 +1291,7 @@ instead of going when the location is the Ride Exit:
 	if the current action is going east:
 		continue the action;
 	otherwise:
-		say "There are exits are to the north and east.".
+		say "There are exits to the north and east.".
 		
 [electrical closet 1]
 instead of going when the location is the Electrical Closet One:
@@ -1369,6 +1394,8 @@ Figure of RideExit is the file "RideExit.png" ("The [story title] Exit").
 Figure of MercuryDime is the file "MercuryDime.png" ("A Mercury dime").
 
 Chapter 7 - RNG Seed, Money, Dimes, Sounds - Not for release
+
+Include Object Response Tests by Juhana Leinonen.
 			
 When play begins:
 	seed the random-number generator with 4321.
@@ -2049,9 +2076,11 @@ Section 1 - Parking Lot
 
 When play begins:
 	now show images is false;
-	say "Type 'Help' for hints about [story title] and general information about playing interactive fiction games.";
+	now playmode is 1;
+	now the player is autonomous;
+	say "Type [bold type]'Help'[roman type] for hints about [story title] and general information about playing interactive fiction games.";
 	display the figure of Hell Ride;
-	say "You[']re a part-time reporter for The Tribune, the local paper. Earlier in the day, your editor called you and told you of a conversation he overheard between the Chief of Police and his Deputy about Whidbey Amusements. It seems there has been a rash of accidents and mishaps at the carnival. Sounds like there could be something suspicious going on. The editor wants you to collect evidence and write a hard hitting piece about this story. If you do a good job, maybe the paper will hire you on full-time.".
+	say "You[']re a part-time reporter for The Tribune, the local newspaper. Earlier in the day, your editor called you and told you of a conversation he overheard between the Chief of Police and his Deputy about Whidbey Amusements. It seems there has been a rash of accidents and mishaps at the carnival. Sounds like there could be something suspicious going on. The editor wants you to collect evidence and write a hard hitting piece about this story. If you do a good job, maybe the paper will hire you on full-time.".
 
 The PL-room is a room. The printed name is "Parking Lot". The PL-room is north of the TB-room. The PL-room is outdoors. "The lot stretches across an open field, gravel crunching under the tires of arriving cars. Floodlights and the carnival's colorful glow light the area, accompanied by distant laughter, music, and the hum of rides.
 
@@ -2152,7 +2181,7 @@ A glove box is part of the beater car. The glove box is a locked openable contai
 
 A pair of gloves are a thing. The pair of gloves are inside the glove box. The pair of gloves is wearable. The description of the pair of gloves is "A nice set of fur-lined leather gloves. They[']re very warm." The printed name of the pair of gloves is "pair of gloves".
 
-Understand "exit [a direction]" as a mistake ("Please try 'go [noun]' or just '[noun]' as a direction isn[']t necessarily an exit here.")
+Understand "exit [a direction]" as a mistake ("Please try [bold type]'go [noun]'[roman type] or just [bold type]'[noun]'[roman type] as a direction isn[']t necessarily an exit here.")
 
 Understand "place [something] on [something]" as putting it on. Understand "set [something] on [something]" as putting it on.  
 
@@ -2735,11 +2764,11 @@ instead of giving a dime to the pitchers mound attendant for the second time:
 	now every baseball is in the holding room;
 	stop the action.
 
-understand "throw [baseball] at [milk bottles]" as a mistake ("THROW baseball at BOTTLE X where X is the bottle number you want to hit. The bottles are numbered one to six'.")
+understand "throw [baseball] at [milk bottles]" as a mistake ("[bold type]THROW baseball at BOTTLE X[roman type] where X is the bottle number you want to hit. The bottles are numbered one to six'.")
 
 instead of throwing a baseball at the milk bottles:
 	if the player carries a baseball:
-		say "THROW baseball at BOTTLE X where X is the bottle number you want to hit. The bottles are numbered one to six'.";
+		say "[bold type]THROW baseball at BOTTLE X[roman type] where X is the bottle number you want to hit. The bottles are numbered one to six'.";
 		continue the action;
 	otherwise:
 		say "That seems futile to me.";
@@ -3072,7 +3101,7 @@ instead of giving the fortune teller ticket to Esmeralda:
 	choose a row with an object of the noun in the Table of Tickets;	
 	now the price of the noun is the price entry;
 	now Esmeralda carries the fortune teller ticket;
-	say "[line break]Stepping inside, you’re greeted by the Esmeralda, a figure cloaked in flowing robes with a jeweled headpiece catching the flickering light. Her piercing eyes seem to look right through you as they gesture for you to sit at a small round table. At its center rests a glowing crystal ball, surrounded by tarot cards and mysterious trinkets.
+	say "[line break]Stepping inside, you’re greeted by Esmeralda, a figure cloaked in flowing robes with a jeweled headpiece catching the flickering light. Her piercing eyes seem to look right through you as they gesture for you to sit at a small round table. At its center rests a glowing crystal ball, surrounded by tarot cards and mysterious trinkets.
 
 Esmeralda[’]s voice is low and melodic, weaving an air of intrigue as they ask you to focus on a question and offer you a tarot reading. The room seems to shrink, the bustling carnival outside fading into the background as she reveals your fate. Each card turned feels significant, as though unlocking a secret you didn’t know you carried."
 
@@ -3120,7 +3149,7 @@ instead of asking Esmeralda about a topic listed in the Table of Esmeralda Conve
 		now total entry is total entry plus W;
 		now total evidence is total evidence plus W.
 		
-instead of showing something to the Esmeralda:
+instead of showing something to Esmeralda:
 	if there is an object of the noun in the Table of Esmeralda Object Responses:
 		choose a row with an object of noun in the Table of Esmeralda Object Responses;	
 		say "[response entry][paragraph break]";
@@ -3819,7 +3848,7 @@ link number	figure choice		description
 Section 4 - Table of High Striker Prizes
 
 Table of High Striker Prizes
-index (text)	object (an object)	description (text)
+txtindex (text)	object (an object)	description (text)
 "1"	teddy bear	"a teddy bear"
 "2"	knock-off Swiss army knife	"a knock-off Swiss Army knife"
 "3"	fuse13	"a [printed name of fuse13]"
@@ -3829,7 +3858,7 @@ index (text)	object (an object)	description (text)
 Section 5 - Table of Dime Toss Prizes
 
 Table of Dime Toss Prizes
-index (text)	object (an object)	description (text)
+txtindex (text)	object (an object)	description (text)
 "1"	small plush monkey	"a stuffed monkey"
 "2"	fuse15	"an [printed name of fuse15]"
 "3"	poster of Billie Eilish	"a poster of Billie Eilish"
@@ -3838,7 +3867,7 @@ index (text)	object (an object)	description (text)
 Section 6 - Table of Pitchers Mound Prizes
 
 Table of Pitchers Mound Prizes
-index (text)	object (an object)	description (text)
+txtindex (text)	object (an object)	description (text)
 "1"	fuse3	"a [printed name of fuse3]"
 "2"	small plush donkey	"a plush donkey"
 "3"	goldfish	"a goldfish in a bowl"
@@ -3971,7 +4000,7 @@ key (number)	category (text)	card (text)	description (text)
 23	"Challenge"	"Queen of Swords (reversed)"	"Queen of Swords reversed exudes an air of manipulation, deception, and cruelty. Her once discerning and judicious nature has turned into a cold hearted determination to achieve her own agenda, regardless of the consequences. She wields her intellectual prowess as a weapon, using it to strip others of their power and inflict emotional harm. With her cutting words and dismissive actions, she creates an atmosphere of hostility and mistrust. The Queen of Swords Reversed serves as a reminder to be cautious of those who may mask their malicious intentions with intelligence and charm."
 24	"Opportunity"	"Two of Swords (upright)"	"Two of Swords encourages you to remove the blindfold and honestly assess the situation at hand. It may be necessary to weigh the pros and cons of different options, gather more information, or seek guidance from others to help you make an informed decision. However, prolonged indecision can lead to stagnation, and it[']s important to eventually address the issue at hand. The crossed swords symbolize the need to find a balance between opposing forces and find a way to reconcile conflicting aspects."
 25	"Future"	"The Lovers (reversed)"	"Lovers reversed indicates a breakup between partners, families or friends. Lovers reversed can also indicate a wrong choice being made. It represents disharmony and conflicts within relationships, a lack of balance, and difficult choices. In its reversed form, this card serves as a reminder to evaluate the foundations of your relationships and address any underlying issues. It urges you to explore your desires, fears, and doubts, as well as to reflect upon the consequences of your choices."
-31	"Past"	"Ten of Wands (upright)"	"Ten of Wands suggests that you may be shouldering too many responsibilities or taking on more than you can handle. You may feel overwhelmed, exhausted, or weighed down by the tasks and obligations in your life. This card serves as a reminder to evaluate your commitments and consider whether you need to delegate, seek support,or let go of some burdens."
+31	"Past"	"Ten of Wands (upright)"	"Ten of Wands suggests that you may be shouldering too many responsibilities or taking on more than you can handle. You may feel overwhelmed, exhausted, or weighed down by the tasks and obligations in your life. This card serves as a reminder to evaluate your commitments and consider whether you need to delegate, seek support, or let go of some burdens."
 32	"Present"	"Nine of Wands (upright)"	"Nine of Wands is the card for strength, courage, resilience and endurance. Never give up and never surrender. It suggests that while you may be tired or worn out from the struggles you[']ve faced, it[']s important to remain alert and prepared for any further challenges that may arise. This card encourages you to draw upon your past experiences and learn from them, using them as sources of wisdom and guidance."
 33	"Challenge"	"The World (upright)"	"World is the final Major Arcana card and represents fulfillment and successful completion of a cycle. You know your place in the world, and your life lessons have served you well. It serves as a gentle reminder that the universe is aligning perfectly in your favor, propelling you forward towards the triumphant realization of your ambitions. The world is at your feet. You[']re on the right path towards the attainment of your long-cherished aspirations and dreams."
 34	"Opportunity"	"Two of Swords (reversed)"	"Two of Swords reversed suggests that poor choices and hasty decision-making are likely to lead to movement in the wrong direction. It serves as a reminder that impulsive actions can often result in unfavorable outcomes, urging you to carefully consider your options and approach situations with thoughtfulness and patience. By taking the time to weigh your choices and make deliberate decisions, you can avoid the pitfalls that come with rushing into action without considering the potential consequences."
@@ -3992,33 +4021,35 @@ description
 Section 14 - Table of Attendant Conversation Responses
 
 Table of Attendant Conversation Responses
-topic	response (text)
-"hell/ride" or "hell ride"	"[one of][story title] is scary. You won[']t catch me on it![or]Last time I rode [story title], I heard strange noises.[or][story title] is so old that It[']s falling apart. I wouldn[']t ride it.[or][story title] is behind on its maintenance schedule. Might want to skip that one.[at random]"
-"carousel/merry/go/round" or "merry-go-round" or "the carousel" or "the merry-go-round"	"[one of]I[']ve loved the carousel ever since I was a little kid![or]The lions are my favorite![or]I get dizzy when I ride the Merry Go Round[at random]"
-"bumper/car/cars" or "bumper cars" or "bumper car" or "the bumper cars" or "the bumper car"	"[one of]The bumper cars are so much fun. You[']re heading for someone[']s car and bam! you get hit instead![or]Last time I was on the bumper cars, I nailed everyone there![or]It[']s fun to knock other people[']s cars around![at random]"
-"Ferris/wheel" or "Ferris wheel" or "the Ferris wheel" or "the wheel"	"[one of]Isn[']t the Ferris wheel so romantic? I sure think so![or]Are you and your sweetie going to ride the Ferris wheel?[or]You can see the whole carnival from up there![at random]"
-"fortune/teller/Esmeralda/mysterious/woman" or "fortune teller" or "the fortune teller"	"[one of]Esmeralda? She[']s down-right spooky. I asked her for a tarot reading, and boy, the things she told me![or]Esmeralda? She read my palm. I don[']t know how she knew the things she told me.[or]Esmeralda? She[']s been with the carnival for so long that no one knows how old she is, and yet, she looks so young. She[']s been here forever![at random]"
-"high/striker" or "high striker" or "the high striker"	"[one of]You[']re a strong guy. Go for it![or]Win a prize for your sweetie![or]Swing the mallet and ring the bell![at random]"
-"dime/toss" or "dime toss" or "the dime toss"	"[one of]Careful now! Don[']t want it skidding off the other side.[or]It[']s just like skipping a stone.[or]Aim carefully and you should get it.[at random]"
-"pitchers/mound" or "pitchers mound"	"[one of]Batter, batter, batter, swing batter![or]Pretend you[']re pitching for the Red Sox.[or]Knock [']em down and win a prize![at random]"
-"Hell Ride Ticket" or "Carousel Ticket" or "Bumper Cars Ticket" or "Ferris Wheel Ticket" or "Fortune Teller Ticket" or "ticket"	"[The noun] says, 'You need to buy a ticket in order to ride the attractions.'"
-"parking" or "the parking ticket" or "parking ticket"	"[The noun] says, 'You need a parking ticket to leave your car here.'"
-"/fuse/fuses/aqua/crimson/emerald/gray/indigo/khaki/magenta/orange/quartz" or "aqua fuse " or "crimson fuse" or "emerald fuse" or "gray fuse" or "indigo fuse" or "khaki fuse" or "magenta fuse" or "orange fuse" or "quartz fuse" 	"[if the player is carrying a fuse]'That looks like a fuse. Perhaps there[']s an electrical panel where it fits.'[otherwise]'What fuse?'[end if] says [the noun]"
-"movies/cinema/theater"	"[The noun] says, 'There[']s a new horror movie opening on Friday. I want to take my sweetie. Perhaps they[']ll cling to me because they[']re scared.'"
-"brewski/brew/beer"	"'A nice cold Coors Light would taste good about now', [the noun] replies"
-"big/game/football/soccer/basketball/hockey/baseball"	"[The noun] says, 'Friday night is the league championship. I hope we win!'"
-"SAT/scores/college" or "SAT scores"	"[The noun] says, 'I hope I get accepted. I want to go to school on a football scholarship.'"
-"cheeseburger/lunch"	"[The noun] replies, 'I skipped breakfast this morning. Boy, am I hungry!'"
-"uniform"	"Wearing blue pants and a pink shirt, [the noun] says, 'This is just awful! I look like a lollipop.'"
-"little/egypt" or "little egypt"	"[one of]Little Egypt is so beautiful. She[']s a wonderful dancer too.[or]Did you know Little Egypt really IS from Egypt?[or]Maybe she[']d like to date you.[at random]"
-"popcorn/bucket/buttered" or "bucket of popcorn" or "buttered popcorn"	"[The noun] says, 'The popcorn is really good. It[']s hot and fresh.'"
-"bubblegum/bubble/gum"	"'It[']s Bazooka Joe! My favorite!', [the noun] says."
-"candy/apple/apples" or "candy apple" or "candy apples"	"[The noun] says, 'I can[']t eat these. They get stuck in my braces.'"
-"cotton/candy" or "cotton candy"	"'I love the way cotton candy melts in my mouth', says [the noun]."
-"pretzel/pretzels/soft" or "soft pretzel" or "soft pretzels"	"[The noun] says, 'I prefer to eat my pretzels with mustard.'"
-"mr/owner/Whidbey"	"[The noun] says , 'Mr. Whidbey? I guess he[']s alright. He[']s not in any trouble is he?'"
+topic	description (text)	subject (text)	turn stamp (number)	weighting (number)	response (text)
+"hell/ride" or "hell ride"	"Hell Ride"	"Accidents"	-1	3	"[one of][story title] is scary. You won[']t catch me on it![or]Last time I rode [story title], I heard strange noises.[or][story title] is so old that It[']s falling apart. I wouldn[']t ride it.[or][story title] is behind on its maintenance schedule. Might want to skip that one.[at random]"
+"carousel/merry/go/round" or "merry-go-round" or "the carousel" or "the merry-go-round"	"Carousel"	"NA"	-1	0	"[one of]I[']ve loved the carousel ever since I was a little kid![or]The lions are my favorite![or]I get dizzy when I ride the Merry Go Round[at random]"
+"bumper/car/cars" or "bumper cars" or "bumper car" or "the bumper cars" or "the bumper car"	"Bumper Cars"	"NA"	-1	0	"[one of]The bumper cars are so much fun. You[']re heading for someone[']s car and bam! you get hit instead![or]Last time I was on the bumper cars, I nailed everyone there![or]It[']s fun to knock other people[']s cars around![at random]"
+"Ferris/wheel" or "Ferris wheel" or "the Ferris wheel" or "the wheel"	"Ferris Wheel"	"NA"	-1	0	"[one of]Isn[']t the Ferris wheel so romantic? I sure think so![or]Are you and your sweetie going to ride the Ferris wheel?[or]You can see the whole carnival from up there![at random]"
+"fortune/teller/Esmeralda/mysterious/woman" or "fortune teller" or "the fortune teller"	"Esmeralda"	"NA"	-1	0	"[one of]Esmeralda? She[']s down-right spooky. I asked her for a tarot reading, and boy, the things she told me![or]Esmeralda? She read my palm. I don[']t know how she knew the things she told me.[or]Esmeralda? She[']s been with the carnival for so long that no one knows how old she is, and yet, she looks so young. She[']s been here forever![at random]"
+"high/striker" or "high striker" or "the high striker"	"High Striker"	"NA"	-1	0	"[one of]You[']re a strong guy. Go for it![or]Win a prize for your sweetie![or]Swing the mallet and ring the bell![at random]"
+"dime/toss" or "dime toss" or "the dime toss"	"Dime Toss"	"NA"	-1	0	"[one of]Careful now! Don[']t want it skidding off the other side.[or]It[']s just like skipping a stone.[or]Aim carefully and you should get it.[at random]"
+"pitchers/mound" or "pitchers mound"	"Pitchers Mound"	"NA"	-1	0	"[one of]Batter, batter, batter, swing batter![or]Pretend you[']re pitching for the Red Sox.[or]Knock [']em down and win a prize![at random]"
+"Hell Ride Ticket" or "Carousel Ticket" or "Bumper Cars Ticket" or "Ferris Wheel Ticket" or "Fortune Teller Ticket" or "ticket"	"Tickets"	"NA"	-1	0	"[The noun] says, 'You need to buy a ticket in order to ride the attractions.'"
+"parking" or "the parking ticket" or "parking ticket"	"Parking Ticket"	"NA"	-1	0	"[The noun] says, 'You need a parking ticket to leave your car here.'"
+"/fuse/fuses/aqua/crimson/emerald/gray/indigo/khaki/magenta/orange/quartz" or "aqua fuse " or "crimson fuse" or "emerald fuse" or "gray fuse" or "indigo fuse" or "khaki fuse" or "magenta fuse" or "orange fuse" or "quartz fuse" 	"Fuses"	"Fuses"	-1	1	"[if the player is carrying a fuse]'That looks like a fuse. Perhaps there[']s an electrical panel where it fits.'[otherwise]'What fuse?'[end if] says [the noun]"
+"movies/cinema/theater"	"Movies"	"NA"	-1	0	"[The noun] says, 'There[']s a new horror movie opening on Friday. I want to take my sweetie. Perhaps they[']ll cling to me because they[']re scared.'"
+"brewski/brew/beer"	"Beer"	"NA"	-1	0	"'A nice cold Coors Light would taste good about now', [the noun] replies"
+"big/game/football/soccer/basketball/hockey/baseball"	"Game"	"NA"	-1	0	"[The noun] says, 'Friday night is the league championship. I hope we win!'"
+"SAT/scores/college" or "SAT scores"	"SAT Scores"	"NA"	-1	0	"[The noun] says, 'I hope I get accepted. I want to go to school on a football scholarship.'"
+"cheeseburger/lunch"	"Lunch"	"NA"	-1	0	"[The noun] replies, 'I skipped breakfast this morning. Boy, am I hungry!'"
+"uniform"	"Uniform"	"NA"	-1	0	"Wearing blue pants and a pink shirt, [the noun] says, 'This is just awful! I look like a lollipop.'"
+"little/egypt" or "little egypt"	"Little Egypt"	"NA"	-1	0	"[one of]Little Egypt is so beautiful. She[']s a wonderful dancer too.[or]Did you know Little Egypt really IS from Egypt?[or]Maybe she[']d like to date you.[at random]"
+"popcorn/bucket/buttered" or "bucket of popcorn" or "buttered popcorn"	"Concessions"	"NA"	-1	0	"[The noun] says, 'The popcorn is really good. It[']s hot and fresh.'"
+"bubblegum/bubble/gum"	"Concessions"	"NA"	-1	0	"'It[']s Bazooka Joe! My favorite!', [the noun] says."
+"candy/apple/apples" or "candy apple" or "candy apples"	"Concessions"	"NA"	-1	0	"[The noun] says, 'I can[']t eat these. They get stuck in my braces.'"
+"cotton/candy" or "cotton candy"	"Concessions"	"NA"	-1	0	"'I love the way cotton candy melts in my mouth', says [the noun]."
+"pretzel/pretzels/soft" or "soft pretzel" or "soft pretzels"	"Concessions"	"NA"	-1	0	"[The noun] says, 'I prefer to eat my pretzels with mustard.'"
+"mr/owner/Whidbey"	"Invoices"	"Invoices"	-1	1	"[The noun] says , 'Mr. Whidbey? I guess he[']s alright. He[']s not in any trouble is he?'"
 "invoices/receipts/paperwork"	"'Oh, I don[']t know what any of that mumbo jumbo means', says [the noun]."
-"insurance/policy" or "insurance policy"	"'Gosh, I wish I had a million dollars!', [the noun] says."
+"insurance/policy" or "insurance policy"	"Insurance Policy"	"Insurance"	-1	0	"'Gosh, I wish I had a million dollars!', [the noun] says."
+"accidents/mishaps" or "the accidents"	"Accidents"	"Accidents"	-1	3	 "[The noun] says 'The fire, the Ferris wheel, the Bumper Cars... That seems like a lot!'"
+"rides/attractions" or "the attractions"	"Attractions"	"Accidents"	-1	1	"'Almost every ride is falling apart. Honestly, it[']s kind of scary.' says [the noun]."
 
 Section 15 - Table of Notebook
 
@@ -4043,6 +4074,7 @@ topic	description (text)	subject (text)	turn stamp (number)	weighting (number)	r
 "carnival"	"Carnival" or "the carnival"	"Whidbey"	-1	1	"'[one of]The Whidbey family has owned this carnival since the 1950[']s[or]Mr. Whidbey is the last of his line. He has no one to leave the carnival to[or]This once proud carnival has seen better days[cycling]' says [the noun]."
 "ferris/wheel" or "ferris wheel" or "the ferris wheel"	"Ferris Wheel"	"Accidents"	-1	5	"[The noun] remarks, 'The other day, I found a bolt on one of the gondolas so loose it had almost come off. That would have been a tragedy!'"
 "bumper/car/cars" or "bumper cars" or "bumper car" or "the bumper cars"	"Bumper Cars"	"Accidents"	-1	5	"[The noun] says, 'That reminds me. Not long ago, one of the bumper cars was shorting out and electrifying the car. A visitor got hurt. A young lad, what was his name? Fred something, I think.'"
+"fred/needleman/visitor" or "fred needleman"	"Bumper Cars"	"Accidents"	-1	5	"[The noun] says, 'That was the kid that got hurt on the bumper cars. It[']s a wonder he didn't sue the carnival for that.'"
 "fortune/teller/esmeralda/esmerelda/mysterious" or "fortune teller" or "the fortune teller"	"Esmeralda"	"NA"	-1	0	"'Her fortunes are always crazy accurate. She[']s spooky and so pretty. I wonder if I should ask her out on a date?' [the noun] asks." 
 "carousel/merry/go/round" or "the carousel" or "merry go round" or "the merry go round" or "merry-go-round" or "the merry-go-round"	"Carousel"	"NA"	-1	0	"'The carousel is hard to maintain because of all the animals moving up and down. There[']s a lot of moving parts in that one', says [the noun]."
 "dime/toss/plate" or "dime toss"or "the dime toss"	"Dime Toss"	"NA"	-1	0	"[The noun] says, 'The problem with that one is that a modern dime weighs 2.268 grams and isn[']t heavy enough to land on the plate. The trick with that one is to find a Mercury dime. It weighs 2.50 grams.'"
@@ -4053,6 +4085,8 @@ topic	description (text)	subject (text)	turn stamp (number)	weighting (number)	r
 "accidents/mishaps" or "the accidents"	"Accidents"	"Accidents"	-1	3	 "[The noun] says 'The fire, the Ferris wheel, the Bumper Cars... That[']s a lot of suspicious accidents.'"
 "rides/attractions" or "the attractions"	"Attractions"	"Accidents"	-1	1	"'Almost every ride is falling apart. I do what I can to keep things in good repair but it[']s a lot of work' says [the noun]."
 "games/carnival" or "the carnival games"	"Carnival Games"	"NA"	-1	0	"'Crooked! Everyone of them. There[']s a secret to each one of them' [the noun] says."
+"pliers"	"Accidents"	"Accidents"	-1	1	"'My pliers have been missing. Thanks for finding them.' [the noun] says."
+"flashlight" or "flash light"	"Accidents"	"Accidents"	-1	1	"'My flashlight! Where did you find it?' [the noun] exclaims."
 
 Section 17 - Table of Janitor Object Responses
 
@@ -4143,6 +4177,7 @@ topic	description (text)	subject (text)	turn stamp (number)	weighting (number)	r
 "indigo" or "indigo fuse" or "the indigo fuse" 	"The Indigo Fuse"	"Fuses"	-1	5	"'Where did you get that?' [the noun] asks."
 "fire" or "the fire"	"The Stake Room Fire"	"Accidents"	-1	5	"The fire was most unfortunate. It put [story title] out of commission for two weeks. Not only did it cost me $22,500 to repair but I lost revenue while it was closed."
 "accidents/mishaps" or "the accidents"	"Accidents"	"Accidents"	-1	1	"[The noun] says, 'Oh, that[']s nothing to worry about. Little things happen all the time, right?'"
+"rides/attractions"	"Accidents"	"Accidents"	-1	1	"[The noun] says, 'Oh, that[']s nothing to worry about. Little things happen all the time, right?'"
 "pliers"or "the pliers"	"The Pliers"	"Accidents"	-1	3	"'Oh! I thought I lost... um, those belong to the janitor. Where did you find them?' asks [the noun]."
 "cashier's/check/fred/needleman" or "fred needleman" or "the check" or "the cashier's check"	"Fred Needleman"	"Insurance"	-1	3	"[The noun] says 'Uh, Fred is a special... contractor... We paid him. For services rendered.'"
 "services/rendered/special" or "services rendered"	"Services Rendered"	"Insurance"	-1	1	"'Fred did some work over at the bumper cars' says [the noun]."
@@ -4219,7 +4254,7 @@ When play begins:
 	choose row 1 in Table of Help Options;
 	now description entry is "[story title] - A ride to remember...
 
-You[']re a part-time reporter for The Tribune, the local paper. Earlier in the day, your editor called you and told you of a conversation he overheard between the Chief of Police and his Deputy about Whidbey Amusements. It seems there has been a rash of accidents and mishaps at the carnival. Sounds like there could be something suspicious going on. The editor wants you to collect evidence and write a hard hitting piece about this story. If you do a good job, maybe the paper will hire you on full-time.
+You[']re a part-time reporter for The Tribune, the local newspaper. Earlier in the day, your editor called you and told you of a conversation he overheard between the Chief of Police and his Deputy about Whidbey Amusements. It seems there has been a rash of accidents and mishaps at the carnival. Sounds like there could be something suspicious going on. The editor wants you to collect evidence and write a hard hitting piece about this story. If you do a good job, maybe the paper will hire you on full-time.
 
 As you explore the carnival, you learn (the hard way) that the [story title] attraction is malfunctioning with the potential for serious injuries to the riders. You must disable the ride and prevent any loss of life... including your own."
 
@@ -4348,8 +4383,8 @@ when play begins:
 when play begins:
 	let T be "[fixed letter spacing]Note that not all of these points are awarded. Some are mutually exclusive of others.[paragraph break]";
 	repeat through Table of Scored Circumstances:
-		let T be "[fixed letter spacing][T][point value entry] - [description entry][roman type][line break]";
-	choose row 16 from Table of Help Options;
+		let T be "[T][if point value entry is less than 10]  [end if][point value entry] - [description entry][line break]";
+	choose row 17 from Table of Help Options;
 	now the description entry is T.
 
 [images]	
@@ -4366,11 +4401,21 @@ This is the switch transcript status rule:
 	otherwise:
 		try switching the story transcript on;
 		now transcript mode is true.
+		
+[story mode]
+This is the story mode status rule:
+	if playmode is 2:
+		now playmode is 1;
+		now the player is autonomous;
+	otherwise:
+		now playmode is 2;
+		now the player is guided.
 
 Table of Setting Options (continued)
 title (text)	toggle(rule)
 "Image presentation is currently [if show images is true]ON[otherwise]OFF[end if]"	image presentation status rule
 "Transcript is currently [if transcript mode is true]ON[otherwise]OFF[end if]"	switch transcript status rule
+"Story mode is currently [if playmode is 2]ON[otherwise]OFF[end if]"	story mode status rule
 
 Chapter 2 - Help Options
 
@@ -4391,6 +4436,7 @@ title (text)	subtable (table name)	description (text)	toggle (rule)	used (number
 "The Electrical Area"	Table of Electrical Area Hints	--
 "Where Are The Fuses?"	Table of Fuse Hints	--
 "The Control Room"	Table of Control Room Hints	--
+"Collecting Evidence"	Table of Evidence Hints	--
 "How Points Are Awarded (Spoilers)"	--	""
 
 Chapter 3 - The Parking Lot
@@ -4599,7 +4645,24 @@ title (text)	subtable (table name)	description (text)	toggle (rule)	used (number
 "hint"	--	"The colors correspond to the scenes in [story title]."
 "hint"	--	"Push the indigo button."
 
-Chapter 12 - Table of IF Introduction
+Chapter 12 - Table of Evidence Hints
+
+Table of Evidence Hints
+title (text)	subtable (table name)	description (text)	toggle (rule)	used (number)	bookpage (number)	localpage (number)
+"Show Evidence"	--	"Type SHOW EVIDENCE  or READ NOTEBOOK to see the evidence collected so far."
+"How is evidence calculated?"	table of hinting	"Each piece of evidence is weighted according to its importance."
+"hint"	--	"The weights are added together to get the total evidence."
+"hint"	--	"If the total evidence is 0 to 30 then you don['] have enough evidence for an arrest."
+"hint"	--	"If the total evidence is 31 to 75 then you have enough evidence to press charges and go to trial."
+"hint"	--	"If the total evidence is greater than or equal to 76 then you have enough evidence for a conviction."
+"How to make an arrest"	--	"An opportunity to make accusations and confront people will present itself."
+"Evidence regarding Accidents"	--	"Ask people about the attractions to learn about accidents and mishaps around the carnival."
+"Evidence regarding Mr Whidbey"	--	"Ask people about Mr Whidbey to learn more. Listen to Mr Whidbey[']s telephone conversation."
+"Evidence regarding Past Due Invoices"	--	"Ask about or show people the past due invoices."
+"Evidence regarding Fuses"	--	"Ask about or show people the fuses."
+"Evidence regarding Insurance"	--	"Ask about or show people the insurance policy and cashier[']s check."
+
+Chapter 13 - Table of IF Introduction
 
 Table of IF Introduction
 title (text)	subtable (table name)	description (text)	toggle (rule)	used (number)	bookpage (number)	localpage (number)
@@ -4629,7 +4692,7 @@ QUIT ends the game."
 "How the World is Assembled"	table of world assembly	--
 "If You Get Stuck"	table of stuck	--
 
-Chapter 13 - How the World is Assembled
+Chapter 14 - How the World is Assembled
 
 Table of World Assembly
 title (text)	subtable (table name)	description (text)	toggle (rule)	used (number)	bookpage (number)	localpage (number)
@@ -4638,7 +4701,7 @@ title (text)	subtable (table name)	description (text)	toggle (rule)	used (number
 "Types of Actions"	--	"Most of the actions you can perform in the world of IF are brief and specific. >WALK WEST or >OPEN DOOR are likely to be provided. >TAKE A JOURNEY or >BUILD A TABLE are not. Things like >GO TO THE HOTEL are on the borderline: some games allow them, but most do not. In general, abstract, multi-stage behavior usually has to be broken down in order for the game to understand it."
 "Other Characters"	--	"Other characters in IF games are sometimes rather limited. On the other hand, there are also games in which character interaction is the main point of the game. You should be able to get a feel early on for the characters -- if they seem to respond to a lot of questions, remember what they[']re told, move around on their own, etc., then they may be fairly important. If they have a lot of stock responses and don[']t seem to have been the game designer[']s main concern, then they are most likely present either as local color or to provide the solution to a specific puzzle or set of puzzles. Characters in very puzzle-oriented games often have to be bribed, threatened, or cajoled into doing something that the player cannot do -- giving up a piece of information or an object, reaching something high, allowing the player into a restricted area, and so on."
 
-Chapter 14 - If You Get Stuck
+Chapter 15 - If You Get Stuck
 
 Table of Stuck
 title (text)	subtable (table name)	description (text)	toggle (rule)	used (number)	bookpage (number)	localpage (number)
@@ -4658,3 +4721,245 @@ Try variations. Sometimes an action doesn[']t work, but does produce some kind o
 
 Consider the genre of the game. Mysteries, romances, and thrillers all have their own types of action and motivation. What are you trying to do, and how do conventional characters go about doing that? What[']s the right sort of behavior for a detective/romance heroine/spy?"
 "Cooperate"	--	"Play with someone else. Two heads are often better than one. If that doesn[']t work, try emailing the author or (better yet) posting a request for hints on the 'Game Discussion, Hints and Reviews' forum at https://www.intfiction.org/forum/. For best results, put the name of the game you want help with in the subject line and describe your problem as clearly as possible in your post. Enclose the problem in the available spoiler tags (highlight the text and click the 'spoiler' button) so that no one will read about how you got to where you are in the game by accident. Someone on the forum will probably be able to tell you how to solve your problem or offer suggestions."
+
+Part 7 - Walkthrough
+
+Chapter 1 - Table of Story Steps 
+
+table of story steps (continued) 
+index	input  
+--	"eat blueberries"
+--	"look under seat"
+--	"get dimes, keys"
+--	"open glove box"
+--	"get all from glove compartment"
+--	"wear gloves"
+--	"give coupon to attendant"
+--	"buy ticket"
+--	"put stub on dashboard"
+--	"south"
+--	"buy tickets"
+--	"east"
+--	"examine prizes"
+--	"buy mallet"
+--	"hit bullseye with mallet"
+--	"again"
+--	"again"
+--	"again"
+--	"southeast"
+--	"look under booth"
+--	"get mercury dime"
+--	"northwest"
+--	"northeast"
+--	"flip mercury dime on plate"
+--	"4"
+--	"southwest"
+--	"southeast"
+--	"give dime to attendant"
+--	"throw baseball at bottle 5"
+--	"1"
+--	"give dime to attendant"
+--	"northwest"
+--	"east"
+--	"give ticket to attendant"
+--	"west"
+--	"west"
+--	"steal brass ring"
+--	"steal brass ring"
+--	"steal brass ring"
+--	"east"
+--	"steal brass ring"
+--	"steal brass ring"
+--	"west"
+--	"southwest"
+--	"buy bubblegum"
+--	"west"
+--	"open trash can"
+--	"get khaki fuse"
+--	"east"
+--	"south"
+--	"wait"
+--	"listen"
+--	"wait"
+--	"wait"
+--	"north"
+--	"wait"
+--	"south"
+--	"turn dial to 62"
+--	"turn dial to 22"
+--	"turn dial to 3"
+--	"open safe"
+--	"get all from safe"
+--	"open filing cabinet"
+--	"get all invoices"
+--	"get envelope"
+--	"open envelope"
+--	"get check"
+--	"examine check"
+--	"north"
+--	"northeast"
+--	"west"
+--	"give dime to barker"
+--	"west"
+--	"wait"
+--	"wait"
+--	"wait"
+--	"wait"
+--	"wait"
+--	"wait"
+--	"wait"
+--	"wait"
+--	"wait"
+--	"wait"
+--	"wait"
+--	"wait"
+--	"wait"
+--	"wait"
+--	"wait"
+--	"wait"
+--	"wait"
+--	"wear veil"
+--	"get lantern"
+--	"turn it on"
+--	"east"
+--	"east"
+--	"south"
+--	"give hell ride ticket to attendant"
+--	"south"
+--	"east"
+--	"examine piles of junk"
+--	"get flashlight"
+--	"turn it on"
+--	"west"
+--	"north"
+--	"north"
+--	"east"
+--	"east"
+--	"examine janitor"
+--	"give flashlight to janitor"
+--	"west"
+--	"west"
+--	"south"
+--	"south"
+--	"east"
+--	"south"
+--	"up"
+--	"west"
+--	"flip switch"
+--	"east"
+--	"down"
+--	"south"
+--	"south"
+--	"open tool box"
+--	"get wrench"
+--	"get sledgehammer"
+--	"north"
+--	"north"
+--	"north"
+--	"west"
+--	"north"
+--	"north"
+--	"northwest"
+--	"give wrench to attendant"
+--	"southeast"
+--	"east"
+--	"hit bullseye with sledgehammer"
+--	"2"
+--	"hit target with sledge"
+--	"3"
+--	"west"
+--	"south"
+--	"south"
+--	"east"
+--	"south"
+--	"south"
+--	"south"
+--	"south"
+--	"chew bubblegum"
+--	"tie string to bubblegum"
+--	"put bubblegum in grate"
+--	"south"
+--	"south"
+--	"northeast"
+--	"put all invoices in fanny pack"
+--	"get key"
+--	"southwest"
+--	"south"
+--	"west"
+--	"buy aqua fuse"
+--	"north"
+--	"look under platform"
+--	"get pliers"
+--	"north"
+--	"east"
+--	"south"
+--	"south"
+--	"northeast"
+--	"open panel"
+--	"put aqua fuse in socket"
+--	"flip switch"
+--	"southwest"
+--	"east"
+--	"open panel"
+--	"put crimson fuse in socket"
+--	"flip switch"
+--	"west"
+--	"southeast"
+--	"open panel"
+--	"put emerald fuse in socket"
+--	"flip switch"
+--	"northwest"
+--	"southwest"
+--	"open panel"
+--	"put gray fuse in socket"
+--	"flip switch"
+--	"northeast"
+--	"west"
+--	"open panel"
+--	"put indigo fuse in socket"
+--	"flip switch"
+--	"east"
+--	"northwest"
+--	"open panel"
+--	"put khaki fuse in socket"
+--	"flip switch"
+--	"southeast"
+--	"north"
+--	"north"
+--	"north"
+--	"north"
+--	"north"
+--	"up"
+--	"west"
+--	"spin aqua dial to 1"
+--	"set crimson dial to 3"
+--	"set emerald dial to 5"
+--	"turn gray dial to 7"
+--	"turn indigo dial to 9"
+--	"turn khaki dial to 11"
+--	"push indigo button"
+--	"look"
+--	"ask whidbey about indigo fuse"
+--	"show the insurance policy to whidbey"
+--	"ask whidbey about insurance"
+--	"ask whidbey about cash [']n['] carry"
+--	"ask whidbey about invoices"
+--	"show cash [']n['] carry to whidbey"
+--	"show frank's market to whidbey"
+--	"show oriental trading to whidbey"
+--	"show mystic industries to whidbey"
+--	"show evidence"
+--	"show mystic industries invoice to janitor"
+--	"show insurance policy to janitor"
+--	"show check to janitor"
+--	"ask janitor about hell ride"
+--	"ask janitor about bumper cars"
+--	"ask janitor about ferris wheel"
+--	"ask janitor about Mr Whidbey"
+--	"show pliers to whidbey"
+--	"show pliers to janitor"
+--	"show oriental trading to whidbey"
+--	"show oriental trading to janitor"
+--	"show check to whidbey"
+--	"ask whidbey about needleman"
+--	"accuse whidbey of insurance fraud"
