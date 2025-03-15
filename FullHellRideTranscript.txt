@@ -2,7 +2,7 @@ Start of a transcript of:
 
 Hell Ride
 The ride of a lifetime... by No Shoes
-Release 203 / Serial number 250312 / Inform 7 v10.1.2 / D
+Release 203 / Serial number 250315 / Inform 7 v10.1.2 / D
 Inform 7 v10.1.2
 Identification number: //E0A5AFB9-18BF-4485-B083-426CA51CCE70//
 Interpreter version 0.6.0 / VM 3.1.3
@@ -27,7 +27,7 @@ The midway is to the south. There is a blueberry bush here. There are blueberrie
 
 Your car is here. It's a bit of a beater. Inside the car, you can see the glove box, the seat, the rear view mirror, the ignition, and the dashboard.
 
-You can see a Parking attendant here.
+You can see a parking attendant here.
 
 The attendant has a parking ticket. The price of a parking ticket is $5.00.
 
@@ -103,7 +103,7 @@ quarter: Taken.
 quarter: Taken.
 quarter: Taken.
 parking ticket: You'll have to pay for that.
-parking stub: That seems to belong to the Parking attendant.
+parking stub: That seems to belong to the parking attendant.
 air freshener: Taken.
 
 >l at seat
@@ -177,7 +177,7 @@ The ground is worn from the steps of carnival goers eagerly waiting in line as t
 
 The midway continues in all directions from here. There is a cashier here. A price list for attraction tickets is on the signboard. The cashier has Hell Ride ticket, Fortune Teller ticket, Ferris Wheel ticket, Bumper Cars ticket, and Carousel ticket.
 
-You can see a janitor, a Cashier, and a ticket kiosk here.
+You can see a janitor and a cashier here.
 
 >buy tickets
 Hell Ride ticket: You fork over $4.00 for the Hell Ride ticket, leaving yourself with $28.00.
@@ -267,7 +267,7 @@ The carousel's warm, playful tunes drift across the midway, inviting riders of a
 >sw
 
 Ticket Booth
-You can see a janitor, a Cashier, and a ticket kiosk here.
+You can see a janitor and a cashier here.
 
 >steal brass key
 Out of the corner of his eye, the janitor sees you reach for his key ring.
@@ -288,7 +288,7 @@ There is a menu to the right of the window. You can see the treats inside the st
 
 Nearby a sturdy door leads south.
 
-You can also see a janitor, a Concession attendant, a menu, a Drink of Cola, some Bubblegum, a Bucket of Popcorn, a Candy Apple, Cotton Candy, and a Soft Pretzel here.
+You can also see a janitor, a concession attendant, a menu, a Drink of Cola, some Bubblegum, a Bucket of Popcorn, a Candy Apple, Cotton Candy, and a Soft Pretzel here.
 
 >steal brass key
 The janitor says, "Hey! What do you think you're doing?!
@@ -306,43 +306,45 @@ The janitor looks at you and waits for you to proceed.
 
 "Hell Ride is a finicky ride. I'm fixing something there every week. Last week, Mr. Whidbey asked me to skip Hell Ride's maintenance slot. There was a real fire in the Stakes Room last month. And just yesterday I caught him creeping around the guillotine room" says the janitor.
 
+>ask janitor about ferris wheel
+The janitor looks at you expectantly.
+
+The janitor remarks, "The other day, I found a bolt on one of the gondolas so loose it had almost come off. That would have been a tragedy!"
+
+>ask janitor about bumper cars
+The janitor looks bored as he waits for you to speak.
+
+The janitor says, "That reminds me. Not long ago, one of the bumper cars was shorting out and electrifying the car. A visitor got hurt. A young lad, what was his name? Fred something, I think."
+
+>ask janitor about whidbey
+The janitor looks at you and waits for you to proceed.
+
+The janitor says , "Mr. Whidbey? He creeps me out. It always seems like he's hiding something. Just yesterday I caught him sneaking around the guillotine room in Hell Ride."
+
+>ask janitor about fuses
+The janitor looks at you expectantly.
+
+The janitor says "Funny thing about that. The fuses that belong in the electrical panels in the electrical area of backstage seem to be missing. Finding them might help with disabling Hell Ride."
+
+>ask janitor about fire
+The janitor looks bored as he waits for you to speak.
+
+"The very real fire in the Stakes Room in Hell Ride was a scary event. I couldn't put it out with a fire extinguisher. We had to wait for the fire department and by then there was a lot of damage done" says the janitor.
+
+>ask janitor about accidents
+The janitor looks at you and waits for you to proceed.
+
+The janitor says "The fire, the Ferris wheel, the Bumper Cars... That's a lot of suspicious accidents."
+
+>ask janitor about rides
+The janitor looks at you expectantly.
+
+"Almost every ride is falling apart. I do what I can to keep things in good repair but it's a lot of work" says the janitor.
+
 >ne
 
 Ticket Booth
-You can see a Cashier and a ticket kiosk here.
-
->ask janitor about ferris wheel
-You can't see any such thing.
-
->ask janitor about bumper cars
-You can't see any such thing.
-
->ask janitor about whidbey
-You can't see any such thing.
-
->ask janitor about fuses
-You can't see any such thing.
-
->s
-
-Head of the Line
-You are standing in front of an attendant with his hand open waiting for your ticket. The entrance to the ride is south of here. The ride operator tells you that you're lucky you showed up when you did because this will be the last trip through Hell Ride for the night. You notice that all the other cars are empty. The Ticket Kiosk is north of here.
-
-You can see a Hell Ride attendant here.
-
->ask janitor about fire
-You can't see any such thing.
-
->ask janitor about accidents
-You can't see any such thing.
-
->ask janitor about rides
-You can't see any such thing.
-
->n
-
-Ticket Booth
-You can see a Cashier and a ticket kiosk here.
+You can see a cashier here.
 
 >nw
 
@@ -371,13 +373,15 @@ Drivers of all ages eagerly maneuver their cars, aiming for others.
 >x poles
 The electric poles connects the cars to the ceiling, sparking faintly as they supply power to the vehicles.
 
+The janitor arrives from the Ticket Booth.
+
 >l at booth
 The operator stands in this booth overseeing the action below.
 
 >se
 
 Ticket Booth
-You can see a janitor, a Cashier, and a ticket kiosk here.
+You can see a cashier here.
 
 >se
 
@@ -455,7 +459,7 @@ Whether you leave with a sense of wonder or unease, the encounter lingers with y
 >nw
 
 Ticket Booth
-You can see a Cashier and a ticket kiosk here.
+You can see a janitor and a cashier here.
 
 >e
 
@@ -464,14 +468,14 @@ A tall machine stands with bright red, yellow, and blue lights. A sign sits at t
 
 The Ticket Kiosk is to the west. Other games are northeast and southeast of here. The Ferris Wheel lies to the east.
 
-You can see a Strongman attendant, a lever, and some High Striker prizes here.
+You can see a High Striker attendant, a lever, and some High Striker prizes here.
 
 The attendant is holding a mallet.
 
 >e
 
 Ferris Wheel
-The Ferris wheel dominates the carnival, its bright lights visible from every corner. Its massive steel frame arches high, with colorful gondolas swaying as it turns. At night, flashing in bursts of red, green, and white, the wheel dazzles with lights. The air buzzes with the hum of the motor. The operator calls, "Step right up! The best view of the carnival awaits!" From the top, riders get a panoramic view of the fairgrounds, with city lights stretching to the horizon
+The Ferris wheel dominates the carnival, its bright lights visible from every corner. Its massive steel frame arches high, with colorful gondolas swaying as it turns. At night, flashing in bursts of red, green, and white, the wheel dazzles with lights. The air buzzes with the hum of the motor. The operator calls, "Step right up! The best view of the carnival awaits!" From the top, riders get a panoramic view of the fairgrounds, with city lights stretching to the horizon.
 
 Hey! Is that a two dollar bill on the ground?
 
@@ -486,6 +490,8 @@ As you enter the gondola, the safety bar clicks into place, and the Ferris wheel
 >l at beams
 The Ferris wheel towers above the carnival and is illuminated with vibrant lights, creating a dazzling display. As the wheel turns slowly, the gondolas remain upright, offering riders a thrilling yet gentle experience and spectacular views from the top.
 
+Over the loud speaker, an announcement blares: Attention please. There is a vehicle being towed from the parking lot for parking illegally. The license plate of the car is "862901". You breathe a sigh of relief as you realize that's not your license plate. I guess it's a good thing you remembered to place the parking stub on the dashboard.
+
 >l at gondolas
 Each gondola, painted in bright hues like red, yellow, and blue, dangles from the wheel, swaying gently as it turns.
 
@@ -495,6 +501,8 @@ The Ferris wheel towers above the carnival and is illuminated with vibrant light
 >l at bill
 It has a picture of Thomas Jefferson on it.
 
+The janitor arrives from the High Striker.
+
 >get it
 Taken.
 
@@ -503,15 +511,13 @@ You now have $22.00.
 >l at safety bar
 The safety bar is locked in place.
 
-Over the loud speaker, an announcement blares: Attention please. There is a vehicle being towed from the parking lot for parking illegally. The license plate of the car is "862901". You breathe a sigh of relief as you realize that's not your license plate. I guess it's a good thing you remembered to place the parking stub on the dashboard.
-
 >raise safety bar
 The safety bar is locked in place.
 
 >w
 
 High Striker
-You can see a janitor, a Strongman attendant, a lever, and some High Striker prizes here.
+You can see a High Striker attendant, a lever, and some High Striker prizes here.
 
 The attendant is holding a mallet.
 
@@ -521,11 +527,11 @@ A tall machine stands with bright red, yellow, and blue lights. A sign sits at t
 
 The Ticket Kiosk is to the west. Other games are northeast and southeast of here. The Ferris Wheel lies to the east.
 
-You can see a janitor, a Strongman attendant, a lever, and some High Striker prizes here.
+You can see a High Striker attendant, a lever, and some High Striker prizes here.
 
 The attendant is holding a mallet.
 
-The janitor heads to the Ferris Wheel.
+The janitor arrives from the Ferris Wheel.
 
 >read sign
 Which do you mean, the markings or the High Striker sign?
@@ -537,6 +543,7 @@ There are five levels marked on the pole: Weakling, Getting There, Average, Almo
 Buy a mallet, strike the bell, win a prize.
 
 >l at base
+(the High Striker)
 The High Striker is a tall, eye-catching machine adorned with bright, colorful lights. A large sign at the top reads "Test Your Strength!". The machine's base is made of polished wood. At the center is a sturdy metal pole, with a large bell hanging at the top.
 
 >l at pole
@@ -545,7 +552,7 @@ There are five levels marked on the pole: Weakling, Getting There, Average, Almo
 >l at spectators
 Spectators gather around, cheering on participants and offering lighthearted jabs and encouragement.
 
-The janitor arrives from the Ferris Wheel.
+The janitor heads to the Ticket Booth.
 
 >listen
 The sound of the mallet hitting the target is followed by the resonant clang of the bell ), alongside the buzz of carnival music in the background.
@@ -560,15 +567,13 @@ This is the bell that will ring out when you prove to everyone that you're a "Mu
 You fork over $2.00 for the mallet, leaving yourself with $20.00.
 
 >hit bullseye with mallet
+You lift the mallet high and bring it down on the lever with all your might! The striker rises towards the bell stopping at "Almost There".
+ 
+>g
 You lift the mallet high and bring it down on the lever with all your might! The striker rises towards the bell stopping at "Average".
  
-The janitor heads to the Ticket Booth.
-
 >g
-You lift the mallet high and bring it down on the lever with all your might! The striker rises towards the bell stopping at "Getting Stronger".
- 
->g
-You lift the mallet high and bring it down on the lever with all your might! The striker rises towards the bell stopping at "Getting Stronger".
+You lift the mallet high and bring it down on the lever with all your might! The striker rises towards the bell stopping at "Average".
  
 >g
 You lift the mallet high and bring it down on the lever with all your might! The striker rises towards the bell stopping at "Almost There".
@@ -608,7 +613,7 @@ Taken.
 >nw
 
 High Striker
-You can see a Strongman attendant, a lever, and some High Striker prizes here.
+You can see a High Striker attendant, a lever, and some High Striker prizes here.
 
 
 >ne
@@ -649,7 +654,7 @@ Which prize would you like? 1) a stuffed monkey, 2) an orange colored fuse, 3) a
 
 >toss dime at plate
 (the dime at the plate)
-You toss the dime. The dime hits the plate and bounces straight off.
+You toss the dime. The dime lands on the edge of the plate. You watch in anticipation until the dime falls off the plate.
 
 >4
 You are now holding a horseshoe magnet.
@@ -659,7 +664,7 @@ You are now holding a horseshoe magnet.
 >sw
 
 High Striker
-You can see a Strongman attendant, a lever, and some High Striker prizes here.
+You can see a High Striker attendant, a lever, and some High Striker prizes here.
 
 
 >se
@@ -721,7 +726,7 @@ You are now holding a crimson colored fuse.
 >nw
 
 High Striker
-You can see a Strongman attendant, a lever, and some High Striker prizes here.
+You can see a High Striker attendant, a lever, and some High Striker prizes here.
 
 
 >l at prizes
@@ -730,16 +735,14 @@ The prizes are a teddy bear, a knock-off Swiss Army knife, a magenta colored fus
 >w
 
 Ticket Booth
-You can see a janitor, Mr Whidbey, a Cashier, and a ticket kiosk here.
-
-Mr Whidbey heads to the Head of the Line.
+You can see a cashier here.
 
 >sw
 
 Concession Stand
 Nearby a sturdy door leads south.
 
-You can also see a Concession attendant, a menu, a Drink of Cola, some Bubblegum, a Bucket of Popcorn, a Candy Apple, Cotton Candy, and a Soft Pretzel here.
+You can also see a concession attendant, a menu, a Drink of Cola, some Bubblegum, a Bucket of Popcorn, a Candy Apple, Cotton Candy, and a Soft Pretzel here.
 
 >l at stand
 The Concession Stand, perched along the midway, is a colorful and bustling hub. Painted in bright reds, blues, and yellows, it features bold lettering announcing treats like "SODA! POPCORN! CANDY APPLES!" Strings of twinkling lights frame the stand, making it a glowing beacon amid the carnival excitement.
@@ -753,19 +756,19 @@ $1.50 Soft Pretzel
 $1.00 Bubblegum
 
 >ask attendant about popcorn
-The Concession attendant says, "The popcorn is really good. It's hot and fresh."
+The concession attendant says, "The popcorn is really good. It's hot and fresh."
 
 >ask attendant about pretzels
-The Concession attendant says, "I prefer to eat my pretzels with mustard."
+The concession attendant says, "I prefer to eat my pretzels with mustard."
 
 >ask attendant about cotton candy
-"I love the way cotton candy melts in my mouth", says the Concession attendant.
+"I love the way cotton candy melts in my mouth", says the concession attendant.
 
 >ask attendant about candy apples
-The Concession attendant says, "I can't eat these. They get stuck in my braces."
+The concession attendant says, "I can't eat these. They get stuck in my braces."
 
 >ask attendant about bubblegum
-"It's Bazooka Joe! My favorite!", the Concession attendant says.
+"It's Bazooka Joe! My favorite!", the concession attendant says.
 
 >l at counter
 On the counter there are paper bags, napkins, and cups of cheese and sugar sprinkles.
@@ -826,7 +829,7 @@ The chair is surrounded by cigarette butts carelessly discarded on the ground.
 Concession Stand
 Nearby a sturdy door leads south.
 
-You can also see a Concession attendant, a menu, a Drink of Cola, a Bucket of Popcorn, a Candy Apple, Cotton Candy, and a Soft Pretzel here.
+You can also see a concession attendant, a menu, a Drink of Cola, a Bucket of Popcorn, a Candy Apple, Cotton Candy, and a Soft Pretzel here.
 
 >s
 (first opening the sturdy door)
@@ -887,7 +890,7 @@ There is a menu to the right of the window. You can see the treats inside the st
 
 Nearby a sturdy door leads south to the Carnival Office.
 
-You can also see a Concession attendant, a menu, a Drink of Cola, a Bucket of Popcorn, a Candy Apple, Cotton Candy, and a Soft Pretzel here.
+You can also see a janitor, a concession attendant, a menu, a Drink of Cola, a Bucket of Popcorn, a Candy Apple, Cotton Candy, and a Soft Pretzel here.
 
 You suddenly find yourself escorted outside the Carnival Office unceremoniously only to find yourself in the Concession Stand.
 
@@ -945,6 +948,8 @@ Taken.
 Mystic Industries invoice: (putting the quarter into the fanny pack to make room)
 Taken.
 
+Mr Whidbey arrives from the Guillotine Room.
+
 [Your score has just gone up by five points.]
 
 [Your score has just gone up by five points.]
@@ -956,6 +961,21 @@ Taken.
 >get envelope
 (putting the quarter into the fanny pack to make room)
 Taken.
+
+Mr Whidbey shouts, "Hey! Get out of here! Can't you read the sign? Employees only!"
+
+Concession Stand
+The concession stand is a destination for many along the midway. Twinkling lights frame the stand making it glow amid the carnival's buzz.
+
+Behind the counter, popcorn churns in the machine, candy apples gleam, and cotton candy spins in clouds. Warm pretzels sit under a heat lamp, while sodas chill in a frosted cooler. The counter is cluttered with bags, napkins, and sprinkle cups. Kids tug at parents, teens share pretzels, and the crowd buzzes with energy.
+
+There is a menu to the right of the window. You can see the treats inside the stand. There is an exit to the south and northeast. 
+
+Nearby a sturdy door leads south to the Carnival Office.
+
+You can also see a concession attendant, a menu, a Drink of Cola, a Bucket of Popcorn, a Candy Apple, Cotton Candy, and a Soft Pretzel here.
+
+You suddenly find yourself escorted outside the Carnival Office unceremoniously only to find yourself in the Concession Stand.
 
 >open envelope
 You open the envelope, revealing a cashier's check.
@@ -983,7 +1003,7 @@ The Cash 'N' Carry invoice reads:
 
  After the 10th of the month, this invoice will be assessed a finance charge of 3.75% per month, We appreciate your prompt payment.
 
-Mr Whidbey arrives from the Guillotine Room.
+Mr Whidbey arrives from the Carnival Office.
 
 >l at frank's market
 Frank's Market invoice reads:
@@ -999,21 +1019,6 @@ Frank's Market invoice reads:
  Total:                                       $745.00
 
  Notice: Your account has been closed. Kindly remit the balance due immediately!
-
-Mr Whidbey shouts, "Hey! Get out of here! Can't you read the sign? Employees only!"
-
-Concession Stand
-The concession stand is a destination for many along the midway. Twinkling lights frame the stand making it glow amid the carnival's buzz.
-
-Behind the counter, popcorn churns in the machine, candy apples gleam, and cotton candy spins in clouds. Warm pretzels sit under a heat lamp, while sodas chill in a frosted cooler. The counter is cluttered with bags, napkins, and sprinkle cups. Kids tug at parents, teens share pretzels, and the crowd buzzes with energy.
-
-There is a menu to the right of the window. You can see the treats inside the stand. There is an exit to the south and northeast. 
-
-Nearby a sturdy door leads south to the Carnival Office.
-
-You can also see a Concession attendant, a menu, a Drink of Cola, a Bucket of Popcorn, a Candy Apple, Cotton Candy, and a Soft Pretzel here.
-
-You suddenly find yourself escorted outside the Carnival Office unceremoniously only to find yourself in the Concession Stand.
 
 >l at oriental trading
 The Oriental Trading invoice reads:
@@ -1050,40 +1055,16 @@ Nearby a sturdy door leads north to the Concession Stand.
 
 On the messy desk are a mini Ferris wheel and a mini carousel.
 
-You can also see Mr Whidbey, a safe (empty), a filing cabinet (empty), and a framed photograph here.
-
-Mr Whidbey shouts, "Hey! Get out of here! Can't you read the sign? Employees only!"
-
-Concession Stand
-The concession stand is a destination for many along the midway. Twinkling lights frame the stand making it glow amid the carnival's buzz.
-
-Behind the counter, popcorn churns in the machine, candy apples gleam, and cotton candy spins in clouds. Warm pretzels sit under a heat lamp, while sodas chill in a frosted cooler. The counter is cluttered with bags, napkins, and sprinkle cups. Kids tug at parents, teens share pretzels, and the crowd buzzes with energy.
-
-There is a menu to the right of the window. You can see the treats inside the stand. There is an exit to the south and northeast. 
-
-Nearby a sturdy door leads south to the Carnival Office.
-
-You can also see a Concession attendant, a menu, a Drink of Cola, a Bucket of Popcorn, a Candy Apple, Cotton Candy, and a Soft Pretzel here.
-
-You suddenly find yourself escorted outside the Carnival Office unceremoniously only to find yourself in the Concession Stand.
+You can also see a safe (empty), a filing cabinet (empty), and a framed photograph here.
 
 >z
 Time passes.
-
-Mr Whidbey arrives from the Carnival Office.
 
 >z
 Time passes.
 
 >s
-
-Carnival Office
-Nearby a sturdy door leads north to the Concession Stand.
-
-On the messy desk are a mini Ferris wheel and a mini carousel.
-
-You can also see a safe (empty), a filing cabinet (empty), and a framed photograph here.
-
+The only exit is to the north. 
 >l at bulb
 The flickering light from the lamps casts a yellow hue about the office.
 
@@ -1119,7 +1100,7 @@ Taken.
 Concession Stand
 Nearby a sturdy door leads south to the Carnival Office.
 
-You can also see a Concession attendant, a menu, a Drink of Cola, a Bucket of Popcorn, a Candy Apple, Cotton Candy, and a Soft Pretzel here.
+You can also see a concession attendant, a menu, a Drink of Cola, a Bucket of Popcorn, a Candy Apple, Cotton Candy, and a Soft Pretzel here.
 
 >l at ferris wheel
 (the Ferris Wheel)
@@ -1136,7 +1117,7 @@ The Ferris wheel towers above the carnival and is illuminated with vibrant light
 >ne
 
 Ticket Booth
-You can see a Cashier and a ticket kiosk here.
+You can see a janitor and a cashier here.
 
 >w
 In front of the tent, the barker gestures excitedly, calling out:
@@ -1170,39 +1151,22 @@ Show Tent
 You are inside the Little Egypt Show. The attraction's facade is to the east. There are folding chairs standing vigil in neat in rows. The show should start soon.
 
 >sit in chair
-You're much too entranced by the show to do anything other than watch the show. You are riveted!
-
-The tent is dimly lit, the stage is a fully decorated representation of some Middle Eastern palace, featuring rich, colorful fabrics, brass ornaments, and lanterns casting a warm, flickering glow. Heady incense wafts through the air, softening everything around the edges. Enhancing the mystique, the backdrop displays painted scenes of pyramids, desert landscapes, and  domed structures. The colorful onion topped buildings and jewel tones set to the sepia colored landscape have you transported far away.
+You get onto the folding chair.
 
 >smell
 The smell of incense and spices wafts through the tent.
 
-Little Egypt emerges, draped in flowing silken veils. Skillfully she twirls using them as part of the dance. A sparkling, sequined bodice opens into a gauze skirt, adorned with jingling coin belts and jewelry that accentuate her dance.
-
 >listen
 The soft sounds of unfamiliar music fill the air.
-
-The performance begins with slow, undulating movements, drawing you into the rhythm of the music. Traditional instruments like the oud, darbuka, or zurna are an accompanying chorus. As the tempo builds, her hips, torso, and hands twist in an intricate and mesmerizing pattern. Little Egypt demonstrates remarkable control and fluidity. She dramatically spins, drops, and shimmies, often punctuating the beat with a quick jingle of her coin belt.
 
 >l at palace
 The stage is decorated to resemble an Middle Eastern palace, featuring rich, colorful fabrics, brass ornaments, and lanterns casting a warm, flickering glow. Scents of incense waft through the air, enhancing the atmosphere of mystique. The canvas displays painted scenes of pyramids, desert landscapes, and domed structures to evoking a sense of being transported to the "Middle East".
 
-Little Egypt makes eye contact with you and smiles enigmatically. In her performance she balances a fine silver sword on her head and accents her dance with tinkling finger cymbals.
-
 >l at stage
 The stage is decorated to resemble an Middle Eastern palace, featuring rich, colorful fabrics, brass ornaments, and lanterns casting a warm, flickering glow. Scents of incense waft through the air, enhancing the atmosphere of mystique. The canvas displays painted scenes of pyramids, desert landscapes, and domed structures to evoking a sense of being transported to the "Middle East".
 
-The music oscillates between hauntingly slow melodies and rapid, energetic drum beats, a roller coaster of emotion that leaves you entranced. Little Egypt relies on the music's dynamic changes to tell a story with movements reflecting joy, sorrow, seduction, and celebration.
-
 >l at pyramids
 The canvas displays painted scenes of pyramids, desert landscapes, and domed structures .
-
-The performance concludes with a dramatic flourish, an energetic shimmy, a bold spin, and Little Egypt casts off her veils. The dancer takes a bow to thunderous applause, leaving you spellbound by the sensual display.
-
-You applaud until your hands are sore. Did she just wink at you?
-
-As she leaves the stage, Little Egypt tosses one of her veils to you!
-
 
 >l at landscapes
 The canvas displays painted scenes of pyramids, desert landscapes, and domed structures .
@@ -1213,7 +1177,6 @@ This is a highly polished brass lantern.
 It is currently switched off.
 
 >get lantern
-(putting the parking ticket into the fanny pack to make room)
 Taken.
 
 [Your score has just gone up by five points.]
@@ -1224,11 +1187,37 @@ You flip a switch. A strong, narrow beam of light shines from the lit lantern.
 >l at backdrop
 Elegantly painted on linen, the backdrop shows scenes of Middle Eastern life.
 
+The tent is dimly lit, the stage is a fully decorated representation of some Middle Eastern palace, featuring rich, colorful fabrics, brass ornaments, and lanterns casting a warm, flickering glow. Heady incense wafts through the air, softening everything around the edges. Enhancing the mystique, the backdrop displays painted scenes of pyramids, desert landscapes, and  domed structures. The colorful onion topped buildings and jewel tones set to the sepia colored landscape have you transported far away.
+
 >look at veils
 Little Egypt is a beautiful woman who is draped in flowing silk veils which she skillfully uses as part of the dance. Her attire consists of a sparkling, sequined bodice and a flowing skirt, adorned with jingling coin belts and jewelry that accentuate her movements.
 
+Little Egypt emerges, draped in flowing silken veils. Skillfully she twirls using them as part of the dance. A sparkling, sequined bodice opens into a gauze skirt, adorned with jingling coin belts and jewelry that accentuate her dance.
+
 >l at scenes
 The canvas displays painted scenes of pyramids, desert landscapes, and domed structures .
+
+The performance begins with slow, undulating movements, drawing you into the rhythm of the music. Traditional instruments like the oud, darbuka, or zurna are an accompanying chorus. As the tempo builds, her hips, torso, and hands twist in an intricate and mesmerizing pattern. Little Egypt demonstrates remarkable control and fluidity. She dramatically spins, drops, and shimmies, often punctuating the beat with a quick jingle of her coin belt.
+
+>z
+Time passes.
+
+Little Egypt makes eye contact with you and smiles enigmatically. In her performance she balances a fine silver sword on her head and accents her dance with tinkling finger cymbals.
+
+>z
+Time passes.
+
+The music oscillates between hauntingly slow melodies and rapid, energetic drum beats, a roller coaster of emotion that leaves you entranced. Little Egypt relies on the music's dynamic changes to tell a story with movements reflecting joy, sorrow, seduction, and celebration.
+
+>z
+Time passes.
+
+The performance concludes with a dramatic flourish, an energetic shimmy, a bold spin, and Little Egypt casts off her veils. The dancer takes a bow to thunderous applause, leaving you spellbound by the sensual display.
+
+You applaud until your hands are sore. Did she just wink at you?
+
+As she leaves the stage, Little Egypt tosses one of her veils to you!
+
 
 >wear veil
 You wrap the veil around your head, shrouding your eyes. The world is a lovely color pink as you look through the veil while her perfume fills your nostrils in the most delightful way. You look pretty!
@@ -1239,36 +1228,22 @@ You wrap the veil around your head, shrouding your eyes. The world is a lovely c
 You already have that.
 
 >turn it on
-You're much too entranced by the show to do anything other than watch the show. You are riveted!
-
-The tent is dimly lit, the stage is a fully decorated representation of some Middle Eastern palace, featuring rich, colorful fabrics, brass ornaments, and lanterns casting a warm, flickering glow. Heady incense wafts through the air, softening everything around the edges. Enhancing the mystique, the backdrop displays painted scenes of pyramids, desert landscapes, and  domed structures. The colorful onion topped buildings and jewel tones set to the sepia colored landscape have you transported far away.
+That's already on.
 
 >l at landscapes
 The canvas displays painted scenes of pyramids, desert landscapes, and domed structures .
 
-Little Egypt emerges, draped in flowing silken veils. Skillfully she twirls using them as part of the dance. A sparkling, sequined bodice opens into a gauze skirt, adorned with jingling coin belts and jewelry that accentuate her dance.
-
 >l at incense
 The smell of incense and spices wafts through the tent.
-
-The performance begins with slow, undulating movements, drawing you into the rhythm of the music. Traditional instruments like the oud, darbuka, or zurna are an accompanying chorus. As the tempo builds, her hips, torso, and hands twist in an intricate and mesmerizing pattern. Little Egypt demonstrates remarkable control and fluidity. She dramatically spins, drops, and shimmies, often punctuating the beat with a quick jingle of her coin belt.
 
 >l at oud
 The musical instrument is of traditional Middle Eastern origins.
 
-Little Egypt makes eye contact with you and smiles enigmatically. In her performance she balances a fine silver sword on her head and accents her dance with tinkling finger cymbals.
-
 >l at fabric
 The linen and silk fabrics come in all different colors.
 
-The music oscillates between hauntingly slow melodies and rapid, energetic drum beats, a roller coaster of emotion that leaves you entranced. Little Egypt relies on the music's dynamic changes to tell a story with movements reflecting joy, sorrow, seduction, and celebration.
-
 >l at brass ornaments
 There are highly polished incense holders and brass lanterns here.
-
-The performance concludes with a dramatic flourish, an energetic shimmy, a bold spin, and Little Egypt casts off her veils. The dancer takes a bow to thunderous applause, leaving you spellbound by the sensual display.
-
-You applaud until your hands are sore. Did she just wink at you?
 
 >l at canvas
 Elegantly painted on linen, the backdrop shows scenes of Middle Eastern life.
@@ -1276,22 +1251,37 @@ Elegantly painted on linen, the backdrop shows scenes of Middle Eastern life.
 >l at backdrop
 Elegantly painted on linen, the backdrop shows scenes of Middle Eastern life.
 
+The tent is dimly lit, the stage is a fully decorated representation of some Middle Eastern palace, featuring rich, colorful fabrics, brass ornaments, and lanterns casting a warm, flickering glow. Heady incense wafts through the air, softening everything around the edges. Enhancing the mystique, the backdrop displays painted scenes of pyramids, desert landscapes, and  domed structures. The colorful onion topped buildings and jewel tones set to the sepia colored landscape have you transported far away.
+
 >l at cymbals
 The cymbals are placed on the thumb and index finger of each hand. Tapping them together produces a ringing sound.
+
+Little Egypt emerges, draped in flowing silken veils. Skillfully she twirls using them as part of the dance. A sparkling, sequined bodice opens into a gauze skirt, adorned with jingling coin belts and jewelry that accentuate her dance.
 
 >l at sword
 This is a beautiful silver sword with a filigreed handle and blade.
 
+The performance begins with slow, undulating movements, drawing you into the rhythm of the music. Traditional instruments like the oud, darbuka, or zurna are an accompanying chorus. As the tempo builds, her hips, torso, and hands twist in an intricate and mesmerizing pattern. Little Egypt demonstrates remarkable control and fluidity. She dramatically spins, drops, and shimmies, often punctuating the beat with a quick jingle of her coin belt.
+
 >l at wall
 You see nothing special about the wall.
+
+Little Egypt makes eye contact with you and smiles enigmatically. In her performance she balances a fine silver sword on her head and accents her dance with tinkling finger cymbals.
 
 >l at instruments
 The musical instrument is of traditional Middle Eastern origins.
 
+The music oscillates between hauntingly slow melodies and rapid, energetic drum beats, a roller coaster of emotion that leaves you entranced. Little Egypt relies on the music's dynamic changes to tell a story with movements reflecting joy, sorrow, seduction, and celebration.
+
 >z
 Time passes.
 
+The performance concludes with a dramatic flourish, an energetic shimmy, a bold spin, and Little Egypt casts off her veils. The dancer takes a bow to thunderous applause, leaving you spellbound by the sensual display.
+
+You applaud until your hands are sore. Did she just wink at you?
+
 >e
+(first getting off the folding chair)
 
 Show Facade
 You can see a Barker here.
@@ -1319,10 +1309,23 @@ Behold the one, the only Little Egypt, performing her legendary Dance of the Pyr
 For just a dime, a mere one tenth of a dollar, prepare to be transported to the sands of Cairo, where enchantment and wonder await!
 
 >gonear janitor
-Head of the Line
-You are standing in front of an attendant with his hand open waiting for your ticket. The entrance to the ride is south of here. The ride operator tells you that you're lucky you showed up when you did because this will be the last trip through Hell Ride for the night. You notice that all the other cars are empty. The Ticket Kiosk is north of here.
+Ticket Booth
+Painted in bright red and yellow stripes, the ticket kiosk stands at the entrance with flickering lights to draw attention. A smiling cashier hands out tickets, while the cash drawer jingles. A digital payment system sits in the corner. Too bad you don't have a debit card.
 
-You can see a janitor and a Hell Ride attendant here.
+To the right, a signboard displays ticket prices alongside illustrations of the rides. Pennant flags flutter and the air is filled with the scent of popcorn, pretzels, and grease.
+
+The ground is worn from the steps of carnival goers eagerly waiting in line as they approach the midway.
+
+The midway continues in all directions from here. There is a cashier here. A price list for attraction tickets is on the signboard. The cashier has Ferris Wheel ticket, Fortune Teller ticket, and Carousel ticket.
+
+You can see a janitor and a cashier here.
+
+The janitor heads to the Bumper Cars.
+
+>nw
+
+Bumper Cars
+You can see a janitor and a Bumper Cars attendant here.
 
 >janitor off
 The janitor stands still.
@@ -1335,9 +1338,6 @@ The janitor says, "Looks like the carnival is in some financial trouble."
 
 >show mystic industries to janitor
 The janitor says, That fire in Hell Ride was very really bad. It took almost two weeks to get it fully repaired. But it shouldn't have cost this much. I think Mr Whidbey got ripped off. Or, he got it fixed on the cheap and pocketed the rest."
-
->se
-There are exits are to the north and south.
 
 >show oriental trading to janitor
 The janitor says, "These prizes are cheaper and flimsier than usual."
@@ -1354,44 +1354,55 @@ The janitor says "What?! That's the name of the kid who got hurt in the Bumper C
 >display evidence
   Weight   Evidence collected:
   ------   --------------------------------------------------------
-?   11     Evidence concerning accidents with the attractions
+?   28     Evidence concerning accidents with the attractions
 ?    8     Evidence concerning insurance
+?    5     Evidence concerning Mr Whidbey
 ?    3     Evidence concerning past due invoices
 
-You haven't got enough evidence for an arrest.
+You have enough evidence to press charges.
+
+>se
+
+Ticket Booth
+You can see Mr Whidbey and a cashier here.
+
+Mr Whidbey heads to the Head of the Line.
 
 >l at attendant
-This is another bored teenager. He's wondering why he took this stupid job in the first place.
+This is another bored teenager. His thoughts are entirely focused on a cheeseburger for lunch.
 
 >g
-This is another bored teenager. He's just trying to earn enough money to take his sweetie to the movies next week.
+This is another bored teenager. He's thinking about having a brewski with his bros after work.
 
 >g
-This is another bored teenager. He's wondering why he took this stupid job in the first place.
+This is another bored teenager. His thoughts are entirely focused on a cheeseburger for lunch.
 
 >ask attendant about uniform
-Wearing blue pants and a pink shirt, the Hell Ride attendant says, "This is just awful! I look like a lollipop."
+Wearing blue pants and a pink shirt, the cashier says, "This is just awful! I look like a lollipop."
 
 >ask attendant about brewski
-"A nice cold Coors Light would taste good about now", the Hell Ride attendant replies
+"A nice cold Coors Light would taste good about now", the cashier replies
 
 >ask attendant about beer
-"A nice cold Coors Light would taste good about now", the Hell Ride attendant replies
+"A nice cold Coors Light would taste good about now", the cashier replies
 
 >ask attendant about game
-The Hell Ride attendant says, "Friday night is the league championship. I hope we win!"
+The cashier says, "Friday night is the league championship. I hope we win!"
 
 >s
-You'll need a ticket to go that way.
+
+Head of the Line
+You are standing in front of an attendant with his hand open waiting for your ticket. The entrance to the ride is south of here. The ride operator tells you that you're lucky you showed up when you did because this will be the last trip through Hell Ride for the night. You notice that all the other cars are empty. The Ticket Kiosk is north of here.
+
+You can see a Hell Ride attendant here.
 
 >give ticket
-Whom do you want to give the Hell Ride ticket to?
+(the Hell Ride ticket to the Hell Ride attendant)
+You give the Hell Ride ticket to the Hell Ride attendant.
 
 >l at cars
 (the hell ride cars)
 These cars ferry carnival goers into the depths of Hell Ride.
-
-Mr Whidbey arrives from the Ticket Booth.
 
 >l at car
 These cars ferry carnival goers into the depths of Hell Ride.
@@ -1400,18 +1411,17 @@ These cars ferry carnival goers into the depths of Hell Ride.
 Hell Ride isn't that kind of game!
 
 >damn
-And you kiss your mother with that mouth?
+I can certainly understand your frustration but swearing is not the answer.
 
 >shit
 Shhh! Someone will hear you!
 
 >damn
-I can certainly understand your frustration but swearing is not the answer.
-
-Mr Whidbey heads to Ride Entrance.
+Real adventurers don't use that sort of language!
 
 >give hell ride ticket to attendant
-You give the Hell Ride ticket to the Hell Ride attendant.
+(first taking the Hell Ride ticket)
+That seems to belong to the Hell Ride attendant.
 
 >s
 
@@ -1420,7 +1430,7 @@ The cars for Hell Ride stop here, and the safety bar clicks into place as riders
 
 The "HELL RIDE" sign pulses above the door, while demon statues with clawed hands seem to beckon. The entrance is shrouded in darkness, broken only by eerie green flashes that reveal twisted paths. Faint whispers and distant organ music grow louder. To one side, the darkness looks a little bit darker than the rest of the room.
 
-You can see Mr Whidbey and a Hell Ride car (empty) here.
+You can see a Hell Ride car (empty) here.
 
 >l at cars
 (the Hell Ride car)
@@ -1431,8 +1441,6 @@ You can smell a faint sulfuric tang in the air.
 
 >listen
 The sound of organ music, shrieks, and grinding machinery fills the air.
-
-Mr Whidbey heads to Dark Passage.
 
 >l at lights
 The archway surrounds the entrance to the ride.
@@ -1486,27 +1494,27 @@ You can see a Hell Ride car (empty) here.
 >n
 
 Head of the Line
-You can see a janitor and a Hell Ride attendant here.
+You can see a Hell Ride attendant here.
 
 >n
 
 Ticket Booth
-You can see a Cashier and a ticket kiosk here.
+You can see a cashier here.
 
 >s
 
 Head of the Line
-You can see a janitor and a Hell Ride attendant here.
+You can see a Hell Ride attendant here.
 
 >n
 
 Ticket Booth
-You can see a Cashier and a ticket kiosk here.
+You can see a cashier here.
 
 >e
 
 High Striker
-You can see a Strongman attendant, a lever, and some High Striker prizes here.
+You can see a High Striker attendant, a lever, and some High Striker prizes here.
 
 
 >l at janitor
@@ -1523,18 +1531,18 @@ You can't see any such thing.
 >w
 
 High Striker
-You can see a Strongman attendant, a lever, and some High Striker prizes here.
+You can see a High Striker attendant, a lever, and some High Striker prizes here.
 
 
 >w
 
 Ticket Booth
-You can see a Cashier and a ticket kiosk here.
+You can see a cashier here.
 
 >s
 
 Head of the Line
-You can see a janitor and a Hell Ride attendant here.
+You can see a Hell Ride attendant here.
 
 >s
 
@@ -1598,23 +1606,22 @@ The wires lay in twisted tangles on the desk.
 >turn on radio
 You switch the radio on.
 
-You hear Bruce Springsteen's "Born To Run" playing on the radio.
+"Margaritaville" by Jimmy Buffet plays on the radio.
 
 >l at gears
 The gears and springs are strewn on the desk.
 
-"Folsom Prison Blues" by Johnny Cash plays on the radio.
+Nearby, you can hear "More That A Feeling" by Boston.
 
 >l at posters
 You're the safe choice for safety!
 
-The DJ announces that "Never Gonna Give You Up" by Rick Astley will be up next.
- Yes, you have been Rick Rolled!
+You hear Bob Marley's "No Woman, No Cry" playing on the radio.
 
 >l at schedules
 Looking at the maintenance schedules and notes, all you can see are the illegible scribbles of a child.
 
-You sing along to Bruce Springsteen's "Born To Run".
+You sing along to R.E.M.'s "Losing My Religion".
 
 >look
 Maintenance Office
@@ -1632,37 +1639,37 @@ Nearby an aqua colored door leads west.
 
 You can also see a worn photo and a desk (on which are a coffee mug and a radio) here.
 
-You hear Cat Stevens's "Peace Train" playing on the radio.
+"Respect" by Aretha Franklin plays on the radio.
 
 >read manual
 The manual is titled: "Fixing Your Ferris Wheel. It's Easier Than You Think!"
 
-The DJ announces that "Respect" by Aretha Franklin will be up next.
+You hear Led Zeppelin's "Fool In The Rain" playing on the radio.
 
 >drink coffee
 That looks nasty. There's something floating on the top. I wouldn't drink that if I was you.
 
-Nearby, you can hear "No Woman, No Cry" by Bob Marley.
+The DJ announces that "Young Americans" by David Bowie will be up next.
 
 >drink coffee
 You decide to drink it after all. Your stomach lurches as the cold, nasty coffee settles.
 
-You hear Kermit the Frog's "Rainbow Connection" playing on the radio.
+"Over The Rainbow" by Bruddah Iz plays on the radio.
 
 >drink coffee
 You've learned your lesson and set the coffee cup down.
 
-Nearby, you can hear "Respect" by Aretha Franklin.
+The DJ announces that "Ripple" by The Grateful Dead will be up next.
 
 >drink coffee
 There's nothing suitable to drink here.
 
-"Werewolves Of London" by Warren Zevon plays on the radio.
+You sing along to Taylor Swift's "Shake It Off".
 
 >l at clock
 The clock is wildly off the correct time. I guess it's broken.
 
-The DJ announces that "Ripple" by The Grateful Dead will be up next.
+You hear Ben E. King's "Stand By Me" playing on the radio.
 
 >turn off radio
 You switch the radio off.
@@ -1734,10 +1741,13 @@ Nearby a ladder leads up to Dark Hallway.
 
 Nearby an aqua colored door leads west.
 
-You can also see a worn photo and a desk (on which are a coffee mug and a radio) here.
+You can also see Mr Whidbey, a worn photo, and a desk (on which are a coffee mug and a radio) here.
 
 >get photo
+(putting the parking ticket into the fanny pack to make room)
 Taken.
+
+Mr Whidbey heads to the Stocks Room.
 
 >look at it
 This is a photo of the carnival in its heyday! A ragtag bunch of people are featured in the picture in front of the Hell Ride facade. On the back reads a date: "03/22/62". This looks like the same photo you found in the Carnival Office.
@@ -1946,8 +1956,8 @@ You are carrying:
   an emerald colored fuse
   a worn photo
   a lit flashlight (providing light)
-  a lit lantern (providing light)
   a sheer veil (being worn)
+  a lit lantern (providing light)
   a cashier's check
   an envelope (open but empty)
   a Mystic Industries invoice
@@ -2003,7 +2013,7 @@ Nearby a ladder leads up to Dark Hallway.
 
 Nearby an aqua colored door leads west.
 
-You can also see a desk (on which are a coffee mug and a radio) here.
+You can also see Mr Whidbey and a desk (on which are a coffee mug and a radio) here.
 
 >n
 
@@ -2012,24 +2022,22 @@ Dark Passage
 >w
 
 Ride Entrance
-You can see Mr Whidbey and a Hell Ride car (empty) here.
-
-Mr Whidbey heads to Dark Passage.
+You can see a Hell Ride car (empty) here.
 
 >n
 
 Head of the Line
-You can see a janitor and a Hell Ride attendant here.
+You can see a Hell Ride attendant here.
 
 >n
 
 Ticket Booth
-You can see a Cashier and a ticket kiosk here.
+You can see a cashier here.
 
 >nw
 
 Bumper Cars
-You can see a Bumper Cars attendant here.
+You can see a janitor and a Bumper Cars attendant here.
 
 >give wrench to attendant
 Hey! Thanks, I really appreciate it. Usually no one ever responds to the radio in the Control Room. Here, take this fuse.
@@ -2056,8 +2064,8 @@ You are carrying:
   a sledgehammer
   an emerald colored fuse
   a worn photo
-  a lit lantern (providing light)
   a sheer veil (being worn)
+  a lit lantern (providing light)
   a cashier's check
   an envelope (open but empty)
   a Cash 'N' Carry invoice
@@ -2087,12 +2095,12 @@ You are carrying:
 >se
 
 Ticket Booth
-You can see a Cashier and a ticket kiosk here.
+You can see a cashier here.
 
 >e
 
 High Striker
-You can see a Strongman attendant, a lever, and some High Striker prizes here.
+You can see a High Striker attendant, a lever, and some High Striker prizes here.
 
 
 >hit bullseye with sledgehammer
@@ -2118,12 +2126,12 @@ You are now holding a magenta colored fuse.
 >w
 
 Ticket Booth
-You can see a Cashier and a ticket kiosk here.
+You can see a cashier here.
 
 >s
 
 Head of the Line
-You can see a janitor and a Hell Ride attendant here.
+You can see a Hell Ride attendant here.
 
 >s
 
@@ -2385,7 +2393,7 @@ There is a price list next to the cash register. An attendant is here to assist 
 
 Nearby a khaki colored door leads east to the Storage Room.
 
-You can also see a Merchandise attendant here.
+You can also see a merchandise attendant here.
 
 >read sign
 $2.00 Key Chains
@@ -2449,10 +2457,12 @@ You're glad you're not in one of those cars now. You must do something to stop i
 
 Nearby an indigo colored door leads east to the Generator Room.
 
-You can also see a guillotine platform here.
+You can also see Mr Whidbey and a guillotine platform here.
 
 >l at crowd
 The crowd encircles the platform, emotions ranging from jeers and curses to silent, grim observation. Children sit on shoulders, their curious eyes unaware of the event's gravity.
+
+Mr Whidbey heads to the Carnival Office.
 
 >l at platform
 At the center of the square stands a raised wooden platform, stark and imposing, where the grim sentence is to be carried out. You can just make out something underneath the platform in the dark.
@@ -2469,8 +2479,6 @@ The town crier proclaims the crime: "High treason against the crown. Let this be
 >l at condemned
 A lone figure stands on the scaffold, bound hands behind their back and head bowed low, avoiding the crowd's gaze.
 
-Mr Whidbey arrives from the Dungeon.
-
 >l at executioner
 The executioner - a hooded figure in black - stands ready beside the guillotine.
 
@@ -2485,8 +2493,6 @@ You find the pliers!
 
 >get pliers
 Taken.
-
-Mr Whidbey heads to the Carnival Office.
 
 [Your score has just gone up by five points.]
 
@@ -2617,10 +2623,10 @@ Vendors shout, children push forward, and an old man whispers prayers. Above, th
 
 Nearby a crimson colored door leads east to the Crawl Space.
 
-You can also see a gallows platform here.
+You can also see Mr Whidbey and a gallows platform here.
 
 >score
-You've received 170 points out of a possible 200 in 523 moves!
+You've received 170 points out of a possible 200 in 533 moves!
 
 You have received points for the following: 
 
@@ -2655,11 +2661,12 @@ You have received points for the following:
 
   Weight   Evidence collected:
   ------   --------------------------------------------------------
-?   11     Evidence concerning accidents with the attractions
+?   28     Evidence concerning accidents with the attractions
 ?    8     Evidence concerning insurance
+?    5     Evidence concerning Mr Whidbey
 ?    3     Evidence concerning past due invoices
 
-You haven't got enough evidence for an arrest.
+You have enough evidence to press charges.
 
 >i
 You are carrying:
@@ -2673,8 +2680,8 @@ You are carrying:
   a sledgehammer
   an emerald colored fuse
   a worn photo
-  a lit lantern (providing light)
   a sheer veil (being worn)
+  a lit lantern (providing light)
   a cashier's check
   an envelope (open but empty)
   a Cash 'N' Carry invoice
@@ -2711,13 +2718,15 @@ Vendors shout, children push forward, and an old man whispers prayers. Above, th
 
 Nearby a crimson colored door leads east to the Crawl Space.
 
-You can also see a gallows platform here.
+You can also see Mr Whidbey and a gallows platform here.
 
 >listen
 Above, the bell tower tolls, its mournful chime marking the passage of the man's final moments.
 
 >smell
 You smell incense as it permeates through Hell Ride.
+
+Mr Whidbey heads to the Stake Room.
 
 >l at square
 The public square, slick with morning drizzle, lies under a brooding, overcast sky. At its center looms the gallows, a weathered wooden platform with thick ropes swaying ominously.
@@ -2735,8 +2744,6 @@ The crowd stands in somber silence, broken by the shuffle of feet or faint murmu
 >l at executioner
 A hooded executioner, cloaked in black, adjusts the frayed noose with practiced precision, his cold presence exuding purpose.
 
-Mr Whidbey arrives from the Stocks Room.
-
 >l at condemned
 The condemned man, pale and trembling, has his bound hands behind him.
 
@@ -2751,8 +2758,6 @@ A raven perches on the gallows' beam, its unblinking gaze fixed on the scene bel
 
 >l at noose
 The noose has been tied and hangs from the gallows proper.
-
-Mr Whidbey heads to the Stake Room.
 
 >n
 
@@ -2820,8 +2825,8 @@ You are carrying:
   a sledgehammer
   an emerald colored fuse
   a worn photo
-  a lit lantern (providing light)
   a sheer veil (being worn)
+  a lit lantern (providing light)
   a cashier's check
   an envelope (open but empty)
   a Cash 'N' Carry invoice
@@ -3103,9 +3108,7 @@ You can also see a wooden stocks here.
 Gallows Room
 Nearby a crimson colored door leads east to the Crawl Space.
 
-You can also see Mr Whidbey and a gallows platform here.
-
-Mr Whidbey heads to the Stake Room.
+You can also see a gallows platform here.
 
 >s
 
@@ -3114,13 +3117,31 @@ Nearby an emerald colored door leads east to the Mechanical Room North.
 
 The flames of the pyre burn ever brighter and rise ever higher engulfing the victims.
 
-You can also see Mr Whidbey here.
+>gonear whidbey
+Guillotine Room
+The public square hums with tension under gray skies. A wooden platform stands at the center, a grim focal point.
+
+A lone figure, hands bound and head bowed, stands on the scaffold. Their tattered clothes reveal a once-gilded past.
+
+The crowd jeers while children watch wide-eyed. The town crier proclaims, "High treason against the crown!"
+
+The condemned remains silent as the executioner, robed in black, stands beside the guillotine. The blade gleams in the dim light. The crowd's murmurs die, replaced by silence.
+
+As the condemned approaches, the guillotine's timing falters. Instead of falling on the scaffold, the blade swings over the cars, threatening any unlucky passenger who passes beneath.
+
+There is just one problem: the guillotine is being raised and lowered by some mechanism. It appears that the timing of the guillotine is off and it is being lowered onto the cars instead of between them. If a person were to be in a car as it passed under the guillotine, they would be seriously injured.
+
+You're glad you're not in one of those cars now. You must do something to stop it before someone get's hurt! 
+
+Nearby an indigo colored door leads east to the Generator Room.
+
+You can also see Mr Whidbey and a guillotine platform here.
 
 >whidbey off
 Whidbey stands still.
 
 >ask whidbey about hell ride
-Mr Whidbey nervously shifts his weight from one foot to the other.
+Mr Whidbey waits for you to speak.
 
 "Hell Ride is the premier attraction here at  Whidbey Amusements. It's both spooky and fun! The visitors love it! The fire last month was unfortunate and expensive" says Mr Whidbey.
 
@@ -3138,24 +3159,24 @@ Mr Whidbey nervously shifts his weight from one foot to the other.
 "An insurance policy? Of course, all reputable businesses have insurance. Even small time carnivals" Mr Whidbey stammers.
 
 >ask whidbey about carnival
-Mr Whidbey waits for you to speak.
+Mr Whidbey looks at you expectantly.
 
 "The Whidbey family has owned this carnival since the 1957", Mr Whidbey says. "Unfortunately, I am an only child and never married. Alas, the carnival will close when I am gone. But for now, it's making a comeback!"
 
 >ask whidbey about ferris wheel
-Mr Whidbey looks at you expectantly.
+Mr Whidbey waits for you to speak.
 
 Mr Whidbey says "The Ferris Wheel is my favorite ride. It's always relaxing and romantic."
 
 Mr. Whidbey quickly changes the subject
 
 >ask whidbey about bumper cars
-Mr Whidbey nervously shifts his weight from one foot to the other.
+Mr Whidbey looks at you expectantly.
 
 "That incident the other week with that Needleman kid was unfortunate" says Mr Whidbey.
 
 >ask whidbey about esmeralda
-Mr Whidbey looks at you expectantly.
+Mr Whidbey nervously shifts his weight from one foot to the other.
 
 Mr Whidbey says "I see her regularly to have my fortune told. We're lucky to have her here. She's very beautiful. It's a wonder she's never been married."
 
@@ -3165,7 +3186,7 @@ Mr Whidbey waits for you to speak.
 "The carousel is just one of the many rides that thrill and delight our visitors every day," says Mr Whidbey
 
 >ask whidbey about dime toss
-Mr Whidbey looks at you expectantly.
+Mr Whidbey nervously shifts his weight from one foot to the other.
 
 "The Dime Toss is is one of the many games that thrill and delight our visitors every day!" says Mr Whidbey.
 
@@ -3173,17 +3194,17 @@ Mr. Whidbey meets your eyes and quickly looks away.
 
 
 >ask whidbey about pitchers mound
-Mr Whidbey nervously shifts his weight from one foot to the other.
+Mr Whidbey waits for you to speak.
 
 "The Pitchers Mound is is one of the many games that thrill and delight our visitors every day!" says Mr Whidbey.
 
 >ask whidbey about high striker
-Mr Whidbey waits for you to speak.
+Mr Whidbey nervously shifts his weight from one foot to the other.
 
 "The High Striker is is one of the many games that thrill and delight our visitors every day!" says Mr Whidbey.
 
 >ask whidbey about fuses
-Mr Whidbey nervously shifts his weight from one foot to the other.
+Mr Whidbey looks at you expectantly.
 
 "I know nothing about fuses", Mr Whidbey says.
 
@@ -3196,22 +3217,22 @@ Mr. Whidbey's eyes dart up and to the left.
 
 
 >ask whidbey about fire
-Mr Whidbey nervously shifts his weight from one foot to the other.
+Mr Whidbey looks at you expectantly.
 
 The fire was most unfortunate. It put Hell Ride out of commission for two weeks. Not only did it cost me $22,500 to repair but I lost revenue while it was closed.
 
 >ask whidbey about accidents
-Mr Whidbey looks at you expectantly.
+Mr Whidbey nervously shifts his weight from one foot to the other.
 
 Mr Whidbey says, "Oh, that's nothing to worry about. Little things happen all the time, right?"
 
 >ask whidbey about pliers
-Mr Whidbey waits for you to speak.
+Mr Whidbey looks at you expectantly.
 
 "Oh! I thought I lost... um, those belong to the janitor. Where did you find them?" asks Mr Whidbey.
 
 >ask whidbey about needleman
-Mr Whidbey looks at you expectantly.
+Mr Whidbey waits for you to speak.
 
 Mr Whidbey says "Uh, Fred is a special... contractor... We paid him. For services rendered."
 
@@ -3245,7 +3266,8 @@ Mr. Whidbey's eyes dart up and to the left.
 >accuse whidbey of fraud
 Mr Whidbey waits for you to speak.
 
-"Any evidence you have is circumstantial. It'll be thrown out on day one of the trial!", says Mr Whidbey
+As much as you would like to confront Mr Whidbey about fraud you should probably take care of disabling Hell Ride first.
+
 >show insurance policy to whidbey
 "An insurance policy? Of course, all reputable business have insurance. Even small time carnivals", Mr Whidbey stammers.
 
@@ -3256,9 +3278,21 @@ Mr Whidbey waits for you to speak.
 Mr Whidbey says "Uh, Fred is a special... contractor... We paid him. For services rendered."
 
 >e
-(first opening the emerald colored door)
-(first unlocking the emerald colored door)
+(first opening the indigo colored door)
+(first unlocking the indigo colored door)
 (with the silver key)
+
+Generator Room
+Nearby an indigo colored door leads west to the Guillotine Room.
+
+>n
+
+Mechanical Room South
+Nearby a gray colored door leads west to the Dungeon.
+
+You can also see a grate (in which is a parking ticket) here.
+
+>n
 
 Mechanical Room North
 Nearby an emerald colored door leads west to the Stake Room.
@@ -3375,40 +3409,40 @@ The Police Chief listens with interest to what you have to say.
 >show evidence
   Weight   Evidence collected:
   ------   --------------------------------------------------------
-?   33     Evidence concerning accidents with the attractions
+?   50     Evidence concerning accidents with the attractions
 ?   23     Evidence concerning insurance
 ?   12     Evidence concerning past due invoices
+?    6     Evidence concerning Mr Whidbey
 ?    5     Evidence concerning fuses
-?    1     Evidence concerning Mr Whidbey
 
-You have enough evidence to press charges.
+You've got enough evidence for a conviction.
 
 >ask janitor about hell ride
-The janitor looks bored as he waits for you to speak.
+The janitor looks at you and waits for you to proceed.
 
 "Hell Ride is a finicky ride. I'm fixing something there every week. Last week, Mr. Whidbey asked me to skip Hell Ride's maintenance slot. There was a real fire in the Stakes Room last month. And just yesterday I caught him creeping around the guillotine room" says the janitor.
 
 >ask janitor about mystic 
-The janitor looks at you expectantly.
+The janitor looks bored as he waits for you to speak.
 
-"Sorry, I don't know much about that," the janitor drawls.
+"Hmm, you've got me there," the janitor replies.
 
 >show mystic invoice to janitor
 The janitor says, That fire in Hell Ride was very really bad. It took almost two weeks to get it fully repaired. But it shouldn't have cost this much. I think Mr Whidbey got ripped off. Or, he got it fixed on the cheap and pocketed the rest."
 
 >ask janitor about bumper cars
-The janitor looks at you and waits for you to proceed.
+The janitor looks at you expectantly.
 
 The janitor says, "That reminds me. Not long ago, one of the bumper cars was shorting out and electrifying the car. A visitor got hurt. A young lad, what was his name? Fred something, I think."
 
 >show evidence
   Weight   Evidence collected:
   ------   --------------------------------------------------------
-?   38     Evidence concerning accidents with the attractions
+?   50     Evidence concerning accidents with the attractions
 ?   23     Evidence concerning insurance
 ?   12     Evidence concerning past due invoices
+?    6     Evidence concerning Mr Whidbey
 ?    5     Evidence concerning fuses
-?    1     Evidence concerning Mr Whidbey
 
 You've got enough evidence for a conviction.
 
@@ -3427,7 +3461,7 @@ He handcuffs Whidbey, thanks you for your service to the community, and leads Mr
 
 *** You have won! ***
 
-You've received 200 points out of a possible 200 in 645 moves!
+You've received 200 points out of a possible 200 in 658 moves!
 
 You have received points for the following: 
 
@@ -3468,11 +3502,11 @@ You have received points for the following:
 
   Weight   Evidence collected:
   ------   --------------------------------------------------------
-?   38     Evidence concerning accidents with the attractions
+?   50     Evidence concerning accidents with the attractions
 ?   23     Evidence concerning insurance
 ?   12     Evidence concerning past due invoices
+?    6     Evidence concerning Mr Whidbey
 ?    5     Evidence concerning fuses
-?    1     Evidence concerning Mr Whidbey
 
 You've got enough evidence for a conviction.
 
