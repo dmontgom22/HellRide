@@ -277,7 +277,7 @@ Understand "look under/underneath/beneath [something]" as looking under.
 Understand "examine under/underneath/beneath [something]" as looking under.
 	
 Instead of looking under a thing which is underlaid by something:
-	say "You find [list of things which underlie the noun]!";
+	say "You find [the list of things which underlie the noun]!";
 	now every thing which underlies the noun is in the location;
 	now every thing which underlies the noun does not underlie the noun.
 
@@ -1027,6 +1027,9 @@ Does the player mean doing something with the glove box when the location is PL-
 
 [parking ticket]
 Does the player mean doing something with the parking ticket: it is very unlikely.
+
+[concession stand]
+does the player mean doing something with the machine: it is very unlikely.
 
 Section 23 - Directions
 
@@ -3574,7 +3577,7 @@ artist	song	rickroll
 "Lou Reed and the Velvet Underground"	"Sweet Jane"	false
 "Queen"	"Bohemian Rhapsody"	false
 "Bob Seger"	"Old Time Rock[']N[']Roll"	false
-"Boston"	"More That A Feeling"	false
+"Boston"	"More Than A Feeling"	false
 "Roger Miller"	"King of the Road"	false
 "Elvis Presley"	"Suspicious Minds"	false
 "Jimmy Buffet"	"Margaritaville"	false
@@ -3866,7 +3869,7 @@ object (object)	description (text)	subject (text)	turn stamp (number)	weighting 
 Cash 'N' Carry invoice	"Cash [']N['] Carry Invoice"	"Invoices"	-1	1	"[The second noun] says, 'Man, this doesn[']t look good for the carnival.'"
 Frank's Market invoice	"Frank[']s Market Invoice"	"Invoices"	-1	1	"[The second noun] says, 'Looks like the carnival is in some financial trouble.'"
 Oriental Trading  invoice	"Oriental Trading Invoice"	"Invoices"	-1	1	"[The second noun] says, 'These prizes are cheaper and flimsier than usual.'"
-Mystic Industries invoice	"Mystic Industries Invoice"	"Accidents"	-1	3	"[The second noun] says, That fire in [story title] was very really bad. It took almost two weeks to get it fully repaired. But it shouldn't have cost this much. I think Mr Whidbey got ripped off. Or, he got it fixed on the cheap and pocketed the rest.'"
+Mystic Industries invoice	"Mystic Industries Invoice"	"Accidents"	-1	3	"[The second noun] says, That fire in [story title] was really bad. It took almost two weeks to get it fully repaired. But it shouldn't have cost this much. I think Mr Whidbey got ripped off. Or, he got it fixed on the cheap and pocketed the rest.'"
 paperwork	"Paperwork"	"Invoices"	-1	1	"[The second noun] says, 'This all points the finger at mismanagement. I sure hope Mr Whidbey has a plan.'"
 insurance policy	"Insurance Policy"	"Insurance"	-1	3	"'An insurance policy? For a million dollars? Something is fishy for sure!' [the second noun] says."
 pliers	"The Pliers"	"Accidents"	-1	5	"'I[']ve been missing those. Where did you find them?' asks [the second noun]."

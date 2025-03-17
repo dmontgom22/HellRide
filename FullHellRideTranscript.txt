@@ -30,9 +30,9 @@ The midway is to the south. There is a blueberry bush here. There are blueberrie
 
 Your car is here. It's a bit of a beater. Inside the car, you can see the glove box, the seat, the rear view mirror, the ignition, and the dashboard.
 
-You can see a parking attendant here.
+The attendant has a parking ticket. The price of a parking is $5.00.
 
-The attendant has a parking ticket. The price of a parking ticket is $5.00.
+You can see a parking attendant here.
 
 >brief
 Hell Ride is now in its "brief" printing mode, which gives long descriptions of places never before visited and short descriptions otherwise.
@@ -90,7 +90,7 @@ Although it's old, it feels like an old friend. From the faux leather seats to t
 In the beater car is an air freshener.
 
 >l under seat
-You find three quarters, nickel, five dimes, and your keys!
+You find the three quarters, the nickel, the five dimes, and your keys!
 
 [Your score has just gone up by five points.]
 
@@ -168,7 +168,7 @@ You put on the pair of gloves.
 You put your keys into the ignition.
 
 >turn keys
-If you left now you would just be abandoning your story. You want the fulltime position, don't you? You decide to stay and investigate the carnival after all.
+If you left now you would be abandoning your story. You want that fulltime position, don't you? You decide to stay and investigate the carnival after all.
 
 >s
 
@@ -625,7 +625,7 @@ You can also see a Pitchers Mound attendant and some Pitchers Mound prizes here.
 With its colorful banners and flashing lights, the booth buzzes with energy, drawing a crowd.  You can see something shiny on the ground under the booth..
 
 >l under booth
-You find Mercury dime!
+You find the Mercury dime!
 
 >get mercury dime
 Taken.
@@ -1374,7 +1374,7 @@ The janitor says, "Man, this doesn't look good for the carnival."
 The janitor says, "Looks like the carnival is in some financial trouble."
 
 >show mystic industries to janitor
-The janitor says, That fire in Hell Ride was very really bad. It took almost two weeks to get it fully repaired. But it shouldn't have cost this much. I think Mr Whidbey got ripped off. Or, he got it fixed on the cheap and pocketed the rest."
+The janitor says, That fire in Hell Ride was really bad. It took almost two weeks to get it fully repaired. But it shouldn't have cost this much. I think Mr Whidbey got ripped off. Or, he got it fixed on the cheap and pocketed the rest."
 
 >show oriental trading to janitor
 The janitor says, "These prizes are cheaper and flimsier than usual."
@@ -1654,7 +1654,7 @@ You switch the radio on.
 >l at gears
 The gears and springs are strewn on the desk.
 
-Nearby, you can hear "More That A Feeling" by Boston.
+Nearby, you can hear "More Than A Feeling" by Boston.
 
 >l at posters
 You're the safe choice for safety!
@@ -2077,3 +2077,1513 @@ Head of the Line
 You can see a Hell Ride attendant here.
 
 >n
+
+Ticket Booth
+You can see a cashier here.
+
+>nw
+
+Bumper Cars
+You can see a janitor and a Bumper Cars attendant here.
+
+>give wrench to attendant
+Hey! Thanks, I really appreciate it. Usually no one ever responds to the radio in the Control Room. Here, take this fuse.
+
+Taken.
+
+[Your score has just gone up by five points.]
+
+[Your score has just gone up by ten points.]
+
+>give ticket to attendant
+(first taking the Bumper Cars ticket)
+You give the Bumper Cars ticket to the Bumper Cars attendant.
+
+You hand your ticket to the attendant and slide into the bucket seat, gripping the wheel as the arena comes alive with flashing lights and the hum of electric currents. Riders lock eyes, eager for the ride to begin.
+
+The car jolts forward, and you steer into the fray. A sudden crash spins you around, but you recover and aim for a friend. Each collision is met with laughs as you dodge, swerve, and plot your next move in the chaos.
+
+You find yourself giddy as you exit the ride.
+
+>i
+You are carrying:
+  a gray colored fuse
+  a sledgehammer
+  an emerald colored fuse
+  a worn photo
+  a sheer veil (being worn)
+  a lit lantern (providing light)
+  a cashier's check
+  an envelope (open but empty)
+  a Cash 'N' Carry invoice
+  an insurance policy
+  a gold key
+  an indigo colored fuse
+  a khaki colored fuse
+  some chewed bubblegum
+  a crimson colored fuse
+  a mallet
+  a pair of gloves (being worn)
+  a fanny pack (being worn, and open)
+    a Frank's Market invoice
+    an Oriental Trading invoice
+    a Mystic Industries invoice
+    a brass ring
+      a brass key (which opens the sturdy door and the metal door)
+    a 14" long piece of string (tied to some chewed bubblegum)
+    an air freshener
+    three quarters
+    a nickel
+    two dimes
+    a wallet
+      $19.00 in cash
+    a notebook
+
+>se
+
+Ticket Booth
+You can see a cashier here.
+
+>e
+
+High Striker
+You can see a High Striker attendant, a lever, and some High Striker prizes here.
+
+
+>hit bullseye with sledgehammer
+As you swing, you feel the extra weight from the sledgehammer. As it comes down on the bullseye, you can't help but feel like the extra weight gives you an edge. The bell rings as the striker reaches the top of the pole. The attendant says, "You're a Muscle Man. Here's a prize for you."
+
+Which prize would you like? 1) a teddy bear, 2) a knock-off Swiss Army knife, 3) a magenta colored fuse, 4) a poster of Taylor Swift?
+
+>2
+You are now holding a knock-off Swiss Army knife.
+
+[Your score has just gone up by five points.]
+
+>hit bullseye with sledgehammer
+As you swing, you feel the extra weight from the sledgehammer. As it comes down on the bullseye, you can't help but feel like the extra weight gives you an edge. The bell rings as the striker reaches the top of the pole. The attendant says, "You're a Muscle Man. Here's a prize for you."
+
+Which prize would you like? 1) a teddy bear, 3) a magenta colored fuse, 4) a poster of Taylor Swift?
+
+>3
+You are now holding a magenta colored fuse.
+
+[Your score has just gone up by five points.]
+
+>w
+
+Ticket Booth
+You can see a cashier here.
+
+>s
+
+Head of the Line
+You can see a Hell Ride attendant here.
+
+>s
+
+Ride Entrance
+You can see a Hell Ride car (empty) here.
+
+>e
+
+Dark Passage
+
+>s
+
+Maintenance Office
+Nearby a ladder leads up to Dark Hallway.
+
+Nearby an aqua colored door leads west.
+
+You can also see a desk (on which are a coffee mug and a radio) here.
+
+>s
+
+Crawl Space
+Nearby a crimson colored door leads west.
+
+>s
+
+Mechanical Room North
+Nearby an emerald colored door leads west.
+
+You can also see a horseshoe magnet, a lit flashlight (providing light), and a toolbox (in which are some channel locks and a hammer) here.
+
+>s
+
+Mechanical Room South
+Nearby a gray colored door leads west.
+
+You can also see a grate (in which is a parking ticket) here.
+
+>s
+
+Generator Room
+The generator room is small, with concrete walls stained by oil and grime. The air smells of diesel, metal, and damp earth.
+
+The main generator hums, connected by thick cables to circuit breakers and a cluttered panel with switches and gauges. A flickering display shows power levels. The cracked floor is littered with puddles. Shelves hold spare parts and manuals, and a workbench sits next to a grease canister.
+
+The room is the carnival's power source, hidden but essential.
+
+The backstage area continues north and south of here.
+
+Nearby an indigo colored door leads west.
+
+>l at graffiti
+The graffiti is varied, from "Peace, Love, Goodwill on Earth" to "Anarchy Rules".
+
+>smell
+The air carries a mix of diesel, hot metal, ozone, and damp earth, creating a distinctly industrial scent. 
+>l at generator
+(the main generator)
+The main generator hums steadily.
+
+>l at cables
+These cables connect different parts of the ride to the hydraulics.
+
+>l at puddles
+Not wanting to get your shoes wet, you carefully avoid the puddles.
+
+>l at shelves
+The shelves are piled high with filters, spark plugs, and wire coils.
+
+>l at spare parts
+The shelves are piled high with filters, spark plugs, and wire coils.
+
+>l at filters
+The filters litter the shelves.
+
+>l at spark plugs
+The spark plugs are piled on the shelves.
+
+>l at coils
+ The wire coils littler the shelves.
+
+>l at canister
+This is a canister of grease used to provide proper lubrication to the machinery.
+
+>read sign
+The sign reads, "Fuel Safety - No Open Flames!"
+
+>l at diesel canisters
+The canisters are full of diesel fuel.
+
+>s
+
+Electrical Room
+The electrical room is small, hidden behind the carnival's attractions. The air smells of overheated wires and metal.
+
+A central breaker panel dominates one wall, with labels like "Ferris Wheel Lights" and "Carousel Motors." Indicator lights blink intermittently. Thick cables hang from the ceiling, connected to the carnival's power network.
+
+A junction box spills wires, and a workbench holds tools and a smudged wiring diagram. The floor is scratched and stained. A faint vibration pulses in the air.
+
+An emergency shutdown panel and fire extinguisher sit nearby. Fluorescent lights cast shifting shadows. The room is raw and essential, a behind-the-scenes look at the carnival's power.
+
+This room is eerily quiet, missing the ever present buzz of electricity. There are exits in all directions.
+
+>smell
+The air vibrates with electric energy, carrying the acrid scent of overheated wires and metal.
+
+>listen
+>l at breaker
+This breaker panel controls various portions of the carnival.
+
+>l at junction box
+This is a junction box routing the various wires and electrical cables running through the back stage area.
+
+>l at workbench
+This is a cluttered work bench. You would have a hard time finding room to do anything on it.
+
+>l at shutdown
+This is an emergency shut down panel. There is a switch on the panel.
+
+>l at switch
+This is a big red switch, presumably to shut down the carnival rides.
+
+It is currently switched on.
+
+>flip switch
+You apply a considerable amount of force and push the red switch. You listen and can still hear the sounds of the machinery working somewhere. Nothing happens.
+
+You switch the red switch off.
+
+>l at fire extinguisher
+This is a Class E fire extinguisher, specially made for electrical fires.
+
+>l at poster
+The poster reads, "Safety First!"
+
+>l at diagram
+It's hard to make out what this is supposed to be. Better leave it alone.
+
+>l at tools
+These are various tools you might use to repair electrical equipment.
+
+>s
+
+Storage Room
+The storage room is cramped and hidden, with rusted walls and peeling wood. The air smells of dust, damp canvas, and stale popcorn.
+
+Shelves are packed with light bulbs, wire, and old ride parts. Flags, lights, and crates of toys clutter the space. In one corner, tarps and tent poles are stacked.
+
+Spare ride seats and an old carousel horse sit under tarps in the center. A cluttered desk holds schedules and coffee cups, with a bulletin board full of flyers. A flickering bulb casts uneven shadows.
+
+The concrete floor is littered with scraps and dirt. Rats scurry and cobwebs move. This forgotten room stores the remnants of the carnival, waiting to be revived.
+
+There is an exit to the north.
+
+Nearby a khaki colored door leads west.
+
+>l at walls
+The rusted metal and peeling wooden walls bear the marks of years of use.
+
+>l at shelves
+The shelves are full of supplies, light bulbs, and ride parts
+
+>smell
+The air hangs heavy with grease, dust, damp canvas, and a faint trace of stale popcorn.
+
+>listen
+You hear mechanical sounds: the screech metal upon metal, gears turning in precision, and the thump of the cars as they traverse the tracks through the ride.
+
+>l at seats
+These are broken seats from some of the rides.
+
+>l at booths
+It's impossible to tell which parts belong to which attraction.
+
+>l at horse
+This is one of the horses from the carousel ride. It looks like its tail is broken.
+
+>l at tarps
+The tarps and tent poles are used to provide shelter to the attendants if it should rain.
+
+>l at desk
+The desk is covered with supplies, light bulbs, and ride parts.
+
+>l at battered desk
+The desk is covered with supplies, light bulbs, and ride parts.
+
+>l at coffee cups
+People just use the desk as a trash can.
+
+>l at logs
+You can't see any such thing.
+
+>l at bulletin board
+So much tattered paper on this bulletin board. Most of it is illegible.
+
+>l at repair requests
+So much tattered paper on this bulletin board. Most of it is illegible.
+
+>l at schedules
+So much tattered paper on this bulletin board. Most of it is illegible.
+
+>l at bulb
+The fluorescent bulb flickers overhead.
+
+>l at nuts
+The shelves are full of supplies, light bulbs, and ride parts.
+
+>l at rates
+You can't see any such thing.
+
+>l at rats
+You see rats scurry in all directions fleeing from the light cast by you.
+
+>l at cobwebs
+There are cobwebs everywhere. I guess it's been a while since this place was cleaned.
+
+>n
+
+Electrical Room
+
+>ne
+
+Electrical Closet One
+This is Electrical Closet One. There's an electrical panel here and an exit to the southwest.
+
+You can see a silver key here.
+
+>get key
+(the silver key)
+Taken.
+
+>l at electrical panel
+Electrical Panel 1 is a standard issue 200 amp electrical panel supplying 220 power throughout the ride. The electrical panel is closed. There are screws holding it shut.
+
+>sw
+
+Electrical Room
+
+>s
+
+Storage Room
+Nearby a khaki colored door leads west.
+
+>w
+(first opening the khaki colored door)
+(first unlocking the khaki colored door)
+(with the silver key)
+
+Ride Exit
+The exit of Hell Ride leaves you unsettled. You emerge from a dark corridor, the walls peeling and streaked with black and red. Flickering lights cast shifting shadows on the sloped floor, and the air is damp with a metallic tang. Whispers and distant screams echo softly in the background.
+
+In a small courtyard, a rusted fence draped with cobwebs and plastic bones encloses the area. A worn sign reads, "You've Survived? For Now." Nearby, carnival workers in tattered costumes watch quietly, muttering, "Not everyone makes it out."
+
+The nearby gift shop glows red. The bright lights and sounds of the carnival feel distant and jarring after the oppressive atmosphere of the ride.
+
+The exit ensures Hell Ride isn't just an experience - it lingers, blurring the line between thrill and fear.
+
+There is a price list next to the cash register. An attendant is here to assist you with your purchases. The stand has aqua colored fuse, Plastic Bones, Devil Horns, Key Chains, and T-Shirts for sale.
+
+Nearby a khaki colored door leads east to the Storage Room.
+
+You can also see a merchandise attendant here.
+
+>read sign
+$2.00 Key Chains
+$3.50 Aqua Colored Fuse
+$2.00 Devil Horns
+$1.00 Plastic Bones
+$7.50 T-Shirts
+
+>buy aqua fuse
+You fork over $3.50 for the aqua colored fuse, leaving yourself with $15.50.
+
+[Your score has just gone up by ten points.]
+
+>l at fencing
+The jagged, rusted fencing is draped with cobwebs and plastic skulls.
+
+>l at cobwebs
+The fake cobwebs and skulls cover the rusty fencing.
+
+>l at plastic skulls
+The fake cobwebs and skulls cover the rusty fencing.
+
+>l at workers
+The actors are here dressed in their tattered costumes muttering things like "You made it!"
+
+>l at actors
+The actors are here dressed in their tattered costumes muttering things like "You made it!"
+
+>l at riders
+The riders exit Hell Ride. Some are laughing while others look rather upset.
+
+>l at walls
+Leading out of the ride a dark corridor with peeling black and red-streaked walls, flickering lights cast erratic shadows on the uneven floor.
+
+>l at cash register
+The cash register accommodates both cash and electronic payments. Too bad you don't have a debit card.
+
+>bite fingernails
+That's a bad habit. You should really try to stop biting your fingernails.
+
+>clip fingernails
+Your fingernails look much neater now that you've trimmed them.
+
+>n
+
+
+As you enter the room, you can see Mr Whidbey across the way. He seems to be doing something around the guillotine platform. You walk closer to see what he is doing and startle him. Mr Whidbey spins around and glares at you. As he turns and walks out of the room, you think you saw him drop something.
+
+Guillotine Room
+The public square hums with tension under gray skies. A wooden platform stands at the center, a grim focal point.
+
+A lone figure, hands bound and head bowed, stands on the scaffold. Their tattered clothes reveal a once-gilded past.
+
+The crowd jeers while children watch wide-eyed. The town crier proclaims, "High treason against the crown!"
+
+The condemned remains silent as the executioner, robed in black, stands beside the guillotine. The blade gleams in the dim light. The crowd's murmurs die, replaced by silence.
+
+As the condemned approaches, the guillotine's timing falters. Instead of falling on the scaffold, the blade swings over the cars, threatening any unlucky passenger who passes beneath.
+
+There is just one problem: the guillotine is being raised and lowered by some mechanism. It appears that the timing of the guillotine is off and it is being lowered onto the cars instead of between them. If a person were to be in a car as it passed under the guillotine, they would be seriously injured.
+
+You're glad you're not in one of those cars now. You must do something to stop it before someone gets hurt! 
+
+Nearby an indigo colored door leads east to the Generator Room.
+
+You can also see Mr Whidbey and a guillotine platform here.
+
+>l at crowd
+The crowd encircles the platform, emotions ranging from jeers and curses to silent, grim observation. Children sit on shoulders, their curious eyes unaware of the event's gravity.
+
+Mr Whidbey heads to the Carnival Office.
+
+>l at platform
+At the center of the square stands a raised wooden platform, stark and imposing, where the grim sentence is to be carried out. You can just make out something underneath the platform in the dark.
+
+>l at figure
+A lone figure stands on the scaffold, bound hands behind their back and head bowed low, avoiding the crowd's gaze.
+
+>l at children
+The crowd encircles the platform, emotions ranging from jeers and curses to silent, grim observation. Children sit on shoulders, their curious eyes unaware of the event's gravity.
+
+>l at town crier
+The town crier proclaims the crime: "High treason against the crown. Let this be a warning to all who defy the realm!"
+
+>l at condemned
+A lone figure stands on the scaffold, bound hands behind their back and head bowed low, avoiding the crowd's gaze.
+
+>l at executioner
+The executioner - a hooded figure in black - stands ready beside the guillotine.
+
+>l at scaffold
+At the center of the square stands a raised wooden platform, stark and imposing, where the grim sentence is to be carried out. You can just make out something underneath the platform in the dark.
+
+>l at crow
+The crow sits, sleek and black, on a nearby rooftop.
+
+>l under platform
+You find the pliers!
+
+>get pliers
+Taken.
+
+[Your score has just gone up by five points.]
+
+>l at cars
+The cars keep coming and move under the malfunctioning guillotine. You shudder at just the thought of it
+
+>n
+
+
+
+Dungeon
+The dungeon is dark and damp, the air thick with sweat, blood, and mildew. Lanterns flicker on rusted sconces, casting twisted shadows.
+
+Chains rattle, mixed with distant moans and screams. Water drips from a cracked ceiling, pooling on the blood-dark floor.
+
+Instruments of torture clutter the room: a broken rack, a brazier with bloodstained tools, and a spiked chair. Prisoners endure all these things, bound or writhing in agony.
+
+The torturer moves with cold precision, ignoring the suffering. Above, rats scurry in the shadows, and the heavy, oppressive air thickens with despair.
+
+Nearby a gray colored door leads east to the Mechanical Room South.
+
+You can also see an iron chair, a splintered rack, and a glowing brazier here.
+
+>l at walls
+The its stone walls slick with moisture and grime.
+
+>smell 
+The air reeks of sweat, blood, mildew, and burning oil from flickering torches mounted on rusted sconces.
+
+>listen
+Chains hang from walls and ceilings, their faint clinking blending with the moans and occasional screams of prisoners.
+
+>l at chains
+The chains rattle against the walls.
+
+>l at rack
+The rack has a prisoner splayed in four directions.
+
+>l at brazier
+It is glowing red with an infernal heat raising the temperature of the bloodstained tools.
+
+>l at torches
+These are oil burning lamps.
+
+>l at sconces
+These are oil burning lamps.
+
+>l at prisoners
+Prisoners endure their own horrors - one stretched on the rack, another hanging limply from manacles, and a third gasping weakly in the spiked chair.
+
+>l at torturer
+The hooded torturer wears a leather apron stained with the evidence of countless victims.
+
+>l at rats
+You see rats scurry in all directions fleeing from the light cast by you.
+
+>l at walls
+The its stone walls slick with moisture and grime.
+
+>l at rats
+You see rats scurry in all directions fleeing from the light cast by you.
+
+>n
+
+
+
+Stake Room
+The public square is silent, broken only by crackling flames. At its center, three women are bound to wooden stakes, their faces showing defiance, resignation, and terror.
+
+A crowd watches, some jeering, others praying or looking away. Torch in hand, the executioner steps forward igniting the pyre. Flames roar as the women cry out, their voices lost in the heat.
+
+Gray clouds loom above as a raven caws. Church bells toll, marking the tragedy. Some onlookers stay, others quietly leave.
+
+Nearby an emerald colored door leads east to the Mechanical Room North.
+
+The flames of the pyre burn ever brighter and rise ever higher engulfing the victims.
+
+>l at square
+The public square is steeped in grim silence, broken only by the crackling of flames.
+
+>l at flames
+The flames burn ever higher.
+
+In the pyre is a quartz colored fuse.
+
+>get quartz fuse
+(putting the mallet into the fanny pack to make room)
+Taken.
+
+>l at pyre
+The flames burn ever higher.
+
+>l at logs
+The flames burn ever higher.
+
+>l at stakes
+(stakes)
+Three wooden stakes rise from a pyre. Bound to the stakes are three women.
+
+>l at women
+Bound to the stakes are three women, their faces reflecting defiance, resignation, and terror.
+
+>l at crowd
+A crowd encircles the scene, expressions ranging from morbid fascination to righteous fury.
+
+>l at children
+A crowd encircles the scene, expressions ranging from morbid fascination to righteous fury.
+
+>listen
+A raven caws from the bell tower as slow church bells toll.
+
+>smell
+The smell of smoke permeates the air.
+
+>l at apron
+The leather apron appears to have seen its share of action.
+
+>l at executioner
+The executioner, hooded and clad in a leather apron, steps forward with a blazing torch, igniting the pyre in a sudden roar.
+
+>l at torch
+The executioner carries the torch to light the pyre.
+
+>n
+
+
+
+Gallows Room
+The public square, wet from morning drizzle, lies under a dark sky. At its center, the gallows loom, ropes swaying. Their eyes fixed on the scene, the crowd stands in silence.
+
+A hooded executioner, cold and focused, adjusts the noose. Pale and bound, the condemned man trembles as his eyes dart around the crowd. Sweat and rain mix on his face as he breathes shallowly.
+
+Vendors shout, children push forward, and an old man whispers prayers. Above, the bell tolls, marking the man's final moments. A raven watches from the gallows beam. The air is heavy as distant thunder rumbles.
+
+Nearby a crimson colored door leads east to the Crawl Space.
+
+You can also see Mr Whidbey and a gallows platform here.
+
+>score
+You've received 170 points out of a possible 200 in 533 moves!
+
+You have received points for the following: 
+
+?  Eating the blueberries:                   5 points
+?  Finding the coins and keys:               5 points
+?  Buying the Hell Ride ticket:              5 points
+?  Taking the Mercury dime:                  5 points
+?  Winning the horseshoe magnet:             5 points
+?  Winning the Crimson fuse:                 10 points
+?  Acquiring the Khaki fuse:                 10 points
+?  Finding the insurance policy:             5 points
+?  Acquiring the Indigo fuse:                10 points
+?  Finding the Cash 'N' Carry invoice:       5 points
+?  Finding the Oriental Trading invoice:     5 points
+?  Finding the Frank's Market invoice:       5 points
+?  Finding the Mystic Industries invoice:    5 points
+?  Acquiring the cashier's check:            10 points
+?  Taking the lantern:                       5 points
+?  Wearing the sheer veil:                   5 points
+?  Finding the Dark Passage:                 5 points
+?  Taking the flashlight:                    5 points
+?  Finding the Control Room:                 5 points
+?  Turning off the big switch:               5 points
+?  Acquiring the Emerald fuse:               10 points
+?  Bringing the wrench to the Bumper Cars:   5 points
+?  Acquiring the Gray fuse:                  10 points
+?  Winning the knock-off Swiss Army knife:   5 points
+?  Winning the Magenta fuse:                 5 points
+?  Acquiring the Aqua fuse:                  10 points
+?  Acquiring the pliers:                     5 points
+
+
+  Weight   Evidence collected:
+  ------   --------------------------------------------------------
+?    28    Evidence concerning accidents with the attractions
+?     8    Evidence concerning insurance
+?     5    Evidence concerning Mr Whidbey
+?     3    Evidence concerning past due invoices
+  ------   --------------------------------------------------------
+?    44    Total Weighted Evidence
+
+You have enough evidence to press charges.
+
+>i
+You are carrying:
+  a quartz colored fuse
+  some pliers
+  an aqua colored fuse
+  a silver key
+  a magenta colored fuse
+  a knock-off Swiss Army knife
+  a gray colored fuse
+  a sledgehammer
+  an emerald colored fuse
+  a worn photo
+  a sheer veil (being worn)
+  a lit lantern (providing light)
+  a cashier's check
+  an envelope (open but empty)
+  a Cash 'N' Carry invoice
+  an insurance policy
+  a gold key
+  an indigo colored fuse
+  a khaki colored fuse
+  some chewed bubblegum
+  a crimson colored fuse
+  a pair of gloves (being worn)
+  a fanny pack (being worn, and open)
+    a mallet
+    a Frank's Market invoice
+    an Oriental Trading invoice
+    a Mystic Industries invoice
+    a brass ring
+      a brass key (which opens the sturdy door and the metal door)
+    a 14" long piece of string (tied to some chewed bubblegum)
+    an air freshener
+    three quarters
+    a nickel
+    two dimes
+    a wallet
+      $15.50 in cash
+    a notebook
+
+>l
+
+
+Gallows Room
+The public square, wet from morning drizzle, lies under a dark sky. At its center, the gallows loom, ropes swaying. Their eyes fixed on the scene, the crowd stands in silence.
+
+A hooded executioner, cold and focused, adjusts the noose. Pale and bound, the condemned man trembles as his eyes dart around the crowd. Sweat and rain mix on his face as he breathes shallowly.
+
+Vendors shout, children push forward, and an old man whispers prayers. Above, the bell tolls, marking the man's final moments. A raven watches from the gallows beam. The air is heavy as distant thunder rumbles.
+
+Nearby a crimson colored door leads east to the Crawl Space.
+
+You can also see Mr Whidbey and a gallows platform here.
+
+>listen
+Above, the bell tower tolls, its mournful chime marking the passage of the man's final moments.
+
+>smell
+You smell incense as it permeates through Hell Ride.
+
+Mr Whidbey heads to the Stake Room.
+
+>l at square
+The public square, slick with morning drizzle, lies under a brooding, overcast sky. At its center looms the gallows, a weathered wooden platform with thick ropes swaying ominously.
+
+>l at gallows
+(the gallows platform)
+At the center of the square, rising like a grim monument to mortality, stands the gallows - a wooden platform, darkened by age and weather, with thick ropes hanging like vipers poised to strike.
+
+>l at platform
+At the center of the square, rising like a grim monument to mortality, stands the gallows - a wooden platform, darkened by age and weather, with thick ropes hanging like vipers poised to strike.
+
+>l at crowd
+The crowd stands in somber silence, broken by the shuffle of feet or faint murmurs, their eyes fixed on the grim scene.
+
+>l at executioner
+A hooded executioner, cloaked in black, adjusts the frayed noose with practiced precision, his cold presence exuding purpose.
+
+>l at condemned
+The condemned man, pale and trembling, has his bound hands behind him.
+
+>l at vendors
+Vendors hawk bread and cider, while children strain for a better view.
+
+>l at old man
+An old man clutches a rosary, whispering prayers, as others smirk and place bets.
+
+>l at raven
+A raven perches on the gallows' beam, its unblinking gaze fixed on the scene below.
+
+>l at noose
+The noose has been tied and hangs from the gallows proper.
+
+>n
+
+
+
+Stocks Room
+The public square is a cobblestone stretch surrounded by weathered buildings. The air smells of smoke, damp earth, and a nearby smithy. At the center, old stocks stand with iron clasps holding captives in shameful positions. Their tattered clothes offer little against the cold wind.
+
+The animatronics are lifelike, enhancing the grim atmosphere. The crowd mocks the prisoners, hurling insults and rotten food. Jeers mix with their laughter. The square hums with noise. Unnoticed by the crowd, the sky darkens as the spectacle continues.
+
+Nearby an aqua colored door leads east to the Maintenance Office.
+
+You can also see a wooden stocks here.
+
+>l at square
+The public square is a cobblestone expanse bordered by weathered timber-framed buildings.
+
+>smell
+The air carries the mingling scents of chimney smoke, damp earth, and the faint tang of a nearby smithy.
+
+>listen
+As you travel through Hell Ride, you hear ominous music, the murmurs of the crowd, and the occasional scream in the distance.
+
+>l at stocks
+(the wooden stocks)
+At the square's center stand a row of crude wooden stocks, their heavy beams stained from years of weather and use. Iron clasps hold the unfortunate captives by their wrists and necks, their bodies forced into unnatural, humiliating postures.
+
+>l at beams
+At the square's center stand a row of crude wooden stocks, their heavy beams stained from years of weather and use. Iron clasps hold the unfortunate captives by their wrists and necks, their bodies forced into unnatural, humiliating postures.
+
+>l at clasps
+Iron clasps lock the prisoners in place.
+
+>l at animatronics
+The animatronics and wax figures are extremely life like. Hell Ride sure lives up to its name.
+
+>l at wax figures
+The animatronics and wax figures are extremely life like. Hell Ride sure lives up to its name.
+
+>l at the wax figures
+The animatronics and wax figures are extremely life like. Hell Ride sure lives up to its name.
+
+>l at vegetables
+The rotten fruit and vegetables splatter as each hits its mark, coating the prisoners with rank vegetation.
+
+>e
+(first opening the aqua colored door)
+(first unlocking the aqua colored door)
+(with the silver key)
+
+Maintenance Office
+Nearby an aqua colored door leads west to the Stocks Room.
+
+Nearby a ladder leads up to Dark Hallway.
+
+You can also see a desk (on which are a coffee mug and a radio) here.
+
+>i
+You are carrying:
+  a quartz colored fuse
+  some pliers
+  an aqua colored fuse
+  a silver key
+  a magenta colored fuse
+  a knock-off Swiss Army knife
+  a gray colored fuse
+  a sledgehammer
+  an emerald colored fuse
+  a worn photo
+  a sheer veil (being worn)
+  a lit lantern (providing light)
+  a cashier's check
+  an envelope (open but empty)
+  a Cash 'N' Carry invoice
+  an insurance policy
+  a gold key
+  an indigo colored fuse
+  a khaki colored fuse
+  some chewed bubblegum
+  a crimson colored fuse
+  a pair of gloves (being worn)
+  a fanny pack (being worn, and open)
+    a mallet
+    a Frank's Market invoice
+    an Oriental Trading invoice
+    a Mystic Industries invoice
+    a brass ring
+      a brass key (which opens the sturdy door and the metal door)
+    a 14" long piece of string (tied to some chewed bubblegum)
+    an air freshener
+    three quarters
+    a nickel
+    two dimes
+    a wallet
+      $15.50 in cash
+    a notebook
+
+>s
+
+Crawl Space
+Nearby a crimson colored door leads west to the Gallows Room.
+
+>s
+
+Mechanical Room North
+Nearby an emerald colored door leads west to the Stake Room.
+
+You can also see a horseshoe magnet, a lit flashlight (providing light), and a toolbox (in which are some channel locks and a hammer) here.
+
+>s
+
+Mechanical Room South
+Nearby a gray colored door leads west to the Dungeon.
+
+You can also see a grate (in which is a parking ticket) here.
+
+>s
+
+Generator Room
+Nearby an indigo colored door leads west to the Guillotine Room.
+
+>s
+
+Electrical Room
+
+>ne
+
+Electrical Closet One
+
+>open panel
+(first unlocking Electrical Panel 1)
+(with the knock-off Swiss Army knife)
+Using the screwdriver on the knock-off Swiss Army knife, you remove the screws holding the electrical panel shut.
+
+You open Electrical Panel 1.
+
+>l at panel
+Electrical Panel 1 is a standard issue 200 amp electrical panel supplying 220 power throughout the ride. The electrical panel is open. Inside the panel you see a switch, a socket, and an indicator light. The screws for the door are gone.
+
+>l at indicator
+The indicator is currently indicating nothing.
+
+>put aqua in socket
+(the aqua colored fuse in socket 1)
+You hear a satisfying snick as the aqua fuse slides into place.
+
+>flip switch
+You switch Electrical Panel 1's switch on.
+
+The aqua indicator's light goes on.
+
+[Your score has just gone up by five points.]
+
+>l at indicator
+The indicator is glowing aqua and is currently indicating something.
+
+>sw
+
+Electrical Room
+
+>e
+
+Electrical Closet Three
+This is Electrical Closet Three. There's an electrical panel here and an exit to the west.
+
+>open panel
+(first unlocking Electrical Panel 3)
+(with the knock-off Swiss Army knife)
+Using the screwdriver on the knock-off Swiss Army knife, you remove the screws holding the electrical panel shut.
+
+You open Electrical Panel 3.
+
+>put crimson in socket
+(the crimson colored fuse in socket 3)
+You hear a satisfying snick as the crimson fuse slides into place.
+
+>flip switch
+You switch Electrical Panel 3's switch on.
+
+The crimson indicator's light goes on.
+
+[Your score has just gone up by five points.]
+
+>w
+
+Electrical Room
+
+>se
+
+Electrical Closet Five
+This is Electrical Closet Five. There's an electrical panel here and an exit to the northwest.
+
+>open panel
+(first unlocking Electrical Panel 5)
+(with the knock-off Swiss Army knife)
+Using the screwdriver on the knock-off Swiss Army knife, you remove the screws holding the electrical panel shut.
+
+You open Electrical Panel 5.
+
+>put emerald fuse in socket
+You hear a satisfying snick as the emerald fuse slides into place.
+
+>flip switch
+You switch Electrical Panel 5's switch on.
+
+The emerald indicator's light goes on.
+
+[Your score has just gone up by five points.]
+
+>nw
+
+Electrical Room
+
+>sw
+
+Electrical Closet Seven
+This is Electrical Closet Seven. There's an electrical panel here and an exit to the northeast.
+
+>open panel
+(first unlocking Electrical Panel 7)
+(with the knock-off Swiss Army knife)
+Using the screwdriver on the knock-off Swiss Army knife, you remove the screws holding the electrical panel shut.
+
+You open Electrical Panel 7.
+
+>put gray in socket
+(the gray colored fuse in socket 7)
+You hear a satisfying snick as the gray fuse slides into place.
+
+>flip switch
+You switch Electrical Panel 7's switch on.
+
+The gray indicator's light goes on.
+
+[Your score has just gone up by five points.]
+
+>ne
+
+Electrical Room
+
+>w
+
+Electrical Closet Nine
+This is Electrical Closet Nine. There's an electrical panel here and an exit to the east.
+
+>open panel
+(first unlocking Electrical Panel 9)
+(with the knock-off Swiss Army knife)
+Using the screwdriver on the knock-off Swiss Army knife, you remove the screws holding the electrical panel shut.
+
+You open Electrical Panel 9.
+
+>put indigo in socket
+(the indigo colored fuse in socket 9)
+You hear a satisfying snick as the indigo fuse slides into place.
+
+>flip switch
+You switch Electrical Panel 9's switch on.
+
+The indigo indicator's light goes on.
+
+[Your score has just gone up by five points.]
+
+>e
+
+Electrical Room
+
+>nw
+
+Electrical Closet Eleven
+This is Electrical Closet Eleven. There's an electrical panel here and an exit to the southeast.
+
+>open panel
+(first unlocking Electrical Panel 11)
+(with the knock-off Swiss Army knife)
+Using the screwdriver on the knock-off Swiss Army knife, you remove the screws holding the electrical panel shut.
+
+You open Electrical Panel 11.
+
+>put khaki in socket
+(the khaki colored fuse in socket 11)
+You hear a satisfying snick as the khaki fuse slides into place.
+
+>flip switch
+You switch Electrical Panel 11's switch on.
+
+The khaki indicator's light goes on.
+
+[Your score has just gone up by five points.]
+
+>se
+
+Electrical Room
+
+>n
+
+Generator Room
+Nearby an indigo colored door leads west to the Guillotine Room.
+
+>n
+
+Mechanical Room South
+Nearby a gray colored door leads west to the Dungeon.
+
+You can also see a grate (in which is a parking ticket) here.
+
+>n
+
+Mechanical Room North
+Nearby an emerald colored door leads west to the Stake Room.
+
+You can also see a horseshoe magnet, a lit flashlight (providing light), and a toolbox (in which are some channel locks and a hammer) here.
+
+>n
+
+Crawl Space
+Nearby a crimson colored door leads west to the Gallows Room.
+
+>n
+
+Maintenance Office
+Nearby an aqua colored door leads west to the Stocks Room.
+
+Nearby a ladder leads up to Dark Hallway.
+
+You can also see a desk (on which are a coffee mug and a radio) here.
+
+>n
+
+Dark Passage
+
+>s
+
+Maintenance Office
+Nearby an aqua colored door leads west to the Stocks Room.
+
+Nearby a ladder leads up to Dark Hallway.
+
+You can also see a desk (on which are a coffee mug and a radio) here.
+
+>w
+
+Stocks Room
+Nearby an aqua colored door leads east to the Maintenance Office.
+
+You can also see a wooden stocks here.
+
+>s
+
+Gallows Room
+Nearby a crimson colored door leads east to the Crawl Space.
+
+You can also see a gallows platform here.
+
+>s
+
+Stake Room
+Nearby an emerald colored door leads east to the Mechanical Room North.
+
+The flames of the pyre burn ever brighter and rise ever higher engulfing the victims.
+
+>gonear whidbey
+
+
+Guillotine Room
+The public square hums with tension under gray skies. A wooden platform stands at the center, a grim focal point.
+
+A lone figure, hands bound and head bowed, stands on the scaffold. Their tattered clothes reveal a once-gilded past.
+
+The crowd jeers while children watch wide-eyed. The town crier proclaims, "High treason against the crown!"
+
+The condemned remains silent as the executioner, robed in black, stands beside the guillotine. The blade gleams in the dim light. The crowd's murmurs die, replaced by silence.
+
+As the condemned approaches, the guillotine's timing falters. Instead of falling on the scaffold, the blade swings over the cars, threatening any unlucky passenger who passes beneath.
+
+There is just one problem: the guillotine is being raised and lowered by some mechanism. It appears that the timing of the guillotine is off and it is being lowered onto the cars instead of between them. If a person were to be in a car as it passed under the guillotine, they would be seriously injured.
+
+You're glad you're not in one of those cars now. You must do something to stop it before someone gets hurt! 
+
+Nearby an indigo colored door leads east to the Generator Room.
+
+You can also see Mr Whidbey and a guillotine platform here.
+
+>whidbey off
+Whidbey stands still.
+
+>ask whidbey about hell ride
+Mr Whidbey waits for you to speak.
+
+"Hell Ride is the premier attraction here at Whidbey Amusements. It's both spooky and fun! The visitors love it! The fire last month was unfortunate and expensive" says Mr Whidbey.
+
+Mr. Whidbey's eyes dart up and to the left.
+
+
+>ask whidbey about invoices
+Mr Whidbey looks at you expectantly.
+
+Mr Whidbey says, "I know this doesn't look good but the cost of consumables go up every week and attendance is down. I have to pinch pennies somehow, don't I? And that fire was very expensive to repair."
+
+>ask whidbey about insurance policy
+Mr Whidbey nervously shifts his weight from one foot to the other.
+
+"An insurance policy? Of course, all reputable businesses have insurance. Even small time carnivals" Mr Whidbey stammers.
+
+>ask whidbey about carnival
+Mr Whidbey looks at you expectantly.
+
+"The Whidbey family has owned this carnival since the 1957", Mr Whidbey says. "Unfortunately, I am an only child and never married. Alas, the carnival will close when I am gone. But for now, it's making a comeback!"
+
+>ask whidbey about ferris wheel
+Mr Whidbey waits for you to speak.
+
+Mr Whidbey says "The Ferris Wheel is my favorite ride. It's always relaxing and romantic."
+
+Mr. Whidbey quickly changes the subject
+
+>ask whidbey about bumper cars
+Mr Whidbey looks at you expectantly.
+
+"That incident the other week with that Needleman kid was unfortunate" says Mr Whidbey.
+
+>ask whidbey about esmeralda
+Mr Whidbey nervously shifts his weight from one foot to the other.
+
+Mr Whidbey says "I see her regularly to have my fortune told. We're lucky to have her here. She's very beautiful. It's a wonder she's never been married."
+
+>ask whidbey about carousel
+Mr Whidbey waits for you to speak.
+
+"The carousel is just one of the many rides that thrill and delight our visitors every day," says Mr Whidbey
+
+>ask whidbey about dime toss
+Mr Whidbey nervously shifts his weight from one foot to the other.
+
+"The Dime Toss is is one of the many games that thrill and delight our visitors every day!" says Mr Whidbey.
+
+Mr. Whidbey meets your eyes and quickly looks away.
+
+
+>ask whidbey about pitchers mound
+Mr Whidbey waits for you to speak.
+
+"The Pitchers Mound is is one of the many games that thrill and delight our visitors every day!" says Mr Whidbey.
+
+>ask whidbey about high striker
+Mr Whidbey nervously shifts his weight from one foot to the other.
+
+"The High Striker is is one of the many games that thrill and delight our visitors every day!" says Mr Whidbey.
+
+>ask whidbey about fuses
+Mr Whidbey looks at you expectantly.
+
+"I know nothing about fuses", Mr Whidbey says.
+
+>ask whidbey about indigo fuse
+Mr Whidbey waits for you to speak.
+
+"Where did you get that?" Mr Whidbey asks.
+
+Mr. Whidbey's eyes dart up and to the left.
+
+
+>ask whidbey about fire
+Mr Whidbey looks at you expectantly.
+
+The fire was most unfortunate. It put Hell Ride out of commission for two weeks. Not only did it cost me $22,500 to repair but I lost revenue while it was closed.
+
+>ask whidbey about accidents
+Mr Whidbey nervously shifts his weight from one foot to the other.
+
+Mr Whidbey says, "Oh, that's nothing to worry about. Little things happen all the time, right?"
+
+>ask whidbey about pliers
+Mr Whidbey looks at you expectantly.
+
+"Oh! I thought I lost... um, those belong to the janitor. Where did you find them?" asks Mr Whidbey.
+
+>ask whidbey about needleman
+Mr Whidbey waits for you to speak.
+
+Mr Whidbey says "Uh, Fred is a special... contractor... We paid him. For services rendered."
+
+Mr. Whidbey quickly changes the subject
+
+>ask whidbey about services rendered
+Mr Whidbey nervously shifts his weight from one foot to the other.
+
+"Fred did some work over at the bumper cars" says Mr Whidbey.
+
+>accuse whidbey of fraud
+Mr Whidbey looks at you expectantly.
+
+"Any evidence you have is circumstantial. It'll be thrown out on day one of the trial!", says Mr Whidbey
+>show cash 'n' carry
+(to Mr Whidbey)
+Mr Whidbey says, "Money's a little tight. The cost of consumables go up every week."
+
+>show Frank's market
+(to Mr Whidbey)
+(first taking the Frank's Market invoice)
+Mr Whidbey says, "I can't keep up with the cost of ingredients. Everything costs so much!"
+
+>show mystic industries to whidbey
+(first taking the Mystic Industries invoice)
+Mr Whidbey says, That fire in Hell Ride was very expensive to repair. And it put the ride out of commission for two weeks."
+
+Mr. Whidbey's eyes dart up and to the left.
+
+
+>accuse whidbey of fraud
+Mr Whidbey waits for you to speak.
+
+As much as you would like to confront Mr Whidbey about fraud you should probably take care of disabling Hell Ride first.
+
+>show insurance policy to whidbey
+"An insurance policy? Of course, all reputable business have insurance. Even small time carnivals", Mr Whidbey stammers.
+
+>show pliers to whidbey
+"Oh! I thought I lost... I mean those belong to the janitor. Where did you find them?" asks Mr Whidbey.
+
+>show cashier's check to whidbey
+Mr Whidbey says "Uh, Fred is a special... contractor... We paid him. For services rendered."
+
+>e
+(first opening the indigo colored door)
+(first unlocking the indigo colored door)
+(with the silver key)
+
+Generator Room
+Nearby an indigo colored door leads west to the Guillotine Room.
+
+>n
+
+Mechanical Room South
+Nearby a gray colored door leads west to the Dungeon.
+
+You can also see a grate (in which is a parking ticket) here.
+
+>n
+
+Mechanical Room North
+Nearby an emerald colored door leads west to the Stake Room.
+
+You can also see a horseshoe magnet, a lit flashlight (providing light), and a toolbox (in which are some channel locks and a hammer) here.
+
+>n
+
+Crawl Space
+Nearby a crimson colored door leads west to the Gallows Room.
+
+>n
+
+Maintenance Office
+Nearby an aqua colored door leads west to the Stocks Room.
+
+Nearby a ladder leads up to Dark Hallway.
+
+You can also see a desk (on which are a coffee mug and a radio) here.
+
+>u
+
+Dark Hallway
+Nearby a ladder leads down to the Maintenance Office.
+
+Nearby a metal door leads west to Control Room.
+
+>w
+
+Control Room
+Nearby a metal door leads east to Dark Hallway.
+
+You can also see a big switch here.
+
+>turn aqua dial to 1
+The aqua colored dial is now set to 1.
+
+>turn crimson dial to 3
+The crimson colored dial is now set to 3.
+
+>turn emerald dial to 5
+The emerald colored dial is now set to 5.
+
+>set gray dial to 7
+The gray colored dial is now set to 7.
+
+>spin indigo dial to 9
+The indigo colored dial is now set to 9.
+
+>set khaki dial to 11
+The khaki colored dial is now set to 11.
+
+>put aqua button
+What do you want to put the aqua button under?
+
+>push aqua button
+You switch the aqua button on.
+
+The monitor flickers for a second and the scene it displays changes to something different.
+The monitor now shows a tableau of poor unfortunate townsfolk locked in stocks.
+The aqua light is now on.
+
+>push crimson button
+You switch the crimson button on.
+
+The monitor flickers for a second and the scene it displays changes to something different.
+The monitor now shows a scene of someone waiting to be hanged.
+The crimson light is now on.
+
+>push emerald button
+You switch the emerald button on.
+
+The monitor flickers for a second and the scene it displays changes to something different.
+The monitor now displays a scene of three women being burned at the stake.
+The emerald light is now on.
+
+>push gray button
+You switch the gray button on.
+
+The monitor flickers for a second and the scene it displays changes to something different.
+The monitor now shows the implements of torture in the dungeon.
+The gray light is now on.
+
+>push khaki button
+You switch the khaki button on.
+
+The monitor flickers for a second and the scene it displays changes to something different.
+The monitor shows the gift shop located at the Hell Ride exit.
+The khaki light is now on.
+
+>push indigo button
+You switch the indigo button on.
+
+The monitor flickers for a second and the scene it displays changes to something different.
+The monitor now shows a tableau of a guillotine rising and falling over the ride exit.
+The indigo light is now on.
+
+As you push the indigo button, the monitor switches to a view of the guillotine room. You still see the blade rising and falling over the cars. Suddenly, the blade starts slowing down, taking longer and longer to fall. Until it finally comes to a complete rest.
+
+The room is heavy with uneasy silence. Hell Ride, once a thrilling spectacle, now looms motionless, as the guillotine blade is frozen halfway down its track. Moments ago, chaos erupted as the malfunctioning mechanism sent the blade crashing unpredictably, ripping through the roofs of cars on the track.
+
+A single car, its roof gashed open, sits under the still blade - a grim reminder of the disaster narrowly averted. Above, a black crow lands on the guillotine's frame, its sharp caw cutting through the murmurs of anger and fear.
+
+Two mechanics climb the scaffolding with tools in hand, their appearance met with wary hope. A crowd has gathered and is watching, holding their breath, as the cursed ride's fate hangs in the balance. After a moment, applause rises from the assembled crowd, cheering your accomplishment.
+
+Mr. Whidbey, the Mayor, the Chief of Police, and the janitor arrive on the scene and extend their gratitude for saving the day, not to mention lives!
+
+"But wait", you say, "There is more afoot here than meets the eye. I think we need to talk to Mr Whidbey some more... confront him about a few things. Accusations might be made."
+
+Mr Whidbey exclaims, "Accusations? What accusations?
+
+The Police Chief listens with interest to what you have to say.
+
+>show evidence
+  Weight   Evidence collected:
+  ------   --------------------------------------------------------
+?    50    Evidence concerning accidents with the attractions
+?    23    Evidence concerning insurance
+?    12    Evidence concerning past due invoices
+?     6    Evidence concerning Mr Whidbey
+?     5    Evidence concerning fuses
+  ------   --------------------------------------------------------
+?    96    Total Weighted Evidence
+
+You've got enough evidence for a conviction.
+
+>ask janitor about hell ride
+The janitor looks at you and waits for you to proceed.
+
+"Hell Ride is a finicky ride. I'm fixing something there every week. Last week, Mr. Whidbey asked me to skip Hell Ride's maintenance slot. There was a real fire in the Stakes Room last month. And just yesterday I caught him creeping around the guillotine room" says the janitor.
+
+>ask janitor about mystic 
+The janitor looks bored as he waits for you to speak.
+
+"Hmm, you've got me there," the janitor replies.
+
+>show mystic invoice to janitor
+The janitor says, That fire in Hell Ride was really bad. It took almost two weeks to get it fully repaired. But it shouldn't have cost this much. I think Mr Whidbey got ripped off. Or, he got it fixed on the cheap and pocketed the rest."
+
+>ask janitor about bumper cars
+The janitor looks at you expectantly.
+
+The janitor says, "That reminds me. Not long ago, one of the bumper cars was shorting out and electrifying the car. A visitor got hurt. A young lad, what was his name? Fred something, I think."
+
+>show evidence
+  Weight   Evidence collected:
+  ------   --------------------------------------------------------
+?    50    Evidence concerning accidents with the attractions
+?    23    Evidence concerning insurance
+?    12    Evidence concerning past due invoices
+?     6    Evidence concerning Mr Whidbey
+?     5    Evidence concerning fuses
+  ------   --------------------------------------------------------
+?    96    Total Weighted Evidence
+
+You've got enough evidence for a conviction.
+
+>accuse whidbey of insurance fraud
+Mr Whidbey nervously shifts his weight from one foot to the other.
+
+"Ok, I guess you got me. The carnival was losing money and we were going to go out of business. I was desperate to turn things around.
+
+Then that Needleman kid got hurt on the bumper cars. We filed an insurance claim for it. When he got paid, Needleman asked if we could get more and split it.
+
+It seemed like a good idea at the time. I could get some extra cash to pay the carnival's bills. Then the thought of the money got overwhelming and I thought, "What if there was a fire and the estimate for repairs was, let's shall we say, generous. We could take the extra money, pay bills, and pocket the rest.
+
+The Chief of Police pays particular attention to Mr. Whidbey's confession. He approaches Whidbey and says "You have the right to remain silent. Anything you say will be used against you in a court of law. You have the right to an attorney during interrogation; if you cannot afford an attorney, one will be appointed to you."
+
+He handcuffs Whidbey, thanks you for your service to the community, and leads Mr Whidbey away to jail.
+
+
+
+    *** You have won! ***
+
+
+In that game you scored 200 out of a possible 200, in 658 turns.
+
+You've received 200 points out of a possible 200 in 658 moves!
+
+You have received points for the following: 
+
+?  Eating the blueberries:                   5 points
+?  Finding the coins and keys:               5 points
+?  Buying the Hell Ride ticket:              5 points
+?  Taking the Mercury dime:                  5 points
+?  Winning the horseshoe magnet:             5 points
+?  Winning the Crimson fuse:                 10 points
+?  Acquiring the Khaki fuse:                 10 points
+?  Finding the insurance policy:             5 points
+?  Acquiring the Indigo fuse:                10 points
+?  Finding the Cash 'N' Carry invoice:       5 points
+?  Finding the Oriental Trading invoice:     5 points
+?  Finding the Frank's Market invoice:       5 points
+?  Finding the Mystic Industries invoice:    5 points
+?  Acquiring the cashier's check:            10 points
+?  Taking the lantern:                       5 points
+?  Wearing the sheer veil:                   5 points
+?  Finding the Dark Passage:                 5 points
+?  Taking the flashlight:                    5 points
+?  Finding the Control Room:                 5 points
+?  Turning off the big switch:               5 points
+?  Acquiring the Emerald fuse:               10 points
+?  Bringing the wrench to the Bumper Cars:   5 points
+?  Acquiring the Gray fuse:                  10 points
+?  Winning the knock-off Swiss Army knife:   5 points
+?  Winning the Magenta fuse:                 5 points
+?  Acquiring the Aqua fuse:                  10 points
+?  Acquiring the pliers:                     5 points
+?  Flipping the Aqua switch:                 5 points
+?  Flipping the Crimson switch:              5 points
+?  Flipping the Emerald switch:              5 points
+?  Flipping the Gray switch:                 5 points
+?  Flipping the Indigo switch:               5 points
+?  Flipping the Khaki switch:                5 points
+
+
+  Weight   Evidence collected:
+  ------   --------------------------------------------------------
+?    50    Evidence concerning accidents with the attractions
+?    23    Evidence concerning insurance
+?    12    Evidence concerning past due invoices
+?     6    Evidence concerning Mr Whidbey
+?     5    Evidence concerning fuses
+  ------   --------------------------------------------------------
+?    96    Total Weighted Evidence
+
+You've got enough evidence for a conviction.
+
+
+Would you like to RESTART, RESTORE a saved game, QUIT, or UNDO the last command?
+> 
