@@ -1,0 +1,339 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<trizbort version="1.7.4.1">
+	<info>
+		<title>Hell Ride</title>
+		<author>Dana Montgomery</author>
+	</info>
+	<map>
+		<room id="1" name="Parking Lot" subtitle="" x="128" y="-320" w="96" h="64" region="Midway" handDrawn="no" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" isStartRoom="yes" description="The lot stretches across an open field, gravel crunching under the tires of arriving cars. Floodlights and the carnival's colorful glow light the area, accompanied by distant laughter, music, and the hum of rides." roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSubtitleColor="" roomSmallText="" ZOrder="0">
+			<objects>[2] Gloves|[1] 14" Piece of String|[2] Dimes|[2] Keys</objects>
+		</room>
+		<room id="2" name="Ticket Booth" subtitle="" x="128" y="-160" w="96" h="64" region="Midway" handDrawn="no" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="Painted in bright red and yellow stripes, the ticket kiosk stands at the entrance with flickering lights to draw attention. A smiling cashier hands out tickets, while the cash drawer jingles. A digital payment system sits in the corner. Too bad you don't have a debit card." roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSubtitleColor="" roomSmallText="" ZOrder="0">
+			<objects>[1] Hell Ride Ticket|[1] Ferris Wheel Ticket|[1] Bumper Cars Ticket|[1] Carousel Ticket|[1] Fortune Teller Ticket</objects>
+		</room>
+		<line id="3" name="" description="">
+			<dock index="0" id="1" port="s" />
+			<dock index="1" id="2" port="n" />
+		</line>
+		<room id="4" name="Carousel" subtitle="" x="320" y="-320" w="96" h="64" region="Midway" handDrawn="no" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="The carousel radiates charm with its brightly painted horses, lights, and calliope music. The platform features a canopy of colors and decorative mirrors. Hand-carved animals, including horses, lions, tigers, and sea dragons, circle as the carousel spins. The animals rise and fall gently, adding to the charm. The music rises from the Carousel inviting riders of all ages to enjoy this most basic symbol of the carnival." roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSubtitleColor="" roomSmallText="" ZOrder="0" />
+		<line id="5" name="" description="">
+			<dock index="0" id="2" port="ne" />
+			<dock index="1" id="4" port="sw" />
+		</line>
+		<room id="6" name="Concession Stand" subtitle="" x="-64" y="0" w="96" h="64" region="Midway" handDrawn="no" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="The concession stand is a destination for many along the midway. Twinkling lights frame the stand making it glow amid the carnival's buzz." roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSubtitleColor="" roomSmallText="" ZOrder="0" />
+		<line id="7" name="" description="">
+			<dock index="0" id="2" port="sw" />
+			<dock index="1" id="6" port="ne" />
+		</line>
+		<room id="8" name="Bumper Cars" subtitle="" x="-64" y="-320" w="96" h="64" region="Midway" handDrawn="no" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="The bumper cars are a lively scene of flashing lights and vibrant decorations. The arena is surrounded by padded barriers, ensuring the rider's safety. Cars in faded reds, blues, yellows, and greens glide across the slick floor, each equipped with a steering wheel and padded bumper. Riders maneuver their cars with intensity, creating a din of bumps and laughter. Overhead, electric poles hum with energy. While onlookers cheer from the sidelines, the bumper cars offer playful competition and nostalgic fun for all. The Ticket Kiosk is southeast of here." roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSubtitleColor="" roomSmallText="" ZOrder="0">
+			<objects>[1] Gray Fuse</objects>
+		</room>
+		<line id="9" name="" description="">
+			<dock index="0" id="2" port="nw" />
+			<dock index="1" id="8" port="se" />
+		</line>
+		<room id="10" name="Fortune Teller" subtitle="" x="320" y="0" w="96" h="64" region="Midway" handDrawn="no" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="Approaching the fortune teller's booth, you are drawn in by its mysterious allure and inky softness. Draped in deep purple curtains adorned with golden moons and stars, the booth is lit only with the flickering of candles. The air is heavy with the scent of incense, mingling with and then overpowering the ever-present sugary odor of carnival treats. A sign sways slightly in the evening breeze." roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSubtitleColor="" roomSmallText="" ZOrder="0">
+			<objects>[f] Esmeralda|</objects>
+		</room>
+		<line id="11" name="" description="">
+			<dock index="0" id="2" port="se" />
+			<dock index="1" id="10" port="nw" />
+		</line>
+		<room id="18" name="High Striker" subtitle="" x="320" y="-160" w="96" h="64" region="Midway" handDrawn="no" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="A tall machine stands with bright red, yellow, and blue lights. A sign sits at the top reading &quot;Test Your Strength!&quot; The base is dark, polished wood, with a sturdy metal pole and a bell at the top. Markings along the pole indicate strength. A smaller sign says, &quot;Buy a mallet, strike the bell, win a prize.&quot; Spectators cheer as the sound of the mallet hitting the target fills the night." roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSubtitleColor="" roomSmallText="" ZOrder="0">
+			<objects>[1] Mallet|[1] Teddy Bear|[1] Knock-off Swiss Army Knife|[1] Magenta Fuse|[1] Poster of Taylor Swift</objects>
+		</room>
+		<line id="19" name="" description="">
+			<dock index="0" id="2" port="e" />
+			<dock index="1" id="18" port="w" />
+		</line>
+		<room id="20" name="Ferris Wheel" subtitle="" x="512" y="-160" w="96" h="64" region="Midway" handDrawn="no" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="The Ferris wheel dominates the carnival, its bright lights visible from every corner. Its massive steel frame arches high, with colorful gondolas swaying as it turns. At night, flashing in bursts of red, green, and white, the wheel dazzles with lights. The air buzzes with the hum of the motor. The operator calls, &quot;Step right up! The best view of the carnival awaits!&quot; From the top, riders get a panoramic view of the fairgrounds, with city lights stretching to the horizon." roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSubtitleColor="" roomSmallText="" ZOrder="0">
+			<objects>[1] Two Dollar Bill</objects>
+		</room>
+		<line id="21" name="" description="">
+			<dock index="0" id="18" port="e" />
+			<dock index="1" id="20" port="w" />
+		</line>
+		<room id="23" name="Pitchers Mound" subtitle="" x="512" y="0" w="96" h="64" region="Midway" handDrawn="no" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="The milk bottle toss is a classic game of skill and luck. A pyramid of colorful bottles sits on a sturdy platform - three on the bottom, two in the middle, and one at the top. Players throw baseballs to knock down the stack and win a prize. The booth is lively, with cheering and the clatter of falling bottles. The attendant calls, &quot;Step right up! Three balls for a dime!&quot; Prizes from toys to stuffed animals hang nearby. With this carnival favorite, every toss is filled with suspense.  You thought you caught a flash of something coming from the area of the booth." roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSubtitleColor="" roomSmallText="" ZOrder="0">
+			<objects>[1] Crimson Fuse|[1] Plush Donkey|[1] Goldfish in a Bowl|[1] Poster of Lourde|[1] Mercury Dime</objects>
+		</room>
+		<line id="24" name="" description="">
+			<dock index="0" id="18" port="se" />
+			<dock index="1" id="23" port="nw" />
+		</line>
+		<room id="27" name="Dime Toss Game" subtitle="" x="512" y="-320" w="96" h="64" region="Midway" handDrawn="no" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="The booth is brightly colored with red-and-white stripes, twinkling lights, and a sign reading &quot;TOSS A DIME - WIN A PRIZE!&quot; Prizes hang around the booth, from stuffed animals to shiny trinkets. Gleaming plates reflect the light, waiting for dimes. The &quot;ping&quot; of dimes hitting plates is followed by the satisfying &quot;plop&quot; when they land. Shouts of victory and playful groans mix with carnival music and laughter. The operator calls out, drawing in onlookers." roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSubtitleColor="" roomSmallText="" ZOrder="0">
+			<objects>[1] Stuffed Monkey|[1] Orange Fuse|[1] Poster of Billie Eilish|[1] Horseshoe Magnet</objects>
+		</room>
+		<line id="28" name="" description="">
+			<dock index="0" id="18" port="ne" />
+			<dock index="1" id="27" port="sw" />
+		</line>
+		<room id="29" name="Behind the Concession Stand" subtitle="" x="-256" y="0" w="96" h="64" region="Midway" handDrawn="no" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="Behind the concession stand, to one side, is the trash generated from the day's activities and to the other side boxes of supplies. There is a chair here surrounded by cigarette butts. There is an exit to the east." roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSubtitleColor="" roomSmallText="" ZOrder="0">
+			<objects>[1] Khaki Fuse</objects>
+		</room>
+		<line id="30" name="" description="" style="dashed">
+			<dock index="0" id="6" port="w" />
+			<dock index="1" id="29" port="e" />
+		</line>
+		<room id="31" name="Carnival Office" subtitle="" x="-64" y="160" w="96" h="64" region="Midway" handDrawn="no" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="Dim, yellow light from an overhead bulb casts long shadows over the room, A single desk lamp, flickering provides additional light. A few carnival-themed knick-knacks sit atop the desk. A framed photograph hangs askew on the wall." roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSubtitleColor="" roomSmallText="" ZOrder="0">
+			<objects>[1] Safe|[1] Insurance Policy|[1] Cashier's Check|[1] Invoices|[1] Worn Photo|[1] Indigo Fuse|</objects>
+		</room>
+		<line id="32" name="" description="">
+			<dock index="0" id="6" port="s" />
+			<dock index="1" id="31" port="n" />
+		</line>
+		<room id="33" name="Show Facade" subtitle="" x="-64" y="-160" w="96" h="64" region="Midway" handDrawn="no" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="As you walk west through the midway, the lights fade to a soft glow, leading you to a tent. A sign reads &quot;Little Egypt Show - A Journey Into the Mysterious and Unknown!&quot; The barker, wearing a fez and smiling, points to another sign: &quot;Little Egypt - Dime Admission.&quot; The ticket kiosk is behind you to the east." roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSubtitleColor="" roomSmallText="" ZOrder="0">
+			<objects>[m] Barker</objects>
+		</room>
+		<line id="34" name="" description="">
+			<dock index="0" id="2" port="w" />
+			<dock index="1" id="33" port="e" />
+		</line>
+		<line id="35" name="" description="">
+			<dock index="0" id="33" port="e" />
+			<dock index="1" id="33" port="e" />
+		</line>
+		<room id="36" name="Show Tent" subtitle="" x="-256" y="-160" w="96" h="64" region="Midway" handDrawn="no" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="You are inside the Little Egypt Show. The attraction's facade is to the east. There are folding chairs standing vigil in neat in rows. The show should start soon." roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSubtitleColor="" roomSmallText="" ZOrder="0">
+			<objects>[1] Sheer Veil|[1] Lantern</objects>
+		</room>
+		<line id="37" name="" description="">
+			<dock index="0" id="33" port="w" />
+			<dock index="1" id="36" port="e" />
+		</line>
+		<room id="38" name="Head of the Line" subtitle="" x="128" y="0" w="96" h="64" region="Midway" handDrawn="no" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="You are standing in front of an attendant with his hand open waiting for your ticket. The entrance to the ride is south of here. The ride operator tells you that you're lucky you showed up when you did because this will be the last trip through Hell Ride for the night. You notice that all the other cars are empty. The Ticket Kiosk is north of here." roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSubtitleColor="" roomSmallText="" ZOrder="0" />
+		<line id="39" name="" description="">
+			<dock index="0" id="2" port="s" />
+			<dock index="1" id="38" port="n" />
+		</line>
+		<room id="41" name="Ride Entrance" subtitle="" x="128" y="160" w="96" h="64" region="Hell Ride" handDrawn="no" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="The cars for Hell Ride stop here, and the safety bar clicks into place as riders board the cars. Ahead, the grotesque entrance looms - a twisted metal archway adorned with spikes, skulls, and flickering blood-red lights. A faint sulfuric smell mixes with the scent of popcorn." roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSubtitleColor="" roomSmallText="" ZOrder="0">
+			<objects>[1] Hell Ride Car</objects>
+		</room>
+		<line id="43" name="" description="">
+			<dock index="0" id="38" port="s" />
+			<dock index="1" id="41" port="n" />
+		</line>
+		<room id="45" name="Dark Passage" subtitle="" x="512" y="160" w="96" h="64" region="Back Stage" handDrawn="no" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" isDark="yes" description="This room is backstage at the Hell Ride attraction. The room is littered with bags of trash, piles of junk, and dust bunnies so large they should be paying rent. There an exit to the south and west." roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSubtitleColor="" roomSmallText="" ZOrder="0">
+			<objects>[1] Bags of Trash|[1] Dust Bunnies|[1] Pile of Junk|[1] Flashlight</objects>
+		</room>
+		<line id="48" name="" description="">
+			<dock index="0" id="45" port="w" />
+			<dock index="1" id="41" port="e" />
+		</line>
+		<room id="40" name="Maintenance Office" subtitle="" x="512" y="320" w="96" h="64" region="Back Stage" handDrawn="no" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" isDark="yes" description="The maintenance office is a dim, cluttered space, filled with the smells of grease, sweat, and popcorn. Disorganized shelves are lined with tools and parts, while paint cans and grease jars clutter the workbenches. A battered desk holds wires, gears, and springs, with a bent piece of metal in a vise." roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSubtitleColor="" roomSmallText="" ZOrder="0">
+			<objects>[1] Desk|[1] Radio|[1] Coffee Cup|[1] Scissors|[1] Red Stapler|[1] Worn Photo</objects>
+		</room>
+		<line id="47" name="" description="">
+			<dock index="0" id="45" port="s" />
+			<dock index="1" id="40" port="n" />
+		</line>
+		<room id="49" name="Dark Hallway" subtitle="" x="-256" y="160" w="96" h="64" region="Second Floor" handDrawn="no" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="This is a poorly lit hallway. Ahead to the west you can see a closed door." roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSubtitleColor="" roomSmallText="" ZOrder="0" />
+		<line id="50" name="" description="" startText="up" endText="down">
+			<dock index="0" id="40" port="nnw" />
+			<dock index="1" id="49" port="ssw" />
+		</line>
+		<room id="51" name="Control Room" subtitle="" x="-448" y="160" w="96" h="64" region="Second Floor" handDrawn="no" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="The backstage control room is a functional space with gray, scuffed walls. A large monitor shows live feeds while control panels with dials, buttons, and lights manage the rides and systems. The panels remain oddly dark." roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSubtitleColor="" roomSmallText="" ZOrder="0">
+			<objects>[1] Big Switch|[1] Control Panels|[1] Dials|[1] Buttons|[1] Lights</objects>
+		</room>
+		<line id="52" name="" description="">
+			<dock index="0" id="49" port="w" />
+			<dock index="1" id="51" port="e" />
+		</line>
+		<room id="53" name="Crawl Space" subtitle="" x="512" y="480" w="96" h="64" region="Back Stage" handDrawn="no" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" isDark="yes" description="The crawl space beneath the ride is cramped and dark, filled with the hum of machinery above. The air is thick with oil and rust. Sounds echo - groaning steel, clanking chains, and the rhythmic thrum of motors." roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSubtitleColor="" roomSmallText="" ZOrder="0" />
+		<line id="54" name="" description="">
+			<dock index="0" id="40" port="s" />
+			<dock index="1" id="53" port="n" />
+		</line>
+		<room id="56" name="Mechanical Room North" subtitle="" x="512" y="640" w="96" h="64" region="Back Stage" handDrawn="no" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" isDark="yes" description="The north mechanical room is compact, housing auxiliary systems for the ride. A soft hum of capacitors and relays fills the space, interrupted only by the occasional hissing of hydraulic fluid." roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSubtitleColor="" roomSmallText="" ZOrder="0">
+			<objects>[1] Toolbox|[1] Sledgehammer|[1] Adjustable Wrench|[1] Channel Locks|[1] Hammer</objects>
+		</room>
+		<line id="57" name="" description="">
+			<dock index="0" id="53" port="s" />
+			<dock index="1" id="56" port="n" />
+		</line>
+		<room id="59" name="Mechanical Room South" subtitle="" x="512" y="800" w="96" h="64" region="Back Stage" handDrawn="no" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" isDark="yes" description="The south mechanical room is the heart of the ride, with a massive motor powering the thick belts, pulleys, and gears. Electrical panels line the walls, flashing &quot;High Voltage&quot; and colorful indicator lights." roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSubtitleColor="" roomSmallText="" ZOrder="0">
+			<objects>[1] Grate|[1] Emerald Fuse</objects>
+		</room>
+		<line id="60" name="" description="">
+			<dock index="0" id="56" port="s" />
+			<dock index="1" id="59" port="n" />
+		</line>
+		<room id="58" name="Generator Room" subtitle="" x="512" y="960" w="96" h="64" region="Back Stage" handDrawn="no" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" isDark="yes" description="The generator room is small, with concrete walls stained by oil and grime. The air smells of diesel, metal, and damp earth." roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSubtitleColor="" roomSmallText="" ZOrder="0" />
+		<line id="61" name="" description="">
+			<dock index="0" id="59" port="s" />
+			<dock index="1" id="58" port="n" />
+		</line>
+		<room id="62" name="Electrical Room" subtitle="" x="512" y="1216" w="96" h="64" region="Electrical Area" handDrawn="no" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" isDark="yes" description="The electrical room is small, hidden behind the carnival's attractions. The air smells of overheated wires and metal." roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSubtitleColor="" roomSmallText="" ZOrder="0" />
+		<line id="63" name="" description="">
+			<dock index="0" id="58" port="s" />
+			<dock index="1" id="62" port="n" />
+		</line>
+		<room id="64" name="Storage Room" subtitle="" x="512" y="1504" w="96" h="64" region="Back Stage" handDrawn="no" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" isDark="yes" description="The storage room is cramped and hidden, with rusted walls and peeling wood. The air smells of dust, damp canvas, and stale popcorn." roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSubtitleColor="" roomSmallText="" ZOrder="0" />
+		<line id="65" name="" description="">
+			<dock index="0" id="62" port="s" />
+			<dock index="1" id="64" port="n" />
+		</line>
+		<room id="66" name="Electrical Closet One" subtitle="" x="704" y="1056" w="96" h="64" region="Electrical Area" handDrawn="no" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" isDark="yes" description="This is Electrical Closet One. There's an electrical panel here and an exit to the southwest." roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSubtitleColor="" roomSmallText="" ZOrder="0">
+			<objects>[1] Silver Key|[1] Electrical Panel|[1] Socket|[1] Switch|[1] Indicator Light</objects>
+		</room>
+		<line id="67" name="" description="">
+			<dock index="0" id="62" port="ne" />
+			<dock index="1" id="66" port="sw" />
+		</line>
+		<room id="68" name="Ride Exit" subtitle="" x="128" y="1504" w="96" h="64" region="Hell Ride" handDrawn="no" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="The exit of Hell Ride leaves you unsettled. You emerge from a dark corridor, the walls peeling and streaked with black and red. Flickering lights cast shifting shadows on the sloped floor, and the air is damp with a metallic tang. Whispers and distant screams echo softly in the background." roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSubtitleColor="" roomSmallText="" ZOrder="0">
+			<objects>[1] Aqua Fuse|[1] Plastic Bones|[1] Devil Horns|[1] Key Chains|[1] T-shirts</objects>
+		</room>
+		<line id="69" name="" description="">
+			<dock index="0" id="64" port="w" />
+			<dock index="1" id="68" port="e" />
+		</line>
+		<room id="70" name="Guillotine Room" subtitle="" x="128" y="960" w="96" h="64" region="Hell Ride" handDrawn="no" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="The public square hums with tension under gray skies. A wooden platform stands at the center, a grim focal point." roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSubtitleColor="" roomSmallText="" ZOrder="0">
+			<objects>[1] Pliers</objects>
+		</room>
+		<line id="71" name="" description="">
+			<dock index="0" id="68" port="n" />
+			<dock index="1" id="70" port="s" />
+		</line>
+		<room id="72" name="Dungeon" subtitle="" x="128" y="800" w="96" h="64" region="Hell Ride" handDrawn="no" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="The dungeon is dark and damp, the air thick with sweat, blood, and mildew. Lanterns flicker on rusted sconces, casting twisted shadows." roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSubtitleColor="" roomSmallText="" ZOrder="0" />
+		<line id="73" name="" description="">
+			<dock index="0" id="70" port="n" />
+			<dock index="1" id="72" port="s" />
+		</line>
+		<room id="74" name="Stake Room" subtitle="" x="128" y="640" w="96" h="64" region="Hell Ride" handDrawn="no" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="The public square is silent, broken only by crackling flames. At its center, three women are bound to wooden stakes, their faces showing defiance, resignation, and terror." roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSubtitleColor="" roomSmallText="" ZOrder="0">
+			<objects>[1] Quartz Fuse</objects>
+		</room>
+		<line id="75" name="" description="">
+			<dock index="0" id="72" port="n" />
+			<dock index="1" id="74" port="s" />
+		</line>
+		<room id="76" name="Gallows Room" subtitle="" x="128" y="480" w="96" h="64" region="Hell Ride" handDrawn="no" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="The public square, wet from morning drizzle, lies under a dark sky. At its center, the gallows loom, ropes swaying. Their eyes fixed on the scene, the crowd stands in silence." roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSubtitleColor="" roomSmallText="" ZOrder="0" />
+		<line id="77" name="" description="">
+			<dock index="0" id="74" port="n" />
+			<dock index="1" id="76" port="s" />
+		</line>
+		<room id="78" name="Stocks Room" subtitle="" x="128" y="320" w="96" h="64" region="Hell Ride" handDrawn="no" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="The public square is a cobblestone stretch surrounded by weathered buildings. The air smells of smoke, damp earth, and a nearby smithy. At the center, old stocks stand with iron clasps holding captives in shameful positions. Their tattered clothes offer little against the cold wind." roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSubtitleColor="" roomSmallText="" ZOrder="0" />
+		<line id="79" name="" description="">
+			<dock index="0" id="76" port="n" />
+			<dock index="1" id="78" port="s" />
+		</line>
+		<line id="80" name="" description="">
+			<dock index="0" id="78" port="e" />
+			<dock index="1" id="40" port="w" />
+		</line>
+		<room id="81" name="Electrical Closet Three" subtitle="" x="704" y="1216" w="96" h="64" region="Electrical Area" handDrawn="no" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" isDark="yes" description="This is Electrical Closet Three. There's an electrical panel here and an exit to the west." roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSubtitleColor="" roomSmallText="" ZOrder="0">
+			<objects>[1] Electrical Panel|[1] Socket|[1] Switch|[1] Indicator Light</objects>
+		</room>
+		<line id="82" name="" description="">
+			<dock index="0" id="62" port="e" />
+			<dock index="1" id="81" port="w" />
+		</line>
+		<room id="83" name="Electrical Closet Five" subtitle="" x="704" y="1376" w="96" h="64" region="Electrical Area" handDrawn="no" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" isDark="yes" description="This is Electrical Closet Five. There's an electrical panel here and an exit to the northwest." roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSubtitleColor="" roomSmallText="" ZOrder="0">
+			<objects>[1] Electrical Panel|[1] Socket|[1] Switch|[1] Indicator Light</objects>
+		</room>
+		<line id="84" name="" description="">
+			<dock index="0" id="62" port="se" />
+			<dock index="1" id="83" port="nw" />
+		</line>
+		<room id="85" name="Electrical Closet Seven" subtitle="" x="320" y="1376" w="96" h="64" region="Electrical Area" handDrawn="no" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" isDark="yes" description="This is Electrical Closet Seven. There's an electrical panel here and an exit to the northeast." roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSubtitleColor="" roomSmallText="" ZOrder="0">
+			<objects>[1] Electrical Panel|[1] Socket|[1] Switch|[1] Indicator Light</objects>
+		</room>
+		<line id="86" name="" description="">
+			<dock index="0" id="62" port="sw" />
+			<dock index="1" id="85" port="ne" />
+		</line>
+		<room id="87" name="Electrical Closet Nine" subtitle="" x="320" y="1216" w="96" h="64" region="Electrical Area" handDrawn="no" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" isDark="yes" description="This is Electrical Closet Nine. There's an electrical panel here and an exit to the east." roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSubtitleColor="" roomSmallText="" ZOrder="0">
+			<objects>[1] Electrical Panel|[1] Socket|[1] Switch|[1] Indicator Light</objects>
+		</room>
+		<line id="88" name="" description="">
+			<dock index="0" id="62" port="w" />
+			<dock index="1" id="87" port="e" />
+		</line>
+		<room id="89" name="Electrical Closet Eleven" subtitle="" x="320" y="1056" w="96" h="64" region="Electrical Area" handDrawn="no" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" isDark="yes" description="This is Electrical Closet Eleven. There's an electrical panel here and an exit to the southeast." roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSubtitleColor="" roomSmallText="" ZOrder="0">
+			<objects>[1] Electrical Panel|[1] Socket|[1] Switch|[1] Indicator Light</objects>
+		</room>
+		<line id="90" name="" description="">
+			<dock index="0" id="62" port="nw" />
+			<dock index="1" id="89" port="se" />
+		</line>
+		<line id="91" name="" description="">
+			<dock index="0" id="70" port="e" />
+			<dock index="1" id="58" port="w" />
+		</line>
+		<line id="12" name="" description="" flow="oneWay">
+			<dock index="0" id="78" port="n" />
+			<dock index="1" id="41" port="s" />
+		</line>
+		<line id="13" name="" description="">
+			<dock index="0" id="53" port="w" />
+			<dock index="1" id="76" port="e" />
+		</line>
+		<line id="14" name="" description="">
+			<dock index="0" id="56" port="w" />
+			<dock index="1" id="74" port="e" />
+		</line>
+		<line id="15" name="" description="">
+			<dock index="0" id="59" port="w" />
+			<dock index="1" id="72" port="e" />
+		</line>
+	</map>
+	<settings>
+		<colors>
+			<canvas>White</canvas>
+			<border>MidnightBlue</border>
+			<line>MidnightBlue</line>
+			<selectedLine>Gold</selectedLine>
+			<hoverLine>DarkOrange</hoverLine>
+			<subTitle>MidnightBlue</subTitle>
+			<smallText>MidnightBlue</smallText>
+			<lineText>MidnightBlue</lineText>
+			<grid>#E7E7E7</grid>
+			<startRoom>GreenYellow</startRoom>
+			<endRoom>Red</endRoom>
+		</colors>
+		<regions>
+			<Back____Stage Name="Back Stage" TextColor="MidnightBlue">#FF8080</Back____Stage>
+			<Electrical____Area Name="Electrical Area" TextColor="MidnightBlue">#8080FF</Electrical____Area>
+			<Hell____Ride Name="Hell Ride" TextColor="MidnightBlue">#80FFFF</Hell____Ride>
+			<Midway Name="Midway" TextColor="MidnightBlue">#80FF80</Midway>
+			<NoRegion Name="NoRegion" TextColor="Blue">White</NoRegion>
+			<Second____Floor Name="Second Floor" TextColor="MidnightBlue">#FF8000</Second____Floor>
+		</regions>
+		<fonts>
+			<room size="13">Arial</room>
+			<object size="11">Arial</object>
+			<subTitle size="9">Arial</subTitle>
+			<line size="9">Arial</line>
+		</fonts>
+		<grid>
+			<snapTo>yes</snapTo>
+			<visible>yes</visible>
+			<showOrigin>yes</showOrigin>
+			<size>32</size>
+		</grid>
+		<lines>
+			<width>2</width>
+			<arrowSize>12</arrowSize>
+			<textOffset>4</textOffset>
+		</lines>
+		<rooms>
+			<darknessStripeSize>24</darknessStripeSize>
+			<objectListOffset>4</objectListOffset>
+			<connectionStalkLength>32</connectionStalkLength>
+			<preferredDistanceBetweenRooms>64</preferredDistanceBetweenRooms>
+			<defaultRoomName>Cave</defaultRoomName>
+			<defaultRoomShape>0</defaultRoomShape>
+		</rooms>
+		<ui>
+			<handleSize>12</handleSize>
+			<snapToElementSize>16</snapToElementSize>
+		</ui>
+		<margins>
+			<documentSpecific>no</documentSpecific>
+			<horizontal>0</horizontal>
+			<vertical>0</vertical>
+			<wrapDashes>no</wrapDashes>
+		</margins>
+		<keypadNavigation>
+			<creationModifier>control</creationModifier>
+			<unexploredModifier>alt</unexploredModifier>
+		</keypadNavigation>
+	</settings>
+</trizbort>

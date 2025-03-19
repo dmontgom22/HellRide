@@ -2,7 +2,7 @@ Start of a transcript of:
 
 Hell Ride
 The ride of a lifetime... by No Shoes
-Release 203 / Serial number 250316 / Inform 7 v10.1.2 / D
+Release 203 / Serial number 250319 / Inform 7 v10.1.2 / D
 Inform 7 v10.1.2
 Identification number: //E0A5AFB9-18BF-4485-B083-426CA51CCE70//
 Interpreter version 0.6.0 / VM 3.1.3
@@ -99,7 +99,7 @@ A tall machine stands with bright red, yellow, and blue lights. A sign sits at t
 
 The Ticket Kiosk is to the west. Other games are northeast and southeast of here. The Ferris Wheel lies to the east.
 
-You can see a High Striker attendant, a lever, and some High Striker prizes here.
+You can see a High Striker attendant, a bullseye, and some High Striker prizes here.
 
 The attendant is holding a mallet.
 
@@ -110,16 +110,16 @@ The prizes are a teddy bear, a knock-off Swiss Army knife, a magenta colored fus
 You fork over $2.00 for the mallet, leaving yourself with $18.00.
 
 >hit bullseye with mallet
-You lift the mallet high and bring it down on the lever with all your might! The striker rises towards the bell stopping at "Weakling".
+You lift the mallet high and bring it down on the bullseye with all your might! The striker rises towards the bell stopping at "Weakling".
  
 >again
-You lift the mallet high and bring it down on the lever with all your might! The striker rises towards the bell stopping at "Getting Stronger".
+You lift the mallet high and bring it down on the bullseye with all your might! The striker rises towards the bell stopping at "Getting Stronger".
  
 >again
-You lift the mallet high and bring it down on the lever with all your might! The striker rises towards the bell stopping at "Getting Stronger".
+You lift the mallet high and bring it down on the bullseye with all your might! The striker rises towards the bell stopping at "Getting Stronger".
  
 >again
-You lift the mallet high and bring it down on the lever with all your might! The striker rises towards the bell stopping at "Average".
+You lift the mallet high and bring it down on the bullseye with all your might! The striker rises towards the bell stopping at "Average".
  
 You can't be sure of it but it seems as if the mallet isn't heavy enough to ring the bell.
 
@@ -152,7 +152,7 @@ Taken.
 >northwest
 
 High Striker
-You can see a High Striker attendant, a lever, and some High Striker prizes here.
+You can see a High Striker attendant, a bullseye, and some High Striker prizes here.
 
 
 >northeast
@@ -179,7 +179,7 @@ You are now holding a horseshoe magnet.
 >southwest
 
 High Striker
-You can see a High Striker attendant, a lever, and some High Striker prizes here.
+You can see a High Striker attendant, a bullseye, and some High Striker prizes here.
 
 
 >southeast
@@ -214,7 +214,7 @@ The Pitchers Mound attendant says, "Sorry. You only get to play once."
 >northwest
 
 High Striker
-You can see a High Striker attendant, a lever, and some High Striker prizes here.
+You can see a High Striker attendant, a bullseye, and some High Striker prizes here.
 
 
 >east
@@ -237,7 +237,7 @@ As you enter the gondola, the safety bar clicks into place, and the Ferris wheel
 >west
 
 High Striker
-You can see a High Striker attendant, a lever, and some High Striker prizes here.
+You can see a High Striker attendant, a bullseye, and some High Striker prizes here.
 
 
 >west
@@ -246,29 +246,27 @@ Ticket Booth
 You can see a janitor and a cashier here.
 
 >steal brass ring
-The janitor says, "Hey! What do you think you're doing?!
+You reach toward the brass ring, but pull back your hand. You were almost caught!
 
 >steal brass ring
-The janitor slaps your hand away as you reach for the key.
+You reach toward the brass ring, but pull back your hand. You were almost caught!
 
 >steal brass ring
-Out of the corner of his eye, the janitor sees you reach for his key ring.
+You reach toward the brass ring, but pull back your hand. You were almost caught!
 
 The janitor heads to the High Striker.
 
 >east
 
 High Striker
-You can see a janitor, a High Striker attendant, a lever, and some High Striker prizes here.
+You can see a janitor, a High Striker attendant, a bullseye, and some High Striker prizes here.
 
 
 >steal brass ring
-The janitor catches you as he turns to face you.
+You reach toward the brass ring, but pull back your hand. You were almost caught!
 
 >steal brass ring
-While the janitor is distracted, you manage to steal the brass ring from the janitor.
-
-Taken.
+While the janitor is distracted, you manage to steal the brass ring.
 
 >west
 
@@ -372,7 +370,7 @@ The concession stand is a destination for many along the midway. Twinkling light
 
 Behind the counter, popcorn churns in the machine, candy apples gleam, and cotton candy spins in clouds. Warm pretzels sit under a heat lamp, while sodas chill in a frosted cooler. The counter is cluttered with bags, napkins, and sprinkle cups. Kids tug at parents, teens share pretzels, and the crowd buzzes with energy.
 
-There is a menu to the right of the window. You can see the treats inside the stand. There are exits to the south, west, and northeast.
+There is a menu to the right of the window. You can see the treats inside the stand. There are exits to the south and northeast.
 
 Nearby a sturdy door leads south to the Carnival Office.
 
@@ -439,7 +437,7 @@ Taken.
 Taken.
 
 >open envelope
-You open the envelope, revealing a cashier's check.
+You open the envelope, revealing a check stub.
 
 >get check
 (putting the 14" long piece of string into the fanny pack to make room)
@@ -448,7 +446,7 @@ Taken.
 [Your score has just gone up by ten points.]
 
 >look at check
-This cashier's check is made payable to "Fred Needleman". The amount is $10,000 and the memo line reads "For services rendered."
+This check stub is for a check made payable to "Fred Needleman". The amount is $10,000 and the memo line reads "For services rendered."
 
 >north
 
@@ -537,6 +535,8 @@ Time passes.
 
 The performance begins with slow, undulating movements, drawing you into the rhythm of the music. Traditional instruments like the oud, darbuka, or zurna are an accompanying chorus. As the tempo builds, her hips, torso, and hands twist in an intricate and mesmerizing pattern. Little Egypt demonstrates remarkable control and fluidity. She dramatically spins, drops, and shimmies, often punctuating the beat with a quick jingle of her coin belt.
 
+Over the loudspeaker, an announcement blares: Attention please. There is a vehicle being towed from the parking lot for parking illegally. The license plate of the car is "862901". You breathe a sigh of relief as you realize that's not your license plate. I guess it's a good thing you remembered to place the parking stub on the dashboard.
+
 >wait
 Time passes.
 
@@ -621,8 +621,6 @@ In the pile of junk is a flashlight.
 >get flashlight
 Taken.
 
-Over the loudspeaker, an announcement blares: Attention please. There is a vehicle being towed from the parking lot for parking illegally. The license plate of the car is "862901". You breathe a sigh of relief as you realize that's not your license plate. I guess it's a good thing you remembered to place the parking stub on the dashboard.
-
 [Your score has just gone up by five points.]
 
 >turn it on
@@ -648,7 +646,7 @@ You can see a cashier here.
 >east
 
 High Striker
-You can see a High Striker attendant, a lever, and some High Striker prizes here.
+You can see a High Striker attendant, a bullseye, and some High Striker prizes here.
 
 
 >east
@@ -659,7 +657,7 @@ Hey! Is that a two dollar bill on the ground?
 You can also see a janitor and a Ferris Wheel attendant here.
 
 >look at janitor
-The janitor looks at you and waits for you to proceed.
+The janitor looks bored as he waits for you to speak.
 
 The janitor is a portly gentleman wearing dirty overalls, leaning on a broom. He complains that he's missing his flashlight. "My pliers are missing too!" he says.
 
@@ -671,7 +669,7 @@ The janitor heads to the High Striker.
 >west
 
 High Striker
-You can see a janitor, a High Striker attendant, a lever, and some High Striker prizes here.
+You can see a janitor, a High Striker attendant, a bullseye, and some High Striker prizes here.
 
 
 >west
@@ -859,7 +857,7 @@ The janitor arrives from the Head of the Line.
 >east
 
 High Striker
-You can see a High Striker attendant, a lever, and some High Striker prizes here.
+You can see a High Striker attendant, a bullseye, and some High Striker prizes here.
 
 
 >hit bullseye with sledgehammer
@@ -1383,7 +1381,7 @@ You have received points for the following:
 ?  Finding the Oriental Trading invoice:     5 points
 ?  Finding the Frank's Market invoice:       5 points
 ?  Finding the Mystic Industries invoice:    5 points
-?  Acquiring the cashier's check:            10 points
+?  Acquiring the cashier's check stub:       10 points
 ?  Wearing the sheer veil:                   5 points
 ?  Taking the lantern:                       5 points
 ?  Finding the Dark Passage:                 5 points
@@ -1414,31 +1412,38 @@ Mr Whidbey looks at you expectantly.
 
 Mr. Whidbey's eyes dart up and to the left.
 
+You've collected some new evidence.
 
 You've discovered some evidence. To see a list and weighting of the evidence you've collected, type "SHOW EVIDENCE". To collect more evidence, try to ASK someone ABOUT something. Or SHOW something TO someone.
 
 >show the insurance policy to whidbey
 "An insurance policy? Of course, all reputable business have insurance. Even small time carnivals", Mr Whidbey stammers.
 
+You've collected some new evidence.
+
 >ask whidbey about insrance
 Mr Whidbey nervously shifts his weight from one foot to the other.
 
-"Sorry, I don't know much about that," Mr Whidbey exclaims.
+"I'm afraid I haven't the faintest," Mr Whidbey exclaims.
 
 >ask whidbey about insurance
 Mr Whidbey looks at you expectantly.
 
 "An insurance policy? Of course, all reputable businesses have insurance. Even small time carnivals" Mr Whidbey stammers.
 
+You've collected some new evidence.
+
 >ask whidbey about cash 'n' carry
 Mr Whidbey nervously shifts his weight from one foot to the other.
 
-"Hmm, you've got me there," Mr Whidbey drawls.
+"Hmm, I don't know much about that," Mr Whidbey drawls.
 
 >ask whidbey about invoices
 Mr Whidbey looks at you expectantly.
 
 Mr Whidbey says, "I know this doesn't look good but the cost of consumables go up every week and attendance is down. I have to pinch pennies somehow, don't I? And that fire was very expensive to repair."
+
+You've collected some new evidence.
 
 >show cash 'n' carry to whidbey
 (first taking the Cash 'N' Carry invoice)
@@ -1446,18 +1451,25 @@ Mr Whidbey says, "Money's a little tight. The cost of consumables go up every we
 
 Mr. Whidbey's eyes dart up and to the left.
 
+You've collected some new evidence.
 
 >show frank's market to whidbey
 (first taking the Frank's Market invoice)
 Mr Whidbey says, "I can't keep up with the cost of ingredients. Everything costs so much!"
 
+You've collected some new evidence.
+
 >show oriental trading to whidbey
 (first taking the Oriental Trading invoice)
 Mr Whidbey says, "There must be prizes for the games otherwise visitors wouldn't play them. Maybe people won't win so often."
 
+You've collected some new evidence.
+
 >show mystic industries to whidbey
 (first taking the Mystic Industries invoice)
 Mr Whidbey says, That fire in Hell Ride was very expensive to repair. And it put the ride out of commission for two weeks."
+
+You've collected some new evidence.
 
 >show evidence
   Weight   Evidence collected:
@@ -1475,68 +1487,97 @@ You haven't got enough evidence for an arrest.
 Mr Whidbey says "Uh, Fred is a special... contractor... We paid him. For services rendered."
 
 Mr. Whidbey quickly changes the subject
+You've collected some new evidence.
 
 >ask whidbey about hell ride
-Mr Whidbey waits for you to speak.
+Mr Whidbey nervously shifts his weight from one foot to the other.
 
 "Hell Ride is the premier attraction here at Whidbey Amusements. It's both spooky and fun! The visitors love it! The fire last month was unfortunate and expensive" says Mr Whidbey.
 
 >ask whidbey about pliers
-Mr Whidbey looks at you expectantly.
+Mr Whidbey waits for you to speak.
 
 "Oh! I thought I lost... um, those belong to the janitor. Where did you find them?" asks Mr Whidbey.
+
+You've collected some new evidence.
 
 >show indigo fuse to whidbey
 You can only do that to something animate.
 
 >ask janitor about hell ride
-The janitor looks at you expectantly.
+The janitor looks at you and waits for you to proceed.
 
 "Hell Ride is a finicky ride. I'm fixing something there every week. Last week, Mr. Whidbey asked me to skip Hell Ride's maintenance slot. There was a real fire in the Stakes Room last month. And just yesterday I caught him creeping around the guillotine room" says the janitor.
 
+You've collected some new evidence.
+
 >ask janitor about ferris wheel
-The janitor looks at you and waits for you to proceed.
+The janitor looks at you expectantly.
 
 The janitor remarks, "The other day, I found a bolt on one of the gondolas so loose it had almost come off. That would have been a tragedy!"
 
+You've collected some new evidence.
+
 >ask janitor about bumper cars
-The janitor looks bored as he waits for you to speak.
+The janitor looks at you and waits for you to proceed.
 
 The janitor says, "That reminds me. Not long ago, one of the bumper cars was shorting out and electrifying the car. A visitor got hurt. A young lad, what was his name? Fred something, I think."
 
+You've collected some new evidence.
+
 >ask janitor about whidbey
-The janitor looks at you and waits for you to proceed.
+The janitor looks bored as he waits for you to speak.
 
 The janitor says , "Mr. Whidbey? He creeps me out. It always seems like he's hiding something. Just yesterday I caught him sneaking around the guillotine room in Hell Ride."
+
+You've collected some new evidence.
 
 >show cash 'n' carry to janitor
 The janitor says, "Man, this doesn't look good for the carnival."
 
+You've collected some new evidence.
+
 >show frank's to janitor
 The janitor says, "Looks like the carnival is in some financial trouble."
+
+You've collected some new evidence.
 
 >show oriental to janitor
 The janitor says, "These prizes are cheaper and flimsier than usual."
 
+You've collected some new evidence.
+
 >show mystic to janitor
 The janitor says, That fire in Hell Ride was really bad. It took almost two weeks to get it fully repaired. But it shouldn't have cost this much. I think Mr Whidbey got ripped off. Or, he got it fixed on the cheap and pocketed the rest."
+
+You've collected some new evidence.
 
 >show policy to janitor
 "An insurance policy? For a million dollars? Something is fishy for sure!" the janitor says.
 
+You've collected some new evidence.
+
 >show check to janitor
 The janitor says "What?! That's the name of the kid who got hurt in the Bumper Cars incident."
+
+You've collected some new evidence.
 
 >ask janitor about needleman
 The janitor looks at you expectantly.
 
 The janitor says, "That was the kid that got hurt on the bumper cars. It's a wonder he didn't sue the carnival for that."
 
+You've collected some new evidence.
+
 >show pliers to janitor
-"I've been missing those. Where did you find them?" asks the janitor.
+"I've been missing those. " says the janitor.
+
+You've collected some new evidence.
 
 >show pliers to whidbey
 "Oh! I thought I lost... I mean those belong to the janitor. Where did you find them?" asks Mr Whidbey.
+
+You've collected some new evidence.
 
 >show evidence
   Weight   Evidence collected:
@@ -1551,7 +1592,8 @@ The janitor says, "That was the kid that got hurt on the bumper cars. It's a won
 
 You've got enough evidence for a conviction.
 
->accuse whidbey of fraud
+>show evidence to chief
+(first taking the notebook)
 Mr Whidbey nervously shifts his weight from one foot to the other.
 
 "Ok, I guess you got me. The carnival was losing money and we were going to go out of business. I was desperate to turn things around.
@@ -1568,8 +1610,6 @@ He handcuffs Whidbey, thanks you for your service to the community, and leads Mr
 
     *** You have won! ***
 
-
-In that game you scored 200 out of a possible 200, in 235 turns.
 
 You've received 200 points out of a possible 200 in 235 moves!
 
@@ -1588,7 +1628,7 @@ You have received points for the following:
 ?  Finding the Oriental Trading invoice:     5 points
 ?  Finding the Frank's Market invoice:       5 points
 ?  Finding the Mystic Industries invoice:    5 points
-?  Acquiring the cashier's check:            10 points
+?  Acquiring the cashier's check stub:       10 points
 ?  Wearing the sheer veil:                   5 points
 ?  Taking the lantern:                       5 points
 ?  Finding the Dark Passage:                 5 points
@@ -1623,5 +1663,5 @@ You have received points for the following:
 You've got enough evidence for a conviction.
 
 
-Would you like to RESTART, RESTORE a saved game, QUIT, or UNDO the last command?
+Would you like to RESTART, RESTORE a saved game, QUIT, UNDO the last command, or HINTS?
 > 
