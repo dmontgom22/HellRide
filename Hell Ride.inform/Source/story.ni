@@ -39,7 +39,7 @@ You[']re a part-time reporter for The Tribune, the local newspaper. Earlier in t
 
 As you explore the carnival, you learn (the hard way) that the Hell Ride attraction is malfunctioning with the potential for serious injuries to the riders. You must disable the ride off and prevent any loss of life... including your own."
 The story creation year is 2025.
-The release number is 203.
+The release number is 204.
 	
 Chapter 3 - Extensions
 
@@ -763,13 +763,21 @@ understand "shit/piss/fuck/cunt/cocksucker/motherfucker/tits/prick/cock/damn/hel
 Section 16 - Singing
 
 Check an actor singing (this is the block singing rule):
-	say "[one of]Your singing is abominable.[or]You open your mouth expecting a warble and getting a squawk instead.[or]Don[']t give up your day job.[or]You can[']t carry a tune in a bucket.[at random]";
+	say "[one of]Your singing is abominable.[or]You open your mouth expecting a warble and get a squawk instead.[or]Don[']t give up your day job.[or]You can[']t carry a tune in a bucket.[at random]";
 	stop the action.
 
 singing is an action applying to nothing.
 Understand "sing" as singing.
 
-Section 17 - Stealing
+Section 17 - Riding
+
+riding is an action applying to one thing. understand "ride [something]" as riding.
+instead of riding the ferris wheel when the player carries the ferris wheel ticket and the location is the FW-room, try giving the ferris wheel ticket to the ferris wheel attendant.
+instead of riding the bumper cars when the player carries the bumper cars ticket and the location is the BC-room, try giving the bumper cars ticket to the bumper cars attendant.
+instead of riding the carousel when the player carries the carousel ticket and the location is the CR-room, try giving the carousel ticket to the carousel attendant.
+instead of riding the hell ride when the player carries the hell ride ticket and the location is the head of the line, try giving the hell ride ticket to the hell ride attendant.
+
+Section 18 - Stealing
 
 instead of taking the brass ring, say "That belongs to the janitor. Maybe you could steal it.".
 instead of taking the brass key, say "That belongs to the janitor. Maybe you could steal it.".
@@ -789,7 +797,7 @@ instead of stealing something:
 	otherwise:
 		say "Lowering yourself to a life of crime? You think better of it.".
 
-Section 18 - The Strings
+Section 19 - The Strings
 
 a thing has an object called tied to. the tied to of a thing is usually nothing. a thing can be tied or untied. a thing is usually untied. 
 
@@ -897,7 +905,7 @@ Carry out cutting it with:
 Report cutting it with:
 	say "You cut [the noun] with [the second noun]."
 
-Section 19 - Talking/Asking/Telling/Showing
+Section 20 - Talking/Asking/Telling/Showing
 
 Understand "talk about [text]" as talking randomly about. Talking randomly about is an action applying to one topic.
 instead of talking randomly about, say "No one wants to hear you prattle on about [the noun]."
@@ -915,7 +923,7 @@ Instead of telling an someone about something:
 Instead of showing something to an someone:
 	say "'[one of]Sorry,[or]I[']m afraid[or]Hmm,[at random] [one of]I don[']t know much about that[or]you[']ve got me there[or]I haven[']t the faintest[at random],' [the second noun] [one of]drawls[or]replies[or]comments[or]exclaims[at random].";
 
-Section 20 - Senses
+Section 21 - Senses
 
 instead of kissing, say "Oh, my! Why would you want to kiss [the noun]? Your sweetie wouldn[']t like that!".
 
@@ -945,7 +953,7 @@ instead of tasting something, say "Ew! You[']re weird!".
 a thing called music is a backdrop. the description of the music is "You can hear music in the air. Perhaps you should listen to it.".
 instead of listening to music, say "You can hear all the sounds of the carnival. The sounds of a calliope waft across the thoroughfare from the carousel. You can hear the laughter and screams as other patrons ride the rides and play the games.".
 
-Section 21 - Miscellaneous
+Section 22 - Miscellaneous
 
 [coins]
 a coin is a kind of thing. Understand "shiny" as a coin.
@@ -986,9 +994,10 @@ After reading a command (this is the ignore beta-comments rule):
 		say "(Noted.)";
 		reject the player's command.
 	
-Section 22 - Does The Player Mean
+Section 23 - Does The Player Mean
 
 [ticket booth]
+Does the player mean  buying the hell ride ticket when the location is the TB-room: it is very likely.
 Does the player mean doing something with the hell ride ticket when the location is the TB-room: it is very likely.
 Does the player mean doing something with the bumper cars ticket when the location is the TB-room: it is very likely.
 Does the player mean doing something with the ferris wheel ticket when the location is the TB-room: it is very likely.
@@ -1104,7 +1113,7 @@ Does the player mean doing something with Electrical Closet Seven's electrical p
 Does the player mean doing something with Electrical Closet Nine's electrical panel: it is very unlikely.
 Does the player mean doing something with Electrical Closet Eleven's electrical panel: it is very unlikely.
 
-Section 23 - Directions
+Section 24 - Directions
 
 Definition: a direction (called thataway) is viable if the room thataway from the location is a room.
 
@@ -1472,9 +1481,10 @@ Understand "[something related by reversed incorporation] indicator" as an indic
 Section 6 - Fuses
 
 [resolve printed names for fuses]
+T is text that varies. T is "".
 when play begins:
 	repeat with f running through fuses:
-		now the printed name of f is "[an color of f] colored fuse";
+		now the printed name of f is "[color of f] colored fuse";
 
 A fuse is a kind of thing. 
 Understand "fuse" as a fuse.
@@ -2107,7 +2117,7 @@ The CS-room is a room. The printed name is "Concession Stand". The CS-room is ou
 
 Behind the counter, popcorn churns in the machine, candy apples gleam, and cotton candy spins in clouds. Warm pretzels sit under a heat lamp, while sodas chill in a frosted cooler. The counter is cluttered with bags, napkins, and sprinkle cups. Kids tug at parents, teens share pretzels, and the crowd buzzes with energy.
 
-There is a menu to the right of the window. You can see the treats inside the stand. [if ferris wheel ridden is true]There are exits to the south and northeast.[otherwise]There are exits to the south, west, and northeast.[end if]"
+There is a menu to the right of the window. You can see the treats inside the stand. [if ferris wheel ridden is true]There are exits to the south, west, and northeast.[otherwise]There are exits to the south and northeast.[end if]"
 
 The concession attendant is an attendant in the CS-room. 
 
@@ -3106,7 +3116,7 @@ Before looking when the location is the Maintenance Office and the the player ca
 
 The Maintenance Office is a room. The maintenance office is south of the dark passage. "The maintenance office is a dim, cluttered space, filled with the smells of grease, sweat, and popcorn. Disorganized shelves are lined with tools and parts, while paint cans and grease jars clutter the workbenches. A battered desk holds wires, gears, and springs, with a bent piece of metal in a vise.
 
-A flickering fluorescent light barely brightens the room. In one corner, a disassembled ride mechanism hangs with chains and pulleys. A greasy manual and a half-empty coffee mug sit on a nearby stool.
+A flickering fluorescent light barely brightens the room. In one corner, a disassembled ride mechanism hangs with chains and pulleys. A greasy manual[if the coffee mug is on the maintenance desk] and a half-empty coffee mug sit[otherwise] sits[end if] on a nearby stool.
 
 Faded safety posters and a worn photo of the carnival decorate the walls, along with a corkboard full of schedules and notes[if the worn photo is in the location], and a worn photo of the carnival in its prime[end if]. The floor is gritty with dust and scattered nails. Despite the mess, the room buzzes with purpose and keeps the carnival running, fueled by sweat and ingenuity.
 
@@ -3175,8 +3185,19 @@ Instead of listening in the presence of the switched on radio:
 
 some scissors are in the drawer. The description is "This is a sharp pair of office scissors.". The scissors are plural-named.
 A stapler is in the drawer. The description is "This is a red stapler." 
-A ballpoint pen is in the drawer. The description is "Your standard ballpoint pen. It says Bic on the side." 
+A ballpoint pen is in the drawer. understand "bic" as ballpoint pen. The description is "Your standard ballpoint pen. It says Bic on the side." 
 A pad of paper is in the drawer. The description is "This is a pad of lined paper."
+
+writing it on is an action applying to one topic and one thing. understand "write [text] in/on [something]" as writing it on.
+instead of writing:
+	if the second noun is the pad of paper and the player carries the ballpoint pen:
+		say "You don[']t want to get your notes mixed up in two places and so you save your thoughts for your notebook.";
+	otherwise if the second noun is the notebook and the player carries the ballpoint pen:
+		say "You decide to save your notebook for evidence.";
+	otherwise if the player does not carry the ballpoint pen:
+		say "You have nothing to write with.";
+	otherwise:
+		say "You can[']t write on [the second noun].".
 
 An aqua colored door is a wooden door. The color of the aqua colored door is aqua.The description of the aqua colored door is "It[']s [printed name of item described]. It has the word 'Stocks' written on it." The silver key unlocks it. the aqua colored door is west of the Maintenance Office and east of the Stocks Room. 
 
@@ -3274,6 +3295,7 @@ instead of lowering something into the grate, try inserting the noun into the gr
 instead of inserting the string into the grate, try inserting the second noun into the grate.
 instead of lowering the string into the grate, try inserting the second noun into the grate.
 instead of putting something on the long string, try tying the noun to the long string.
+instead of taking fuse5 when the second noun is the bubblegum, try inserting the second noun into the grate.
 
 instead of inserting something into the grate:
 	if the noun is untied:
@@ -3937,6 +3959,7 @@ Section 16 - Table of Janitor Conversation Responses
 Table of Janitor Conversation Responses
 topic	description (text)	subject (text)	turn stamp (number)	weighting (number)	response (text)
 "janitor/themselves/himself/herself"	"Janitor"	"NA"	-1	0	"I[']m the maintenance engineer for the carnival. I[']ve been working here for the past four years."
+"worn/photo/photograph/picture"	"Carnival"	"NA"	-1	0	"What[']s this? 1962, huh? that was way before my time."
 "brass/ring/key" or "brass ring" or "brass key"	"Janitor"	"NA"	-1	0	"This? It[']s the master key for the carnival. I[']m the only one who has one."
 "hell/ride/guillotine" or "hell ride" or "guillotine room"	"Hell Ride"	"Accidents"	-1	5	"'[story title] is a finicky ride. I[']m fixing something there every week. Last week, Mr. Whidbey asked me to skip [story title][']s maintenance slot. There was a real fire in the Stakes Room last month. And just yesterday I caught him creeping around the guillotine room' says [the janitor]."
 "owner/Whidbey/mister/mr" or "Mr Whidbey"	"Mr Whidbey"	"Whidbey"	-1	5	"[The noun] says , 'Mr. Whidbey? He creeps me out. It always seems like he[']s hiding something. Just yesterday I caught him sneaking around the guillotine room in [story title].'"
@@ -4038,6 +4061,7 @@ Section 22 - Table of Whidbey Conversation Responses
 Table of Whidbey Conversation Responses
 topic	description (text)	subject (text)	turn stamp (number)	weighting (number)	response (text)
 "Mr Whidbey/themselves/himself/herself"	"Mr Whidbey"	"NA"	-1	0	"I[']ve been at the helm of Whidbey Amusements since 1991. We[']ve seen a lot of changes in that time."
+"worn/photo/photograph/picture"	"Carnival"	"NA"	-1	0	"I remember the night that picture was taken. It was quite the crew back them. More like family."
 "hell/ride/guillotine" or "hell ride" or "guillotine room"	"Hell Ride"	"NA"	-1	2	"'[story title] is the premier attraction here at Whidbey Amusements. It[']s both spooky and fun! The visitors love it! The fire last month was unfortunate and expensive' says [the noun]."
 "invoices/receipts/paperwork" or "the invoices" or "the receipts" or "the paperwork"	"Invoices"	"Invoices"	-1	3	"[The noun] says, 'I know this doesn[']t look good but the cost of consumables go up every week and attendance is down. I have to pinch pennies somehow, don[']t I? And that fire was very expensive to repair.'"
 "insurance/policy" or "insurance policy" or "the insurance policy"	"Insurance Policy"	"Insurance"	-1	1	"'An insurance policy? Of course, all reputable businesses have insurance. Even small time carnivals' [the noun] stammers."
