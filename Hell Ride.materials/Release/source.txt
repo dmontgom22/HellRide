@@ -459,7 +459,7 @@ instead of touching an attendant, say "Touching [the noun] without consent is li
 
 Section 11 - The Janitor
 
-the janitor is an a male person. the janitor is in the Head of the Line. The description of the janitor is "The janitor is a portly gentleman wearing dirty overalls, leaning on a broom.[if the janitor is wearing the brass ring] The janitor is wearing a brass ring with a key on it.[end if][if the janitor does not carry the flashlight] He complains that he[']s missing his flashlight.[end if][if the janitor does not carry the pliers] 'My pliers are missing too!' he says.[end if]". the janitor can be active or passive. the janitor is active.
+the janitor is an a male person. the janitor is in the Head of the Line. The description of the janitor is "The janitor is a portly gentleman wearing dirty overalls, leaning on a broom.[if the janitor is wearing the brass ring] The janitor is wearing a brass ring with a key on it.[end if][if the janitor does not carry the flashlight] He complains that he[']s missing his flashlight.[end if][if the janitor does not carry the pliers] He also mentions that his pliers are missing.[end if]". the janitor can be active or passive. the janitor is active.
 
 [the janitor walks]
 every turn when the janitor is active and janitor walking is true:
@@ -522,6 +522,8 @@ instead of giving the pliers to the janitor:
 		now the brass key is on the brass ring.
 	
 The brass ring is a keychain. understand "chain/keychain" as the brass ring. The description is "A ring to hold keys." The brass key is a passkey. The brass key unlocks the sturdy door and the metal door. the brass key is on the brass ring. the description of the brass key is "This is a shiny brass key. It must be important if the janitor has it.". The brass ring is worn by the janitor. 
+
+The broom is a thing. it is carried by the janitor. the description is "This is a normal corn broom.".
 
 Section 12 - Mr Whidbey
 
@@ -995,6 +997,13 @@ Does the player mean doing something with the carousel ticket when the location 
 Does the player mean doing something with the rolls when the location is the TB-room: it is very unlikely.
 Does the player mean doing something with the ticket kiosk when the location is the TB-room: it is very likely.
 
+[tickets]
+Does the player mean giving the hell ride ticket to the hell ride attendant: it is very likely.
+Does the player mean giving the bumper cars ticket to the bumper cars attendant: it is very likely.
+Does the player mean giving the ferris wheel ticket to the ferris wheel attendant: it is very likely.
+Does the player mean giving the fortune teller ticket to esmeralda: it is very likely.
+Does the player mean giving the carousel ticket to the carousel attendant: it is very likely.
+
 [hell ride]
 Does the player mean doing something with Hell Ride when the location is outdoors: it is very likely.
 Does the player mean doing something with the Hell Ride ticket when (the location of the player is the Head of the Line) and (the Hell Ride attendant is in the location of the player): it is likely.
@@ -1062,6 +1071,7 @@ Does the player mean doing something with the parking ticket: it is very unlikel
 
 [concession stand]
 does the player mean doing something with the machine: it is very unlikely.
+does the player mean doing something with the menu: it is unlikely.
 
 [grate]
 Does the player mean doing something with fuse5 when the location is Mechanical Room South: it is very likely.
@@ -1087,7 +1097,12 @@ Does the player mean doing something with emerald fuse when the location is Elec
 Does the player mean doing something with gray fuse when the location is Electrical Closet Seven: it is very likely.
 Does the player mean doing something with indigo fuse when the location is Electrical Closet Nine: it is very likely.
 Does the player mean doing something with khaki fuse when the location is Electrical Closet Eleven: it is very likely.
-
+Does the player mean doing something with Electrical Closet One's electrical panel: it is very unlikely.
+Does the player mean doing something with Electrical Closet Three's electrical panel: it is very unlikely.
+Does the player mean doing something with Electrical Closet Five's electrical panel: it is very unlikely.
+Does the player mean doing something with Electrical Closet Seven's electrical panel: it is very unlikely.
+Does the player mean doing something with Electrical Closet Nine's electrical panel: it is very unlikely.
+Does the player mean doing something with Electrical Closet Eleven's electrical panel: it is very unlikely.
 
 Section 23 - Directions
 
@@ -1583,6 +1598,7 @@ some scattered tools are here. they are scenery. the description is "These are v
 some thick cable bundles are here. they are scenery. understand "wires" as thick cable bundles. the description is "Thick cable bundles snake across the ceiling.".
 
 instead of smelling when the location is the electrical room, say "The air vibrates with electric energy, carrying the acrid scent of overheated wires and metal.".
+instead of listening when the location is the electrical room, say "You hear the buzz of electricity all around you.".
 
 The red switch is a device. it is part of the emergency shutdown panel. The red switch can be switched on or switched off. The red switch is switched on. The description of the red switch is "This is a big red switch, presumably to shut down the carnival rides.".
 
@@ -1615,7 +1631,7 @@ Dark Hallway is a dark room. "This is a poorly lit hallway. Ahead to the west yo
 
 Section 3 - Control Room
 
-Control Room is a dark room. "The backstage control room is a functional space with gray, scuffed walls. A large monitor shows live feeds while control panels with dials, buttons, and lights manage the rides and systems. The panels [if switch count is 6]are lit[otherwise]remain oddly dark[end if].
+Control Room is a room. "The backstage control room is a functional space with gray, scuffed walls. A large monitor shows live feeds while control panels with dials, buttons, and lights manage the rides and systems. The panels [if switch count is 6]are lit[otherwise]remain oddly dark[end if].
 
 The hum of electronics is interrupted by a crackling radio: 'Maintenance to Bumper Cars - wrench needed!' Papers, tools, and coffee cups clutter the floor. A desk holds logs and schedules, and a corkboard displays charts and red-marked notes, including one that says 'Check Zipper circuit breakers.'
 
@@ -2352,7 +2368,7 @@ A poster of Taylor Swift is carried by the High Striker attendant. The descripti
 
 A bullseye is here. The bullseye is fixed in place. Understand "lever/striker/target/base" as bullseye. The description of the bullseye is "There is a bullseye on the base of the lever. I guess this is where you have to hit the mallet."
 
-A mallet is carried by the High Striker attendant.  The price of the mallet is $2.00. Understand "hammer" as mallet. The description of the mallet is "The mallet is over sized, perhaps to give you an advantage in the Strong Man game."
+A mallet is carried by the High Striker attendant.  The price of the mallet is $2.00. The description of the mallet is "The mallet is over sized, perhaps to give you an advantage in the Strong Man game."
 
 A strength pattern is a kind of value. The strength patterns are Weakling, Getting Stronger, Average, Almost There, Muscle Man.
 
@@ -2749,7 +2765,7 @@ after wearing the sheer veil, say "You wrap the veil around your head, shrouding
 
 the show tent is a thing in the ST-room. it is scenery. The description is "You are inside the Little Egypt Show. The attraction[']s facade is to the east. There are folding chairs organized neatly in rows.". 
 
-The Stage is here. The Stage is scenery. understand "market", "palace" as the stage. The description of the Stage is "The stage is decorated to resemble an Middle Eastern palace, featuring rich, colorful fabrics, brass ornaments, and lanterns casting a warm, flickering glow. Scents of incense waft through the air, enhancing the atmosphere of mystique. The canvas displays painted scenes of pyramids, desert landscapes, and domed structures to evoking a sense of being transported to the 'Middle East'."
+The Stage is here. The Stage is scenery. understand "market", "palace" as the stage. The description of the Stage is "The stage is decorated to resemble a Middle Eastern palace, featuring rich, colorful fabrics, brass ornaments, and lanterns casting a warm, flickering glow. Scents of incense waft through the air, enhancing the atmosphere of mystique. The canvas displays painted scenes of pyramids, desert landscapes, and domed structures to evoking a sense of being transported to the 'Middle East'."
 
 some painted scenes are here. they are scenery. understand "pyramids", "pyramid", "desert", "landscapes", "domed", and "structures" as the painted scenes. the description is "The canvas displays painted scenes of pyramids, desert landscapes, and domed structures .".
 
@@ -2865,7 +2881,7 @@ Before looking when the location is the BC-room:
 	
 The BC-room is a room. The printed name is "Bumper Cars". The BC-room is northwest of the TB-room. The BC-room is outdoors. "The bumper cars are a lively scene of flashing lights and vibrant decorations. The arena is surrounded by padded barriers, ensuring the rider[']s safety. Cars in faded reds, blues, yellows, and greens glide across the slick floor, each equipped with a steering wheel and padded bumper. Riders maneuver their cars with intensity, creating a din of bumps and laughter. Overhead, electric poles hum with energy. While onlookers cheer from the sidelines, the bumper cars offer playful competition and nostalgic fun for all. The Ticket Kiosk is southeast of here."
 
-The Bumper Cars attendant is an attendant in the BC-room. 
+The Bumper Cars attendant is an attendant in the BC-room. understand "bumper car attendant" as the bumper cars attendant.
 
 instead of giving the bumper cars ticket to the bumper cars attendant:
 	say "You give [the noun] to [the second noun].";
@@ -3088,7 +3104,7 @@ After going south from the dark passage when the Maintenance Office is unvisited
 Before looking when the location is the Maintenance Office and the the player carries a lit electric lamp:
 	if show images is true, display Figure of MaintenanceOffice.
 
-The Maintenance Office is a dark room. The maintenance office is south of the dark passage. "The maintenance office is a dim, cluttered space, filled with the smells of grease, sweat, and popcorn. Disorganized shelves are lined with tools and parts, while paint cans and grease jars clutter the workbenches. A battered desk holds wires, gears, and springs, with a bent piece of metal in a vise.
+The Maintenance Office is a room. The maintenance office is south of the dark passage. "The maintenance office is a dim, cluttered space, filled with the smells of grease, sweat, and popcorn. Disorganized shelves are lined with tools and parts, while paint cans and grease jars clutter the workbenches. A battered desk holds wires, gears, and springs, with a bent piece of metal in a vise.
 
 A flickering fluorescent light barely brightens the room. In one corner, a disassembled ride mechanism hangs with chains and pulleys. A greasy manual and a half-empty coffee mug sit on a nearby stool.
 
@@ -3098,7 +3114,7 @@ Exits lead north and south."
 
 a maintenance workbench is here. it is scenery. understand "workbenches", "work" and "bench" as the maintenance workbench. the description is "The workbenches are messy, cluttered, and covered with things.".
 some faded labels are here. they are scenery. the description is "The labels have faded so much that they are illegible.".
-some shelves are here. they are scenery. the description is "The shelves hold all manner of things.".
+some maintenance shelves are here. they are scenery. the description is "The shelves hold all manner of things.".
 some maintenance tools are here. they are scenery. the description is "The tools are varied and surely fit all manner of things around the carnival.".
 some parts are here. they are scenery. the description is "The parts are varied and surely fit all manner of things around the carnival.".
 some wires are here. they are scenery. the description is "The wires lay in twisted tangles on the desk.".
@@ -3113,7 +3129,7 @@ a manual is here. It is scenery. The description of the manual is "The manual is
 a stool is here. It is a supporter. It is scenery.  The description is "This is just a stool.".
 some pulleys are here. they are scenery. understand "chains" as pulleys. The description is "The chains and pulleys hang from hooks on the ceiling.".
 some springs are here. they are scenery. understand "gears" as springs. The description is "The gears and springs are strewn on the desk.".
-a corkboard is here. it is scenery. The description is "The corkboard is covered with schedules and notes.".
+a corkboard is here. it is scenery. understand "cork/board" as the corkboard. The description is "The corkboard is covered with schedules and notes.".
 
 instead of listening when the location is the maintenance office, say "You can hear a clock ticking softly nearby.".
 
@@ -3196,7 +3212,7 @@ The Mechanical Room North is a dark room. The Mechanical Room North is south of 
 
 Circuit breaker panels line the walls, labeled for different functions. Cables and conduits connect the systems to the main hub. Flickering with gauges, a hydraulic pump in the corner manages lifting arms and platforms.
 
-A small workbench is cluttered with parts, while shelves above hold spare parts like cables and hydraulic tubing. A faded ride diagram with red annotations is pinned nearby. Dimly lit, the room feels cool and damp.
+A small workbench is cluttered with parts, while shelves above hold spare parts like cables and hydraulic tubing. A faded ride diagram with red annotations is pinned nearby. The room feels cool and damp.
 
 There are exists north and south." 
 
@@ -3209,6 +3225,8 @@ a sledgehammer is here. understand "sledge" as sledgehammer. The description of 
 
 instead of listening when the location is the mechanical room north, say "You hear the subdued hum of capacitors and relays.".
 
+some shelves are here. they are scenery. the description is "The shelves above hold spare parts.".
+a small workbench is here. it is scenery. understand "work/bench" as workbench. the description is "A small workbench is cluttered with parts.".
 some capacitors are here. they are scenery. understand "capacitor", "relay", and "relays" as the capacitors. the description is "The subdued hum of capacitors and relays fills the air.".
 some mechanical cables are here. they are scenery. understand "wires" as the mechanical cables. the description is "The cables snake along the walls.".
 some circuit breaker panels are here. understand "breakers" as the circuit breaker panels. they are scenery. the description is "These are electrical panels for other parts of the carnival.".
@@ -3228,10 +3246,11 @@ The Mechanical Room South is a dark room. The Mechanical Room South is south of 
 
 Conduits and wires snake across the ceiling, connecting systems. A cluttered table holds tools, spare parts, and maintenance logs stained with grease. The air smells of oil, metal, and ozone.
 
-A cooling fan struggles to cut the warmth as the hum of machinery mixes with the hiss of hydraulics and clinking chains. The floor is a patchwork of metal grates and worn concrete. Fluorescent lights illuminate the room, where every movement is precise and controlled.
+A cooling fan struggles to cut the warmth as the hum of machinery mixes with the hiss of hydraulics and clinking chains. The floor is a patchwork of metal grates and worn concrete. The room is busy; every movement is precise and controlled.
 
 You can travel north and south from here." 
 
+some mechanical tools are here. they are scenery. understand "spare/parts" as mechanical tools. the description is "There are some tools and spare parts on the table.".
 some panels are here. they are scenery. understand "electrical panel" and "panel" as the panels. the description is "These are electrical panels controlling other parts of the carnival.".
 some conduit wires are here. they are scenery. the description is "The wires snake across the ceiling, in and out of the conduits.".
 some conduits are here. they are scenery. the description is "The labeled conduits and wires snake across the ceiling.".
@@ -3270,7 +3289,7 @@ instead of inserting something into the grate:
 		otherwise:
 			say "Nothing happens.".
 
-instead of taking when the noun is contained by the grate, say "Your fingers won[']t fit inside the grate. You can[']t reach [the noun].[if fuse5 is contained by the grate] If only you could grab [the noun] with something.[end if]".
+instead of taking when the noun is contained by the grate, say "Your fingers won[']t fit inside the grate. You can[']t reach [the noun].[if fuse5 is contained by the grate]If only you could grab [the noun] with something.[end if]".
 
 A gray colored door is a wooden door. The color of gray colored door is gray. understand "door" as gray colored door. The description of gray colored door is "It[']s [printed name of item described]. It has the word 'Dungeon' written on it." The silver key unlocks it. gray colored door is west of the Mechanical Room South and east of the Dungeon. 
 
@@ -3285,7 +3304,8 @@ The room is the carnival's power source, hidden but essential.
 
 The backstage area continues north and south of here." 
 
-a workbench is here. it is scenery. the description is "This is a work bench. For working on things.".
+a flickering display is here. it is scenery. the description is "The display shows various power levels.".
+a workbench is here. it is scenery. understand "bench" as workbench. the description is "This is a work bench. For working on things.".
 the main generator is here. it is scenery. the description is "The main generator hums steadily.".
 graffiti is here. It is scenery. The description of the graffiti is "The graffiti is varied, from 'Peace, Love, Goodwill on Earth' to 'Anarchy Rules'.".
 some junction boxes are here. They are scenery. The description is "These are electrical junction boxes carrying the power throughout the carnival.".
@@ -3316,7 +3336,7 @@ The Storage Room is a dark room. The Storage Room is south of the Electrical Roo
 
 Shelves are packed with light bulbs, wire, and old ride parts. Flags, lights, and crates of toys clutter the space. In one corner, tarps and tent poles are stacked.
 
-Spare ride seats and an old carousel horse sit under tarps in the center. A cluttered desk holds schedules and coffee cups, with a bulletin board full of flyers. A flickering bulb casts uneven shadows.
+Spare ride seats and an old carousel horse sit under tarps in the center. A cluttered desk holds schedules and coffee cups, with a bulletin board full of flyers.
 
 The concrete floor is littered with scraps and dirt. Rats scurry and cobwebs move. This forgotten room stores the remnants of the carnival, waiting to be revived.
 
@@ -3870,8 +3890,9 @@ Table of Attendant Conversation Responses
 topic	description (text)	subject (text)	turn stamp (number)	weighting (number)	response (text)
 "attendant/themselves/himself/herself"	"Attendant"	"NA"	-1	0	"[one of]Oh, you know. I[']m just trying to get through school, make a few bucks, and marry my sweetie.[or]I get a job with the carnival everytime it[']s in town.[or]I should be studying for my SATs but my mom made me get this job.[or]I hope I don[']t have to work Friday night. That[']s when the big game is.[or]I hate this stupid uniform![or]I[']m just waiting for lunch. I[']m starving![at random]"
 "hell/ride/guillotine" or "hell ride" or "guillotine room"	"Hell Ride"	"Accidents"	-1	3	"[one of][story title] is scary. You won[']t catch me on it![or]Last time I rode [story title], I heard strange noises.[or][story title] is so old that It[']s falling apart. I wouldn[']t ride it.[or][story title] is behind on its maintenance schedule. Might want to skip that one.[at random]"
+"coupon"	"Coupon"	"NA"	-1	0	"That coupon will give you a $2.00 discount on parking."
 "carousel/merry/go/round" or "merry-go-round" or "the carousel" or "the merry-go-round"	"Carousel"	"NA"	-1	0	"[one of]I[']ve loved the carousel ever since I was a little kid![or]The lions are my favorite![or]I get dizzy when I ride the Merry Go Round[at random]"
-"bumper/car/cars" or "bumper cars" or "bumper car" or "the bumper cars" or "the bumper car"	"Bumper Cars"	"NA"	-1	0	"[one of]The bumper cars are so much fun. You[']re heading for someone[']s car and bam! you get hit instead![or]Last time I was on the bumper cars, I nailed everyone there![or]It[']s fun to knock other people[']s cars around![at random]"
+"bumper" or "bumper cars" or "bumper car" or "the bumper cars" or "the bumper car"	"Bumper Cars"	"NA"	-1	0	"[one of]The bumper cars are so much fun. You[']re heading for someone[']s car and bam! you get hit instead![or]Last time I was on the bumper cars, I nailed everyone there![or]It[']s fun to knock other people[']s cars around![at random]"
 "Ferris/wheel" or "Ferris wheel" or "the Ferris wheel" or "the wheel"	"Ferris Wheel"	"NA"	-1	0	"[one of]Isn[']t the Ferris wheel so romantic? I sure think so![or]Are you and your sweetie going to ride the Ferris wheel?[or]You can see the whole carnival from up there![at random]"
 "fortune/teller/Esmeralda/mysterious/woman" or "fortune teller" or "the fortune teller"	"Esmeralda"	"NA"	-1	0	"[one of]Esmeralda? She[']s down-right spooky. I asked her for a tarot reading, and boy, the things she told me![or]Esmeralda? She read my palm. I don[']t know how she knew the things she told me.[or]Esmeralda? She[']s been with the carnival for so long that no one knows how old she is, and yet, she looks so young. She[']s been here forever![at random]"
 "high/striker" or "high striker" or "the high striker"	"High Striker"	"NA"	-1	0	"[one of]You[']re a strong guy. Go for it![or]Win a prize for your sweetie![or]Swing the mallet and ring the bell![at random]"
@@ -3916,6 +3937,7 @@ Section 16 - Table of Janitor Conversation Responses
 Table of Janitor Conversation Responses
 topic	description (text)	subject (text)	turn stamp (number)	weighting (number)	response (text)
 "janitor/themselves/himself/herself"	"Janitor"	"NA"	-1	0	"I[']m the maintenance engineer for the carnival. I[']ve been working here for the past four years."
+"brass/ring/key" or "brass ring" or "brass key"	"Janitor"	"NA"	-1	0	"This? It[']s the master key for the carnival. I[']m the only one who has one."
 "hell/ride/guillotine" or "hell ride" or "guillotine room"	"Hell Ride"	"Accidents"	-1	5	"'[story title] is a finicky ride. I[']m fixing something there every week. Last week, Mr. Whidbey asked me to skip [story title][']s maintenance slot. There was a real fire in the Stakes Room last month. And just yesterday I caught him creeping around the guillotine room' says [the janitor]."
 "owner/Whidbey/mister/mr" or "Mr Whidbey"	"Mr Whidbey"	"Whidbey"	-1	5	"[The noun] says , 'Mr. Whidbey? He creeps me out. It always seems like he[']s hiding something. Just yesterday I caught him sneaking around the guillotine room in [story title].'"
 "invoices/receipts/paperwork"or "the invoices"	"Invoices"	"Invoices"	-1	1	"[The noun] says, 'Wow! This doesn[']t look good. It looks like the carnival owes a lot of money! Cash [']N['] Carry provides every day supplies. Why is this overdue? I hope I don[']t lose my job!'"
@@ -3935,7 +3957,7 @@ topic	description (text)	subject (text)	turn stamp (number)	weighting (number)	r
 "rides/attractions" or "the attractions"	"Attractions"	"Accidents"	-1	1	"'Almost every ride is falling apart. I do what I can to keep things in good repair but it[']s a lot of work' says [the noun]."
 "games/carnival" or "the carnival games"	"Carnival Games"	"NA"	-1	0	"'Crooked! Everyone of them. There[']s a secret to each one of them' [the noun] says."
 "pliers"	"Accidents"	"Accidents"	-1	1	"'My pliers have been missing.[if the janitor carries the pliers] Thanks for finding them.[end if]' [the noun] says."
-"flashlight" or "flash light"	"Accidents"	"Accidents"	-1	1	"'My flashlight! Where did you find it?' [the noun] exclaims."
+"flashlight" or "flash light"	"Accidents"	"Accidents"	-1	1	"[if the janitor carries the flashlight]'My flashlight! Where did you find it?'[otherwise]'I seem to have lost my flashlight'[end if] [the noun] says."
 
 Section 17 - Table of Janitor Object Responses
 
@@ -4144,6 +4166,7 @@ instead of crediting:
 	say "Andy Broding[line break]";
 	say "Drew Cook[line break]";
 	say "Max Fog[line break]";
+	say "Damien Karolev[line break]";
 	say "RJ Kowalski[line break]";
 	say "John Montgomery[line break]";
 	say "Andrew Schultz[paragraph break]";
@@ -4211,7 +4234,7 @@ Test Electrocution with "s / steal brass ring / steal brass ring / steal brass r
 
 Chapter 8 - Grues
 
-Test Grues with "s / buy hell ride ticket / s / give hell ride ticket to ride operator / s / e / s / s / s"
+Test Grues with "s / buy hell ride ticket / s / give hell ride ticket to ride operator / s / e / s / s / s / s"
 
 Chapter 9 - Miscellaneous
 
@@ -4282,7 +4305,7 @@ title (text)	subtable (table name)	description (text)	toggle (rule)	used (number
 "[story title] Origins"	--	""
 "Introduction to Interactive Fiction"	Table of IF Introduction	--
 "Settings"	Table of Setting Options	--	
-"Credits"	--	"[story title], Copyright 2025, Dana Montgomery.[paragraph break]Caitlyn Caluya-Bilbruck for her editing and proofreading super powers.[paragraph break]The following awesome individuals for their beta testing, excellent feedback, and ideas:[line break]Joey Acrimonious[line break]Ryan Allocco[line break]Andy Broding[line break]Drew Cook[line break]Max Fog[line break]RJ Kowalski[line break]John Montgomery[line break]Andrew Schultz[paragraph break]Additional Credits:[line break]The amazing Inform community over at https://IntFiction.org.[line break][line break]Extensions used in [story title]:[line break][complete list of extension credits][line break]The images were generated using ChatGPT.[line break]"
+"Credits"	--	"[story title], Copyright 2025, Dana Montgomery.[paragraph break]Caitlyn Caluya-Bilbruck for her editing and proofreading super powers.[paragraph break]The following awesome individuals for their beta testing, excellent feedback, and ideas:[line break]Joey Acrimonious[line break]Ryan Allocco[line break]Andy Broding[line break]Drew Cook[line break]Max Fog[line break]Damien Karolev[line break]RJ Kowalski[line break]John Montgomery[line break]Andrew Schultz[paragraph break]Additional Credits:[line break]The amazing Inform community over at https://IntFiction.org.[line break][line break]Extensions used in [story title]:[line break][complete list of extension credits][line break]The images were generated using ChatGPT.[line break]"
 "----- The Hints Below Contain Out Right Solutions -----"	--	"Part of the enjoyment of Interactive Fiction comes from the solving of the puzzles. For the most part all [story title] puzzles are solved within these hints. The hints are often blunt, especially at the end of a topic. I would, however, encourage you to play for the fun of it and reserve the hints for when you[']re truly stuck."
 "The Parking Lot"	Table of Parking Lot Hints	--
 "The Attractions"	Table of Attractions Hints	--
