@@ -3,13 +3,14 @@ Part 1 - World Model
 Chapter 1 - Inform Settings
 
 Release along with 
-	cover art, 
+	cover art ("Hell Ride Facade"), 
 	a website, 
 	an introductory booklet, 
 	the "Quixe" interpreter, 
 	the source text, 
 	the solution, 
-	and library card.
+	a library card,
+	and a file of "Hell Ride Map" called "Hell Ride Map.png".
 
 Use unabbreviated object names.
 Use maximum things understood at once of at least 500.
@@ -629,7 +630,7 @@ instead of examining the notebook:
 	otherwise:
 		say "You haven[']t collected any evidence yet.".
 
-showing evidence is an action out of world applying to nothing. Understand "show evidence" as showing evidence.
+showing evidence is an action out of world applying to nothing. Understand "show evidence" as showing evidence. understand "view evidence" as showing evidence. understand "review evidence" as showing evidence.
 carry out showing evidence:
 	try examining notebook.
 
@@ -1590,7 +1591,7 @@ An emergency shutdown panel and fire extinguisher sit nearby. Fluorescent lights
 Instead of going from the Electrical Room:
 	if the big switch is switched on:
 		now the player is in the generator room;
-		say "The electromagnetic energy that this room creates leaves you confused. Instead of going [the noun], you find yourself back in the Generator Room.";
+		say "The electromagnetic energy that this room creates leaves you confused. Instead of going [noun], you find yourself back in the Generator Room.";
 	otherwise:
 		continue the action.
 
@@ -2567,7 +2568,7 @@ a baseball is a kind of thing. Understand "ball" as baseball.The Pitchers Mound 
 
 some Pitchers Mound spectators are here. they are scenery. the description is "The satisfying clatter of falling bottles mixes with cheers and groans from players and spectators.".
 
-the Pitchers Mound booth is here. it is scenery. the description is "With its colorful banners and flashing lights, the booth buzzes with energy, drawing a crowd. [if a dime underlies the pitchers mound booth] You can see something shiny on the ground under the booth.[end if].".
+the Pitchers Mound booth is here. it is scenery. the description is "With its colorful banners and flashing lights, the booth buzzes with energy, drawing a crowd. [if a dime underlies the pitchers mound booth] You can see something shiny on the ground under the booth.[end if]".
 
 a Mercury dime is a dime. it underlies the pitchers mound booth. The description is "The Mercury dime is a ten-cent coin struck by the United States Mint from late 1916 to 1945. Designed by Adolph Weinman and also referred to as the Winged Liberty Head dime, it gained its common name because the obverse depiction of a young Liberty, identifiable by her winged Phrygian cap, was confused with the Roman god Mercury. It is 90% silver, 10% copper, and has a weight of 2.50 grams.".
 
@@ -3090,7 +3091,6 @@ A wooden door is usually locked.
 A wooden door has a color. A wooden door is usually nondescript. 
 The initial appearance of a door is usually "Nearby [an item described] leads [if the other side of the item described is visited][direction of the item described from the location] to [the other side of the item described][otherwise][direction of the item described from the location][end if]."
 The description of a wooden door is "The [color of the item described] door is [if the item described is open]open[otherwise]closed[end if]. It is [if the item described is locked]locked[otherwise]unlocked[end if]."
-The printed name of a wooden door is "[a color of the item described] colored door".
 
 Section 2 - Dark Passage
 
@@ -3135,7 +3135,7 @@ some safety posters are here. They are scenery. The description is "You[']re the
 some notes are here. They are scenery. understand "schedules" as the notes. The description is "Looking at the maintenance schedules and notes, all you can see are the illegible scribbles of a child.".
 a clock is here. It is scenery. The description is "The clock is wildly off the correct time. I guess it[']s broken.".
 some lubricant is here. It is scenery. The description is "It[']s lubricant. It[']s slippery.".
-a manual is here. It is scenery. The description of the manual is "The manual is titled: 'Fixing Your Ferris Wheel. It[']s Easier Than You Think!'".
+a manual is here. It is scenery. understand "manuals" as the manual. The description of the manual is "The manual is titled: 'Fixing Your Ferris Wheel. It[']s Easier Than You Think!'".
 a stool is here. It is a supporter. It is scenery.  The description is "This is just a stool.".
 some pulleys are here. they are scenery. understand "chains" as pulleys. The description is "The chains and pulleys hang from hooks on the ceiling.".
 some springs are here. they are scenery. understand "gears" as springs. The description is "The gears and springs are strewn on the desk.".
@@ -3151,7 +3151,7 @@ Instead of drinking the coffee mug for the first time: say "That looks nasty. Th
 Instead of drinking the coffee mug for the second time: say "You decide to drink it after all. Your stomach lurches as the cold, nasty coffee settles." instead.
 Instead of drinking the coffee mug for the third time: say "You[']ve learned your lesson and set the coffee cup down." instead.
 
-A maintenance desk is in the maintenance office. The printed name of the maintenance desk is "desk". The maintenance desk is a supporter. The maintenance desk is fixed in place. The description of the maintenance desk is "It[']s a desk. There are coffee stains and cigarette burns from years of abuse. The single drawer is [if the drawer is open]open[otherwise]shut[end if]."
+A maintenance desk is in the maintenance office. The printed name of the maintenance desk is "desk". The maintenance desk is an supporter. The maintenance desk is fixed in place. The description of the maintenance desk is "It[']s a desk. There are coffee stains and cigarette burns from years of abuse. The single drawer is [if the drawer is open]open[otherwise]shut[end if]."
 
 A drawer is part of the maintenance desk. The drawer is a closed openable container. The drawer is scenery. The description of the drawer is "The single drawer is [if the drawer is open]open[otherwise]shut[end if]."
 
@@ -3199,7 +3199,7 @@ instead of writing:
 	otherwise:
 		say "You can[']t write on [the second noun].".
 
-An aqua colored door is a wooden door. The color of the aqua colored door is aqua.The description of the aqua colored door is "It[']s [printed name of item described]. It has the word 'Stocks' written on it." The silver key unlocks it. the aqua colored door is west of the Maintenance Office and east of the Stocks Room. 
+An aqua colored door is a wooden door. The color of the aqua colored door is aqua.The description of the aqua colored door is "It[']s [printed name of item described]. It has the word 'Stocks' written on it." The silver key unlocks it. the aqua colored door is west of the Maintenance Office and east of the Stocks Room. The printed name of a aqua colored door is "[if the player is in the maintenance office][an color of the item described] colored [otherwise]wooden [end if]door".
 
 The ladder is an open door. A ladder is up from the Maintenance Office and down from the Dark Hallway.The description of the Ladder is "It[']s a typical 10 foot ladder."
 
@@ -3214,7 +3214,7 @@ The ground is uneven, a mix of dirt, gravel, and scattered tools. Pipes overhead
 
 The backstage area continues north and south."
 
-A crimson colored door is a wooden door. The color of crimson colored door is crimson. The description of crimson colored door is "It[']s [printed name of item described]. It has the word 'Gallows' written on it." The silver key unlocks it. crimson colored door is west of the Crawl Space and east of the Gallows Room. 
+A crimson colored door is a wooden door. The color of crimson colored door is crimson. The description of crimson colored door is "It[']s [printed name of item described]. It has the word 'Gallows' written on it." The silver key unlocks it. crimson colored door is west of the Crawl Space and east of the Gallows Room. The printed name of a crimson colored door is "[if the player is in the crawl space][an color of the item described] colored [otherwise]wooden [end if]door".
 
 some tangled wires are here. they are scenery. the description is "Scattered on the floor are some hopelessly tangled wires.". the tangled wires are plural-named.
 some forgotten tools are here. they are scenery. the description is "Scattered on the floor are some long forgotten tools.".
@@ -3259,7 +3259,7 @@ a mechanical workbench is here. It is scenery. Understand "work", "bench" as the
 hydraulic tubing is here. It is scenery. understand "spare" and "parts" as hydraulic tubing. The description is "Wires, spare parts, and hydraulic tubing is here.".
 a diagram is here. It is scenery. The description is "This is an electrical diagram for something.".
 
-An emerald colored door is a wooden door. The color of emerald colored door is emerald. The description of emerald colored door is "It[']s [printed name of item described]. It has the word 'Stake' written on it." The silver key unlocks it. emerald colored door is west of the Mechanical Room North and east of the Stake Room. 
+An emerald colored door is a wooden door. The color of emerald colored door is emerald. The description of emerald colored door is "It[']s [printed name of item described]. It has the word 'Stake' written on it." The silver key unlocks it. emerald colored door is west of the Mechanical Room North and east of the Stake Room. The printed name of a emerald colored door is "[if the player is in the mechanical room north][an color of the item described] colored [otherwise]wooden [end if]door".
 
 Section 6 - Mechanical Room South
 
@@ -3313,7 +3313,7 @@ instead of inserting something into the grate:
 
 instead of taking when the noun is contained by the grate, say "Your fingers won[']t fit inside the grate. You can[']t reach [the noun].[if fuse5 is contained by the grate]If only you could grab [the noun] with something.[end if]".
 
-A gray colored door is a wooden door. The color of gray colored door is gray. understand "door" as gray colored door. The description of gray colored door is "It[']s [printed name of item described]. It has the word 'Dungeon' written on it." The silver key unlocks it. gray colored door is west of the Mechanical Room South and east of the Dungeon. 
+A gray colored door is a wooden door. The color of gray colored door is gray. understand "door" as gray colored door. The description of gray colored door is "It[']s [printed name of item described]. It has the word 'Dungeon' written on it." The silver key unlocks it. gray colored door is west of the Mechanical Room South and east of the Dungeon. The printed name of a gray colored door is "[if the player is in the mechanical room south][an color of the item described] colored [otherwise]wooden [end if]door".
 
 Section 7 - Generator Room
 
@@ -3338,7 +3338,7 @@ some spark plugs are here. They are scenery. The description is "The spark plugs
 some wire coils are here. They are scenery. The description is " The wire coils littler the shelves.".
 a grease canister is here. It is scenery. The description is "This is a canister of grease used to provide proper lubrication to the machinery.".
 some diesel canisters are here. They are scenery. The description is "The canisters are full of diesel fuel.".
-a maintenance manual is here. It is scenery. The description is "The cover reads, 'Put The Bump In Your Bumper Cars'.".
+a maintenance manual is here. It is scenery. understand "manuals" as the maintenance manual. The description is "The cover reads, 'Put The Bump In Your Bumper Cars'.".
 a large panel is here. It is scenery. The description is "The panel looks important.".
 the work area is here. it is scenery. the description is "The work area is surprisingly uncluttered.". 
 a safety sign is here. it is scenery. the description is "The sign reads, 'Fuel Safety - No Open Flames!'".
@@ -3350,7 +3350,7 @@ instead of smelling when the location is the generator room, say "The air carrie
 
 instead of listening when the location is the generator room, say "The quiet separation from the carnival[']s chaos here serves as a stark reminder of the machinery driving the magic."
 
-An indigo colored door is a wooden door. The color of indigo colored door is indigo. The description of indigo colored door is "It[']s [printed name of item described]. It has the word 'Guillotine' written on it." The silver key unlocks it. An indigo colored door is west of the Generator Room and east of the Guillotine Room. 
+An indigo colored door is a wooden door. The color of indigo colored door is indigo. The description of indigo colored door is "It[']s [printed name of item described]. It has the word 'Guillotine' written on it." The silver key unlocks it. An indigo colored door is west of the Generator Room and east of the Guillotine Room. The printed name of a indigo colored door is "[if the player is in the generator room][an color of the item described] colored [otherwise]wooden [end if]door".
 
 Section 8 - Storage Room
 
@@ -3388,7 +3388,7 @@ some unassembled booths are here. they are scenery. the description is "It[']s i
 a flickering bulb is here. it is scenery. understand "light", "bulb", and "lightbulb" as the flickering bulb. the description is "The fluorescent bulb flickers overhead.".
 some storage cobwebs are here. they are scenery. the description is "There are cobwebs everywhere. I guess it[']s been a while since this place was cleaned.".
 
-A khaki colored door is a wooden door. The color of khaki colored door is khaki. The description of khaki colored door is "It[']s [printed name of item described]. It has the word 'Ride Exit' written on it." The silver key unlocks it. khaki colored door is west of the Storage Room and east of the Ride Exit. 
+A khaki colored door is a wooden door. The color of khaki colored door is khaki. The description of khaki colored door is "It[']s [printed name of item described]. It has the word 'Ride Exit' written on it." The silver key unlocks it. khaki colored door is west of the Storage Room and east of the Ride Exit. The printed name of a khaki colored door is "[if the player is in the storage room][an color of the item described] colored [otherwise]wooden [end if]door".
 	
 instead of smelling when the location is the storage room, say "The air hangs heavy with grease, dust, damp canvas, and a faint trace of stale popcorn.".
 
