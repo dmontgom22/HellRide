@@ -6,7 +6,7 @@
 	</info>
 	<map>
 		<room id="1" name="Parking Lot" subtitle="" x="128" y="-320" w="96" h="64" region="Midway" handDrawn="no" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" isStartRoom="yes" description="The lot stretches across an open field, gravel crunching under the tires of arriving cars. Floodlights and the carnival's colorful glow light the area, accompanied by distant laughter, music, and the hum of rides." roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSubtitleColor="" roomSmallText="" ZOrder="0">
-			<objects>[2] Gloves|[1] 14" Piece of String|[2] Dimes|[2] Keys</objects>
+			<objects>[2] Gloves|[1] 14" Piece of String|[2] Dimes|[2] NIckel|[2] Quarters|[2] Keys</objects>
 		</room>
 		<room id="2" name="Ticket Booth" subtitle="" x="128" y="-160" w="96" h="64" region="Midway" handDrawn="no" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="Painted in bright red and yellow stripes, the ticket kiosk stands at the entrance with flickering lights to draw attention. A smiling cashier hands out tickets, while the cash drawer jingles. A digital payment system sits in the corner. Too bad you don't have a debit card." roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSubtitleColor="" roomSmallText="" ZOrder="0">
 			<objects>[1] Hell Ride Ticket|[1] Ferris Wheel Ticket|[1] Bumper Cars Ticket|[1] Carousel Ticket|[1] Fortune Teller Ticket</objects>
