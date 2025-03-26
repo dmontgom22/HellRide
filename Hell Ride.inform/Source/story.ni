@@ -6,7 +6,7 @@ Release along with
 	cover art ("Hell Ride Facade"), 
 	a website, 
 	an introductory booklet, 
-	the "Quixe" interpreter, 
+	the "Quixe" interpreter,
 	the source text, 
 	the solution, 
 	a library card,
@@ -31,20 +31,26 @@ The block giving rule is not listed in the check giving it to rules.
 Chapter 2 - Library Card Settings
 
 The story title is "Hell Ride".
-The story author is "No Shoes".
+The story author is "Dana Montgomery".
 The story headline is "The ride of a lifetime...".
-The story genre is "Horror".
-The story description is "[story title] - A ride to remember...
+The story genre is "Mystery".
+The story description is "Hell Ride - A ride to remember...
 
 You[']re a part-time reporter for The Tribune, the local newspaper. Earlier in the day, your editor called you and told you of a conversation he overheard between the Chief of Police and his Deputy about Whidbey Amusements. It seems there has been a rash of accidents and mishaps at the carnival. Sounds like there could be something suspicious going on. The editor wants you to collect evidence and write a hard hitting piece about this story. If you do a good job, maybe the paper will hire you on full-time.
 
 As you explore the carnival, you learn (the hard way) that the Hell Ride attraction is malfunctioning with the potential for serious injuries to the riders. You must disable the ride off and prevent any loss of life... including your own."
 The story creation year is 2025.
-The release number is 204.
+The release number is 1.
 	
 Chapter 3 - Extensions
 
 Include Modified Exit by Emily Short.
+
+Include Hacking by Mathbrush.
+
+Include Glulx Entry Points by Emily Short.
+
+Include Simple Multimedia Effects For V10 by Mathbrush.
 
 Include Locksmith by Emily Short.
 
@@ -507,20 +513,28 @@ instead of showing something to the janitor:
 instead of telling the janitor about something: try asking the noun about it.
 
 instead of giving the flashlight to the janitor:
-	say "Hey! Thanks, I really appreciate it. I[']ve been lost without my flashlight.";
-	now the flashlight is carried by the janitor;
 	if the pliers are carried by the janitor:
-		say "The janitor says, 'Thanks for returning my pliers and flashlight.[if the janitor holds the brass key] Here, take this key.[end if]'";
-		now the player carries the brass ring;	
-		now the brass key is on the brass ring.
+		if the janitor wears the brass ring:
+			say "[The second noun] says, 'Thanks for returning my pliers and flashlight. Here, take this key.'";
+		otherwise:
+			say "[The second noun] says, 'Thanks for returning my pliers and flashlight.";
+		now the brass ring is carried by the player;
+		say "Taken.";
+	otherwise:
+		say "'Hey! Thanks. I really appreciate it. I[']ve been lost without my flashlight,' says [the second noun].";
+	now the flashlight is carried by the janitor.
 	
 instead of giving the pliers to the janitor:
-	say "Hey! Thanks, These have been missing from my tool box. Where did you find them?";
-	now the pliers are carried by the janitor;
 	if the flashlight is carried by the janitor:
-		say "The janitor says, 'Thanks for returning my pliers and flashlight.[if the janitor holds the brass key] Here, take this key.[end if]'";
-		now the player carries the brass ring;	
-		now the brass key is on the brass ring.
+		if the janitor wears the brass ring:
+			say "[The second noun] says, 'Thanks for returning my pliers and flashlight. Here, take this key.'";
+		otherwise:
+			say "[The second noun] says, 'Thanks for returning my pliers and flashlight.";
+		now the brass ring is carried by the player;
+		say "Taken.";
+	otherwise:
+		say "'Hey! Thanks. These have been missing from my tool box. Where did you find them?' asks [the second noun].";
+	now the pliers are carried by the janitor.
 	
 The brass ring is a keychain. understand "chain/keychain" as the brass ring. The description is "A ring to hold keys." The brass key is a passkey. The brass key unlocks the sturdy door and the metal door. the brass key is on the brass ring. the description of the brass key is "This is a shiny brass key. It must be important if the janitor has it.". The brass ring is worn by the janitor. 
 
@@ -561,7 +575,7 @@ instead of asking Mr Whidbey about a topic listed in the Table of Whidbey Conver
 		now total entry is total entry plus W;
 		now total evidence is total evidence plus W;
 		say "You[']ve collected some new evidence.";
-	increment WhidbeyQuestions;
+	increment WhidbeyQuestions.
 		
 instead of showing something to Mr Whidbey:
 	if there is an object of the noun in the Table of Whidbey Object Responses:
@@ -570,7 +584,7 @@ instead of showing something to Mr Whidbey:
 		if  remainder after dividing WhidbeyQuestions by 4 is 0:
 			say "[one of]Mr. Whidbey[']s eyes dart up and to the left.[or]Mr. Whidbey quickly changes the subject[or]Mr. Whidbey meets your eyes and quickly looks away.[cycling][line break]";
 		let S be the subject entry;
-		let W be the weighting entry;
+		let W be the weighting entry;		
 		if the turn stamp entry is -1 and S is not "NA":
 			now the turn stamp entry is the turn count;
 			choose a row with an category of S in Table of Notebook;
@@ -595,7 +609,7 @@ confession is a truth state that varies. confession is false.
 instead of confronting Mr Whidbey about a topic listed in the Table of Confrontation:
 	if total evidence is less than 36:
 		say "[The noun] says. 'You don[']t have enough evidence to confront anyone about anything.'";
-	if total evidence is less than 76:
+	otherwise if total evidence is less than 76:
 		say "'Any evidence you have is circumstantial. It[']ll be thrown out on day one of the trial!', says [the noun]";
 	otherwise if hell ride disabled is false:
 		say "As much as you would like to confront [the noun] about [the topic understood] you should probably take care of disabling [story title] first.";
@@ -614,7 +628,7 @@ He handcuffs Whidbey, thanks you for your service to the community, and leads Mr
 			
 instead of confronting somebody about something, say "There[']s no need to confront [the noun] about [the topic understood].".
 
-Section 13 - Evidence and Accusations
+Section 13 - Evidence
 
 instead of examining the notebook:
 	if total evidence is greater than 0:
@@ -1391,7 +1405,6 @@ Electrical Closet Seven is a dark electrical closet southwest of the electrical 
 Electrical Closet Nine is a dark electrical closet west of the electrical room. "This is Electrical Closet Nine. There[']s an electrical panel here and an exit to the east."
 Electrical Closet Eleven is a dark electrical closet northwest of the electrical room. "This is Electrical Closet Eleven. There[']s an electrical panel here and an exit to the southeast."
 
-A silver key is in the Electrical Closet One. The description of the silver key is "This is a small silver key. I wonder what it unlocks."
 
 Section 3 - Electrical Panels
 
@@ -1949,7 +1962,7 @@ instead of looking when the player is in the beater car, try examining the beate
 
 A blueberry bush is here. the blueberry bush is scenery. the blueberry bush is a container.  The description is "This is a high bush blueberry plant.". The blueberry bush is not portable. the blueberry bush contains some blueberries. Understand "bushes" as blueberry bush.
 
-Understand "berries" as blueberries. The blueberries are edible. The description of the blueberries is "The blueberries are ripe and juicy.". The blueberries can be consumed or uneaten. The blueberries are uneaten. understand "Pick [blueberries]" as taking.
+Understand "berries" as blueberries. The blueberries are edible. The description of the blueberries is "The blueberries are ripe and juicy.". The blueberries can be consumed or uneaten. The blueberries are uneaten. understand "Pick [blueberries]" as taking. The blueberries are plural-named.
 	
 instead of eating the blueberries when the blueberries are uneaten:
 	say "The blueberries were delicious. A true taste of summer!";
@@ -3191,6 +3204,8 @@ A stapler is in the drawer. The description is "This is a red stapler."
 A ballpoint pen is in the drawer. understand "bic" as ballpoint pen. The description is "Your standard ballpoint pen. It says Bic on the side." 
 A pad of paper is in the drawer. The description is "This is a pad of lined paper."
 
+A silver key is in the drawer. The description of the silver key is "This is a small silver key. I wonder what it unlocks."
+
 writing it on is an action applying to one topic and one thing. understand "write [text] in/on [something]" as writing it on.
 instead of writing:
 	if the second noun is the pad of paper and the player carries the ballpoint pen:
@@ -3579,14 +3594,19 @@ After going north from the Ride Exit when the Guillotine Room is unvisited:
 Before looking when the location is the Guillotine Room:
 	if show images is true, display Figure of RideGuillotine.
 	
+after going west from the generator room:
+	if the guillotine room is unvisited:
+		say "[line break]As you enter the room, you can see Mr Whidbey across the way. He seems to be doing something around the guillotine platform. You walk closer to see what he is doing and startle him. Mr Whidbey spins around and glares at you. As he turns and walks out of the room, you think you saw him drop something.";
+	continue the action.
+
 after going south from the dungeon:
 	if the guillotine room is unvisited:
-		say "As you enter the room, you can see Mr Whidbey across the way. He seems to be doing something around the guillotine platform. You walk closer to see what he is doing and startle him. Mr Whidbey spins around and glares at you. As he turns and walks out of the room, you think you saw him drop something.";
+		say "[line break]As you enter the room, you can see Mr Whidbey across the way. He seems to be doing something around the guillotine platform. You walk closer to see what he is doing and startle him. Mr Whidbey spins around and glares at you. As he turns and walks out of the room, you think you saw him drop something.";
 	continue the action.
 
 after going north from the ride exit:
 	if the guillotine room is unvisited:
-		say "As you enter the room, you can see Mr Whidbey across the way. He seems to be doing something around the guillotine platform. You walk closer to see what he is doing and startle him. Mr Whidbey spins around and glares at you. As he turns and walks out of the room, you think you saw him drop something.";
+		say "[line break]As you enter the room, you can see Mr Whidbey across the way. He seems to be doing something around the guillotine platform. You walk closer to see what he is doing and startle him. Mr Whidbey spins around and glares at you. As he turns and walks out of the room, you think you saw him drop something.";
 	continue the action.
 
 The Guillotine Room is south of the Dungeon. "[description corresponding to the locale of Guillotine Room in the Table of Hell Ride Events]"
@@ -4155,7 +4175,7 @@ Section 27 - Introduction to Hell Ride
 
 When play begins:
 	choose row 1 in Table of Help Options;
-	now description entry is "[story title] - A ride to remember...
+	now description entry is "Hell Ride - A ride to remember...
 
 You[']re a part-time reporter for The Tribune, the local newspaper. Earlier in the day, your editor called you and told you of a conversation he overheard between the Chief of Police and his Deputy about Whidbey Amusements. It seems there has been a rash of accidents and mishaps at the carnival. Sounds like there could be something suspicious going on. The editor wants you to collect evidence and write a hard hitting piece about this story. If you do a good job, maybe the paper will hire you on full-time.
 
@@ -4165,12 +4185,12 @@ Section 28 - Hell Ride Origins
 
 When play begins:
 	 choose row 2 in Table of Help Options;
-	 now description entry is "[story title] - A ride to remember...
+	 now description entry is "Hell Ride - A ride to remember...
 
 In the early 1980[']s, I had an Apple [close bracket][bracket]  Plus computer with 64K of RAM, dual 5.25[quotation mark] floppy disks, and a color monitor as big as a television. And the very first game I ever bought was Infocom[']s Zork I: The Great Underground Empire. This was cool. It was all text-based. The game described your surroundings and you interacted with commands that say what you wanted to do. This 'Interactive Fiction' really evoked in a game what I appreciated most about reading: rich descriptions, colorful characters, and the like. After Zork I, there was Zork II and III. Enchanter, Moonmist, Suspect, and so many 
 more. I played them all with my best friend Andy.
 
-Andy and I were software developers at the time and we thought, 'We can do this!' So we set out to do this. We developed a game engine with a natural language parser. And it was pretty good. We could support most of the kinds of things they did, certainly less graceful but pretty good. In fact, our parser was better than Infocom[']s in one case where the sentence was ambiguous. e.g. 'Walk into the room with the lamp.' Is the player carrying the lamp? Or is the lamp in the room? 
+Andy and I were software developers at the time and we thought, 'We can do this!' So we set out to do this. We developed a game engine with a natural language parser. And it was pretty good. We could support most of the kinds of things they did, certainly less graceful but pretty good. 
 
 For fun, we reverse engineered parts of Infocom[']s game format. We found the dictionary, certain text tokens used for text substitution, the game text. We also discovered the first example of compression I had ever seen and it just about made my head explode. They stored all ASCII characters in five bits! Pow! Mind blown. I had never considered anything like that. Just another hook.
 
@@ -4234,7 +4254,7 @@ Test Attractions with "test a1 / test a2"
 Chapter 4 - Back Stage
 
 [get the key]
-Test b1 with "brief / s / s /  s / e / s / turn on radio / u / w / flip switch / push switch / push switch / e / d / l at desk / open drawer / s / s / s / chew bubblegum / tie bubblegum to string / put bubblegum in grate / s / s / ne / drop mallet / get silver key / l at panel / open panel / l at socket / sw / n / n / n / n / n / i"
+Test b1 with "brief / s / s /  s / e / s / turn on radio / u / w / flip switch / push switch / push switch / e / d / l at desk / open drawer / get silver key / s / s / s / chew bubblegum / tie bubblegum to string / put bubblegum in grate / s / s / ne / drop mallet / l at panel / open panel / l at socket / sw / n / n / n / n / n / i"
 
 [get the fuses]
 Test b2 with "w / e / s / w / e / s / w / l in pyre / get fuse / e / s / w / e / s / w /  e / s / s / w / l in stand / buy aqua fuse / e / n"
@@ -4635,6 +4655,7 @@ Chapter 1 - Table of Story Steps
 
 table of story steps (continued) 
 index	input  
+--	"get berries"
 --	"eat blueberries"
 --	"look under seat"
 --	"get dimes, keys"
@@ -4671,52 +4692,69 @@ index	input
 --	"give ticket to attendant"
 --	"west"
 --	"west"
---	"steal brass ring"
---	"steal brass ring"
---	"steal brass ring"
---	"east"
---	"steal brass ring"
---	"steal brass ring"
---	"west"
 --	"southwest"
 --	"buy bubblegum"
 --	"west"
 --	"open trash can"
 --	"get khaki fuse"
 --	"east"
---	"south"
---	"wait"
---	"listen"
---	"wait"
---	"wait"
---	"north"
---	"wait"
---	"south"
---	"turn dial to 62"
---	"turn dial to 22"
---	"turn dial to 3"
---	"open safe"
---	"get all from safe"
---	"open filing cabinet"
---	"get all invoices"
---	"get envelope"
---	"open envelope"
---	"get check"
---	"examine check"
---	"north"
 --	"northeast"
+--	"south"
+--	"give ticket to attendant"
+--	"south"
+--	"east"
+--	"look at junk"
+--	"get flashlight"
+--	"turn it on"
+--	"south"
+--	"open drawer"
+--	"get silver key"
+--	"south"
+--	"south"
+--	"open toolbox"
+--	"get wrench"
+--	"get sledgehammer"
+--	"south"
+--	"chew gum"
+--	"tie string to gum"
+--	"lower gum into grate"
+--	"south"
+--	"west"
+--	"look at platform"
+--	"look under platform"
+--	"get pliers"
+--	"show pliers to whidbey"
+--	"north"
+--	"north"
+--	"look in pyre"
+--	"get quartz fuse"
+--	"north"
+--	"north"
+--	"east"
+--	"north"
+--	"west"
+--	"north"
+--	"north"
+--	"northwest"
+--	"look at janitor"
+--	"give pliers to janitor"
+--	"give flashlight to janitor"
+--	"give wrench to attendant"
+--	"southeast"
+--	"east"
+--	"hit bullseye with sledgehammer"
+--	"2"
+--	"hit bullseye with sledge"
+--	"3"
+--	"hit bullseye with sledgehammer"
+--	"west"
 --	"west"
 --	"give dime to barker"
+--	"ask barker about hell ride"
+--	"ask barker about accidents"
 --	"west"
---	"wait"
---	"wait"
---	"wait"
---	"wait"
---	"wait"
---	"wait"
---	"wait"
---	"wait"
---	"wait"
+--	"get lantern"
+--	"turn it on"
 --	"wait"
 --	"wait"
 --	"wait"
@@ -4726,26 +4764,31 @@ index	input
 --	"wait"
 --	"wait"
 --	"wear veil"
---	"get lantern"
---	"turn it on"
 --	"east"
 --	"east"
+--	"southwest"
 --	"south"
---	"give hell ride ticket to attendant"
+--	"wait"
+--	"wait"
+--	"wait"
+--	"wait"
+--	"wait"
+--	"wait"
 --	"south"
---	"east"
---	"examine piles of junk"
---	"get flashlight"
---	"turn it on"
---	"west"
+--	"look at photo"
+--	"turn dial to 62"
+--	"set dial to 22"
+--	"spin dial to 3"
+--	"open safe"
+--	"get all from safe"
+--	"open filing cabinet"
+--	"get all from cabinet"
+--	"open envelope"
+--	"look at check stub"
 --	"north"
---	"north"
---	"east"
---	"east"
---	"examine janitor"
---	"give flashlight to janitor"
---	"west"
---	"west"
+--	"ask attendant about hell ride"
+--	"ask attendant about accidents"
+--	"northeast"
 --	"south"
 --	"south"
 --	"east"
@@ -4757,54 +4800,19 @@ index	input
 --	"down"
 --	"south"
 --	"south"
---	"open tool box"
---	"get wrench"
---	"get sledgehammer"
---	"north"
---	"north"
---	"north"
---	"west"
---	"north"
---	"north"
---	"northwest"
---	"give wrench to attendant"
---	"southeast"
---	"east"
---	"hit bullseye with sledgehammer"
---	"2"
---	"hit target with sledge"
---	"3"
---	"west"
---	"south"
---	"south"
---	"east"
 --	"south"
 --	"south"
 --	"south"
---	"south"
---	"chew bubblegum"
---	"tie string to bubblegum"
---	"put bubblegum in grate"
---	"south"
---	"south"
---	"northeast"
---	"put all invoices in fanny pack"
---	"get key"
---	"southwest"
 --	"south"
 --	"west"
+--	"read sign"
 --	"buy aqua fuse"
---	"north"
---	"look under platform"
---	"get pliers"
---	"north"
 --	"east"
---	"south"
---	"south"
+--	"north"
 --	"northeast"
 --	"open panel"
 --	"put aqua fuse in socket"
---	"flip switch"
+-- 	"flip switch"
 --	"southwest"
 --	"east"
 --	"open panel"
@@ -4836,6 +4844,55 @@ index	input
 --	"north"
 --	"north"
 --	"north"
+--	"north"
+--	"west"
+--	"north"
+--	"north"
+--	"south"
+--	"ask janitor about himself"
+--	"ask janitor about whidbey"
+--	"ask janitor about hell ride"
+--	"ask janitor about accidents"
+--	"ask janitor about fire"
+--	"show cash 'n' carry to janitor"
+--	"show frank's to janitor"
+--	"show oriental trading to janitor"
+--	"north"
+--	"northwest"
+--	"show mystic to janitor"
+--	"ask janitor about ferris wheel"
+--	"ask janitor about bumper cars"
+--	"show check stub to janitor"
+--	"southeast"
+--	"southeast"
+--	"ask esmeralda about accidents"
+--	"ask esmeralda about fire"
+--	"ask esmeralda about hell ride"
+--	"ask esmeralda about whidbey"
+--	"show insurance policy to esmeralda"
+--	"give ticket to esmeralda"
+--	"wait"
+--	"wait"
+--	"wait"
+--	"wait"
+--	"northwest"
+--	"south"
+--	"south"
+--	"east"
+--	"ask whidbey about himself"
+--	"ask whidbey about hell ride"
+--	"ask whidbey about accidents"
+--	"ask whidbey about fire"
+--	"ask whidbey about indigo fuse"
+--	"ask whidbey about pliers"
+--	"ask whidbey about bumper cars"
+--	"south"
+--	"west"
+--	"show check stub to whidbey"
+--	"ask whidbey about needleman"
+--	"show mystic to whidbey"
+--	"show evidence"
+--	"east"
 --	"up"
 --	"west"
 --	"spin aqua dial to 1"
@@ -4845,28 +4902,4 @@ index	input
 --	"turn indigo dial to 9"
 --	"turn khaki dial to 11"
 --	"push indigo button"
---	"look"
---	"ask whidbey about indigo fuse"
---	"show the insurance policy to whidbey"
---	"ask whidbey about insurance"
---	"ask whidbey about cash [']n['] carry"
---	"ask whidbey about invoices"
---	"show cash [']n['] carry to whidbey"
---	"show frank's market to whidbey"
---	"show oriental trading to whidbey"
---	"show mystic industries to whidbey"
---	"show evidence"
---	"show mystic industries invoice to janitor"
---	"show insurance policy to janitor"
---	"show check to janitor"
---	"ask janitor about hell ride"
---	"ask janitor about bumper cars"
---	"ask janitor about ferris wheel"
---	"ask janitor about Mr Whidbey"
---	"show pliers to whidbey"
---	"show pliers to janitor"
---	"show oriental trading to whidbey"
---	"show oriental trading to janitor"
---	"show check to whidbey"
---	"ask whidbey about needleman"
---	"accuse whidbey of insurance fraud"
+--	"show evidence to chief"

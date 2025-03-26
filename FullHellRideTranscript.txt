@@ -1,11 +1,13 @@
 Start of a transcript of:
 
 Hell Ride
-The ride of a lifetime... by No Shoes
-Release 204 / Serial number 250324 / Inform 7 v10.1.2 / D
+The ride of a lifetime... by Dana Montgomery
+Release 1 / Serial number 250326 / Inform 7 v10.1.2 / D
 Inform 7 v10.1.2
 Identification number: //E0A5AFB9-18BF-4485-B083-426CA51CCE70//
 Interpreter version 0.6.0 / VM 3.1.3
+Hacking by Mathbrush
+Simple Multimedia Effects For V10 version 6 by Mathbrush
 Basic Help Menu version 4 by Wade Clarke
 Menus version 5 by Wade Clarke
 Undo Output Control version 6.0.220529 by Nathanael Nerode (based on the extension by Erik Temple;
@@ -2190,6 +2192,14 @@ Nearby an aqua colored door leads west.
 
 You can also see Mr Whidbey and a desk (on which are a coffee mug and a radio) here.
 
+>open drawer
+You open the drawer, revealing some scissors, a stapler, a ballpoint pen, a pad of paper, and a silver key.
+
+>get silver key
+Taken.
+
+Mr Whidbey heads to the Stocks Room.
+
 >n
 
 Dark Passage
@@ -2236,6 +2246,7 @@ You find yourself giddy as you exit the ride.
 >i
 You are carrying:
   a gray colored fuse
+  a silver key
   a sledgehammer
   an emerald colored fuse
   a worn photo
@@ -2534,12 +2545,6 @@ Electrical Room
 Electrical Closet One
 This is Electrical Closet One. There's an electrical panel here and an exit to the southwest.
 
-You can see a silver key here.
-
->get key
-(the silver key)
-Taken.
-
 >l at electrical panel
 Electrical Panel 1 is a standard issue 200 amp electrical panel supplying 220 power throughout the ride. The electrical panel is closed. There are screws holding it shut.
 
@@ -2617,6 +2622,7 @@ Your fingernails look much neater now that you've trimmed them.
 >n
 
 
+
 As you enter the room, you can see Mr Whidbey across the way. He seems to be doing something around the guillotine platform. You walk closer to see what he is doing and startle him. Mr Whidbey spins around and glares at you. As he turns and walks out of the room, you think you saw him drop something.
 
 Guillotine Room
@@ -2638,10 +2644,10 @@ Nearby a wooden door leads east to the Generator Room.
 
 You can also see Mr Whidbey and a guillotine platform here.
 
+Mr Whidbey heads to the Carnival Office.
+
 >l at crowd
 The crowd encircles the platform, emotions ranging from jeers and curses to silent, grim observation. Children sit on shoulders, their curious eyes unaware of the event's gravity.
-
-Mr Whidbey heads to the Carnival Office.
 
 >l at platform
 At the center of the square stands a raised wooden platform, stark and imposing, where the grim sentence is to be carried out. You can just make out something underneath the platform in the dark.
@@ -2811,7 +2817,7 @@ Nearby a wooden door leads east to the Crawl Space.
 You can also see Mr Whidbey and a gallows platform here.
 
 >score
-You've received 170 points out of a possible 200 in 533 moves!
+You've received 170 points out of a possible 200 in 534 moves!
 
 You have received points for the following: 
 
@@ -2860,10 +2866,10 @@ You are carrying:
   a quartz colored fuse
   some pliers
   an aqua colored fuse
-  a silver key
   a magenta colored fuse
   a knock-off Swiss Army knife
   a gray colored fuse
+  a silver key
   a sledgehammer
   an emerald colored fuse
   a worn photo
@@ -2912,10 +2918,10 @@ You can also see Mr Whidbey and a gallows platform here.
 >listen
 Above, the bell tower tolls, its mournful chime marking the passage of the man's final moments.
 
+Mr Whidbey heads to the Stake Room.
+
 >smell
 You smell incense as it permeates through Hell Ride.
-
-Mr Whidbey heads to the Stake Room.
 
 >l at square
 The public square, slick with morning drizzle, lies under a brooding, overcast sky. At its center looms the gallows, a weathered wooden platform with thick ropes swaying ominously.
@@ -3009,10 +3015,10 @@ You are carrying:
   a quartz colored fuse
   some pliers
   an aqua colored fuse
-  a silver key
   a magenta colored fuse
   a knock-off Swiss Army knife
   a gray colored fuse
+  a silver key
   a sledgehammer
   an emerald colored fuse
   a worn photo
@@ -3694,7 +3700,7 @@ He handcuffs Whidbey, thanks you for your service to the community, and leads Mr
     *** You have won! ***
 
 
-You've received 200 points out of a possible 200 in 659 moves!
+You've received 200 points out of a possible 200 in 660 moves!
 
 You have received points for the following: 
 
