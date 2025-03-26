@@ -121,7 +121,7 @@
 			<dock index="1" id="41" port="e" />
 		</line>
 		<room id="40" name="Maintenance Office" subtitle="" x="512" y="320" w="96" h="64" region="Back Stage" handDrawn="no" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" isDark="yes" description="The maintenance office is a dim, cluttered space, filled with the smells of grease, sweat, and popcorn. Disorganized shelves are lined with tools and parts, while paint cans and grease jars clutter the workbenches. A battered desk holds wires, gears, and springs, with a bent piece of metal in a vise." roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSubtitleColor="" roomSmallText="" ZOrder="0">
-			<objects>[1] Desk|[1] Radio|[1] Coffee Cup|[1] Scissors|[1] Red Stapler|[1] Worn Photo</objects>
+			<objects>[1] Radio|[1] Coffee Cup|[1] Silver Key|[1] Scissors|[1] Red Stapler|[1] Worn Photo</objects>
 		</room>
 		<line id="47" name="" description="">
 			<dock index="0" id="45" port="s" />
@@ -174,7 +174,7 @@
 			<dock index="1" id="64" port="n" />
 		</line>
 		<room id="66" name="Electrical Closet One" subtitle="" x="704" y="1056" w="96" h="64" region="Electrical Area" handDrawn="no" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" isDark="yes" description="This is Electrical Closet One. There's an electrical panel here and an exit to the southwest." roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSubtitleColor="" roomSmallText="" ZOrder="0">
-			<objects>[1] Silver Key|[1] Electrical Panel|[1] Socket|[1] Switch|[1] Indicator Light</objects>
+			<objects>[1] Electrical Panel|[1] Socket|[1] Switch|[1] Indicator Light</objects>
 		</room>
 		<line id="67" name="" description="">
 			<dock index="0" id="62" port="ne" />
