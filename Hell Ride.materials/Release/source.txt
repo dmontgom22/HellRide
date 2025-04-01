@@ -1933,7 +1933,7 @@ Cars park haphazardly, guided by makeshift signs and fluttering flags. Families 
 
 Puddles from recent rain shimmer under the lights, while patches of mud cling to shoes. In the distance, RVs and trailers sit quietly, their occupants watching the Ferris wheel turn against the evening sky. The lot serves as a transition between the mundane and the magical world inside the carnival.
 
-The midway is to the south. There is a blueberry bush here. [if blueberry bush contains blueberries]There are blueberries on the bush.[otherwise]The bush has been picked clean.[end if][paragraph break]Your car is here. It[']s a bit of a beater. Inside the car, you can see [the list of things which are part of the beater car].[if the parking attendant carries the parking ticket][paragraph break]The attendant has a parking ticket. The price of a parking is [the price of the parking ticket].[end if]"
+The midway is to the south. There is a blueberry bush here. [if blueberry bush contains blueberries]There are blueberries on the bush.[otherwise]The bush has been picked clean.[end if][paragraph break]Your car is here. It[']s a bit of a beater. Inside the car, you can see [the list of things which are part of the beater car].[if the parking attendant carries the parking ticket][paragraph break]The attendant has a parking ticket. The price of a parking ticket is [the price of the parking ticket].[end if]"
 
 The parking attendant is an attendant in the the PL-room. The parking attendant carries a parking ticket. The price of the parking ticket is $5.00. The description of the parking ticket is "This is your receipt for parking."
 
