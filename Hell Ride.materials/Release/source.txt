@@ -13,7 +13,7 @@ Release along with
 	and a file of "Hell Ride Map" called "Hell Ride Map.png".
 
 Use unabbreviated object names.
-Use maximum things understood at once of at least 500.
+Use maximum things understood at once of at least 600.
 Use dynamic memory allocation of at least 131072.
 Use maximum text length of at least 4096.
 Use DICT_WORD_SIZE of 25.
@@ -40,7 +40,7 @@ You[']re a part-time reporter for The Tribune, the local newspaper. Earlier in t
 
 As you explore the carnival, you learn (the hard way) that the Hell Ride attraction is malfunctioning with the potential for serious injuries to the riders. You must disable the ride off and prevent any loss of life... including your own."
 The story creation year is 2025.
-The release number is 1.
+The release number is 2.
 	
 Chapter 3 - Extensions
 
@@ -60,6 +60,8 @@ Include Menus by Wade Clarke.
 
 Include Story Mode by Drew Cook. 
 
+Include Conversation Framework by Eric Eve.
+
 Chapter 4 - The Player, Global Code
 
 The player is in the PL-room. 
@@ -70,7 +72,7 @@ hair is a thing. the hair is part of the player. the description is "Your hair i
 
 some fingernails are a thing. the fingernails are part of the player. the description is "You[']ve been biting your nails. Too bad you can[']t trim them neatly.". The fingernails are plural-named.
 
-The coupon is in the wallet. The description of the coupon is "You found this in a stack of coupons on the counter of the gas station."
+The coupon is in the wallet. The description of the coupon is "This coupon gives you a $2.00 discount on parking at the carnival. You found this in a stack of coupons on the counter of the gas station."
 
 The notebook is carried by the player. Understand "book/evidence" as the notebook. The description is "This is the notebook you use when investigating a story."
 
@@ -86,6 +88,11 @@ after reading a command:
 
 after reading a command:
 	if the player's command matches "load", try restoring the game instead.
+	
+[dancing]
+dancing is an action applying to nothing. understand "dance" as dancing.
+report dancing:
+	say "You close your eyes and listen to the music of the spheres. You start to bend and turn in blissful abandon. You are dancing as if no one is watching".
 	
 [printing]
 to say b: say "[bold type]".
@@ -161,7 +168,7 @@ Chapter 5 - New Mechanics, Actions, Phrases
 
 Section 1 - Money Mechanics
 
-Price is a kind of value. $10.99 specifies a price. A thing has a price. The price of a thing is usually $0.00. After examining something for sale, say "It can be yours for [the price of the noun]."
+Price is a kind of value. $10.99 specifies a price. A thing has a price. The price of a thing is usually $0.00. After examining something for sale when the noun is not money, say "It can be yours for [the price of the noun]."
 
 Definition: a thing is free if the price of it is $0.00.
 Definition: a thing is for sale if it is not free.
@@ -177,7 +184,9 @@ Before buying something for sale when the money is free:
 
 Before buying something for sale when the price of the money is less than the price of the noun:
 	say "You don[']t have enough money to cover the price of [the noun]." instead.
-	
+
+instead of buying a baseball, say "You don[']t need to buy the baseballs. Just give the attendant a dime." instead.
+instead of buying baseballs, say "You don[']t need to buy the baseballs. Just give the attendant a dime." instead.
 Before buying something free, say "That[']s not for sale." instead.
 
 Understand "buy [things]" as buying.
@@ -251,7 +260,7 @@ Definition: a fluid container is empty if the current volume of it is 0.0 fl oz.
 
 Understand "drink from [fluid container]" as drinking.
 
-Instead of drinking a fluid container:
+Instead of drinking a fluid container when the player carries a fluid container:
 	if the noun is empty:
 		say "There is no more [liquid of the noun] within." instead;
 	otherwise:
@@ -508,7 +517,9 @@ instead of showing something to the janitor:
 			choose a row with an category of S in Table of Notebook;
 			now total entry is total entry plus W;
 			now total evidence is total evidence plus W;
-			say "You[']ve collected some new evidence.".
+			say "You[']ve collected some new evidence.";
+	otherwise:
+		say "[The second noun] doesn[']t seem interested in [the noun].".
 		
 instead of telling the janitor about something: try asking the noun about it.
 
@@ -604,6 +615,9 @@ carry out accusing Mr Whidbey:
 	try confronting Mr Whidbey about "fraud".
 			
 instead of showing the notebook to the Chief of Police, try confronting Mr Whidbey about "fraud".
+
+pressing charges is an action applying to nothing. understand "press charges" as pressing charges.
+instead of pressing charges, try confronting Mr whidbey about "fraud".
 	
 confession is a truth state that varies. confession is false.
 instead of confronting Mr Whidbey about a topic listed in the Table of Confrontation:
@@ -693,7 +707,7 @@ criteria	point value	description	turn stamp
 "[if the player is carrying the crimson fuse]Y[otherwise]N[end if]"	10	"Winning the Crimson fuse:                "	-1
 "[if the player is carrying the small plush donkey]Y[otherwise]N[end if]"	5	"Winning the a plush donkey:              "	-1
 "[if the player is carrying the goldfish]Y[otherwise]N[end if]"	5	"Winning the goldfish in a bowl:          "	-1
-"[if the player is carrying the poster of Lourde]Y[otherwise]N[end if]"	5	"Winning the poster of Lourde:            "	-1
+"[if the player is carrying the poster of Lorde]Y[otherwise]N[end if]"	5	"Winning the poster of Lorde:             "	-1
 
 Every turn (this is the award points rule), award points.
 
@@ -862,6 +876,10 @@ instead of tying something to:
 		now the tied to of the second noun is the noun;
 		now the noun is tied;
 		now the second noun is tied;
+	otherwise if the noun is a dime or the second noun is a dime:
+		say "You can[']t tie the string to a dime.";
+	otherwise if the noun is an emerald fuse or the second noun is an emerald fuse:
+		say "You can[']t tie the string to the emerald fuse.";
 	otherwise:
 		say "You tie [the noun] to [the second noun].";
 		now the tied to of the noun is the second noun;
@@ -930,7 +948,10 @@ instead of talking about something :
 	say "No one wants to hear you prattle on about [the noun]."
 
 instead of asking someone about something:
-	say "'[one of]Sorry,[or]I[']m afraid[or]Hmm,[at random] [one of]I don[']t know much about that[or]you[']ve got me there[or]I haven[']t the faintest[at random],' [the noun] [one of]drawls[or]replies[or]comments[or]exclaims[at random].";
+	if the noun is little egypt:
+		say "Little Egypt is too focused on her dance to answer you.";
+	otherwise:
+		say "'[one of]Sorry,[or]I[']m afraid[or]Hmm,[at random] [one of]I don[']t know much about that[or]you[']ve got me there[or]I haven[']t the faintest[at random],' [the noun] [one of]drawls[or]replies[or]comments[or]exclaims[at random].";
 	
 Instead of telling an someone about something:
 	say "[The noun] looks [one of]surprised[or]intrigued[or]nonplussed[at random]. '[one of]You don[']t say[or]That[']s very interesting[or]Do go on[or]I wish I[']d known that sooner[at random]!'".
@@ -976,7 +997,7 @@ a nickel is a kind of coin. The description of a nickel is "Five cents, a nickel
 a dime is a kind of coin. The description of a dime is "It[']s a dime. Ten cents. One tenth of a dollar. And very shiny. A modern dime has a weight of 2.268 grams.".
 a quarter is a kind of coin. . The description of a quarter is "It[']s a quarter. Two bits. And very shiny. The weight of a quarter is 5.67 grams.".
 
-three quarters and one nickel underlie the seat.
+three quarters and two nickels underlie the seat.
 
 [heaven and earth]
 A room can be indoors or outdoors. A room is usually indoors.
@@ -1379,7 +1400,7 @@ Sound of Bell is the file "Bell.ogg" ("The sound of a bell").
 
 three dimes underlie the seat.
 
-The carrying capacity of the fanny pack is 20.
+The carrying capacity of the fanny pack is 50.
 
 Part 2 - The Game
 
@@ -1420,6 +1441,8 @@ The description of an electrical panel is "Electrical Panel [the panel id] is a 
 The printed name of an electrical panel is "Electrical Panel [the panel id]".
 
 every electrical panel is unlocked by the knock-off Swiss Army knife. understand "screwdriver" as knock-off Swiss Army knife.
+To say key-refusal for (locked-thing - an Electrical Panel):
+	 say "Looks like you[']ll need a screwdriver to remove the screws holding the electrical panel shut."
 
 instead of turning screws: try opening the holder of the item described.
 
@@ -1507,7 +1530,7 @@ Understand "fuse" as a fuse.
 A fuse has a color. Understand the color property as describing a fuse.
 A fuse has a number called fuse id. Understand the fuse id property as describing a fuse.
 The description of a fuse is "This is [an color of the item described] colored electrical fuse." 
-The printed name of a fuse is "[an color of the item described] colored fuse".
+[The printed name of a fuse is "[an color of the item described] colored fuse".]
 
 Definition: a fuse is plugged-in rather than loose if it is contained by a socket.
 
@@ -1515,7 +1538,7 @@ An aqua fuse called an fuse1 is in the merchandise stand. The fuse id of fuse1 i
 A crimson fuse called a fuse3 is carried by the Pitchers Mound attendant. The fuse id of fuse3 is 3. The color of fuse3 is crimson. 
 An emerald fuse called an fuse5 is in the grate. The fuse id of fuse5 is 5. The color of fuse5  is emerald. 
 A gray fuse called a fuse7 is carried by the Bumper Cars attendant. The fuse id of fuse7 is 7. The color of fuse7 is gray. 
-An indigo fuse called an fuse9 is in the safe. The fuse id of fuse9 is 9. The color of fuse9 is indigo. The description is "This is [an color of the item described] colored electrical fuse. It was strange to find the indigo fuse in the safe. How did it get there? Mr Whidbey?".
+An indigo fuse called an fuse9 is in the safe. The fuse id of fuse9 is 9. The color of fuse9 is indigo. The description is "This is [an color of the item described] colored electrical fuse.".
 A khaki fuse called a fuse11 is in the trash can. The fuse id of fuse11 is 11. The color of fuse11 is khaki. 
 A magenta fuse called a fuse13 is carried by the High Striker attendant. The fuse id of fuse13 is 13. The color of fuse13 is magenta. 
 An orange fuse called an fuse15 is carried by the Dime Toss attendant. The fuse id of fuse15 is 15. The color of fuse15 is orange. 
@@ -1606,12 +1629,12 @@ An emergency shutdown panel and fire extinguisher sit nearby. Fluorescent lights
 Instead of going from the Electrical Room:
 	if the big switch is switched on:
 		now the player is in the generator room;
-		say "The electromagnetic energy that this room creates leaves you confused. Instead of going [noun], you find yourself back in the Generator Room.";
+		say "Instead of going [noun], you find yourself back in the Generator Room. The electromagnetic energy that this room creates leaves you confused. ";
 	otherwise:
 		continue the action.
 
 some metal panels are here. they are scenery. the description is "Some are polished, others are worn and streaked with grease.".
-a central breaker panel is here. It is scenery. The description is "This breaker panel controls various portions of the carnival.".
+a central breaker panel is an open unopenable container in the electrical room. It is scenery. The description is "This breaker panel controls various portions of the carnival.".
 some electrical cables are here. They are scenery. understand "bundles", and "wires" as the electrical cables. The description is "This is a junction box routing the various wires and electrical cables running through the back stage area.". The electrical cables are plural-named.
 a junction box is here. It is scenery. The description is "This is a junction box routing the various wires and electrical cables running through the back stage area.".
 an electrical workbench is here. It is scenery. understand "work" and "bench" as the electrical workbench. The description is "This is a cluttered work bench. You would have a hard time finding room to do anything on it.".
@@ -1622,6 +1645,9 @@ a small fan is here. It is scenery. The description is "The fan sits on the desk
 a smudged wiring diagram is here. it is scenery. the description is "It[']s hard to make out what this is supposed to be. Better leave it alone.".
 some scattered tools are here. they are scenery. the description is "These are various tools you might use to repair electrical equipment.".
 some thick cable bundles are here. they are scenery. understand "wires" as thick cable bundles. the description is "Thick cable bundles snake across the ceiling.".
+
+instead of opening the central breaker panel, say "That[']s already open.".
+instead of opening the emergency shutdown panel, say "That[']s already open.".
 
 instead of smelling when the location is the electrical room, say "The air vibrates with electric energy, carrying the acrid scent of overheated wires and metal.".
 instead of listening when the location is the electrical room, say "You hear the buzz of electricity all around you.".
@@ -1828,6 +1854,7 @@ Last report switching off a button (this is the final report switching off a but
 Section 6 - Dials
 
 A dial is a kind of thing. A dial is part of every control panel (called its dial).
+Understand "knob" as dial.
 A dial is fixed in place.
 A dial has a number called a dial setting. 
 
@@ -1933,7 +1960,7 @@ Cars park haphazardly, guided by makeshift signs and fluttering flags. Families 
 
 Puddles from recent rain shimmer under the lights, while patches of mud cling to shoes. In the distance, RVs and trailers sit quietly, their occupants watching the Ferris wheel turn against the evening sky. The lot serves as a transition between the mundane and the magical world inside the carnival.
 
-The midway is to the south. There is a blueberry bush here. [if blueberry bush contains blueberries]There are blueberries on the bush.[otherwise]The bush has been picked clean.[end if][paragraph break]Your car is here. It[']s a bit of a beater. Inside the car, you can see [the list of things which are part of the beater car].[if the parking attendant carries the parking ticket][paragraph break]The attendant has a parking ticket. The price of a parking ticket is [the price of the parking ticket].[end if]"
+The midway is to the south. There is a blueberry bush here. [if blueberry bush contains blueberries]There are blueberries on the bush.[otherwise]The bush has been picked clean.[end if][paragraph break]Your car is here. It[']s a bit of a beater. Inside the car, you can see [the list of things which are part of the beater car].[if the parking attendant carries the parking ticket][paragraph break] The attendant has a parking ticket. The price of a parking ticket is [the price of the parking ticket].[end if]"
 
 The parking attendant is an attendant in the the PL-room. The parking attendant carries a parking ticket. The price of the parking ticket is $5.00. The description of the parking ticket is "This is your receipt for parking."
 
@@ -1942,15 +1969,14 @@ rule for deciding whether all includes the parking stub: it does not.
 
 some parked cars are here. they are scenery. understand "vehicles" as parked cars. the description is "The cars are parked, filling the lot.".
 
-The beater car is an open enterable unopenable container in the PL-room. The beater car is scenery. Understand "vehicle" and "car" as the beater car. The description of the beater car is "[if the player is in the beater car][b]Car Interior[r][line break][end if]This is your car. It[']s a 2002 Honda Civic and it[']s seen better days.[paragraph break][if the player is in the beater car]You[']re sitting inside your car. [end if]Although it[']s old, it feels like an old friend. From the faux leather seats to the crack in the windshield, it[']s familiar and comforting. There are old fast food wrappers on the floor, dirty clothes and text books in the back seat. [if the player does not carry the air freshener]There is an air freshener hanging from the rear view mirror.[end if]" 
+The beater car is an open enterable unopenable container in the PL-room. The beater car is scenery. Understand "vehicle" and "car" as the beater car. The description of the beater car is "[if the player is in the beater car][b]Car Interior[r][line break][end if]This is your car. It[']s a 2002 Honda Civic and it[']s seen better days.[paragraph break][if the player is in the beater car]You[']re sitting inside your car. You can see [the list of things which are part of the beater car]. [end if]Although it[']s old, it feels like an old friend. From the faux leather seats to the crack in the windshield, it[']s familiar and comforting. There are old fast food wrappers on the floor, dirty clothes and text books in the back seat. [if the player does not carry the air freshener]There is an air freshener hanging from the rear view mirror.[end if]" 
 
+some PL-families are here. they are scenery. understand "families" and "visitors" as PL-families. the printed name is "families". the description is "Families are moving through the parking lot to the carnival entrance.".
+some trees are here. they are scenery. the description is "The trees create a natural boundary around the parking lot.".
 a cash box is here. it is scenery. understand "drawer" as the cash box. the description is "The cash box is full of change and paper money.".
-
-The puddles are here. The puddles are scenery. understand "mud" as the puddles. The description is "You carefully skirt the mud and puddles to avoid getting your feet wet.".
-
-some parking lot signs are here. they are scenery. the description is "The signs are painted with arrows pointing the way to the parking spaces."
-
-some parking lot flags are here. they are scenery. understand "pennants" as the parking lot flags. the description is "The flags are strung from saw horse to saw horse marking the space between rows.".
+The puddles are here. The puddles are scenery. understand "mud" and "puddle" as the puddles. The description is "You carefully skirt the mud and puddles to avoid getting your feet wet.".
+some parking lot signs are here. they are scenery. the description is "The signs are painted with arrows pointing the way to the parking spaces.".
+some parking lot flags are here. they are scenery. understand "pennants", "pennant", and "flag" as the parking lot flags. the description is "The flags are strung from saw horse to saw horse marking the space between rows.".
 
 The wrappers are here. The wrappers are scenery. Understand "food wrappers" as wrappers. The description of the wrappers is "McDonald[']s, Burger King, Jack In The Box, Taco Bell, Carl[']s Jr., Five Guys... You[']re a regular equal opportunity garbage gut.". instead of taking wrappers, say "You decide to leave the trash for another day.".  The wrappers are plural-named.
 
@@ -1996,6 +2022,11 @@ instead of telling the parking attendant about the "[stub]": say "[The noun] rep
 
 instead of going south when the location is the PL-room and the parking ticket was not handled, say "You need to buy a parking ticket to leave your car here." instead.
 
+jumping in is an action applying to one thing. understand "jump in [something]" as jumping in.
+instead of jumping in, say "Whee! You jump up and down in the [the noun]."
+
+instead of drinking puddles, say "Ew! That[']s nasty!".
+
 Section 2 - Car Interior
 
 every turn when the location is the PL-room:
@@ -2018,7 +2049,17 @@ A seat is part of the beater car. The seat is a supporter. It is fixed in place.
 
 Your keys underlie the seat. Understand "car key", "car keys", and "key" as your keys. The description is "These are your car keys. It[']s a wonder you could even find them, your house is such a mess."
 
-instead of turning your keys, say "If you left now you would be abandoning your story. You want that full-time position, don[']t you? You decide to stay and investigate the carnival after all." instead.
+driving is an action applying to nothing. Understand "drive" as driving.
+instead of driving, say "If you left now you would be abandoning your story. You want that full-time position, don[']t you? You decide to stay and investigate the carnival after all." instead.
+
+instead of turning the ignition, try driving instead.
+instead of turning your keys, try driving instead.
+
+an engine is here. it is scenery. the description is "You see nothing interesting about the beater car[']s engine.".
+starting is an action applying to one thing. understand "start [something]" as starting. 
+instead of starting the beater car, try driving instead.
+instead of starting engine, try driving instead.
+instead of starting ignition, try driving instead.
 
 A glove box is part of the beater car. The glove box is a locked openable container. The description is "This glove box contains things like your registration and insurance information." Your keys unlock the glove box. Understand "glove compartment", "glovebox/compartment" as the glove box.
 
@@ -2107,7 +2148,7 @@ a digital payment system is here. it is scenery. the description is "This is you
 
 a cash drawer is here. it is scenery. understand "box" as cash drawer. the description is "The cash drawer is full of change and paper money.".
 
-some families are here. they are scenery. understand "couples", "visitors", and "friends" as families. the description is "Families, couples, and friends form a buzzing line, their excitement building as they approach this first step into the magic of the carnival.".
+some TB-families are here. they are scenery. understand "families", "couples", "visitors", "goers", "carnival goers", "onlookers", and "friends" as TB-families. the printed name is "families". the description is "Families, couples, and friends form a buzzing line, their excitement building as they approach this first step into the magic of the carnival.".
 
 There is a signboard in the TB-room. The signboard is scenery. Understand "sign", "board", "price", and "list" as signboard. The description of the signboard is "It[']s a sign displaying the prices of the various rides".
 
@@ -2145,9 +2186,9 @@ a menu is here.  Understand "sign/price/list/chalk/board/chalkboard" as menu. th
 
 a Drink is carried by the concession attendant. The price of a drink is $2.00. The description of the drink is "This soda is ice cold."
 
-The drink is a fluid container. The liquid of the drink is Cola. understand "soda/drink/cola/Coke" as the drink. The current volume of the drink is 8.0 fl oz. 
+The drink is a fluid container. The liquid of the drink is Cola. understand "soda/sodas/drinks/drink/cola/Coke" as the drink. The current volume of the drink is 8.0 fl oz. 
 
-Instead of player drinking a fluid container:
+Instead of player drinking a fluid container when the player carries a fluid container:
 	if drink is empty:
 		say "[The person asked] tip the can again only to find it empty.";
 	otherwise:
@@ -2197,7 +2238,7 @@ The Behind the Concession Stand is a room. The Behind the Concession Stand is ou
 
 a trash can is here. it is an openable closed container. it is fixed in place. understand "trash/can/trashcan/garbage can/garbage" as the trash can. the description is "This a garbage can overflowing with trash."
 
-some concession boxes are here. they are fixed in place. understand "supplies/bucket/buckets/cones" as the concession boxes. the description is "The boxes of supplies are stacked high behind the concession stand. They contain buckets for the popcorn and cones for the cotton candy. Stuff like that."
+some concession boxes are closed openable containers in behind the concession stand. they are fixed in place. understand "supplies/bucket/buckets/cones" as the concession boxes. the description is "The boxes of supplies are stacked high behind the concession stand. They contain buckets for the popcorn and cones for the cotton candy. Stuff like that."
 
 a chair is enterable scenery in Behind the Concession Stand. it is a supporter. the description is "The employees sit in this chair while on break."
 
@@ -2266,7 +2307,7 @@ Please note that this invoice is overdue and will be assessed a finance charge o
 
 some carnival brochures are here. understand "brochure" as carnival brochures. they are scenery. the description is "The brochures are meant to be left at convenience stores restaurants, and other businesses as a way to attract visitors to the carnival." .
 
-some knick-knacks are on the messy desk. they are scenery. understand "trinkets/knack/knick-knacks" or "knick knacks" as the knick-knacks. the description is "These are little bits of memorabilia from the carnival life. [if the mini ferris wheel is visible]There is a miniature Ferris wheel here.[end if][if the mini carousel is visible] You can also see a mini carousel here.".
+some knick-knacks are on the messy desk. they are scenery. understand "trinkets/knack/knick-knacks" or "knick knacks" as the knick-knacks. the description is "These are little bits of memorabilia from the carnival life. [if the mini ferris wheel is visible]There is a miniature Ferris wheel here.[end if][if the mini carousel is visible] You can also see a mini carousel here.[end if]".
 a mini Ferris wheel is on the messy desk. the description is "This is a miniature reproduction of the Ferris wheel.". 
 a mini carousel is on messy desk. the description is "This is a miniature replica of the Carousel.".
 
@@ -2347,7 +2388,7 @@ Before looking when the location is the HS-room:
 [ this was a forward reference that Inform 7 couldn't resolve for some reason]
 A room called the Pitchers Mound is southeast of the HS-room. 
 
-The HS-room is a room. The printed name is "High Striker". The HS-room is west of the FW-room, southwest of the Dime Toss Game, and northwest of the Pitchers Mound. The printed name is "High Striker". The HS-room is outdoors. "A tall machine stands with bright red, yellow, and blue lights. A sign sits at the top reading 'Test Your Strength!' The base is dark, polished wood, with a sturdy metal pole and a bell at the top. Markings along the pole indicate strength. A smaller sign says, 'Buy a mallet, strike the bell, win a prize.' Spectators cheer as the sound of the mallet hitting the target fills the night.
+The HS-room is a room. The printed name is "High Striker". The HS-room is west of the FW-room, southwest of the Dime Toss Game, and northwest of the Pitchers Mound. The printed name is "High Striker". The HS-room is outdoors. "A tall machine stands with bright red, yellow, and blue lights. A sign sits at the top reading 'Test Your Strength!' The base is dark, polished wood, with a sturdy metal pole and a bell at the top and a bullseye at the bottom. Markings along the pole indicate strength. A smaller sign says, 'Buy a mallet, strike the bell, win a prize.' Spectators cheer as the sound of the mallet hitting the target fills the night.
 
 The Ticket Kiosk is to the west. Other games are northeast and southeast of here. The Ferris Wheel lies to the east."
 
@@ -2361,9 +2402,9 @@ after looking when the location is the HS-room:
 after examining the High Striker attendant when the HighStrikerWin is true, show the high striker prizes. 
 after looking when the HighStrikerWin is true and the location is the HS-room, show the high striker prizes.
 	
-instead of listening when the location is the HS-room, say "The sound of the mallet hitting the target is followed by the resonant clang of the bell ), alongside the buzz of carnival music in the background.".
+instead of listening when the location is the HS-room, say "The sound of the mallet hitting the target is followed by the resonant clang of the bell, alongside the buzz of carnival music in the background.".
 	
-The High Striker is in the HS-room. It is scenery. understand "machine", "wood", "polished" and "base" as High Striker. the description is "The High Striker is a tall, eye-catching machine adorned with bright, colorful lights. A large sign at the top reads 'Test Your Strength!'. The machine[’]s base is made of polished wood. At the center is a sturdy metal pole, with a large bell hanging at the top.".
+The High Striker is in the HS-room. It is scenery. understand "machine", "wood", "polished" and "base" as High Striker. the description is "The High Striker is a tall, eye-catching machine adorned with bright, colorful lights. A large sign at the top reads 'Test Your Strength!'. The machine[’]s base is made of polished wood. At the center is a sturdy metal pole, with a large bell hanging at the top and a bullseye at the bottom.".
 
 The bell is here. The bell is scenery. The description of the bell is "This is the bell that will ring out when you prove to everyone that you[']re a 'Muscle Man'."
 
@@ -2421,7 +2462,10 @@ Rule for supplying a missing second noun when hitting:
 		say "You will have to specify what to hit [the noun] with."
 
 Check hitting it with:
-	if noun is an attendant:
+	if the second noun is not carried by the player:
+		say "You[']re not carrying [the second noun].";
+		stop the action;
+	if noun is an attendant and the second noun is carried by the player:
 		say "[The noun] blocks your swing and takes [the second noun] from you!";
 		now the second noun is nowhere;
 		stop the action;
@@ -2434,11 +2478,11 @@ some High Striker prizes are here. understand "stuffie", "stuffed", "animals", "
 instead of taking the high striker prizes, say "I don[']t think you can just take the prizes.".
 
 instead of examining the high striker prizes:
-	say "The prizes are [run paragraph on]";
+	say "The prizes, [run paragraph on]";
 	repeat with N running from 1 to the number of rows in the Table of High Striker Prizes:
 		choose row N in the Table of High Striker prizes;
 		if object entry is carried by the High Striker attendant:
-			say "[description entry][if N < number of rows in the Table of High Striker Prizes], [end if][if N is the number of rows in the Table of High Striker Prizes - 1]and [end if][if N is the number of rows in the Table of High Striker Prizes].[end if]".
+			say "[description entry][if N < number of rows in the Table of High Striker Prizes], [end if][if N is the number of rows in the Table of High Striker Prizes - 1]and [end if][if N is the number of rows in the Table of High Striker Prizes], are cheap and just what you[']d expect at a carnival.[end if]".
 
 To show the High Striker prizes:
 	say "[line break]Which prize would you like? [run paragraph on]";
@@ -2474,6 +2518,9 @@ after reading a command when the location is the HS-room and HighStrikerWin is t
 	if prize taken is true:
 		now HighStrikerWin is false;
 		stop the action.
+		
+instead of throwing something at the bell, say "Throwing [the noun] at the bell seems pointless to me.".
+
 	
 Section 8 - Dime Toss
 
@@ -2490,16 +2537,16 @@ You[']re surprised to see that this game only costs a dime. The exit is to the s
 
 the Dime Toss booth is a thing in the Dime Toss Game. the Dime Toss booth is scenery. understand "game" as the dime toss booth. The description of the Dime Toss booth is "The game booth is adorned with vibrant colors — red-and-white striped awnings, twinkling lights, and eye-catching signage.". understand "awning", "awnings", "twinkling", and "lights" as the dime toss booth.
 
-Tossing it on relates one thing to another.
-The verb to toss means the tossing it on relation.
+Tossing it on relates one thing to another. The verb to toss means the tossing it on relation.
 
 Tossing it on is an action applying to two things.
 Understand "toss [something preferably held] at/on [something]" as tossing it on.
 Understand "flip [something preferably held] at/on [something]" as tossing it on.
-Understand "throw [a dime] at/on [something]" as tossing it on.
+Understand "throw [something preferably held] at/on [something]" as tossing it on.
+instead of throwing something at something, try tossing the noun on the second noun.
 		
-instead of tossing a dime on something when the location is the Dime Toss Game:
-	if the player carries a dime:
+instead of tossing something on something when the location is the Dime Toss Game:
+	if the noun is a dime and the second noun is a plate:
 		continue the action;
 	otherwise:
 		say "That seems futile to me.";
@@ -2518,11 +2565,11 @@ some Dime Toss prizes are here. understand "stuffie", "stuffed", "animals", "nov
 instead of taking the dime toss prizes, say "I don[']t think you can just take the prizes.".
 
 instead of examining the Dime Toss prizes:
-	say "The prizes are [run paragraph on]";
+	say "The prizes, [run paragraph on]";
 	repeat with N running from 1 to the number of rows in the Table of Dime Toss Prizes:
 		choose row N in the Table of Dime Toss prizes;
 		if object entry is carried by the dime toss attendant:
-			say "[description entry][if N < number of rows in the Table of Dime Toss Prizes], [end if][if N is the number of rows in the Table of Dime Toss Prizes - 1]and [end if][if N is the number of rows in the Table of Dime Toss Prizes].[end if]".
+			say "[description entry][if N < number of rows in the Table of Dime Toss Prizes], [end if][if N is the number of rows in the Table of Dime Toss Prizes - 1]and [end if][if N is the number of rows in the Table of Dime Toss Prizes], are cheap and just what you[']d expect at a carnival.[end if]".
 
 instead of listening when the location is the Dime Toss Game, say "The distinctive 'ping' of dimes hitting plates creates a rhythmic soundtrack.".
 
@@ -2570,23 +2617,23 @@ Before going southeast when the location is the HS-room and the Pitchers Mound i
 Before looking when the location is the Pitchers Mound:
 	if show images is true, display Figure of MilkBottles.
 
-A room called the Pitchers Mound is southeast of the HS-room. "The milk bottle toss is a classic game of skill and luck. A pyramid of colorful bottles sits on a sturdy platform – three on the bottom, two in the middle, and one at the top. Players throw baseballs to knock down the stack and win a prize. The booth is lively, with cheering and the clatter of falling bottles. The attendant calls, 'Step right up! Three balls for a dime!' Prizes from toys to stuffed animals hang nearby. With this carnival favorite, every toss is filled with suspense. [if a dime underlies the pitchers mound booth] You thought you caught a flash of something coming from the area of the booth.[end if]
+A room called the Pitchers Mound is southeast of the HS-room. "The milk bottle toss is a classic game of skill and luck. A pyramid of colorful bottles sits on a sturdy platform – three on the bottom, two in the middle, and one at the top. Players throw baseballs to knock down the stack and win a prize. The booth is lively, with cheering and the clatter of falling bottles. The attendant calls, 'Step right up! Three balls for a dime!' Prizes from toys to stuffed animals hang nearby. With this carnival favorite, every toss is filled with suspense. [if a dime underlies the pitchers mound booth] You thought you caught a flash of something coming from under the booth.[end if]
 
 You[']re surprised to see that this game only costs a dime. The High Striker is to the northwest.".
 
 A small plush donkey is carried by the Pitchers Mound attendant. Understand "stuffie" and "stuffed" as small plush donkey. The description is "You feel rather underwhelmed as you look at the small plush donkey on a key chain."
 
-A poster of Lourde is carried by the Pitchers Mound attendant. The description of the poster of Lourde is "This is a poster of Lourde. You love her music."
+A poster of Lorde is carried by the Pitchers Mound attendant. The description of the poster of Lorde is "This is a poster of Lorde. You love her music."
 
 A goldfish is carried by the Pitchers Mound attendant. Understand "bowl" as goldfish. The description of the goldfish is "This is a small goldfish in a bowl. A pet is just what you need."
 
-a baseball is a kind of thing. Understand "ball" as baseball.The Pitchers Mound attendant carries three baseballs. The description of a baseball is "This is a regulation MLB baseball."
+a baseball is a kind of thing. Understand "ball" as baseball.The Pitchers Mound attendant carries three baseballs. The description of a baseball is "This is a regulation MLB baseball.". the price of a baseball is $0.03.
 
 some Pitchers Mound spectators are here. they are scenery. the description is "The satisfying clatter of falling bottles mixes with cheers and groans from players and spectators.".
 
 the Pitchers Mound booth is here. it is scenery. the description is "With its colorful banners and flashing lights, the booth buzzes with energy, drawing a crowd. [if a dime underlies the pitchers mound booth] You can see something shiny on the ground under the booth.[end if]".
 
-a Mercury dime is a dime. it underlies the pitchers mound booth. The description is "The Mercury dime is a ten-cent coin struck by the United States Mint from late 1916 to 1945. Designed by Adolph Weinman and also referred to as the Winged Liberty Head dime, it gained its common name because the obverse depiction of a young Liberty, identifiable by her winged Phrygian cap, was confused with the Roman god Mercury. It is 90% silver, 10% copper, and has a weight of 2.50 grams.".
+a Mercury dime is a dime. understand "flash" as the mercury dime.  it underlies the pitchers mound booth. The description is "The Mercury dime is a ten-cent coin struck by the United States Mint from late 1916 to 1945. Designed by Adolph Weinman and also referred to as the Winged Liberty Head dime, it gained its common name because the obverse depiction of a young Liberty, identifiable by her winged Phrygian cap, was confused with the Roman god Mercury. It is 90% silver, 10% copper, and has a weight of 2.50 grams.".
 
 before examining the mercury dime:
 	if show images is true, display Figure of MercuryDime.
@@ -2604,18 +2651,16 @@ This is the block throwing at people rule:
 
 Understand "throw [something preferably held] at/on [something]" as throwing it at.
 
-Instead of buying a baseball, say "You don[']t need to buy the baseballs. Just give the attendant a dime.".
-
 some Pitchers Mound prizes are here. Understand "toys", "toy", "stuffed", "stuffie", "stuffed animal", "animal", "animals", and "prizes" as Pitchers Mound prizes. The description is "Prizes - ranging from small toys to giant stuffed animals - hang prominently.".
 
 instead of taking the pitchers mound prizes, say "I don[']t think you can just take the prizes.".
 
 instead of examining the Pitchers Mound prizes:
-	say "The prizes are [run paragraph on]";
+	say "The prizes, [run paragraph on]";
 	repeat with N running from 1 to the number of rows in the Table of Pitchers Mound Prizes:
 		choose row N in the Table of Pitchers Mound prizes;
 		if object entry is carried by the Pitchers Mound attendant:
-			say "[description entry][if N < number of rows in the Table of Pitchers Mound Prizes], [end if][if N is the number of rows in the Table of Pitchers Mound Prizes - 1]and [end if][if N is the number of rows in the Table of Pitchers Mound Prizes].[end if]".
+			say "[description entry][if N < number of rows in the Table of Pitchers Mound Prizes], [end if][if N is the number of rows in the Table of Pitchers Mound Prizes - 1]and [end if][if N is the number of rows in the Table of Pitchers Mound Prizes], are cheap and just what you[']d expect at a carnival.[end if]".
 		
 To show the Pitchers Mound prizes:
 	say "[line break]Which prize would you like? [run paragraph on]";
@@ -2623,7 +2668,7 @@ To show the Pitchers Mound prizes:
 		choose row N in the Table of Pitchers Mound Prizes;
 		if the object entry is carried by the Pitchers Mound attendant:
 			say "[N]) [description entry][if N < number of rows in the Table of Pitchers Mound Prizes], [otherwise]?[end if]";
-		
+			
 instead of giving a dime to the pitchers mound attendant:
 	say "The attendant gives you three baseballs in return.";
 	now the noun is nowhere;
@@ -2632,7 +2677,6 @@ instead of giving a dime to the pitchers mound attendant:
 	
 instead of giving a dime to the pitchers mound attendant for the second time:
 	say "[The pitchers mound attendant] says, 'Sorry. You only get to play once.'";
-	now the noun is nowhere;
 	now every baseball is in the holding room;
 	stop the action.
 
@@ -2729,6 +2773,8 @@ the facade stage is here. it is scenery. the description is "On the stage stands
 
 a fez is here. it is scenery. understand "hat" as fez. the description is "The fez is a type of hat that originates from the Ottoman Empire and is named after the city of Fez in Morocco. It is a brimless, cylindrical or truncated conical hat, typically made of red felt. The hat often features a black tassel that hangs from the top, though the design can vary slightly.".
 
+a tassel is here. it is scenery. the description is "The black tassel hangs from the top of the fez to the left side.".
+
 A sign is in the SF-room. The sign is scenery. The description of the sign is "The sign reads, 'Little Egypt Show — Dime Admission'. Underneath it says 'The show starts every 15 minutes beginning at the top of the hour.'".
 
 The Barker is a man in SF-room. Understand "attendant", "attendent", "operator", "shirt", "pants", and "vest" as the Barker. The description of the barker is "Here is a man dressed in black pants, a blue shirt, a red vest, a hat much like a fez, and a dazzling smile.". 
@@ -2780,7 +2826,7 @@ Before going west when the location is the SF-room and the ST-room is unvisited 
 Before looking when the location is the the ST-room:
 	if show images is true, display Figure of LittleEgyptShow.		
 
-The ST-room is a room. The printed name is "Show Tent". The ST-room is west of SF-room. "You are inside the Little Egypt Show. The attraction[']s facade is to the east. There are folding chairs standing vigil in neat in rows. The show should start soon."
+The ST-room is a room. The printed name is "Show Tent". The ST-room is west of SF-room. "You are inside the Little Egypt Show. The attraction[']s facade is to the east. There are folding chairs standing vigil in neat in rows. The show starts every fifteen minutes. [if the wall contains the lantern]Hanging on the wall is a lantern.[end if]"
 
 Little Egypt is a woman. Little Egypt is in the ST-room. Little Egypt is scenery. The description of Little Egypt is "Little Egypt is a beautiful woman who is draped in flowing silk veils which she skillfully uses as part of the dance. Her attire consists of a sparkling, sequined bodice and a flowing skirt, adorned with jingling coin belts and jewelry that accentuate her movements.". understand "silk", "veils", "bodice", "sequined", "sequins", "flowing", "skirt", "jingling", "coins", "belts", "belt" and "jewelry" as Little Egypt.
 
@@ -2799,7 +2845,7 @@ some painted scenes are here. they are scenery. understand "pyramids", "pyramid"
 some incense is here. they are scenery. the description is "The smell of incense and spices wafts through the tent.". understand "spices" as incense.
 instead of smelling when the location is the ST-room, try examining the incense instead.
 
-instead of listening when the location is the ST-room, say "The soft sounds of unfamiliar music fill the air.".
+instead of listening when the location is the ST-room, say "The soft sounds of unfamiliar music fills the air.".
 
 some fabric is here. they are scenery. understand "fabrics" as fabric. the description is "The linen and silk fabrics come in all different colors.".
 
@@ -2811,7 +2857,7 @@ some finger cymbals are here. they are scenery. the description is "The cymbals 
 
 The sword is here. It is scenery. The description is "This is a beautiful silver sword with a filigreed handle and blade.".
 
-The wall is a scenery container. The wall is here. The description is "[if the wall contains the lantern]Hanging on the wall is a lantern.[otherwise]You see nothing special about the wall.[end if]". Understand "walls" as wall.
+The wall is a scenery container. The wall is here. The description is "[if the wall contains the lantern]Hanging on the wall is a lantern. [otherwise]You see nothing special about the wall.[end if]". Understand "walls" as wall.
 
 A lantern is an electric lamp. It is in the wall. Understand "lamp" and "lanterns" as the lantern. The description of the lantern is "This is a highly polished brass lantern.".
 
@@ -2850,8 +2896,17 @@ Instead of doing something other than waiting, looking, listening, smelling, or 
 clapping is an action applying to nothing. Understand "clap" and "applaud" as clapping.
 instead of clapping, say "Your hands are sore from clapping so much!".
 
+cheering is an action applying to nothing. understand "cheer" as cheering.
+report cheering:
+	say "You whistle and shout 'Hurrah!'".
+
 the entryway is a thing in the ST-room. the entryway is scenery. The description of the entryway is "The show[']s facade and the barker are back to the east.". Understand "facade" as entryway.
 examining the entryway is an action applying to one thing. Understand "examine entryway" as examining the entryway.
+
+winking at is an action applying to one thing. understand "wink at [someone]" as winking at.
+instead of winking at little egypt when Little Egypt Autoplay has not ended, say "You wink at Little Egypt. I[']m not sure she saw you.".
+instead of winking at someone when Little Egypt Autoplay has ended, say "I[']m not sure who you want to wink at.".
+instead of winking at someone, say "[The noun] winks back at you. Is this the start of something romantic?".
 
 Section 12 - Ferris Wheel
 
@@ -2865,6 +2920,12 @@ Before looking when the location is the FW-room:
 A room called the FW-room is outdoors. The printed name of the FW-room is "Ferris Wheel". The FW-room is east of the HS-room. "The Ferris wheel dominates the carnival, its bright lights visible from every corner. Its massive steel frame arches high, with colorful gondolas swaying as it turns. At night, flashing in bursts of red, green, and white, the wheel dazzles with lights. The air buzzes with the hum of the motor. The operator calls, 'Step right up! The best view of the carnival awaits!' From the top, riders get a panoramic view of the fairgrounds, with city lights stretching to the horizon."
 
 The Ferris Wheel attendant is an attendant in the FW-room. 
+
+instead of riding the ferris wheel:
+	if the player carries the ferris wheel ticket:
+		try giving the ferris wheel ticket to the ferris wheel attendant;
+	otherwise:
+		say "You don[']t have the Ferris wheel ticket.".
 
 instead of giving the Ferris wheel ticket to the Ferris wheel attendant:
 	say "You give [the noun] to [the second noun].";
@@ -2917,16 +2978,17 @@ instead of giving the bumper cars ticket to the bumper cars attendant:
 	now the noun is carried by the cashier;
 	say "[line break]You hand your ticket to the attendant and slide into the bucket seat, gripping the wheel as the arena comes alive with flashing lights and the hum of electric currents. Riders lock eyes, eager for the ride to begin.
 
-The car jolts forward, and you steer into the fray. A sudden crash spins you around, but you recover and aim for a friend. Each collision is met with laughs as you dodge, swerve, and plot your next move in the chaos.
+The car jolts forward, and you steer into the fray. A sudden crash spins you around, but you recover and aim for someone you recognize from town. Each collision is met with laughs as you dodge, swerve, and plot your next move in the chaos.
 
 You find yourself giddy as you exit the ride."
 
 A thing called the Bumper Cars are in the BC-room. The Bumper Cars are scenery. understand "car" as the bumper cars. The description of the Bumper Cars is "The Bumper Cars are small, colorful, electric-powered vehicles equipped with a padded outer rim to absorb impacts. This allows riders to safely bump into each other as part of the game. The ceiling has a conductive surface that powers the cars. Riders enjoy the challenge of maneuvering away from — or into — other drivers."
 
+the ceiling is here. it is scenery. the description is "The metal ceiling is conductive and provides power to the bumper cars via the electrical poles.".
 some padded barriers are here. they are scenery. the description is "The padded barriers ensure a safe experience for the riders. ".
 some padded bumpers are here. they are scenery. the description is "The padded bumper on each car is designed to absorb the impact of collisions.".
 some drivers are here. they are scenery. understand "riders", "strangers", "family", and "friends" as drivers. the description is "Drivers of all ages eagerly maneuver their cars, aiming for others.".
-some electric poles are here. they are scenery. the description is "The electric poles connects the cars to the ceiling, sparking faintly as they supply power to the vehicles.".
+some electric poles are here. they are scenery. understand "poles" as the electric poles. the description is "The electric poles connects the cars to the ceiling, sparking faintly as they supply power to the vehicles.".
 some onlookers are here. they are scenery. the description is "Surrounding the bumper cars are cheering onlookers.".
 the steering wheel is here. it is scenery. the description is "The steering wheel turns 360 degrees adding to the fun and excitement.".
 the bumper cars booth is here. it is scenery. the description is "The operator stands in this booth overseeing the action below.".
@@ -2975,9 +3037,9 @@ instead of giving the fortune teller ticket to Esmeralda:
 	choose a row with an object of the noun in the Table of Tickets;	
 	now the price of the noun is the price entry;
 	now Esmeralda carries the fortune teller ticket;
-	say "[line break]Stepping inside, you’re greeted by Esmeralda, a figure cloaked in flowing robes with a jeweled headpiece catching the flickering light. Her piercing eyes seem to look right through you as they gesture for you to sit at a small round table. At its center rests a glowing crystal ball, surrounded by tarot cards and mysterious trinkets.
+	say "[line break]Stepping inside, you’re greeted by Esmeralda, a figure cloaked in flowing robes with a jeweled headpiece catching the flickering light. Her piercing eyes seem to look right through you as she gestures for you to sit at a small round table. At its center rests a glowing crystal ball, surrounded by tarot cards and mysterious trinkets.
 
-Esmeralda[’]s voice is low and melodic, weaving an air of intrigue as they ask you to focus on a question and offer you a tarot reading. The room seems to shrink, the bustling carnival outside fading into the background as she reveals your fate. Each card turned feels significant, as though unlocking a secret you didn’t know you carried."
+Esmeralda[’]s voice is low and melodic, weaving an air of intrigue as she asks you to focus on a question and offer you a tarot reading. The room seems to shrink, the bustling carnival outside fading into the background as she reveals your fate. Each card turned feels significant, as though unlocking a secret you didn’t know you carried."
 
 instead of asking Esmeralda about "fortune", say "You[']ll need a ticket if you want me to reveal your future.".
 instead of asking Esmeralda about "me", say "You[']ll need a ticket if you want me to reveal your future.".
@@ -3110,7 +3172,7 @@ The description of a wooden door is "The [color of the item described] door is [
 
 Section 2 - Dark Passage
 
-Dark Passage is a room. Dark Passage is east of the Ride Entrance. "This room is backstage at the [story title] attraction. The room is littered with bags of trash, piles of junk, and dust bunnies so large they should be paying rent. There an exit to the south and west."
+Dark Passage is a room. Dark Passage is east of the Ride Entrance. "This room is backstage at the [story title] attraction. The room is littered with bags of trash, piles of junk, and dust bunnies so large they should be paying rent. There[']s an exit to the south and west."
 
 some dust bunnies are scenery. The dust bunnies are here. Understand "bunnies" as dust bunnies. The description of the dust bunnies is "These are some massive dust bunnies. Be careful, I[']ve heard they bite."
 
@@ -3138,6 +3200,7 @@ Faded safety posters and a worn photo of the carnival decorate the walls, along 
 
 Exits lead north and south." 
 
+some schedules are here. they are scenery. understand "schedule" as schedules. the description is "Most of these are the working shift schedules for the carnival.".
 a maintenance workbench is here. it is scenery. understand "workbenches", "work" and "bench" as the maintenance workbench. the description is "The workbenches are messy, cluttered, and covered with things.".
 some faded labels are here. they are scenery. the description is "The labels have faded so much that they are illegible.".
 some maintenance shelves are here. they are scenery. the description is "The shelves hold all manner of things.".
@@ -3145,9 +3208,9 @@ some maintenance tools are here. they are scenery. the description is "The tools
 some parts are here. they are scenery. the description is "The parts are varied and surely fit all manner of things around the carnival.".
 some wires are here. they are scenery. the description is "The wires lay in twisted tangles on the desk.".
 some paint cans are here. They are scenery. understand "screws", "grease", "grease jars", "grease jar", "jars",and "jar" as paint cans. The description is "Screws, grease jars, and cans of paint are here.".
-a vise is here. It is scenery. The description is "This is just a standard issue vice.".
-a bent piece of metal is here. It is scenery. The description is "This is a piece of scrap steel.".
-some safety posters are here. They are scenery. The description is "You[']re the safe choice for safety!".
+a vise is here. It is scenery. The description is "This is just a standard issue vise.".
+a bent piece of metal is here. It is scenery. understand "bent/piece/metal/scrap/steel" as bent piece of metal. The description is "This is a piece of scrap steel.".
+some safety posters are here. They are scenery. understand "poster" and "posters" as safety posters. The description is "You[']re the safe choice for safety!".
 some notes are here. They are scenery. understand "schedules" as the notes. The description is "Looking at the maintenance schedules and notes, all you can see are the illegible scribbles of a child.".
 a clock is here. It is scenery. The description is "The clock is wildly off the correct time. I guess it[']s broken.".
 some lubricant is here. It is scenery. The description is "It[']s lubricant. It[']s slippery.".
@@ -3166,6 +3229,8 @@ The coffee mug is on the maintenance desk. The coffee mug is edible. Understand 
 Instead of drinking the coffee mug for the first time: say "That looks nasty. There[']s something floating on the top. I wouldn[']t drink that if I was you." instead.
 Instead of drinking the coffee mug for the second time: say "You decide to drink it after all. Your stomach lurches as the cold, nasty coffee settles." instead.
 Instead of drinking the coffee mug for the third time: say "You[']ve learned your lesson and set the coffee cup down." instead.
+
+instead of opening the maintenance desk, try opening the drawer instead.
 
 A maintenance desk is in the maintenance office. The printed name of the maintenance desk is "desk". The maintenance desk is an supporter. The maintenance desk is fixed in place. The description of the maintenance desk is "It[']s a desk. There are coffee stains and cigarette burns from years of abuse. The single drawer is [if the drawer is open]open[otherwise]shut[end if]."
 
@@ -3264,6 +3329,7 @@ a sledgehammer is here. understand "sledge" as sledgehammer. The description of 
 
 instead of listening when the location is the mechanical room north, say "You hear the subdued hum of capacitors and relays.".
 
+some annotations are here. they are scenery. the description is "The diagram is annotated with notes that seem important.".
 some shelves are here. they are scenery. the description is "The shelves above hold spare parts.".
 a small workbench is here. it is scenery. understand "work/bench" as workbench. the description is "A small workbench is cluttered with parts.".
 some capacitors are here. they are scenery. understand "capacitor", "relay", and "relays" as the capacitors. the description is "The subdued hum of capacitors and relays fills the air.".
@@ -3314,6 +3380,17 @@ instead of inserting the string into the grate, try inserting the second noun in
 instead of lowering the string into the grate, try inserting the second noun into the grate.
 instead of putting something on the long string, try tying the noun to the long string.
 instead of taking fuse5 when the second noun is the bubblegum, try inserting the second noun into the grate.
+
+sticking it to is an action applying to two things. understand "stick [something preferably held] to [something preferably held]" as sticking it to.
+instead of sticking the bubblegum to the long string, try tying the noun to the second noun.
+instead of sticking the bubblegum to the short string, try tying the noun to the second noun.
+
+instead of hitting the grate with the mallet, say "You swing [the second noun] and hit the [the noun] causing [the noun] to ring and [the second noun] to reverberate up your arm.".
+instead of hitting the grate with the hammer, say "You swing [the second noun] and hit the [the noun] causing [the noun] to ring and [the second noun] to reverberate up your arm.".
+instead of hitting the grate with the sledgehammer, say "You swing [the second noun] and hit the [the noun] causing [the noun] to ring and [the second noun] to reverberate up your arm.".
+
+getting it with is an action applying to two things. understand "get [something] with [something preferably held]" as getting it with.
+instead of getting the emerald fuse with the pliers, say "The pliers are too short to reach the fuse.".
 
 instead of inserting something into the grate:
 	if the noun is untied:
@@ -3382,9 +3459,10 @@ The concrete floor is littered with scraps and dirt. Rats scurry and cobwebs mov
 
 There is an exit to the north."
 
+some flyers are here. they are scenery. the description is "These are flyers promoting the carnival.".
 some empty coffee cups are here. they are scenery. the description is "People just use the desk as a trash can.".
 some repair requests are here. they are scenery. the description is "So much tattered paper on this bulletin board. Most of it is illegible.".
-some ride schedules are here. they are scenery. the description is "So much tattered paper on this bulletin board. Most of it is illegible.".
+some ride schedules are here. understand "schedule" and "schedules" as ride schedules. they are scenery. the description is "So much tattered paper on this bulletin board. Most of it is illegible.".
 a bulletin board is here. it is scenery. the description is "So much tattered paper on this bulletin board. Most of it is illegible.".
 some crates are here. They are scenery. The description is "The crates labeled 'GAME PRIZES' and 'RIDE PARTS' hold items like stuffed animals and plastic toys.".
 a battered desk are here. It is scenery. The description is "The desk is covered with supplies, light bulbs, and ride parts.".
@@ -3425,6 +3503,8 @@ When Hell Ride AutoPlay ends:
 Instead of doing something other than waiting, looking, listening, smelling or examining during Hell Ride AutoPlay:
 	say "You[']re enjoying the ride so much that you don[']t want to do anything but sit and watch the ride go by."
 	
+The mist is a backdrop. The description is "The mist swirls about as you pass through the room."
+
 index is a number that varies. index is usually 1.		
 every turn during Hell Ride AutoPlay:
 	if index is not the number of rows in the Table of Hell Ride Events:
@@ -3446,6 +3526,11 @@ Before looking when the location is the Ride Entrance:
 Ride Entrance is a room. Ride Entrance is south of Head of the Line. "[description corresponding to the locale of Ride Entrance in the Table of Hell Ride Events]"
 
 The Hell Ride car is a vehicle in the Ride Entrance. understand "cars" as hell ride car. The description of the Hell Ride car is "A car waits to take you through the horror that is Hell Ride."
+
+instead of entering the darkness:
+	try going east.
+	
+darkness is here. it is scenery. the description is "The darkness to the east looks darker then the rest of the area,".
 
 Before going south when the player is in the Ride Entrance:
 	say "You can[']t go that way." instead;
@@ -3484,7 +3569,7 @@ After going north from the Gallows Room when the Stocks Room is unvisited:
 Before looking when the location is the Stocks Room:
 	if show images is true, display Figure of RideStocks.
 
-Stocks Room is south of the Ride Entrance. "[description corresponding to the locale of Stocks Room in the Table of Hell Ride Events]"
+Stocks Room is south of the Ride Entrance. "[description corresponding to the locale of Stocks Room in the Table of Hell Ride Events] There are exits to the north and south." 
 
 The wooden stocks are a supporter in the Stocks Room. The wooden stocks are fixed in place. understand "beams" as wooden stocks. The description of the wooden stocks is "At the square[']s center stand a row of crude wooden stocks, their heavy beams stained from years of weather and use. Iron clasps hold the unfortunate captives by their wrists and necks, their bodies forced into unnatural, humiliating postures.".
 the stocks public square is here. it is scenery. the description is "The public square is a cobblestone expanse bordered by weathered timber-framed buildings.".
@@ -3509,7 +3594,7 @@ After going north from the Stake Room when the Gallows Room is unvisited:
 Before looking when the location is the Gallows Room:
 	if show images is true, display Figure of RideGallows.
 	
-The Gallows Room is south of the Stocks Room.  "[description corresponding to the locale of Gallows Room in the Table of Hell Ride Events]"
+The Gallows Room is south of the Stocks Room.  "[description corresponding to the locale of Gallows Room in the Table of Hell Ride Events] There are exits to the north and south."
 
 The gallows platform is in the Gallows Room. The gallows platform is a supporter. The gallows platform is fixed in place. Understand "gallows" as gallows platform. The description of the gallows platform is "At the center of the square, rising like a grim monument to mortality, stands the gallows — a wooden platform, darkened by age and weather, with thick ropes hanging like vipers poised to strike." 
 
@@ -3536,7 +3621,7 @@ After going north from the Dungeon when the Stake Room is unvisited:
 Before looking when the location is the Stake Room:
 	if show images is true, display Figure of RideStake.
 
-The Stake Room is south of the Gallows Room. "[description corresponding to the locale of Stake Room in the Table of Hell Ride Events]"
+The Stake Room is south of the Gallows Room. "[description corresponding to the locale of Stake Room in the Table of Hell Ride Events] There are exits to the north and south. "
 
 the condemned women  are here. they are scenery. understand "woman" and "prisoners" as the condemned women. the description is "Bound to the stakes are three women, their faces reflecting defiance, resignation, and terror.".
 the stakes public square is here. it is scenery. the description is "The public square is steeped in grim silence, broken only by the crackling of flames.".
@@ -3548,7 +3633,7 @@ a stake room raven is here. it is scenery. the description is "A raven caws from
 a torch is here. it is scenery. the description is "The executioner carries the torch to light the pyre.".
 a raven is here. it is scenery. the description is "The raven caws from the bell tower.".
 
-A pyre is an open unopenable container in the Stake Room. "The flames of the pyre burn ever brighter and rise ever higher engulfing the victims." The pyre is fixed in place. Understand "kindling", "logs", "fire" and "flames" as pyre. The description is "The flames burn ever higher." 
+A pyre is an open unopenable container in the Stake Room. "The flames of the pyre burn ever brighter and rise ever higher engulfing the victims." The pyre is fixed in place. Understand "kindling", "logs", "fire" and "flames" as pyre. The description is "The faux flames burn ever higher." 
 
 instead of listening when the location is the stake room, say "A raven caws from the bell tower as slow church bells toll.".
 instead of smelling when the location is the stake room, say "The smell of smoke permeates the air.".
@@ -3565,7 +3650,7 @@ After going north from the Guillotine Room when the Dungeon is unvisited:
 Before looking when the location is the Dungeon:
 	if show images is true, display Figure of RideDungeon.
 	
-The Dungeon is south of the Stake Room. "[description corresponding to the locale of Dungeon in the Table of Hell Ride Events]"
+The Dungeon is south of the Stake Room. "[description corresponding to the locale of Dungeon in the Table of Hell Ride Events] There are exits to the north and south."
 
 An iron chair is in the Dungeon. The iron chair is a supporter. understand "spiked" and "seat" as iron chair. The description of the iron chair is "A spiked chair looms in the corner, its cruel design gleaming faintly in the dim light." 
 
@@ -3609,25 +3694,30 @@ after going north from the ride exit:
 		say "[line break]As you enter the room, you can see Mr Whidbey across the way. He seems to be doing something around the guillotine platform. You walk closer to see what he is doing and startle him. Mr Whidbey spins around and glares at you. As he turns and walks out of the room, you think you saw him drop something.";
 	continue the action.
 
-The Guillotine Room is south of the Dungeon. "[description corresponding to the locale of Guillotine Room in the Table of Hell Ride Events]"
+The Guillotine Room is south of the Dungeon. "[description corresponding to the locale of Guillotine Room in the Table of Hell Ride Events] There are exits to the north and south."
 
-The guillotine platform is in the Guillotine Room. The guillotine platform is a supporter. Understand "scaffold" as guillotine platform. The description of the guillotine platform is "At the center of the square stands a raised wooden platform, stark and imposing, where the grim sentence is to be carried out. You can just make out something underneath the platform in the dark." 
+The platform is in the Guillotine Room. The platform is a supporter. Understand "scaffold" as platform. The description is "At the center of the square stands a raised wooden platform, stark and imposing, where the grim sentence is to be carried out.[if the pliers underlie the platform] You can just make out something underneath the platform in the dark.[end if]" 
 
-some pliers underlie the guillotine platform. The description of the pliers is "It[']s an ordinary pair of pliers but you can[']t help but wonder why they are in the guillotine room and not in a tool box somewhere.".
+some pliers underlie the platform. The description of the pliers is "It[']s an ordinary pair of pliers but you can[']t help but wonder why they are in the guillotine room and not in a tool box somewhere.".
 
 a thing called a guillotine is here. it is scenery. The description is "The guillotine looms over the public square, its blade gleaming faintly in the dim light.".
+ 
+a blade is here. it is scenery. the description is "The blade on the guillotine rises and falls over the cars making contact with the cars themselves.".
+instead of hitting the blade with the mallet, say "You swing [the second noun] and hit the [the noun] causing [the noun] to ring and [the second noun] to reverberate up your arm.".
+instead of hitting the blade with the hammer, say "You swing [the second noun] and hit the [the noun] causing [the noun] to ring and [the second noun] to reverberate up your arm.".
+instead of hitting the blade with the sledgehammer, say "You swing [the second noun] and hit the [the noun] causing [the noun] to ring and [the second noun] to reverberate up your arm.".
 
 a lone figure is here. it is scenery. understand "condemned/man" as the lone figure. the description is "A lone figure stands on the scaffold, bound hands behind their back and head bowed low, avoiding the crowd[']s gaze.".
 
-a guillotine executioner is here. it is scenery. the description is "The executioner - a hooded figure in black - stands ready beside the guillotine."
+a executioner is here. it is scenery. the description is "The executioner - a hooded figure in black - stands ready beside the guillotine."
 
 the town crier is here. it is scenery. the description is "The town crier proclaims the crime: 'High treason against the crown. Let this be a warning to all who defy the realm!'".
 
-the guillotine crowd is here. it is scenery. understand "children" as the guillotine crowd. the description is "The crowd encircles the platform, emotions ranging from jeers and curses to silent, grim observation. Children sit on shoulders, their curious eyes unaware of the event[']s gravity.".
+the crowd is here. it is scenery. understand "children" as the crowd. the description is "The crowd encircles the platform, emotions ranging from jeers and curses to silent, grim observation. Children sit on shoulders, their curious eyes unaware of the event[']s gravity.".
 
 a crow is here. it is scenery. the description is "The crow sits, sleek and black, on a nearby rooftop."
 
-a thing called the guillotine cars are here. understand "car/hell/ride" or "hell ride cars" as guillotine cars. the printed name is "[story title] cars". they are scenery. the description is "The cars keep coming and move under the malfunctioning guillotine. You shudder at just the thought of it".
+a thing called the cars are here. understand "car/hell/ride" or "hell ride cars" as cars. the printed name is "[story title] cars". they are scenery. the description is "The cars keep coming and move under the malfunctioning guillotine. You shudder at just the thought of it.".
 
 
 Section 8 - Ride Exit
@@ -3675,7 +3765,7 @@ The Midway is a region. PL-room, TB-room, CS-room, Behind the Concession Stand, 
 Head of the Line, FW-room, BC-room, FT-room, CR-room, Dime Toss Game, and the Pitchers Mound are in the Midway. 
 The sky, music, Hell Ride, and the Ferris Wheel are in the Midway
 
-HellRide is a region. Ride Entrance, Stocks Room, Gallows Room, Stake Room, Dungeon, Guillotine Room, Ride Exit are in HellRide.
+HellRide is a region. Ride Entrance, Stocks Room, Gallows Room, Stake Room, Dungeon, Guillotine Room, Ride Exit are in HellRide. The mist is in HellRide.
 
 Electrical Area is a region. Electrical Room, Electrical Closet One, Electrical Closet Three, Electrical Closet Five, Electrical Closet Seven, Electrical Closet Nine, and Electrical Closet Eleven are in the Electrical Area.
 
@@ -3781,7 +3871,7 @@ txtindex (text)	object (an object)	description (text)
 "1"	fuse3	"a [printed name of fuse3]"
 "2"	small plush donkey	"a plush donkey"
 "3"	goldfish	"a goldfish in a bowl"
-"4"	poster of Lourde	"a poster of Lourde"
+"4"	poster of Lorde	"a poster of Lorde"
 
 Section 7 - Table of Tickets
 
@@ -3901,9 +3991,9 @@ Section 12 - Table of Tarot Readings
 
 Table of Tarot Readings
 key (number)	category (text)	card (text)	description (text)
-11	"Past"	"Eight of Cups (reversed)"	"Eight of Cups reversed indicates suggests that you may be clinging tightly to your comfort zone, even if it no longer serves your best interests. This card urges you to examine whether you are avoiding necessary growth or ignoring your true desires. It may be tempting to remain in familiar territory, but by doing so, you risk missing out on the opportunities that lie ahead. Now is the time to summon the courage to explore new horizons and embrace the unknown."
+11	"Past"	"Eight of Cups (reversed)"	"Eight of Cups reversed suggests that you may be clinging tightly to your comfort zone, even if it no longer serves your best interests. This card urges you to examine whether you are avoiding necessary growth or ignoring your true desires. It may be tempting to remain in familiar territory, but by doing so, you risk missing out on the opportunities that lie ahead. Now is the time to summon the courage to explore new horizons and embrace the unknown."
 12	"Present"	"Knight of Swords (reversed)"	"Knight of Swords reversed signifies a lack of strategy, where actions are taken without much thought or consideration for the consequences. It suggests a tendency to rush into situations without a clear plan, leading to hasty decisions and potential conflicts. This reversed Knight warns against reckless behavior and encourages the need for patience and careful deliberation. It serves as a reminder to slow down, reflect, and align actions with a well-thought-out strategy in order to avoid unnecessary conflicts and achieve the desired outcomes."
-13	"Challenge"	"The Devil (reversed)"	"Devil reversed indicate temptations resisted, stricter moral kept and an escape from the chains from the devil. It offers hope and liberation. The Devil reversed brings the strength and self awareness to confront your inner demons and break free from the suffocating bonds that have kept you trapped in patterns of self-destruction. It is a powerful call to examine your attachments, whether they be toxic relationships, harmful habits, or limiting beliefs."
+13	"Challenge"	"The Devil (reversed)"	"Devil reversed indicates temptations resisted, stricter moral kept and an escape from the chains of the devil. It offers hope and liberation. The Devil reversed brings the strength and self awareness to confront your inner demons and break free from the suffocating bonds that have kept you trapped in patterns of self-destruction. It is a powerful call to examine your attachments, whether they be toxic relationships, harmful habits, or limiting beliefs."
 14	"Opportunity"	"The Fool (upright)"	"Fool represents new beginnings and feeling carefree. It may indicate a new phase in your life such as starting a new job, moving to a new city, or beginning a new relationship. Embrace this new chapter with optimism and an open heart. The Fool reminds you that it[']s never too late to start fresh and that you can always take a leap of faith towards your dreams."
 15	"Future"	"The Devil (upright)"	"Devil symbolizes primal behaviors, desires and addictions and materialism. It represents the fears that causes obsession and compulsive behavior. Its ominous appearance serves as a reminder that you may find yourself caught in the snare of worldly desires and unhealthy patterns. This card is a wake-up call to face your fears and conquer them. This is a card of temptation, and it[']s warning you to be careful of what you allow to control you."
 21	"Past"	"The High Priestess (reversed)"	"High Priestess reversed indicates blocked psychic abilities, and little to no awareness of the subconscious influence on your reality. This reversal suggests a lack of trust in your inner voice and a disconnection from spiritual realms. It may indicate a struggle to access your intuition, leading to confusion and indecision. The reversed High Priestess also urges caution in matters of secrecy and deception. It is important to exercise discernment as there may be hidden agendas or deceitful individuals around. It is crucial for you to seek inner clarity now."
@@ -3933,8 +4023,9 @@ Section 14 - Table of Attendant Conversation Responses
 
 Table of Attendant Conversation Responses
 topic	description (text)	subject (text)	turn stamp (number)	weighting (number)	response (text)
+"sweetie/girlfriend/boyfriend"	"Sweetie"	"NA"	-1	0	"[The noun] says 'We[']ve been dating for a while now. They[']re simply the best!'"
 "attendant/themselves/himself/herself"	"Attendant"	"NA"	-1	0	"[The noun] says, '[one of]Oh, you know. I[']m just trying to get through school, make a few bucks, and marry my sweetie.[or]I get a job with the carnival every time it[']s in town.[or]I should be studying for my SATs but my mom made me get this job.[or]I hope I don[']t have to work Friday night. That[']s when the big game is.[or]I hate this stupid uniform![or]I[']m just waiting for lunch. I[']m starving![at random]'"
-"hell/ride/guillotine" or "hell ride" or "guillotine room"	"Hell Ride"	"Accidents"	-1	3	"'[one of][story title] is scary. You won[']t catch me on it![or]Last time I rode [story title], I heard strange noises.[or][story title] is so old that It[']s falling apart. I wouldn[']t ride it.[or][story title] is behind on its maintenance schedule. Might want to skip that one.[at random]' says [the noun]."
+"hell/ride/guillotine" or "hell ride" or "guillotine room"	"Hell Ride"	"Accidents"	-1	3	"'[one of][story title] is scary. You won[']t catch me on it![or]Last time I rode [story title], I heard strange noises.[or][story title] is so old that it[']s falling apart. I wouldn[']t ride it.[or][story title] is behind on its maintenance schedule. Might want to skip that one.[at random]' says [the noun]."
 "coupon"	"Coupon"	"NA"	-1	0	"That coupon will give you a $2.00 discount on parking."
 "carousel/merry/go/round" or "merry-go-round" or "the carousel" or "the merry-go-round"	"Carousel"	"NA"	-1	0	"[The noun] says, '[one of]I[']ve loved the carousel ever since I was a little kid![or]The lions are my favorite![or]I get dizzy when I ride the Merry Go Round[at random]'"
 "bumper" or "bumper cars" or "bumper car" or "the bumper cars" or "the bumper car"	"Bumper Cars"	"NA"	-1	0	"'[one of]The bumper cars are so much fun. You[']re heading for someone[']s car and bam! You get hit instead![or]Last time I was on the bumper cars, I nailed everyone there![or]It[']s fun to knock other people[']s cars around![at random]' [the noun] says."
@@ -3943,7 +4034,7 @@ topic	description (text)	subject (text)	turn stamp (number)	weighting (number)	r
 "high/striker" or "high striker" or "the high striker"	"High Striker"	"NA"	-1	0	"[The noun] says, '[one of]You[']re a strong guy. Go for it![or]Win a prize for your sweetie![or]Swing the mallet and ring the bell![at random]'"
 "dime toss" or "the dime toss"	"Dime Toss"	"NA"	-1	0	"'[one of]Careful now! Don[']t want it skidding off the other side.[or]It[']s just like skipping a stone.[or]Aim carefully and you should get it.[at random]' [the noun] says."
 "pitchers/mound" or "pitchers mound"	"Pitchers Mound"	"NA"	-1	0	"[The noun] says, '[one of]Batter, batter, batter, swing batter![or]Pretend you[']re pitching for the Red Sox.[or]Knock [']em down and win a prize![at random]'"
-"Hell Ride Ticket" or "Carousel Ticket" or "Bumper Cars Ticket" or "Ferris Wheel Ticket" or "Fortune Teller Ticket" or "ticket"	"Tickets"	"NA"	-1	0	"[The noun] says, 'You need to buy a ticket in order to ride the attractions.'"
+"Hell Ride Ticket" or "Carousel Ticket" or "Bumper Cars Ticket" or "Ferris Wheel Ticket" or "Fortune Teller Ticket"	"Tickets"	"NA"	-1	0	"[The noun] says, 'You need to buy a ticket in order to ride the attractions.'"
 "parking" or "the parking ticket" or "parking ticket"	"Parking Ticket"	"NA"	-1	0	"[The noun] says, 'You need a parking ticket to leave your car here.'"
 "/fuse/fuses/aqua/crimson/emerald/gray/indigo/khaki/magenta/orange/quartz" or "aqua fuse " or "crimson fuse" or "emerald fuse" or "gray fuse" or "indigo fuse" or "khaki fuse" or "magenta fuse" or "orange fuse" or "quartz fuse" 	"Fuses"	"Fuses"	-1	1	"[if the player is carrying a fuse]'That looks like a fuse. Perhaps there[']s an electrical panel where it fits.'[otherwise]'What fuse?'[end if] says [the noun]"
 "movies/cinema/theater"	"Movies"	"NA"	-1	0	"[The noun] says, 'There[']s a new horror movie opening on Friday. I want to take my sweetie. Perhaps they[']ll cling to me because they[']re scared.'"
@@ -3959,9 +4050,9 @@ topic	description (text)	subject (text)	turn stamp (number)	weighting (number)	r
 "cotton/candy" or "cotton candy"	"Concessions"	"NA"	-1	0	"'I love the way cotton candy melts in my mouth', says [the noun]."
 "pretzel/pretzels/soft" or "soft pretzel" or "soft pretzels"	"Concessions"	"NA"	-1	0	"[The noun] says, 'I prefer to eat my pretzels with mustard.'"
 "mr/owner/Whidbey"	"Invoices"	"Invoices"	-1	1	"[The noun] says , 'Mr. Whidbey? I guess he[']s alright. He[']s not in any trouble is he?'"
-"invoices/receipts/paperwork"	"'Oh, I don[']t know what any of that mumbo jumbo means', says [the noun]."
+"invoices/receipts/paperwork"	"Invoices"	"Invoices"	-1	1	"'Oh, I don[']t know what any of that mumbo jumbo means', says [the noun]."
 "insurance/policy" or "insurance policy"	"Insurance Policy"	"Insurance"	-1	0	"'Gosh, I wish I had a million dollars!', [the noun] says."
-"accidents/mishaps" or "the accidents"	"Accidents"	"Accidents"	-1	3	 "[The noun] says 'The fire, the Ferris wheel, the Bumper Cars... That seems like a lot!'"
+"accident/accidents/mishaps" or "the accidents"	"Accidents"	"Accidents"	-1	3	 "[The noun] says 'The fire, the Ferris wheel, the Bumper Cars... That seems like a lot!'"
 "rides/attractions" or "the attractions"	"Attractions"	"Accidents"	-1	1	"'Almost every ride is falling apart. Honestly, it[']s kind of scary.' says [the noun]."
 
 Section 15 - Table of Notebook
@@ -4038,8 +4129,9 @@ topic	description (text)	subject (text)	turn stamp (number)	weighting (number)	r
 "insurance/policy" or "insurance policy"or "the insurance policy"	"Insurance Policy"	"Insurance"	-1	1	"'An insurance policy? Looks like Mr Whidbey is up to no good,' [the noun] remarks."
 "bumper/car/cars" or "bumper cars" or "bumper car" or "the bumper cars"	"Bumper Cars"	"Accidents"	-1	5	"[The noun] says, 'There was an accident on the bumper cars a couple of weeks ago. One of the riders got a good shock.'"
 "fire"or "the fire"	"The Stake Room Fire"	"Accidents"	-1	3	"'There was a fire in one of the rooms in [story title],' says [the noun]."
-"accidents/mishaps" or "the accidents"	"Accidents"	"Accidents"	-1	3	 "[The noun] says 'Things sure seem vulnerable at this time.'"
+"accident/accidents/mishaps" or "the accidents"	"Accidents"	"Accidents"	-1	3	 "[The noun] says 'Things sure seem vulnerable at this time.'"
 "rides/attractions" or "the attractions"	"Attractions"	"Accidents"	-1	1	"'This carnival seems cursed with bad luck when it comes to the rides,' says [the noun]."
+"fred/needleman"	"Accidents"	"Accidents"	-1	3	"I remember him. Young fella, good looking. I read his cards. They pointed to some imminent bad luck and then he went on and had that accident with the bumper cars."
 
 Section 19 - Table of Esmeralda Object Responses
 
@@ -4065,7 +4157,7 @@ topic	description (text)	subject (text)	turn stamp (number)	weighting (number)	r
 "insurance/policy" or "insurance policy"or "the insurance policy"	"Insurance Policy"	"Insurance"	-1	1	"'What[']s that? An insurance policy? That seems suspicious to me,' [the noun] remarks."
 "bumper/car/cars" or "bumper cars" or "bumper car" or "the bumper cars"	"Bumper Cars"	"Accidents"	-1	5	"[The noun] says, 'There was an unfortunate accident on the bumper cars a couple of weeks ago.'"
 "fire"or "the fire"	"The Stake Room Fire"	"Accidents"	-1	3	"'There was a fire in one of the rooms in [story title],' says [the noun]."
-"accidents/mishaps" or "the accidents"	"Accidents"	"Accidents"	-1	3	 "[The noun] says 'Things sure seem vulnerable at this time.'"
+"accident/accidents/mishaps" or "the accidents"	"Accidents"	"Accidents"	-1	3	 "[The noun] says 'Things sure seem vulnerable at this time.'"
 "rides/attractions" or "the attractions"	"Attractions"	"Accidents"	-1	1	"'This carnival seems cursed with bad luck when it comes to the rides,' says [the noun]."
 
 Section 21 - Table of Barker Object Responses
@@ -4099,7 +4191,7 @@ topic	description (text)	subject (text)	turn stamp (number)	weighting (number)	r
 "fuse/fuses/aqua/crimson/emerald/gray/khaki/magenta/orange/quartz" or "aqua fuse " or "crimson fuse" or "emerald fuse" or "gray fuse" or "khaki fuse" or "magenta fuse" or "orange fuse" or "quartz fuse" 	"Fuses"	"NA"	-1	0	"'I know nothing about fuses', [the noun] says."
 "indigo" or "indigo fuse" or "the indigo fuse" 	"The Indigo Fuse"	"Fuses"	-1	5	"'Where did you get that?' [the noun] asks."
 "fire" or "the fire"	"The Stake Room Fire"	"Accidents"	-1	5	"The fire was most unfortunate. It put [story title] out of commission for two weeks. Not only did it cost me $22,500 to repair but I lost revenue while it was closed."
-"accidents/mishaps" or "the accidents"	"Accidents"	"Accidents"	-1	1	"[The noun] says, 'Oh, that[']s nothing to worry about. Little things happen all the time, right?'"
+"accident/accidents/mishaps" or "the accidents"	"Accidents"	"Accidents"	-1	1	"[The noun] says, 'Oh, that[']s nothing to worry about. Little things happen all the time, right?'"
 "rides/attractions"	"Accidents"	"Accidents"	-1	1	"[The noun] says, 'Oh, that[']s nothing to worry about. Little things happen all the time, right?'"
 "pliers"or "the pliers"	"The Pliers"	"Accidents"	-1	3	"'Oh! I thought I lost... um, those belong to the janitor. Where did you find them?' asks [the noun]."
 "check/stub/fred/needleman" or "fred needleman" or "the stub" or "check stub" or " the check stub" 	"Fred Needleman"	"Insurance"	-1	3	"[The noun] says 'Uh, Fred is a special... contractor... We paid him. For services rendered.'"
@@ -4158,18 +4250,27 @@ Section 26 - Table of Whidbey Movements
 
 Table of Whidbey Movements
 mins (number)	destination (object)	
-3	Carnival Office
-8	CS-room
-13	TB-room
-18	Head of the Line
-23	Ride Entrance
-28	Dark Passage
-33	Maintenance Office
-38	Stocks Room
-43	Gallows Room
-48	Stake Room
-53	Dungeon
-58	Guillotine Room
+0	Carnival Office
+3	CS-room
+6	TB-room
+9	Head of the Line
+12	Ride Entrance
+15	Dark Passage
+18	Maintenance Office
+21	Stocks Room
+24	Gallows Room
+27	Stake Room
+30	Dungeon
+33	Mechanical Room South
+36	Mechanical Room North
+39	Crawl Space
+42	Maintenance Office
+45	Dark Passage
+48	Ride Entrance
+51	Head of the Line
+54	TB-Room
+57	CS-Room
+
 
 Section 27 - Introduction to Hell Ride
 
@@ -4353,7 +4454,7 @@ title (text)	subtable (table name)	description (text)	toggle (rule)	used (number
 "Introduction to Interactive Fiction"	Table of IF Introduction	--
 "Settings"	Table of Setting Options	--	
 "Credits"	--	"[story title], Copyright 2025, Dana Montgomery.[paragraph break]Caitlyn Caluya-Bilbruck for her editing and proofreading super powers.[paragraph break]The following awesome individuals for their beta testing, excellent feedback, and ideas:[line break]Joey Acrimonious[line break]Ryan Allocco[line break]Andy Broding[line break]Drew Cook[line break]Max Fog[line break]Damien Karolev[line break]RJ Kowalski[line break]John Montgomery[line break]Andrew Schultz[paragraph break]Additional Credits:[line break]The amazing Inform community over at https://IntFiction.org.[line break][line break]Extensions used in [story title]:[line break][complete list of extension credits][line break]The images were generated using ChatGPT.[line break]"
-"----- The Hints Below Contain Out Right Solutions -----"	--	"Part of the enjoyment of Interactive Fiction comes from the solving of the puzzles. For the most part all [story title] puzzles are solved within these hints. The hints are often blunt, especially at the end of a topic. I would, however, encourage you to play for the fun of it and reserve the hints for when you[']re truly stuck."
+"----- Some Of The Hints Below Contain Out Right Solutions -----"	--	"Part of the enjoyment of Interactive Fiction comes from the solving of the puzzles. For the most part all [story title] puzzles are solved within these hints. The hints are often blunt, especially at the end of a topic. I would, however, encourage you to play for the fun of it and reserve the hints for when you[']re truly stuck."
 "The Parking Lot"	Table of Parking Lot Hints	--
 "The Attractions"	Table of Attractions Hints	--
 "The Games"	Table of Games Hints	--
@@ -4479,9 +4580,9 @@ title (text)	subtable (table name)	description (text)	toggle (rule)	used (number
 "hint"	--	"The other is in the Little Egypt tent."
 "Are the doors important?"	table of hinting	"Only if you want to know what[']s on the other side."
 "hint"	--	"Have you tried checking what[']s on the other side?"
-"hint"	--	"You[']ll need a key"
-"hint"	--	"You have to find it"
-"hint"	--	"It[']s in Electrical Closet One"
+"hint"	--	"You[']ll need a key."
+"hint"	--	"You have to find it."
+"hint"	--	"It[']s in the desk drawer in the Maintenance Office."
 
 Chapter 8 - Hell Ride Hints
 
@@ -4555,8 +4656,8 @@ Chapter 11 - The Control Room Hints
 
 Table of Control Room Hints
 title (text)	subtable (table name)	description (text)	toggle (rule)	used (number)	bookpage (number)	localpage (number)
-"Tell me about the big switch."	table of hinting	"It[']s big"	
-"hint"	--	"Very big"
+"Tell me about the big switch."	table of hinting	"It[']s big."	
+"hint"	--	"Very big."
 "hint"	--	"It[']s in the Control Room."
 "hint"	--	"Did you read the label?"
 "hint"	--	"Have you tried turning the big switch off?"
@@ -4722,6 +4823,9 @@ index	input
 --	"west"
 --	"look at platform"
 --	"look under platform"
+--	"drop gum"
+--	"drop magnet"
+--	"drop mallet"
 --	"get pliers"
 --	"show pliers to whidbey"
 --	"north"
@@ -4736,11 +4840,11 @@ index	input
 --	"north"
 --	"north"
 --	"northwest"
+--	"give wrench to attendant"
+--	"southeast"
 --	"look at janitor"
 --	"give pliers to janitor"
 --	"give flashlight to janitor"
---	"give wrench to attendant"
---	"southeast"
 --	"east"
 --	"hit bullseye with sledgehammer"
 --	"2"
@@ -4755,9 +4859,6 @@ index	input
 --	"west"
 --	"get lantern"
 --	"turn it on"
---	"wait"
---	"wait"
---	"wait"
 --	"wait"
 --	"wait"
 --	"wait"
@@ -4793,6 +4894,7 @@ index	input
 --	"south"
 --	"east"
 --	"south"
+--	"turn on lantern"
 --	"up"
 --	"west"
 --	"flip switch"
@@ -4870,6 +4972,7 @@ index	input
 --	"ask esmeralda about hell ride"
 --	"ask esmeralda about whidbey"
 --	"show insurance policy to esmeralda"
+--	"get fortune teller ticket"
 --	"give ticket to esmeralda"
 --	"wait"
 --	"wait"
@@ -4879,6 +4982,11 @@ index	input
 --	"south"
 --	"south"
 --	"east"
+--	"south"
+--	"south"
+--	"south"
+--	"south"
+--	"north"
 --	"ask whidbey about himself"
 --	"ask whidbey about hell ride"
 --	"ask whidbey about accidents"
@@ -4886,13 +4994,16 @@ index	input
 --	"ask whidbey about indigo fuse"
 --	"ask whidbey about pliers"
 --	"ask whidbey about bumper cars"
---	"south"
---	"west"
 --	"show check stub to whidbey"
+--	"north"
+--	"north"
+--	"north"
+--	"west"
 --	"ask whidbey about needleman"
 --	"show mystic to whidbey"
 --	"show evidence"
 --	"east"
+--	"south"
 --	"up"
 --	"west"
 --	"spin aqua dial to 1"
