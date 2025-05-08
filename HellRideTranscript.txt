@@ -2,7 +2,7 @@ Start of a transcript of:
 
 Hell Ride
 The ride of a lifetime... by Dana Montgomery
-Release 1 / Serial number 250326 / Inform 7 v10.1.2 / D
+Release 2 / Serial number 250501 / Inform 7 v10.1.2 / D
 Inform 7 v10.1.2
 Identification number: //E0A5AFB9-18BF-4485-B083-426CA51CCE70//
 Interpreter version 0.6.0 / VM 3.1.3
@@ -32,7 +32,7 @@ The blueberries were delicious. A true taste of summer!
 [Your score has just gone up by five points.]
 
 >look under seat
-You find the three quarters, the nickel, the five dimes, and your keys!
+You find the three quarters, the two nickels, the five dimes, and your keys!
 
 [Your score has just gone up by five points.]
 
@@ -97,7 +97,7 @@ Carousel ticket: You fork over $1.00 for the Carousel ticket, leaving yourself w
 
 
 High Striker
-A tall machine stands with bright red, yellow, and blue lights. A sign sits at the top reading "Test Your Strength!" The base is dark, polished wood, with a sturdy metal pole and a bell at the top. Markings along the pole indicate strength. A smaller sign says, "Buy a mallet, strike the bell, win a prize." Spectators cheer as the sound of the mallet hitting the target fills the night.
+A tall machine stands with bright red, yellow, and blue lights. A sign sits at the top reading "Test Your Strength!" The base is dark, polished wood, with a sturdy metal pole and a bell at the top and a bullseye at the bottom. Markings along the pole indicate strength. A smaller sign says, "Buy a mallet, strike the bell, win a prize." Spectators cheer as the sound of the mallet hitting the target fills the night.
 
 The Ticket Kiosk is to the west. Other games are northeast and southeast of here. The Ferris Wheel lies to the east.
 
@@ -130,7 +130,7 @@ You can't be sure of it but it seems as if the mallet isn't heavy enough to ring
 
 
 Pitchers Mound
-The milk bottle toss is a classic game of skill and luck. A pyramid of colorful bottles sits on a sturdy platform - three on the bottom, two in the middle, and one at the top. Players throw baseballs to knock down the stack and win a prize. The booth is lively, with cheering and the clatter of falling bottles. The attendant calls, "Step right up! Three balls for a dime!" Prizes from toys to stuffed animals hang nearby. With this carnival favorite, every toss is filled with suspense.  You thought you caught a flash of something coming from the area of the booth.
+The milk bottle toss is a classic game of skill and luck. A pyramid of colorful bottles sits on a sturdy platform - three on the bottom, two in the middle, and one at the top. Players throw baseballs to knock down the stack and win a prize. The booth is lively, with cheering and the clatter of falling bottles. The attendant calls, "Step right up! Three balls for a dime!" Prizes from toys to stuffed animals hang nearby. With this carnival favorite, every toss is filled with suspense.  You thought you caught a flash of something coming from under the booth.
 
 You're surprised to see that this game only costs a dime. The High Striker is to the northwest.
 
@@ -202,7 +202,7 @@ The attendant gives you three baseballs in return.
 >throw baseball at bottle 5
 You wind up and throw the baseball at the milk bottles. The ball hits the bottles in the sweet spot and they topple over onto the platform. The attendant shouts out, "Winner! Winner!"
 
-Which prize would you like? 1) a crimson colored fuse, 2) a plush donkey, 3) a goldfish in a bowl, 4) a poster of Lourde?
+Which prize would you like? 1) a crimson colored fuse, 2) a plush donkey, 3) a goldfish in a bowl, 4) a poster of Lorde?
 
 >1
 You are now holding a crimson colored fuse.
@@ -317,7 +317,7 @@ You can see a Hell Ride car (empty) here.
 >east
 
 Dark Passage
-This room is backstage at the Hell Ride attraction. The room is littered with bags of trash, piles of junk, and dust bunnies so large they should be paying rent. There an exit to the south and west.
+This room is backstage at the Hell Ride attraction. The room is littered with bags of trash, piles of junk, and dust bunnies so large they should be paying rent. There's an exit to the south and west.
 
 [Your score has just gone up by five points.]
 
@@ -352,6 +352,8 @@ Nearby a ladder leads up.
 Nearby an aqua colored door leads west.
 
 You can also see a worn photo and a desk (on which are a coffee mug and a radio) here.
+
+Mr Whidbey arrives from the Crawl Space.
 
 >open drawer
 You open the drawer, revealing some scissors, a stapler, a ballpoint pen, a pad of paper, and a silver key.
@@ -392,6 +394,7 @@ You open the toolbox, revealing an adjustable wrench, some channel locks, and a 
 Taken.
 
 >get sledgehammer
+(putting the notebook into the fanny pack to make room)
 Taken.
 
 >south
@@ -453,11 +456,11 @@ As the condemned approaches, the guillotine's timing falters. Instead of falling
 
 There is just one problem: the guillotine is being raised and lowered by some mechanism. It appears that the timing of the guillotine is off and it is being lowered onto the cars instead of between them. If a person were to be in a car as it passed under the guillotine, they would be seriously injured.
 
-You're glad you're not in one of those cars now. You must do something to stop it before someone gets hurt! 
+You're glad you're not in one of those cars now. You must do something to stop it before someone gets hurt!  There are exits to the north and south.
 
 Nearby a wooden door leads east to the Generator Room.
 
-You can also see a guillotine platform here.
+You can also see a platform here.
 
 >look at platform
 At the center of the square stands a raised wooden platform, stark and imposing, where the grim sentence is to be carried out. You can just make out something underneath the platform in the dark.
@@ -465,24 +468,17 @@ At the center of the square stands a raised wooden platform, stark and imposing,
 >look under platform
 You find the pliers!
 
+>put wallet in fanny pack
+You put the wallet into the fanny pack.
+
 >get pliers
-(putting the notebook into the fanny pack to make room)
-You're carrying too many things already.
-
-Mr Whidbey arrives from the Dungeon.
-
->show pliers to whidbey
-(first taking the pliers)
-(putting the wallet into the fanny pack to make room)
-"Oh! I thought I lost... I mean those belong to the janitor. Where did you find them?" asks Mr Whidbey.
-
-Mr. Whidbey's eyes dart up and to the left.
-
-You've collected some new evidence.
-
-You've discovered some evidence. To see a list and weighting of the evidence you've collected, type "SHOW EVIDENCE". To collect more evidence, try to ASK someone ABOUT something. Or SHOW something TO someone.
+(putting the dime into the fanny pack to make room)
+Taken.
 
 [Your score has just gone up by five points.]
+
+>show pliers to whidbey
+You can't see any such thing.
 
 >north
 
@@ -495,7 +491,7 @@ Chains rattle, mixed with distant moans and screams. Water drips from a cracked 
 
 Instruments of torture clutter the room: a broken rack, a brazier with bloodstained tools, and a spiked chair. Prisoners endure all these things, bound or writhing in agony.
 
-The torturer moves with cold precision, ignoring the suffering. Above, rats scurry in the shadows, and the heavy, oppressive air thickens with despair.
+The torturer moves with cold precision, ignoring the suffering. Above, rats scurry in the shadows, and the heavy, oppressive air thickens with despair. There are exits to the north and south.
 
 Nearby a wooden door leads east to the Mechanical Room South.
 
@@ -510,7 +506,7 @@ The public square is silent, broken only by crackling flames. At its center, thr
 
 A crowd watches, some jeering, others praying or looking away. Torch in hand, the executioner steps forward igniting the pyre. Flames roar as the women cry out, their voices lost in the heat.
 
-Gray clouds loom above as a raven caws. Church bells toll, marking the tragedy. Some onlookers stay, others quietly leave.
+Gray clouds loom above as a raven caws. Church bells toll, marking the tragedy. Some onlookers stay, others quietly leave. There are exits to the north and south. 
 
 Nearby a wooden door leads east to the Mechanical Room North.
 
@@ -533,7 +529,7 @@ The public square, wet from morning drizzle, lies under a dark sky. At its cente
 
 A hooded executioner, cold and focused, adjusts the noose. Pale and bound, the condemned man trembles as his eyes dart around the crowd. Sweat and rain mix on his face as he breathes shallowly.
 
-Vendors shout, children push forward, and an old man whispers prayers. Above, the bell tolls, marking the man's final moments. A raven watches from the gallows beam. The air is heavy as distant thunder rumbles.
+Vendors shout, children push forward, and an old man whispers prayers. Above, the bell tolls, marking the man's final moments. A raven watches from the gallows beam. The air is heavy as distant thunder rumbles. There are exits to the north and south.
 
 Nearby a wooden door leads east to the Crawl Space.
 
@@ -546,7 +542,7 @@ You can also see a gallows platform here.
 Stocks Room
 The public square is a cobblestone stretch surrounded by weathered buildings. The air smells of smoke, damp earth, and a nearby smithy. At the center, old stocks stand with iron clasps holding captives in shameful positions. Their tattered clothes offer little against the cold wind.
 
-The animatronics are lifelike, enhancing the grim atmosphere. The crowd mocks the prisoners, hurling insults and rotten food. Jeers mix with their laughter. The square hums with noise. Unnoticed by the crowd, the sky darkens as the spectacle continues.
+The animatronics are lifelike, enhancing the grim atmosphere. The crowd mocks the prisoners, hurling insults and rotten food. Jeers mix with their laughter. The square hums with noise. Unnoticed by the crowd, the sky darkens as the spectacle continues. There are exits to the north and south.
 
 Nearby a wooden door leads east to the Maintenance Office.
 
@@ -577,6 +573,8 @@ You can see a Hell Ride car (empty) here.
 
 Head of the Line
 You can see a Hell Ride attendant here.
+
+Mr Whidbey arrives from the Ticket Booth.
 
 >north
 
@@ -620,7 +618,7 @@ The janitor heads to the Ticket Booth.
 >southeast
 
 Ticket Booth
-You can see a janitor, Mr Whidbey, and a cashier here.
+You can see a janitor and a cashier here.
 
 >east
 
@@ -684,6 +682,8 @@ You hand over a dime, and the barker nods, waving you through. As you step up to
 "Hell Ride is our most popular attraction but there always seems to be something wrong with it," says the Barker.
 
 You've collected some new evidence.
+
+You've discovered some evidence. To see a list and weighting of the evidence you've collected, type "SHOW EVIDENCE". To collect more evidence, try to ASK someone ABOUT something. Or SHOW something TO someone.
 
 >ask barker about accidents
 The Barker says "Things sure seem vulnerable at this time."
@@ -901,10 +901,10 @@ This check stub is for a check made payable to "Fred Needleman". The amount is $
 Concession Stand
 Nearby a sturdy door leads south to the Carnival Office.
 
-You can also see a concession attendant and a menu here.
+You can also see Mr Whidbey, a concession attendant, and a menu here.
 
 >ask attendent about hell ride
-"Hell Ride is so old that It's falling apart. I wouldn't ride it." says the concession attendant.
+"Hell Ride is so old that it's falling apart. I wouldn't ride it." says the concession attendant.
 
 You've collected some new evidence.
 
@@ -912,6 +912,8 @@ You've collected some new evidence.
 The concession attendant says "The fire, the Ferris wheel, the Bumper Cars... That seems like a lot!"
 
 You've collected some new evidence.
+
+Mr Whidbey heads to the Carnival Office.
 
 >northeast
 
@@ -1348,6 +1350,8 @@ The janitor says, "These prizes are cheaper and flimsier than usual."
 
 You've collected some new evidence.
 
+Mr Whidbey arrives from the Ticket Booth.
+
 >north
 
 Ticket Booth
@@ -1390,7 +1394,7 @@ The janitor heads to the Ticket Booth.
 >southeast
 
 Ticket Booth
-You can see a janitor, Mr Whidbey, and a cashier here.
+You can see a janitor and a cashier here.
 
 >southeast
 
@@ -1431,12 +1435,12 @@ You've collected some new evidence.
 (first taking the Fortune Teller ticket)
 You give the Fortune Teller ticket to Esmeralda.
 
-Stepping inside, you're greeted by Esmeralda, a figure cloaked in flowing robes with a jeweled headpiece catching the flickering light. Her piercing eyes seem to look right through you as they gesture for you to sit at a small round table. At its center rests a glowing crystal ball, surrounded by tarot cards and mysterious trinkets.
+Stepping inside, you're greeted by Esmeralda, a figure cloaked in flowing robes with a jeweled headpiece catching the flickering light. Her piercing eyes seem to look right through you as she gestures for you to sit at a small round table. At its center rests a glowing crystal ball, surrounded by tarot cards and mysterious trinkets.
 
-Esmeralda's voice is low and melodic, weaving an air of intrigue as they ask you to focus on a question and offer you a tarot reading. The room seems to shrink, the bustling carnival outside fading into the background as she reveals your fate. Each card turned feels significant, as though unlocking a secret you didn't know you carried.
+Esmeralda's voice is low and melodic, weaving an air of intrigue as she asks you to focus on a question and offer you a tarot reading. The room seems to shrink, the bustling carnival outside fading into the background as she reveals your fate. Each card turned feels significant, as though unlocking a secret you didn't know you carried.
 
 Past: Eight of Cups (reversed)
-Eight of Cups reversed indicates suggests that you may be clinging tightly to your comfort zone, even if it no longer serves your best interests. This card urges you to examine whether you are avoiding necessary growth or ignoring your true desires. It may be tempting to remain in familiar territory, but by doing so, you risk missing out on the opportunities that lie ahead. Now is the time to summon the courage to explore new horizons and embrace the unknown.
+Eight of Cups reversed suggests that you may be clinging tightly to your comfort zone, even if it no longer serves your best interests. This card urges you to examine whether you are avoiding necessary growth or ignoring your true desires. It may be tempting to remain in familiar territory, but by doing so, you risk missing out on the opportunities that lie ahead. Now is the time to summon the courage to explore new horizons and embrace the unknown.
 
 >wait
 Time passes.
@@ -1448,7 +1452,7 @@ Knight of Swords reversed signifies a lack of strategy, where actions are taken 
 Time passes.
 
 Challenge: The Devil (reversed)
-Devil reversed indicate temptations resisted, stricter moral kept and an escape from the chains from the devil. It offers hope and liberation. The Devil reversed brings the strength and self awareness to confront your inner demons and break free from the suffocating bonds that have kept you trapped in patterns of self-destruction. It is a powerful call to examine your attachments, whether they be toxic relationships, harmful habits, or limiting beliefs.
+Devil reversed indicates temptations resisted, stricter moral kept and an escape from the chains of the devil. It offers hope and liberation. The Devil reversed brings the strength and self awareness to confront your inner demons and break free from the suffocating bonds that have kept you trapped in patterns of self-destruction. It is a powerful call to examine your attachments, whether they be toxic relationships, harmful habits, or limiting beliefs.
 
 >wait
 Time passes.
@@ -1484,12 +1488,42 @@ You can see a Hell Ride car (empty) here.
 >east
 
 Dark Passage
-You can see Mr Whidbey here.
+
+>s
+
+Maintenance Office
+Nearby a ladder leads up to Dark Hallway.
+
+Nearby an aqua colored door leads west to the Stocks Room.
+
+You can also see a worn photo and a desk (on which are a coffee mug and a radio) here.
+
+>south
+
+Crawl Space
+Nearby a crimson colored door leads west to the Gallows Room.
+
+>south
+
+Mechanical Room North
+Nearby an emerald colored door leads west to the Stake Room.
+
+You can also see a toolbox (in which are some channel locks and a hammer) here.
+
+>south
+
+Mechanical Room South
+Nearby a gray colored door leads west to the Dungeon.
+
+You can also see Mr Whidbey and a grate (empty) here.
 
 >ask whidbey about himself
 Mr Whidbey looks at you expectantly.
 
 "I've been at the helm of Whidbey Amusements since 1991. We've seen a lot of changes in that time," says Mr Whidbey.
+
+Mr. Whidbey's eyes dart up and to the left.
+
 
 >ask whidbey about hell ride
 Mr Whidbey waits for you to speak.
@@ -1508,8 +1542,6 @@ Mr Whidbey waits for you to speak.
 
 "Where did you get that?" Mr Whidbey asks.
 
-Mr. Whidbey's eyes dart up and to the left.
-
 You've collected some new evidence.
 
 >ask whidbey about pliers
@@ -1517,6 +1549,7 @@ Mr Whidbey looks at you expectantly.
 
 "Oh! I thought I lost... um, those belong to the janitor. Where did you find them?" asks Mr Whidbey.
 
+Mr. Whidbey quickly changes the subject
 You've collected some new evidence.
 
 >ask whidbey about bumper cars
@@ -1531,7 +1564,64 @@ Mr Whidbey says "Uh, Fred is a special... contractor... We paid him. For service
 
 You've collected some new evidence.
 
-Mr Whidbey heads to the Stocks Room.
+Mr Whidbey heads to the Maintenance Office.
+
+>north
+
+Mechanical Room North
+Nearby an emerald colored door leads west to the Stake Room.
+
+You can also see a toolbox (in which are some channel locks and a hammer) here.
+
+>north
+
+Crawl Space
+Nearby a crimson colored door leads west to the Gallows Room.
+
+>north
+
+Maintenance Office
+Nearby a ladder leads up to Dark Hallway.
+
+Nearby an aqua colored door leads west to the Stocks Room.
+
+You can also see Mr Whidbey, a worn photo, and a desk (on which are a coffee mug and a radio) here.
+
+Mr Whidbey heads to Dark Passage.
+
+>north
+
+Dark Passage
+You can see Mr Whidbey here.
+
+>ask whidbey about needleman
+Mr Whidbey waits for you to speak.
+
+Mr Whidbey says "Uh, Fred is a special... contractor... We paid him. For services rendered."
+
+You've collected some new evidence.
+
+>show mystic to whidbey
+Mr Whidbey says, "That fire in Hell Ride was very expensive to repair. And it put the ride out of commission for two weeks."
+
+Mr. Whidbey's eyes dart up and to the left.
+
+You've collected some new evidence.
+
+Mr Whidbey heads to Ride Entrance.
+
+>show evidence
+  Weight   Evidence collected:
+  ------   --------------------------------------------------------
+?    57    Evidence concerning accidents with the attractions
+?    16    Evidence concerning insurance
+?     6    Evidence concerning Mr Whidbey
+?     5    Evidence concerning fuses
+?     3    Evidence concerning past due invoices
+  ------   --------------------------------------------------------
+?    87    Total Weighted Evidence
+
+You've got enough evidence for a conviction.
 
 >south
 
@@ -1539,48 +1629,6 @@ Maintenance Office
 Nearby a ladder leads up to Dark Hallway.
 
 Nearby an aqua colored door leads west to the Stocks Room.
-
-You can also see a worn photo and a desk (on which are a coffee mug and a radio) here.
-
->west
-
-Stocks Room
-Nearby a wooden door leads east to the Maintenance Office.
-
-You can also see Mr Whidbey and a wooden stocks here.
-
->ask whidbey about needleman
-Mr Whidbey waits for you to speak.
-
-Mr Whidbey says "Uh, Fred is a special... contractor... We paid him. For services rendered."
-
-Mr. Whidbey quickly changes the subject
-You've collected some new evidence.
-
->show mystic to whidbey
-Mr Whidbey says, "That fire in Hell Ride was very expensive to repair. And it put the ride out of commission for two weeks."
-
-You've collected some new evidence.
-
->show evidence
-  Weight   Evidence collected:
-  ------   --------------------------------------------------------
-?    62    Evidence concerning accidents with the attractions
-?    16    Evidence concerning insurance
-?     6    Evidence concerning Mr Whidbey
-?     5    Evidence concerning fuses
-?     3    Evidence concerning past due invoices
-  ------   --------------------------------------------------------
-?    92    Total Weighted Evidence
-
-You've got enough evidence for a conviction.
-
->east
-
-Maintenance Office
-Nearby an aqua colored door leads west to the Stocks Room.
-
-Nearby a ladder leads up to Dark Hallway.
 
 You can also see a worn photo and a desk (on which are a coffee mug and a radio) here.
 
@@ -1658,7 +1706,7 @@ He handcuffs Whidbey, thanks you for your service to the community, and leads Mr
     *** You have won! ***
 
 
-You've received 200 points out of a possible 200 in 241 moves!
+You've received 200 points out of a possible 200 in 247 moves!
 
 You have received points for the following: 
 
@@ -1699,13 +1747,13 @@ You have received points for the following:
 
   Weight   Evidence collected:
   ------   --------------------------------------------------------
-?    62    Evidence concerning accidents with the attractions
+?    57    Evidence concerning accidents with the attractions
 ?    16    Evidence concerning insurance
 ?     6    Evidence concerning Mr Whidbey
 ?     5    Evidence concerning fuses
 ?     3    Evidence concerning past due invoices
   ------   --------------------------------------------------------
-?    92    Total Weighted Evidence
+?    87    Total Weighted Evidence
 
 You've got enough evidence for a conviction.
 

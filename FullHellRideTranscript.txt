@@ -2,7 +2,7 @@ Start of a transcript of:
 
 Hell Ride
 The ride of a lifetime... by Dana Montgomery
-Release 1 / Serial number 250326 / Inform 7 v10.1.2 / D
+Release 2 / Serial number 250501 / Inform 7 v10.1.2 / D
 Inform 7 v10.1.2
 Identification number: //E0A5AFB9-18BF-4485-B083-426CA51CCE70//
 Interpreter version 0.6.0 / VM 3.1.3
@@ -32,7 +32,7 @@ The midway is to the south. There is a blueberry bush here. There are blueberrie
 
 Your car is here. It's a bit of a beater. Inside the car, you can see the glove box, the seat, the rear view mirror, the ignition, and the dashboard.
 
-The attendant has a parking ticket. The price of a parking is $5.00.
+The attendant has a parking ticket. The price of a parking ticket is $5.00.
 
 You can see a parking attendant here.
 
@@ -94,7 +94,7 @@ Although it's old, it feels like an old friend. From the faux leather seats to t
 In the beater car is an air freshener.
 
 >l under seat
-You find the three quarters, the nickel, the five dimes, and your keys!
+You find the three quarters, the two nickels, the five dimes, and your keys!
 
 [Your score has just gone up by five points.]
 
@@ -105,6 +105,7 @@ dime: Taken.
 dime: Taken.
 dime: Taken.
 dime: Taken.
+nickel: Taken.
 nickel: Taken.
 quarter: Taken.
 quarter: Taken.
@@ -130,7 +131,7 @@ You catch a glimpse of yourself in the rear view mirror. "Looking good!" you thi
 >l at coupon
 
 
-You found this in a stack of coupons on the counter of the gas station.
+This coupon gives you a $2.00 discount on parking at the carnival. You found this in a stack of coupons on the counter of the gas station.
 
 >smell air freshener
 It smells like fake pine trees. The odor is pretty strong.
@@ -321,7 +322,7 @@ The janitor heads to the Ticket Booth.
 >ne
 
 Ticket Booth
-You can see a janitor and a cashier here.
+You can see a janitor, Mr Whidbey, and a cashier here.
 
 >ask janitor about hell ride
 The janitor looks bored as he waits for you to speak.
@@ -329,6 +330,8 @@ The janitor looks bored as he waits for you to speak.
 "Hell Ride is a finicky ride. I'm fixing something there every week. Last week, Mr. Whidbey asked me to skip Hell Ride's maintenance slot. There was a real fire in the Stakes Room last month. And just yesterday I caught him creeping around the guillotine room" says the janitor.
 
 You've collected some new evidence.
+
+Mr Whidbey heads to the Concession Stand.
 
 >ask janitor about ferris wheel
 The janitor looks at you expectantly.
@@ -418,8 +421,6 @@ The operator stands in this booth overseeing the action below.
 Ticket Booth
 You can see a cashier here.
 
-Mr Whidbey arrives from the Concession Stand.
-
 >se
 
 
@@ -462,9 +463,9 @@ Esmeralda says, "Hey! I need those!"
 (the Fortune Teller ticket to Esmeralda)
 You give the Fortune Teller ticket to Esmeralda.
 
-Stepping inside, you're greeted by Esmeralda, a figure cloaked in flowing robes with a jeweled headpiece catching the flickering light. Her piercing eyes seem to look right through you as they gesture for you to sit at a small round table. At its center rests a glowing crystal ball, surrounded by tarot cards and mysterious trinkets.
+Stepping inside, you're greeted by Esmeralda, a figure cloaked in flowing robes with a jeweled headpiece catching the flickering light. Her piercing eyes seem to look right through you as she gestures for you to sit at a small round table. At its center rests a glowing crystal ball, surrounded by tarot cards and mysterious trinkets.
 
-Esmeralda's voice is low and melodic, weaving an air of intrigue as they ask you to focus on a question and offer you a tarot reading. The room seems to shrink, the bustling carnival outside fading into the background as she reveals your fate. Each card turned feels significant, as though unlocking a secret you didn't know you carried.
+Esmeralda's voice is low and melodic, weaving an air of intrigue as she asks you to focus on a question and offer you a tarot reading. The room seems to shrink, the bustling carnival outside fading into the background as she reveals your fate. Each card turned feels significant, as though unlocking a secret you didn't know you carried.
 
 Past: Ten of Wands (upright)
 Ten of Wands suggests that you may be shouldering too many responsibilities or taking on more than you can handle. You may feel overwhelmed, exhausted, or weighed down by the tasks and obligations in your life. This card serves as a reminder to evaluate your commitments and consider whether you need to delegate, seek support, or let go of some burdens.
@@ -507,7 +508,7 @@ You can see a janitor and a cashier here.
 
 
 High Striker
-A tall machine stands with bright red, yellow, and blue lights. A sign sits at the top reading "Test Your Strength!" The base is dark, polished wood, with a sturdy metal pole and a bell at the top. Markings along the pole indicate strength. A smaller sign says, "Buy a mallet, strike the bell, win a prize." Spectators cheer as the sound of the mallet hitting the target fills the night.
+A tall machine stands with bright red, yellow, and blue lights. A sign sits at the top reading "Test Your Strength!" The base is dark, polished wood, with a sturdy metal pole and a bell at the top and a bullseye at the bottom. Markings along the pole indicate strength. A smaller sign says, "Buy a mallet, strike the bell, win a prize." Spectators cheer as the sound of the mallet hitting the target fills the night.
 
 The Ticket Kiosk is to the west. Other games are northeast and southeast of here. The Ferris Wheel lies to the east.
 
@@ -572,7 +573,7 @@ The janitor arrives from the Ferris Wheel.
 
 
 High Striker
-A tall machine stands with bright red, yellow, and blue lights. A sign sits at the top reading "Test Your Strength!" The base is dark, polished wood, with a sturdy metal pole and a bell at the top. Markings along the pole indicate strength. A smaller sign says, "Buy a mallet, strike the bell, win a prize." Spectators cheer as the sound of the mallet hitting the target fills the night.
+A tall machine stands with bright red, yellow, and blue lights. A sign sits at the top reading "Test Your Strength!" The base is dark, polished wood, with a sturdy metal pole and a bell at the top and a bullseye at the bottom. Markings along the pole indicate strength. A smaller sign says, "Buy a mallet, strike the bell, win a prize." Spectators cheer as the sound of the mallet hitting the target fills the night.
 
 The Ticket Kiosk is to the west. Other games are northeast and southeast of here. The Ferris Wheel lies to the east.
 
@@ -591,7 +592,7 @@ Buy a mallet, strike the bell, win a prize.
 
 >l at base
 (the High Striker)
-The High Striker is a tall, eye-catching machine adorned with bright, colorful lights. A large sign at the top reads "Test Your Strength!". The machine's base is made of polished wood. At the center is a sturdy metal pole, with a large bell hanging at the top.
+The High Striker is a tall, eye-catching machine adorned with bright, colorful lights. A large sign at the top reads "Test Your Strength!". The machine's base is made of polished wood. At the center is a sturdy metal pole, with a large bell hanging at the top and a bullseye at the bottom.
 
 >l at pole
 There are five levels marked on the pole: Weakling, Getting There, Average, Almost There, and Muscle Man.
@@ -602,7 +603,7 @@ The janitor heads to the Ticket Booth.
 Spectators gather around, cheering on participants and offering lighthearted jabs and encouragement.
 
 >listen
-The sound of the mallet hitting the target is followed by the resonant clang of the bell ), alongside the buzz of carnival music in the background.
+The sound of the mallet hitting the target is followed by the resonant clang of the bell, alongside the buzz of carnival music in the background.
 
 >smell
 You smell the odors of the carnival. As you inhale deeply, you can discern fresh, hot buttered popcorn, the sweet aroma of cotton candy, and the warm doughy scent of pretzels.
@@ -635,7 +636,7 @@ You lift the mallet high and bring it down on the bullseye with all your might! 
 
 
 Pitchers Mound
-The milk bottle toss is a classic game of skill and luck. A pyramid of colorful bottles sits on a sturdy platform - three on the bottom, two in the middle, and one at the top. Players throw baseballs to knock down the stack and win a prize. The booth is lively, with cheering and the clatter of falling bottles. The attendant calls, "Step right up! Three balls for a dime!" Prizes from toys to stuffed animals hang nearby. With this carnival favorite, every toss is filled with suspense.  You thought you caught a flash of something coming from the area of the booth.
+The milk bottle toss is a classic game of skill and luck. A pyramid of colorful bottles sits on a sturdy platform - three on the bottom, two in the middle, and one at the top. Players throw baseballs to knock down the stack and win a prize. The booth is lively, with cheering and the clatter of falling bottles. The attendant calls, "Step right up! Three balls for a dime!" Prizes from toys to stuffed animals hang nearby. With this carnival favorite, every toss is filled with suspense.  You thought you caught a flash of something coming from under the booth.
 
 You're surprised to see that this game only costs a dime. The High Striker is to the northwest.
 
@@ -753,7 +754,7 @@ The booth buzzes with energy, its colorful banners and flashing lights drawing a
 The satisfying clatter of falling bottles mixes with cheers and groans from players and spectators.
 
 >l at prizes
-The prizes are a crimson colored fuse, a plush donkey, a goldfish in a bowl, and a poster of Lourde.
+The prizes are a crimson colored fuse, a plush donkey, a goldfish in a bowl, and a poster of Lorde.
 
 >give dime to attendant
 The attendant gives you three baseballs in return.
@@ -767,7 +768,7 @@ You wind up and throw the baseball at the milk bottles. You knocked over five bo
 >throw baseball at bottle 5
 You wind up and throw the baseball at the milk bottles. The ball hits the bottles in the sweet spot and they topple over onto the platform. The attendant shouts out, "Winner! Winner!"
 
-Which prize would you like? 1) a crimson colored fuse, 2) a plush donkey, 3) a goldfish in a bowl, 4) a poster of Lourde?
+Which prize would you like? 1) a crimson colored fuse, 2) a plush donkey, 3) a goldfish in a bowl, 4) a poster of Lorde?
 
 >1
 You are now holding a crimson colored fuse.
@@ -862,6 +863,7 @@ You open the trash can, revealing a khaki colored fuse.
 
 >get fuse
 (the khaki colored fuse)
+(putting the notebook into the fanny pack to make room)
 Taken.
 
 [Your score has just gone up by ten points.]
@@ -971,166 +973,42 @@ You turn the knob to 3, and you hear a click.
 >open safe
 You open the safe, revealing an indigo colored fuse, a gold key, and an insurance policy.
 
+Mr Whidbey arrives from the Concession Stand.
+
 >get all from safe
-indigo colored fuse: (putting the notebook into the fanny pack to make room)
+indigo colored fuse: (putting the wallet into the fanny pack to make room)
 Taken.
-gold key: (putting the wallet into the fanny pack to make room)
+gold key: (putting the dime into the fanny pack to make room)
 Taken.
 insurance policy: (putting the dime into the fanny pack to make room)
 Taken.
+
+Mr Whidbey shouts, "Hey! Get out of here! Can't you read the sign? Employees only!"
+
+
+
+Concession Stand
+The concession stand is a destination for many along the midway. Twinkling lights frame the stand making it glow amid the carnival's buzz.
+
+Behind the counter, popcorn churns in the machine, candy apples gleam, and cotton candy spins in clouds. Warm pretzels sit under a heat lamp, while sodas chill in a frosted cooler. The counter is cluttered with bags, napkins, and sprinkle cups. Kids tug at parents, teens share pretzels, and the crowd buzzes with energy.
+
+There is a menu to the right of the window. You can see the treats inside the stand. There are exits to the south, west, and northeast.
+
+Nearby a sturdy door leads south to the Carnival Office.
+
+You can also see a concession attendant and a menu here.
+
+You suddenly find yourself escorted outside the Carnival Office unceremoniously only to find yourself in the Concession Stand.
 
 [Your score has just gone up by five points.]
 
 [Your score has just gone up by ten points.]
 
->l at paperwork
-Piles of receipts and old financial statements cover much of the desk, but the documents seem to be a mix of chaotic disorganization and purposeful concealment. Most of these are for the regular day to day expenses such as: paper goods, consumables, etc. Closer inspection shows a steadily declining volume of goods ordered. Almost as if the carnival couldn't afford the full cost. Some are marked paid and others are not. Some are marked "Past Due". I wonder if the carnival is in some kind of financial trouble.
-
->open filing cabinet
-(first unlocking the filing cabinet)
-(with the gold key)
-You open the filing cabinet, revealing an envelope, a Cash 'N' Carry invoice, a Frank's Market invoice, an Oriental Trading invoice, and a Mystic Industries invoice.
-
-Mr Whidbey arrives from the Guillotine Room.
-
->get all invoices
-Cash 'N' Carry invoice: (putting the dime into the fanny pack to make room)
-Taken.
-Frank's Market invoice: (putting the dime into the fanny pack to make room)
-Taken.
-Oriental Trading invoice: (putting the nickel into the fanny pack to make room)
-Taken.
-Mystic Industries invoice: (putting the quarter into the fanny pack to make room)
-Taken.
-
-Mr Whidbey shouts, "Hey! Get out of here! Can't you read the sign? Employees only!"
-
-
-
-Concession Stand
-The concession stand is a destination for many along the midway. Twinkling lights frame the stand making it glow amid the carnival's buzz.
-
-Behind the counter, popcorn churns in the machine, candy apples gleam, and cotton candy spins in clouds. Warm pretzels sit under a heat lamp, while sodas chill in a frosted cooler. The counter is cluttered with bags, napkins, and sprinkle cups. Kids tug at parents, teens share pretzels, and the crowd buzzes with energy.
-
-There is a menu to the right of the window. You can see the treats inside the stand. There are exits to the south, west, and northeast.
-
-Nearby a sturdy door leads south to the Carnival Office.
-
-You can also see a concession attendant and a menu here.
-
-You suddenly find yourself escorted outside the Carnival Office unceremoniously only to find yourself in the Concession Stand.
-
-[Your score has just gone up by five points.]
-
-[Your score has just gone up by five points.]
-
-[Your score has just gone up by five points.]
-
-[Your score has just gone up by five points.]
-
->s
-
-Carnival Office
-Nearby a sturdy door leads north to the Concession Stand.
-
-On the messy desk are a mini Ferris wheel and a mini carousel.
-
-You can also see Mr Whidbey, a safe (empty), a filing cabinet (in which is an envelope (closed)), and a framed photograph here.
-
-Mr Whidbey shouts, "Hey! Get out of here! Can't you read the sign? Employees only!"
-
-
-
-Concession Stand
-The concession stand is a destination for many along the midway. Twinkling lights frame the stand making it glow amid the carnival's buzz.
-
-Behind the counter, popcorn churns in the machine, candy apples gleam, and cotton candy spins in clouds. Warm pretzels sit under a heat lamp, while sodas chill in a frosted cooler. The counter is cluttered with bags, napkins, and sprinkle cups. Kids tug at parents, teens share pretzels, and the crowd buzzes with energy.
-
-There is a menu to the right of the window. You can see the treats inside the stand. There are exits to the south, west, and northeast.
-
-Nearby a sturdy door leads south to the Carnival Office.
-
-You can also see a concession attendant and a menu here.
-
-You suddenly find yourself escorted outside the Carnival Office unceremoniously only to find yourself in the Concession Stand.
-
->s
-
-Carnival Office
-Nearby a sturdy door leads north to the Concession Stand.
-
-On the messy desk are a mini Ferris wheel and a mini carousel.
-
-You can also see Mr Whidbey, a safe (empty), a filing cabinet (in which is an envelope (closed)), and a framed photograph here.
-
-Mr Whidbey shouts, "Hey! Get out of here! Can't you read the sign? Employees only!"
-
-
-
-Concession Stand
-The concession stand is a destination for many along the midway. Twinkling lights frame the stand making it glow amid the carnival's buzz.
-
-Behind the counter, popcorn churns in the machine, candy apples gleam, and cotton candy spins in clouds. Warm pretzels sit under a heat lamp, while sodas chill in a frosted cooler. The counter is cluttered with bags, napkins, and sprinkle cups. Kids tug at parents, teens share pretzels, and the crowd buzzes with energy.
-
-There is a menu to the right of the window. You can see the treats inside the stand. There are exits to the south, west, and northeast.
-
-Nearby a sturdy door leads south to the Carnival Office.
-
-You can also see a concession attendant and a menu here.
-
-You suddenly find yourself escorted outside the Carnival Office unceremoniously only to find yourself in the Concession Stand.
-
->s
-
-Carnival Office
-Nearby a sturdy door leads north to the Concession Stand.
-
-On the messy desk are a mini Ferris wheel and a mini carousel.
-
-You can also see Mr Whidbey, a safe (empty), a filing cabinet (in which is an envelope (closed)), and a framed photograph here.
-
-Mr Whidbey shouts, "Hey! Get out of here! Can't you read the sign? Employees only!"
-
-
-
-Concession Stand
-The concession stand is a destination for many along the midway. Twinkling lights frame the stand making it glow amid the carnival's buzz.
-
-Behind the counter, popcorn churns in the machine, candy apples gleam, and cotton candy spins in clouds. Warm pretzels sit under a heat lamp, while sodas chill in a frosted cooler. The counter is cluttered with bags, napkins, and sprinkle cups. Kids tug at parents, teens share pretzels, and the crowd buzzes with energy.
-
-There is a menu to the right of the window. You can see the treats inside the stand. There are exits to the south, west, and northeast.
-
-Nearby a sturdy door leads south to the Carnival Office.
-
-You can also see a concession attendant and a menu here.
-
-You suddenly find yourself escorted outside the Carnival Office unceremoniously only to find yourself in the Concession Stand.
-
->s
-
-Carnival Office
-Nearby a sturdy door leads north to the Concession Stand.
-
-On the messy desk are a mini Ferris wheel and a mini carousel.
-
-You can also see Mr Whidbey, a safe (empty), a filing cabinet (in which is an envelope (closed)), and a framed photograph here.
-
-Mr Whidbey shouts, "Hey! Get out of here! Can't you read the sign? Employees only!"
-
-
-
-Concession Stand
-The concession stand is a destination for many along the midway. Twinkling lights frame the stand making it glow amid the carnival's buzz.
-
-Behind the counter, popcorn churns in the machine, candy apples gleam, and cotton candy spins in clouds. Warm pretzels sit under a heat lamp, while sodas chill in a frosted cooler. The counter is cluttered with bags, napkins, and sprinkle cups. Kids tug at parents, teens share pretzels, and the crowd buzzes with energy.
-
-There is a menu to the right of the window. You can see the treats inside the stand. There are exits to the south, west, and northeast.
-
-Nearby a sturdy door leads south to the Carnival Office.
-
-You can also see a concession attendant and a menu here.
-
-You suddenly find yourself escorted outside the Carnival Office unceremoniously only to find yourself in the Concession Stand.
+>z
+Time passes.
+
+>z
+Time passes.
 
 Mr Whidbey arrives from the Carnival Office.
 
@@ -1141,7 +1019,33 @@ Nearby a sturdy door leads north to the Concession Stand.
 
 On the messy desk are a mini Ferris wheel and a mini carousel.
 
-You can also see a safe (empty), a filing cabinet (in which is an envelope (closed)), and a framed photograph here.
+You can also see a safe (empty), a filing cabinet (closed), and a framed photograph here.
+
+>l at paperwork
+Piles of receipts and old financial statements cover much of the desk, but the documents seem to be a mix of chaotic disorganization and purposeful concealment. Most of these are for the regular day to day expenses such as: paper goods, consumables, etc. Closer inspection shows a steadily declining volume of goods ordered. Almost as if the carnival couldn't afford the full cost. Some are marked paid and others are not. Some are marked "Past Due". I wonder if the carnival is in some kind of financial trouble.
+
+>open filing cabinet
+(first unlocking the filing cabinet)
+(with the gold key)
+You open the filing cabinet, revealing an envelope, a Cash 'N' Carry invoice, a Frank's Market invoice, an Oriental Trading invoice, and a Mystic Industries invoice.
+
+>get all invoices
+Cash 'N' Carry invoice: (putting the dime into the fanny pack to make room)
+Taken.
+Frank's Market invoice: (putting the nickel into the fanny pack to make room)
+Taken.
+Oriental Trading invoice: (putting the nickel into the fanny pack to make room)
+Taken.
+Mystic Industries invoice: (putting the quarter into the fanny pack to make room)
+Taken.
+
+[Your score has just gone up by five points.]
+
+[Your score has just gone up by five points.]
+
+[Your score has just gone up by five points.]
+
+[Your score has just gone up by five points.]
 
 >get envelope
 (putting the quarter into the fanny pack to make room)
@@ -1271,7 +1175,9 @@ The Ferris wheel towers above the carnival and is illuminated with vibrant light
 >ne
 
 Ticket Booth
-You can see a cashier here.
+You can see a janitor and a cashier here.
+
+The janitor heads to the High Striker.
 
 >w
 
@@ -1334,30 +1240,38 @@ This is a highly polished brass lantern.
 
 It is currently switched off.
 
-The tent is dimly lit, the stage is a fully decorated representation of some Middle Eastern palace, featuring rich, colorful fabrics, brass ornaments, and lanterns casting a warm, flickering glow. Heady incense wafts through the air, softening everything around the edges. Enhancing the mystique, the backdrop displays painted scenes of pyramids, desert landscapes, and domed structures. The colorful onion topped buildings and jewel tones set to the sepia colored landscape have you transported far away.
-
 >get lantern
-You're much too entranced by the show to do anything other than watch the show. You are riveted!
+Taken.
 
-Little Egypt emerges, draped in flowing silken veils. Skillfully she twirls using them as part of the dance. A sparkling, sequined bodice opens into a gauze skirt, adorned with jingling coin belts and jewelry that accentuate her dance.
+[Your score has just gone up by five points.]
 
 >turn it on
 You're much too entranced by the show to do anything other than watch the show. You are riveted!
 
-The performance begins with slow, undulating movements, drawing you into the rhythm of the music. Traditional instruments like the oud, darbuka, or zurna are an accompanying chorus. As the tempo builds, her hips, torso, and hands twist in an intricate and mesmerizing pattern. Little Egypt demonstrates remarkable control and fluidity. She dramatically spins, drops, and shimmies, often punctuating the beat with a quick jingle of her coin belt.
+The tent is dimly lit, the stage is a fully decorated representation of some Middle Eastern palace, featuring rich, colorful fabrics, brass ornaments, and lanterns casting a warm, flickering glow. Heady incense wafts through the air, softening everything around the edges. Enhancing the mystique, the backdrop displays painted scenes of pyramids, desert landscapes, and domed structures. The colorful onion topped buildings and jewel tones set to the sepia colored landscape have you transported far away.
 
 >l at backdrop
 Elegantly painted on linen, the backdrop shows scenes of Middle Eastern life.
 
-Little Egypt makes eye contact with you and smiles enigmatically. In her performance she balances a fine silver sword on her head and accents her dance with tinkling finger cymbals.
+Little Egypt emerges, draped in flowing silken veils. Skillfully she twirls using them as part of the dance. A sparkling, sequined bodice opens into a gauze skirt, adorned with jingling coin belts and jewelry that accentuate her dance.
 
 >look at veils
 Little Egypt is a beautiful woman who is draped in flowing silk veils which she skillfully uses as part of the dance. Her attire consists of a sparkling, sequined bodice and a flowing skirt, adorned with jingling coin belts and jewelry that accentuate her movements.
 
-The music oscillates between hauntingly slow melodies and rapid, energetic drum beats, a roller coaster of emotion that leaves you entranced. Little Egypt relies on the music's dynamic changes to tell a story with movements reflecting joy, sorrow, seduction, and celebration.
+The performance begins with slow, undulating movements, drawing you into the rhythm of the music. Traditional instruments like the oud, darbuka, or zurna are an accompanying chorus. As the tempo builds, her hips, torso, and hands twist in an intricate and mesmerizing pattern. Little Egypt demonstrates remarkable control and fluidity. She dramatically spins, drops, and shimmies, often punctuating the beat with a quick jingle of her coin belt.
 
 >l at scenes
 The canvas displays painted scenes of pyramids, desert landscapes, and domed structures .
+
+Little Egypt makes eye contact with you and smiles enigmatically. In her performance she balances a fine silver sword on her head and accents her dance with tinkling finger cymbals.
+
+>z
+Time passes.
+
+The music oscillates between hauntingly slow melodies and rapid, energetic drum beats, a roller coaster of emotion that leaves you entranced. Little Egypt relies on the music's dynamic changes to tell a story with movements reflecting joy, sorrow, seduction, and celebration.
+
+>z
+Time passes.
 
 The performance concludes with a dramatic flourish, an energetic shimmy, a bold spin, and Little Egypt casts off her veils. The dancer takes a bow to thunderous applause, leaving you spellbound by the sensual display.
 
@@ -1372,9 +1286,7 @@ You wrap the veil around your head, shrouding your eyes. The world is a lovely c
 [Your score has just gone up by five points.]
 
 >get lantern
-Taken.
-
-[Your score has just gone up by five points.]
+You already have that.
 
 >turn it on
 You flip a switch. A strong, narrow beam of light shines from the lit lantern.
@@ -1531,9 +1443,7 @@ You have enough evidence to press charges.
 >se
 
 Ticket Booth
-You can see Mr Whidbey and a cashier here.
-
-Mr Whidbey heads to the Head of the Line.
+You can see a cashier here.
 
 >l at attendant
 This is another bored teenager. He wonders how is he supposed to look cool dressed in this awful uniform.
@@ -1635,7 +1545,9 @@ Flashes of sickly green light reveal twisted paths and grotesque shapes in the d
 >e
 
 Dark Passage
-This room is backstage at the Hell Ride attraction. The room is littered with bags of trash, piles of junk, and dust bunnies so large they should be paying rent. There an exit to the south and west.
+This room is backstage at the Hell Ride attraction. The room is littered with bags of trash, piles of junk, and dust bunnies so large they should be paying rent. There's an exit to the south and west.
+
+You can see Mr Whidbey here.
 
 [Your score has just gone up by five points.]
 
@@ -1649,6 +1561,8 @@ This is a pile of assorted flotsam and jetsam from the carnival. None of it look
 
 In the pile of junk is a flashlight.
 
+Mr Whidbey heads to Ride Entrance.
+
 >get flashlight
 Taken.
 
@@ -1660,12 +1574,14 @@ You flip a switch. A strong, narrow beam of light shines from the lit flashlight
 >w
 
 Ride Entrance
-You can see a Hell Ride car (empty) here.
+You can see Mr Whidbey and a Hell Ride car (empty) here.
+
+Mr Whidbey heads to the Head of the Line.
 
 >n
 
 Head of the Line
-You can see a Hell Ride attendant here.
+You can see Mr Whidbey and a Hell Ride attendant here.
 
 >n
 
@@ -1675,12 +1591,14 @@ You can see a cashier here.
 >s
 
 Head of the Line
-You can see a Hell Ride attendant here.
+You can see Mr Whidbey and a Hell Ride attendant here.
+
+Mr Whidbey heads to the Ticket Booth.
 
 >n
 
 Ticket Booth
-You can see a cashier here.
+You can see Mr Whidbey and a cashier here.
 
 >e
 
@@ -1792,9 +1710,7 @@ You're the safe choice for safety!
 "Margaritaville" by Jimmy Buffet plays on the radio.
 
 >l at schedules
-Looking at the maintenance schedules and notes, all you can see are the illegible scribbles of a child.
-
-Nearby, you can hear "More Than A Feeling" by Boston.
+Which do you mean, the schedules or the notes?
 
 >look
 
@@ -1814,37 +1730,41 @@ Nearby an aqua colored door leads west.
 
 You can also see a worn photo and a desk (on which are a coffee mug and a radio) here.
 
-You hear Bob Marley's "No Woman, No Cry" playing on the radio.
+Mr Whidbey arrives from Dark Passage.
+
+Nearby, you can hear "More Than A Feeling" by Boston.
 
 >read manual
 The manual is titled: "Fixing Your Ferris Wheel. It's Easier Than You Think!"
 
-You sing along to R.E.M.'s "Losing My Religion".
+You hear Bob Marley's "No Woman, No Cry" playing on the radio.
 
 >drink coffee
 That looks nasty. There's something floating on the top. I wouldn't drink that if I was you.
 
-"Respect" by Aretha Franklin plays on the radio.
+You sing along to R.E.M.'s "Losing My Religion".
 
 >drink coffee
 You decide to drink it after all. Your stomach lurches as the cold, nasty coffee settles.
 
-You hear Led Zeppelin's "Fool In The Rain" playing on the radio.
+Mr Whidbey heads to the Stocks Room.
+
+"Respect" by Aretha Franklin plays on the radio.
 
 >drink coffee
 You've learned your lesson and set the coffee cup down.
 
-The DJ announces that "Young Americans" by David Bowie will be up next.
+You hear Led Zeppelin's "Fool In The Rain" playing on the radio.
 
 >drink coffee
 There's nothing suitable to drink here.
 
-"Over The Rainbow" by Bruddah Iz plays on the radio.
+The DJ announces that "Young Americans" by David Bowie will be up next.
 
 >l at clock
 The clock is wildly off the correct time. I guess it's broken.
 
-The DJ announces that "Ripple" by The Grateful Dead will be up next.
+"Over The Rainbow" by Bruddah Iz plays on the radio.
 
 >turn off radio
 You switch the radio off.
@@ -1918,13 +1838,11 @@ Nearby a ladder leads up to Dark Hallway.
 
 Nearby an aqua colored door leads west.
 
-You can also see Mr Whidbey, a worn photo, and a desk (on which are a coffee mug and a radio) here.
+You can also see a worn photo and a desk (on which are a coffee mug and a radio) here.
 
 >get photo
 (putting the parking ticket into the fanny pack to make room)
 Taken.
-
-Mr Whidbey heads to the Stocks Room.
 
 >look at it
 This is a photo of the carnival in its heyday! A ragtag bunch of people are featured in the picture in front of the Hell Ride facade. On the back reads a date: "03/22/62". This looks like the same photo you found in the Carnival Office.
@@ -1940,6 +1858,8 @@ The backstage area continues north and south.
 
 Nearby a crimson colored door leads west.
 
+Mr Whidbey arrives from the Mechanical Room North.
+
 >listen
 You can hear the hum of the machinery above.
 
@@ -1948,6 +1868,8 @@ The air is stale and heavy, carrying the sharp metallic scent of oil and the fai
 
 >l at tools
 Scattered on the floor are some long forgotten tools.
+
+Mr Whidbey heads to the Maintenance Office.
 
 >l at pipes
 The pipes head in every direction.
@@ -2133,8 +2055,8 @@ You are carrying:
   an emerald colored fuse
   a worn photo
   a lit flashlight (providing light)
-  a lit lantern (providing light)
   a sheer veil (being worn)
+  a lit lantern (providing light)
   a check stub
   an envelope (open but empty)
   a Mystic Industries invoice
@@ -2157,7 +2079,7 @@ You are carrying:
     a 14" long piece of string (tied to some chewed bubblegum)
     an air freshener
     three quarters
-    a nickel
+    two nickels
     two dimes
     a wallet
       $19.00 in cash
@@ -2166,7 +2088,7 @@ You are carrying:
 >put all invoices in fanny pack
 Cash 'N' Carry invoice: Done.
 Mystic Industries invoice: Done.
-Oriental Trading invoice: Done.
+Oriental Trading invoice: There's no room in the fanny pack to hold the Oriental Trading invoice.
 Frank's Market invoice: There's no room in the fanny pack to hold the Frank's Market invoice.
 
 >drop flashlight
@@ -2190,15 +2112,13 @@ Nearby a ladder leads up to Dark Hallway.
 
 Nearby an aqua colored door leads west.
 
-You can also see Mr Whidbey and a desk (on which are a coffee mug and a radio) here.
+You can also see a desk (on which are a coffee mug and a radio) here.
 
 >open drawer
 You open the drawer, revealing some scissors, a stapler, a ballpoint pen, a pad of paper, and a silver key.
 
 >get silver key
 Taken.
-
-Mr Whidbey heads to the Stocks Room.
 
 >n
 
@@ -2239,7 +2159,7 @@ You give the Bumper Cars ticket to the Bumper Cars attendant.
 
 You hand your ticket to the attendant and slide into the bucket seat, gripping the wheel as the arena comes alive with flashing lights and the hum of electric currents. Riders lock eyes, eager for the ride to begin.
 
-The car jolts forward, and you steer into the fray. A sudden crash spins you around, but you recover and aim for a friend. Each collision is met with laughs as you dodge, swerve, and plot your next move in the chaos.
+The car jolts forward, and you steer into the fray. A sudden crash spins you around, but you recover and aim for someone you recognize from town. Each collision is met with laughs as you dodge, swerve, and plot your next move in the chaos.
 
 You find yourself giddy as you exit the ride.
 
@@ -2250,10 +2170,11 @@ You are carrying:
   a sledgehammer
   an emerald colored fuse
   a worn photo
-  a lit lantern (providing light)
   a sheer veil (being worn)
+  a lit lantern (providing light)
   a check stub
   an envelope (open but empty)
+  an Oriental Trading invoice
   a Frank's Market invoice
   an insurance policy
   a gold key
@@ -2264,7 +2185,6 @@ You are carrying:
   a mallet
   a pair of gloves (being worn)
   a fanny pack (being worn, and open)
-    an Oriental Trading invoice
     a Mystic Industries invoice
     a Cash 'N' Carry invoice
     a brass ring
@@ -2272,7 +2192,7 @@ You are carrying:
     a 14" long piece of string (tied to some chewed bubblegum)
     an air freshener
     three quarters
-    a nickel
+    two nickels
     two dimes
     a wallet
       $19.00 in cash
@@ -2318,6 +2238,8 @@ You can see a cashier here.
 
 Head of the Line
 You can see a Hell Ride attendant here.
+
+Mr Whidbey arrives from Ride Entrance.
 
 >s
 
@@ -2638,13 +2560,11 @@ As the condemned approaches, the guillotine's timing falters. Instead of falling
 
 There is just one problem: the guillotine is being raised and lowered by some mechanism. It appears that the timing of the guillotine is off and it is being lowered onto the cars instead of between them. If a person were to be in a car as it passed under the guillotine, they would be seriously injured.
 
-You're glad you're not in one of those cars now. You must do something to stop it before someone gets hurt! 
+You're glad you're not in one of those cars now. You must do something to stop it before someone gets hurt!  There are exits to the north and south.
 
 Nearby a wooden door leads east to the Generator Room.
 
-You can also see Mr Whidbey and a guillotine platform here.
-
-Mr Whidbey heads to the Carnival Office.
+You can also see a platform here.
 
 >l at crowd
 The crowd encircles the platform, emotions ranging from jeers and curses to silent, grim observation. Children sit on shoulders, their curious eyes unaware of the event's gravity.
@@ -2677,12 +2597,13 @@ The crow sits, sleek and black, on a nearby rooftop.
 You find the pliers!
 
 >get pliers
+(putting the mallet into the fanny pack to make room)
 Taken.
 
 [Your score has just gone up by five points.]
 
 >l at cars
-The cars keep coming and move under the malfunctioning guillotine. You shudder at just the thought of it
+The cars keep coming and move under the malfunctioning guillotine. You shudder at just the thought of it.
 
 >n
 
@@ -2695,7 +2616,7 @@ Chains rattle, mixed with distant moans and screams. Water drips from a cracked 
 
 Instruments of torture clutter the room: a broken rack, a brazier with bloodstained tools, and a spiked chair. Prisoners endure all these things, bound or writhing in agony.
 
-The torturer moves with cold precision, ignoring the suffering. Above, rats scurry in the shadows, and the heavy, oppressive air thickens with despair.
+The torturer moves with cold precision, ignoring the suffering. Above, rats scurry in the shadows, and the heavy, oppressive air thickens with despair. There are exits to the north and south.
 
 Nearby a wooden door leads east to the Mechanical Room South.
 
@@ -2749,29 +2670,37 @@ The public square is silent, broken only by crackling flames. At its center, thr
 
 A crowd watches, some jeering, others praying or looking away. Torch in hand, the executioner steps forward igniting the pyre. Flames roar as the women cry out, their voices lost in the heat.
 
-Gray clouds loom above as a raven caws. Church bells toll, marking the tragedy. Some onlookers stay, others quietly leave.
+Gray clouds loom above as a raven caws. Church bells toll, marking the tragedy. Some onlookers stay, others quietly leave. There are exits to the north and south. 
 
 Nearby a wooden door leads east to the Mechanical Room North.
 
 The flames of the pyre burn ever brighter and rise ever higher engulfing the victims.
 
+You can also see Mr Whidbey here.
+
 >l at square
 The public square is steeped in grim silence, broken only by the crackling of flames.
 
+Mr Whidbey heads to the Dungeon.
+
 >l at flames
-The flames burn ever higher.
+The faux flames burn ever higher.
 
 In the pyre is a quartz colored fuse.
 
 >get quartz fuse
-(putting the mallet into the fanny pack to make room)
-Taken.
+(putting the crimson colored fuse into the fanny pack to make room)
+There's no room in the fanny pack to hold the crimson colored fuse.
 
 >l at pyre
-The flames burn ever higher.
+The faux flames burn ever higher.
+
+In the pyre is a quartz colored fuse.
 
 >l at logs
-The flames burn ever higher.
+The faux flames burn ever higher.
+
+In the pyre is a quartz colored fuse.
 
 >l at stakes
 (stakes)
@@ -2810,14 +2739,14 @@ The public square, wet from morning drizzle, lies under a dark sky. At its cente
 
 A hooded executioner, cold and focused, adjusts the noose. Pale and bound, the condemned man trembles as his eyes dart around the crowd. Sweat and rain mix on his face as he breathes shallowly.
 
-Vendors shout, children push forward, and an old man whispers prayers. Above, the bell tolls, marking the man's final moments. A raven watches from the gallows beam. The air is heavy as distant thunder rumbles.
+Vendors shout, children push forward, and an old man whispers prayers. Above, the bell tolls, marking the man's final moments. A raven watches from the gallows beam. The air is heavy as distant thunder rumbles. There are exits to the north and south.
 
 Nearby a wooden door leads east to the Crawl Space.
 
-You can also see Mr Whidbey and a gallows platform here.
+You can also see a gallows platform here.
 
 >score
-You've received 170 points out of a possible 200 in 534 moves!
+You've received 170 points out of a possible 200 in 533 moves!
 
 You have received points for the following: 
 
@@ -2835,8 +2764,8 @@ You have received points for the following:
 ?  Finding the Frank's Market invoice:       5 points
 ?  Finding the Mystic Industries invoice:    5 points
 ?  Acquiring the cashier's check stub:       10 points
-?  Wearing the sheer veil:                   5 points
 ?  Taking the lantern:                       5 points
+?  Wearing the sheer veil:                   5 points
 ?  Finding the Dark Passage:                 5 points
 ?  Taking the flashlight:                    5 points
 ?  Finding the Control Room:                 5 points
@@ -2863,7 +2792,6 @@ You have enough evidence to press charges.
 
 >i
 You are carrying:
-  a quartz colored fuse
   some pliers
   an aqua colored fuse
   a magenta colored fuse
@@ -2873,10 +2801,11 @@ You are carrying:
   a sledgehammer
   an emerald colored fuse
   a worn photo
-  a lit lantern (providing light)
   a sheer veil (being worn)
+  a lit lantern (providing light)
   a check stub
   an envelope (open but empty)
+  an Oriental Trading invoice
   a Frank's Market invoice
   an insurance policy
   a gold key
@@ -2887,7 +2816,6 @@ You are carrying:
   a pair of gloves (being worn)
   a fanny pack (being worn, and open)
     a mallet
-    an Oriental Trading invoice
     a Mystic Industries invoice
     a Cash 'N' Carry invoice
     a brass ring
@@ -2895,7 +2823,7 @@ You are carrying:
     a 14" long piece of string (tied to some chewed bubblegum)
     an air freshener
     three quarters
-    a nickel
+    two nickels
     two dimes
     a wallet
       $15.50 in cash
@@ -2909,16 +2837,14 @@ The public square, wet from morning drizzle, lies under a dark sky. At its cente
 
 A hooded executioner, cold and focused, adjusts the noose. Pale and bound, the condemned man trembles as his eyes dart around the crowd. Sweat and rain mix on his face as he breathes shallowly.
 
-Vendors shout, children push forward, and an old man whispers prayers. Above, the bell tolls, marking the man's final moments. A raven watches from the gallows beam. The air is heavy as distant thunder rumbles.
+Vendors shout, children push forward, and an old man whispers prayers. Above, the bell tolls, marking the man's final moments. A raven watches from the gallows beam. The air is heavy as distant thunder rumbles. There are exits to the north and south.
 
 Nearby a wooden door leads east to the Crawl Space.
 
-You can also see Mr Whidbey and a gallows platform here.
+You can also see a gallows platform here.
 
 >listen
 Above, the bell tower tolls, its mournful chime marking the passage of the man's final moments.
-
-Mr Whidbey heads to the Stake Room.
 
 >smell
 You smell incense as it permeates through Hell Ride.
@@ -2961,7 +2887,7 @@ The noose has been tied and hangs from the gallows proper.
 Stocks Room
 The public square is a cobblestone stretch surrounded by weathered buildings. The air smells of smoke, damp earth, and a nearby smithy. At the center, old stocks stand with iron clasps holding captives in shameful positions. Their tattered clothes offer little against the cold wind.
 
-The animatronics are lifelike, enhancing the grim atmosphere. The crowd mocks the prisoners, hurling insults and rotten food. Jeers mix with their laughter. The square hums with noise. Unnoticed by the crowd, the sky darkens as the spectacle continues.
+The animatronics are lifelike, enhancing the grim atmosphere. The crowd mocks the prisoners, hurling insults and rotten food. Jeers mix with their laughter. The square hums with noise. Unnoticed by the crowd, the sky darkens as the spectacle continues. There are exits to the north and south.
 
 Nearby a wooden door leads east to the Maintenance Office.
 
@@ -3012,7 +2938,6 @@ You can also see a desk (on which are a coffee mug and a radio) here.
 
 >i
 You are carrying:
-  a quartz colored fuse
   some pliers
   an aqua colored fuse
   a magenta colored fuse
@@ -3022,10 +2947,11 @@ You are carrying:
   a sledgehammer
   an emerald colored fuse
   a worn photo
-  a lit lantern (providing light)
   a sheer veil (being worn)
+  a lit lantern (providing light)
   a check stub
   an envelope (open but empty)
+  an Oriental Trading invoice
   a Frank's Market invoice
   an insurance policy
   a gold key
@@ -3036,7 +2962,6 @@ You are carrying:
   a pair of gloves (being worn)
   a fanny pack (being worn, and open)
     a mallet
-    an Oriental Trading invoice
     a Mystic Industries invoice
     a Cash 'N' Carry invoice
     a brass ring
@@ -3044,7 +2969,7 @@ You are carrying:
     a 14" long piece of string (tied to some chewed bubblegum)
     an air freshener
     three quarters
-    a nickel
+    two nickels
     two dimes
     a wallet
       $15.50 in cash
@@ -3317,30 +3242,41 @@ The flames of the pyre burn ever brighter and rise ever higher engulfing the vic
 >gonear whidbey
 
 
-Guillotine Room
-The public square hums with tension under gray skies. A wooden platform stands at the center, a grim focal point.
+Concession Stand
+The concession stand is a destination for many along the midway. Twinkling lights frame the stand making it glow amid the carnival's buzz.
 
-A lone figure, hands bound and head bowed, stands on the scaffold. Their tattered clothes reveal a once-gilded past.
+Behind the counter, popcorn churns in the machine, candy apples gleam, and cotton candy spins in clouds. Warm pretzels sit under a heat lamp, while sodas chill in a frosted cooler. The counter is cluttered with bags, napkins, and sprinkle cups. Kids tug at parents, teens share pretzels, and the crowd buzzes with energy.
 
-The crowd jeers while children watch wide-eyed. The town crier proclaims, "High treason against the crown!"
+There is a menu to the right of the window. You can see the treats inside the stand. There are exits to the south, west, and northeast.
 
-The condemned remains silent as the executioner, robed in black, stands beside the guillotine. The blade gleams in the dim light. The crowd's murmurs die, replaced by silence.
+Nearby a sturdy door leads south to the Carnival Office.
 
-As the condemned approaches, the guillotine's timing falters. Instead of falling on the scaffold, the blade swings over the cars, threatening any unlucky passenger who passes beneath.
+You can also see Mr Whidbey, a mini Ferris wheel, a concession attendant, and a menu here.
 
-There is just one problem: the guillotine is being raised and lowered by some mechanism. It appears that the timing of the guillotine is off and it is being lowered onto the cars instead of between them. If a person were to be in a car as it passed under the guillotine, they would be seriously injured.
+Mr Whidbey heads to the Carnival Office.
 
-You're glad you're not in one of those cars now. You must do something to stop it before someone gets hurt! 
+>whidbey off
+Whidbey stands still.
 
-Nearby a wooden door leads east to the Generator Room.
+>z
+Time passes.
 
-You can also see Mr Whidbey and a guillotine platform here.
+>z
+Time passes.
+
+>whidbey on
+Whidbey walks!.
+
+>z
+Time passes.
+
+Mr Whidbey arrives from the Carnival Office.
 
 >whidbey off
 Whidbey stands still.
 
 >ask whidbey about hell ride
-Mr Whidbey nervously shifts his weight from one foot to the other.
+Mr Whidbey waits for you to speak.
 
 "Hell Ride is the premier attraction here at Whidbey Amusements. It's both spooky and fun! The visitors love it! The fire last month was unfortunate and expensive" says Mr Whidbey.
 
@@ -3362,21 +3298,21 @@ Mr Whidbey nervously shifts his weight from one foot to the other.
 You've collected some new evidence.
 
 >ask whidbey about carnival
-Mr Whidbey waits for you to speak.
+Mr Whidbey looks at you expectantly.
 
 "The Whidbey family has owned this carnival since the 1957", Mr Whidbey says. "Unfortunately, I am an only child and never married. Alas, the carnival will close when I am gone. But for now, it's making a comeback!"
 
 You've collected some new evidence.
 
 >ask whidbey about ferris wheel
-Mr Whidbey looks at you expectantly.
+Mr Whidbey nervously shifts his weight from one foot to the other.
 
 Mr Whidbey says "The Ferris Wheel is my favorite ride. It's always relaxing and romantic."
 
 Mr. Whidbey quickly changes the subject
 
 >ask whidbey about bumper cars
-Mr Whidbey nervously shifts his weight from one foot to the other.
+Mr Whidbey waits for you to speak.
 
 "That incident the other week with that Needleman kid was unfortunate" says Mr Whidbey.
 
@@ -3388,7 +3324,7 @@ Mr Whidbey looks at you expectantly.
 Mr Whidbey says "I see her regularly to have my fortune told. We're lucky to have her here. She's very beautiful. It's a wonder she's never been married."
 
 >ask whidbey about carousel
-Mr Whidbey waits for you to speak.
+Mr Whidbey nervously shifts his weight from one foot to the other.
 
 "The carousel is just one of the many rides that thrill and delight our visitors every day," says Mr Whidbey
 
@@ -3401,12 +3337,12 @@ Mr. Whidbey meets your eyes and quickly looks away.
 
 
 >ask whidbey about pitchers mound
-Mr Whidbey nervously shifts his weight from one foot to the other.
+Mr Whidbey waits for you to speak.
 
 "The Pitchers Mound is is one of the many games that thrill and delight our visitors every day!" says Mr Whidbey.
 
 >ask whidbey about high striker
-Mr Whidbey waits for you to speak.
+Mr Whidbey looks at you expectantly.
 
 "The High Striker is is one of the many games that thrill and delight our visitors every day!" says Mr Whidbey.
 
@@ -3432,14 +3368,14 @@ The fire was most unfortunate. It put Hell Ride out of commission for two weeks.
 You've collected some new evidence.
 
 >ask whidbey about accidents
-Mr Whidbey looks at you expectantly.
+Mr Whidbey waits for you to speak.
 
 Mr Whidbey says, "Oh, that's nothing to worry about. Little things happen all the time, right?"
 
 You've collected some new evidence.
 
 >ask whidbey about pliers
-Mr Whidbey waits for you to speak.
+Mr Whidbey nervously shifts his weight from one foot to the other.
 
 "Oh! I thought I lost... um, those belong to the janitor. Where did you find them?" asks Mr Whidbey.
 
@@ -3454,7 +3390,7 @@ Mr. Whidbey quickly changes the subject
 You've collected some new evidence.
 
 >ask whidbey about services rendered
-Mr Whidbey nervously shifts his weight from one foot to the other.
+Mr Whidbey waits for you to speak.
 
 "Fred did some work over at the bumper cars" says Mr Whidbey.
 
@@ -3464,15 +3400,13 @@ You've collected some new evidence.
 Mr Whidbey looks at you expectantly.
 
 "Any evidence you have is circumstantial. It'll be thrown out on day one of the trial!", says Mr Whidbey
->show cash 'n' carry
-(to Mr Whidbey)
+>show cash 'n' carry to whidbey
 (first taking the Cash 'N' Carry invoice)
 Mr Whidbey says, "Money's a little tight. The cost of consumables go up every week."
 
 You've collected some new evidence.
 
->show Frank's market
-(to Mr Whidbey)
+>show Frank's market to whidbey
 Mr Whidbey says, "I can't keep up with the cost of ingredients. Everything costs so much!"
 
 You've collected some new evidence.
@@ -3486,7 +3420,7 @@ Mr. Whidbey's eyes dart up and to the left.
 You've collected some new evidence.
 
 >accuse whidbey of fraud
-Mr Whidbey waits for you to speak.
+Mr Whidbey nervously shifts his weight from one foot to the other.
 
 As much as you would like to confront Mr Whidbey about fraud you should probably take care of disabling Hell Ride first.
 
@@ -3505,34 +3439,26 @@ Mr Whidbey says "Uh, Fred is a special... contractor... We paid him. For service
 
 You've collected some new evidence.
 
+>ne
+
+Ticket Booth
+You can see a cashier here.
+
+>s
+
+Head of the Line
+You can see a Hell Ride attendant here.
+
+>s
+
+Ride Entrance
+You can see a Hell Ride car (empty) here.
+
 >e
-(first opening the wooden door)
-(first unlocking the wooden door)
-(with the silver key)
 
-Generator Room
-Nearby an indigo colored door leads west to the Guillotine Room.
+Dark Passage
 
->n
-
-Mechanical Room South
-Nearby a gray colored door leads west to the Dungeon.
-
-You can also see a grate (in which is a parking ticket) here.
-
->n
-
-Mechanical Room North
-Nearby an emerald colored door leads west to the Stake Room.
-
-You can also see a horseshoe magnet, a lit flashlight (providing light), and a toolbox (in which are some channel locks and a hammer) here.
-
->n
-
-Crawl Space
-Nearby a crimson colored door leads west to the Gallows Room.
-
->n
+>s
 
 Maintenance Office
 Nearby an aqua colored door leads west to the Stocks Room.
@@ -3659,13 +3585,13 @@ The janitor looks at you and waits for you to proceed.
 >ask janitor about mystic 
 The janitor looks bored as he waits for you to speak.
 
-"Sorry, I haven't the faintest," the janitor replies.
+"Hmm, you've got me there," the janitor replies.
 
 >show mystic invoice to janitor
 The janitor says, That fire in Hell Ride was really bad. It took almost two weeks to get it fully repaired. But it shouldn't have cost this much. I think Mr Whidbey got ripped off. Or, he got it fixed on the cheap and pocketed the rest."
 
 >ask janitor about bumper cars
-The janitor looks at you and waits for you to proceed.
+The janitor looks at you expectantly.
 
 The janitor says, "That reminds me. Not long ago, one of the bumper cars was shorting out and electrifying the car. A visitor got hurt. A young lad, what was his name? Fred something, I think."
 
@@ -3683,7 +3609,7 @@ The janitor says, "That reminds me. Not long ago, one of the bumper cars was sho
 You've got enough evidence for a conviction.
 
 >accuse whidbey of insurance fraud
-Mr Whidbey nervously shifts his weight from one foot to the other.
+Mr Whidbey looks at you expectantly.
 
 "Ok, I guess you got me. The carnival was losing money and we were going to go out of business. I was desperate to turn things around.
 
@@ -3700,7 +3626,7 @@ He handcuffs Whidbey, thanks you for your service to the community, and leads Mr
     *** You have won! ***
 
 
-You've received 200 points out of a possible 200 in 660 moves!
+You've received 200 points out of a possible 200 in 662 moves!
 
 You have received points for the following: 
 
@@ -3718,8 +3644,8 @@ You have received points for the following:
 ?  Finding the Frank's Market invoice:       5 points
 ?  Finding the Mystic Industries invoice:    5 points
 ?  Acquiring the cashier's check stub:       10 points
-?  Wearing the sheer veil:                   5 points
 ?  Taking the lantern:                       5 points
+?  Wearing the sheer veil:                   5 points
 ?  Finding the Dark Passage:                 5 points
 ?  Taking the flashlight:                    5 points
 ?  Finding the Control Room:                 5 points
