@@ -4,9 +4,9 @@ Chapter 1 - Inform Settings
 
 Release along with 
 	cover art ("Hell Ride Facade"), 
-	a website, 
 	an introductory booklet, 
-	the "Quixe" interpreter,
+	the "BisQuixe" interpreter,
+	a "BisQuixe" website,
 	the source text, 
 	the solution, 
 	a library card,
@@ -60,7 +60,7 @@ Include Menus by Wade Clarke.
 
 Include Story Mode by Drew Cook. 
 
-Include Conversation Framework by Eric Eve.
+[Include Conversation Framework by Eric Eve.]
 
 Chapter 4 - The Player, Global Code
 
@@ -622,7 +622,7 @@ instead of pressing charges, try confronting Mr whidbey about "fraud".
 confession is a truth state that varies. confession is false.
 instead of confronting Mr Whidbey about a topic listed in the Table of Confrontation:
 	if total evidence is less than 36:
-		say "[The noun] says. 'You don[']t have enough evidence to confront anyone about anything.'";
+		say "[The noun] says. 'You don[']t have enough evidence to accuse anyone about anything.'";
 	otherwise if total evidence is less than 76:
 		say "'Any evidence you have is circumstantial. It[']ll be thrown out on day one of the trial!', says [the noun]";
 	otherwise if hell ride disabled is false:
@@ -993,11 +993,12 @@ Section 22 - Miscellaneous
 
 [coins]
 a coin is a kind of thing. Understand "shiny" as a coin.
+a coin has a truth state called used. understand the used property as describing a coin. the used of a coin is usually false.
 a nickel is a kind of coin. The description of a nickel is "Five cents, a nickel. And very shiny. The weight of a nickel is 5 grams.".
-a dime is a kind of coin. The description of a dime is "It[']s a dime. Ten cents. One tenth of a dollar. And very shiny. A modern dime has a weight of 2.268 grams.".
+a dime is a kind of coin. The description of a dime is "It[']s a dime. Ten cents. One tenth of a dollar. And very shiny. A modern dime has a weight of 2.268 grams.". 
 a quarter is a kind of coin. . The description of a quarter is "It[']s a quarter. Two bits. And very shiny. The weight of a quarter is 5.67 grams.".
 
-three quarters and two nickels underlie the seat.
+four dimes, three quarters and two nickels underlie the seat.
 
 [heaven and earth]
 A room can be indoors or outdoors. A room is usually indoors.
@@ -1107,6 +1108,7 @@ Does the player mean doing something with the mallet when the location is the HS
 [mercury dime]
 Does the player mean doing something with the mercury dime when the location is the Dime Toss Game: it is very likely.
 Does the player mean doing something with a dime when the location is the Dime Toss Game: it is likely.
+Does the player mean taking the mercury dime when the location is the Pitchers Mound: it is very likely.
 Does the player mean doing something with the mercury dime when the location is the Pitchers Mound: it is very unlikely.
 Does the player mean doing something with a dime when the location is the Pitchers Mound: it is very likely.
 
@@ -1123,19 +1125,17 @@ does the player mean doing something with the menu: it is unlikely.
 [grate]
 Does the player mean doing something with fuse5 when the location is Mechanical Room South: it is very likely.
 
-[control panel]
-Does the player mean doing something with the aqua button when the location is the control room: it is very likely.
-Does the player mean doing something with the crimson button when the location is the control room: it is very likely.
-Does the player mean doing something with the emerald button when the location is the control room: it is very likely.
-Does the player mean doing something with the gray button when the location is the control room: it is very likely.
-Does the player mean doing something with the indigo button when the location is the control room: it is very likely.
-Does the player mean doing something with the khaki button when the location is the control room: it is very likely.
-Does the player mean doing something with Control Panel One: it is very unlikely.
-Does the player mean doing something with Control Panel Three: it is very unlikely.
-Does the player mean doing something with Control Panel Five: it is very unlikely.
-Does the player mean doing something with Control Panel Seven: it is very unlikely.
-Does the player mean doing something with Control Panel Nine: it is very unlikely.
-Does the player mean doing something with Control Panel Eleven: it is very unlikely.
+[control room]
+Does the player mean spinning a dial to a number when the location is the Control Room: it is very likely.
+Does the player mean spinning a control panel to a number when the location is the Control Room: it is very unlikely.
+
+[buttons]
+Does the player mean switching on the aqua button when the location is the Control Room: it is very likely.
+Does the player mean switching on the crimson button when the location is the Control Room: it is very likely.
+Does the player mean switching on the emerald button when the location is the Control Room: it is very likely.
+Does the player mean switching on the gray button when the location is the Control Room: it is very likely.
+Does the player mean switching on the indigo button when the location is the Control Room: it is very likely.
+Does the player mean switching on the khaki button when the location is the Control Room: it is very likely.
 
 [electrical closets]
 Does the player mean doing something with aqua fuse when the location is Electrical Closet One: it is very likely.
@@ -1263,8 +1263,6 @@ When play begins:
 The price of the money is $35.00. 
 
 Sound of Bell is the file "Silence.ogg" ("The sound of silence").
-
-five dimes underlie the seat. 
 
 The carrying capacity of the fanny pack is 50.
 
@@ -1398,8 +1396,6 @@ The price of the money is $25.00.
 
 Sound of Bell is the file "Bell.ogg" ("The sound of a bell").
 
-three dimes underlie the seat.
-
 The carrying capacity of the fanny pack is 50.
 
 Part 2 - The Game
@@ -1434,6 +1430,8 @@ Understand "panel" as an electrical panel.
 An electrical panel is usually closed, locked, scenery.
 An electrical panel has a color. Understand the color property as describing an electrical panel.
 An electrical panel has a number called a panel id. Understand the panel id property as describing an electrical panel.
+The carrying capacity of an electrical panel is always 0.
+
 screws are a kind of thing. screws are a part of every electrical panel (called its screws). They are plural-named. The description is "The screws are holding the electrical panel shut.".
 
 The description of an electrical panel is "Electrical Panel [the panel id] is a standard issue 200 amp electrical panel supplying 220 power throughout the ride. The electrical panel is [if the item described is open]open. Inside the panel you see a switch, a socket, and an indicator light.[otherwise]closed.[end if] [if the item described is locked]There are screws holding it shut.[otherwise]The screws for the door are gone.[end if]".
@@ -1467,6 +1465,8 @@ The panel id of Electrical Closet Five's electrical panel is 5. The color of Ele
 The panel id of Electrical Closet Seven's electrical panel is 7. The color of Electrical Closet Seven's electrical panel is gray.
 The panel id of Electrical Closet Nine's electrical panel is 9. The color of Electrical Closet Nine's electrical panel is indigo.
 The panel id of Electrical Closet Eleven's electrical panel is 11. The color of Electrical Closet Eleven's electrical panel is khaki.
+
+[instead of inserting the noun in Electrical Closet One's electrical panel, try inserting the noun in Electrical Closet One's socket.]
 
 Section 4 - Sockets
 
@@ -1520,17 +1520,15 @@ Understand "[something related by reversed incorporation] indicator" as an indic
 Section 6 - Fuses
 
 [resolve printed names for fuses]
-T is text that varies. T is "".
 when play begins:
-	repeat with f running through fuses:
-		now the printed name of f is "[color of f] colored fuse";
+	repeat with F running through fuses:
+		now the printed name of F is "[color of F] colored fuse";
 
 A fuse is a kind of thing. 
 Understand "fuse" as a fuse.
 A fuse has a color. Understand the color property as describing a fuse.
 A fuse has a number called fuse id. Understand the fuse id property as describing a fuse.
 The description of a fuse is "This is [an color of the item described] colored electrical fuse." 
-[The printed name of a fuse is "[an color of the item described] colored fuse".]
 
 Definition: a fuse is plugged-in rather than loose if it is contained by a socket.
 
@@ -1554,7 +1552,7 @@ After taking a fuse when the object taken from is a socket (this is the check sw
 	if the corresponding switch of the object taken from is switched on:
 		now the corresponding switch of the object taken from is switched off;
 		say "The [Corresponding indicator of the object taken from] just went out.".
-		
+
 Section 7 - Switches
 
 A switch is a kind of device. A switch is part of every electrical panel (called its switch).
@@ -1737,7 +1735,7 @@ Section 4 - Control Panels
 [The main control panel contains control panels. Each control panel has a an indicator, dial, and a button. Colors and Id's inherit from the control panels panel and are referenced using the variable: [the color of holder of the noun]. Similarly, there are actions that return the corresponding indicator/dial/button of the indicator/dial/button. This allows us to reference which indicator belongs with which dial, etc. without the need to create a mass of individually named objects.]
 
 A control panel is a kind of open container. 
-Understand "control" and "panel" as a control panel.
+Understand "control/panel" as a control panel.
 A control panel is scenery.
 A control panel has a color. Understand the color property as describing a control panel.
 A control panel has a number called a panel id. Understand the panel id property as describing a control panel.
@@ -1781,13 +1779,18 @@ To decide what color is --/the shared color of --/a/the (CT - a control-fitted t
 
 Section 5 - Buttons
 
-A button is a kind of device.  A button is part of every control panel (called its button). 
+A button is a kind of device.  A button is part of every control panel (called its button). A button is usually privately-named.
+Understand "button" as a button.
 A button is usually switched off.
 A button is always fixed in place.
+A button has a color. Understand the color property as describing a button.
 
-The description of a button is "This is the [a color of the holder of the item described] colored button.".
+The description of a button is "This is the [color of the holder of the item described] colored button.".
 
-The printed name of a button is "the [a color of the holder of the item described] button".
+When play begins:
+	repeat with B running through buttons:
+		now the color of B is the color of the holder of B;
+		now the printed name of B is "the [color of the holder of the item described] colored button"
 
 To decide what number is --/the button id of (B - a button):
 	decide on the panel id of the holder of B.
@@ -1853,14 +1856,18 @@ Last report switching off a button (this is the final report switching off a but
 
 Section 6 - Dials
 
-A dial is a kind of thing. A dial is part of every control panel (called its dial).
-Understand "knob" as dial.
+A dial is a kind of thing. A dial is part of every control panel (called its dial). A dial is usually privately-named.
+Understand "dial" or "knob" as dial.
 A dial is fixed in place.
 A dial has a number called a dial setting. 
+A dial has a color. Understand the color property as describing a dial. 
 
 The description of a dial is "This is the [color of the holder of the item described] colored dial. It is currently set to [dial setting of the item described]. I bet you could SET it to a number.".
 
-The printed name of a dial is "the [color of the holder of the item described] dial".
+When play begins:
+	repeat with D running through dials:
+		now the color of D is the color of the holder of D;
+		now the printed name of D is "the [color of the holder of the item described] colored dial"
 
 To decide if (D - a dial) is properly set:
 	if the panel id of the holder of D is the dial setting of D :
@@ -1878,9 +1885,6 @@ To decide what number is --/the dial setting of (D - a dial):
 
 Understand "dial [something related by reversed incorporation]" as a dial.
 Understand "[something related by reversed incorporation] dial" as a dial.
-
-Does the player mean spinning a dial to a number when the location is the Control Room: it is very likely.
-Does the player mean spinning a control panel to a number when the location is the Control Room: it is very unlikely.
 
 Spinning it to is an action applying to one thing and one number. 
 Check spinning it to: if the noun is not a dial, say "[The noun] does not spin." instead. 
@@ -1911,12 +1915,17 @@ To count the dials:
 
 Section 7 - Lights
 
-A light is a kind of thing. A light is part of every control panel (called its light).
+A light is a kind of thing. A light is part of every control panel (called its light). A light is usually privately-named.
+Understand "light" as a light.
 A light is fixed in place.
+A light has a color. Understand the color property as describing a light.
 
-The description of a light is "This is [a printed name of the item described]. The light is [if the corresponding button of the item described is switched on]on[otherwise]off[end if]."
+The description of a light is "This is the [a printed name of the item described]. The light is [if the corresponding button of the item described is switched on]on[otherwise]off[end if]."
 
-The printed name of a light is "the [a color of the holder of the item described] colored light".
+When play begins:
+	repeat with L running through lights:
+		now the color of L is the color of the holder of L;
+		now the printed name of L is "the [color of the holder of the item described] colored light"
 
 To decide what number is --/the socket id of (L - a light):
 	decide on the panel id of the holder of L.
@@ -1960,7 +1969,7 @@ Cars park haphazardly, guided by makeshift signs and fluttering flags. Families 
 
 Puddles from recent rain shimmer under the lights, while patches of mud cling to shoes. In the distance, RVs and trailers sit quietly, their occupants watching the Ferris wheel turn against the evening sky. The lot serves as a transition between the mundane and the magical world inside the carnival.
 
-The midway is to the south. There is a blueberry bush here. [if blueberry bush contains blueberries]There are blueberries on the bush.[otherwise]The bush has been picked clean.[end if][paragraph break]Your car is here. It[']s a bit of a beater. Inside the car, you can see [the list of things which are part of the beater car].[if the parking attendant carries the parking ticket][paragraph break] The attendant has a parking ticket. The price of a parking ticket is [the price of the parking ticket].[end if]"
+The midway is to the south. There is a blueberry bush here. [if blueberry bush contains blueberries]There are blueberries on the bush.[otherwise]The bush has been picked clean.[end if][paragraph break]Your car is here. It[']s a bit of a beater. Inside the car, you can see [the list of things which are part of the beater car].[if the parking attendant carries the parking ticket][paragraph break]The attendant has a parking ticket. The price of a parking ticket is [the price of the parking ticket].[end if]"
 
 The parking attendant is an attendant in the the PL-room. The parking attendant carries a parking ticket. The price of the parking ticket is $5.00. The description of the parking ticket is "This is your receipt for parking."
 
@@ -2580,8 +2589,10 @@ To show the Toss A Dime prizes:
 		say "[N]) [description entry][if N < number of rows in the Table of Dime Toss Prizes], [otherwise]?[end if]".
 
 TossADimeWin is a truth state that varies. TossADimeWin is false.
+HasDimes is a truth state that varies. HasDimes is false.
 instead of tossing a dime on plate when the player carries the noun:
 	now the noun is nowhere;
+	now the used of the noun is true;
 	say "You toss the dime. [run paragraph on]";
 	if the noun is the mercury dime:
 		now TossADimeWin is true;
@@ -2593,6 +2604,11 @@ instead of tossing a dime on plate when the player carries the noun:
 			-- 1: say "The dime hits the plate and bounces straight off.";
 			-- 2: say "Like skipping a stone in water, the dime skitters off the plate.";
 			-- 3: say "The dime lands on the edge of the plate. You watch in anticipation until the dime falls off the plate.";
+	now HasDimes is false;
+	repeat with D running through dimes:
+		if the used of D is false:
+			now HasDimes is true;
+	if HasDimes is false, say "You just used your last dime. I hope you don[']t need anymore."
 
 after reading a command when the location is the Dime Toss Game and TossADimeWin is true:
 	now prize table is Table of Dime Toss Prizes;
@@ -2633,7 +2649,7 @@ some Pitchers Mound spectators are here. they are scenery. the description is "T
 
 the Pitchers Mound booth is here. it is scenery. the description is "With its colorful banners and flashing lights, the booth buzzes with energy, drawing a crowd. [if a dime underlies the pitchers mound booth] You can see something shiny on the ground under the booth.[end if]".
 
-a Mercury dime is a dime. understand "flash" as the mercury dime.  it underlies the pitchers mound booth. The description is "The Mercury dime is a ten-cent coin struck by the United States Mint from late 1916 to 1945. Designed by Adolph Weinman and also referred to as the Winged Liberty Head dime, it gained its common name because the obverse depiction of a young Liberty, identifiable by her winged Phrygian cap, was confused with the Roman god Mercury. It is 90% silver, 10% copper, and has a weight of 2.50 grams.".
+a dime called a Mercury dime underlies the pitchers mound booth. understand "flash" as the mercury dime. The description is "The Mercury dime is a ten-cent coin struck by the United States Mint from late 1916 to 1945. Designed by Adolph Weinman and also referred to as the Winged Liberty Head dime, it gained its common name because the obverse depiction of a young Liberty, identifiable by her winged Phrygian cap, was confused with the Roman god Mercury. It is 90% silver, 10% copper, and has a weight of 2.50 grams.".
 
 before examining the mercury dime:
 	if show images is true, display Figure of MercuryDime.
@@ -2672,11 +2688,17 @@ To show the Pitchers Mound prizes:
 instead of giving a dime to the pitchers mound attendant:
 	say "The attendant gives you three baseballs in return.";
 	now the noun is nowhere;
+	now the used of the noun is true;
 	now the player carries every baseball;
+	now HasDimes is false;
+	repeat with D running through dimes:
+		if the used of D is false:
+			now HasDimes is true;
+	if HasDimes is false, say "You just used your last dime. I hope you don[']t need anymore.";
 	stop the action.
 	
-instead of giving a dime to the pitchers mound attendant for the second time:
-	say "[The pitchers mound attendant] says, 'Sorry. You only get to play once.'";
+instead of giving a dime to the pitchers mound attendant for the third time:
+	say "[The pitchers mound attendant] says, 'Sorry. You only get to play twice.'";
 	now every baseball is in the holding room;
 	stop the action.
 
@@ -2786,7 +2808,13 @@ Check going west when the location is the SF-room and the barker is not carrying
 	stop the action.
 
 After giving when the noun is dime and the second noun is barker:
-	say "You hand over a dime, and the barker nods, waving you through. As you step up to the entrance, the air feels thicker and the sounds of the carnival fade away. You’ve entered an entirely different world now. Before you, there is a tent. Intrigued, you take your first step towards the Little Egypt Show. You can now head west into the show."
+	say "You hand over a dime, and the barker nods, waving you through. As you step up to the entrance, the air feels thicker and the sounds of the carnival fade away. You’ve entered an entirely different world now. Before you, there is a tent. Intrigued, you take your first step towards the Little Egypt Show. You can now head west into the show.";
+	now the used of the noun is true;
+	now HasDimes is false;
+	repeat with D running through dimes:
+		if the used of D is false:
+			now HasDimes is true;
+	if HasDimes is false, say "You just used your last dime. I hope you don[']t need anymore.";
 	
 instead of listening when the location is the SF-room, say "You hear the low, hypnotic music of a faraway land.".
 instead of smelling when the location is the SF-room, say "The smell of incense and spices wafts through the tent."

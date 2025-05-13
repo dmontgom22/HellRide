@@ -1,59 +1,43 @@
-<!DOCTYPE html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-  <title>Dana Montgomery - Hell Ride — Play</title>
-  <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
-  <meta name="viewport" content="width=device-width, user-scalable=no">
-  <meta name="author" content="Dana Montgomery">
-  <link rel="stylesheet" href="style.css">
-  
-  <link rel="stylesheet" href="interpreter/glkote.css" type="text/css">
-<link rel="stylesheet" href="interpreter/dialog.css" type="text/css">
-<script src="interpreter/jquery-1.12.4.min.js" type="text/javascript"></script>
-<script src="interpreter/glkote.min.js" type="text/javascript"></script>
-<script src="interpreter/quixe.min.js" type="text/javascript"></script>
-
-<script src="interpreter/resourcemap.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-game_options = {
-image_info_map: 'StaticImageInfo',  // image data is here, not in blorb
-use_query_story: false,
-log_execution_time: true,
-set_page_title: false,
-inspacing: 0,     // gap between windows
-outspacing: 0     // gap between windows and edge of gameport
-};
-</script>
-
-<script src="interpreter/Hell Ride.gblorb.js" type="text/javascript"></script>
-  
+  <title>Dana Montgomery - Hell Ride</title>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <meta name="author" content="Dana Montgomery" />
+  <meta name="description" content="A page for the game Hell Ride by Dana Montgomery." />
+  <link rel="stylesheet" href="style.css" type="text/css" media="all" />
  </head>
-<body class="play">
+<body>
 <div class="container">
 <div class="coverimage"><span><a href="Cover.png"><img src="Small Cover.png" border="1"></a></span></div>
+<div class="introduction">
+	<h1><span>Hell Ride</span></h1>
+	<h2><span>Dana Montgomery</span></h2>
+	<div class="bibliography"><span>Release 2</span></div>
+</div>
 <div class="links">
-<div class="smalltitle">Hell Ride</div>
-<ul>
-<li><a href="index.html">Home page</a></li>
-</ul>
+	<ul>
+	<li><div class="download"><a href="Hell Ride.gblorb">Story File</a> <span class="filetype">(Blorb,&nbsp;31.6MB)</span></div></li>
+	<div class="auxiliary"><li><a href="Hell Ride Map.png">Hell Ride Map</a> <span class="filetype">(png,&nbsp;92.9KB)</span></li><li><a href="IntroductionToIF.pdf">Introduction to IF</a> <span class="filetype">(pdf,&nbsp;612KB)</span></li><li><a href="source.html">Source Text</a> <span class="filetype">(link)</span></li><li><a href="play.html">Play In-Browser</a> <span class="filetype">(link)</span></li></div>
+	</ul>
 </div>
 
-<div id="gameport">
-<div id="windowport">
-<noscript><hr>
-<p>You'll need to turn on Javascript in your web browser to play this game.</p>
-<hr></noscript>
-</div>
-<div id="loadingpane">
-<img src="interpreter/waiting.gif" alt="LOADING"><br>
-<em>&nbsp;&nbsp;&nbsp;Loading...</em>
-</div>
-<div id="errorpane" style="display:none;"><div id="errorcontent">...</div></div>
+<div class="about"><span><p>Hell Ride - A ride to remember...</p><p>You're a part-time reporter for The Tribune, the local newspaper. Earlier in the day, your editor called you and told you of a conversation he overheard between the Chief of Police and his Deputy about Whidbey Amusements. It seems there has been a rash of accidents and mishaps at the carnival. Sounds like there could be something suspicious going on. The editor wants you to collect evidence and write a hard hitting piece about this story. If you do a good job, maybe the paper will hire you on full-time.</p><p>As you explore the carnival, you learn (the hard way) that the Hell Ride attraction is malfunctioning with the potential for serious injuries to the riders. You must disable the ride off and prevent any loss of life... including your own.</p></span></div>
+
+<div class="playinfo">
+	<p>Hell Ride was created with <a href="http://inform7.com/">Inform</a> and has IFID E0A5AFB9-18BF-4485-B083-426CA51CCE70.
+	To play a work like this one, you need an interpreter program: many are available,
+	among them <a href="http://ccxvii.net/gargoyle/">Gargoyle for MacOS, Linux or Windows</a>;
+	<a href="https://github.com/angstsmurf/spatterlight/releases">Spatterlight for MacOS</a>;
+	<a href="http://davidkinder.co.uk/frotz.html">Windows Frotz</a> or 
+	<a href="http://davidkinder.co.uk/glulxe.html">Windows Glulxe</a> for Windows.
+	 
+Or you can play without downloading anything by following the 'Play In-Browser'
+link, using the BisQuixe interpreter. You'll need to have Javascript enabled
+on your web browser.</p>
 </div>
 
 </div>
-<div class="interpretercredit"><a href="http://eblong.com/zarf/glulx/quixe/">Quixe for Inform 7 (v. 2.2.1)</a></div>
 </body>
 </html>
 

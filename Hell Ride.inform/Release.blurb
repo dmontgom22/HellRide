@@ -70,7 +70,7 @@ template path "C:\HellRide\Hell Ride.materials\Templates"
 template path "C:\Users\danamont\Documents\Inform\Templates"
 template path "C:\Program Files\Inform\Internal\Templates"
 placeholder [INTERPRETERSCRIPTS] = " "
-interpreter "Quixe" "g"
+interpreter "BisQuixe" "g"
 base64 "C:\HellRide\Hell Ride.inform\Build\output.ulx" to "C:\HellRide\Hell Ride.materials\Release\interpreter\Hell Ride.gblorb.js"
 
 ! Website instructions
@@ -80,6 +80,6 @@ template path "C:\HellRide\Hell Ride.materials\Templates"
 template path "C:\Users\danamont\Documents\Inform\Templates"
 template path "C:\Program Files\Inform\Internal\Templates"
 css
-website "Standard"
+website "BisQuixe"
 status instruction ||&nbsp;<a href="source:story.ni#line5"><img border=0 src=inform:/doc_images/Reveal.png></a>||
 status alternative ||Using 'Release along with the introductory postcard'&nbsp;<a href=inform:/doc402.html><img border=0 src=inform:/doc_images/help.png></a>||
