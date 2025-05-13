@@ -16,29 +16,14 @@
   position: absolute;
   top: 0px;
   width: 100%;
-  background: #FFA0A0;
-  border-bottom: 3px solid #FF4040;
-}
-
-#errorpane.WarningPane {
-  background: #B0B0FF;
-  border-bottom: 3px solid #6060FF;
-}
-
-#errorpane:hover {
-  background: rgba(255, 160, 160, 0.5);
-  border-bottom: 3px solid rgba(255, 64, 64, 0.3);
-}
-
-#errorpane.WarningPane:hover {
-  background: rgba(176, 176, 255, 0.5);
-  border-bottom: 3px solid rgba(96, 96, 255, 0.3);
+  background: #FF4040;
+  padding-bottom: 3px;
 }
 
 #errorcontent {
-  font-size: 1.1em;
-  padding: 1em;
+  padding: 8px;
   text-align: center;
+  background: #FFA0A0;
 }
 
 #loadingpane {
@@ -62,13 +47,15 @@
   font-family: Georgia, "Times New Roman", Times, serif;
   font-size: 15px;
   line-height: 1.4;
-  padding: 6px 10px 6px 10px;
+  padding: 6px 10px 6px 2px;
 }
 
 .BufferLine {
-  white-space: pre-wrap; /* required for spaces to work right */
-}
 
+}
+.Hidden_Response {
+	display: none;
+}
 .GridWindow {
   background: #D0D0C0;
   overflow: hidden;
@@ -82,25 +69,11 @@
 }
 
 .InvisibleCursor {
-  /* This is a relic. It used to provide the padding below the last line
-     of text, but now it has no effect. It will go away at some point. */
-  position: relative;
-}
-
-.BufferLine:last-child {
-  /* This provides the margin below the last line of text (and the input
+  /* This provides the padding below the last line of text (and the input
      prompt). Without this, they'd be flush against the bottom of the
      window, which would be ugly. Do not modify this CSS class. */
-  margin-bottom: 14px;
-}
-
-.HasNoInputField .BufferLine:last-child .BlankLineSpan {
-  /* If the last line in a buffer window is blank, and there is no
-     char/line input occurring, we suppress the blank line in the DOM.
-     (The div still exists, but it has no visible contents, so it
-     collapses.) This aids fixed-height buffer wins which contained
-     exactly the right number of lines. */
-  display: none;
+  position: relative;
+  padding-bottom: 14px;
 }
 
 .MorePrompt {
@@ -114,17 +87,6 @@
   padding: 2px 6px;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
-}
-
-.PreviousMark {
-  /* This describes the small horizontal mark that appears in a window
-     when it needs paging. */
-  position: absolute;
-  background: #B09888;
-  height: 2px;
-  width: 12px;
-  top: 0px;
-  right: 0px;
 }
 
 .Input {
@@ -178,7 +140,6 @@
 }
 
 .GraphicsWindow canvas {
-  display: block;
   background-color: white;
 }
 
@@ -225,9 +186,11 @@
 }
 
 .Style_user1 {
+
 }
 
 .Style_user2 {
 }
 
 /* End of GlkOte default stylesheet. */
+

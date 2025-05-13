@@ -2,7 +2,7 @@ Start of a transcript of:
 
 Hell Ride
 The ride of a lifetime... by Dana Montgomery
-Release 2 / Serial number 250501 / Inform 7 v10.1.2 / D
+Release 2 / Serial number 250509 / Inform 7 v10.1.2 / D
 Inform 7 v10.1.2
 Identification number: //E0A5AFB9-18BF-4485-B083-426CA51CCE70//
 Interpreter version 0.6.0 / VM 3.1.3
@@ -684,7 +684,7 @@ The game booth is adorned with vibrant colors - red-and-white striped awnings, t
 The sign reads, "TOSS A DIME - WIN A PRIZE!".
 
 >l at prizes
-The prizes are a stuffed monkey, an orange colored fuse, a poster of Billie Eilish, and a horseshoe magnet.
+The prizes, a stuffed monkey, an orange colored fuse, a poster of Billie Eilish, and a horseshoe magnet, are cheap and just what you'd expect at a carnival.
 
 >listen
 The distinctive "ping" of dimes hitting plates creates a rhythmic soundtrack.
@@ -754,7 +754,7 @@ The booth buzzes with energy, its colorful banners and flashing lights drawing a
 The satisfying clatter of falling bottles mixes with cheers and groans from players and spectators.
 
 >l at prizes
-The prizes are a crimson colored fuse, a plush donkey, a goldfish in a bowl, and a poster of Lorde.
+The prizes, a crimson colored fuse, a plush donkey, a goldfish in a bowl, and a poster of Lorde, are cheap and just what you'd expect at a carnival.
 
 >give dime to attendant
 The attendant gives you three baseballs in return.
@@ -782,7 +782,7 @@ You can see a High Striker attendant, a bullseye, and some High Striker prizes h
 
 
 >l at prizes
-The prizes are a teddy bear, a knock-off Swiss Army knife, a magenta colored fuse, and a poster of Taylor Swift.
+The prizes, a teddy bear, a knock-off Swiss Army knife, a magenta colored fuse, and a poster of Taylor Swift, are cheap and just what you'd expect at a carnival.
 
 >w
 
@@ -856,7 +856,7 @@ You fork over $1.00 for the Bubblegum, leaving yourself with $19.00.
 Behind the Concession Stand
 Behind the concession stand, to one side, is the trash generated from the day's activities and to the other side boxes of supplies. There is a chair here surrounded by cigarette butts. There is an exit to the east.
 
-You can see a trash can (closed) and some concession boxes here.
+You can see a trash can (closed) and some concession boxes (closed) here.
 
 >open trash can
 You open the trash can, revealing a khaki colored fuse.
@@ -1212,7 +1212,7 @@ You hand over a dime, and the barker nods, waving you through. As you step up to
 
 
 Show Tent
-You are inside the Little Egypt Show. The attraction's facade is to the east. There are folding chairs standing vigil in neat in rows. The show should start soon.
+You are inside the Little Egypt Show. The attraction's facade is to the east. There are folding chairs standing vigil in neat in rows. The show starts every fifteen minutes. Hanging on the wall is a lantern.
 
 >sit in chair
 You get onto the folding chair.
@@ -1221,7 +1221,7 @@ You get onto the folding chair.
 The smell of incense and spices wafts through the tent.
 
 >listen
-The soft sounds of unfamiliar music fill the air.
+The soft sounds of unfamiliar music fills the air.
 
 >l at palace
 The stage is decorated to resemble a Middle Eastern palace, featuring rich, colorful fabrics, brass ornaments, and lanterns casting a warm, flickering glow. Scents of incense waft through the air, enhancing the atmosphere of mystique. The canvas displays painted scenes of pyramids, desert landscapes, and domed structures to evoking a sense of being transported to the "Middle East".
@@ -3500,49 +3500,49 @@ The indigo colored dial is now set to 9.
 The khaki colored dial is now set to 11.
 
 >push aqua button
-You switch the aqua button on.
+You switch the aqua colored button on.
 
 The monitor flickers for a second and the scene it displays changes to something different.
 The monitor now shows a tableau of poor unfortunate townsfolk locked in stocks.
 The aqua light is now on.
 
 >push aqua button
-You switch the aqua button off.
+You switch the aqua colored button off.
 
 The monitor turns off and the screen goes black.
 The monitor now shows nothing but snow.
 The aqua light is now off.
 
 >push crimson button
-You switch the crimson button on.
+You switch the crimson colored button on.
 
 The monitor flickers for a second and the scene it displays changes to something different.
 The monitor now shows a scene of someone waiting to be hanged.
 The crimson light is now on.
 
 >push emerald button
-You switch the emerald button on.
+You switch the emerald colored button on.
 
 The monitor flickers for a second and the scene it displays changes to something different.
 The monitor now displays a scene of three women being burned at the stake.
 The emerald light is now on.
 
 >push gray button
-You switch the gray button on.
+You switch the gray colored button on.
 
 The monitor flickers for a second and the scene it displays changes to something different.
 The monitor now shows the implements of torture in the dungeon.
 The gray light is now on.
 
 >push khaki button
-You switch the khaki button on.
+You switch the khaki colored button on.
 
 The monitor flickers for a second and the scene it displays changes to something different.
 The monitor shows the gift shop located at the Hell Ride exit.
 The khaki light is now on.
 
 >push indigo button
-You switch the indigo button on.
+You switch the indigo colored button on.
 
 The monitor flickers for a second and the scene it displays changes to something different.
 The monitor now shows a tableau of a guillotine rising and falling over the ride exit.
